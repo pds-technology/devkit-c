@@ -7,6 +7,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Kind of Address.
     /// </summary>
+    [System.SerializableAttribute()]
     public class AddressKindEnum : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -135,6 +136,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			work phone? Or personal? Or is a permanent one?
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class AddressQualifier : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -260,6 +262,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines a type of destination.
     /// </summary>
+    [System.SerializableAttribute()]
     public class BalanceDestinationType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -367,6 +370,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines a type of event related to a product balance by reference to its date.
     /// </summary>
+    [System.SerializableAttribute()]
     public class BalanceEventKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -474,6 +478,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines a subdivision of a flow related to the stock balance.
     /// </summary>
+    [System.SerializableAttribute()]
     public class BalanceFlowPart : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -923,6 +928,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines a type of business unit.
     /// </summary>
+    [System.SerializableAttribute()]
     public class BusinessUnitKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -1102,6 +1108,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the calculation methods available for "filling in" values in an indexed set.
     /// </summary>
+    [System.SerializableAttribute()]
     public class CalculationMethod : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -1209,6 +1216,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The preferred method of contacting a business associate.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ContactPreference : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -1460,6 +1468,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The type of personnel grouping.
     /// </summary>
+    [System.SerializableAttribute()]
     public class CrewType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -1675,6 +1684,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the quality of data
     /// </summary>
+    [System.SerializableAttribute()]
     public class DataQuality : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -1839,6 +1849,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			on "growing objects".
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class EndpointQualifier : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -1982,6 +1993,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The meaning of the endpoint for some interval.
     /// </summary>
+    [System.SerializableAttribute()]
     public class EndpointQualifierInterval : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -2089,6 +2101,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Kind of equation of state model.
     /// </summary>
+    [System.SerializableAttribute()]
     public class EosModelKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -2268,6 +2281,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines kinds of facility parameters.
     /// </summary>
+    [System.SerializableAttribute()]
     public class FacilityParameter : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -6585,6 +6599,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The mode of a Distributed Temperature Survey (DTS) fiber.
     /// </summary>
+    [System.SerializableAttribute()]
     public class FiberMode : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -6710,6 +6725,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines qualifiers for type of flow.
     /// </summary>
+    [System.SerializableAttribute()]
     public class FlowQualifier : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -7141,6 +7157,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines a specialization of a flow qualifier.
     /// </summary>
+    [System.SerializableAttribute()]
     public class FlowSubQualifier : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -7374,6 +7391,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// xxxxxxxxxxxx
     /// </summary>
+    [System.SerializableAttribute()]
     public class FluidAnalysisKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -7499,6 +7517,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines, in a mixture such as an oil or gas, either a single chemical component, a group of isomeric chemicals or a fraction
     /// </summary>
+    [System.SerializableAttribute()]
     public class FluidComponent : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -9226,6 +9245,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines, for a Fluid Component in a mixture such as an oil or gas, that the component is of a given kind
     /// </summary>
+    [System.SerializableAttribute()]
     public class FluidComponentKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -9369,6 +9389,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the kind of contaminating fluid present in a fluid sample
     /// </summary>
+    [System.SerializableAttribute()]
     public class FluidContaminant : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -9584,6 +9605,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the kind of fluid sample by reference to how it was obtained
     /// </summary>
+    [System.SerializableAttribute()]
     public class FluidSampleKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -9835,6 +9857,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the kind of test acquisition which resulted in the fluid sample
     /// </summary>
+    [System.SerializableAttribute()]
     public class FluidSampleTestAcquisition : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -9942,6 +9965,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Kind of fluid injected in a well test.
     /// </summary>
+    [System.SerializableAttribute()]
     public class InjectionFluid : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -10268,6 +10292,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The type of Distributed Temperature Survey (DTS) fiber point.
     /// </summary>
+    [System.SerializableAttribute()]
     public class InstalledFiberPoint : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -10699,6 +10724,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The type of operation for which general comments can be defined.
     /// </summary>
+    [System.SerializableAttribute()]
     public class OperationKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -10917,6 +10943,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			test was run within a  Distributed Temperature Survey (DTS).
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class OTDRReason : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11060,6 +11087,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// One method of characterizing a phone number.
     /// </summary>
+    [System.SerializableAttribute()]
     public class PhoneType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11239,6 +11267,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the types of Product Flow Ports.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ProductFlowPortType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11346,6 +11375,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Reason for lost production.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReasonLost : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11867,6 +11897,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// A single block valve.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReportingFacility : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -13013,6 +13044,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the types of flows for volume reports.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReportingFlow : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -13520,6 +13552,7 @@ namespace Energistics.DataAccess.PRODML131
     ///				24 hour period ending at the end of the report period.
     ///			
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReportingPeriod : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -13972,6 +14005,7 @@ namespace Energistics.DataAccess.PRODML131
     ///				atoms plus all heavier components.
     ///			
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReportingProduct : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -15555,6 +15589,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The type of properties that can be measured at a port.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReportingProperty : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -16168,6 +16203,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The status of a version of a report.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReportVersionStatus : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -16275,6 +16311,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the reservoir hydrocarbon fluid in broad terms of its phase behavior.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ReservoirFluidKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -16436,6 +16473,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// The type of safety issues for which a count can be defined.
     /// </summary>
+    [System.SerializableAttribute()]
     public class SafetyType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -16885,6 +16923,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Combinations of standard temperature and pressure including "ambient".
     /// </summary>
+    [System.SerializableAttribute()]
     public class StandardCondition : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17028,6 +17067,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Combinations of standard temperature and pressure.
     /// </summary>
+    [System.SerializableAttribute()]
     public class StandardTempPress : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17157,6 +17197,7 @@ namespace Energistics.DataAccess.PRODML131
     ///				the appropriate value. Use of this value may result in rejection in some situations.
     ///			
     /// </summary>
+    [System.SerializableAttribute()]
     public class TestReason : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17296,6 +17337,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Keyword for defining keyword-value pairs in a time series.
     /// </summary>
+    [System.SerializableAttribute()]
     public class TimeSeriesKeyword : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17457,6 +17499,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// A kind of well test validation operation.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ValidationOperation : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17636,6 +17679,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// A result of a well test validation operation.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ValidationResult : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17761,6 +17805,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// An overall state of all well test validation operations.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ValidationState : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -17890,6 +17935,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			The token in parentheses are OPC's status string for the condition.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class ValueStatus : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -18213,6 +18259,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Defines the conditions at which the volume is measured
     /// </summary>
+    [System.SerializableAttribute()]
     public class VolumeReferenceKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -18914,6 +18961,7 @@ namespace Energistics.DataAccess.PRODML131
     /// <summary>
     /// Kind of lift method for producing a well.
     /// </summary>
+    [System.SerializableAttribute()]
     public class WellOperationMethod : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19171,6 +19219,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			it is necessary to state which kind if flowing for this station.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class WftFlowingIntervalKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19283,6 +19332,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			in future.  Two basic events are documented.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class WftEventKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19395,6 +19445,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			occurring at a different station.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class WftStationKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19506,6 +19557,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			in future.  Two basic tests are documented.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class WftTestKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19617,6 +19669,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			in future. Two illustrative result kinds are documented.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class WftTestResultKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19732,6 +19785,7 @@ namespace Energistics.DataAccess.PRODML131
     ///			Two illustrative WftTestDataRole kinds are documented.
     ///		
     /// </summary>
+    [System.SerializableAttribute()]
     public class WftTestDataRole : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetProductionVolumes objectVersion="2.0" schemaVersion="2.0" uuid="7a2c4076-601a-11e5-9d70-feff819cdc9f" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Aliases authority="energistics">
+		<eml:Identifier>sample-6-23-2015 aggregate monthly production</eml:Identifier>
+		<eml:Description>Energistics</eml:Description>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>MonthlyProduction</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2015-02-02T09:30:47Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:Editor>Mark Mao</eml:Editor>
+		<eml:LastUpdate>2015-02-03T09:30:47Z</eml:LastUpdate>
+		<eml:VersionString>2.0</eml:VersionString>
+		<eml:Description>NAPR SAMPLE DATA</eml:Description>
+		<eml:DescriptiveKeywords>NAPR SAMPLE DATA</eml:DescriptiveKeywords>
+	</eml:Citation>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<ApprovalDate>2015-02-03</ApprovalDate>
+	<FluidComponentCatalog>
+		<StockTankOil uid="00000000-0000-0000-0003-00000000091">
+			<APIGravity uom="dAPI">30</APIGravity>
+			<MolecularWeight uom="g/mol">100</MolecularWeight>
+			<Remark/>
+		</StockTankOil>
+		<NaturalGas uid="00000000-0000-0000-0003-00000000092">
+			<GasGravity>0.75</GasGravity>
+			<MolecularWeight uom="g/mol">20</MolecularWeight>
+		</NaturalGas>
+		<FormationWater uid="00000000-0000-0000-0003-00000000093">
+			<SpecificGravity>1.05</SpecificGravity>
+			<Salinity uom="ng/g">30000</Salinity>
+			<Remark/>
+		</FormationWater>
+		<PureFluidComponent uid="C1">
+			<Kind>c1</Kind>
+			<HydrocarbonFlag>false</HydrocarbonFlag>
+		</PureFluidComponent>
+		<PureFluidComponent uid="C2">
+			<Kind>c2</Kind>
+			<HydrocarbonFlag>false</HydrocarbonFlag>
+		</PureFluidComponent>
+		<PureFluidComponent uid="C3">
+			<Kind>c3</Kind>
+			<HydrocarbonFlag>false</HydrocarbonFlag>
+		</PureFluidComponent>
+		<PlusFluidComponent uid="c10+">
+			<Kind>c10+</Kind>
+			<StartingCarbonNumber>10</StartingCarbonNumber>
+			<AvgDensity uom="g/cm3">.8382</AvgDensity>
+			<AvgMolecularWeight uom="g/mol">254.6</AvgMolecularWeight>
+		</PlusFluidComponent>
+		<PlusFluidComponent uid="c36+">
+			<Kind>c36+</Kind>
+			<StartingCarbonNumber>36</StartingCarbonNumber>
+			<AvgDensity uom="g/cm3">.9595</AvgDensity>
+			<AvgMolecularWeight uom="g/mol">615.6</AvgMolecularWeight>
+		</PlusFluidComponent>
+	</FluidComponentCatalog>
+	<Operator>
+		<Name>Big Oil Co</Name>
+	</Operator>
+	<StartDate>2015-01-01T00:00:00Z</StartDate>
+	<EndDate>2015-01-31T00:00:00Z</EndDate>
+	<NominalPeriod>month</NominalPeriod>
+	<!--lease X-->
+	<ReportingEntityVolumes>
+		<!-- TerminalLiftingDisposition 100,000 barrels !-->
+		<Disposition uid="d1" xsi:type="TerminalLiftingDisposition">
+			<QuantityMethod>measured</QuantityMethod>
+			<Remark>Terminal Lifting Report with ID  00000000-0000-0000-0000-000000000A00</Remark>
+			<DispositionQuantity uid="dq1" productFluidReference="00000000-0000-0000-0001-000000000001" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">100</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</DispositionQuantity>
+			<TerminalLifting schemaVersion="2.1" uuid="00000000-0000-0000-0000-000000000A00">
+				<eml:Citation>
+					<eml:Title>LeaseX terminalLifting</eml:Title>
+					<eml:Originator>energistics</eml:Originator>
+					<eml:Creation>2015-01-30T00:00:00Z</eml:Creation>
+					<eml:Format>energistics:xmlspy/xml</eml:Format>
+					<eml:Editor>xmlspy</eml:Editor>
+					<eml:LastUpdate>2015-01-31T00:00:00Z</eml:LastUpdate>
+					<eml:VersionString>2.1</eml:VersionString>
+					<eml:Description>lease x terminal lifting</eml:Description>
+				</eml:Citation>
+				<StandardConditions xsi:type="eml:TemperaturePressure">
+					<eml:Temperature uom="degC">20</eml:Temperature>
+					<eml:Pressure uom="bar">1</eml:Pressure>
+				</StandardConditions>
+				<CertificateNumber/>
+				<StartTime>2015-01-29T00:00:00Z</StartTime>
+				<EndTime>2015-01-29T06:00:00Z</EndTime>
+				<ProductQuantity uid="pq2" xsi:type="ProductFluid" productFluidReference="00000000-0000-0000-0001-000000000001">
+					<Volume uom="1000 bbl">100</Volume>
+					<ProductFluidKind>oil - gross</ProductFluidKind>
+				</ProductQuantity>
+				<LoadingTerminalReference>
+					<eml:ContentType>application/x-resqml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+					<eml:Title>Lease X</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-0000000001A1</eml:Uuid>
+					<eml:UuidAuthority>energistics</eml:UuidAuthority>
+					<eml:VersionString>2.1</eml:VersionString>
+				</LoadingTerminalReference>
+				<TankerReference>
+					<eml:ContentType>application/x-resqml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+					<eml:Title>Barge 99</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D12</eml:Uuid>
+					<eml:UuidAuthority>energistics</eml:UuidAuthority>
+					<eml:VersionString>2.1</eml:VersionString>
+				</TankerReference>
+			</TerminalLifting>
+		</Disposition>
+		<!-- TransferDisposition 50,000 barrels !-->
+		<Disposition uid="d2" xsi:type="TransferDisposition">
+			<QuantityMethod>measured</QuantityMethod>
+			<Remark>Transfer Report with ID  00000000-0000-0000-0000-000000000B00</Remark>
+			<DispositionQuantity uid="dq2" productFluidReference="00000000-0000-0000-0001-000000000001" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">50</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</DispositionQuantity>
+			<Transfer schemaVersion="v2.1" uuid="00000000-0000-0000-0000-000000000B00">
+				<eml:Citation>
+					<eml:Title>Lease X transfer</eml:Title>
+					<eml:Originator>energistics</eml:Originator>
+					<eml:Creation>2015-01-10T09:30:47Z</eml:Creation>
+					<eml:Format>energistics:xmlspy/xml</eml:Format>
+					<eml:Editor>xmlspy</eml:Editor>
+					<eml:LastUpdate>2015-01-10T11:30:47Z</eml:LastUpdate>
+					<eml:VersionString>2.1</eml:VersionString>
+					<eml:Description>Lease Y to Lease X transfer</eml:Description>
+				</eml:Citation>
+				<StandardConditions xsi:type="eml:TemperaturePressure">
+					<eml:Temperature uom="degC">20</eml:Temperature>
+					<eml:Pressure uom="bar">1</eml:Pressure>
+				</StandardConditions>
+				<TransferKind>input</TransferKind>
+				<DestinationFacilityReference>
+					<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+					<eml:Title>Lease X</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-0000000001A1</eml:Uuid>
+					<eml:UuidAuthority>energistics</eml:UuidAuthority>
+					<eml:VersionString>2.1</eml:VersionString>
+				</DestinationFacilityReference>
+				<SourceFacilityReference>
+					<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+					<eml:Title>Lease Y</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-0000000001A2</eml:Uuid>
+					<eml:UuidAuthority>energistics</eml:UuidAuthority>
+					<eml:VersionString>2.1</eml:VersionString>
+				</SourceFacilityReference>
+			</Transfer>
+		</Disposition>
+		<!-- sold oil 50,000 barrels !-->
+		<Disposition uid="d3" xsi:type="ProductDisposition">
+			<QuantityMethod>measured</QuantityMethod>
+			<DispositionQuantity uid="dq4"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">50</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>sold</Kind>
+		</Disposition>
+		<!-- sold gas 25,000 cubic feet !-->
+		<Disposition uid="d5" xsi:type="ProductDisposition">
+			<QuantityMethod>measured</QuantityMethod>
+			<DispositionQuantity uid="dq5" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1E6 ft3">25</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+				<OverallComposition>
+					<FluidComponent fluidComponentReference="c1">
+						<MassFraction uom="%[mass]">90</MassFraction>
+					</FluidComponent>
+					<FluidComponent fluidComponentReference="c2">
+						<MassFraction uom="%[mass]">5</MassFraction>
+					</FluidComponent>
+					<FluidComponent fluidComponentReference="c3">
+						<MassFraction uom="%[mass]">3</MassFraction>
+					</FluidComponent>
+					<FluidComponent fluidComponentReference="c10+">
+						<MassFraction uom="%[mass]">2</MassFraction>
+					</FluidComponent>
+				</OverallComposition>
+			</DispositionQuantity>
+			<Kind>sold</Kind>
+		</Disposition>
+		<!-- flared gas !-->
+		<Disposition uid="d6" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod>
+			<DispositionQuantity productFluidReference="00000000-0000-0000-0003-00000000091" uid="dq6" xsi:type="ProductFluid">
+				<Volume uom="1E6 ft3">1</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<!-- ClosingInventory 20,000 !-->
+		<ClosingInventory uid="ci1" productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+			<Volume uom="1000 bbl">20</Volume>
+			<ProductFluidKind>oil - gross</ProductFluidKind>
+		</ClosingInventory>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<!-- production oil 60,000 !-->
+			<ProductionQuantity uid="pq7" productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">60</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity   uid="pq7" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">26</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity  uid="pq7"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">985</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Lease X</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000001A1</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+		<!-- OpeningInventory 10,0000 !-->
+		<OpeningInventory uid="oi1" productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+			<Volume uom="1000 bbl">10</Volume>
+			<ProductFluidKind>oil - gross</ProductFluidKind>
+		</OpeningInventory>
+	</ReportingEntityVolumes>
+	<!-- well 1  !-->
+	<ReportingEntityVolumes>
+		<StartDate>2015-01-01T00:00:00Z</StartDate>
+		<Duration uom="d">15</Duration>
+		<Disposition uid="d7" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod>
+			<ProductDispositionCode authority="energistics"></ProductDispositionCode>
+			<DispositionQuantity uid="dq7" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 ft3">80</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<ProductionQuantity uid="dq8" productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">4.8</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="dq9" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1E6 ft3">2.08</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="dq10" productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">78</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Well01</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D2</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!-- well 1 split period from 16-31 !-->
+	<ReportingEntityVolumes>
+		<StartDate>2015-01-16T00:00:00Z</StartDate>
+		<Duration uom="d">16</Duration>
+		<Disposition uid="d8" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod>
+			<DispositionQuantity uid="dq1" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 ft3">120</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">7.2</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity  uid="pq2" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1E6 ft3">3.12</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">118.2</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Well01</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D2</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!--well 2 -->
+	<ReportingEntityVolumes>
+		<Disposition uid="d10" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod> 
+			<DispositionQuantity uid="dq10" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 ft3">200</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">12</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq2"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">5.2</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">197</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Well02</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D2</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!--well 3-->
+	<ReportingEntityVolumes>
+		<Disposition uid="well3d1" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod> 
+			<DispositionQuantity uid="dq1" productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 ft3">200</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">12</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq2"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">5.2</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">197</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Well03</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D3</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!--well 4 -->
+	<ReportingEntityVolumes>
+		<Disposition uid="dwell4" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod> 
+			<DispositionQuantity uid="dq1"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 ft3">200</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">12</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq2"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">5.2</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">197</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq4" serviceFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ServiceFluid">
+				<Volume uom="bbl">120</Volume>
+				<ServiceFluidKind>methanol</ServiceFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Well04</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D4</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!--well 5 -->
+	<ReportingEntityVolumes>
+		<Disposition uid="dwell5" xsi:type="ProductDisposition">
+			<QuantityMethod>estimated</QuantityMethod> 
+			<DispositionQuantity uid="dq1"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid">
+				<Volume uom="1000 ft3">200</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</DispositionQuantity>
+			<Kind>flared</Kind>
+		</Disposition>
+		<Production>
+			<QuantityMethod>measured</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">12</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq2"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">5.2</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">197</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<DeferredProductionEvent uid="dpevent1">
+			<StartDate>2015-01-21T00:00:00Z</StartDate>
+			<EndDate>2015-01-22T00:00:00Z</EndDate>
+			<Duration uom="d">2</Duration>
+			<DowntimeReasonCode authority="XYZ" code="D2">
+				<Name>CasingFailure</Name>
+				<Parent authority="XYZ" code="D0">
+					<Name>WellFailure</Name>
+				</Parent>
+			</DowntimeReasonCode>
+			<DeferredProduction>
+				<EstimationMethod>analytics model</EstimationMethod>
+				<DeferredProductQuantity uid="well5pq" productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+					<Volume uom="bbl">828</Volume>
+					<ProductFluidKind>oil - gross</ProductFluidKind>
+				</DeferredProductQuantity>
+			</DeferredProduction>
+		</DeferredProductionEvent>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>Well05</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D5</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!--contact Interval 3A -->
+	<ReportingEntityVolumes>
+		<Production>
+			<QuantityMethod>estimated</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">6</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq2"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">2.6</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">98.50</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>ContactInterval3A</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-000000000D23</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+	<!--contact Interval 3B-->
+	<ReportingEntityVolumes>
+		<Production>
+			<QuantityMethod>estimated</QuantityMethod>
+			<ProductionQuantity uid="pq1"  productFluidReference="00000000-0000-0000-0003-00000000091" xsi:type="ProductFluid">
+				<Volume uom="1000 bbl">6</Volume>
+				<ProductFluidKind>oil - gross</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq2"  productFluidReference="00000000-0000-0000-0003-00000000092" xsi:type="ProductFluid ">
+				<Volume uom="1E6 ft3">2.6</Volume>
+				<ProductFluidKind>gas - dry</ProductFluidKind>
+			</ProductionQuantity>
+			<ProductionQuantity uid="pq3"  productFluidReference="00000000-0000-0000-0003-00000000093" xsi:type="ProductFluid">
+				<Volume uom="bbl">98.50</Volume>
+				<ProductFluidKind>water - processed</ProductFluidKind>
+			</ProductionQuantity>
+		</Production>
+		<ReportingEntityReference>
+			<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+			<eml:Title>ContactInterval3B</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-000000000D24</eml:Uuid>
+			<eml:UuidAuthority>energistics</eml:UuidAuthority>
+			<eml:VersionString>2.0</eml:VersionString>
+		</ReportingEntityReference>
+	</ReportingEntityVolumes>
+</AssetProductionVolumes>

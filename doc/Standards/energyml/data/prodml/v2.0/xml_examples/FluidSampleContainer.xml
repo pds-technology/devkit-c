@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FluidSampleContainer xmlns="http://www.energistics.org/energyml/data/prodmlv2" schemaVersion="0.29" uuid="00000000-0001-0001-0000-000000000000" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FluidSampleContainer.xsd">
+	<eml:Aliases authority="XOM.EMSDB.DEVSDB1.EG.SAMPLE_CONTAIN">
+		<eml:Identifier>DEF564DD9E31D47BE040D70A2C4F2D67</eml:Identifier>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>GO4 No 1</eml:Title>
+		<eml:Originator>Good Oil</eml:Originator>
+		<eml:Creation>2015-01-01T13:14:33-06:00</eml:Creation>
+		<eml:Format>FluidSampleContainer</eml:Format>
+	</eml:Citation>
+	<Make>Downhole Bottles</Make>
+	<Model>Brisbane</Model>
+	<SerialNumber>12-435287-a7hs73m</SerialNumber>
+	<BottleID>Bottle.01</BottleID>
+	<Capacity uom="mL">750</Capacity>
+	<Owner>Bill's Bottle and Brass Emporium</Owner>
+	<Kind>single phase</Kind>
+	<Metallurgy>unknown</Metallurgy>
+	<PressureRating uom="psi">15000</PressureRating>
+	<TemperatureRating uom="degF">392</TemperatureRating>
+	<LastInspectionDate>1993-10-15</LastInspectionDate>
+	<Remark>this is the first of two bottles.</Remark>
+</FluidSampleContainer>

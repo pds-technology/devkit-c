@@ -156,7 +156,6 @@ namespace Energistics.Generator
             string mlPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_XSD_PATH");
             string targetFilename = String.Format(@"{0}\{1}\GeneratedEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
             List<string> enumClassNames = new List<string>();
-           // if ((!setName.Contains("RESQML200"))&&(!setName.Contains("RESQML201")))
             if (!setName.Contains("ML2"))
             {               
                 string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
@@ -197,7 +196,9 @@ namespace Energistics.Generator
             EnergisticsTextTemplate textTemplate = new EnergisticsTextTemplate(mlPath, setName, enumClassNames, versionString);
             String contents = textTemplate.TransformText();
             contents = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(contents);
-            File.WriteAllText(String.Format("{0}\\{1}\\DataObjects.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName), contents);
+            String prjPath = String.Format("{0}\\{1}\\", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
+            if (!Directory.Exists(prjPath)) Directory.CreateDirectory(prjPath);
+            File.WriteAllText(String.Format("{0}\\DataObjects.cs", prjPath), contents);
 
             string wsdlPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_WSDL");
             if (!String.IsNullOrEmpty(wsdlPath))

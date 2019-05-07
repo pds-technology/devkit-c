@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:FluidCharacterization schemaVersion="v28" uuid="27000030-0830-9535-4050-420122138301" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FluidCharacterization.xsd">
+	<eml:Citation>
+		<eml:Title>Reservoir Fluid Study for Good Oil Company Well No. 4</eml:Title>
+		<eml:Originator>Unknown</eml:Originator>
+		<eml:Creation>2015-03-17T09:30:47Z</eml:Creation>
+		<eml:Format>application/xml</eml:Format>
+		<eml:LastUpdate>2001-12-17T09:30:47Z</eml:LastUpdate>
+	</eml:Citation>
+	<prodml:ApplicationSource>
+		<prodml:ApplicationName>Commercial Fluid Property Package</prodml:ApplicationName>
+	</prodml:ApplicationSource>
+	<prodml:ApplicationTarget>
+		<prodml:ApplicationName>Commercial Materials Balance Package</prodml:ApplicationName>
+	</prodml:ApplicationTarget>
+	<prodml:FluidSystemCharacterizationType>Black Oil</prodml:FluidSystemCharacterizationType>
+	<prodml:IntendedUsage>Materials Balance</prodml:IntendedUsage>
+	<!-- RockFluidUnitFeature is not defined consistently with SampleAqcuisition -->
+	<prodml:RockFluidUnitFeatureReference>
+		<eml:ContentType/>
+		<eml:Title>reservoir A</eml:Title>
+		<eml:Uuid>D70A0030-0830-9535-4050-4201221383AB</eml:Uuid>
+	</prodml:RockFluidUnitFeatureReference>
+ 
+	<prodml:StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</prodml:StandardConditions>
+	<prodml:FluidCharacterizationSource>
+		<prodml:FluidAnalysisReference>
+			<eml:ContentType>FluidAnalysis</eml:ContentType>
+			<eml:Title>Reservoir Study for Good Oil Company Well No. 4, Productive Field, Sampson County, Texas</eml:Title>
+			<eml:Uuid>00000000-0AB1-A111-0001-000000003954</eml:Uuid>
+			<eml:UuidAuthority>ProdML</eml:UuidAuthority>
+			<eml:VersionString>v28</eml:VersionString>
+		</prodml:FluidAnalysisReference>
+	</prodml:FluidCharacterizationSource>
+	<prodml:FluidSystem>
+		<eml:ContentType>FluidSystem</eml:ContentType>
+		<eml:Title>Productive Cretaceous</eml:Title>
+		<eml:Uuid>00000001-0000-0000-0000-000000000000</eml:Uuid>
+	</prodml:FluidSystem>
+	<prodml:FluidComponentCatalog>
+		<prodml:StockTankOil uid="oil">
+			<prodml:APIGravity uom="dAPI">40.5</prodml:APIGravity>
+		</prodml:StockTankOil>
+		<prodml:NaturalGas uid="gas">
+			<prodml:GasGravity>0.8</prodml:GasGravity>
+		</prodml:NaturalGas>
+		<prodml:FormationWater uid="water"/>
+	</prodml:FluidComponentCatalog>
+	<!-- need optional -->
+	<prodml:FluidCharacterizationModel uid="model1">
+		<prodml:FluidCharacterizationTable uid="table1" name="Black Oil Property Table 1" tableFormat="format1">
+			<prodml:TableConstant fluidComponentReference="f1" name="Reservoir Temperature" uom="degF" value="220">
+				<prodml:Property>Temperature</prodml:Property>
+			</prodml:TableConstant>
+			<prodml:TableConstant fluidComponentReference="f1" name="Separator Pressure" uom="xom:psig" value="120">
+					<prodml:Property>Pressure</prodml:Property>
+			</prodml:TableConstant>
+			<prodml:TableConstant fluidComponentReference="f1"  name="Separator Temperature" uom="degF" value="120">
+					<prodml:Property>Temperature</prodml:Property>
+			</prodml:TableConstant>
+			<prodml:TableRow row="1" kind="undersaturated">2620 1863.33	600	1.60341	0.324271	578.386	0.841437	0.00614315	0.0200898	159.377	1.03667	0.318996	964.663	3.22503e-006</prodml:TableRow>
+			<prodml:TableRow row="2" kind="undersaturated">2367.78	1863.33	600	1.56123	0.324271	594.014	0.838682	0.00677126	0.0190591	144.593	1.03751	0.315063	963.879	3.22241e-006</prodml:TableRow>
+			<prodml:TableRow row="3" kind="undersaturated">2115.56	1863.33	600	1.52105	0.324271	609.705	0.839903	0.00758399	0.0180729	129.097	1.03835	0.311239	963.096	3.21979e-006</prodml:TableRow>
+			<prodml:TableRow row="4" kind="saturated">1863.33	1863.33 600	1.48286	0.324271	625.407	0.845436	0.00865921	0.0171472	113.067	1.0392	0.307522	962.314	3.21718e-006</prodml:TableRow>
+			<prodml:TableRow row="5" kind="saturated">1611.11	1611.11	551.216	1.44665	0.340528	635.177	0.855409	0.0101206	0.0162976	96.7411	1.04004	0.303913	961.534	3.21457e-006</prodml:TableRow>
+			<prodml:TableRow row="6" kind="saturated">1358.89#1358.89#482.882#1.4124#0.36586#642.14#0.86968#0.0121788#0.0155361#80.3918#1.04088#0.300413#960.755#3.21197e-006</prodml:TableRow>
+			<prodml:TableRow row="7" kind="saturated">1106.67#1106.67#417.368#1.38006#0.393233#648.901#0.887848#0.0152297#0.0148705#64.287#1.04173#0.29702#959.977#3.20937e-006</prodml:TableRow>
+			<prodml:TableRow row="8" kind="saturated">854.444#854.444#354.42#1.34959#0.422663#655.414#0.90933#0.0201248#0.0143039#48.6501#1.04257#0.293736#959.201#3.20677e-006</prodml:TableRow>
+			<prodml:TableRow row="9" kind="saturated">602.222#602.222#293.629#1.32085#0.454235#661.645#0.933475#0.0291055#0.0138366#33.6388#1.04341#0.29056#958.426#3.20418e-006</prodml:TableRow>
+			<prodml:TableRow row="10" kind="saturated">350#350##234.116#1.29353#0.488314#667.592#0.959652#0.0506154#0.0134692#19.3434#1.04426#0.287492#957.652#3.20159e-006</prodml:TableRow>
+		</prodml:FluidCharacterizationTable>
+	</prodml:FluidCharacterizationModel>
+	<prodml:FluidCharacterizationTableFormatSet>
+		<prodml:FluidCharacterizationTableFormat uid="format1">
+			<prodml:NullValue>-999.25</prodml:NullValue>
+			<prodml:Delimiter asciiCharacters="10,35"/>
+			<!-- the delimiters in this example are: [tab],[#] -->
+			<prodml:TableColumn sequence="1"  name="Pressure" uom="xom:psig">
+				<prodml:Property>Pressure</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="2"   name="Bubble Point Pressure" fluidComponentReference="oil" uom="xom:psig">
+				<prodml:Property>Saturation Pressure</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="3"  name="Solution GOR" fluidComponentReference="gas" uom="xom:SCF/STB"> 	 
+				<prodml:Property>Oil-Gas Ratio</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="4"  name="Oil FVF" fluidComponentReference="oil" uom="xom:bbl/STB">
+				<prodml:Property>Formation Volume Factor</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="5"   name="Oil Viscosity" fluidComponentReference="oil" uom="cP">
+				<prodml:Property>Viscosity</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="6"  name="Oil Density" fluidComponentReference="oil" uom="kg/m3">
+				<prodml:Property>Density</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="7" name="Z-Factor" fluidComponentReference="gas" uom="unitless">
+				<prodml:Property>GOODOIL:read gas deviation factor</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="8" name="Gas FVF" fluidComponentReference="gas" uom="xom:ft3/SCF">
+				<prodml:Property>Formation Volume Factor</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="9"  name="Gas Viscosity" fluidComponentReference="gas" uom="cP">
+				<prodml:Property>Viscosity</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="10"  name="Water FVF" fluidComponentReference="water" uom="xom:bbl/STB">
+				<prodml:Property>Formation Volume Factor</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="11" name="Water Viscosity" fluidComponentReference="water" uom="cP">
+				<prodml:Property>Viscosity</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="12" name="Water Density" fluidComponentReference="water" uom="kg/m3">
+				<prodml:Property>Density</prodml:Property>
+			</prodml:TableColumn>
+			<prodml:TableColumn sequence="13" name="Water Compressibility" fluidComponentReference="water" uom="1/psi">
+				<prodml:Property>Compressibility</prodml:Property>
+			</prodml:TableColumn>
+		</prodml:FluidCharacterizationTableFormat>
+	</prodml:FluidCharacterizationTableFormatSet>
+	<!-- FluidCharacterizationSource should be placed before FluidComponents -->
+</prodml:FluidCharacterization>

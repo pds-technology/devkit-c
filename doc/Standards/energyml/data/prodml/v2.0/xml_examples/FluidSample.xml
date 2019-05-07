@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:FluidSample schemaVersion="0.29" uuid="00000000-0000-0000-0001-000000003954" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FluidSample.xsd">
+	<eml:Aliases authority="XOM.EMSDB.DEVSDB1.EG.FLUID_SAMPLE">
+		<eml:Identifier>46C65DC88B796FF7E04400144F1E6737</eml:Identifier>
+		<eml:Description>GO4_S1</eml:Description>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>GO4 Sample 1</eml:Title>
+		<eml:Originator>Good Oil</eml:Originator>
+		<eml:Creation>1994-01-01T12:08:22-06:00</eml:Creation>
+		<eml:Format>FluidSample</eml:Format>
+		<eml:LastUpdate>2001-12-17T09:30:47Z</eml:LastUpdate>
+		<eml:Description>Bottomhole Sample 1 from Good Oil 4</eml:Description>
+		<eml:DescriptiveKeywords>Fluid Sample, Good Oil 4</eml:DescriptiveKeywords>
+	</eml:Citation>
+	<eml:CustomData/>
+	<prodml:SampleKind>downhole open</prodml:SampleKind>
+	<prodml:RockFluidUnitFeatureReference>
+		<eml:ContentType>RockFluidUnitFeature</eml:ContentType>
+		<eml:Title>Productive Cretaceous Reservoir</eml:Title>
+		<eml:Uuid>00000006-0004-0220-0000-000000000000</eml:Uuid>
+	</prodml:RockFluidUnitFeatureReference> 
+	<prodml:Representative>false</prodml:Representative>
+	<prodml:SampleDisposition>destroyed</prodml:SampleDisposition>
+	<prodml:Remark>Invalid Sample</prodml:Remark>
+	<prodml:FluidSystemReference>
+		<eml:ContentType>FluidSystem</eml:ContentType>
+		<eml:Title>Productive Cretaceous</eml:Title>
+		<eml:Uuid>00000001-0000-0000-0000-000000000000</eml:Uuid>
+	</prodml:FluidSystemReference>
+	<prodml:FluidSampleAcquisitionJobSource>
+		<prodml:FluidSampleAcquisitionReference>1</prodml:FluidSampleAcquisitionReference>
+		<prodml:FluidSampleAcquisitionJobReference>
+			<eml:ContentType>FluidSampleAcquisitionJob</eml:ContentType>
+			<eml:Title>Good Oil 4 Bottomhole Sample Acquisition</eml:Title>
+			<eml:Uuid>00000001-0001-0000-0000-000000000000</eml:Uuid> 
+		</prodml:FluidSampleAcquisitionJobReference>
+	</prodml:FluidSampleAcquisitionJobSource> 
+</prodml:FluidSample>

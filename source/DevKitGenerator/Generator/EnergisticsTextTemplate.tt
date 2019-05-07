@@ -1,7 +1,6 @@
-﻿<#@ template debug="true" hostSpecific ="true" #>
+﻿<#@ template debug="true" hostSpecific ="true" language="C#" #>
 <#@ output extension=".cs" encoding="UTF-8" #>
 <#=SchemaSetClassCreator.GetLicenseText()#>
-<#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System"#>
 <#@ assembly name="System.Core"#>
 <#@ assembly name="System.Xml"#>
@@ -79,7 +78,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
     }
 #>
 	<#=generator.GetEnergisticsDataObjectAttribute(type)#>[Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
-    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#><#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)#>, INotifyPropertyChanged
+    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type, true)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#><#=generator.IsEnergisticsCollection(type) ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)#>, INotifyPropertyChanged
     {
 <#=generator.GetConstructor(type)#>
 <#        
@@ -166,6 +165,25 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 				}
             }
         }
+
+        if (type.GetProperty("commonData") != null && type.GetProperty("customData") != null) {
+#>
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
+<#
+        }
 #>
 
 <#
@@ -194,7 +212,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 #>
     } //here
 <#
-        if(generator.IsComponentSchemaType(type))
+        if (generator.IsComponentSchemaType(type))
         {
 #>
     }
@@ -222,7 +240,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="<#=generator.GetXmlNamespace(type)#>")]
         [Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
-        public enum <#=generator.RenameClass(type)#> 
+        public enum <#=generator.RenameClass(type, true)#> 
         {
 <#
         FieldInfo[] fields = type.GetFields(BindingFlags.Static | BindingFlags.GetField | BindingFlags.Public);

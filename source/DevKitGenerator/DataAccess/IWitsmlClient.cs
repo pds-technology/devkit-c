@@ -73,6 +73,10 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+
+using System;
+using System.Collections.Generic;
+
 namespace Energistics.DataAccess
 {
     /// <summary>
@@ -81,10 +85,33 @@ namespace Energistics.DataAccess
     public interface IWitsmlClient
     {
         /// <summary>
-        /// Gets or sets a value indicating whether compression is enabled.
+        /// Equivalent to AcceptCompressedResponses
         /// </summary>
-        /// <value><c>true</c> if compression is enabled; otherwise, <c>false</c>.</value>
+        [Obsolete("Use AcceptCompressedResponses instead.")]
         bool IsCompressionEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether compressed responses from the server are accepted.
+        /// </summary>
+        /// <value><c>true</c> if compressed responses are accepted; otherwise, <c>false</c>.</value>
+        /// <remarks>If enabled, WITSML API calls will inform the server that compressed responses are accepted and handle any compressed responses.</remarks>
+        bool AcceptCompressedResponses { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether requests from the client should be compressed.
+        /// </summary>
+        /// <value><c>true</c> if client requests should be compressed; otherwise, <c>false</c>.</value>
+        /// <remarks>
+        /// If <c>true</c>, client applications should call <see cref="CompressRequests"/> to
+        /// compress XML input sent to the server for GetFromStore, AddToStore and UpdateInStore.
+        /// </remarks>
+        bool CompressRequests { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of name/value pairs to include as HTTP headers.
+        /// </summary>
+        /// <value>The collection of name/value pairs.</value>
+        IDictionary<string, string> Headers { get; set; }
 
         /// <summary>
         /// Returns a string containing the Data Schema Version(s) that a server supports.
@@ -96,6 +123,24 @@ namespace Energistics.DataAccess
         string WMLS_GetVersion();
 
         /// <summary>
+        /// Asynchronously requests a string containing the Data Schema Version(s) that a server supports.
+        /// </summary>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_GetVersion(AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously returns a string containing the Data Schema Version(s) that a server supports.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <returns>
+        /// A comma-separated list of Data Schema Versions (without spaces) that the server supports. 
+        /// The server MUST list the supported Data Schema Versions, from oldest to newest
+        /// </returns>
+        string EndWMLS_GetVersion(IAsyncResult asyncResult);
+
+        /// <summary>
         /// Returns the capServer object that describes the capabilities of the server for one Data Schema Version.
         /// </summary>
         /// <param name="OptionsIn">The options in.</param>
@@ -103,6 +148,24 @@ namespace Energistics.DataAccess
         /// <param name="SuppMsgOut">The supplemental message text.</param>
         /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
         short WMLS_GetCap(string OptionsIn, out string CapabilitiesOut, out string SuppMsgOut);
+
+        /// <summary>
+        /// Asynchronously requests the capServer object that describes the capabilities of the server for one Data Schema Version.
+        /// </summary>
+        /// <param name="OptionsIn">The options in.</param>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_GetCap(string OptionsIn, AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously returns the capServer object that describes the capabilities of the server for one Data Schema Version.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <param name="CapabilitiesOut">The capabilities out.</param>
+        /// <param name="SuppMsgOut">The supplemental message text.</param>
+        /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
+        short EndWMLS_GetCap(IAsyncResult asyncResult, out string CapabilitiesOut, out string SuppMsgOut);
 
         /// <summary>
         /// Returns one or more WITSML data-objects from the server.
@@ -117,6 +180,27 @@ namespace Energistics.DataAccess
         short WMLS_GetFromStore(string WMLtypeIn, string QueryIn, string OptionsIn, string CapabilitiesIn, out string XMLout, out string SuppMsgOut);
 
         /// <summary>
+        /// Asynchronously requests one or more WITSML data-objects from the server.
+        /// </summary>
+        /// <param name="WMLtypeIn">The wml type in.</param>
+        /// <param name="QueryIn">The query in.</param>
+        /// <param name="OptionsIn">The options in.</param>
+        /// <param name="CapabilitiesIn">The capabilities in.</param>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_GetFromStore(string WMLtypeIn, string QueryIn, string OptionsIn, string CapabilitiesIn, AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously returns one or more WITSML data-objects from the server.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <param name="XMLout">The xml out.</param>
+        /// <param name="SuppMsgOut">The supplemental message text.</param>
+        /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
+        short EndWMLS_GetFromStore(IAsyncResult asyncResult, out string XMLout, out string SuppMsgOut);
+
+        /// <summary>
         /// Adds one WITSML data-object to the server.
         /// </summary>
         /// <param name="WMLtypeIn">The wml type in.</param>
@@ -128,6 +212,26 @@ namespace Energistics.DataAccess
         short WMLS_AddToStore(string WMLtypeIn, string XMLin, string OptionsIn, string CapabilitiesIn, out string SuppMsgOut);
 
         /// <summary>
+        /// Asynchronously requests to add one WITSML data-object to the server.
+        /// </summary>
+        /// <param name="WMLtypeIn">The wml type in.</param>
+        /// <param name="XMLin">The xml in.</param>
+        /// <param name="OptionsIn">The options in.</param>
+        /// <param name="CapabilitiesIn">The capabilities in.</param>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_AddToStore(string WMLtypeIn, string XMLin, string OptionsIn, string CapabilitiesIn, AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously completes the request to add one WITSML data-object to the server.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <param name="SuppMsgOut">The supplemental message text.</param>
+        /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
+        short EndWMLS_AddToStore(IAsyncResult asyncResult, out string SuppMsgOut);
+        
+        /// <summary>
         /// Updates one existing WITSML data-object on the server.
         /// </summary>
         /// <param name="WMLtypeIn">The wml type in.</param>
@@ -137,6 +241,26 @@ namespace Energistics.DataAccess
         /// <param name="SuppMsgOut">The supplemental message text.</param>
         /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
         short WMLS_UpdateInStore(string WMLtypeIn, string XMLin, string OptionsIn, string CapabilitiesIn, out string SuppMsgOut);
+
+        /// <summary>
+        /// Asynchronously requests to update one existing WITSML data-object on the server.
+        /// </summary>
+        /// <param name="WMLtypeIn">The wml type in.</param>
+        /// <param name="XMLin">The xml in.</param>
+        /// <param name="OptionsIn">The options in.</param>
+        /// <param name="CapabilitiesIn">The capabilities in.</param>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_UpdateInStore(string WMLtypeIn, string XMLin, string OptionsIn, string CapabilitiesIn, AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously completes the request to update one existing WITSML data-object on the server.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <param name="SuppMsgOut">The supplemental message text.</param>
+        /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
+        short EndWMLS_UpdateInStore(IAsyncResult asyncResult, out string SuppMsgOut);
 
         /// <summary>
         /// Permanently deletes one WITSML data-object from the data store.
@@ -150,10 +274,46 @@ namespace Energistics.DataAccess
         short WMLS_DeleteFromStore(string WMLtypeIn, string QueryIn, string OptionsIn, string CapabilitiesIn, out string SuppMsgOut);
 
         /// <summary>
+        /// Asynchronously requests to permanently delete one WITSML data-object from the data store.
+        /// </summary>
+        /// <param name="WMLtypeIn">The wml type in.</param>
+        /// <param name="QueryIn">The query in.</param>
+        /// <param name="OptionsIn">The options in.</param>
+        /// <param name="CapabilitiesIn">The capabilities in.</param>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_DeleteFromStore(string WMLtypeIn, string QueryIn, string OptionsIn, string CapabilitiesIn, AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously completes the request to permantently delete one WITSML data-object from the data store.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <param name="SuppMsgOut">The supplemental message text.</param>
+        /// <returns>A positive value indicating success, or a negative value indicating an error.</returns>
+        short EndWMLS_DeleteFromStore(IAsyncResult asyncResult, out string SuppMsgOut);
+
+        /// <summary>
         /// Returns a string containing only the fixed (base) message text associated with a defined Return Value.
         /// </summary>
         /// <param name="ReturnValueIn">The return value in.</param>
         /// <returns>The fixed descriptive message text associated with the Return Value.</returns>
         string WMLS_GetBaseMsg(short ReturnValueIn);
+
+        /// <summary>
+        /// Asynchronously requests a string containing only the fixed (base) message text associated with a defined Return Value.
+        /// </summary>
+        /// <param name="ReturnValueIn">The return value in.</param>
+        /// <param name="callback">The callback to call when the request is completed.</param>
+        /// <param name="asyncState">The asynchronous state.</param>
+        /// <returns>An <see cref="IAsyncResult"/> that can be used to wait for the result.</returns>
+        IAsyncResult BeginWMLS_GetBaseMsg(short ReturnValueIn, AsyncCallback callback, object asyncState);
+
+        /// <summary>
+        /// Asynchronously returns a string containing only the fixed (base) message text associated with a defined Return Value.
+        /// </summary>
+        /// <param name="asyncResult">The <see cref="IAsyncResult"/> from the request.</param>
+        /// <returns>The fixed descriptive message text associated with the Return Value.</returns>
+        string EndWMLS_GetBaseMsg(IAsyncResult asyncResult);
     }
 }

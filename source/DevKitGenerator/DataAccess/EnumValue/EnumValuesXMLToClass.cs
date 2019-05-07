@@ -140,6 +140,7 @@ namespace Energistics.DataAccess.EnumValue
                     sb.AppendLine("    /// <summary>");
                     sb.AppendLine("    /// " + description.Replace("\n", "\n    ///"));
                     sb.AppendLine("    /// </summary>");
+                    sb.AppendLine("    [System.SerializableAttribute()]");
                     if (extensionClass)
                     {
                         sb.AppendLine("    public class " + name + "Extension : " + name);
@@ -383,7 +384,7 @@ namespace Energistics.DataAccess.EnumValue
                 name = name.Insert(locSpac, nextChar);
             }
 
-            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed" };
+            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed" ,"null"};
 
             if (keywords.Contains(name))
             {

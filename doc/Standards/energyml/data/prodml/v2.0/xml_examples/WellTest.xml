@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WellTest xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" schemaVersion="v29" uuid="00000000-0000-0000-0001-420123456701" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/WellTest.xsd">
+	<eml:Citation>
+		<eml:Title>Good Oil No. 4</eml:Title>
+		<eml:Originator>GoodOil</eml:Originator>
+		<eml:Creation>1994-01-01T12:08:22-06:00</eml:Creation>
+		<eml:Format>xml</eml:Format>
+	</eml:Citation>  
+	<TestDate>1994-01-01T12:08:22-06:00</TestDate> 
+	<WellTestData uid="testdata1" xsi:type="WellTestProductionTestData"> 
+	  <TestDuration uom="h">24</TestDuration>
+      <ProductionTestResults>
+        <OilRate>
+          <FluidRate uom="bbl/d">43</FluidRate>
+        </OilRate>        
+        <WaterRate>
+          <FluidRate uom="bbl/d">21</FluidRate>
+        </WaterRate>
+        <GasRate>
+          <FluidRate uom="m3/d">14</FluidRate>
+        </GasRate>
+      </ProductionTestResults> 
+	</WellTestData>
+</WellTest>

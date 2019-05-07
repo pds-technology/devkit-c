@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  MapForce Project File  -->
+<Project Expanded="Yes" Type="Root" language="xslt2" OutputDir="output\" Title="prodmlv2.0" OutputName="prodmlv2.0" Version="6">
+	<Folder FolderName="Mapping Folder" Expanded="Yes" Type="MappingFolder">
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\DtsInstalledSystem.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\DtsInstrumentBox.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\ProductFlowModel.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\ProductOperation.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\ProductVolume.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\Report.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\TimeSeriesData.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\TimeSeriesStatics.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\WftRun.mfd"/>
+	</Folder>
+</Project>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  MapForce Project File  -->
+<Project Expanded="Yes" Type="Root" language="xslt2" OutputDir="output\" Title="prodmlv2.0" OutputName="prodmlv2.0" Version="6">
+	<Folder FolderName="Mapping Folder" Expanded="Yes" Type="MappingFolder">
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\DtsInstalledSystem.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\DtsInstrumentBox.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\ProductFlowModel.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\ProductOperation.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\ProductVolume.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\Report.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\TimeSeriesData.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\TimeSeriesStatics.mfd"/>
+		<File Type="Mapping" FilePath="prodml1.3_to_2.0\WftRun.mfd"/>
+	</Folder>
+</Project>
+>>>>>>> 31ed9b747eac7e4dce3c70863641adfa2051b5dd

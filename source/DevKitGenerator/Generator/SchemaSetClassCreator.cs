@@ -263,7 +263,7 @@ namespace Energistics.Generator
 
         private ChoiceElement ParseElement(XmlElement element)
         {
-            if (element.Name == "xsd:sequence")
+            if (element.Name == "xsd:sequence" || element.Name == "xs:sequence")
             {
                 Sequence seq = new Sequence();
                 seq.Sequences = new List<ChoiceElement>();
@@ -272,7 +272,7 @@ namespace Energistics.Generator
                 {
                     if (elem is XmlElement)
                     {
-                        if (elem.Name != "xsd:annotation")
+                        if (elem.Name != "xsd:annotation" && elem.Name != "xs:annotation")
                         {
                             seq.Sequences.Add(ParseElement((XmlElement)elem));
                         }
@@ -281,7 +281,7 @@ namespace Energistics.Generator
 
                 return seq;
             }
-            else if (element.Name == "xsd:element")
+            else if (element.Name == "xsd:element" || element.Name == "xs.element")
             {
                 NormalElement normalElement = new NormalElement();
                 if (element.Attributes["name"] != null)
@@ -323,52 +323,59 @@ namespace Energistics.Generator
             {
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(file);
-                foreach (XmlElement choiceElements in xmlDoc.GetElementsByTagName("xsd:choice"))
+                CacheChoiceAnnotations(xmlDoc.GetElementsByTagName("xsd:choice"));
+                CacheChoiceAnnotations(xmlDoc.GetElementsByTagName("xs:choice"));
+            }
+        }
+
+        private void CacheChoiceAnnotations(XmlNodeList choiceElementList)
+        {
+            foreach (XmlElement choiceElements in choiceElementList)
+            {
+                XmlNode parent = choiceElements;
+
+                do
                 {
-                    XmlNode parent = choiceElements;
+                    parent = parent.ParentNode;
 
-                    do
+                } while (parent.Name == "xsd:sequence" || parent.Name == "xs:sequence");
+
+                // 1. if choice are single then it is exclusive.
+                // 2. if choice are unbounded then it is not exclusive. ignore
+                if (choiceElements.Attributes["maxOccurs"] != null)
+                    if (((choiceElements.Attributes["maxOccurs"].Value == "unbounded" || (choiceElements.Attributes["maxOccurs"].Value.Contains("-1")))))
+                        continue;
+                Sequence choice = new Sequence();
+                choice.Sequences = new List<ChoiceElement>();
+                if (parent.Attributes["name"] != null)
+                {
+                    if (parent.Attributes["name"].Value.StartsWith("grp_"))
                     {
-                        parent = parent.ParentNode;
-
-                    } while (parent.Name == "xsd:sequence");
-
-                    // 1. if choice are single then it is exclusive.
-                    // 2. if choice are unbounded then it is not exclusive. ignore
-                    if (choiceElements.Attributes["maxOccurs"] != null)
-                        if (((choiceElements.Attributes["maxOccurs"].Value == "unbounded" || (choiceElements.Attributes["maxOccurs"].Value.Contains("-1")))))
-                            continue;
-                    Sequence choice = new Sequence();
-                    choice.Sequences = new List<ChoiceElement>();
-                    if (parent.Attributes["name"] != null)
-                    {
-                        if (parent.Attributes["name"].Value.StartsWith("grp_"))
-                        {
-                            choice.Name = parent.Attributes["name"].Value.Replace("grp_", "obj_");
-                        }
-                        else
-                            choice.Name = parent.Attributes["name"].Value;
+                        choice.Name = parent.Attributes["name"].Value.Replace("grp_", "obj_");
                     }
-                    choices.Add(choice);
+                    else
+                        choice.Name = parent.Attributes["name"].Value;
+                }
+                choices.Add(choice);
 
 
-                    foreach (XmlElement element in choiceElements)
+                foreach (XmlElement element in choiceElements)
+                {
+                    if (element.Name != "xsd:annotation" && element.Name != "xs:annotation")
                     {
-                        if (element.Name != "xsd:annotation")
-                        {
-                            choice.Sequences.Add(ParseElement(element));
-                        }
+                        choice.Sequences.Add(ParseElement(element));
                     }
                 }
             }
         }
+
 
         /// <summary>
         /// Parses out portions of xsd files based on regular expressions
         /// </summary>
         private void ExtractXML(string xmlText, string type)
         {
-            string regexText = String.Format("<xsd:{0} name=\"(.*?)\".*?</xsd:{0}>", type);
+            string regexText = String.Format("<xsd?:{0} name=\"(.*?)\".*?</xsd?:{0}>", type);
             Regex regex = new Regex(regexText, RegexOptions.Singleline);
 
             foreach (Match m in regex.Matches(xmlText))
@@ -408,7 +415,7 @@ namespace Energistics.Generator
                     (t) => !t.IsEnum
                         && t.Namespace == "Energistics.Generator." + mlVersion
                         && !t.Name.Equals("cs_documentInfoQueryPara")
-                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.StartsWith("WITSML2")));
+                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.Contains("ML2")));
             }
         }
 
@@ -419,7 +426,7 @@ namespace Energistics.Generator
                 return Assembly.GetExecutingAssembly().GetTypes().Except(new Type[] { this.GetType() }).Where(
                     (t) => t.IsEnum
                         && t.Namespace == "Energistics.Generator." + mlVersion
-                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.StartsWith("WITSML2")));
+                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.Contains("ML2")));
             }
         }
 
@@ -444,28 +451,34 @@ namespace Energistics.Generator
                 .Select(x => x.Name.ToLowerInvariant())
                 .ToList();
 
+            var interfaces = string.Empty;
+
+            if (t.GetProperty("commonData") != null && t.GetProperty("customData") != null)
+            {
+                interfaces = ", ICommonDataObject";
+            }
+
             if (properties.Contains("uid") && properties.Contains("name")
                 && properties.Contains("uidwell") && properties.Contains("namewell")
                 && properties.Contains("uidwellbore") && properties.Contains("namewellbore"))
             {
-                return ", IWellboreObject";
+                return interfaces + ", IWellboreObject";
             }
-            else if (properties.Contains("uid") && properties.Contains("name")
+            if (properties.Contains("uid") && properties.Contains("name")
                 && properties.Contains("uidwell") && properties.Contains("namewell"))
             {
-                return ", IWellObject";
+                return interfaces + ", IWellObject";
             }
-            else if (properties.Contains("uid") && properties.Contains("name"))
+            if (properties.Contains("uid") && properties.Contains("name"))
             {
-                return ", IDataObject";
+                return interfaces + ", IDataObject";
+            }
+            if (properties.Contains("uid"))
+            {
+                return interfaces + ", IUniqueId";
             }
 
-            else if (properties.Contains("uid"))
-            {
-                return ", IUniqueId";
-            }
-
-            return string.Empty;
+            return interfaces;
         }
 
         public string GetPropertyType(PropertyInfo property)
@@ -485,8 +498,42 @@ namespace Energistics.Generator
                    !type.IsDefined(typeof(XmlRootAttribute), false);
         }
 
-        private static Boolean OnceRename = false;
-        public string RenameClass(Type t)
+        public string GetFriendlyName(Type type)
+        {
+            // Get friendly name of common and generic types
+            // https://stackoverflow.com/a/16466437/74601
+
+            if (type == typeof(int))
+                return "int";
+            else if (type == typeof(short))
+                return "short";
+            else if (type == typeof(byte))
+                return "byte";
+            else if (type == typeof(bool))
+                return "bool";
+            else if (type == typeof(long))
+                return "long";
+            else if (type == typeof(float))
+                return "float";
+            else if (type == typeof(double))
+                return "double";
+            else if (type == typeof(decimal))
+                return "decimal";
+            else if (type == typeof(string))
+                return "string";
+            else if (type.IsGenericType)
+                return type.Name.Split('`')[0] + "<" + string.Join(", ", type.GetGenericArguments().Select(GetFriendlyName).ToArray()) + ">";
+            else
+                return type.Name;
+        }
+
+        public bool IsEnergisticsCollection(Type t)
+        {
+            var name = RenameClass(t);
+            return name.EndsWith("List") && !name.EndsWith("ValueList");
+        }
+
+        public string RenameClass(Type t, bool isDeclaration = false)
         {
             Type elementType = t.GetElementType();
 
@@ -500,18 +547,17 @@ namespace Energistics.Generator
             //If the type referred to isn't one of the xsd.exe generated types, don't rename it.
             if (!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
             {
-                return t.Name;
+                return GetFriendlyName(t);
             }
 
-            string newName = t.Name;
+            string newName = GetFriendlyName(t);
             newName = newName.Replace("obj_", "");
 
             newName = newName.Replace("cs_", "");
 
             newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
 
-            // previous code from exxon only works for version 1.0 , not future code.
-            if (!t.FullName.Contains("RESQML2") && !t.FullName.Contains("WITSML2"))
+            if (!t.FullName.Contains("ML2"))
             {
                 //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
                 //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
@@ -548,28 +594,31 @@ namespace Energistics.Generator
                     newName = "LogCurveInfoData";
                 }
             }
-            else
-            {
-                if (t.FullName.Contains("WITSML2"))
-                {
-                    //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
-                    if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
-                    {
-                        newName = newName.Substring(0, newName.Length - 1);
-                    }
-                }
 
-                //RESQML2.0 there is two same name class declared SecondDefiningParameter.
-                if (!OnceRename)
+            if (t.FullName.Contains("PRODML2"))
+            {
+                if (!isDeclaration && t.Name.Equals("ValidationResult"))
                 {
-                    if (t.FullName.Contains("secondDefiningParameter"))
-                    {
-                        newName = newName.Replace("SecondDefiningParameter", "SecondDefParameter");
-                        // OnceRename = true;
-                    }
+                    // the validationresult has duplication conflict with prodml 2.0 and system.ComponentModel.DataAnnotations
+                    newName = t.FullName.Replace(".Generator.",".DataAccess.").Replace(".ValidationResult",".ReferenceData.ValidationResult");
+                }
+            }
+			
+			if (t.FullName.Contains("ML2"))
+            {
+                //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
+                if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
+                {
+                    newName = newName.Substring(0, newName.Length - 1);
                 }
             }
 
+            //RESQML2.0 there is two same name class declared SecondDefiningParameter.
+            if (t.FullName.Contains("secondDefiningParameter"))
+            {
+                newName = newName.Replace("SecondDefiningParameter", "SecondDefParameter");
+            } 
+             
             return newName;
         }
 
@@ -591,6 +640,17 @@ namespace Energistics.Generator
                 newName = newName.Replace("Id", "InnerDiameter");
             }
 
+            if (property.DeclaringType.Name.Equals("Pump") ||
+                property.DeclaringType.Name.Equals("Bop") ||
+                property.DeclaringType.Name.Equals("BopComponent") ||
+                property.DeclaringType.Name.Equals("Connection") ||
+                property.DeclaringType.Name.Equals("TubularComponent") ||
+                property.DeclaringType.Name.Equals("SurfaceEquipment") ||
+                property.DeclaringType.Name.Equals("Degasser"))
+            {
+                newName = newName.Replace("Id", "InnerDiameter");
+            }
+			
             return newName;
         }
 
@@ -603,6 +663,10 @@ namespace Energistics.Generator
             if (newName.CompareTo("Participant") == 0)
             {
                 newName = ReplaceSubstringIfNotPartial(newName, "Participant", "Participants");
+            }
+            if (newName.Contains("SecondDefiningParameter"))
+            {
+                newName="SecondDefPara";
             }
             newName = ReplaceSubstringIfNotPartial(newName, "Md", "MD");
             newName = ReplaceSubstringIfNotPartial(newName, "Div", "Division");
@@ -703,7 +767,7 @@ namespace Energistics.Generator
 
                 string xml = xmlSchemas[typeName];
 
-                Regex regex = new Regex("<xsd:(attribute name|element name|enumeration value)=\"" + name + "\"(?!.*/>).*?<xsd:documentation>(.*?)</xsd:documentation>", RegexOptions.Singleline);
+                Regex regex = new Regex("<xsd?:(attribute name|element name|enumeration value)=\"" + name + "\"(?!.*/>).*?<xsd?:documentation>(.*?)</xsd?:documentation>", RegexOptions.Singleline);
                 foreach (Match m in regex.Matches(xml))
                 {
                     StringBuilder sb = new StringBuilder(Regex.Replace(m.Groups[2].Value, @"\s+", " "));
@@ -724,10 +788,10 @@ namespace Energistics.Generator
                     sb.Append("\n        /// </summary>");
 
                     string result = sb.ToString();
-                    if (result.Contains("/// DEPRECATED."))
-                    {
-                        result += "\n        [Obsolete()]";
-                    }
+                    //if (result.Contains("/// DEPRECATED."))
+                    //{
+                    //    result += "\n        [Obsolete()]";
+                    //}
                     return result;
                 }
             }
@@ -751,7 +815,7 @@ namespace Energistics.Generator
             {
                 string xml = xmlSchemas[typeName];
 
-                Regex regex = new Regex("name=\"\\w*?_" + typeName + "\">(.*?)<xsd:documentation>(.*?)</xsd:documentation>", RegexOptions.Singleline);
+                Regex regex = new Regex("name=\"\\w*?_" + typeName + "\">(.*?)<xsd?:documentation>(.*?)</xsd?:documentation>", RegexOptions.Singleline);
                 foreach (Match m in regex.Matches(xml))
                 {
                     if (m.Groups[1].Value.Contains(" name=\""))
@@ -869,6 +933,7 @@ namespace Energistics.Generator
         {
             return name.Substring(0, 1).ToLower() + name.Substring(1, name.Length - 1);
         }
+
         /// <summary>
         /// Gets the body of a property. Handles properties that are part of a ordered sequence as well as
         /// the special "FieldSpecified" boolean flags.
@@ -982,9 +1047,9 @@ namespace Energistics.Generator
                     sb.AppendLine("         public bool " + specifiedBool);
                     sb.AppendLine("         {");
                     sb.AppendLine("             get {");
-                    if (property.PropertyType == typeof(Byte) || property.PropertyType == typeof(Byte[]))
+                    if (property.PropertyType == typeof(Byte)||property.PropertyType == typeof(Byte[]))
                     {
-                        sb.AppendLine("             if(" + privateFieldName + "!=null)");
+                        sb.AppendLine("             if("+privateFieldName +"!=null)");
                         sb.AppendLine("                 return " + privateFieldName + ".Length>0?true:false;");
                         sb.AppendLine("             else return false;");
                     }
@@ -1102,13 +1167,14 @@ namespace Energistics.Generator
                     {
                         xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
                     
-                    if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
-                    {
-                        xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
+	                    if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
+	                    {
+	                        xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
+	                    }
+
+                        xmlElementAttrTag += ")]";
                     }
 
-                    xmlElementAttrTag += ")]";
-                    }
                     return xmlElementAttrTag;
                 }
             }
@@ -1191,10 +1257,7 @@ namespace Energistics.Generator
             }
 
             var propType = property.PropertyType;
-            var nested = propType.GetProperties()
-                .Any(p => p.IsDefined(typeof(XmlElementAttribute), false) ||
-                          p.IsDefined(typeof(XmlAttributeAttribute), false) ||
-                          p.IsDefined(typeof(ValidationAttribute), false));
+            var nested = IsNested(propType);
 
             if (nested)
             {
@@ -1241,11 +1304,20 @@ namespace Energistics.Generator
             string array = GetArrayString(type, attr);
 
             sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));
+
+            var nested = IsNested(attr.Type);
+
+            if (nested)
+            {
+                sb.AppendLine("        [ComponentElement]");
+            }
+
             //make sure the type is specify in xmlelement annoatation , otherwise the xml output is invalidate.
             sb.AppendLine("        " + GetXmlElementAttrTag(attr, property));
-            // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
-            sb.AppendLine("        public " + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
-
+           // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
+            //check whether this is override method.
+            sb.AppendLine("        public " + getOverride(property) + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
+            
         }
 
         bool IsNullable(Type type)
@@ -1259,6 +1331,15 @@ namespace Energistics.Generator
             {
                 return false;
             }
+        }
+
+        private bool IsNested(Type type, bool recursive = false)
+        {
+            return type.GetProperties()
+                .Any(p => p.IsDefined(typeof(XmlElementAttribute), true) ||
+                          p.IsDefined(typeof(XmlAttributeAttribute), true) ||
+                          p.IsDefined(typeof(ValidationAttribute), true) ||
+                          !recursive && IsNested(p.PropertyType, true));
         }
 
         private string GetArrayString(Type type, XmlElementAttribute attr)
@@ -1416,6 +1497,16 @@ namespace Energistics.Generator
             xmlElementAttrTag += ")]";
 
             return xmlElementAttrTag;
+        }
+   
+        //return this is override property
+        internal String getOverride(PropertyInfo property)
+        {
+            if(property.Name.Contains("EnumValueStr"))
+            {
+                return " override ";
+            }
+            return "";
         }
     }
 }

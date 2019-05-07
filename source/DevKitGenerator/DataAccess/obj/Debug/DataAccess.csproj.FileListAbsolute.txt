@@ -1,6 +1,0 @@
-C:\development\WITSML\devkit-c\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.XML
-C:\development\WITSML\devkit-c\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.dll
-C:\development\WITSML\devkit-c\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.pdb
-C:\development\WITSML\devkit-c\source\DevKitGenerator\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
-C:\development\WITSML\devkit-c\source\DevKitGenerator\DataAccess\obj\Debug\Energistics.DataAccess.dll
-C:\development\WITSML\devkit-c\source\DevKitGenerator\DataAccess\obj\Debug\Energistics.DataAccess.pdb

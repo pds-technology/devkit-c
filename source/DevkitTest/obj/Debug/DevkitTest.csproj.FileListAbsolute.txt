@@ -1,1 +1,0 @@
-C:\development\WITSML\devkit-c\source\DevkitTest\obj\Debug\DevkitTest.csproj.CoreCompileInputs.cache

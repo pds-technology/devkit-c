@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Standards.DevKit-PDS</id>
+    <version>$version$</version>
+    <authors>ExxonMobil Upstream Research Company, Energistics</authors>
+    <copyright>Copyright 2012 ExxonMobil Upstream Research Company</copyright>
+    <projectUrl>http://www.energistics.org/standards-devkit</projectUrl>
+    <licenseUrl>http://www.energistics.org/product-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      The WITSML, PRODML and RESQML schemas provide the definition for standard data exchange formats within the oil and gas industry. However, developing a software solution that uses these standard formats has not always been simple. The Standards Devkit removes the complexity of using the WITSML, PRODML and RESQML standards and lets the developer concentrate on the important work of integrating the standards into their business solution.
+
+      The Standards Devkit wraps the WITSML, PRODML and RESQML schemas with Microsoft .NET objects. The developer can work directly with these objects rather than having to deal with the XML definition itself. It provides all of the conveniences that .NET developers are familiar with such as full IntelliSense support,  XML Serialization, .NET naming conventions, enumerations, and more.
+    </description>
+    <tags>WITSML PRODML RESQML C#</tags>
+  </metadata>
+  <files>
+    <file src="bin/$configuration$/Energistics.DataAccess.dll" target="lib/net40" />
+    <file src="bin/$configuration$/Energistics.DataAccess.pdb" target="lib/net40" />
+    <file src="bin/$configuration$/Energistics.DataAccess.xml" target="lib/net40" />
+  </files>
+</package>

@@ -16,6 +16,7514 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ActivityClassType {
+        
+        /// <remarks/>
+        planned,
+        
+        /// <remarks/>
+        unplanned,
+        
+        /// <remarks/>
+        downtime,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ActivityCode {
+        
+        /// <remarks/>
+        abandonment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("abandonment -- log plugs")]
+        abandonmentlogplugs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("abandonment -- run plugs")]
+        abandonmentrunplugs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("abandonment -- wait on cement")]
+        abandonmentwaitoncement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing, cement")]
+        casingcement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- circulate, cement")]
+        casingcementcirculatecement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- other")]
+        casingcementother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- rig up, run casing")]
+        casingcementrigupruncasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- rig up, run liner")]
+        casingcementriguprunliner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- wait on cement")]
+        casingcementwaitoncement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations")]
+        completionoperations,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- rig up")]
+        completionoperationsrigup,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- tear down")]
+        completionoperationsteardown,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- testing ")]
+        completionoperationstesting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- running liner")]
+        completionoperationsrunningliner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- gravel packing")]
+        completionoperationsgravelpacking,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- logging")]
+        completionoperationslogging,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate")]
+        condmudcirculate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- boulder or gravel")]
+        condmudcirculateboulderorgravel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- casing")]
+        condmudcirculatecasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- cementing")]
+        condmudcirculatecementing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- circulate samples")]
+        condmudcirculatecirculatesamples,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- coring")]
+        condmudcirculatecoring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- drilling")]
+        condmudcirculatedrilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- fishing")]
+        condmudcirculatefishing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- gumbo attack")]
+        condmudcirculategumboattack,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- logging")]
+        condmudcirculatelogging,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- lost circulation")]
+        condmudcirculatelostcirculation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- well control")]
+        condmudcirculatewellcontrol,
+        
+        /// <remarks/>
+        coring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- conventional")]
+        coringconventional,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- flow check")]
+        coringflowcheck,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- laydown barrel")]
+        coringlaydownbarrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- oriented")]
+        coringoriented,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- plastic sleeve")]
+        coringplasticsleeve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- rig up core barrel")]
+        coringrigupcorebarrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coring -- sponge")]
+        coringsponge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cut, slip drilling line")]
+        cutslipdrillingline,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deviation survey")]
+        deviationsurvey,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- dir multi-shot")]
+        deviationsurveydirmultishot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- dir single shot")]
+        deviationsurveydirsingleshot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- drift")]
+        deviationsurveydrift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- gyro")]
+        deviationsurveygyro,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- MWD")]
+        deviationsurveyMWD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dir work")]
+        dirwork,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dir work -- horizontal drilling")]
+        dirworkhorizontaldrilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dir work -- motor drilling")]
+        dirworkmotordrilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dir work -- orient")]
+        dirworkorient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dir work -- rotary drilling")]
+        dirworkrotarydrilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dir work -- slant drilling")]
+        dirworkslantdrilling,
+        
+        /// <remarks/>
+        DST,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST -- cased hole")]
+        DSTcasedhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST -- lay down tools")]
+        DSTlaydowntools,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST -- open hole")]
+        DSTopenhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST -- open hole closed chamber")]
+        DSTopenholeclosedchamber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST -- rig up tools")]
+        DSTriguptools,
+        
+        /// <remarks/>
+        drilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- casing")]
+        drillingcasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- connection")]
+        drillingconnection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- drill cement, float equip")]
+        drillingdrillcementfloatequip,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- flow check")]
+        drillingflowcheck,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- hole opening")]
+        drillingholeopening,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- new hole")]
+        drillingnewhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- sidetracking")]
+        drillingsidetracking,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling -- under-reaming")]
+        drillingunderreaming,
+        
+        /// <remarks/>
+        fishing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fishing -- BHA")]
+        fishingBHA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fishing -- casing")]
+        fishingcasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fishing -- cones")]
+        fishingcones,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fishing -- other")]
+        fishingother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fishing -- stuck pipe")]
+        fishingstuckpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fishing -- wireline tools")]
+        fishingwirelinetools,
+        
+        /// <remarks/>
+        HSE,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HSE -- hold drill")]
+        HSEholddrill,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HSE -- incident")]
+        HSEincident,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HSE -- safety meeting")]
+        HSEsafetymeeting,
+        
+        /// <remarks/>
+        mill,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill -- cut casing or tubing")]
+        millcutcasingortubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill -- milling")]
+        millmilling,
+        
+        /// <remarks/>
+        miscellaneous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP")]
+        nippleupBOP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- diverter")]
+        nippleupBOPdiverter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- manifold")]
+        nippleupBOPmanifold,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- other")]
+        nippleupBOPother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- PVT system")]
+        nippleupBOPPVTsystem,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- stack")]
+        nippleupBOPstack,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plug back")]
+        plugback,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plug back -- abandonment")]
+        plugbackabandonment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plug back -- kick off plug")]
+        plugbackkickoffplug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plug back -- lost circulation")]
+        plugbacklostcirculation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plug back -- wait on cement")]
+        plugbackwaitoncement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plug back -- well control")]
+        plugbackwellcontrol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test")]
+        pressuretest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- BOP manifold")]
+        pressuretestBOPmanifold,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- BOP stack")]
+        pressuretestBOPstack,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- form integrity test")]
+        pressuretestformintegritytest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- form leak off test")]
+        pressuretestformleakofftest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- packer")]
+        pressuretestpacker,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- PIT")]
+        pressuretestPIT,
+        
+        /// <remarks/>
+        reaming,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reaming -- back reaming")]
+        reamingbackreaming,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reaming -- coring")]
+        reamingcoring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reaming -- drill")]
+        reamingdrill,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reaming -- logging")]
+        reaminglogging,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reaming -- under-reaming")]
+        reamingunderreaming,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move")]
+        rigmove,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- anchor handling")]
+        rigmoveanchorhandling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- inter-pad move")]
+        rigmoveinterpadmove,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- inter-well move")]
+        rigmoveinterwellmove,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- jack up or down")]
+        rigmovejackupordown,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- other")]
+        rigmoveother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- position rig")]
+        rigmovepositionrig,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move -- skid rig")]
+        rigmoveskidrig,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig release")]
+        rigrelease,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig release -- cut casing")]
+        rigreleasecutcasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig release -- install capping assembly")]
+        rigreleaseinstallcappingassembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig release -- MOB or DE-MOB")]
+        rigreleaseMOBorDEMOB,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs")]
+        rigrepairs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- drawworks")]
+        rigrepairsdrawworks,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- electrical")]
+        rigrepairselectrical,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- mud system")]
+        rigrepairsmudsystem,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- other")]
+        rigrepairsother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- rotary")]
+        rigrepairsrotary,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- subsea equipment")]
+        rigrepairssubseaequipment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- well control equipment")]
+        rigrepairswellcontrolequipment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig service")]
+        rigservice,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig service -- lubricate rig")]
+        rigservicelubricaterig,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig service -- test equipment")]
+        rigservicetestequipment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down")]
+        riguporteardown,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down -- rig up")]
+        riguporteardownrigup,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down -- site work")]
+        riguporteardownsitework,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down -- tear down")]
+        riguporteardownteardown,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("run or pull riser")]
+        runorpullriser,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("run or pull riser -- other")]
+        runorpullriserother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("run or pull riser -- run or pull riser")]
+        runorpullriserrunorpullriser,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement")]
+        squeezecement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- casing repair")]
+        squeezecementcasingrepair,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- casing shoe")]
+        squeezecementcasingshoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- parted casing")]
+        squeezecementpartedcasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- perforations DST")]
+        squeezecementperforationsDST,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stuck pipe")]
+        stuckpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("surface string handling")]
+        surfacestringhandling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("testing general")]
+        testinggeneral,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("testing general -- equipment")]
+        testinggeneralequipment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("testing general -- flow")]
+        testinggeneralflow,
+        
+        /// <remarks/>
+        tripping,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tripping -- back-reaming")]
+        trippingbackreaming,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tripping -- flow check")]
+        trippingflowcheck,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tripping -- short trip in")]
+        trippingshorttripin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tripping -- short trip out")]
+        trippingshorttripout,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tripping -- trip in (from surface)")]
+        trippingtripinfromsurface,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tripping -- trip out (to surface)")]
+        trippingtripouttosurface,
+        
+        /// <remarks/>
+        wait,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- daylight")]
+        waitdaylight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- environmental or regulatory")]
+        waitenvironmentalorregulatory,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- equipment")]
+        waitequipment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- holiday")]
+        waitholiday,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- ice")]
+        waitice,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- on orders")]
+        waitonorders,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- operator")]
+        waitoperator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- other")]
+        waitother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- partners")]
+        waitpartners,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- service company")]
+        waitservicecompany,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wait -- weather")]
+        waitweather,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well control")]
+        wellcontrol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well control -- mix")]
+        wellcontrolmix,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well control -- shut in")]
+        wellcontrolshutin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well control -- strip")]
+        wellcontrolstrip,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well control -- well kill")]
+        wellcontrolwellkill,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc")]
+        wellsrvc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- casing repair")]
+        wellsrvccasingrepair,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- clean well to compl fluid")]
+        wellsrvccleanwelltocomplfluid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- coiled tubing work")]
+        wellsrvccoiledtubingwork,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- gravel pack")]
+        wellsrvcgravelpack,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- install or test xmas tree")]
+        wellsrvcinstallortestxmastree,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- kill well")]
+        wellsrvckillwell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- land, set, test completion")]
+        wellsrvclandsettestcompletion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- perforate")]
+        wellsrvcperforate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- pull completion")]
+        wellsrvcpullcompletion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- pull suspension plugs")]
+        wellsrvcpullsuspensionplugs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- run completion")]
+        wellsrvcruncompletion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- run screens")]
+        wellsrvcrunscreens,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- sand control")]
+        wellsrvcsandcontrol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- stimulation")]
+        wellsrvcstimulation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- subsea work")]
+        wellsrvcsubseawork,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- surface line work")]
+        wellsrvcsurfacelinework,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- suspend well or pull BOPs")]
+        wellsrvcsuspendwellorpullBOPs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- test well")]
+        wellsrvctestwell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- wash")]
+        wellsrvcwash,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- wireline work")]
+        wellsrvcwirelinework,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- work tubulars")]
+        wellsrvcworktubulars,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- workstring run")]
+        wellsrvcworkstringrun,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs")]
+        wirelinelogs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- abandonment")]
+        wirelinelogsabandonment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- evaluation")]
+        wirelinelogsevaluation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- form tester")]
+        wirelinelogsformtester,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- other")]
+        wirelinelogsother,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- side wall cores")]
+        wirelinelogssidewallcores,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- velocity")]
+        wirelinelogsvelocity,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum AziRef {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic north")]
+        magneticnorth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("grid north")]
+        gridnorth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("true north")]
+        truenorth,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ArrayElementDataType {
+        
+        /// <remarks/>
+        boolean,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("integer 8 bit")]
+        integer8bit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("integer 16 bit")]
+        integer16bit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("integer 32 bit")]
+        integer32bit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("integer 64 bit")]
+        integer64bit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IEEE float 32 bit")]
+        IEEEfloat32bit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IEEE float 64 bit")]
+        IEEEfloat64bit,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BearingType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil seal")]
+        oilseal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud lube")]
+        mudlube,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BitDullCode {
+        
+        /// <remarks/>
+        BC,
+        
+        /// <remarks/>
+        BT,
+        
+        /// <remarks/>
+        BU,
+        
+        /// <remarks/>
+        CC,
+        
+        /// <remarks/>
+        CD,
+        
+        /// <remarks/>
+        CI,
+        
+        /// <remarks/>
+        CR,
+        
+        /// <remarks/>
+        CT,
+        
+        /// <remarks/>
+        ER,
+        
+        /// <remarks/>
+        FC,
+        
+        /// <remarks/>
+        HC,
+        
+        /// <remarks/>
+        JD,
+        
+        /// <remarks/>
+        LC,
+        
+        /// <remarks/>
+        LN,
+        
+        /// <remarks/>
+        LT,
+        
+        /// <remarks/>
+        NO,
+        
+        /// <remarks/>
+        OC,
+        
+        /// <remarks/>
+        PB,
+        
+        /// <remarks/>
+        PN,
+        
+        /// <remarks/>
+        RG,
+        
+        /// <remarks/>
+        RO,
+        
+        /// <remarks/>
+        SD,
+        
+        /// <remarks/>
+        SS,
+        
+        /// <remarks/>
+        TR,
+        
+        /// <remarks/>
+        WO,
+        
+        /// <remarks/>
+        WT,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BitReasonPulled {
+        
+        /// <remarks/>
+        BHA,
+        
+        /// <remarks/>
+        CM,
+        
+        /// <remarks/>
+        CP,
+        
+        /// <remarks/>
+        DMF,
+        
+        /// <remarks/>
+        DP,
+        
+        /// <remarks/>
+        DST,
+        
+        /// <remarks/>
+        DTF,
+        
+        /// <remarks/>
+        FM,
+        
+        /// <remarks/>
+        HP,
+        
+        /// <remarks/>
+        HR,
+        
+        /// <remarks/>
+        LOG,
+        
+        /// <remarks/>
+        PP,
+        
+        /// <remarks/>
+        PR,
+        
+        /// <remarks/>
+        RIG,
+        
+        /// <remarks/>
+        TD,
+        
+        /// <remarks/>
+        TQ,
+        
+        /// <remarks/>
+        TW,
+        
+        /// <remarks/>
+        WC,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BitType {
+        
+        /// <remarks/>
+        diamond,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diamond core")]
+        diamondcore,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("insert roller cone")]
+        insertrollercone,
+        
+        /// <remarks/>
+        PDC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PDC core")]
+        PDCcore,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("roller cone")]
+        rollercone,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BhaStatus {
+        
+        /// <remarks/>
+        final,
+        
+        /// <remarks/>
+        progress,
+        
+        /// <remarks/>
+        plan,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BladeShapeType {
+        
+        /// <remarks/>
+        dynamic,
+        
+        /// <remarks/>
+        melon,
+        
+        /// <remarks/>
+        spiral,
+        
+        /// <remarks/>
+        straight,
+        
+        /// <remarks/>
+        variable,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BladeType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("clamp-on")]
+        clampon,
+        
+        /// <remarks/>
+        integral,
+        
+        /// <remarks/>
+        sleeve,
+        
+        /// <remarks/>
+        welded,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BopType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("annular preventer")]
+        annularpreventer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shear ram")]
+        shearram,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("blind ram")]
+        blindram,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pipe ram")]
+        piperam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling spool")]
+        drillingspool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flexible joint")]
+        flexiblejoint,
+        
+        /// <remarks/>
+        connector,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum BoxPinConfig {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bottom box, top box")]
+        bottomboxtopbox,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bottom box, top pin")]
+        bottomboxtoppin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bottom pin top box")]
+        bottompintopbox,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bottom pin")]
+        bottompin,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum CementJobType {
+        
+        /// <remarks/>
+        primary,
+        
+        /// <remarks/>
+        plug,
+        
+        /// <remarks/>
+        squeeze,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ConnectionPosition {
+        
+        /// <remarks/>
+        both,
+        
+        /// <remarks/>
+        bottom,
+        
+        /// <remarks/>
+        top,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum DeflectionMethod {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("point bit")]
+        pointbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("push bit")]
+        pushbit,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum DerrickType {
+        
+        /// <remarks/>
+        @double,
+        
+        /// <remarks/>
+        quadruple,
+        
+        /// <remarks/>
+        slant,
+        
+        /// <remarks/>
+        triple,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum DrawWorksType {
+        
+        /// <remarks/>
+        mechanical,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("standard electric")]
+        standardelectric,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diesel electric")]
+        dieselelectric,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ram rig")]
+        ramrig,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum DriveType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing")]
+        coiledtubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rotary kelly drive")]
+        rotarykellydrive,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("top drive")]
+        topdrive,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ElevCodeEnum {
+        
+        /// <remarks/>
+        CF,
+        
+        /// <remarks/>
+        CV,
+        
+        /// <remarks/>
+        DF,
+        
+        /// <remarks/>
+        GL,
+        
+        /// <remarks/>
+        KB,
+        
+        /// <remarks/>
+        RB,
+        
+        /// <remarks/>
+        RT,
+        
+        /// <remarks/>
+        SF,
+        
+        /// <remarks/>
+        LAT,
+        
+        /// <remarks/>
+        SL,
+        
+        /// <remarks/>
+        MHHW,
+        
+        /// <remarks/>
+        MHW,
+        
+        /// <remarks/>
+        MLLW,
+        
+        /// <remarks/>
+        MLW,
+        
+        /// <remarks/>
+        MTL,
+        
+        /// <remarks/>
+        KO,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum Ellipsoid {
+        
+        /// <remarks/>
+        AGD66,
+        
+        /// <remarks/>
+        AIRY_MOD,
+        
+        /// <remarks/>
+        AIRY30,
+        
+        /// <remarks/>
+        AIRY49,
+        
+        /// <remarks/>
+        AUST_NAT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("BESL-DHD")]
+        BESLDHD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("BESL-NGL")]
+        BESLNGL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("BESL-RT9")]
+        BESLRT9,
+        
+        /// <remarks/>
+        BESS41,
+        
+        /// <remarks/>
+        BESSNAM,
+        
+        /// <remarks/>
+        BOGOTA,
+        
+        /// <remarks/>
+        CL58,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL58-1")]
+        CL581,
+        
+        /// <remarks/>
+        CL66,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL66-M")]
+        CL66M,
+        
+        /// <remarks/>
+        CL80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL80-A")]
+        CL80A,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL80-B")]
+        CL80B,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL80-I")]
+        CL80I,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL80-J")]
+        CL80J,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL80-M")]
+        CL80M,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CL80-P")]
+        CL80P,
+        
+        /// <remarks/>
+        CMPOINCH,
+        
+        /// <remarks/>
+        DAN,
+        
+        /// <remarks/>
+        DELA,
+        
+        /// <remarks/>
+        ED50,
+        
+        /// <remarks/>
+        EGYPT07,
+        
+        /// <remarks/>
+        EVER,
+        
+        /// <remarks/>
+        EVER48,
+        
+        /// <remarks/>
+        EVER56,
+        
+        /// <remarks/>
+        EVER69,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("EVER-BR")]
+        EVERBR,
+        
+        /// <remarks/>
+        EVERMOD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("EVER-P")]
+        EVERP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("EVER-TM")]
+        EVERTM,
+        
+        /// <remarks/>
+        EVTM,
+        
+        /// <remarks/>
+        FISC60,
+        
+        /// <remarks/>
+        FISC60MOD,
+        
+        /// <remarks/>
+        FISC68,
+        
+        /// <remarks/>
+        FISCMOD,
+        
+        /// <remarks/>
+        GDA94,
+        
+        /// <remarks/>
+        GRS67,
+        
+        /// <remarks/>
+        GRS80,
+        
+        /// <remarks/>
+        HAY09,
+        
+        /// <remarks/>
+        HEIS,
+        
+        /// <remarks/>
+        HEL06,
+        
+        /// <remarks/>
+        HEL07,
+        
+        /// <remarks/>
+        HOUG,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IAG-75")]
+        IAG75,
+        
+        /// <remarks/>
+        INDIAN75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("INDO-74")]
+        INDO74,
+        
+        /// <remarks/>
+        INT24,
+        
+        /// <remarks/>
+        IUGG67,
+        
+        /// <remarks/>
+        IUGG75,
+        
+        /// <remarks/>
+        JEFF48,
+        
+        /// <remarks/>
+        KAU63,
+        
+        /// <remarks/>
+        KRSV,
+        
+        /// <remarks/>
+        MERIT83,
+        
+        /// <remarks/>
+        NAD27,
+        
+        /// <remarks/>
+        NAHRAN,
+        
+        /// <remarks/>
+        NEWINT67,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NWL-10D")]
+        NWL10D,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NWL-9D")]
+        NWL9D,
+        
+        /// <remarks/>
+        OSGB36,
+        
+        /// <remarks/>
+        OSU86F,
+        
+        /// <remarks/>
+        OSU91A,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PLESSIS-1817")]
+        PLESSIS1817,
+        
+        /// <remarks/>
+        PSAD56,
+        
+        /// <remarks/>
+        PTNOIRE,
+        
+        /// <remarks/>
+        SA69,
+        
+        /// <remarks/>
+        SPHR,
+        
+        /// <remarks/>
+        STRU,
+        
+        /// <remarks/>
+        WALB,
+        
+        /// <remarks/>
+        WAR24,
+        
+        /// <remarks/>
+        WGS60,
+        
+        /// <remarks/>
+        WGS66,
+        
+        /// <remarks/>
+        WGS72,
+        
+        /// <remarks/>
+        WGS84,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum FiberMode {
+        
+        /// <remarks/>
+        singlemode,
+        
+        /// <remarks/>
+        multimode,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum GasPeakType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("circulating background gas")]
+        circulatingbackgroundgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connection gas")]
+        connectiongas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling background gas")]
+        drillingbackgroundgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling gas peak")]
+        drillinggaspeak,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow check gas")]
+        flowcheckgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("no readings")]
+        noreadings,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shut down gas")]
+        shutdowngas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trip gas")]
+        tripgas,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum GeodeticDatum {
+        
+        /// <remarks/>
+        ADND,
+        
+        /// <remarks/>
+        ARC50,
+        
+        /// <remarks/>
+        AUSG,
+        
+        /// <remarks/>
+        CAA,
+        
+        /// <remarks/>
+        CHAS,
+        
+        /// <remarks/>
+        CORAL,
+        
+        /// <remarks/>
+        ED50,
+        
+        /// <remarks/>
+        ED87,
+        
+        /// <remarks/>
+        ERIN65,
+        
+        /// <remarks/>
+        GD49,
+        
+        /// <remarks/>
+        GHANA,
+        
+        /// <remarks/>
+        GUAM63,
+        
+        /// <remarks/>
+        HJRS55,
+        
+        /// <remarks/>
+        HTS,
+        
+        /// <remarks/>
+        INCH,
+        
+        /// <remarks/>
+        INDIA1,
+        
+        /// <remarks/>
+        INDIA2,
+        
+        /// <remarks/>
+        INDNS74,
+        
+        /// <remarks/>
+        LIB64,
+        
+        /// <remarks/>
+        LUZON,
+        
+        /// <remarks/>
+        MRCH,
+        
+        /// <remarks/>
+        NAD27,
+        
+        /// <remarks/>
+        NAD83,
+        
+        /// <remarks/>
+        NGRA,
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        NPRM,
+        
+        /// <remarks/>
+        OSGB36,
+        
+        /// <remarks/>
+        POTS1,
+        
+        /// <remarks/>
+        PULK1,
+        
+        /// <remarks/>
+        PULK2,
+        
+        /// <remarks/>
+        QRNQ,
+        
+        /// <remarks/>
+        SA56,
+        
+        /// <remarks/>
+        SRL60,
+        
+        /// <remarks/>
+        TNRV25,
+        
+        /// <remarks/>
+        TOKYO,
+        
+        /// <remarks/>
+        UserDefined,
+        
+        /// <remarks/>
+        VROL,
+        
+        /// <remarks/>
+        WGS72,
+        
+        /// <remarks/>
+        WGS84,
+        
+        /// <remarks/>
+        YACR,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum Hemispheres {
+        
+        /// <remarks/>
+        northern,
+        
+        /// <remarks/>
+        southern,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum HoleCasingType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("blow out preventer")]
+        blowoutpreventer,
+        
+        /// <remarks/>
+        casing,
+        
+        /// <remarks/>
+        conductor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("curved conductor")]
+        curvedconductor,
+        
+        /// <remarks/>
+        liner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("open hole")]
+        openhole,
+        
+        /// <remarks/>
+        riser,
+        
+        /// <remarks/>
+        tubing,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum HoleOpenerType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("under-reamer")]
+        underreamer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fixed blade")]
+        fixedblade,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum IntervalMethod {
+        
+        /// <remarks/>
+        average,
+        
+        /// <remarks/>
+        maximum,
+        
+        /// <remarks/>
+        minimum,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("spot sample")]
+        spotsample,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum IntervalType {
+        
+        /// <remarks/>
+        time,
+        
+        /// <remarks/>
+        depth,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ItemState {
+        
+        /// <remarks/>
+        actual,
+        
+        /// <remarks/>
+        model,
+        
+        /// <remarks/>
+        plan,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum InstalledFiberPoint {
+        
+        /// <remarks/>
+        splice,
+        
+        /// <remarks/>
+        connector,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("end of fiber")]
+        endoffiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base of fiber")]
+        baseoffiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turn around point")]
+        turnaroundpoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("start of fiber")]
+        startoffiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oven entry point")]
+        ovenentrypoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oven exit point")]
+        ovenexitpoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("downhole gauge")]
+        downholegauge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DTS laser head")]
+        DTSlaserhead,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DTS reference oven")]
+        DTSreferenceoven,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("splice box")]
+        splicebox,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wellhead junction box")]
+        wellheadjunctionbox,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base tubing hanger flange")]
+        basetubinghangerflange,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PBR wet connect")]
+        PBRwetconnect,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("top ESP pump")]
+        topESPpump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base ESP pump")]
+        baseESPpump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wellhead temperature gauge")]
+        wellheadtemperaturegauge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("top completion zone")]
+        topcompletionzone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base completion zone")]
+        basecompletionzone,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum JarType {
+        
+        /// <remarks/>
+        mechanical,
+        
+        /// <remarks/>
+        hydraulic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydro mechanical")]
+        hydromechanical,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum JarAction {
+        
+        /// <remarks/>
+        up,
+        
+        /// <remarks/>
+        down,
+        
+        /// <remarks/>
+        both,
+        
+        /// <remarks/>
+        vibrating,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LithologySource {
+        
+        /// <remarks/>
+        interpreted,
+        
+        /// <remarks/>
+        core,
+        
+        /// <remarks/>
+        cuttings,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LithologyType {
+        
+        /// <remarks/>
+        andesite,
+        
+        /// <remarks/>
+        anhydrite,
+        
+        /// <remarks/>
+        arkose,
+        
+        /// <remarks/>
+        basalt,
+        
+        /// <remarks/>
+        breccia,
+        
+        /// <remarks/>
+        calcarenite,
+        
+        /// <remarks/>
+        calcilutite,
+        
+        /// <remarks/>
+        calcisiltite,
+        
+        /// <remarks/>
+        chalk,
+        
+        /// <remarks/>
+        chert,
+        
+        /// <remarks/>
+        clay,
+        
+        /// <remarks/>
+        claystone,
+        
+        /// <remarks/>
+        coal,
+        
+        /// <remarks/>
+        conglomerate,
+        
+        /// <remarks/>
+        diabase,
+        
+        /// <remarks/>
+        diorite,
+        
+        /// <remarks/>
+        dolomite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite, calcareous")]
+        dolomitecalcareous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("extrusive rock (volcanic)")]
+        extrusiverockvolcanic,
+        
+        /// <remarks/>
+        feldspar,
+        
+        /// <remarks/>
+        gabbro,
+        
+        /// <remarks/>
+        glauconite,
+        
+        /// <remarks/>
+        gneiss,
+        
+        /// <remarks/>
+        granite,
+        
+        /// <remarks/>
+        gravel,
+        
+        /// <remarks/>
+        greenstones,
+        
+        /// <remarks/>
+        greywacke,
+        
+        /// <remarks/>
+        gumbo,
+        
+        /// <remarks/>
+        gypsum,
+        
+        /// <remarks/>
+        halite,
+        
+        /// <remarks/>
+        igneous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("intrusvie rock (plutonic)")]
+        intrusvierockplutonic,
+        
+        /// <remarks/>
+        lignite,
+        
+        /// <remarks/>
+        limestone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone, argillaceous")]
+        limestoneargillaceous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone, dolomitic")]
+        limestonedolomitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone, sandy")]
+        limestonesandy,
+        
+        /// <remarks/>
+        marble,
+        
+        /// <remarks/>
+        marl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("metamorphic rocks")]
+        metamorphicrocks,
+        
+        /// <remarks/>
+        mudstone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("no description")]
+        nodescription,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("no sample")]
+        nosample,
+        
+        /// <remarks/>
+        ophiolite,
+        
+        /// <remarks/>
+        peat,
+        
+        /// <remarks/>
+        phosphate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("phosphate rock")]
+        phosphaterock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("potassium and magnesium salts")]
+        potassiumandmagnesiumsalts,
+        
+        /// <remarks/>
+        quartzite,
+        
+        /// <remarks/>
+        rhyolite,
+        
+        /// <remarks/>
+        salt,
+        
+        /// <remarks/>
+        sand,
+        
+        /// <remarks/>
+        sandstone,
+        
+        /// <remarks/>
+        schist,
+        
+        /// <remarks/>
+        serpentine,
+        
+        /// <remarks/>
+        shale,
+        
+        /// <remarks/>
+        silt,
+        
+        /// <remarks/>
+        siltstone,
+        
+        /// <remarks/>
+        slate,
+        
+        /// <remarks/>
+        syenite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tillite (diamictite)")]
+        tillitediamictite,
+        
+        /// <remarks/>
+        trachyte,
+        
+        /// <remarks/>
+        tuff,
+        
+        /// <remarks/>
+        ultrabasic,
+        
+        /// <remarks/>
+        undifferentiated,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LogDataType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("date time")]
+        datetime,
+        
+        /// <remarks/>
+        @double,
+        
+        /// <remarks/>
+        @long,
+        
+        /// <remarks/>
+        @string,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LogIndexDirection {
+        
+        /// <remarks/>
+        decreasing,
+        
+        /// <remarks/>
+        increasing,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LogIndexType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("date time")]
+        datetime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("elapsed time")]
+        elapsedtime,
+        
+        /// <remarks/>
+        length,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth")]
+        measureddepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vertical depth")]
+        verticaldepth,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LogTraceOrigin {
+        
+        /// <remarks/>
+        realtime,
+        
+        /// <remarks/>
+        modeled,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum LogTraceState {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("depth adjusted")]
+        depthadjusted,
+        
+        /// <remarks/>
+        edited,
+        
+        /// <remarks/>
+        joined,
+        
+        /// <remarks/>
+        processed,
+        
+        /// <remarks/>
+        raw,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum MaterialType {
+        
+        /// <remarks/>
+        aluminum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("beryllium copper")]
+        berylliumcopper,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chrome alloy")]
+        chromealloy,
+        
+        /// <remarks/>
+        composite,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("non-magnetic steel")]
+        nonmagneticsteel,
+        
+        /// <remarks/>
+        plastic,
+        
+        /// <remarks/>
+        steel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("steel alloy")]
+        steelalloy,
+        
+        /// <remarks/>
+        titanium,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum MeasurementType {
+        
+        /// <remarks/>
+        acceleration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic caliper")]
+        acousticcaliper,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic casing collar locator")]
+        acousticcasingcollarlocator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic impedance")]
+        acousticimpedance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic porosity")]
+        acousticporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic velocity")]
+        acousticvelocity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic wave matrix travel time")]
+        acousticwavematrixtraveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acoustic wave travel time")]
+        acousticwavetraveltime,
+        
+        /// <remarks/>
+        amplitude,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amplitude of acoustic wave")]
+        amplitudeofacousticwave,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amplitude of E-M wave")]
+        amplitudeofEMwave,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amplitude ratio")]
+        amplituderatio,
+        
+        /// <remarks/>
+        area,
+        
+        /// <remarks/>
+        attenuation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("attenuation of acoustic wave")]
+        attenuationofacousticwave,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("attenuation of E-M wave")]
+        attenuationofEMwave,
+        
+        /// <remarks/>
+        auxiliary,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("average porosity")]
+        averageporosity,
+        
+        /// <remarks/>
+        azimuth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("barite mud correction")]
+        baritemudcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bed thickness correction")]
+        bedthicknesscorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit size")]
+        bitsize,
+        
+        /// <remarks/>
+        blocked,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("borehole environment correction")]
+        boreholeenvironmentcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("borehole fluid composition correction")]
+        boreholefluidcompositioncorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("borehole fluid correction")]
+        boreholefluidcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("borehole size correction")]
+        boreholesizecorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bromide mud correction")]
+        bromidemudcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk compressibility")]
+        bulkcompressibility,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk density")]
+        bulkdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk volume")]
+        bulkvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk volume gas")]
+        bulkvolumegas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk volume hydrocarbon")]
+        bulkvolumehydrocarbon,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk volume oil")]
+        bulkvolumeoil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bulk volume water")]
+        bulkvolumewater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/O ratio")]
+        COratio,
+        
+        /// <remarks/>
+        caliper,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cased hole correction")]
+        casedholecorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing collar locator")]
+        casingcollarlocator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing correction")]
+        casingcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing diameter correction")]
+        casingdiametercorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing inspection")]
+        casinginspection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing thickness correction")]
+        casingthicknesscorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing weight correction")]
+        casingweightcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cement correction")]
+        cementcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cement density correction")]
+        cementdensitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cement evaluation")]
+        cementevaluation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cement thickness correction")]
+        cementthicknesscorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cement type correction")]
+        cementtypecorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH density porosity")]
+        CHdensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH dolomite density porosity")]
+        CHdolomitedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH dolomite neutron porosity")]
+        CHdolomiteneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH limestone density porosity")]
+        CHlimestonedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH limestone neutron porosity")]
+        CHlimestoneneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH neutron porosity")]
+        CHneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH sandstone density porosity")]
+        CHsandstonedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CH sandstone neutron porosity")]
+        CHsandstoneneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("compressional wave dolomite porosity")]
+        compressionalwavedolomiteporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("compressional wave limestone porosity")]
+        compressionalwavelimestoneporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("compressional wave matrix travel time")]
+        compressionalwavematrixtraveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("compressional wave sandstone porosity")]
+        compressionalwavesandstoneporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("compressional wave travel time")]
+        compressionalwavetraveltime,
+        
+        /// <remarks/>
+        conductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("conductivity from attenuation")]
+        conductivityfromattenuation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("conductivity from phase shift")]
+        conductivityfromphaseshift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connate water conductivity")]
+        connatewaterconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connate water resistivity")]
+        connatewaterresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("conventional core porosity")]
+        conventionalcoreporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("core matrix density")]
+        corematrixdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("core permeability")]
+        corepermeability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("core porosity")]
+        coreporosity,
+        
+        /// <remarks/>
+        corrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("count rate")]
+        countrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("count rate ratio")]
+        countrateratio,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cross plot porosity")]
+        crossplotporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("decay time")]
+        decaytime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deep conductivity")]
+        deepconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deep induction conductivity")]
+        deepinductionconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deep induction resistivity")]
+        deepinductionresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deep laterolog conductivity")]
+        deeplaterologconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deep laterolog resistivity")]
+        deeplaterologresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deep resistivity")]
+        deepresistivity,
+        
+        /// <remarks/>
+        density,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("density porosity")]
+        densityporosity,
+        
+        /// <remarks/>
+        depth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("depth adjusted")]
+        depthadjusted,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("depth derived from velocity")]
+        depthderivedfromvelocity,
+        
+        /// <remarks/>
+        deviation,
+        
+        /// <remarks/>
+        dielectric,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diffusion correction")]
+        diffusioncorrection,
+        
+        /// <remarks/>
+        dip,
+        
+        /// <remarks/>
+        dipmeter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dipmeter conductivity")]
+        dipmeterconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dipmeter resistivity")]
+        dipmeterresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite acoustic porosity")]
+        dolomiteacousticporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite density porosity")]
+        dolomitedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite neutron porosity")]
+        dolomiteneutronporosity,
+        
+        /// <remarks/>
+        edited,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("effective porosity")]
+        effectiveporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric current")]
+        electriccurrent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric potential")]
+        electricpotential,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic wave matrix travel time")]
+        electromagneticwavematrixtraveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic wave travel time")]
+        electromagneticwavetraveltime,
+        
+        /// <remarks/>
+        element,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("elemental ratio")]
+        elementalratio,
+        
+        /// <remarks/>
+        enhanced,
+        
+        /// <remarks/>
+        filtered,
+        
+        /// <remarks/>
+        flowmeter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fluid density")]
+        fluiddensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fluid velocity")]
+        fluidvelocity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fluid viscosity")]
+        fluidviscosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flushed zone conductivity")]
+        flushedzoneconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flushed zone resistivity")]
+        flushedzoneresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flushed zone saturation")]
+        flushedzonesaturation,
+        
+        /// <remarks/>
+        force,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation density correction")]
+        formationdensitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation properties correction")]
+        formationpropertiescorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation salinity correction")]
+        formationsalinitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation saturation correction")]
+        formationsaturationcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation volume factor correction")]
+        formationvolumefactorcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation water density correction")]
+        formationwaterdensitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation water saturation correction")]
+        formationwatersaturationcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("free fluid index")]
+        freefluidindex,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("friction effect correction")]
+        frictioneffectcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gamma ray")]
+        gammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gamma ray minus uranium")]
+        gammarayminusuranium,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas saturation")]
+        gassaturation,
+        
+        /// <remarks/>
+        gradiomanometer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high frequency conductivity")]
+        highfrequencyconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high frequency electromagnetic")]
+        highfrequencyelectromagnetic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high frequency electromagnetic porosity")]
+        highfrequencyelectromagneticporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high frequency E-M phase shift")]
+        highfrequencyEMphaseshift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high frequency resistivity")]
+        highfrequencyresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon correction")]
+        hydrocarboncorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon density correction")]
+        hydrocarbondensitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon gravity correction")]
+        hydrocarbongravitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon saturation")]
+        hydrocarbonsaturation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon viscosity correction")]
+        hydrocarbonviscositycorrection,
+        
+        /// <remarks/>
+        image,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("interpretation variable")]
+        interpretationvariable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iron mud correction")]
+        ironmudcorrection,
+        
+        /// <remarks/>
+        joined,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("KCl mud correction")]
+        KClmudcorrection,
+        
+        /// <remarks/>
+        length,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone acoustic porosity")]
+        limestoneacousticporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone density porosity")]
+        limestonedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone neutron porosity")]
+        limestoneneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lithology correction")]
+        lithologycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("log derived permeability")]
+        logderivedpermeability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("log matrix density")]
+        logmatrixdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic casing collar locator")]
+        magneticcasingcollarlocator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("matrix density")]
+        matrixdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("matrix travel time")]
+        matrixtraveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth")]
+        measureddepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mechanical caliper")]
+        mechanicalcaliper,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mechanical casing collar locator")]
+        mechanicalcasingcollarlocator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("medium conductivity")]
+        mediumconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("medium induction conductivity")]
+        mediuminductionconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("medium induction resistivity")]
+        mediuminductionresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("medium laterolog conductivity")]
+        mediumlaterologconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("medium laterolog resistivity")]
+        mediumlaterologresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("medium resistivity")]
+        mediumresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro conductivity")]
+        microconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro inverse conductivity")]
+        microinverseconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro inverse resistivity")]
+        microinverseresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro laterolog conductivity")]
+        microlaterologconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro laterolog resistivity")]
+        microlaterologresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro normal conductivity")]
+        micronormalconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro normal resistivity")]
+        micronormalresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro resistivity")]
+        microresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro spherically focused conductivity")]
+        microsphericallyfocusedconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("micro spherically focused resistivity")]
+        microsphericallyfocusedresistivity,
+        
+        /// <remarks/>
+        mineral,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cake conductivity")]
+        mudcakeconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cake correction")]
+        mudcakecorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cake density correction")]
+        mudcakedensitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cake resistivity")]
+        mudcakeresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cake resistivity correction")]
+        mudcakeresistivitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cake thickness correction")]
+        mudcakethicknesscorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud composition correction")]
+        mudcompositioncorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud conductivity")]
+        mudconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate conductivity")]
+        mudfiltrateconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate correction")]
+        mudfiltratecorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate density correction")]
+        mudfiltratedensitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate resistivity")]
+        mudfiltrateresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate resistivity correction")]
+        mudfiltrateresistivitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate salinity correction")]
+        mudfiltratesalinitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud resistivity")]
+        mudresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud salinity correction")]
+        mudsalinitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud viscosity correction")]
+        mudviscositycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud weight correction")]
+        mudweightcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neutron die away time")]
+        neutrondieawaytime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity")]
+        neutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nuclear caliper")]
+        nuclearcaliper,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nuclear magnetic decay time")]
+        nuclearmagneticdecaytime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nuclear magnetism log permeability")]
+        nuclearmagnetismlogpermeability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nuclear magnetism porosity")]
+        nuclearmagnetismporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH density porosity")]
+        OHdensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH dolomite density porosity")]
+        OHdolomitedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH dolomite neutron porosity")]
+        OHdolomiteneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH limestone density porosity")]
+        OHlimestonedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH limestone neutron porosity")]
+        OHlimestoneneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH neutron porosity")]
+        OHneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH sandstone density porosity")]
+        OHsandstonedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("OH sandstone neutron porosity")]
+        OHsandstoneneutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil based mud correction")]
+        oilbasedmudcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil saturation")]
+        oilsaturation,
+        
+        /// <remarks/>
+        perforating,
+        
+        /// <remarks/>
+        permeability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("phase shift")]
+        phaseshift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("photoelectric absorption")]
+        photoelectricabsorption,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("photoelectric absorption correction")]
+        photoelectricabsorptioncorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("physical measurement correction")]
+        physicalmeasurementcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plane angle")]
+        planeangle,
+        
+        /// <remarks/>
+        porosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("porosity correction")]
+        porositycorrection,
+        
+        /// <remarks/>
+        potassium,
+        
+        /// <remarks/>
+        pressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure correction")]
+        pressurecorrection,
+        
+        /// <remarks/>
+        processed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pulsed neutron porosity")]
+        pulsedneutronporosity,
+        
+        /// <remarks/>
+        quality,
+        
+        /// <remarks/>
+        ratio,
+        
+        /// <remarks/>
+        raw,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("relative bearing")]
+        relativebearing,
+        
+        /// <remarks/>
+        resistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("resistivity factor correction")]
+        resistivityfactorcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("resistivity from attenuation")]
+        resistivityfromattenuation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("resistivity from phase shift")]
+        resistivityfromphaseshift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("resistivity phase shift")]
+        resistivityphaseshift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("resistivity ratio")]
+        resistivityratio,
+        
+        /// <remarks/>
+        salinity,
+        
+        /// <remarks/>
+        sampling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sandstone acoustic porosity")]
+        sandstoneacousticporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sandstone density porosity")]
+        sandstonedensityporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sandstone neutron porosity")]
+        sandstoneneutronporosity,
+        
+        /// <remarks/>
+        saturation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shale volume")]
+        shalevolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow conductivity")]
+        shallowconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow induction conductivity")]
+        shallowinductionconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow induction resistivity")]
+        shallowinductionresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow laterolog conductivity")]
+        shallowlaterologconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow laterolog resistivity")]
+        shallowlaterologresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow resistivity")]
+        shallowresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shear wave dolomite porosity")]
+        shearwavedolomiteporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shear wave limestone porosity")]
+        shearwavelimestoneporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shear wave matrix travel time")]
+        shearwavematrixtraveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shear wave sandstone porosity")]
+        shearwavesandstoneporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shear wave travel time")]
+        shearwavetraveltime,
+        
+        /// <remarks/>
+        shifted,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sidewall core porosity")]
+        sidewallcoreporosity,
+        
+        /// <remarks/>
+        sigma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sigma formation")]
+        sigmaformation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sigma gas")]
+        sigmagas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sigma hydrocarbon")]
+        sigmahydrocarbon,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sigma matrix")]
+        sigmamatrix,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sigma oil")]
+        sigmaoil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sigma water")]
+        sigmawater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("slippage velocity correction")]
+        slippagevelocitycorrection,
+        
+        /// <remarks/>
+        smoothed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("spectral gamma ray")]
+        spectralgammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("spherically focused conductivity")]
+        sphericallyfocusedconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("spherically focused resistivity")]
+        sphericallyfocusedresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("spontaneous potential")]
+        spontaneouspotential,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("spreading loss correction")]
+        spreadinglosscorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("synthetic well log trace")]
+        syntheticwelllogtrace,
+        
+        /// <remarks/>
+        temperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature correction")]
+        temperaturecorrection,
+        
+        /// <remarks/>
+        tension,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Th/K ratio")]
+        ThKratio,
+        
+        /// <remarks/>
+        thorium,
+        
+        /// <remarks/>
+        time,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tool diameter correction")]
+        tooldiametercorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tool eccentricity correction")]
+        tooleccentricitycorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("total gamma ray")]
+        totalgammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("total porosity")]
+        totalporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tracer survey")]
+        tracersurvey,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("travel time")]
+        traveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("true conductivity")]
+        trueconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("true resistivity")]
+        trueresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("true vertical depth")]
+        trueverticaldepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tube wave dolomite porosity")]
+        tubewavedolomiteporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tube wave limestone porosity")]
+        tubewavelimestoneporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tube wave matrix travel time")]
+        tubewavematrixtraveltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tube wave sandstone porosity")]
+        tubewavesandstoneporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tube wave travel time")]
+        tubewavetraveltime,
+        
+        /// <remarks/>
+        uranium,
+        
+        /// <remarks/>
+        velocity,
+        
+        /// <remarks/>
+        volume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water based fluid correction")]
+        waterbasedfluidcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water holdup correction")]
+        waterholdupcorrection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water saturated conductivity")]
+        watersaturatedconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water saturated resistivity")]
+        watersaturatedresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water saturation")]
+        watersaturation,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum MessageProbability {
+        
+        /// <remarks/>
+        low,
+        
+        /// <remarks/>
+        medium,
+        
+        /// <remarks/>
+        high,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum MessageSeverity {
+        
+        /// <remarks/>
+        catastrophic,
+        
+        /// <remarks/>
+        major,
+        
+        /// <remarks/>
+        minor,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum MessageType {
+        
+        /// <remarks/>
+        alarm,
+        
+        /// <remarks/>
+        @event,
+        
+        /// <remarks/>
+        informational,
+        
+        /// <remarks/>
+        warning,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum MudLogParameterType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit parameters")]
+        bitparameters,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit type comment")]
+        bittypecomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing point comment")]
+        casingpointcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chromatograph comment")]
+        chromatographcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("circulation system comment")]
+        circulationsystemcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("core interval comment")]
+        coreintervalcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cuttings gas")]
+        cuttingsgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("direct fracture pressure")]
+        directfracturepressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("direct pore pressure measurements")]
+        directporepressuremeasurements,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling data comment")]
+        drillingdatacomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fracture PG estimate most likely")]
+        fracturePGestimatemostlikely,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas peaks comment")]
+        gaspeakscomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas ratio comment")]
+        gasratiocomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general engineering comment")]
+        generalengineeringcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kicks and flows")]
+        kicksandflows,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lithlog comment")]
+        lithlogcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lost returns")]
+        lostreturns,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("LWD comment")]
+        LWDcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("marker or formation top comment")]
+        markerorformationtopcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("midnight depth date")]
+        midnightdepthdate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud check comment")]
+        mudcheckcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud data comment")]
+        muddatacomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mudlog comment")]
+        mudlogcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("overburden gradient")]
+        overburdengradient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("overpull on connection")]
+        overpullonconnection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("overpull on trip")]
+        overpullontrip,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pore PG estimate most likely")]
+        porePGestimatemostlikely,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pore pressure estimate while drilling")]
+        porepressureestimatewhiledrilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure data comment")]
+        pressuredatacomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shale density comment")]
+        shaledensitycomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("short trip comment")]
+        shorttripcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("show report comment")]
+        showreportcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sidewall core comment")]
+        sidewallcorecomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sliding Interval")]
+        slidingInterval,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("steam still results comment")]
+        steamstillresultscomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("survey comment")]
+        surveycomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature data comment")]
+        temperaturedatacomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature trend comment")]
+        temperaturetrendcomment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline log comment")]
+        wirelinelogcomment,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum NADTypes {
+        
+        /// <remarks/>
+        NAD27,
+        
+        /// <remarks/>
+        NAD83,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum NameTagLocation {
+        
+        /// <remarks/>
+        body,
+        
+        /// <remarks/>
+        box,
+        
+        /// <remarks/>
+        pin,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum NameTagNumberingScheme {
+        
+        /// <remarks/>
+        EPC64,
+        
+        /// <remarks/>
+        EPC96,
+        
+        /// <remarks/>
+        MSRCID,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC2")]
+        ANSIAIMBC2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC6")]
+        ANSIAIMBC6,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC10")]
+        ANSIAIMBC10,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("EAN.UCC")]
+        EANUCC,
+        
+        /// <remarks/>
+        F2F,
+        
+        /// <remarks/>
+        MFM,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("serial number")]
+        serialnumber,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum NameTagTechnology {
+        
+        /// <remarks/>
+        tagged,
+        
+        /// <remarks/>
+        labeled,
+        
+        /// <remarks/>
+        intrinsic,
+        
+        /// <remarks/>
+        stamped,
+        
+        /// <remarks/>
+        painted,
+        
+        /// <remarks/>
+        temporary,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum NozzleType {
+        
+        /// <remarks/>
+        extended,
+        
+        /// <remarks/>
+        normal,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum OTDRReason {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pre-installation")]
+        preinstallation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("post-installation")]
+        postinstallation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DTS run")]
+        DTSrun,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum PitType {
+        
+        /// <remarks/>
+        bulk,
+        
+        /// <remarks/>
+        chemical,
+        
+        /// <remarks/>
+        drilling,
+        
+        /// <remarks/>
+        mix,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud cleaning")]
+        mudcleaning,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sand trap")]
+        sandtrap,
+        
+        /// <remarks/>
+        slug,
+        
+        /// <remarks/>
+        storage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("surge tank")]
+        surgetank,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trip tank")]
+        triptank,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum Projection {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Albers equal area")]
+        Albersequalarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("azimuthal equidistant")]
+        azimuthalequidistant,
+        
+        /// <remarks/>
+        Cassini,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("equidistant conic")]
+        equidistantconic,
+        
+        /// <remarks/>
+        equirectangular,
+        
+        /// <remarks/>
+        gnomonic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Lambert azimuthal")]
+        Lambertazimuthal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Lambert conformal conic")]
+        Lambertconformalconic,
+        
+        /// <remarks/>
+        Mercator,
+        
+        /// <remarks/>
+        Miller,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oblique Mercator")]
+        obliqueMercator,
+        
+        /// <remarks/>
+        orthographic,
+        
+        /// <remarks/>
+        perspective,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("polar stereographic")]
+        polarstereographic,
+        
+        /// <remarks/>
+        polyconic,
+        
+        /// <remarks/>
+        sinusoidal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("state plane")]
+        stateplane,
+        
+        /// <remarks/>
+        stereographic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("transverse Mercator")]
+        transverseMercator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("universal transverse Mercator")]
+        universaltransverseMercator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("user defined")]
+        userdefined,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Van der Grinten")]
+        VanderGrinten,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ProjectionVariantsObliqueMercator {
+        
+        /// <remarks/>
+        @default,
+        
+        /// <remarks/>
+        rectified,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rectified skew")]
+        rectifiedskew,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rectified skew center origin")]
+        rectifiedskewcenterorigin,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum PumpType {
+        
+        /// <remarks/>
+        centrifugal,
+        
+        /// <remarks/>
+        duplex,
+        
+        /// <remarks/>
+        triplex,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum PumpOpType {
+        
+        /// <remarks/>
+        drilling,
+        
+        /// <remarks/>
+        reaming,
+        
+        /// <remarks/>
+        circulating,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("slow pump")]
+        slowpump,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum QualifierType {
+        
+        /// <remarks/>
+        anhydritic,
+        
+        /// <remarks/>
+        argillaceous,
+        
+        /// <remarks/>
+        barite,
+        
+        /// <remarks/>
+        belemnitic,
+        
+        /// <remarks/>
+        bioturbated,
+        
+        /// <remarks/>
+        bituminous,
+        
+        /// <remarks/>
+        bryozoans,
+        
+        /// <remarks/>
+        burrowed,
+        
+        /// <remarks/>
+        calcareous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("calcite concr")]
+        calciteconcr,
+        
+        /// <remarks/>
+        carbonaceous,
+        
+        /// <remarks/>
+        chalky,
+        
+        /// <remarks/>
+        chamosite,
+        
+        /// <remarks/>
+        chert,
+        
+        /// <remarks/>
+        chlorite,
+        
+        /// <remarks/>
+        concretions,
+        
+        /// <remarks/>
+        conglomeratic,
+        
+        /// <remarks/>
+        coral,
+        
+        /// <remarks/>
+        crinoids,
+        
+        /// <remarks/>
+        diatoms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite concretion")]
+        dolomiteconcretion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite stringer")]
+        dolomitestringer,
+        
+        /// <remarks/>
+        dolomitic,
+        
+        /// <remarks/>
+        dolomite,
+        
+        /// <remarks/>
+        feldspar,
+        
+        /// <remarks/>
+        ferruginous,
+        
+        /// <remarks/>
+        fissile,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("forams undifferentiated")]
+        foramsundifferentiated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fossil fragment")]
+        fossilfragment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fossils undifferentiated")]
+        fossilsundifferentiated,
+        
+        /// <remarks/>
+        glauconite,
+        
+        /// <remarks/>
+        glauconitic,
+        
+        /// <remarks/>
+        gravelly,
+        
+        /// <remarks/>
+        gypsiferous,
+        
+        /// <remarks/>
+        halite,
+        
+        /// <remarks/>
+        illite,
+        
+        /// <remarks/>
+        kaolinite,
+        
+        /// <remarks/>
+        lignite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone stringer")]
+        limestonestringer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lithic fragment")]
+        lithicfragment,
+        
+        /// <remarks/>
+        marly,
+        
+        /// <remarks/>
+        mica,
+        
+        /// <remarks/>
+        microfossil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("no description")]
+        nodescription,
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        oncolite,
+        
+        /// <remarks/>
+        oncolith,
+        
+        /// <remarks/>
+        oncolithic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ooid or oolith")]
+        ooidoroolith,
+        
+        /// <remarks/>
+        ostracods,
+        
+        /// <remarks/>
+        pebbly,
+        
+        /// <remarks/>
+        pelletal,
+        
+        /// <remarks/>
+        pellet,
+        
+        /// <remarks/>
+        peloid,
+        
+        /// <remarks/>
+        peloidal,
+        
+        /// <remarks/>
+        phosphate,
+        
+        /// <remarks/>
+        pisolite,
+        
+        /// <remarks/>
+        pisolith,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plant remains")]
+        plantremains,
+        
+        /// <remarks/>
+        pyrite,
+        
+        /// <remarks/>
+        quartz,
+        
+        /// <remarks/>
+        radiolaria,
+        
+        /// <remarks/>
+        salty,
+        
+        /// <remarks/>
+        sandy,
+        
+        /// <remarks/>
+        shell,
+        
+        /// <remarks/>
+        siderite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("siderite concretion")]
+        sideriteconcretion,
+        
+        /// <remarks/>
+        silty,
+        
+        /// <remarks/>
+        spicule,
+        
+        /// <remarks/>
+        spicular,
+        
+        /// <remarks/>
+        stylolite,
+        
+        /// <remarks/>
+        stylolitic,
+        
+        /// <remarks/>
+        tuffaceous,
+        
+        /// <remarks/>
+        tuffite,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum RealtimeData {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length along fiber")]
+        lengthalongfiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DTS temperature")]
+        DTStemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Stokes intensity")]
+        Stokesintensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("anti-Stokes intensity")]
+        antiStokesintensity,
+        
+        /// <remarks/>
+        acetylene,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("azimuth corrected")]
+        azimuthcorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("azimuth uncorrected")]
+        azimuthuncorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit revolutions, cumulative")]
+        bitrevolutionscumulative,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("build rate")]
+        buildrate,
+        
+        /// <remarks/>
+        caliper,
+        
+        /// <remarks/>
+        cavings,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cation exchange capacity")]
+        cationexchangecapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing cumulative returns")]
+        cementingcumulativereturns,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing density in (average)")]
+        cementingdensityinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing density out (average)")]
+        cementingdensityoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing ECD at casing shoe")]
+        cementingECDatcasingshoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate in (average)")]
+        cementingflowrateinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate in (calculated)")]
+        cementingflowrateincalculated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate out (average)")]
+        cementingflowrateoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate out (calculated)")]
+        cementingflowrateoutcalculated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate out (relative)")]
+        cementingflowrateoutrelative,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing fluid type")]
+        cementingfluidtype,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing job type")]
+        cementingjobtype,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing plugs")]
+        cementingplugs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing pump pressure (average)")]
+        cementingpumppressureaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing stage")]
+        cementingstage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing temperature in (average)")]
+        cementingtemperatureinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing temperature out (average)")]
+        cementingtemperatureoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing volume to bump plug")]
+        cementingvolumetobumpplug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing cement volume")]
+        cementingcementvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing individual volume")]
+        cementingindividualvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cementing total volume")]
+        cementingtotalvolume,
+        
+        /// <remarks/>
+        chkPrAv,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (cycle-based)")]
+        carbondioxidecyclebased,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (average)")]
+        carbondioxideaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (minimum)")]
+        carbondioxideminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (maximum)")]
+        carbondioxidemaximum,
+        
+        /// <remarks/>
+        conductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("conductivity of mud in (average)")]
+        conductivityofmudinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("conductivity of mud out (average)")]
+        conductivityofmudoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connections done")]
+        connectionsdone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connections remaining")]
+        connectionsremaining,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cost per distance")]
+        costperdistance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cost per distance (average)")]
+        costperdistanceaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cumulative time on bit")]
+        cumulativetimeonbit,
+        
+        /// <remarks/>
+        density,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("density shale")]
+        densityshale,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diameter of bit")]
+        diameterofbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("distance drilled by bit")]
+        distancedrilledbybit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dogleg severity")]
+        doglegseverity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST bottom hole pressure")]
+        DSTbottomholepressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST bottom hole temperature")]
+        DSTbottomholetemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST cumulative gas production")]
+        DSTcumulativegasproduction,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST cumulative liquid production")]
+        DSTcumulativeliquidproduction,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST cumulative total production")]
+        DSTcumulativetotalproduction,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST gas flow rate")]
+        DSTgasflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST hydrogen sulfide (average)")]
+        DSThydrogensulfideaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST identifier")]
+        DSTidentifier,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST liquid flow rate")]
+        DSTliquidflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST surface pressure in casing")]
+        DSTsurfacepressureincasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST surface pressure in tubing")]
+        DSTsurfacepressureintubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST surface temperature in tubing")]
+        DSTsurfacetemperatureintubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST total flow rate")]
+        DSTtotalflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DST tool time")]
+        DSTtooltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling exponent (corrected)")]
+        drillingexponentcorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ECD at bit depth")]
+        ECDatbitdepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ECD at casing shoe depth")]
+        ECDatcasingshoedepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ECD from MWD tool")]
+        ECDfromMWDtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ECD at total depth")]
+        ECDattotaldepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane")]
+        neopentane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane (average)")]
+        neopentaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane (minimum)")]
+        neopentaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane (maximum)")]
+        neopentanemaximum,
+        
+        /// <remarks/>
+        ethane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ethane (average)")]
+        ethaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ethane (minimum)")]
+        ethaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ethane (maximum)")]
+        ethanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation fracture pressure gradient")]
+        formationfracturepressuregradient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow rate in (average)")]
+        flowrateinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow in (relative)")]
+        flowinrelative,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow rate out (average)")]
+        flowrateoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow out (relative)")]
+        flowoutrelative,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("overburden pressure gradient")]
+        overburdenpressuregradient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit jet impact force")]
+        bitjetimpactforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation pore pressure gradient")]
+        formationporepressuregradient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas total (average)")]
+        gastotalaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connection gas (average)")]
+        connectiongasaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connection gas (last)")]
+        connectiongaslast,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connection gas (maximum)")]
+        connectiongasmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trip gas (last)")]
+        tripgaslast,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gamma ray")]
+        gammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gamma ray (corrected)")]
+        gammaraycorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity tool face")]
+        gravitytoolface,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity X-axis (corrected)")]
+        gravityXaxiscorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity X-axis (uncorrected)")]
+        gravityXaxisuncorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity Y-axis (corrected)")]
+        gravityYaxiscorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity Y-axis (uncorrected)")]
+        gravityYaxisuncorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity Z-axis (corrected)")]
+        gravityZaxiscorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gravity Z-axis (uncorrected)")]
+        gravityZaxisuncorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide")]
+        hydrogensulfide,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide (average)")]
+        hydrogensulfideaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide (minimum)")]
+        hydrogensulfideminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide (maximum)")]
+        hydrogensulfidemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hookload (average)")]
+        hookloadaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hookload (minimum)")]
+        hookloadminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hookload (maximum)")]
+        hookloadmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer X (corrected)")]
+        MWDmagnetometerXcorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer X (raw)")]
+        MWDmagnetometerXraw,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Y (corrected)")]
+        MWDmagnetometerYcorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Y (raw)")]
+        MWDmagnetometerYraw,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Z (corrected)")]
+        MWDmagnetometerZcorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Z (raw)")]
+        MWDmagnetometerZraw,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-butane")]
+        isobutane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-butane (average)")]
+        isobutaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-butane (minimum)")]
+        isobutaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-butane (maximum)")]
+        isobutanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane")]
+        isohexane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane (average)")]
+        isohexaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane (minimum)")]
+        isohexaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane (maximum)")]
+        isohexanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inclination (corrected)")]
+        inclinationcorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inclination near bit")]
+        inclinationnearbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inclination (uncorrected)")]
+        inclinationuncorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane")]
+        isopentane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane (average)")]
+        isopentaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane (minimum)")]
+        isopentaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane (maximum)")]
+        isopentanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kick tolerance")]
+        kicktolerance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lithology flag")]
+        lithologyflag,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD alternator voltage")]
+        MWDalternatorvoltage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD bottom hole annulus pressure")]
+        MWDbottomholeannuluspressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD bottom hole internal pressure")]
+        MWDbottomholeinternalpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit total measured depth")]
+        bittotalmeasureddepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD conductivity")]
+        MWDconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth of casing")]
+        measureddepthofcasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth of DST bottom")]
+        measureddepthofDSTbottom,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth of DST top")]
+        measureddepthofDSTtop,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth of diverter tool")]
+        measureddepthofdivertertool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth of hole")]
+        measureddepthofhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth of returns")]
+        measureddepthofreturns,
+        
+        /// <remarks/>
+        methane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("methane (average)")]
+        methaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("methane (minimum)")]
+        methaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("methane (maximum)")]
+        methanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD derived fracture pressure gradient")]
+        MWDderivedfracturepressuregradient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD derived pore pressure gradient")]
+        MWDderivedporepressuregradient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid resistivity in annulus")]
+        MWDfluidresistivityinannulus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid resistivity in pipe")]
+        MWDfluidresistivityinpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid temperature in annulus")]
+        MWDfluidtemperatureinannulus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid temperature in pipe")]
+        MWDfluidtemperatureinpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD gamma ray")]
+        MWDgammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD gamma ray (corrected)")]
+        MWDgammaraycorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD motor speed")]
+        MWDmotorspeed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD resistivity")]
+        MWDresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD resistivity (corrected)")]
+        MWDresistivitycorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic tool face")]
+        magnetictoolface,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD torque (average)")]
+        MWDtorqueaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD torque (maximum)")]
+        MWDtorquemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD axial vibration")]
+        MWDaxialvibration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD lateral vibration")]
+        MWDlateralvibration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD torsional vibration")]
+        MWDtorsionalvibration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD weight on bit (average)")]
+        MWDweightonbitaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD weight on bit (maximum)")]
+        MWDweightonbitmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-butane")]
+        norbutane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-butane (average)")]
+        norbutaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-butane (minimum)")]
+        norbutaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-butane (maximum)")]
+        norbutanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neutron density")]
+        neutrondensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane")]
+        norhexane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane (average)")]
+        norhexaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane (minimum)")]
+        norhexaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane (maximum)")]
+        norhexanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane")]
+        norpentane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane (average)")]
+        norpentaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane (minimum)")]
+        norpentaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane (maximum)")]
+        norpentanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity")]
+        neutronporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity (corrected)")]
+        neutronporositycorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity ratio")]
+        neutronporosityratio,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pass number")]
+        passnumber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trip number")]
+        tripnumber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("photoelectric effect")]
+        photoelectriceffect,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit pressure loss")]
+        bitpressureloss,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("block position")]
+        blockposition,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydraulic power of bit")]
+        hydraulicpowerofbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydraulic power per area of bit")]
+        hydraulicpowerperareaofbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hydraulic power of pump")]
+        hydraulicpowerofpump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure loss at annulus")]
+        pressurelossatannulus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at bit")]
+        pressuredropatbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure loss at bit")]
+        pressurelossatbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure drop (calculated or observed)")]
+        pressuredropcalculatedorobserved,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at motor")]
+        pressuredropatmotor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at MWD tool")]
+        pressuredropatMWDtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at string")]
+        pressuredropatstring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at surface")]
+        pressuredropatsurface,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure at MWD tool")]
+        pressureatMWDtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure at pump (average)")]
+        pressureatpumpaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shut-in pressure (maximum)")]
+        shutinpressuremaximum,
+        
+        /// <remarks/>
+        propane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("propane (average)")]
+        propaneaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("propane (minimum)")]
+        propaneminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("propane (maximum)")]
+        propanemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plastic viscosity")]
+        plasticviscosity,
+        
+        /// <remarks/>
+        resistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("resistivity (corrected)")]
+        resistivitycorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rate of penetration (average)")]
+        rateofpenetrationaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rate of penetration (intantaneous)")]
+        rateofpenetrationintantaneous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rotation flag")]
+        rotationflag,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rotary speed (average)")]
+        rotaryspeedaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("running speed down (average)")]
+        runningspeeddownaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("running speed down (maximum)")]
+        runningspeeddownmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("running speed up (average)")]
+        runningspeedupaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("running speed up (maximum)")]
+        runningspeedupmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sonic coherence")]
+        soniccoherence,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sonic density")]
+        sonicdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sonic delta-time (corrected)")]
+        sonicdeltatimecorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sonic delta-time (uncorrected)")]
+        sonicdeltatimeuncorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sonic porosity")]
+        sonicporosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sonic porosity (corrected)")]
+        sonicporositycorrected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stroke rate")]
+        strokerate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stroke rate total")]
+        strokeratetotal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("state of well")]
+        stateofwell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in-slips status")]
+        inslipsstatus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lag strokes")]
+        lagstrokes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stroke count (total)")]
+        strokecounttotal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stroke count")]
+        strokecount,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud temperature in (average)")]
+        mudtemperatureinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud temperature out (average)")]
+        mudtemperatureoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time in slips")]
+        timeinslips,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time out of slips")]
+        timeoutofslips,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("torque (average)")]
+        torqueaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("torque for break-out (maximum)")]
+        torqueforbreakoutmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("torque for make-up (maximum)")]
+        torqueformakeupmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("torque (maximum)")]
+        torquemaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trip tank volume")]
+        triptankvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turn rate")]
+        turnrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TVD of Bit")]
+        TVDofBit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TVD of casing")]
+        TVDofcasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TVD of DST bottom")]
+        TVDofDSTbottom,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TVD of DST top")]
+        TVDofDSTtop,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TVD of hole")]
+        TVDofhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tank volume")]
+        tankvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tank volume (active)")]
+        tankvolumeactive,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tank volume change")]
+        tankvolumechange,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tank volume change (active)")]
+        tankvolumechangeactive,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tank volume change total")]
+        tankvolumechangetotal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tank volume (total)")]
+        tankvolumetotal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("annular velocity (minimum)")]
+        annularvelocityminimum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("annular velocity (maximum)")]
+        annularvelocitymaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("velocity of jet")]
+        velocityofjet,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fill volume (expected)")]
+        fillvolumeexpected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fill volume total (expected)")]
+        fillvolumetotalexpected,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fill volume (observed)")]
+        fillvolumeobserved,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fill volume total (observed)")]
+        fillvolumetotalobserved,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("weight on bit (average)")]
+        weightonbitaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("weight on bit (maximum)")]
+        weightonbitmaximum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud density in (average)")]
+        muddensityinaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud density out (average)")]
+        muddensityoutaverage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("yield point")]
+        yieldpoint,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum RigType {
+        
+        /// <remarks/>
+        barge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing")]
+        coiledtubing,
+        
+        /// <remarks/>
+        floater,
+        
+        /// <remarks/>
+        jackup,
+        
+        /// <remarks/>
+        land,
+        
+        /// <remarks/>
+        platform,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("semi-submersible")]
+        semisubmersible,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum RiskAffectedPersonnel {
+        
+        /// <remarks/>
+        cementer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("company man")]
+        companyman,
+        
+        /// <remarks/>
+        contractor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("directional driller")]
+        directionaldriller,
+        
+        /// <remarks/>
+        driller,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling engineer")]
+        drillingengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling superintendent")]
+        drillingsuperintendent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling team")]
+        drillingteam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("facility engineer")]
+        facilityengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("field service manager")]
+        fieldservicemanager,
+        
+        /// <remarks/>
+        foreman,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general service supervisor")]
+        generalservicesupervisor,
+        
+        /// <remarks/>
+        geologist,
+        
+        /// <remarks/>
+        member,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud engineer")]
+        mudengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud logger")]
+        mudlogger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD or LWD engineer")]
+        MWDorLWDengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("perform engineer")]
+        performengineer,
+        
+        /// <remarks/>
+        petrophysicist,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("production engineer")]
+        productionengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("remotely operated vehicle engineer")]
+        remotelyoperatedvehicleengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("safety manger")]
+        safetymanger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sales engineer")]
+        salesengineer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("service supervisor")]
+        servicesupervisor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("technical support")]
+        technicalsupport,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tool pusher")]
+        toolpusher,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline engineer")]
+        wirelineengineer,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum RiskCategory {
+        
+        /// <remarks/>
+        hydraulics,
+        
+        /// <remarks/>
+        mechanical,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time related")]
+        timerelated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wellbore stability")]
+        wellborestability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("directional drilling")]
+        directionaldrilling,
+        
+        /// <remarks/>
+        bit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("equipment failure")]
+        equipmentfailure,
+        
+        /// <remarks/>
+        completion,
+        
+        /// <remarks/>
+        casing,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        HSE,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum RiskSubCategory {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas kick")]
+        gaskick,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow water influx")]
+        shallowwaterinflux,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("other influx or kicks")]
+        otherinfluxorkicks,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("loss circulation")]
+        losscirculation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("poor hole cleaning")]
+        poorholecleaning,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("good hole cleaning at high ROP")]
+        goodholecleaningathighROP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high mud weight")]
+        highmudweight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("special additives needed")]
+        specialadditivesneeded,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gumbo problems")]
+        gumboproblems,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high ECD - rheology related")]
+        highECDrheologyrelated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive circulation")]
+        excessivecirculation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("performing a kill")]
+        performingakill,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud weight change")]
+        mudweightchange,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive pipe cement scaling")]
+        excessivepipecementscaling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pit gain or loss")]
+        pitgainorloss,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mud stability problems")]
+        mudstabilityproblems,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shallow gas flow")]
+        shallowgasflow,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("twist off")]
+        twistoff,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stuck pipe")]
+        stuckpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wireline stuck in hole")]
+        wirelinestuckinhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stick and slip")]
+        stickandslip,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vibration - axial")]
+        vibrationaxial,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vibration - torsional")]
+        vibrationtorsional,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vibration - transverse")]
+        vibrationtransverse,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vibration unknown or rough drilling")]
+        vibrationunknownorroughdrilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uneven wear of BHA")]
+        unevenwearofBHA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uneven wear of drillstring")]
+        unevenwearofdrillstring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive torque")]
+        excessivetorque,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive drag")]
+        excessivedrag,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reaming greater than 2 hours")]
+        reaminggreaterthan2hours,
+        
+        /// <remarks/>
+        washouts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tight hole or overPull")]
+        tightholeoroverPull,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("failed inspections or fatigue wear")]
+        failedinspectionsorfatiguewear,
+        
+        /// <remarks/>
+        mechanical,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling greater than 1000 feet/day")]
+        drillinggreaterthan1000feetday,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling greater than 2000 feet/day")]
+        drillinggreaterthan2000feetday,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling less than 20 feet/day")]
+        drillinglessthan20feetday,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trips greater than 24 hours")]
+        tripsgreaterthan24hours,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive time for BHA makeup")]
+        excessivetimeforBHAmakeup,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("waiting on decisions")]
+        waitingondecisions,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("waiting on weather")]
+        waitingonweather,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("waiting on tools")]
+        waitingontools,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sloughing or packoffs")]
+        sloughingorpackoffs,
+        
+        /// <remarks/>
+        ballooning,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fracture problems")]
+        fractureproblems,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("unstable zones")]
+        unstablezones,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation integrity test")]
+        formationintegritytest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("leak-off test")]
+        leakofftest,
+        
+        /// <remarks/>
+        tectonics,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pore pressure")]
+        porepressure,
+        
+        /// <remarks/>
+        breakouts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bed parallel")]
+        bedparallel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wellbore stability")]
+        wellborestability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive doglegs")]
+        excessivedoglegs,
+        
+        /// <remarks/>
+        sidetrack,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("BHA change for directional")]
+        BHAchangefordirectional,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wrong total flow area")]
+        wrongtotalflowarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well collision - actual")]
+        wellcollisionactual,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("well collision - technical")]
+        wellcollisiontechnical,
+        
+        /// <remarks/>
+        geosteering,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("abnormal tendency changes")]
+        abnormaltendencychanges,
+        
+        /// <remarks/>
+        resurveying,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in-field referencing (IFR) actions")]
+        infieldreferencingIFRactions,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit or BHA performance")]
+        bitorBHAperformance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling optimization")]
+        drillingoptimization,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit balling")]
+        bitballing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lost cones or broken cutters")]
+        lostconesorbrokencutters,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive bit wear or gauge")]
+        excessivebitwearorgauge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("low rate of bit penetration")]
+        lowrateofbitpenetration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("high rate of bit penetration")]
+        highrateofbitpenetration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("downhole tool")]
+        downholetool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("surface system")]
+        surfacesystem,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("motor or rotary steerable system failure")]
+        motororrotarysteerablesystemfailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("topdrive failure")]
+        topdrivefailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hoisting equipment failure")]
+        hoistingequipmentfailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("circulating equipment failure")]
+        circulatingequipmentfailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electrical system failure")]
+        electricalsystemfailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("blow out preventer events")]
+        blowoutpreventerevents,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("surface instrumentation problems")]
+        surfaceinstrumentationproblems,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig communications")]
+        rigcommunications,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion equipment failure")]
+        completionequipmentfailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("miscellaneous rig equipment")]
+        miscellaneousrigequipment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tool or equipment failure")]
+        toolorequipmentfailure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("squeeze jobs")]
+        squeezejobs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing surge losses")]
+        casingsurgelosses,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stuck casing or completion")]
+        stuckcasingorcompletion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shoe failures")]
+        shoefailures,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("early cement setup")]
+        earlycementsetup,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing collapse")]
+        casingcollapse,
+        
+        /// <remarks/>
+        milling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive casing wear or cuttings")]
+        excessivecasingwearorcuttings,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("excessive formation damage or skin")]
+        excessiveformationdamageorskin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing rotation or reciprocation rqd")]
+        casingrotationorreciprocationrqd,
+        
+        /// <remarks/>
+        broaching,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion or casing")]
+        completionorcasing,
+        
+        /// <remarks/>
+        stratigraphy,
+        
+        /// <remarks/>
+        fishing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("junk in hole")]
+        junkinhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("delay due to political unrest")]
+        delayduetopoliticalunrest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rig move")]
+        rigmove,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas hydrates")]
+        gashydrates,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pending analysis")]
+        pendinganalysis,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("riser disconnect")]
+        riserdisconnect,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        personnel,
+        
+        /// <remarks/>
+        environmental,
+        
+        /// <remarks/>
+        automotive,
+        
+        /// <remarks/>
+        asset,
+        
+        /// <remarks/>
+        information,
+        
+        /// <remarks/>
+        time,
+        
+        /// <remarks/>
+        HSE,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum RiskType {
+        
+        /// <remarks/>
+        risk,
+        
+        /// <remarks/>
+        @event,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("near miss")]
+        nearmiss,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("best practice")]
+        bestpractice,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lessons learned")]
+        lessonslearned,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ScrType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("string annulus")]
+        stringannulus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("string kill line")]
+        stringkillline,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("string choke line")]
+        stringchokeline,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ShowFluorescence {
+        
+        /// <remarks/>
+        faint,
+        
+        /// <remarks/>
+        bright,
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ShowLevel {
+        
+        /// <remarks/>
+        blooming,
+        
+        /// <remarks/>
+        streaming,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ShowRating {
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("very poor")]
+        verypoor,
+        
+        /// <remarks/>
+        poor,
+        
+        /// <remarks/>
+        fair,
+        
+        /// <remarks/>
+        good,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("very good")]
+        verygood,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum ShowSpeed {
+        
+        /// <remarks/>
+        slow,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("moderately fast")]
+        moderatelyfast,
+        
+        /// <remarks/>
+        fast,
+        
+        /// <remarks/>
+        instantaneous,
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum SupportCraft {
+        
+        /// <remarks/>
+        barge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("standby boat")]
+        standbyboat,
+        
+        /// <remarks/>
+        helicopter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("supply boat")]
+        supplyboat,
+        
+        /// <remarks/>
+        truck,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("crew vehicle")]
+        crewvehicle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tug boat")]
+        tugboat,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum SurfEquipType {
+        
+        /// <remarks/>
+        IADC,
+        
+        /// <remarks/>
+        custom,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing")]
+        coiledtubing,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TargetCategory {
+        
+        /// <remarks/>
+        geological,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TargetScope {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("3D volume")]
+        Item3Dvolume,
+        
+        /// <remarks/>
+        ellipsoid,
+        
+        /// <remarks/>
+        elliptical,
+        
+        /// <remarks/>
+        hardLine,
+        
+        /// <remarks/>
+        irregular,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lease line")]
+        leaseline,
+        
+        /// <remarks/>
+        line,
+        
+        /// <remarks/>
+        plane,
+        
+        /// <remarks/>
+        point,
+        
+        /// <remarks/>
+        rectangular,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TargetSectionScope {
+        
+        /// <remarks/>
+        arc,
+        
+        /// <remarks/>
+        line,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TrajStationStatus {
+        
+        /// <remarks/>
+        locked,
+        
+        /// <remarks/>
+        open,
+        
+        /// <remarks/>
+        rejected,
+        
+        /// <remarks/>
+        valid,
+        
+        /// <remarks/>
+        position,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TrajStationType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("azimuth on plane")]
+        azimuthonplane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate to delta-MD")]
+        buildratetodeltaMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate to INCL")]
+        buildratetoINCL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate to MD")]
+        buildratetoMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to AZI")]
+        buildrateandturnratetoAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to delta-MD")]
+        buildrateandturnratetodeltaMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to INCL")]
+        buildrateandturnratetoINCL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to INCL and AZI")]
+        buildrateandturnratetoINCLandAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to MD")]
+        buildrateandturnratetoMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to TVD")]
+        buildrateandturnratetoTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("buildrate TVD")]
+        buildrateTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing MD")]
+        casingMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing TVD")]
+        casingTVD,
+        
+        /// <remarks/>
+        DLS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to AZI and MD")]
+        DLStoAZIandMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to AZI-TVD")]
+        DLStoAZITVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL")]
+        DLStoINCL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL and AZI")]
+        DLStoINCLandAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL and MD")]
+        DLStoINCLandMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL and TVD")]
+        DLStoINCLandTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to NS, EW and TVD")]
+        DLStoNSEWandTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to AZI")]
+        DLSandtoolfacetoAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to delta-MD")]
+        DLSandtoolfacetodeltaMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to INCL")]
+        DLSandtoolfacetoINCL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to INCL-AZI")]
+        DLSandtoolfacetoINCLAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to MD")]
+        DLSandtoolfacetoMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to TVD")]
+        DLSandtoolfacetoTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation MD")]
+        formationMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("formation TVD")]
+        formationTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gyro inertial")]
+        gyroinertial,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gyro MWD")]
+        gyroMWD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gyro north seeking")]
+        gyronorthseeking,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hold to delta-MD")]
+        holdtodeltaMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hold to MD")]
+        holdtoMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hold to TVD")]
+        holdtoTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("INCL, AZI and TVD")]
+        INCLAZIandTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic multi-shot")]
+        magneticmultishot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic MWD")]
+        magneticMWD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic single shot")]
+        magneticsingleshot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("marker MD")]
+        markerMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("marker TVD")]
+        markerTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NS, EW and TVD")]
+        NSEWandTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("target center")]
+        targetcenter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("target offset")]
+        targetoffset,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tie in point")]
+        tieinpoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turnrate to AZI")]
+        turnratetoAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turnrate to delta-MD")]
+        turnratetodeltaMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turnrate to MD")]
+        turnratetoMD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turnrate to TVD")]
+        turnratetoTVD,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TubularAssembly {
+        
+        /// <remarks/>
+        drilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("directional drilling")]
+        directionaldrilling,
+        
+        /// <remarks/>
+        fishing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("condition mud")]
+        conditionmud,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tubing conveyed logging")]
+        tubingconveyedlogging,
+        
+        /// <remarks/>
+        cementing,
+        
+        /// <remarks/>
+        casing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("clean out")]
+        cleanout,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("completion or testing")]
+        completionortesting,
+        
+        /// <remarks/>
+        coring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hole opening or underreaming")]
+        holeopeningorunderreaming,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("milling or dressing or cutting")]
+        millingordressingorcutting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wiper or check or reaming")]
+        wiperorcheckorreaming,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TubularComponent {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("non-magnetic stabilizer")]
+        nonmagneticstabilizer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("non-magnetic collar")]
+        nonmagneticcollar,
+        
+        /// <remarks/>
+        stabilizer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("adjustable kickoff")]
+        adjustablekickoff,
+        
+        /// <remarks/>
+        accelerator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rotary steering tool")]
+        rotarysteeringtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-bar catcher")]
+        subbarcatcher,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-bent")]
+        subbent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit core diamond")]
+        bitcorediamond,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit core PDC")]
+        bitcorePDC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit diamond fixed cut")]
+        bitdiamondfixedcut,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit insert roller cone")]
+        bitinsertrollercone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit mill tooth roller cone")]
+        bitmilltoothrollercone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit PDC fixed cutter")]
+        bitPDCfixedcutter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-bit")]
+        subbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bridge plug")]
+        bridgeplug,
+        
+        /// <remarks/>
+        bullnose,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bull plug")]
+        bullplug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-bumper")]
+        subbumper,
+        
+        /// <remarks/>
+        casing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing cutter")]
+        casingcutter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hanger casing subsea")]
+        hangercasingsubsea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hanger casing surface")]
+        hangercasingsurface,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing head")]
+        casinghead,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("catch assembly")]
+        catchassembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-catcher")]
+        subcatcher,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-circulation")]
+        subcirculation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing in hole")]
+        coiledtubinginhole,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing on coil")]
+        coiledtubingoncoil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drill pipe compressive")]
+        drillpipecompressive,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-cone")]
+        subcone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("core barrel")]
+        corebarrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("core orientation barrel")]
+        coreorientationbarrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-crossover")]
+        subcrossover,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing crossover")]
+        casingcrossover,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-dart")]
+        subdart,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("die collar")]
+        diecollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("die collar LH")]
+        diecollarLH,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("directional guidance system")]
+        directionalguidancesystem,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drill collar")]
+        drillcollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drill pipe")]
+        drillpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drill pipe LH")]
+        drillpipeLH,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drill stem test BHA")]
+        drillstemtestBHA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drive pipe")]
+        drivepipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dual catch assembly")]
+        dualcatchassembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("extension bowl overshot")]
+        extensionbowlovershot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("extension sub-overshot")]
+        extensionsubovershot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("float collar")]
+        floatcollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("float shoe")]
+        floatshoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-float")]
+        subfloat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow head")]
+        flowhead,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("guide shoe")]
+        guideshoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD hang off sub")]
+        MWDhangoffsub,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heavy weight drill pipe")]
+        heavyweightdrillpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heavy weight drill pipe LH")]
+        heavyweightdrillpipeLH,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("riser high pressure")]
+        riserhighpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit hole opener")]
+        bitholeopener,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing inflatable packer")]
+        casinginflatablepacker,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("motor instrumented")]
+        motorinstrumented,
+        
+        /// <remarks/>
+        jar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-jetting")]
+        subjetting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("junk basket")]
+        junkbasket,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("junk basket reverse circulation")]
+        junkbasketreversecirculation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-junk")]
+        subjunk,
+        
+        /// <remarks/>
+        kelly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("keyseat wiper tool")]
+        keyseatwipertool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("landing float collar")]
+        landingfloatcollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lead impression block")]
+        leadimpressionblock,
+        
+        /// <remarks/>
+        liner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hanger liner")]
+        hangerliner,
+        
+        /// <remarks/>
+        magnet,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("riser marine")]
+        risermarine,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill dress")]
+        milldress,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill flat bottom")]
+        millflatbottom,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill hollow")]
+        millhollow,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill polish")]
+        millpolish,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill section")]
+        millsection,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill taper")]
+        milltaper,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill washover")]
+        millwashover,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill packer picker assembly")]
+        millpackerpickerassembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("millout extension")]
+        milloutextension,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("multilateral hanger running tool")]
+        multilateralhangerrunningtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hanger mud line")]
+        hangermudline,
+        
+        /// <remarks/>
+        motor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mule shoe")]
+        muleshoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("logging while drilling tool")]
+        loggingwhiledrillingtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer near bit roller reamer")]
+        stabilizernearbitrollerreamer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer near bit")]
+        stabilizernearbit,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer non-rotating")]
+        stabilizernonrotating,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-orienting")]
+        suborienting,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        overshot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("overshot LH")]
+        overshotLH,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oversize lip guide overshot")]
+        oversizelipguideovershot,
+        
+        /// <remarks/>
+        packer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("polished bore receptacle")]
+        polishedborereceptacle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill pilot")]
+        millpilot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pipe cutter")]
+        pipecutter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ported stinger")]
+        portedstinger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-ported")]
+        subported,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("prepacked screens")]
+        prepackedscreens,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-pressure relief")]
+        subpressurerelief,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("riser production")]
+        riserproduction,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MWD pulser")]
+        MWDpulser,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-pump out")]
+        subpumpout,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-restrictor")]
+        subrestrictor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("packer retrieve TT squeeze")]
+        packerretrieveTTsqueeze,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reversing tool")]
+        reversingtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer string roller reamer")]
+        stabilizerstringrollerreamer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("packer RTTS")]
+        packerRTTS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("running tool")]
+        runningtool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("safety joint")]
+        safetyjoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("safety joint LH")]
+        safetyjointLH,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-saver")]
+        subsaver,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("scab liner bit guide")]
+        scablinerbitguide,
+        
+        /// <remarks/>
+        scraper,
+        
+        /// <remarks/>
+        scratchers,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing shoe screw-in")]
+        casingshoescrewin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-shock")]
+        subshock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drill collar short")]
+        drillcollarshort,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-side entry")]
+        subsideentry,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("slotted liner")]
+        slottedliner,
+        
+        /// <remarks/>
+        spear,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stage cement collar")]
+        stagecementcollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("motor steerable")]
+        motorsteerable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("packer storm valve RTTS")]
+        packerstormvalveRTTS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer string")]
+        stabilizerstring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("surface pipe")]
+        surfacepipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("taper tap")]
+        tapertap,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("taper tap LH")]
+        tapertapLH,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tubing-conveyed perforating gun")]
+        tubingconveyedperforatinggun,
+        
+        /// <remarks/>
+        thruster,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tieback polished bore receptacle")]
+        tiebackpolishedborereceptacle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tieback stinger")]
+        tiebackstinger,
+        
+        /// <remarks/>
+        tubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hanger tubing")]
+        hangertubing,
+        
+        /// <remarks/>
+        turbine,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit under reamer")]
+        bitunderreamer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer variable blade")]
+        stabilizervariableblade,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("washover pipe")]
+        washoverpipe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill watermelon")]
+        millwatermelon,
+        
+        /// <remarks/>
+        whipstock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("whipstock anchor")]
+        whipstockanchor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer turbo back")]
+        stabilizerturboback,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer inline")]
+        stabilizerinline,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("stabilizer steerable")]
+        stabilizersteerable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-stop")]
+        substop,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sub-filter")]
+        subfilter,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mill casing cutting")]
+        millcasingcutting,
+        
+        /// <remarks/>
+        reamer,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum TypeSurveyTool {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic MWD")]
+        magneticMWD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gyroscopic  MWD")]
+        gyroscopicMWD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gyroscopic north seeking")]
+        gyroscopicnorthseeking,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gyroscopic inertial")]
+        gyroscopicinertial,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic single-shot")]
+        magneticsingleshot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic multiple-shot")]
+        magneticmultipleshot,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum WellDirection {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("huff-n-puff")]
+        huffnpuff,
+        
+        /// <remarks/>
+        injector,
+        
+        /// <remarks/>
+        producer,
+        
+        /// <remarks/>
+        uncertain,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum WellFluid {
+        
+        /// <remarks/>
+        air,
+        
+        /// <remarks/>
+        condensate,
+        
+        /// <remarks/>
+        dry,
+        
+        /// <remarks/>
+        gas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas-water")]
+        gaswater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("non HC gas")]
+        nonHCgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("non HC gas -- CO2")]
+        nonHCgasCO2,
+        
+        /// <remarks/>
+        oil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil-gas")]
+        oilgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil-water")]
+        oilwater,
+        
+        /// <remarks/>
+        steam,
+        
+        /// <remarks/>
+        water,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water -- brine")]
+        waterbrine,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water -- fresh water")]
+        waterfreshwater,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum WellboreShape {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("build and hold")]
+        buildandhold,
+        
+        /// <remarks/>
+        deviated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("double kickoff")]
+        doublekickoff,
+        
+        /// <remarks/>
+        horizontal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-shaped")]
+        Sshaped,
+        
+        /// <remarks/>
+        vertical,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum WellboreType {
+        
+        /// <remarks/>
+        bypass,
+        
+        /// <remarks/>
+        initial,
+        
+        /// <remarks/>
+        redrill,
+        
+        /// <remarks/>
+        reentry,
+        
+        /// <remarks/>
+        respud,
+        
+        /// <remarks/>
+        sidetrack,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum WellPurpose {
+        
+        /// <remarks/>
+        appraisal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("appraisal -- confirmation appraisal")]
+        appraisalconfirmationappraisal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("appraisal -- exploratory appraisal")]
+        appraisalexploratoryappraisal,
+        
+        /// <remarks/>
+        exploration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("exploration -- deeper-pool wildcat")]
+        explorationdeeperpoolwildcat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("exploration -- new-field wildcat")]
+        explorationnewfieldwildcat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("exploration -- new-pool wildcat")]
+        explorationnewpoolwildcat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("exploration -- outpost wildcat")]
+        explorationoutpostwildcat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("exploration -- shallower-pool wildcat")]
+        explorationshallowerpoolwildcat,
+        
+        /// <remarks/>
+        development,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("development -- infill development")]
+        developmentinfilldevelopment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("development -- injector")]
+        developmentinjector,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("development -- producer")]
+        developmentproducer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fluid storage")]
+        fluidstorage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fluid storage -- gas storage")]
+        fluidstoragegasstorage,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc")]
+        generalsrvc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- borehole re-acquisition")]
+        generalsrvcboreholereacquisition,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- observation")]
+        generalsrvcobservation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- relief")]
+        generalsrvcrelief,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- research")]
+        generalsrvcresearch,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- research -- drill test")]
+        generalsrvcresearchdrilltest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- research -- strat test")]
+        generalsrvcresearchstrattest,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- waste disposal")]
+        generalsrvcwastedisposal,
+        
+        /// <remarks/>
+        mineral,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+    public enum WellStatus {
+        
+        /// <remarks/>
+        abandoned,
+        
+        /// <remarks/>
+        active,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("active -- injecting")]
+        activeinjecting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("active -- producing")]
+        activeproducing,
+        
+        /// <remarks/>
+        completed,
+        
+        /// <remarks/>
+        drilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("partially plugged")]
+        partiallyplugged,
+        
+        /// <remarks/>
+        permitted,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plugged and abandoned")]
+        pluggedandabandoned,
+        
+        /// <remarks/>
+        proposed,
+        
+        /// <remarks/>
+        sold,
+        
+        /// <remarks/>
+        suspended,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temporarily abandoned")]
+        temporarilyabandoned,
+        
+        /// <remarks/>
+        testing,
+        
+        /// <remarks/>
+        tight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("working over")]
+        workingover,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/api/131")]
@@ -1184,7 +8692,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private nameStruct[] documentAliasField;
         
-        private System.DateTime documentDateField;
+        private Energistics.SchemaGatherer.Timestamp documentDateField;
         
         private bool documentDateFieldSpecified;
         
@@ -1233,7 +8741,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
-        public System.DateTime DocumentDate {
+        public Energistics.SchemaGatherer.Timestamp DocumentDate {
             get {
                 return this.documentDateField;
             }
@@ -1392,7 +8900,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class fileCreationType {
         
-        private System.DateTime fileCreationDateField;
+        private Energistics.SchemaGatherer.Timestamp fileCreationDateField;
         
         private string softwareNameField;
         
@@ -1404,7 +8912,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The date and time that the file was created.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time that the file was created.")]
-        public System.DateTime FileCreationDate {
+        public Energistics.SchemaGatherer.Timestamp FileCreationDate {
             get {
                 return this.fileCreationDateField;
             }
@@ -1466,7 +8974,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string systemField;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -1504,7 +9012,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The date on which this security class is no  longer applicable.</summary>
         [System.ComponentModel.DescriptionAttribute("The date on which this security class is no  longer applicable.")]
-        public System.DateTime EndDate {
+        public Energistics.SchemaGatherer.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -1545,7 +9053,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class eventType {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string responsiblePartyField;
         
@@ -1555,7 +9063,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The date on which the event took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
-        public System.DateTime EventDate {
+        public Energistics.SchemaGatherer.Timestamp EventDate {
             get {
                 return this.eventDateField;
             }
@@ -1607,19 +9115,19 @@ namespace Energistics.Generator.WITSML131 {
         
         private refNameString tubularField;
         
-        private System.DateTime dTimStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimStopField;
+        private Energistics.SchemaGatherer.Timestamp dTimStopField;
         
         private bool dTimStopFieldSpecified;
         
-        private System.DateTime dTimStartDrillingField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartDrillingField;
         
         private bool dTimStartDrillingFieldSpecified;
         
-        private System.DateTime dTimStopDrillingField;
+        private Energistics.SchemaGatherer.Timestamp dTimStopDrillingField;
         
         private bool dTimStopDrillingFieldSpecified;
         
@@ -1715,7 +9223,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public System.DateTime dTimStart {
+        public Energistics.SchemaGatherer.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -1738,7 +9246,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities stopped.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities stopped.")]
-        public System.DateTime dTimStop {
+        public Energistics.SchemaGatherer.Timestamp dTimStop {
             get {
                 return this.dTimStopField;
             }
@@ -1761,7 +9269,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Start on bottom - date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Start on bottom - date and time.")]
-        public System.DateTime dTimStartDrilling {
+        public Energistics.SchemaGatherer.Timestamp dTimStartDrilling {
             get {
                 return this.dTimStartDrillingField;
             }
@@ -1784,7 +9292,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Start off bottom - date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Start off bottom - date and time.")]
-        public System.DateTime dTimStopDrilling {
+        public Energistics.SchemaGatherer.Timestamp dTimStopDrilling {
             get {
                 return this.dTimStopDrillingField;
             }
@@ -2574,27 +10082,6 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         urad,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum AziRef {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic north")]
-        magneticnorth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("grid north")]
-        gridnorth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("true north")]
-        truenorth,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -5597,24 +13084,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BhaStatus {
-        
-        /// <remarks/>
-        final,
-        
-        /// <remarks/>
-        progress,
-        
-        /// <remarks/>
-        plan,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -6422,11 +13891,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string sourceNameField;
         
-        private System.DateTime dTimCreationField;
+        private Energistics.SchemaGatherer.Timestamp dTimCreationField;
         
         private bool dTimCreationFieldSpecified;
         
-        private System.DateTime dTimLastChangeField;
+        private Energistics.SchemaGatherer.Timestamp dTimLastChangeField;
         
         private bool dTimLastChangeFieldSpecified;
         
@@ -6454,7 +13923,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>When the data was created at the persistent data store.</summary>
         [System.ComponentModel.DescriptionAttribute("When the data was created at the persistent data store.")]
-        public System.DateTime dTimCreation {
+        public Energistics.SchemaGatherer.Timestamp dTimCreation {
             get {
                 return this.dTimCreationField;
             }
@@ -6478,7 +13947,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing.</summary>
         [System.ComponentModel.DescriptionAttribute("Last change of any element of the data at the persistent data store. The change t" +
             "ime is not updated for a growing object while it is growing.")]
-        public System.DateTime dTimLastChange {
+        public Energistics.SchemaGatherer.Timestamp dTimLastChange {
             get {
                 return this.dTimLastChangeField;
             }
@@ -6533,24 +14002,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.commentsField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ItemState {
-        
-        /// <remarks/>
-        actual,
-        
-        /// <remarks/>
-        model,
-        
-        /// <remarks/>
-        plan,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -6653,7 +14104,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string jobConfigField;
         
-        private System.DateTime dTimJobField;
+        private Energistics.SchemaGatherer.Timestamp dTimJobField;
         
         private bool dTimJobFieldSpecified;
         
@@ -6705,7 +14156,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string nameCementStringField;
         
-        private System.DateTime dTimPlugSetField;
+        private Energistics.SchemaGatherer.Timestamp dTimPlugSetField;
         
         private bool dTimPlugSetFieldSpecified;
         
@@ -6713,7 +14164,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool cementDrillOutFieldSpecified;
         
-        private System.DateTime dTimCementDrillOutField;
+        private Energistics.SchemaGatherer.Timestamp dTimCementDrillOutField;
         
         private bool dTimCementDrillOutFieldSpecified;
         
@@ -6721,7 +14172,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private measuredDepthCoord mdSqueezeField;
         
-        private System.DateTime dTimSqueezeField;
+        private Energistics.SchemaGatherer.Timestamp dTimSqueezeField;
         
         private bool dTimSqueezeFieldSpecified;
         
@@ -6729,11 +14180,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string typeToolField;
         
-        private System.DateTime dTimPipeRotStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimPipeRotStartField;
         
         private bool dTimPipeRotStartFieldSpecified;
         
-        private System.DateTime dTimPipeRotEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimPipeRotEndField;
         
         private bool dTimPipeRotEndFieldSpecified;
         
@@ -6745,11 +14196,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private momentOfForceMeasure tqPipeMxField;
         
-        private System.DateTime dTimRecipStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimRecipStartField;
         
         private bool dTimRecipStartFieldSpecified;
         
-        private System.DateTime dTimRecipEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimRecipEndField;
         
         private bool dTimRecipEndFieldSpecified;
         
@@ -6856,7 +14307,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of Cement Job.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of Cement Job.")]
-        public System.DateTime dTimJob {
+        public Energistics.SchemaGatherer.Timestamp dTimJob {
             get {
                 return this.dTimJobField;
             }
@@ -7171,7 +14622,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that cement plug was set.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that cement plug was set.")]
-        public System.DateTime dTimPlugSet {
+        public Energistics.SchemaGatherer.Timestamp dTimPlugSet {
             get {
                 return this.dTimPlugSetField;
             }
@@ -7217,7 +14668,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that cement was drilled out.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that cement was drilled out.")]
-        public System.DateTime dTimCementDrillOut {
+        public Energistics.SchemaGatherer.Timestamp dTimCementDrillOut {
             get {
                 return this.dTimCementDrillOutField;
             }
@@ -7265,7 +14716,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of squeeze.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of squeeze.")]
-        public System.DateTime dTimSqueeze {
+        public Energistics.SchemaGatherer.Timestamp dTimSqueeze {
             get {
                 return this.dTimSqueezeField;
             }
@@ -7314,7 +14765,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Pipe rotation start time.</summary>
         [System.ComponentModel.DescriptionAttribute("Pipe rotation start time.")]
-        public System.DateTime dTimPipeRotStart {
+        public Energistics.SchemaGatherer.Timestamp dTimPipeRotStart {
             get {
                 return this.dTimPipeRotStartField;
             }
@@ -7337,7 +14788,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Pipe rotation end time.</summary>
         [System.ComponentModel.DescriptionAttribute("Pipe rotation end time.")]
-        public System.DateTime dTimPipeRotEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimPipeRotEnd {
             get {
                 return this.dTimPipeRotEndField;
             }
@@ -7408,7 +14859,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time at start of pipe reciprocation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at start of pipe reciprocation.")]
-        public System.DateTime dTimRecipStart {
+        public Energistics.SchemaGatherer.Timestamp dTimRecipStart {
             get {
                 return this.dTimRecipStartField;
             }
@@ -7431,7 +14882,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time at end of pipe reciprocation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at end of pipe reciprocation.")]
-        public System.DateTime dTimRecipEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimRecipEnd {
             get {
                 return this.dTimRecipEndField;
             }
@@ -7597,30 +15048,12 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum CementJobType {
-        
-        /// <remarks/>
-        primary,
-        
-        /// <remarks/>
-        plug,
-        
-        /// <remarks/>
-        squeeze,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_wbGeometry {
         
-        private System.DateTime dTimReportField;
+        private Energistics.SchemaGatherer.Timestamp dTimReportField;
         
         private measuredDepthCoord mdBottomField;
         
@@ -7634,7 +15067,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Time report generated.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Time report generated.")]
-        public System.DateTime dTimReport {
+        public Energistics.SchemaGatherer.Timestamp dTimReport {
             get {
                 return this.dTimReportField;
             }
@@ -7928,42 +15361,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum HoleCasingType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("blow out preventer")]
-        blowoutpreventer,
-        
-        /// <remarks/>
-        casing,
-        
-        /// <remarks/>
-        conductor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("curved conductor")]
-        curvedconductor,
-        
-        /// <remarks/>
-        liner,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("open hole")]
-        openhole,
-        
-        /// <remarks/>
-        riser,
-        
-        /// <remarks/>
-        tubing,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -7973,19 +15370,19 @@ namespace Energistics.Generator.WITSML131 {
         
         private string typeStageField;
         
-        private System.DateTime dTimMixStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimMixStartField;
         
         private bool dTimMixStartFieldSpecified;
         
-        private System.DateTime dTimPumpStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimPumpStartField;
         
         private bool dTimPumpStartFieldSpecified;
         
-        private System.DateTime dTimPumpEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimPumpEndField;
         
         private bool dTimPumpEndFieldSpecified;
         
-        private System.DateTime dTimDisplaceStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimDisplaceStartField;
         
         private bool dTimDisplaceStartFieldSpecified;
         
@@ -8187,7 +15584,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time when mixing started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when mixing started.")]
-        public System.DateTime dTimMixStart {
+        public Energistics.SchemaGatherer.Timestamp dTimMixStart {
             get {
                 return this.dTimMixStartField;
             }
@@ -8210,7 +15607,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Datetime at start of pumping cement.</summary>
         [System.ComponentModel.DescriptionAttribute("Datetime at start of pumping cement.")]
-        public System.DateTime dTimPumpStart {
+        public Energistics.SchemaGatherer.Timestamp dTimPumpStart {
             get {
                 return this.dTimPumpStartField;
             }
@@ -8233,7 +15630,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Datetime at end of pumping cement.</summary>
         [System.ComponentModel.DescriptionAttribute("Datetime at end of pumping cement.")]
-        public System.DateTime dTimPumpEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimPumpEnd {
             get {
                 return this.dTimPumpEndField;
             }
@@ -8256,7 +15653,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time when displacing cement started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when displacing cement started.")]
-        public System.DateTime dTimDisplaceStart {
+        public Energistics.SchemaGatherer.Timestamp dTimDisplaceStart {
             get {
                 return this.dTimDisplaceStartField;
             }
@@ -11122,11 +18519,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private measuredDepthCoord mdCoreBottomField;
         
-        private System.DateTime dTimCoreStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimCoreStartField;
         
         private bool dTimCoreStartFieldSpecified;
         
-        private System.DateTime dTimCoreEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimCoreEndField;
         
         private bool dTimCoreEndFieldSpecified;
         
@@ -11255,7 +18652,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time when coring commenced (cutting new core).</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when coring commenced (cutting new core).")]
-        public System.DateTime dTimCoreStart {
+        public Energistics.SchemaGatherer.Timestamp dTimCoreStart {
             get {
                 return this.dTimCoreStartField;
             }
@@ -11278,7 +18675,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time when coring complete (end of cutting new core).</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when coring complete (end of cutting new core).")]
-        public System.DateTime dTimCoreEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimCoreEnd {
             get {
                 return this.dTimCoreEndField;
             }
@@ -11669,7 +19066,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private measuredDepthCoord mdBottomField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -11789,7 +19186,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.  The time refers to the top of the interval.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.  The time refers to the top of the i" +
             "nterval.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -12257,24 +19654,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LithologySource {
-        
-        /// <remarks/>
-        interpreted,
-        
-        /// <remarks/>
-        core,
-        
-        /// <remarks/>
-        cuttings,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -12583,222 +19962,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LithologyType {
-        
-        /// <remarks/>
-        andesite,
-        
-        /// <remarks/>
-        anhydrite,
-        
-        /// <remarks/>
-        arkose,
-        
-        /// <remarks/>
-        basalt,
-        
-        /// <remarks/>
-        breccia,
-        
-        /// <remarks/>
-        calcarenite,
-        
-        /// <remarks/>
-        calcilutite,
-        
-        /// <remarks/>
-        calcisiltite,
-        
-        /// <remarks/>
-        chalk,
-        
-        /// <remarks/>
-        chert,
-        
-        /// <remarks/>
-        clay,
-        
-        /// <remarks/>
-        claystone,
-        
-        /// <remarks/>
-        coal,
-        
-        /// <remarks/>
-        conglomerate,
-        
-        /// <remarks/>
-        diabase,
-        
-        /// <remarks/>
-        diorite,
-        
-        /// <remarks/>
-        dolomite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite, calcareous")]
-        dolomitecalcareous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("extrusive rock (volcanic)")]
-        extrusiverockvolcanic,
-        
-        /// <remarks/>
-        feldspar,
-        
-        /// <remarks/>
-        gabbro,
-        
-        /// <remarks/>
-        glauconite,
-        
-        /// <remarks/>
-        gneiss,
-        
-        /// <remarks/>
-        granite,
-        
-        /// <remarks/>
-        gravel,
-        
-        /// <remarks/>
-        greenstones,
-        
-        /// <remarks/>
-        greywacke,
-        
-        /// <remarks/>
-        gumbo,
-        
-        /// <remarks/>
-        gypsum,
-        
-        /// <remarks/>
-        halite,
-        
-        /// <remarks/>
-        igneous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("intrusvie rock (plutonic)")]
-        intrusvierockplutonic,
-        
-        /// <remarks/>
-        lignite,
-        
-        /// <remarks/>
-        limestone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone, argillaceous")]
-        limestoneargillaceous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone, dolomitic")]
-        limestonedolomitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone, sandy")]
-        limestonesandy,
-        
-        /// <remarks/>
-        marble,
-        
-        /// <remarks/>
-        marl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("metamorphic rocks")]
-        metamorphicrocks,
-        
-        /// <remarks/>
-        mudstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no description")]
-        nodescription,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no sample")]
-        nosample,
-        
-        /// <remarks/>
-        ophiolite,
-        
-        /// <remarks/>
-        peat,
-        
-        /// <remarks/>
-        phosphate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("phosphate rock")]
-        phosphaterock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("potassium and magnesium salts")]
-        potassiumandmagnesiumsalts,
-        
-        /// <remarks/>
-        quartzite,
-        
-        /// <remarks/>
-        rhyolite,
-        
-        /// <remarks/>
-        salt,
-        
-        /// <remarks/>
-        sand,
-        
-        /// <remarks/>
-        sandstone,
-        
-        /// <remarks/>
-        schist,
-        
-        /// <remarks/>
-        serpentine,
-        
-        /// <remarks/>
-        shale,
-        
-        /// <remarks/>
-        silt,
-        
-        /// <remarks/>
-        siltstone,
-        
-        /// <remarks/>
-        slate,
-        
-        /// <remarks/>
-        syenite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tillite (diamictite)")]
-        tillitediamictite,
-        
-        /// <remarks/>
-        trachyte,
-        
-        /// <remarks/>
-        tuff,
-        
-        /// <remarks/>
-        ultrabasic,
-        
-        /// <remarks/>
-        undifferentiated,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -12833,7 +19996,6 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         /// <summary>The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The measured depth at the top of the interval represented  by the qualifier. This" +
             " must be within the range of the parent geologic interval.")]
         public measuredDepthCoord mdTop {
@@ -12914,249 +20076,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum QualifierType {
-        
-        /// <remarks/>
-        anhydritic,
-        
-        /// <remarks/>
-        argillaceous,
-        
-        /// <remarks/>
-        barite,
-        
-        /// <remarks/>
-        belemnitic,
-        
-        /// <remarks/>
-        bioturbated,
-        
-        /// <remarks/>
-        bituminous,
-        
-        /// <remarks/>
-        bryozoans,
-        
-        /// <remarks/>
-        burrowed,
-        
-        /// <remarks/>
-        calcareous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("calcite concr")]
-        calciteconcr,
-        
-        /// <remarks/>
-        carbonaceous,
-        
-        /// <remarks/>
-        chalky,
-        
-        /// <remarks/>
-        chamosite,
-        
-        /// <remarks/>
-        chert,
-        
-        /// <remarks/>
-        chlorite,
-        
-        /// <remarks/>
-        concretions,
-        
-        /// <remarks/>
-        conglomeratic,
-        
-        /// <remarks/>
-        coral,
-        
-        /// <remarks/>
-        crinoids,
-        
-        /// <remarks/>
-        diatoms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite concretion")]
-        dolomiteconcretion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite stringer")]
-        dolomitestringer,
-        
-        /// <remarks/>
-        dolomitic,
-        
-        /// <remarks/>
-        dolomite,
-        
-        /// <remarks/>
-        feldspar,
-        
-        /// <remarks/>
-        ferruginous,
-        
-        /// <remarks/>
-        fissile,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("forams undifferentiated")]
-        foramsundifferentiated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fossil fragment")]
-        fossilfragment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fossils undifferentiated")]
-        fossilsundifferentiated,
-        
-        /// <remarks/>
-        glauconite,
-        
-        /// <remarks/>
-        glauconitic,
-        
-        /// <remarks/>
-        gravelly,
-        
-        /// <remarks/>
-        gypsiferous,
-        
-        /// <remarks/>
-        halite,
-        
-        /// <remarks/>
-        illite,
-        
-        /// <remarks/>
-        kaolinite,
-        
-        /// <remarks/>
-        lignite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone stringer")]
-        limestonestringer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lithic fragment")]
-        lithicfragment,
-        
-        /// <remarks/>
-        marly,
-        
-        /// <remarks/>
-        mica,
-        
-        /// <remarks/>
-        microfossil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no description")]
-        nodescription,
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        oncolite,
-        
-        /// <remarks/>
-        oncolith,
-        
-        /// <remarks/>
-        oncolithic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ooid or oolith")]
-        ooidoroolith,
-        
-        /// <remarks/>
-        ostracods,
-        
-        /// <remarks/>
-        pebbly,
-        
-        /// <remarks/>
-        pelletal,
-        
-        /// <remarks/>
-        pellet,
-        
-        /// <remarks/>
-        peloid,
-        
-        /// <remarks/>
-        peloidal,
-        
-        /// <remarks/>
-        phosphate,
-        
-        /// <remarks/>
-        pisolite,
-        
-        /// <remarks/>
-        pisolith,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plant remains")]
-        plantremains,
-        
-        /// <remarks/>
-        pyrite,
-        
-        /// <remarks/>
-        quartz,
-        
-        /// <remarks/>
-        radiolaria,
-        
-        /// <remarks/>
-        salty,
-        
-        /// <remarks/>
-        sandy,
-        
-        /// <remarks/>
-        shell,
-        
-        /// <remarks/>
-        siderite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("siderite concretion")]
-        sideriteconcretion,
-        
-        /// <remarks/>
-        silty,
-        
-        /// <remarks/>
-        spicule,
-        
-        /// <remarks/>
-        spicular,
-        
-        /// <remarks/>
-        stylolite,
-        
-        /// <remarks/>
-        stylolitic,
-        
-        /// <remarks/>
-        tuffaceous,
-        
-        /// <remarks/>
-        tuffite,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -13581,99 +20500,12 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ShowRating {
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("very poor")]
-        verypoor,
-        
-        /// <remarks/>
-        poor,
-        
-        /// <remarks/>
-        fair,
-        
-        /// <remarks/>
-        good,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("very good")]
-        verygood,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ShowFluorescence {
-        
-        /// <remarks/>
-        faint,
-        
-        /// <remarks/>
-        bright,
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ShowSpeed {
-        
-        /// <remarks/>
-        slow,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("moderately fast")]
-        moderatelyfast,
-        
-        /// <remarks/>
-        fast,
-        
-        /// <remarks/>
-        instantaneous,
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ShowLevel {
-        
-        /// <remarks/>
-        blooming,
-        
-        /// <remarks/>
-        streaming,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_chromatograph {
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -13689,7 +20521,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private timeMeasure eTimChromCycleField;
         
-        private System.DateTime chromIntRptField;
+        private Energistics.SchemaGatherer.Timestamp chromIntRptField;
         
         private bool chromIntRptFieldSpecified;
         
@@ -13770,7 +20602,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The date and time at which the gas sample was processed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the gas sample was processed.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -13867,7 +20699,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Chromatograph integrator report time, format may be variable due to recording equipment</summary>
         [System.ComponentModel.DescriptionAttribute("Chromatograph integrator report time, format may be variable due to recording equ" +
             "ipment")]
-        public System.DateTime chromIntRpt {
+        public Energistics.SchemaGatherer.Timestamp chromIntRpt {
             get {
                 return this.chromIntRptField;
             }
@@ -14449,50 +21281,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.gasTripField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum GasPeakType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("circulating background gas")]
-        circulatingbackgroundgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connection gas")]
-        connectiongas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling background gas")]
-        drillingbackgroundgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling gas peak")]
-        drillinggaspeak,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow check gas")]
-        flowcheckgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no readings")]
-        noreadings,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shut down gas")]
-        shutdowngas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trip gas")]
-        tripgas,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -15273,24 +22061,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum FiberMode {
-        
-        /// <remarks/>
-        singlemode,
-        
-        /// <remarks/>
-        multimode,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -16056,7 +22826,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool locationFieldSpecified;
         
-        private System.DateTime installationDateField;
+        private Energistics.SchemaGatherer.Timestamp installationDateField;
         
         private bool installationDateFieldSpecified;
         
@@ -16144,7 +22914,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>When the tag was installed in or on the item.</summary>
         [System.ComponentModel.DescriptionAttribute("When the tag was installed in or on the item.")]
-        public System.DateTime installationDate {
+        public Energistics.SchemaGatherer.Timestamp installationDate {
             get {
                 return this.installationDateField;
             }
@@ -16218,98 +22988,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum NameTagNumberingScheme {
-        
-        /// <remarks/>
-        EPC64,
-        
-        /// <remarks/>
-        EPC96,
-        
-        /// <remarks/>
-        MSRCID,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC2")]
-        ANSIAIMBC2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC6")]
-        ANSIAIMBC6,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC10")]
-        ANSIAIMBC10,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("EAN.UCC")]
-        EANUCC,
-        
-        /// <remarks/>
-        F2F,
-        
-        /// <remarks/>
-        MFM,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("serial number")]
-        serialnumber,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum NameTagTechnology {
-        
-        /// <remarks/>
-        tagged,
-        
-        /// <remarks/>
-        labeled,
-        
-        /// <remarks/>
-        intrinsic,
-        
-        /// <remarks/>
-        stamped,
-        
-        /// <remarks/>
-        painted,
-        
-        /// <remarks/>
-        temporary,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum NameTagLocation {
-        
-        /// <remarks/>
-        body,
-        
-        /// <remarks/>
-        box,
-        
-        /// <remarks/>
-        pin,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -16592,93 +23270,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum InstalledFiberPoint {
-        
-        /// <remarks/>
-        splice,
-        
-        /// <remarks/>
-        connector,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("end of fiber")]
-        endoffiber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("base of fiber")]
-        baseoffiber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("turn around point")]
-        turnaroundpoint,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("start of fiber")]
-        startoffiber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oven entry point")]
-        ovenentrypoint,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oven exit point")]
-        ovenexitpoint,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("downhole gauge")]
-        downholegauge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DTS laser head")]
-        DTSlaserhead,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DTS reference oven")]
-        DTSreferenceoven,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("splice box")]
-        splicebox,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wellhead junction box")]
-        wellheadjunctionbox,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("base tubing hanger flange")]
-        basetubinghangerflange,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("PBR wet connect")]
-        PBRwetconnect,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("top ESP pump")]
-        topESPpump,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("base ESP pump")]
-        baseESPpump,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wellhead temperature gauge")]
-        wellheadtemperaturegauge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("top completion zone")]
-        topcompletionzone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("base completion zone")]
-        basecompletionzone,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -17062,7 +23653,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private OTDRReason reasonForRunField;
         
-        private System.DateTime dTimRunField;
+        private Energistics.SchemaGatherer.Timestamp dTimRunField;
         
         private bool dTimRunFieldSpecified;
         
@@ -17090,7 +23681,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The dateTime of the run.</summary>
         [System.ComponentModel.DescriptionAttribute("The dateTime of the run.")]
-        public System.DateTime dTimRun {
+        public Energistics.SchemaGatherer.Timestamp dTimRun {
             get {
                 return this.dTimRunField;
             }
@@ -17162,30 +23753,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum OTDRReason {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pre-installation")]
-        preinstallation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("post-installation")]
-        postinstallation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DTS run")]
-        DTSrun,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -17634,7 +24201,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string nameField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private measuredDepthCoord mdField;
         
@@ -17702,7 +24269,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -17855,7 +24422,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string locationSampleField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -17996,7 +24563,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The time when fluid readings were recorded.</summary>
         [System.ComponentModel.DescriptionAttribute("The time when fluid readings were recorded.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -19379,7 +25946,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string passField;
         
-        private System.DateTime creationDateField;
+        private Energistics.SchemaGatherer.Timestamp creationDateField;
         
         private bool creationDateFieldSpecified;
         
@@ -19393,11 +25960,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private ratioGenericMeasure stepIncrementField;
         
-        private System.DateTime startDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp startDateTimeIndexField;
         
         private bool startDateTimeIndexFieldSpecified;
         
-        private System.DateTime endDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp endDateTimeIndexField;
         
         private bool endDateTimeIndexFieldSpecified;
         
@@ -19582,7 +26149,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that the log was created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the log was created.")]
-        public System.DateTime creationDate {
+        public Energistics.SchemaGatherer.Timestamp creationDate {
             get {
                 return this.creationDateField;
             }
@@ -19667,7 +26234,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>When the log header defines the direction as "Increasing",  the startIndex is the starting (minimum) index value at which the first valid data point is located.  When the log header defines the direction as "Decreasing", the startIndex  is the starting (maximum) index value at which the first valid data point is located.</summary>
         [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"",  the startIndex is the starting (minimum) index value at which the first valid data point is located.  When the log header defines the direction as ""Decreasing"", the startIndex  is the starting (maximum) index value at which the first valid data point is located.")]
-        public System.DateTime startDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp startDateTimeIndex {
             get {
                 return this.startDateTimeIndexField;
             }
@@ -19690,7 +26257,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>When the log header defines the direction as "Increasing", the endIndex  is the ending (maximum) index value at which the last valid data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last valid data point is located.</summary>
         [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the endIndex  is the ending (maximum) index value at which the last valid data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last valid data point is located.")]
-        public System.DateTime endDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp endDateTimeIndex {
             get {
                 return this.endDateTimeIndexField;
             }
@@ -19874,52 +26441,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LogIndexType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("date time")]
-        datetime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("elapsed time")]
-        elapsedtime,
-        
-        /// <remarks/>
-        length,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth")]
-        measureddepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vertical depth")]
-        verticaldepth,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LogIndexDirection {
-        
-        /// <remarks/>
-        decreasing,
-        
-        /// <remarks/>
-        increasing,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -19984,11 +26505,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private genericMeasure maxIndexField;
         
-        private System.DateTime minDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp minDateTimeIndexField;
         
         private bool minDateTimeIndexFieldSpecified;
         
-        private System.DateTime maxDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp maxDateTimeIndexField;
         
         private bool maxDateTimeIndexFieldSpecified;
         
@@ -20163,7 +26684,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The minimum index value at which the first valid data point is located. This value will be properly set by the server to reflect data  in the returned document.</summary>
         [System.ComponentModel.DescriptionAttribute("The minimum index value at which the first valid data point is located. This valu" +
             "e will be properly set by the server to reflect data  in the returned document.")]
-        public System.DateTime minDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp minDateTimeIndex {
             get {
                 return this.minDateTimeIndexField;
             }
@@ -20187,7 +26708,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The maximum index value at which the last valid data point  is located. This value will be properly set by the server to reflect data  in the returned document.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum index value at which the last valid data point  is located. This valu" +
             "e will be properly set by the server to reflect data  in the returned document.")]
-        public System.DateTime maxDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp maxDateTimeIndex {
             get {
                 return this.maxDateTimeIndexField;
             }
@@ -20374,1103 +26895,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum RealtimeData {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length along fiber")]
-        lengthalongfiber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DTS temperature")]
-        DTStemperature,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Stokes intensity")]
-        Stokesintensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("anti-Stokes intensity")]
-        antiStokesintensity,
-        
-        /// <remarks/>
-        acetylene,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("azimuth corrected")]
-        azimuthcorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("azimuth uncorrected")]
-        azimuthuncorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit revolutions, cumulative")]
-        bitrevolutionscumulative,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("build rate")]
-        buildrate,
-        
-        /// <remarks/>
-        caliper,
-        
-        /// <remarks/>
-        cavings,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cation exchange capacity")]
-        cationexchangecapacity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing cumulative returns")]
-        cementingcumulativereturns,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing density in (average)")]
-        cementingdensityinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing density out (average)")]
-        cementingdensityoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing ECD at casing shoe")]
-        cementingECDatcasingshoe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate in (average)")]
-        cementingflowrateinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate in (calculated)")]
-        cementingflowrateincalculated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate out (average)")]
-        cementingflowrateoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate out (calculated)")]
-        cementingflowrateoutcalculated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing flow rate out (relative)")]
-        cementingflowrateoutrelative,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing fluid type")]
-        cementingfluidtype,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing job type")]
-        cementingjobtype,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing plugs")]
-        cementingplugs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing pump pressure (average)")]
-        cementingpumppressureaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing stage")]
-        cementingstage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing temperature in (average)")]
-        cementingtemperatureinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing temperature out (average)")]
-        cementingtemperatureoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing volume to bump plug")]
-        cementingvolumetobumpplug,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing cement volume")]
-        cementingcementvolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing individual volume")]
-        cementingindividualvolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cementing total volume")]
-        cementingtotalvolume,
-        
-        /// <remarks/>
-        chkPrAv,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (cycle-based)")]
-        carbondioxidecyclebased,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (average)")]
-        carbondioxideaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (minimum)")]
-        carbondioxideminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide (maximum)")]
-        carbondioxidemaximum,
-        
-        /// <remarks/>
-        conductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("conductivity of mud in (average)")]
-        conductivityofmudinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("conductivity of mud out (average)")]
-        conductivityofmudoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connections done")]
-        connectionsdone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connections remaining")]
-        connectionsremaining,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cost per distance")]
-        costperdistance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cost per distance (average)")]
-        costperdistanceaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cumulative time on bit")]
-        cumulativetimeonbit,
-        
-        /// <remarks/>
-        density,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("density shale")]
-        densityshale,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diameter of bit")]
-        diameterofbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("distance drilled by bit")]
-        distancedrilledbybit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dogleg severity")]
-        doglegseverity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST bottom hole pressure")]
-        DSTbottomholepressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST bottom hole temperature")]
-        DSTbottomholetemperature,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST cumulative gas production")]
-        DSTcumulativegasproduction,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST cumulative liquid production")]
-        DSTcumulativeliquidproduction,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST cumulative total production")]
-        DSTcumulativetotalproduction,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST gas flow rate")]
-        DSTgasflowrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST hydrogen sulfide (average)")]
-        DSThydrogensulfideaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST identifier")]
-        DSTidentifier,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST liquid flow rate")]
-        DSTliquidflowrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST surface pressure in casing")]
-        DSTsurfacepressureincasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST surface pressure in tubing")]
-        DSTsurfacepressureintubing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST surface temperature in tubing")]
-        DSTsurfacetemperatureintubing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST total flow rate")]
-        DSTtotalflowrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST tool time")]
-        DSTtooltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling exponent (corrected)")]
-        drillingexponentcorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ECD at bit depth")]
-        ECDatbitdepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ECD at casing shoe depth")]
-        ECDatcasingshoedepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ECD from MWD tool")]
-        ECDfromMWDtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ECD at total depth")]
-        ECDattotaldepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane")]
-        neopentane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane (average)")]
-        neopentaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane (minimum)")]
-        neopentaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neo-pentane (maximum)")]
-        neopentanemaximum,
-        
-        /// <remarks/>
-        ethane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ethane (average)")]
-        ethaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ethane (minimum)")]
-        ethaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ethane (maximum)")]
-        ethanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation fracture pressure gradient")]
-        formationfracturepressuregradient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow rate in (average)")]
-        flowrateinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow in (relative)")]
-        flowinrelative,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow rate out (average)")]
-        flowrateoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow out (relative)")]
-        flowoutrelative,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("overburden pressure gradient")]
-        overburdenpressuregradient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit jet impact force")]
-        bitjetimpactforce,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation pore pressure gradient")]
-        formationporepressuregradient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas total (average)")]
-        gastotalaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connection gas (average)")]
-        connectiongasaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connection gas (last)")]
-        connectiongaslast,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connection gas (maximum)")]
-        connectiongasmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trip gas (last)")]
-        tripgaslast,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gamma ray")]
-        gammaray,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gamma ray (corrected)")]
-        gammaraycorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity tool face")]
-        gravitytoolface,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity X-axis (corrected)")]
-        gravityXaxiscorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity X-axis (uncorrected)")]
-        gravityXaxisuncorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity Y-axis (corrected)")]
-        gravityYaxiscorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity Y-axis (uncorrected)")]
-        gravityYaxisuncorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity Z-axis (corrected)")]
-        gravityZaxiscorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gravity Z-axis (uncorrected)")]
-        gravityZaxisuncorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide")]
-        hydrogensulfide,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide (average)")]
-        hydrogensulfideaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide (minimum)")]
-        hydrogensulfideminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrogen sulfide (maximum)")]
-        hydrogensulfidemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hookload (average)")]
-        hookloadaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hookload (minimum)")]
-        hookloadminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hookload (maximum)")]
-        hookloadmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer X (corrected)")]
-        MWDmagnetometerXcorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer X (raw)")]
-        MWDmagnetometerXraw,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Y (corrected)")]
-        MWDmagnetometerYcorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Y (raw)")]
-        MWDmagnetometerYraw,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Z (corrected)")]
-        MWDmagnetometerZcorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD magnetometer Z (raw)")]
-        MWDmagnetometerZraw,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-butane")]
-        isobutane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-butane (average)")]
-        isobutaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-butane (minimum)")]
-        isobutaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-butane (maximum)")]
-        isobutanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane")]
-        isohexane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane (average)")]
-        isohexaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane (minimum)")]
-        isohexaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-hexane (maximum)")]
-        isohexanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inclination (corrected)")]
-        inclinationcorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inclination near bit")]
-        inclinationnearbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inclination (uncorrected)")]
-        inclinationuncorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane")]
-        isopentane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane (average)")]
-        isopentaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane (minimum)")]
-        isopentaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iso-pentane (maximum)")]
-        isopentanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kick tolerance")]
-        kicktolerance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lithology flag")]
-        lithologyflag,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD alternator voltage")]
-        MWDalternatorvoltage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD bottom hole annulus pressure")]
-        MWDbottomholeannuluspressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD bottom hole internal pressure")]
-        MWDbottomholeinternalpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit total measured depth")]
-        bittotalmeasureddepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD conductivity")]
-        MWDconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth of casing")]
-        measureddepthofcasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth of DST bottom")]
-        measureddepthofDSTbottom,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth of DST top")]
-        measureddepthofDSTtop,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth of diverter tool")]
-        measureddepthofdivertertool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth of hole")]
-        measureddepthofhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth of returns")]
-        measureddepthofreturns,
-        
-        /// <remarks/>
-        methane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("methane (average)")]
-        methaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("methane (minimum)")]
-        methaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("methane (maximum)")]
-        methanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD derived fracture pressure gradient")]
-        MWDderivedfracturepressuregradient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD derived pore pressure gradient")]
-        MWDderivedporepressuregradient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid resistivity in annulus")]
-        MWDfluidresistivityinannulus,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid resistivity in pipe")]
-        MWDfluidresistivityinpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid temperature in annulus")]
-        MWDfluidtemperatureinannulus,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD fluid temperature in pipe")]
-        MWDfluidtemperatureinpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD gamma ray")]
-        MWDgammaray,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD gamma ray (corrected)")]
-        MWDgammaraycorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD motor speed")]
-        MWDmotorspeed,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD resistivity")]
-        MWDresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD resistivity (corrected)")]
-        MWDresistivitycorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic tool face")]
-        magnetictoolface,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD torque (average)")]
-        MWDtorqueaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD torque (maximum)")]
-        MWDtorquemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD axial vibration")]
-        MWDaxialvibration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD lateral vibration")]
-        MWDlateralvibration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD torsional vibration")]
-        MWDtorsionalvibration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD weight on bit (average)")]
-        MWDweightonbitaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD weight on bit (maximum)")]
-        MWDweightonbitmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-butane")]
-        norbutane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-butane (average)")]
-        norbutaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-butane (minimum)")]
-        norbutaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-butane (maximum)")]
-        norbutanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neutron density")]
-        neutrondensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane")]
-        norhexane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane (average)")]
-        norhexaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane (minimum)")]
-        norhexaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-hexane (maximum)")]
-        norhexanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane")]
-        norpentane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane (average)")]
-        norpentaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane (minimum)")]
-        norpentaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nor-pentane (maximum)")]
-        norpentanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity")]
-        neutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity (corrected)")]
-        neutronporositycorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity ratio")]
-        neutronporosityratio,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pass number")]
-        passnumber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trip number")]
-        tripnumber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("photoelectric effect")]
-        photoelectriceffect,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit pressure loss")]
-        bitpressureloss,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("block position")]
-        blockposition,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydraulic power of bit")]
-        hydraulicpowerofbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydraulic power per area of bit")]
-        hydraulicpowerperareaofbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydraulic power of pump")]
-        hydraulicpowerofpump,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure loss at annulus")]
-        pressurelossatannulus,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at bit")]
-        pressuredropatbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure loss at bit")]
-        pressurelossatbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure drop (calculated or observed)")]
-        pressuredropcalculatedorobserved,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at motor")]
-        pressuredropatmotor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at MWD tool")]
-        pressuredropatMWDtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at string")]
-        pressuredropatstring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure drop at surface")]
-        pressuredropatsurface,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure at MWD tool")]
-        pressureatMWDtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure at pump (average)")]
-        pressureatpumpaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shut-in pressure (maximum)")]
-        shutinpressuremaximum,
-        
-        /// <remarks/>
-        propane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("propane (average)")]
-        propaneaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("propane (minimum)")]
-        propaneminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("propane (maximum)")]
-        propanemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plastic viscosity")]
-        plasticviscosity,
-        
-        /// <remarks/>
-        resistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("resistivity (corrected)")]
-        resistivitycorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rate of penetration (average)")]
-        rateofpenetrationaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rate of penetration (intantaneous)")]
-        rateofpenetrationintantaneous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rotation flag")]
-        rotationflag,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rotary speed (average)")]
-        rotaryspeedaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("running speed down (average)")]
-        runningspeeddownaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("running speed down (maximum)")]
-        runningspeeddownmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("running speed up (average)")]
-        runningspeedupaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("running speed up (maximum)")]
-        runningspeedupmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sonic coherence")]
-        soniccoherence,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sonic density")]
-        sonicdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sonic delta-time (corrected)")]
-        sonicdeltatimecorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sonic delta-time (uncorrected)")]
-        sonicdeltatimeuncorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sonic porosity")]
-        sonicporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sonic porosity (corrected)")]
-        sonicporositycorrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stroke rate")]
-        strokerate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stroke rate total")]
-        strokeratetotal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("state of well")]
-        stateofwell,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in-slips status")]
-        inslipsstatus,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lag strokes")]
-        lagstrokes,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stroke count (total)")]
-        strokecounttotal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stroke count")]
-        strokecount,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud temperature in (average)")]
-        mudtemperatureinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud temperature out (average)")]
-        mudtemperatureoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time in slips")]
-        timeinslips,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time out of slips")]
-        timeoutofslips,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("torque (average)")]
-        torqueaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("torque for break-out (maximum)")]
-        torqueforbreakoutmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("torque for make-up (maximum)")]
-        torqueformakeupmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("torque (maximum)")]
-        torquemaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trip tank volume")]
-        triptankvolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("turn rate")]
-        turnrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("TVD of Bit")]
-        TVDofBit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("TVD of casing")]
-        TVDofcasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("TVD of DST bottom")]
-        TVDofDSTbottom,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("TVD of DST top")]
-        TVDofDSTtop,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("TVD of hole")]
-        TVDofhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tank volume")]
-        tankvolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tank volume (active)")]
-        tankvolumeactive,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tank volume change")]
-        tankvolumechange,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tank volume change (active)")]
-        tankvolumechangeactive,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tank volume change total")]
-        tankvolumechangetotal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tank volume (total)")]
-        tankvolumetotal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("annular velocity (minimum)")]
-        annularvelocityminimum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("annular velocity (maximum)")]
-        annularvelocitymaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("velocity of jet")]
-        velocityofjet,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fill volume (expected)")]
-        fillvolumeexpected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fill volume total (expected)")]
-        fillvolumetotalexpected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fill volume (observed)")]
-        fillvolumeobserved,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fill volume total (observed)")]
-        fillvolumetotalobserved,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("weight on bit (average)")]
-        weightonbitaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("weight on bit (maximum)")]
-        weightonbitmaximum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud density in (average)")]
-        muddensityinaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud density out (average)")]
-        muddensityoutaverage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yield point")]
-        yieldpoint,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LogTraceState {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("depth adjusted")]
-        depthadjusted,
-        
-        /// <remarks/>
-        edited,
-        
-        /// <remarks/>
-        joined,
-        
-        /// <remarks/>
-        processed,
-        
-        /// <remarks/>
-        raw,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LogTraceOrigin {
-        
-        /// <remarks/>
-        realtime,
-        
-        /// <remarks/>
-        modeled,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum LogDataType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("date time")]
-        datetime,
-        
-        /// <remarks/>
-        @double,
-        
-        /// <remarks/>
-        @long,
-        
-        /// <remarks/>
-        @string,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -21556,7 +26980,7 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("doubleValues", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("doubleValues", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("stringValues", typeof(string))]
         public object Item {
             get {
@@ -21660,7 +27084,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private refObjectString subObjectReferenceField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private ActivityCode activityCodeField;
         
@@ -21768,7 +27192,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -22053,854 +27477,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ActivityCode {
-        
-        /// <remarks/>
-        abandonment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("abandonment -- log plugs")]
-        abandonmentlogplugs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("abandonment -- run plugs")]
-        abandonmentrunplugs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("abandonment -- wait on cement")]
-        abandonmentwaitoncement,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing, cement")]
-        casingcement,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- circulate, cement")]
-        casingcementcirculatecement,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- other")]
-        casingcementother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- rig up, run casing")]
-        casingcementrigupruncasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- rig up, run liner")]
-        casingcementriguprunliner,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing, cement -- wait on cement")]
-        casingcementwaitoncement,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations")]
-        completionoperations,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- rig up")]
-        completionoperationsrigup,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- tear down")]
-        completionoperationsteardown,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- testing ")]
-        completionoperationstesting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- running liner")]
-        completionoperationsrunningliner,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- gravel packing")]
-        completionoperationsgravelpacking,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion operations -- logging")]
-        completionoperationslogging,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate")]
-        condmudcirculate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- boulder or gravel")]
-        condmudcirculateboulderorgravel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- casing")]
-        condmudcirculatecasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- cementing")]
-        condmudcirculatecementing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- circulate samples")]
-        condmudcirculatecirculatesamples,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- coring")]
-        condmudcirculatecoring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- drilling")]
-        condmudcirculatedrilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- fishing")]
-        condmudcirculatefishing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- gumbo attack")]
-        condmudcirculategumboattack,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- logging")]
-        condmudcirculatelogging,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- lost circulation")]
-        condmudcirculatelostcirculation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cond mud, circulate -- well control")]
-        condmudcirculatewellcontrol,
-        
-        /// <remarks/>
-        coring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- conventional")]
-        coringconventional,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- flow check")]
-        coringflowcheck,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- laydown barrel")]
-        coringlaydownbarrel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- oriented")]
-        coringoriented,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- plastic sleeve")]
-        coringplasticsleeve,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- rig up core barrel")]
-        coringrigupcorebarrel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coring -- sponge")]
-        coringsponge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cut, slip drilling line")]
-        cutslipdrillingline,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deviation survey")]
-        deviationsurvey,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- dir multi-shot")]
-        deviationsurveydirmultishot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- dir single shot")]
-        deviationsurveydirsingleshot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- drift")]
-        deviationsurveydrift,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- gyro")]
-        deviationsurveygyro,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deviation survey -- MWD")]
-        deviationsurveyMWD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dir work")]
-        dirwork,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dir work -- horizontal drilling")]
-        dirworkhorizontaldrilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dir work -- motor drilling")]
-        dirworkmotordrilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dir work -- orient")]
-        dirworkorient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dir work -- rotary drilling")]
-        dirworkrotarydrilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dir work -- slant drilling")]
-        dirworkslantdrilling,
-        
-        /// <remarks/>
-        DST,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST -- cased hole")]
-        DSTcasedhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST -- lay down tools")]
-        DSTlaydowntools,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST -- open hole")]
-        DSTopenhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST -- open hole closed chamber")]
-        DSTopenholeclosedchamber,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DST -- rig up tools")]
-        DSTriguptools,
-        
-        /// <remarks/>
-        drilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- casing")]
-        drillingcasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- connection")]
-        drillingconnection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- drill cement, float equip")]
-        drillingdrillcementfloatequip,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- flow check")]
-        drillingflowcheck,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- hole opening")]
-        drillingholeopening,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- new hole")]
-        drillingnewhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- sidetracking")]
-        drillingsidetracking,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling -- under-reaming")]
-        drillingunderreaming,
-        
-        /// <remarks/>
-        fishing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fishing -- BHA")]
-        fishingBHA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fishing -- casing")]
-        fishingcasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fishing -- cones")]
-        fishingcones,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fishing -- other")]
-        fishingother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fishing -- stuck pipe")]
-        fishingstuckpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fishing -- wireline tools")]
-        fishingwirelinetools,
-        
-        /// <remarks/>
-        HSE,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HSE -- hold drill")]
-        HSEholddrill,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HSE -- incident")]
-        HSEincident,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("HSE -- safety meeting")]
-        HSEsafetymeeting,
-        
-        /// <remarks/>
-        mill,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill -- cut casing or tubing")]
-        millcutcasingortubing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill -- milling")]
-        millmilling,
-        
-        /// <remarks/>
-        miscellaneous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP")]
-        nippleupBOP,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- diverter")]
-        nippleupBOPdiverter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- manifold")]
-        nippleupBOPmanifold,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- other")]
-        nippleupBOPother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- PVT system")]
-        nippleupBOPPVTsystem,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nipple up BOP -- stack")]
-        nippleupBOPstack,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plug back")]
-        plugback,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plug back -- abandonment")]
-        plugbackabandonment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plug back -- kick off plug")]
-        plugbackkickoffplug,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plug back -- lost circulation")]
-        plugbacklostcirculation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plug back -- wait on cement")]
-        plugbackwaitoncement,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plug back -- well control")]
-        plugbackwellcontrol,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test")]
-        pressuretest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- BOP manifold")]
-        pressuretestBOPmanifold,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- BOP stack")]
-        pressuretestBOPstack,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- form integrity test")]
-        pressuretestformintegritytest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- form leak off test")]
-        pressuretestformleakofftest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- packer")]
-        pressuretestpacker,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure test -- PIT")]
-        pressuretestPIT,
-        
-        /// <remarks/>
-        reaming,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reaming -- back reaming")]
-        reamingbackreaming,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reaming -- coring")]
-        reamingcoring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reaming -- drill")]
-        reamingdrill,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reaming -- logging")]
-        reaminglogging,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reaming -- under-reaming")]
-        reamingunderreaming,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move")]
-        rigmove,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- anchor handling")]
-        rigmoveanchorhandling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- inter-pad move")]
-        rigmoveinterpadmove,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- inter-well move")]
-        rigmoveinterwellmove,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- jack up or down")]
-        rigmovejackupordown,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- other")]
-        rigmoveother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- position rig")]
-        rigmovepositionrig,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move -- skid rig")]
-        rigmoveskidrig,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig release")]
-        rigrelease,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig release -- cut casing")]
-        rigreleasecutcasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig release -- install capping assembly")]
-        rigreleaseinstallcappingassembly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig release -- MOB or DE-MOB")]
-        rigreleaseMOBorDEMOB,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs")]
-        rigrepairs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- drawworks")]
-        rigrepairsdrawworks,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- electrical")]
-        rigrepairselectrical,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- mud system")]
-        rigrepairsmudsystem,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- other")]
-        rigrepairsother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- rotary")]
-        rigrepairsrotary,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- subsea equipment")]
-        rigrepairssubseaequipment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig repairs -- well control equipment")]
-        rigrepairswellcontrolequipment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig service")]
-        rigservice,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig service -- lubricate rig")]
-        rigservicelubricaterig,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig service -- test equipment")]
-        rigservicetestequipment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down")]
-        riguporteardown,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down -- rig up")]
-        riguporteardownrigup,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down -- site work")]
-        riguporteardownsitework,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig up or tear down -- tear down")]
-        riguporteardownteardown,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("run or pull riser")]
-        runorpullriser,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("run or pull riser -- other")]
-        runorpullriserother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("run or pull riser -- run or pull riser")]
-        runorpullriserrunorpullriser,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement")]
-        squeezecement,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- casing repair")]
-        squeezecementcasingrepair,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- casing shoe")]
-        squeezecementcasingshoe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- parted casing")]
-        squeezecementpartedcasing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("squeeze cement -- perforations DST")]
-        squeezecementperforationsDST,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stuck pipe")]
-        stuckpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("surface string handling")]
-        surfacestringhandling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("testing general")]
-        testinggeneral,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("testing general -- equipment")]
-        testinggeneralequipment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("testing general -- flow")]
-        testinggeneralflow,
-        
-        /// <remarks/>
-        tripping,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tripping -- back-reaming")]
-        trippingbackreaming,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tripping -- flow check")]
-        trippingflowcheck,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tripping -- short trip in")]
-        trippingshorttripin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tripping -- short trip out")]
-        trippingshorttripout,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tripping -- trip in (from surface)")]
-        trippingtripinfromsurface,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tripping -- trip out (to surface)")]
-        trippingtripouttosurface,
-        
-        /// <remarks/>
-        wait,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- daylight")]
-        waitdaylight,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- environmental or regulatory")]
-        waitenvironmentalorregulatory,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- equipment")]
-        waitequipment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- holiday")]
-        waitholiday,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- ice")]
-        waitice,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- on orders")]
-        waitonorders,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- operator")]
-        waitoperator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- other")]
-        waitother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- partners")]
-        waitpartners,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- service company")]
-        waitservicecompany,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wait -- weather")]
-        waitweather,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well control")]
-        wellcontrol,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well control -- mix")]
-        wellcontrolmix,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well control -- shut in")]
-        wellcontrolshutin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well control -- strip")]
-        wellcontrolstrip,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well control -- well kill")]
-        wellcontrolwellkill,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc")]
-        wellsrvc,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- casing repair")]
-        wellsrvccasingrepair,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- clean well to compl fluid")]
-        wellsrvccleanwelltocomplfluid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- coiled tubing work")]
-        wellsrvccoiledtubingwork,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- gravel pack")]
-        wellsrvcgravelpack,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- install or test xmas tree")]
-        wellsrvcinstallortestxmastree,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- kill well")]
-        wellsrvckillwell,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- land, set, test completion")]
-        wellsrvclandsettestcompletion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- perforate")]
-        wellsrvcperforate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- pull completion")]
-        wellsrvcpullcompletion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- pull suspension plugs")]
-        wellsrvcpullsuspensionplugs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- run completion")]
-        wellsrvcruncompletion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- run screens")]
-        wellsrvcrunscreens,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- sand control")]
-        wellsrvcsandcontrol,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- stimulation")]
-        wellsrvcstimulation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- subsea work")]
-        wellsrvcsubseawork,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- surface line work")]
-        wellsrvcsurfacelinework,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- suspend well or pull BOPs")]
-        wellsrvcsuspendwellorpullBOPs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- test well")]
-        wellsrvctestwell,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- wash")]
-        wellsrvcwash,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- wireline work")]
-        wellsrvcwirelinework,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- work tubulars")]
-        wellsrvcworktubulars,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well srvc -- workstring run")]
-        wellsrvcworkstringrun,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs")]
-        wirelinelogs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- abandonment")]
-        wirelinelogsabandonment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- evaluation")]
-        wirelinelogsevaluation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- form tester")]
-        wirelinelogsformtester,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- other")]
-        wirelinelogsother,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- side wall cores")]
-        wirelinelogssidewallcores,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline logs -- velocity")]
-        wirelinelogsvelocity,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum MessageType {
-        
-        /// <remarks/>
-        alarm,
-        
-        /// <remarks/>
-        @event,
-        
-        /// <remarks/>
-        informational,
-        
-        /// <remarks/>
-        warning,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum MessageSeverity {
-        
-        /// <remarks/>
-        catastrophic,
-        
-        /// <remarks/>
-        major,
-        
-        /// <remarks/>
-        minor,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum MessageProbability {
-        
-        /// <remarks/>
-        low,
-        
-        /// <remarks/>
-        medium,
-        
-        /// <remarks/>
-        high,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -22976,7 +27552,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool objectGrowingFieldSpecified;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -23072,7 +27648,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -23264,7 +27840,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private MudLogParameterType typeField;
         
-        private System.DateTime dTimeField;
+        private Energistics.SchemaGatherer.Timestamp dTimeField;
         
         private bool dTimeFieldSpecified;
         
@@ -23295,7 +27871,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The data and time related to the parameter.  At least one of dTime or mdTop must be given.  The time refers to the top of the interval.</summary>
         [System.ComponentModel.DescriptionAttribute("The data and time related to the parameter.  At least one of dTime or mdTop must " +
             "be given.  The time refers to the top of the interval.")]
-        public System.DateTime dTime {
+        public Energistics.SchemaGatherer.Timestamp dTime {
             get {
                 return this.dTimeField;
             }
@@ -23317,7 +27893,6 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         /// <summary>The measured depth at a point or at the top of an interval.  If it represents the top of an interval then bottom measured depth must also be given. At least one of dTime or mdTop must be given.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The measured depth at a point or at the top of an interval.  If it represents the" +
             " top of an interval then bottom measured depth must also be given. At least one " +
             "of dTime or mdTop must be given.")]
@@ -23387,171 +27962,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum MudLogParameterType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit parameters")]
-        bitparameters,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit type comment")]
-        bittypecomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing point comment")]
-        casingpointcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chromatograph comment")]
-        chromatographcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("circulation system comment")]
-        circulationsystemcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("core interval comment")]
-        coreintervalcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cuttings gas")]
-        cuttingsgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("direct fracture pressure")]
-        directfracturepressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("direct pore pressure measurements")]
-        directporepressuremeasurements,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling data comment")]
-        drillingdatacomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fracture PG estimate most likely")]
-        fracturePGestimatemostlikely,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas peaks comment")]
-        gaspeakscomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas ratio comment")]
-        gasratiocomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general engineering comment")]
-        generalengineeringcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kicks and flows")]
-        kicksandflows,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lithlog comment")]
-        lithlogcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lost returns")]
-        lostreturns,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("LWD comment")]
-        LWDcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("marker or formation top comment")]
-        markerorformationtopcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("midnight depth date")]
-        midnightdepthdate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud check comment")]
-        mudcheckcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud data comment")]
-        muddatacomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mudlog comment")]
-        mudlogcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("overburden gradient")]
-        overburdengradient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("overpull on connection")]
-        overpullonconnection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("overpull on trip")]
-        overpullontrip,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pore PG estimate most likely")]
-        porePGestimatemostlikely,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pore pressure estimate while drilling")]
-        porepressureestimatewhiledrilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure data comment")]
-        pressuredatacomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shale density comment")]
-        shaledensitycomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("short trip comment")]
-        shorttripcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("show report comment")]
-        showreportcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sidewall core comment")]
-        sidewallcorecomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sliding Interval")]
-        slidingInterval,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("steam still results comment")]
-        steamstillresultscomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("survey comment")]
-        surveycomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature data comment")]
-        temperaturedatacomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature trend comment")]
-        temperaturetrendcomment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline log comment")]
-        wirelinelogcomment,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -23629,7 +28039,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private refNameString rigField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private timeMeasure eTimStartField;
         
@@ -23837,7 +28247,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -24775,11 +29185,11 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_activity {
         
-        private System.DateTime dTimStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -24834,7 +29244,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public System.DateTime dTimStart {
+        public Energistics.SchemaGatherer.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -24857,7 +29267,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities were completed.")]
-        public System.DateTime dTimEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -25168,24 +29578,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ActivityClassType {
-        
-        /// <remarks/>
-        planned,
-        
-        /// <remarks/>
-        unplanned,
-        
-        /// <remarks/>
-        downtime,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -25651,7 +30043,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private refNameString targetField;
         
-        private System.DateTime dTimStnField;
+        private Energistics.SchemaGatherer.Timestamp dTimStnField;
         
         private bool dTimStnFieldSpecified;
         
@@ -25760,7 +30152,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the station was measured or created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the station was measured or created.")]
-        public System.DateTime dTimStn {
+        public Energistics.SchemaGatherer.Timestamp dTimStn {
             get {
                 return this.dTimStnField;
             }
@@ -26335,267 +30727,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TrajStationType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("azimuth on plane")]
-        azimuthonplane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate to delta-MD")]
-        buildratetodeltaMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate to INCL")]
-        buildratetoINCL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate to MD")]
-        buildratetoMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to AZI")]
-        buildrateandturnratetoAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to delta-MD")]
-        buildrateandturnratetodeltaMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to INCL")]
-        buildrateandturnratetoINCL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to INCL and AZI")]
-        buildrateandturnratetoINCLandAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to MD")]
-        buildrateandturnratetoMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate and turnrate to TVD")]
-        buildrateandturnratetoTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("buildrate TVD")]
-        buildrateTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing MD")]
-        casingMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing TVD")]
-        casingTVD,
-        
-        /// <remarks/>
-        DLS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to AZI and MD")]
-        DLStoAZIandMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to AZI-TVD")]
-        DLStoAZITVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL")]
-        DLStoINCL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL and AZI")]
-        DLStoINCLandAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL and MD")]
-        DLStoINCLandMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to INCL and TVD")]
-        DLStoINCLandTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to NS, EW and TVD")]
-        DLStoNSEWandTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to AZI")]
-        DLSandtoolfacetoAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to delta-MD")]
-        DLSandtoolfacetodeltaMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to INCL")]
-        DLSandtoolfacetoINCL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to INCL-AZI")]
-        DLSandtoolfacetoINCLAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to MD")]
-        DLSandtoolfacetoMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to TVD")]
-        DLSandtoolfacetoTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation MD")]
-        formationMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation TVD")]
-        formationTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gyro inertial")]
-        gyroinertial,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gyro MWD")]
-        gyroMWD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gyro north seeking")]
-        gyronorthseeking,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hold to delta-MD")]
-        holdtodeltaMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hold to MD")]
-        holdtoMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hold to TVD")]
-        holdtoTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("INCL, AZI and TVD")]
-        INCLAZIandTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic multi-shot")]
-        magneticmultishot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic MWD")]
-        magneticMWD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic single shot")]
-        magneticsingleshot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("marker MD")]
-        markerMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("marker TVD")]
-        markerTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("NS, EW and TVD")]
-        NSEWandTVD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("target center")]
-        targetcenter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("target offset")]
-        targetoffset,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tie in point")]
-        tieinpoint,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("turnrate to AZI")]
-        turnratetoAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("turnrate to delta-MD")]
-        turnratetodeltaMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("turnrate to MD")]
-        turnratetoMD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("turnrate to TVD")]
-        turnratetoTVD,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TypeSurveyTool {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic MWD")]
-        magneticMWD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gyroscopic  MWD")]
-        gyroscopicMWD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gyroscopic north seeking")]
-        gyroscopicnorthseeking,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gyroscopic inertial")]
-        gyroscopicinertial,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic single-shot")]
-        magneticsingleshot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic multiple-shot")]
-        magneticmultipleshot,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TrajStationStatus {
-        
-        /// <remarks/>
-        locked,
-        
-        /// <remarks/>
-        open,
-        
-        /// <remarks/>
-        rejected,
-        
-        /// <remarks/>
-        valid,
-        
-        /// <remarks/>
-        position,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -27265,7 +31396,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_scr {
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private refPositiveCount pumpField;
         
@@ -27283,7 +31414,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -27414,27 +31545,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ScrType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("string annulus")]
-        stringannulus,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("string kill line")]
-        stringkillline,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("string choke line")]
-        stringchokeline,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -27442,7 +31552,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private refPositiveCount pitField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -27472,7 +31582,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -28525,7 +32635,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_pumpOp {
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -28554,7 +32664,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -28714,28 +32824,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum PumpOpType {
-        
-        /// <remarks/>
-        drilling,
-        
-        /// <remarks/>
-        reaming,
-        
-        /// <remarks/>
-        circulating,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("slow pump")]
-        slowpump,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -28745,7 +32833,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private measuredDepthCoord mdHoleField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -28785,7 +32873,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -28864,11 +32952,11 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_shakerScreen {
         
-        private System.DateTime dTimStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -28889,7 +32977,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public System.DateTime dTimStart {
+        public Energistics.SchemaGatherer.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -28912,7 +33000,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time activities were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time activities were completed.")]
-        public System.DateTime dTimEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -29029,17 +33117,17 @@ namespace Energistics.Generator.WITSML131 {
         
         private cs_incident[] incidentField;
         
-        private System.DateTime lastCsgPresTestField;
+        private Energistics.SchemaGatherer.Timestamp lastCsgPresTestField;
         
         private bool lastCsgPresTestFieldSpecified;
         
         private pressureMeasure presLastCsgField;
         
-        private System.DateTime lastBopPresTestField;
+        private Energistics.SchemaGatherer.Timestamp lastBopPresTestField;
         
         private bool lastBopPresTestFieldSpecified;
         
-        private System.DateTime nextBopPresTestField;
+        private Energistics.SchemaGatherer.Timestamp nextBopPresTestField;
         
         private bool nextBopPresTestFieldSpecified;
         
@@ -29057,35 +33145,35 @@ namespace Energistics.Generator.WITSML131 {
         
         private pressureMeasure presChokeManField;
         
-        private System.DateTime lastFireBoatDrillField;
+        private Energistics.SchemaGatherer.Timestamp lastFireBoatDrillField;
         
         private bool lastFireBoatDrillFieldSpecified;
         
-        private System.DateTime lastAbandonDrillField;
+        private Energistics.SchemaGatherer.Timestamp lastAbandonDrillField;
         
         private bool lastAbandonDrillFieldSpecified;
         
-        private System.DateTime lastRigInspectionField;
+        private Energistics.SchemaGatherer.Timestamp lastRigInspectionField;
         
         private bool lastRigInspectionFieldSpecified;
         
-        private System.DateTime lastSafetyMeetingField;
+        private Energistics.SchemaGatherer.Timestamp lastSafetyMeetingField;
         
         private bool lastSafetyMeetingFieldSpecified;
         
-        private System.DateTime lastSafetyInspectionField;
+        private Energistics.SchemaGatherer.Timestamp lastSafetyInspectionField;
         
         private bool lastSafetyInspectionFieldSpecified;
         
-        private System.DateTime lastTripDrillField;
+        private Energistics.SchemaGatherer.Timestamp lastTripDrillField;
         
         private bool lastTripDrillFieldSpecified;
         
-        private System.DateTime lastDiverterDrillField;
+        private Energistics.SchemaGatherer.Timestamp lastDiverterDrillField;
         
         private bool lastDiverterDrillFieldSpecified;
         
-        private System.DateTime lastBopDrillField;
+        private Energistics.SchemaGatherer.Timestamp lastBopDrillField;
         
         private bool lastBopDrillFieldSpecified;
         
@@ -29139,7 +33227,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last casing pressure test date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Last casing pressure test date and time.")]
-        public System.DateTime lastCsgPresTest {
+        public Energistics.SchemaGatherer.Timestamp lastCsgPresTest {
             get {
                 return this.lastCsgPresTestField;
             }
@@ -29174,7 +33262,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last blow out preventer pressure test.</summary>
         [System.ComponentModel.DescriptionAttribute("Last blow out preventer pressure test.")]
-        public System.DateTime lastBopPresTest {
+        public Energistics.SchemaGatherer.Timestamp lastBopPresTest {
             get {
                 return this.lastBopPresTestField;
             }
@@ -29197,7 +33285,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Next blow out preventer pressure test.</summary>
         [System.ComponentModel.DescriptionAttribute("Next blow out preventer pressure test.")]
-        public System.DateTime nextBopPresTest {
+        public Energistics.SchemaGatherer.Timestamp nextBopPresTest {
             get {
                 return this.nextBopPresTestField;
             }
@@ -29304,7 +33392,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last fire or boat drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last fire or boat drill.")]
-        public System.DateTime lastFireBoatDrill {
+        public Energistics.SchemaGatherer.Timestamp lastFireBoatDrill {
             get {
                 return this.lastFireBoatDrillField;
             }
@@ -29327,7 +33415,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last abandonment drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last abandonment drill.")]
-        public System.DateTime lastAbandonDrill {
+        public Energistics.SchemaGatherer.Timestamp lastAbandonDrill {
             get {
                 return this.lastAbandonDrillField;
             }
@@ -29350,7 +33438,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last rig inspection/check.</summary>
         [System.ComponentModel.DescriptionAttribute("Last rig inspection/check.")]
-        public System.DateTime lastRigInspection {
+        public Energistics.SchemaGatherer.Timestamp lastRigInspection {
             get {
                 return this.lastRigInspectionField;
             }
@@ -29373,7 +33461,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last safety meeting.</summary>
         [System.ComponentModel.DescriptionAttribute("Last safety meeting.")]
-        public System.DateTime lastSafetyMeeting {
+        public Energistics.SchemaGatherer.Timestamp lastSafetyMeeting {
             get {
                 return this.lastSafetyMeetingField;
             }
@@ -29396,7 +33484,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last safety inspection.</summary>
         [System.ComponentModel.DescriptionAttribute("Last safety inspection.")]
-        public System.DateTime lastSafetyInspection {
+        public Energistics.SchemaGatherer.Timestamp lastSafetyInspection {
             get {
                 return this.lastSafetyInspectionField;
             }
@@ -29419,7 +33507,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last trip drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last trip drill.")]
-        public System.DateTime lastTripDrill {
+        public Energistics.SchemaGatherer.Timestamp lastTripDrill {
             get {
                 return this.lastTripDrillField;
             }
@@ -29442,7 +33530,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last diverter drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last diverter drill.")]
-        public System.DateTime lastDiverterDrill {
+        public Energistics.SchemaGatherer.Timestamp lastDiverterDrill {
             get {
                 return this.lastDiverterDrillField;
             }
@@ -29465,7 +33553,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Last blow out preventer drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last blow out preventer drill.")]
-        public System.DateTime lastBopDrill {
+        public Energistics.SchemaGatherer.Timestamp lastBopDrill {
             get {
                 return this.lastBopDrillField;
             }
@@ -29625,7 +33713,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_incident {
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private string reporterField;
         
@@ -29665,7 +33753,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -29994,11 +34082,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool typeSuppCraftFieldSpecified;
         
-        private System.DateTime dTimArrivedField;
+        private Energistics.SchemaGatherer.Timestamp dTimArrivedField;
         
         private bool dTimArrivedFieldSpecified;
         
-        private System.DateTime dTimDepartedField;
+        private Energistics.SchemaGatherer.Timestamp dTimDepartedField;
         
         private bool dTimDepartedFieldSpecified;
         
@@ -30046,7 +34134,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time when vehicle arrived at rig site.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when vehicle arrived at rig site.")]
-        public System.DateTime dTimArrived {
+        public Energistics.SchemaGatherer.Timestamp dTimArrived {
             get {
                 return this.dTimArrivedField;
             }
@@ -30069,7 +34157,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time when vehicle departed rig site.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when vehicle departed rig site.")]
-        public System.DateTime dTimDeparted {
+        public Energistics.SchemaGatherer.Timestamp dTimDeparted {
             get {
                 return this.dTimDepartedField;
             }
@@ -30120,46 +34208,12 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum SupportCraft {
-        
-        /// <remarks/>
-        barge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("standby boat")]
-        standbyboat,
-        
-        /// <remarks/>
-        helicopter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("supply boat")]
-        supplyboat,
-        
-        /// <remarks/>
-        truck,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("crew vehicle")]
-        crewvehicle,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tug boat")]
-        tugboat,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_weather {
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private string agencyField;
         
@@ -30213,7 +34267,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -30589,7 +34643,7 @@ namespace Energistics.Generator.WITSML131 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.3.1.1")]
     public partial class obj_realtime {
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -30624,7 +34678,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The time index for the realtime object if the interval type is time-based.   It is the default time index for all data in the realtime object. Both dTim and md can be overridden at the channel level. This value should be given when "dTim" is given with any channel.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The time index for the realtime object if the interval type is time-based.   It is the default time index for all data in the realtime object. Both dTim and md can be overridden at the channel level. This value should be given when ""dTim"" is given with any channel.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -30856,7 +34910,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string passField;
         
-        private System.DateTime creationDateField;
+        private Energistics.SchemaGatherer.Timestamp creationDateField;
         
         private bool creationDateFieldSpecified;
         
@@ -30956,7 +35010,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that the realtime was created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the realtime was created.")]
-        public System.DateTime creationDate {
+        public Energistics.SchemaGatherer.Timestamp creationDate {
             get {
                 return this.creationDateField;
             }
@@ -31147,7 +35201,6 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         /// <summary>The interval method. Not appropriate for a SpotSample.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The interval method. Not appropriate for a SpotSample.")]
         public IntervalMethod method {
             get {
@@ -31169,46 +35222,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.itemField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum IntervalType {
-        
-        /// <remarks/>
-        time,
-        
-        /// <remarks/>
-        depth,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum IntervalMethod {
-        
-        /// <remarks/>
-        average,
-        
-        /// <remarks/>
-        maximum,
-        
-        /// <remarks/>
-        minimum,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("spot sample")]
-        spotsample,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -31453,7 +35466,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string mnemonicField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -31501,7 +35514,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The time index for the realtime channel if the interval  type is time-based.</summary>
         [System.ComponentModel.DescriptionAttribute("The time index for the realtime channel if the interval  type is time-based.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -31631,7 +35644,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private short seqField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -31672,7 +35685,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>The time index for the record if the interval  type is time-based.</summary>
         [System.ComponentModel.DescriptionAttribute("The time index for the record if the interval  type is time-based.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -31825,11 +35838,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private lengthMeasure airGapField;
         
-        private System.DateTime dTimStartOpField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartOpField;
         
         private bool dTimStartOpFieldSpecified;
         
-        private System.DateTime dTimEndOpField;
+        private Energistics.SchemaGatherer.Timestamp dTimEndOpField;
         
         private bool dTimEndOpFieldSpecified;
         
@@ -32250,7 +36263,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time rig operations started, or date and time object created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time rig operations started, or date and time object created.")]
-        public System.DateTime dTimStartOp {
+        public Energistics.SchemaGatherer.Timestamp dTimStartOp {
             get {
                 return this.dTimStartOpField;
             }
@@ -32273,7 +36286,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time rig operations ended (May be NULL for active rig).</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time rig operations ended (May be NULL for active rig).")]
-        public System.DateTime dTimEndOp {
+        public Energistics.SchemaGatherer.Timestamp dTimEndOp {
             get {
                 return this.dTimEndOpField;
             }
@@ -33261,38 +37274,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum RigType {
-        
-        /// <remarks/>
-        barge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing")]
-        coiledtubing,
-        
-        /// <remarks/>
-        floater,
-        
-        /// <remarks/>
-        jackup,
-        
-        /// <remarks/>
-        land,
-        
-        /// <remarks/>
-        platform,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("semi-submersible")]
-        semisubmersible,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -33302,11 +37283,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string modelField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -33403,7 +37384,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -33426,7 +37407,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Removal Date.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal Date.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -34011,42 +37992,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BopType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("annular preventer")]
-        annularpreventer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shear ram")]
-        shearram,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("blind ram")]
-        blindram,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pipe ram")]
-        piperam,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling spool")]
-        drillingspool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flexible joint")]
-        flexiblejoint,
-        
-        /// <remarks/>
-        connector,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -34054,11 +37999,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private short indexField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -34094,7 +38039,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -34117,7 +38062,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Removal date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal date and time.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -34243,49 +38188,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum PitType {
-        
-        /// <remarks/>
-        bulk,
-        
-        /// <remarks/>
-        chemical,
-        
-        /// <remarks/>
-        drilling,
-        
-        /// <remarks/>
-        mix,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cleaning")]
-        mudcleaning,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sand trap")]
-        sandtrap,
-        
-        /// <remarks/>
-        slug,
-        
-        /// <remarks/>
-        storage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("surge tank")]
-        surgetank,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trip tank")]
-        triptank,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -34297,11 +38199,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string modelField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -34387,7 +38289,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of pump installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of pump installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -34410,7 +38312,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the pump was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the pump was removed.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -34680,24 +38582,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum PumpType {
-        
-        /// <remarks/>
-        centrifugal,
-        
-        /// <remarks/>
-        duplex,
-        
-        /// <remarks/>
-        triplex,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -34709,11 +38593,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string modelField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -34786,7 +38670,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -34809,7 +38693,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Removal date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal date and time.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -35004,11 +38888,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string modelField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -35051,7 +38935,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -35074,7 +38958,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Removal date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal date and time.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -35174,11 +39058,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string modelField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -35221,7 +39105,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -35244,7 +39128,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Removal date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal date and time.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -35345,11 +39229,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string modelField;
         
-        private System.DateTime dTimInstallField;
+        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
         
         private bool dTimInstallFieldSpecified;
         
-        private System.DateTime dTimRemoveField;
+        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
         
         private bool dTimRemoveFieldSpecified;
         
@@ -35416,7 +39300,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of installation.")]
-        public System.DateTime dTimInstall {
+        public Energistics.SchemaGatherer.Timestamp dTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -35439,7 +39323,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Removal date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal date and time.")]
-        public System.DateTime dTimRemove {
+        public Energistics.SchemaGatherer.Timestamp dTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -36339,91 +40223,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum SurfEquipType {
-        
-        /// <remarks/>
-        IADC,
-        
-        /// <remarks/>
-        custom,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing")]
-        coiledtubing,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum DerrickType {
-        
-        /// <remarks/>
-        @double,
-        
-        /// <remarks/>
-        quadruple,
-        
-        /// <remarks/>
-        slant,
-        
-        /// <remarks/>
-        triple,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum DrawWorksType {
-        
-        /// <remarks/>
-        mechanical,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("standard electric")]
-        standardelectric,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diesel electric")]
-        dieselelectric,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ram rig")]
-        ramrig,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum DriveType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing")]
-        coiledtubing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rotary kelly drive")]
-        rotarykellydrive,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("top drive")]
-        topdrive,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -36509,11 +40308,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private RiskAffectedPersonnel[] affectedPersonnelField;
         
-        private System.DateTime dTimStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -36691,7 +40490,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public System.DateTime dTimStart {
+        public Energistics.SchemaGatherer.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -36714,7 +40513,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that activities were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities were completed.")]
-        public System.DateTime dTimEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -37005,619 +40804,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum RiskType {
-        
-        /// <remarks/>
-        risk,
-        
-        /// <remarks/>
-        @event,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("near miss")]
-        nearmiss,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("best practice")]
-        bestpractice,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lessons learned")]
-        lessonslearned,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum RiskCategory {
-        
-        /// <remarks/>
-        hydraulics,
-        
-        /// <remarks/>
-        mechanical,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time related")]
-        timerelated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wellbore stability")]
-        wellborestability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("directional drilling")]
-        directionaldrilling,
-        
-        /// <remarks/>
-        bit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("equipment failure")]
-        equipmentfailure,
-        
-        /// <remarks/>
-        completion,
-        
-        /// <remarks/>
-        casing,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        HSE,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum RiskSubCategory {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas kick")]
-        gaskick,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow water influx")]
-        shallowwaterinflux,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("other influx or kicks")]
-        otherinfluxorkicks,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("loss circulation")]
-        losscirculation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("poor hole cleaning")]
-        poorholecleaning,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("good hole cleaning at high ROP")]
-        goodholecleaningathighROP,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high mud weight")]
-        highmudweight,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("special additives needed")]
-        specialadditivesneeded,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gumbo problems")]
-        gumboproblems,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high ECD - rheology related")]
-        highECDrheologyrelated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive circulation")]
-        excessivecirculation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("performing a kill")]
-        performingakill,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud weight change")]
-        mudweightchange,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive pipe cement scaling")]
-        excessivepipecementscaling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pit gain or loss")]
-        pitgainorloss,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud stability problems")]
-        mudstabilityproblems,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow gas flow")]
-        shallowgasflow,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("twist off")]
-        twistoff,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stuck pipe")]
-        stuckpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline stuck in hole")]
-        wirelinestuckinhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stick and slip")]
-        stickandslip,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vibration - axial")]
-        vibrationaxial,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vibration - torsional")]
-        vibrationtorsional,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vibration - transverse")]
-        vibrationtransverse,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vibration unknown or rough drilling")]
-        vibrationunknownorroughdrilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("uneven wear of BHA")]
-        unevenwearofBHA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("uneven wear of drillstring")]
-        unevenwearofdrillstring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive torque")]
-        excessivetorque,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive drag")]
-        excessivedrag,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reaming greater than 2 hours")]
-        reaminggreaterthan2hours,
-        
-        /// <remarks/>
-        washouts,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tight hole or overPull")]
-        tightholeoroverPull,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("failed inspections or fatigue wear")]
-        failedinspectionsorfatiguewear,
-        
-        /// <remarks/>
-        mechanical,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling greater than 1000 feet/day")]
-        drillinggreaterthan1000feetday,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling greater than 2000 feet/day")]
-        drillinggreaterthan2000feetday,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling less than 20 feet/day")]
-        drillinglessthan20feetday,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trips greater than 24 hours")]
-        tripsgreaterthan24hours,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive time for BHA makeup")]
-        excessivetimeforBHAmakeup,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("waiting on decisions")]
-        waitingondecisions,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("waiting on weather")]
-        waitingonweather,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("waiting on tools")]
-        waitingontools,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sloughing or packoffs")]
-        sloughingorpackoffs,
-        
-        /// <remarks/>
-        ballooning,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fracture problems")]
-        fractureproblems,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("unstable zones")]
-        unstablezones,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation integrity test")]
-        formationintegritytest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("leak-off test")]
-        leakofftest,
-        
-        /// <remarks/>
-        tectonics,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pore pressure")]
-        porepressure,
-        
-        /// <remarks/>
-        breakouts,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bed parallel")]
-        bedparallel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wellbore stability")]
-        wellborestability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive doglegs")]
-        excessivedoglegs,
-        
-        /// <remarks/>
-        sidetrack,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("BHA change for directional")]
-        BHAchangefordirectional,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wrong total flow area")]
-        wrongtotalflowarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well collision - actual")]
-        wellcollisionactual,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("well collision - technical")]
-        wellcollisiontechnical,
-        
-        /// <remarks/>
-        geosteering,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("abnormal tendency changes")]
-        abnormaltendencychanges,
-        
-        /// <remarks/>
-        resurveying,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in-field referencing (IFR) actions")]
-        infieldreferencingIFRactions,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit or BHA performance")]
-        bitorBHAperformance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling optimization")]
-        drillingoptimization,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit balling")]
-        bitballing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lost cones or broken cutters")]
-        lostconesorbrokencutters,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive bit wear or gauge")]
-        excessivebitwearorgauge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("low rate of bit penetration")]
-        lowrateofbitpenetration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high rate of bit penetration")]
-        highrateofbitpenetration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("downhole tool")]
-        downholetool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("surface system")]
-        surfacesystem,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("motor or rotary steerable system failure")]
-        motororrotarysteerablesystemfailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("topdrive failure")]
-        topdrivefailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hoisting equipment failure")]
-        hoistingequipmentfailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("circulating equipment failure")]
-        circulatingequipmentfailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electrical system failure")]
-        electricalsystemfailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("blow out preventer events")]
-        blowoutpreventerevents,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("surface instrumentation problems")]
-        surfaceinstrumentationproblems,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig communications")]
-        rigcommunications,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion equipment failure")]
-        completionequipmentfailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("miscellaneous rig equipment")]
-        miscellaneousrigequipment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tool or equipment failure")]
-        toolorequipmentfailure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("squeeze jobs")]
-        squeezejobs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing surge losses")]
-        casingsurgelosses,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stuck casing or completion")]
-        stuckcasingorcompletion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shoe failures")]
-        shoefailures,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("early cement setup")]
-        earlycementsetup,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing collapse")]
-        casingcollapse,
-        
-        /// <remarks/>
-        milling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive casing wear or cuttings")]
-        excessivecasingwearorcuttings,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("excessive formation damage or skin")]
-        excessiveformationdamageorskin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing rotation or reciprocation rqd")]
-        casingrotationorreciprocationrqd,
-        
-        /// <remarks/>
-        broaching,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion or casing")]
-        completionorcasing,
-        
-        /// <remarks/>
-        stratigraphy,
-        
-        /// <remarks/>
-        fishing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("junk in hole")]
-        junkinhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("delay due to political unrest")]
-        delayduetopoliticalunrest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rig move")]
-        rigmove,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas hydrates")]
-        gashydrates,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pending analysis")]
-        pendinganalysis,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("riser disconnect")]
-        riserdisconnect,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        personnel,
-        
-        /// <remarks/>
-        environmental,
-        
-        /// <remarks/>
-        automotive,
-        
-        /// <remarks/>
-        asset,
-        
-        /// <remarks/>
-        information,
-        
-        /// <remarks/>
-        time,
-        
-        /// <remarks/>
-        HSE,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum RiskAffectedPersonnel {
-        
-        /// <remarks/>
-        cementer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("company man")]
-        companyman,
-        
-        /// <remarks/>
-        contractor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("directional driller")]
-        directionaldriller,
-        
-        /// <remarks/>
-        driller,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling engineer")]
-        drillingengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling superintendent")]
-        drillingsuperintendent,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling team")]
-        drillingteam,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("facility engineer")]
-        facilityengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("field service manager")]
-        fieldservicemanager,
-        
-        /// <remarks/>
-        foreman,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general service supervisor")]
-        generalservicesupervisor,
-        
-        /// <remarks/>
-        geologist,
-        
-        /// <remarks/>
-        member,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud engineer")]
-        mudengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud logger")]
-        mudlogger,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD or LWD engineer")]
-        MWDorLWDengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("perform engineer")]
-        performengineer,
-        
-        /// <remarks/>
-        petrophysicist,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("production engineer")]
-        productionengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("remotely operated vehicle engineer")]
-        remotelyoperatedvehicleengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("safety manger")]
-        safetymanger,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sales engineer")]
-        salesengineer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("service supervisor")]
-        servicesupervisor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("technical support")]
-        technicalsupport,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tool pusher")]
-        toolpusher,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wireline engineer")]
-        wirelineengineer,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -37689,11 +40875,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private string nameField;
         
-        private System.DateTime dTimToolRunField;
+        private Energistics.SchemaGatherer.Timestamp dTimToolRunField;
         
         private bool dTimToolRunFieldSpecified;
         
-        private System.DateTime dTimToolPullField;
+        private Energistics.SchemaGatherer.Timestamp dTimToolPullField;
         
         private bool dTimToolPullFieldSpecified;
         
@@ -37796,7 +40982,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time logging suite run in the hole.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time logging suite run in the hole.")]
-        public System.DateTime dTimToolRun {
+        public Energistics.SchemaGatherer.Timestamp dTimToolRun {
             get {
                 return this.dTimToolRunField;
             }
@@ -37819,7 +41005,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time logging suite pulled out of the hole.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time logging suite pulled out of the hole.")]
-        public System.DateTime dTimToolPull {
+        public Energistics.SchemaGatherer.Timestamp dTimToolPull {
             get {
                 return this.dTimToolPullField;
             }
@@ -38349,7 +41535,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private short surveyVerField;
         
-        private System.DateTime dTimTrajProgField;
+        private Energistics.SchemaGatherer.Timestamp dTimTrajProgField;
         
         private bool dTimTrajProgFieldSpecified;
         
@@ -38427,7 +41613,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time trajectory program was created or edited.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time trajectory program was created or edited.")]
-        public System.DateTime dTimTrajProg {
+        public Energistics.SchemaGatherer.Timestamp dTimTrajProg {
             get {
                 return this.dTimTrajProgField;
             }
@@ -39317,59 +42503,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TargetScope {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("3D volume")]
-        Item3Dvolume,
-        
-        /// <remarks/>
-        ellipsoid,
-        
-        /// <remarks/>
-        elliptical,
-        
-        /// <remarks/>
-        hardLine,
-        
-        /// <remarks/>
-        irregular,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lease line")]
-        leaseline,
-        
-        /// <remarks/>
-        line,
-        
-        /// <remarks/>
-        plane,
-        
-        /// <remarks/>
-        point,
-        
-        /// <remarks/>
-        rectangular,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TargetCategory {
-        
-        /// <remarks/>
-        geological,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -39501,21 +42634,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TargetSectionScope {
-        
-        /// <remarks/>
-        arc,
-        
-        /// <remarks/>
-        line,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -39593,11 +42711,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private cs_refWellboreTrajectory parentTrajectoryField;
         
-        private System.DateTime dTimTrajStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimTrajStartField;
         
         private bool dTimTrajStartFieldSpecified;
         
-        private System.DateTime dTimTrajEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimTrajEndField;
         
         private bool dTimTrajEndFieldSpecified;
         
@@ -39727,7 +42845,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Start date and time of trajectory station measurements. Note that this is NOT a server query parameter.</summary>
         [System.ComponentModel.DescriptionAttribute("Start date and time of trajectory station measurements. Note that this is NOT a s" +
             "erver query parameter.")]
-        public System.DateTime dTimTrajStart {
+        public Energistics.SchemaGatherer.Timestamp dTimTrajStart {
             get {
                 return this.dTimTrajStartField;
             }
@@ -39751,7 +42869,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>End date and time of trajectory station measurements. Note that this is NOT a server query parameter.</summary>
         [System.ComponentModel.DescriptionAttribute("End date and time of trajectory station measurements. Note that this is NOT a ser" +
             "ver query parameter.")]
-        public System.DateTime dTimTrajEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimTrajEnd {
             get {
                 return this.dTimTrajEndField;
             }
@@ -40167,7 +43285,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private refNameString targetField;
         
-        private System.DateTime dTimStnField;
+        private Energistics.SchemaGatherer.Timestamp dTimStnField;
         
         private bool dTimStnFieldSpecified;
         
@@ -40326,7 +43444,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time the station was measured or created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the station was measured or created.")]
-        public System.DateTime dTimStn {
+        public Energistics.SchemaGatherer.Timestamp dTimStn {
             get {
                 return this.dTimStnField;
             }
@@ -41261,62 +44379,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TubularAssembly {
-        
-        /// <remarks/>
-        drilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("directional drilling")]
-        directionaldrilling,
-        
-        /// <remarks/>
-        fishing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("condition mud")]
-        conditionmud,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tubing conveyed logging")]
-        tubingconveyedlogging,
-        
-        /// <remarks/>
-        cementing,
-        
-        /// <remarks/>
-        casing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("clean out")]
-        cleanout,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("completion or testing")]
-        completionortesting,
-        
-        /// <remarks/>
-        coring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hole opening or underreaming")]
-        holeopeningorunderreaming,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("milling or dressing or cutting")]
-        millingordressingorcutting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("wiper or check or reaming")]
-        wiperorcheckorreaming,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -42030,663 +45092,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum TubularComponent {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("non-magnetic stabilizer")]
-        nonmagneticstabilizer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("non-magnetic collar")]
-        nonmagneticcollar,
-        
-        /// <remarks/>
-        stabilizer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("adjustable kickoff")]
-        adjustablekickoff,
-        
-        /// <remarks/>
-        accelerator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rotary steering tool")]
-        rotarysteeringtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-bar catcher")]
-        subbarcatcher,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-bent")]
-        subbent,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit core diamond")]
-        bitcorediamond,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit core PDC")]
-        bitcorePDC,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit diamond fixed cut")]
-        bitdiamondfixedcut,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit insert roller cone")]
-        bitinsertrollercone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit mill tooth roller cone")]
-        bitmilltoothrollercone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit PDC fixed cutter")]
-        bitPDCfixedcutter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-bit")]
-        subbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bridge plug")]
-        bridgeplug,
-        
-        /// <remarks/>
-        bullnose,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bull plug")]
-        bullplug,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-bumper")]
-        subbumper,
-        
-        /// <remarks/>
-        casing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing cutter")]
-        casingcutter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hanger casing subsea")]
-        hangercasingsubsea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hanger casing surface")]
-        hangercasingsurface,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing head")]
-        casinghead,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("catch assembly")]
-        catchassembly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-catcher")]
-        subcatcher,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-circulation")]
-        subcirculation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing in hole")]
-        coiledtubinginhole,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coiled tubing on coil")]
-        coiledtubingoncoil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drill pipe compressive")]
-        drillpipecompressive,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-cone")]
-        subcone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("core barrel")]
-        corebarrel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("core orientation barrel")]
-        coreorientationbarrel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-crossover")]
-        subcrossover,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing crossover")]
-        casingcrossover,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-dart")]
-        subdart,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("die collar")]
-        diecollar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("die collar LH")]
-        diecollarLH,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("directional guidance system")]
-        directionalguidancesystem,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drill collar")]
-        drillcollar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drill pipe")]
-        drillpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drill pipe LH")]
-        drillpipeLH,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drill stem test BHA")]
-        drillstemtestBHA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drive pipe")]
-        drivepipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dual catch assembly")]
-        dualcatchassembly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("extension bowl overshot")]
-        extensionbowlovershot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("extension sub-overshot")]
-        extensionsubovershot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("float collar")]
-        floatcollar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("float shoe")]
-        floatshoe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-float")]
-        subfloat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow head")]
-        flowhead,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("guide shoe")]
-        guideshoe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD hang off sub")]
-        MWDhangoffsub,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heavy weight drill pipe")]
-        heavyweightdrillpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heavy weight drill pipe LH")]
-        heavyweightdrillpipeLH,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("riser high pressure")]
-        riserhighpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit hole opener")]
-        bitholeopener,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing inflatable packer")]
-        casinginflatablepacker,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("motor instrumented")]
-        motorinstrumented,
-        
-        /// <remarks/>
-        jar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-jetting")]
-        subjetting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("junk basket")]
-        junkbasket,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("junk basket reverse circulation")]
-        junkbasketreversecirculation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-junk")]
-        subjunk,
-        
-        /// <remarks/>
-        kelly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("keyseat wiper tool")]
-        keyseatwipertool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("landing float collar")]
-        landingfloatcollar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lead impression block")]
-        leadimpressionblock,
-        
-        /// <remarks/>
-        liner,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hanger liner")]
-        hangerliner,
-        
-        /// <remarks/>
-        magnet,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("riser marine")]
-        risermarine,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill dress")]
-        milldress,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill flat bottom")]
-        millflatbottom,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill hollow")]
-        millhollow,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill polish")]
-        millpolish,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill section")]
-        millsection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill taper")]
-        milltaper,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill washover")]
-        millwashover,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill packer picker assembly")]
-        millpackerpickerassembly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("millout extension")]
-        milloutextension,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("multilateral hanger running tool")]
-        multilateralhangerrunningtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hanger mud line")]
-        hangermudline,
-        
-        /// <remarks/>
-        motor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mule shoe")]
-        muleshoe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("logging while drilling tool")]
-        loggingwhiledrillingtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer near bit roller reamer")]
-        stabilizernearbitrollerreamer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer near bit")]
-        stabilizernearbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer non-rotating")]
-        stabilizernonrotating,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-orienting")]
-        suborienting,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        overshot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("overshot LH")]
-        overshotLH,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oversize lip guide overshot")]
-        oversizelipguideovershot,
-        
-        /// <remarks/>
-        packer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("polished bore receptacle")]
-        polishedborereceptacle,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill pilot")]
-        millpilot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pipe cutter")]
-        pipecutter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ported stinger")]
-        portedstinger,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-ported")]
-        subported,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("prepacked screens")]
-        prepackedscreens,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-pressure relief")]
-        subpressurerelief,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("riser production")]
-        riserproduction,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MWD pulser")]
-        MWDpulser,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-pump out")]
-        subpumpout,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-restrictor")]
-        subrestrictor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("packer retrieve TT squeeze")]
-        packerretrieveTTsqueeze,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reversing tool")]
-        reversingtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer string roller reamer")]
-        stabilizerstringrollerreamer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("packer RTTS")]
-        packerRTTS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("running tool")]
-        runningtool,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("safety joint")]
-        safetyjoint,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("safety joint LH")]
-        safetyjointLH,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-saver")]
-        subsaver,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("scab liner bit guide")]
-        scablinerbitguide,
-        
-        /// <remarks/>
-        scraper,
-        
-        /// <remarks/>
-        scratchers,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing shoe screw-in")]
-        casingshoescrewin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-shock")]
-        subshock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drill collar short")]
-        drillcollarshort,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-side entry")]
-        subsideentry,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("slotted liner")]
-        slottedliner,
-        
-        /// <remarks/>
-        spear,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stage cement collar")]
-        stagecementcollar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("motor steerable")]
-        motorsteerable,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("packer storm valve RTTS")]
-        packerstormvalveRTTS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer string")]
-        stabilizerstring,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("surface pipe")]
-        surfacepipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("taper tap")]
-        tapertap,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("taper tap LH")]
-        tapertapLH,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tubing-conveyed perforating gun")]
-        tubingconveyedperforatinggun,
-        
-        /// <remarks/>
-        thruster,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tieback polished bore receptacle")]
-        tiebackpolishedborereceptacle,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tieback stinger")]
-        tiebackstinger,
-        
-        /// <remarks/>
-        tubing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hanger tubing")]
-        hangertubing,
-        
-        /// <remarks/>
-        turbine,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit under reamer")]
-        bitunderreamer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer variable blade")]
-        stabilizervariableblade,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("washover pipe")]
-        washoverpipe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill watermelon")]
-        millwatermelon,
-        
-        /// <remarks/>
-        whipstock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("whipstock anchor")]
-        whipstockanchor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer turbo back")]
-        stabilizerturboback,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer inline")]
-        stabilizerinline,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("stabilizer steerable")]
-        stabilizersteerable,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-stop")]
-        substop,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sub-filter")]
-        subfilter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mill casing cutting")]
-        millcasingcutting,
-        
-        /// <remarks/>
-        reamer,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BoxPinConfig {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bottom box, top box")]
-        bottomboxtopbox,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bottom box, top pin")]
-        bottomboxtoppin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bottom pin top box")]
-        bottompintopbox,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bottom pin")]
-        bottompin,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum MaterialType {
-        
-        /// <remarks/>
-        aluminum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("beryllium copper")]
-        berylliumcopper,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chrome alloy")]
-        chromealloy,
-        
-        /// <remarks/>
-        composite,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("non-magnetic steel")]
-        nonmagneticsteel,
-        
-        /// <remarks/>
-        plastic,
-        
-        /// <remarks/>
-        steel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("steel alloy")]
-        steelalloy,
-        
-        /// <remarks/>
-        titanium,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -43214,187 +45619,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BitType {
-        
-        /// <remarks/>
-        diamond,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diamond core")]
-        diamondcore,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("insert roller cone")]
-        insertrollercone,
-        
-        /// <remarks/>
-        PDC,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("PDC core")]
-        PDCcore,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("roller cone")]
-        rollercone,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BitDullCode {
-        
-        /// <remarks/>
-        BC,
-        
-        /// <remarks/>
-        BT,
-        
-        /// <remarks/>
-        BU,
-        
-        /// <remarks/>
-        CC,
-        
-        /// <remarks/>
-        CD,
-        
-        /// <remarks/>
-        CI,
-        
-        /// <remarks/>
-        CR,
-        
-        /// <remarks/>
-        CT,
-        
-        /// <remarks/>
-        ER,
-        
-        /// <remarks/>
-        FC,
-        
-        /// <remarks/>
-        HC,
-        
-        /// <remarks/>
-        JD,
-        
-        /// <remarks/>
-        LC,
-        
-        /// <remarks/>
-        LN,
-        
-        /// <remarks/>
-        LT,
-        
-        /// <remarks/>
-        NO,
-        
-        /// <remarks/>
-        OC,
-        
-        /// <remarks/>
-        PB,
-        
-        /// <remarks/>
-        PN,
-        
-        /// <remarks/>
-        RG,
-        
-        /// <remarks/>
-        RO,
-        
-        /// <remarks/>
-        SD,
-        
-        /// <remarks/>
-        SS,
-        
-        /// <remarks/>
-        TR,
-        
-        /// <remarks/>
-        WO,
-        
-        /// <remarks/>
-        WT,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BitReasonPulled {
-        
-        /// <remarks/>
-        BHA,
-        
-        /// <remarks/>
-        CM,
-        
-        /// <remarks/>
-        CP,
-        
-        /// <remarks/>
-        DMF,
-        
-        /// <remarks/>
-        DP,
-        
-        /// <remarks/>
-        DST,
-        
-        /// <remarks/>
-        DTF,
-        
-        /// <remarks/>
-        FM,
-        
-        /// <remarks/>
-        HP,
-        
-        /// <remarks/>
-        HR,
-        
-        /// <remarks/>
-        LOG,
-        
-        /// <remarks/>
-        PP,
-        
-        /// <remarks/>
-        PR,
-        
-        /// <remarks/>
-        RIG,
-        
-        /// <remarks/>
-        TD,
-        
-        /// <remarks/>
-        TQ,
-        
-        /// <remarks/>
-        TW,
-        
-        /// <remarks/>
-        WC,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -43527,21 +45751,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum NozzleType {
-        
-        /// <remarks/>
-        extended,
-        
-        /// <remarks/>
-        normal,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -43753,24 +45962,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ConnectionPosition {
-        
-        /// <remarks/>
-        both,
-        
-        /// <remarks/>
-        bottom,
-        
-        /// <remarks/>
-        top,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -43927,46 +46118,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.customDataField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum JarType {
-        
-        /// <remarks/>
-        mechanical,
-        
-        /// <remarks/>
-        hydraulic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydro mechanical")]
-        hydromechanical,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum JarAction {
-        
-        /// <remarks/>
-        up,
-        
-        /// <remarks/>
-        down,
-        
-        /// <remarks/>
-        both,
-        
-        /// <remarks/>
-        vibrating,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -44155,1141 +46306,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum MeasurementType {
-        
-        /// <remarks/>
-        acceleration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic caliper")]
-        acousticcaliper,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic casing collar locator")]
-        acousticcasingcollarlocator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic impedance")]
-        acousticimpedance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic porosity")]
-        acousticporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic velocity")]
-        acousticvelocity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic wave matrix travel time")]
-        acousticwavematrixtraveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acoustic wave travel time")]
-        acousticwavetraveltime,
-        
-        /// <remarks/>
-        amplitude,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amplitude of acoustic wave")]
-        amplitudeofacousticwave,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amplitude of E-M wave")]
-        amplitudeofEMwave,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amplitude ratio")]
-        amplituderatio,
-        
-        /// <remarks/>
-        area,
-        
-        /// <remarks/>
-        attenuation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("attenuation of acoustic wave")]
-        attenuationofacousticwave,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("attenuation of E-M wave")]
-        attenuationofEMwave,
-        
-        /// <remarks/>
-        auxiliary,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("average porosity")]
-        averageporosity,
-        
-        /// <remarks/>
-        azimuth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("barite mud correction")]
-        baritemudcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bed thickness correction")]
-        bedthicknesscorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bit size")]
-        bitsize,
-        
-        /// <remarks/>
-        blocked,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("borehole environment correction")]
-        boreholeenvironmentcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("borehole fluid composition correction")]
-        boreholefluidcompositioncorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("borehole fluid correction")]
-        boreholefluidcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("borehole size correction")]
-        boreholesizecorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bromide mud correction")]
-        bromidemudcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk compressibility")]
-        bulkcompressibility,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk density")]
-        bulkdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk volume")]
-        bulkvolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk volume gas")]
-        bulkvolumegas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk volume hydrocarbon")]
-        bulkvolumehydrocarbon,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk volume oil")]
-        bulkvolumeoil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bulk volume water")]
-        bulkvolumewater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("C/O ratio")]
-        COratio,
-        
-        /// <remarks/>
-        caliper,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cased hole correction")]
-        casedholecorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing collar locator")]
-        casingcollarlocator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing correction")]
-        casingcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing diameter correction")]
-        casingdiametercorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing inspection")]
-        casinginspection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing thickness correction")]
-        casingthicknesscorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing weight correction")]
-        casingweightcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cement correction")]
-        cementcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cement density correction")]
-        cementdensitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cement evaluation")]
-        cementevaluation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cement thickness correction")]
-        cementthicknesscorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cement type correction")]
-        cementtypecorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH density porosity")]
-        CHdensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH dolomite density porosity")]
-        CHdolomitedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH dolomite neutron porosity")]
-        CHdolomiteneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH limestone density porosity")]
-        CHlimestonedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH limestone neutron porosity")]
-        CHlimestoneneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH neutron porosity")]
-        CHneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH sandstone density porosity")]
-        CHsandstonedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CH sandstone neutron porosity")]
-        CHsandstoneneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("compressional wave dolomite porosity")]
-        compressionalwavedolomiteporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("compressional wave limestone porosity")]
-        compressionalwavelimestoneporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("compressional wave matrix travel time")]
-        compressionalwavematrixtraveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("compressional wave sandstone porosity")]
-        compressionalwavesandstoneporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("compressional wave travel time")]
-        compressionalwavetraveltime,
-        
-        /// <remarks/>
-        conductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("conductivity from attenuation")]
-        conductivityfromattenuation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("conductivity from phase shift")]
-        conductivityfromphaseshift,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connate water conductivity")]
-        connatewaterconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connate water resistivity")]
-        connatewaterresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("conventional core porosity")]
-        conventionalcoreporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("core matrix density")]
-        corematrixdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("core permeability")]
-        corepermeability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("core porosity")]
-        coreporosity,
-        
-        /// <remarks/>
-        corrected,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("count rate")]
-        countrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("count rate ratio")]
-        countrateratio,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cross plot porosity")]
-        crossplotporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("decay time")]
-        decaytime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deep conductivity")]
-        deepconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deep induction conductivity")]
-        deepinductionconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deep induction resistivity")]
-        deepinductionresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deep laterolog conductivity")]
-        deeplaterologconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deep laterolog resistivity")]
-        deeplaterologresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("deep resistivity")]
-        deepresistivity,
-        
-        /// <remarks/>
-        density,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("density porosity")]
-        densityporosity,
-        
-        /// <remarks/>
-        depth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("depth adjusted")]
-        depthadjusted,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("depth derived from velocity")]
-        depthderivedfromvelocity,
-        
-        /// <remarks/>
-        deviation,
-        
-        /// <remarks/>
-        dielectric,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diffusion correction")]
-        diffusioncorrection,
-        
-        /// <remarks/>
-        dip,
-        
-        /// <remarks/>
-        dipmeter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dipmeter conductivity")]
-        dipmeterconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dipmeter resistivity")]
-        dipmeterresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite acoustic porosity")]
-        dolomiteacousticporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite density porosity")]
-        dolomitedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite neutron porosity")]
-        dolomiteneutronporosity,
-        
-        /// <remarks/>
-        edited,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("effective porosity")]
-        effectiveporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric current")]
-        electriccurrent,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric potential")]
-        electricpotential,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic wave matrix travel time")]
-        electromagneticwavematrixtraveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic wave travel time")]
-        electromagneticwavetraveltime,
-        
-        /// <remarks/>
-        element,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("elemental ratio")]
-        elementalratio,
-        
-        /// <remarks/>
-        enhanced,
-        
-        /// <remarks/>
-        filtered,
-        
-        /// <remarks/>
-        flowmeter,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fluid density")]
-        fluiddensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fluid velocity")]
-        fluidvelocity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fluid viscosity")]
-        fluidviscosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flushed zone conductivity")]
-        flushedzoneconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flushed zone resistivity")]
-        flushedzoneresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flushed zone saturation")]
-        flushedzonesaturation,
-        
-        /// <remarks/>
-        force,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation density correction")]
-        formationdensitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation properties correction")]
-        formationpropertiescorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation salinity correction")]
-        formationsalinitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation saturation correction")]
-        formationsaturationcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation volume factor correction")]
-        formationvolumefactorcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation water density correction")]
-        formationwaterdensitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("formation water saturation correction")]
-        formationwatersaturationcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("free fluid index")]
-        freefluidindex,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("friction effect correction")]
-        frictioneffectcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gamma ray")]
-        gammaray,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gamma ray minus uranium")]
-        gammarayminusuranium,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas saturation")]
-        gassaturation,
-        
-        /// <remarks/>
-        gradiomanometer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high frequency conductivity")]
-        highfrequencyconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high frequency electromagnetic")]
-        highfrequencyelectromagnetic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high frequency electromagnetic porosity")]
-        highfrequencyelectromagneticporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high frequency E-M phase shift")]
-        highfrequencyEMphaseshift,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("high frequency resistivity")]
-        highfrequencyresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon correction")]
-        hydrocarboncorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon density correction")]
-        hydrocarbondensitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon gravity correction")]
-        hydrocarbongravitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon saturation")]
-        hydrocarbonsaturation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hydrocarbon viscosity correction")]
-        hydrocarbonviscositycorrection,
-        
-        /// <remarks/>
-        image,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("interpretation variable")]
-        interpretationvariable,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iron mud correction")]
-        ironmudcorrection,
-        
-        /// <remarks/>
-        joined,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("KCl mud correction")]
-        KClmudcorrection,
-        
-        /// <remarks/>
-        length,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone acoustic porosity")]
-        limestoneacousticporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone density porosity")]
-        limestonedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone neutron porosity")]
-        limestoneneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lithology correction")]
-        lithologycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("log derived permeability")]
-        logderivedpermeability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("log matrix density")]
-        logmatrixdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic casing collar locator")]
-        magneticcasingcollarlocator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("matrix density")]
-        matrixdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("matrix travel time")]
-        matrixtraveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth")]
-        measureddepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mechanical caliper")]
-        mechanicalcaliper,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mechanical casing collar locator")]
-        mechanicalcasingcollarlocator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("medium conductivity")]
-        mediumconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("medium induction conductivity")]
-        mediuminductionconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("medium induction resistivity")]
-        mediuminductionresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("medium laterolog conductivity")]
-        mediumlaterologconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("medium laterolog resistivity")]
-        mediumlaterologresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("medium resistivity")]
-        mediumresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro conductivity")]
-        microconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro inverse conductivity")]
-        microinverseconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro inverse resistivity")]
-        microinverseresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro laterolog conductivity")]
-        microlaterologconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro laterolog resistivity")]
-        microlaterologresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro normal conductivity")]
-        micronormalconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro normal resistivity")]
-        micronormalresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro resistivity")]
-        microresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro spherically focused conductivity")]
-        microsphericallyfocusedconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("micro spherically focused resistivity")]
-        microsphericallyfocusedresistivity,
-        
-        /// <remarks/>
-        mineral,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cake conductivity")]
-        mudcakeconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cake correction")]
-        mudcakecorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cake density correction")]
-        mudcakedensitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cake resistivity")]
-        mudcakeresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cake resistivity correction")]
-        mudcakeresistivitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud cake thickness correction")]
-        mudcakethicknesscorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud composition correction")]
-        mudcompositioncorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud conductivity")]
-        mudconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate conductivity")]
-        mudfiltrateconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate correction")]
-        mudfiltratecorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate density correction")]
-        mudfiltratedensitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate resistivity")]
-        mudfiltrateresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate resistivity correction")]
-        mudfiltrateresistivitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud filtrate salinity correction")]
-        mudfiltratesalinitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud resistivity")]
-        mudresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud salinity correction")]
-        mudsalinitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud viscosity correction")]
-        mudviscositycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud weight correction")]
-        mudweightcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neutron die away time")]
-        neutrondieawaytime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("neutron porosity")]
-        neutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nuclear caliper")]
-        nuclearcaliper,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nuclear magnetic decay time")]
-        nuclearmagneticdecaytime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nuclear magnetism log permeability")]
-        nuclearmagnetismlogpermeability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nuclear magnetism porosity")]
-        nuclearmagnetismporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH density porosity")]
-        OHdensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH dolomite density porosity")]
-        OHdolomitedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH dolomite neutron porosity")]
-        OHdolomiteneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH limestone density porosity")]
-        OHlimestonedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH limestone neutron porosity")]
-        OHlimestoneneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH neutron porosity")]
-        OHneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH sandstone density porosity")]
-        OHsandstonedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("OH sandstone neutron porosity")]
-        OHsandstoneneutronporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil based mud correction")]
-        oilbasedmudcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil saturation")]
-        oilsaturation,
-        
-        /// <remarks/>
-        perforating,
-        
-        /// <remarks/>
-        permeability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("phase shift")]
-        phaseshift,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("photoelectric absorption")]
-        photoelectricabsorption,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("photoelectric absorption correction")]
-        photoelectricabsorptioncorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("physical measurement correction")]
-        physicalmeasurementcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plane angle")]
-        planeangle,
-        
-        /// <remarks/>
-        porosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("porosity correction")]
-        porositycorrection,
-        
-        /// <remarks/>
-        potassium,
-        
-        /// <remarks/>
-        pressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure correction")]
-        pressurecorrection,
-        
-        /// <remarks/>
-        processed,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pulsed neutron porosity")]
-        pulsedneutronporosity,
-        
-        /// <remarks/>
-        quality,
-        
-        /// <remarks/>
-        ratio,
-        
-        /// <remarks/>
-        raw,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("relative bearing")]
-        relativebearing,
-        
-        /// <remarks/>
-        resistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("resistivity factor correction")]
-        resistivityfactorcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("resistivity from attenuation")]
-        resistivityfromattenuation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("resistivity from phase shift")]
-        resistivityfromphaseshift,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("resistivity phase shift")]
-        resistivityphaseshift,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("resistivity ratio")]
-        resistivityratio,
-        
-        /// <remarks/>
-        salinity,
-        
-        /// <remarks/>
-        sampling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sandstone acoustic porosity")]
-        sandstoneacousticporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sandstone density porosity")]
-        sandstonedensityporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sandstone neutron porosity")]
-        sandstoneneutronporosity,
-        
-        /// <remarks/>
-        saturation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shale volume")]
-        shalevolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow conductivity")]
-        shallowconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow induction conductivity")]
-        shallowinductionconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow induction resistivity")]
-        shallowinductionresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow laterolog conductivity")]
-        shallowlaterologconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow laterolog resistivity")]
-        shallowlaterologresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shallow resistivity")]
-        shallowresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shear wave dolomite porosity")]
-        shearwavedolomiteporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shear wave limestone porosity")]
-        shearwavelimestoneporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shear wave matrix travel time")]
-        shearwavematrixtraveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shear wave sandstone porosity")]
-        shearwavesandstoneporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shear wave travel time")]
-        shearwavetraveltime,
-        
-        /// <remarks/>
-        shifted,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sidewall core porosity")]
-        sidewallcoreporosity,
-        
-        /// <remarks/>
-        sigma,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sigma formation")]
-        sigmaformation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sigma gas")]
-        sigmagas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sigma hydrocarbon")]
-        sigmahydrocarbon,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sigma matrix")]
-        sigmamatrix,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sigma oil")]
-        sigmaoil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sigma water")]
-        sigmawater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("slippage velocity correction")]
-        slippagevelocitycorrection,
-        
-        /// <remarks/>
-        smoothed,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("spectral gamma ray")]
-        spectralgammaray,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("spherically focused conductivity")]
-        sphericallyfocusedconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("spherically focused resistivity")]
-        sphericallyfocusedresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("spontaneous potential")]
-        spontaneouspotential,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("spreading loss correction")]
-        spreadinglosscorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("synthetic well log trace")]
-        syntheticwelllogtrace,
-        
-        /// <remarks/>
-        temperature,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature correction")]
-        temperaturecorrection,
-        
-        /// <remarks/>
-        tension,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Th/K ratio")]
-        ThKratio,
-        
-        /// <remarks/>
-        thorium,
-        
-        /// <remarks/>
-        time,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tool diameter correction")]
-        tooldiametercorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tool eccentricity correction")]
-        tooleccentricitycorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("total gamma ray")]
-        totalgammaray,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("total porosity")]
-        totalporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tracer survey")]
-        tracersurvey,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("travel time")]
-        traveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("true conductivity")]
-        trueconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("true resistivity")]
-        trueresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("true vertical depth")]
-        trueverticaldepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tube wave dolomite porosity")]
-        tubewavedolomiteporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tube wave limestone porosity")]
-        tubewavelimestoneporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tube wave matrix travel time")]
-        tubewavematrixtraveltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tube wave sandstone porosity")]
-        tubewavesandstoneporosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tube wave travel time")]
-        tubewavetraveltime,
-        
-        /// <remarks/>
-        uranium,
-        
-        /// <remarks/>
-        velocity,
-        
-        /// <remarks/>
-        volume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water based fluid correction")]
-        waterbasedfluidcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water holdup correction")]
-        waterholdupcorrection,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water saturated conductivity")]
-        watersaturatedconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water saturated resistivity")]
-        watersaturatedresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water saturation")]
-        watersaturation,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -45631,26 +46647,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BearingType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil seal")]
-        oilseal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mud lube")]
-        mudlube,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -45842,52 +46838,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BladeShapeType {
-        
-        /// <remarks/>
-        dynamic,
-        
-        /// <remarks/>
-        melon,
-        
-        /// <remarks/>
-        spiral,
-        
-        /// <remarks/>
-        straight,
-        
-        /// <remarks/>
-        variable,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum BladeType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("clamp-on")]
-        clampon,
-        
-        /// <remarks/>
-        integral,
-        
-        /// <remarks/>
-        sleeve,
-        
-        /// <remarks/>
-        welded,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -46056,23 +47006,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.customDataField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum HoleOpenerType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("under-reamer")]
-        underreamer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fixed blade")]
-        fixedblade,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -46393,20 +47326,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum DeflectionMethod {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("point bit")]
-        pointbit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("push bit")]
-        pushbit,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -46478,7 +47397,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string nameField;
         
-        private System.DateTime dTimReportField;
+        private Energistics.SchemaGatherer.Timestamp dTimReportField;
         
         private measuredDepthCoord mdBottomField;
         
@@ -46544,7 +47463,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>Time report generated.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Time report generated.")]
-        public System.DateTime dTimReport {
+        public Energistics.SchemaGatherer.Timestamp dTimReport {
             get {
                 return this.dTimReportField;
             }
@@ -46749,7 +47668,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private string numGovtField;
         
-        private System.DateTime dTimLicenseField;
+        private Energistics.SchemaGatherer.Timestamp dTimLicenseField;
         
         private bool dTimLicenseFieldSpecified;
         
@@ -46793,11 +47712,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool directionWellFieldSpecified;
         
-        private System.DateTime dTimSpudField;
+        private Energistics.SchemaGatherer.Timestamp dTimSpudField;
         
         private bool dTimSpudFieldSpecified;
         
-        private System.DateTime dTimPaField;
+        private Energistics.SchemaGatherer.Timestamp dTimPaField;
         
         private bool dTimPaFieldSpecified;
         
@@ -46877,7 +47796,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time license  was issued.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time license  was issued.")]
-        public System.DateTime dTimLicense {
+        public Energistics.SchemaGatherer.Timestamp dTimLicense {
             get {
                 return this.dTimLicenseField;
             }
@@ -47149,7 +48068,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time at which well was spudded.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which well was spudded.")]
-        public System.DateTime dTimSpud {
+        public Energistics.SchemaGatherer.Timestamp dTimSpud {
             get {
                 return this.dTimSpudField;
             }
@@ -47172,7 +48091,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time at which well was plugged and abandoned.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which well was plugged and abandoned.")]
-        public System.DateTime dTimPa {
+        public Energistics.SchemaGatherer.Timestamp dTimPa {
             get {
                 return this.dTimPaField;
             }
@@ -47320,250 +48239,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum WellStatus {
-        
-        /// <remarks/>
-        abandoned,
-        
-        /// <remarks/>
-        active,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("active -- injecting")]
-        activeinjecting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("active -- producing")]
-        activeproducing,
-        
-        /// <remarks/>
-        completed,
-        
-        /// <remarks/>
-        drilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("partially plugged")]
-        partiallyplugged,
-        
-        /// <remarks/>
-        permitted,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plugged and abandoned")]
-        pluggedandabandoned,
-        
-        /// <remarks/>
-        proposed,
-        
-        /// <remarks/>
-        sold,
-        
-        /// <remarks/>
-        suspended,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temporarily abandoned")]
-        temporarilyabandoned,
-        
-        /// <remarks/>
-        testing,
-        
-        /// <remarks/>
-        tight,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("working over")]
-        workingover,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum WellPurpose {
-        
-        /// <remarks/>
-        appraisal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("appraisal -- confirmation appraisal")]
-        appraisalconfirmationappraisal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("appraisal -- exploratory appraisal")]
-        appraisalexploratoryappraisal,
-        
-        /// <remarks/>
-        exploration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exploration -- deeper-pool wildcat")]
-        explorationdeeperpoolwildcat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exploration -- new-field wildcat")]
-        explorationnewfieldwildcat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exploration -- new-pool wildcat")]
-        explorationnewpoolwildcat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exploration -- outpost wildcat")]
-        explorationoutpostwildcat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exploration -- shallower-pool wildcat")]
-        explorationshallowerpoolwildcat,
-        
-        /// <remarks/>
-        development,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("development -- infill development")]
-        developmentinfilldevelopment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("development -- injector")]
-        developmentinjector,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("development -- producer")]
-        developmentproducer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fluid storage")]
-        fluidstorage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fluid storage -- gas storage")]
-        fluidstoragegasstorage,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc")]
-        generalsrvc,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- borehole re-acquisition")]
-        generalsrvcboreholereacquisition,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- observation")]
-        generalsrvcobservation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- relief")]
-        generalsrvcrelief,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- research")]
-        generalsrvcresearch,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- research -- drill test")]
-        generalsrvcresearchdrilltest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- research -- strat test")]
-        generalsrvcresearchstrattest,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("general srvc -- waste disposal")]
-        generalsrvcwastedisposal,
-        
-        /// <remarks/>
-        mineral,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum WellFluid {
-        
-        /// <remarks/>
-        air,
-        
-        /// <remarks/>
-        condensate,
-        
-        /// <remarks/>
-        dry,
-        
-        /// <remarks/>
-        gas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas-water")]
-        gaswater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("non HC gas")]
-        nonHCgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("non HC gas -- CO2")]
-        nonHCgasCO2,
-        
-        /// <remarks/>
-        oil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil-gas")]
-        oilgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil-water")]
-        oilwater,
-        
-        /// <remarks/>
-        steam,
-        
-        /// <remarks/>
-        water,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water -- brine")]
-        waterbrine,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water -- fresh water")]
-        waterfreshwater,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum WellDirection {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("huff-n-puff")]
-        huffnpuff,
-        
-        /// <remarks/>
-        injector,
-        
-        /// <remarks/>
-        producer,
-        
-        /// <remarks/>
-        uncertain,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -47822,63 +48497,6 @@ namespace Energistics.Generator.WITSML131 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ElevCodeEnum {
-        
-        /// <remarks/>
-        CF,
-        
-        /// <remarks/>
-        CV,
-        
-        /// <remarks/>
-        DF,
-        
-        /// <remarks/>
-        GL,
-        
-        /// <remarks/>
-        KB,
-        
-        /// <remarks/>
-        RB,
-        
-        /// <remarks/>
-        RT,
-        
-        /// <remarks/>
-        SF,
-        
-        /// <remarks/>
-        LAT,
-        
-        /// <remarks/>
-        SL,
-        
-        /// <remarks/>
-        MHHW,
-        
-        /// <remarks/>
-        MHW,
-        
-        /// <remarks/>
-        MLLW,
-        
-        /// <remarks/>
-        MLW,
-        
-        /// <remarks/>
-        MTL,
-        
-        /// <remarks/>
-        KO,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -48449,397 +49067,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum GeodeticDatum {
-        
-        /// <remarks/>
-        ADND,
-        
-        /// <remarks/>
-        ARC50,
-        
-        /// <remarks/>
-        AUSG,
-        
-        /// <remarks/>
-        CAA,
-        
-        /// <remarks/>
-        CHAS,
-        
-        /// <remarks/>
-        CORAL,
-        
-        /// <remarks/>
-        ED50,
-        
-        /// <remarks/>
-        ED87,
-        
-        /// <remarks/>
-        ERIN65,
-        
-        /// <remarks/>
-        GD49,
-        
-        /// <remarks/>
-        GHANA,
-        
-        /// <remarks/>
-        GUAM63,
-        
-        /// <remarks/>
-        HJRS55,
-        
-        /// <remarks/>
-        HTS,
-        
-        /// <remarks/>
-        INCH,
-        
-        /// <remarks/>
-        INDIA1,
-        
-        /// <remarks/>
-        INDIA2,
-        
-        /// <remarks/>
-        INDNS74,
-        
-        /// <remarks/>
-        LIB64,
-        
-        /// <remarks/>
-        LUZON,
-        
-        /// <remarks/>
-        MRCH,
-        
-        /// <remarks/>
-        NAD27,
-        
-        /// <remarks/>
-        NAD83,
-        
-        /// <remarks/>
-        NGRA,
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        NPRM,
-        
-        /// <remarks/>
-        OSGB36,
-        
-        /// <remarks/>
-        POTS1,
-        
-        /// <remarks/>
-        PULK1,
-        
-        /// <remarks/>
-        PULK2,
-        
-        /// <remarks/>
-        QRNQ,
-        
-        /// <remarks/>
-        SA56,
-        
-        /// <remarks/>
-        SRL60,
-        
-        /// <remarks/>
-        TNRV25,
-        
-        /// <remarks/>
-        TOKYO,
-        
-        /// <remarks/>
-        UserDefined,
-        
-        /// <remarks/>
-        VROL,
-        
-        /// <remarks/>
-        WGS72,
-        
-        /// <remarks/>
-        WGS84,
-        
-        /// <remarks/>
-        YACR,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum Ellipsoid {
-        
-        /// <remarks/>
-        AGD66,
-        
-        /// <remarks/>
-        AIRY_MOD,
-        
-        /// <remarks/>
-        AIRY30,
-        
-        /// <remarks/>
-        AIRY49,
-        
-        /// <remarks/>
-        AUST_NAT,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("BESL-DHD")]
-        BESLDHD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("BESL-NGL")]
-        BESLNGL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("BESL-RT9")]
-        BESLRT9,
-        
-        /// <remarks/>
-        BESS41,
-        
-        /// <remarks/>
-        BESSNAM,
-        
-        /// <remarks/>
-        BOGOTA,
-        
-        /// <remarks/>
-        CL58,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL58-1")]
-        CL581,
-        
-        /// <remarks/>
-        CL66,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL66-M")]
-        CL66M,
-        
-        /// <remarks/>
-        CL80,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL80-A")]
-        CL80A,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL80-B")]
-        CL80B,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL80-I")]
-        CL80I,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL80-J")]
-        CL80J,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL80-M")]
-        CL80M,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("CL80-P")]
-        CL80P,
-        
-        /// <remarks/>
-        CMPOINCH,
-        
-        /// <remarks/>
-        DAN,
-        
-        /// <remarks/>
-        DELA,
-        
-        /// <remarks/>
-        ED50,
-        
-        /// <remarks/>
-        EGYPT07,
-        
-        /// <remarks/>
-        EVER,
-        
-        /// <remarks/>
-        EVER48,
-        
-        /// <remarks/>
-        EVER56,
-        
-        /// <remarks/>
-        EVER69,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("EVER-BR")]
-        EVERBR,
-        
-        /// <remarks/>
-        EVERMOD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("EVER-P")]
-        EVERP,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("EVER-TM")]
-        EVERTM,
-        
-        /// <remarks/>
-        EVTM,
-        
-        /// <remarks/>
-        FISC60,
-        
-        /// <remarks/>
-        FISC60MOD,
-        
-        /// <remarks/>
-        FISC68,
-        
-        /// <remarks/>
-        FISCMOD,
-        
-        /// <remarks/>
-        GDA94,
-        
-        /// <remarks/>
-        GRS67,
-        
-        /// <remarks/>
-        GRS80,
-        
-        /// <remarks/>
-        HAY09,
-        
-        /// <remarks/>
-        HEIS,
-        
-        /// <remarks/>
-        HEL06,
-        
-        /// <remarks/>
-        HEL07,
-        
-        /// <remarks/>
-        HOUG,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("IAG-75")]
-        IAG75,
-        
-        /// <remarks/>
-        INDIAN75,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("INDO-74")]
-        INDO74,
-        
-        /// <remarks/>
-        INT24,
-        
-        /// <remarks/>
-        IUGG67,
-        
-        /// <remarks/>
-        IUGG75,
-        
-        /// <remarks/>
-        JEFF48,
-        
-        /// <remarks/>
-        KAU63,
-        
-        /// <remarks/>
-        KRSV,
-        
-        /// <remarks/>
-        MERIT83,
-        
-        /// <remarks/>
-        NAD27,
-        
-        /// <remarks/>
-        NAHRAN,
-        
-        /// <remarks/>
-        NEWINT67,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("NWL-10D")]
-        NWL10D,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("NWL-9D")]
-        NWL9D,
-        
-        /// <remarks/>
-        OSGB36,
-        
-        /// <remarks/>
-        OSU86F,
-        
-        /// <remarks/>
-        OSU91A,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("PLESSIS-1817")]
-        PLESSIS1817,
-        
-        /// <remarks/>
-        PSAD56,
-        
-        /// <remarks/>
-        PTNOIRE,
-        
-        /// <remarks/>
-        SA69,
-        
-        /// <remarks/>
-        SPHR,
-        
-        /// <remarks/>
-        STRU,
-        
-        /// <remarks/>
-        WALB,
-        
-        /// <remarks/>
-        WAR24,
-        
-        /// <remarks/>
-        WGS60,
-        
-        /// <remarks/>
-        WGS66,
-        
-        /// <remarks/>
-        WGS72,
-        
-        /// <remarks/>
-        WGS84,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -49389,146 +49616,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum Projection {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Albers equal area")]
-        Albersequalarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("azimuthal equidistant")]
-        azimuthalequidistant,
-        
-        /// <remarks/>
-        Cassini,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("equidistant conic")]
-        equidistantconic,
-        
-        /// <remarks/>
-        equirectangular,
-        
-        /// <remarks/>
-        gnomonic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Lambert azimuthal")]
-        Lambertazimuthal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Lambert conformal conic")]
-        Lambertconformalconic,
-        
-        /// <remarks/>
-        Mercator,
-        
-        /// <remarks/>
-        Miller,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oblique Mercator")]
-        obliqueMercator,
-        
-        /// <remarks/>
-        orthographic,
-        
-        /// <remarks/>
-        perspective,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("polar stereographic")]
-        polarstereographic,
-        
-        /// <remarks/>
-        polyconic,
-        
-        /// <remarks/>
-        sinusoidal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("state plane")]
-        stateplane,
-        
-        /// <remarks/>
-        stereographic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("transverse Mercator")]
-        transverseMercator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("universal transverse Mercator")]
-        universaltransverseMercator,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("user defined")]
-        userdefined,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Van der Grinten")]
-        VanderGrinten,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ProjectionVariantsObliqueMercator {
-        
-        /// <remarks/>
-        @default,
-        
-        /// <remarks/>
-        rectified,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rectified skew")]
-        rectifiedskew,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rectified skew center origin")]
-        rectifiedskewcenterorigin,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum NADTypes {
-        
-        /// <remarks/>
-        NAD27,
-        
-        /// <remarks/>
-        NAD83,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum Hemispheres {
-        
-        /// <remarks/>
-        northern,
-        
-        /// <remarks/>
-        southern,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -49624,7 +49711,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool shapeFieldSpecified;
         
-        private System.DateTime dTimKickoffField;
+        private Energistics.SchemaGatherer.Timestamp dTimKickoffField;
         
         private bool dTimKickoffFieldSpecified;
         
@@ -49832,7 +49919,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time of wellbore kickoff.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of wellbore kickoff.")]
-        public System.DateTime dTimKickoff {
+        public Energistics.SchemaGatherer.Timestamp dTimKickoff {
             get {
                 return this.dTimKickoffField;
             }
@@ -50046,63 +50133,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum WellboreType {
-        
-        /// <remarks/>
-        bypass,
-        
-        /// <remarks/>
-        initial,
-        
-        /// <remarks/>
-        redrill,
-        
-        /// <remarks/>
-        reentry,
-        
-        /// <remarks/>
-        respud,
-        
-        /// <remarks/>
-        sidetrack,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum WellboreShape {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("build and hold")]
-        buildandhold,
-        
-        /// <remarks/>
-        deviated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("double kickoff")]
-        doublekickoff,
-        
-        /// <remarks/>
-        horizontal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("S-shaped")]
-        Sshaped,
-        
-        /// <remarks/>
-        vertical,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -50186,7 +50216,7 @@ namespace Energistics.Generator.WITSML131 {
         
         private bool bhaRunNumberFieldSpecified;
         
-        private System.DateTime creationDateField;
+        private Energistics.SchemaGatherer.Timestamp creationDateField;
         
         private bool creationDateFieldSpecified;
         
@@ -50198,11 +50228,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private genericMeasure maxIndexField;
         
-        private System.DateTime minDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp minDateTimeIndexField;
         
         private bool minDateTimeIndexFieldSpecified;
         
-        private System.DateTime maxDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp maxDateTimeIndexField;
         
         private bool maxDateTimeIndexFieldSpecified;
         
@@ -50344,7 +50374,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>Date and time that the log was created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the log was created.")]
-        public System.DateTime creationDate {
+        public Energistics.SchemaGatherer.Timestamp creationDate {
             get {
                 return this.creationDateField;
             }
@@ -50420,7 +50450,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A bounding (date time) index value for the data records of the log.           The minimum date time index value for all data records of the log. If an index is elapsed time and a start date time is specified then the corresponding date time should be calculated.</summary>
         [System.ComponentModel.DescriptionAttribute(@"A bounding (date time) index value for the data records of the log.           The minimum date time index value for all data records of the log. If an index is elapsed time and a start date time is specified then the corresponding date time should be calculated.")]
-        public System.DateTime minDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp minDateTimeIndex {
             get {
                 return this.minDateTimeIndexField;
             }
@@ -50443,7 +50473,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>A bounding (date time) index value for the data records of the log.           The maximum date time index value for all data records of the log.  If an index is elapsed time and a start date time is specified then the corresponding date time should be calculated.</summary>
         [System.ComponentModel.DescriptionAttribute(@"A bounding (date time) index value for the data records of the log.           The maximum date time index value for all data records of the log.  If an index is elapsed time and a start date time is specified then the corresponding date time should be calculated.")]
-        public System.DateTime maxDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp maxDateTimeIndex {
             get {
                 return this.maxDateTimeIndexField;
             }
@@ -50910,39 +50940,6 @@ namespace Energistics.Generator.WITSML131 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-    public enum ArrayElementDataType {
-        
-        /// <remarks/>
-        boolean,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("integer 8 bit")]
-        integer8bit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("integer 16 bit")]
-        integer16bit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("integer 32 bit")]
-        integer32bit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("integer 64 bit")]
-        integer64bit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("IEEE float 32 bit")]
-        IEEEfloat32bit,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("IEEE float 64 bit")]
-        IEEEfloat64bit,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
@@ -50964,11 +50961,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private ratioGenericMeasure stepIncrementField;
         
-        private System.DateTime startDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp startDateTimeIndexField;
         
         private bool startDateTimeIndexFieldSpecified;
         
-        private System.DateTime endDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp endDateTimeIndexField;
         
         private bool endDateTimeIndexFieldSpecified;
         
@@ -51093,7 +51090,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>When the direction is defined as "Increasing",  the startIndex is the starting (minimum) index value at which the first data point is located.  When the log header defines the direction as "Decreasing", the startIndex  is the starting (maximum) index value at which the first data point is located.</summary>
         [System.ComponentModel.DescriptionAttribute(@"When the direction is defined as ""Increasing"",  the startIndex is the starting (minimum) index value at which the first data point is located.  When the log header defines the direction as ""Decreasing"", the startIndex  is the starting (maximum) index value at which the first data point is located.")]
-        public System.DateTime startDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp startDateTimeIndex {
             get {
                 return this.startDateTimeIndexField;
             }
@@ -51116,7 +51113,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         /// <summary>When the direction is defined as "Increasing", the endIndex  is the ending (maximum) index value at which the last data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last data point is located.  This value is optional when startDateTimeIndex represents a reference for elapsed times. Otherwise, it should be defined when startDateTimeIndex is defined.</summary>
         [System.ComponentModel.DescriptionAttribute(@"When the direction is defined as ""Increasing"", the endIndex  is the ending (maximum) index value at which the last data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last data point is located.  This value is optional when startDateTimeIndex represents a reference for elapsed times. Otherwise, it should be defined when startDateTimeIndex is defined.")]
-        public System.DateTime endDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp endDateTimeIndex {
             get {
                 return this.endDateTimeIndexField;
             }
@@ -51249,11 +51246,11 @@ namespace Energistics.Generator.WITSML131 {
         
         private genericMeasure maxIndexField;
         
-        private System.DateTime minDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp minDateTimeIndexField;
         
         private bool minDateTimeIndexFieldSpecified;
         
-        private System.DateTime maxDateTimeIndexField;
+        private Energistics.SchemaGatherer.Timestamp maxDateTimeIndexField;
         
         private bool maxDateTimeIndexFieldSpecified;
         
@@ -51318,7 +51315,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The minimum index value at which the first valid data point is located. This value will be properly set by the server to reflect data  in the returned document.</summary>
         [System.ComponentModel.DescriptionAttribute("The minimum index value at which the first valid data point is located. This valu" +
             "e will be properly set by the server to reflect data  in the returned document.")]
-        public System.DateTime minDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp minDateTimeIndex {
             get {
                 return this.minDateTimeIndexField;
             }
@@ -51342,7 +51339,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The maximum index value at which the last valid data point  is located. This value will be properly set by the server to reflect data  in the returned document.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum index value at which the last valid data point  is located. This valu" +
             "e will be properly set by the server to reflect data  in the returned document.")]
-        public System.DateTime maxDateTimeIndex {
+        public Energistics.SchemaGatherer.Timestamp maxDateTimeIndex {
             get {
                 return this.maxDateTimeIndexField;
             }

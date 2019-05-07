@@ -75,15 +75,14 @@
 // 
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Web.Services.Protocols;
 using System.Xml;
 using System.Xml.Serialization;
-using System.Security;
-using System.Runtime.InteropServices;
 using System.Text;
+using System.IO;
+using System.IO.Compression;
 
 namespace Energistics.DataAccess
 {
@@ -92,7 +91,7 @@ namespace Energistics.DataAccess
     /// </summary>
     public class WITSMLWebServiceConnection : AbstractWebServiceConnection
     {
-        private string capabilitiesIn = String.Empty;
+        private string capabilitiesIn = string.Empty;
         private WMLSVersion ver;
 
         /// <summary>
@@ -104,6 +103,41 @@ namespace Energistics.DataAccess
         {
             this.ver = ver;
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether server compression is enabled.
+        /// </summary>
+        /// <value><c>true</c> if server compression is enabled; otherwise, <c>false</c>.</value>
+        [Obsolete("Use IsServerCompressionEnabled instead.")]
+        public bool IsCompressionEnabled { get { return AcceptCompressedResponses; } set { AcceptCompressedResponses = value; } }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether compressed responses from the server are accepted.
+        /// </summary>
+        /// <value><c>true</c> if compressed responses are accepted; otherwise, <c>false</c>.</value>
+        /// <remarks>If enabled, WITSML API calls will inform the server that compressed responses are accepted and handle any compressed responses.</remarks>
+        public bool AcceptCompressedResponses { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether requests from the client should be compressed.
+        /// </summary>
+        /// <value><c>true</c> if client requests should be compressed; otherwise, <c>false</c>.</value>
+        /// <remarks>
+        /// If <c>true</c>, client applications should compress XML input sent to the server for GetFromStore, AddToStore and UpdateInStore.
+        /// </remarks>
+        public bool CompressRequests { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether pre-authentication is enabled.
+        /// </summary>
+        /// <value><c>true</c> if pre-authentication is enabled; otherwise, <c>false</c>.</value>
+        public bool IsPreAuthenticationEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of name/value pairs to include as HTTP headers.
+        /// </summary>
+        /// <value>The collection of name/value pairs.</value>
+        public IDictionary<string, string> Headers { get; set; }
 
         /// <summary>
         /// Reads an object of type T from the WITSML web service
@@ -128,7 +162,7 @@ namespace Energistics.DataAccess
         /// <returns>The Energistics object of type T returned from the call to the WITSML web service</returns>
         public T Read<T>(T queryObject, Dictionary<string, string> optionsInDictionary)
         {
-            string queryXml = EnergisticsConverter.ObjectToXml<T>(queryObject);
+            string queryXml = EnergisticsConverter.ObjectToXml(queryObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string responseXml = String.Empty;
             string message = String.Empty;
@@ -163,7 +197,7 @@ namespace Energistics.DataAccess
         /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
         public void Write<T>(T energisticsObject, Dictionary<string, string> optionsInDictionary)
         {
-            string xmlIn = EnergisticsConverter.ObjectToXml<T>(energisticsObject);
+            string xmlIn = EnergisticsConverter.ObjectToXml(energisticsObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 
@@ -190,7 +224,7 @@ namespace Energistics.DataAccess
         /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
         public void Delete<T>(T queryObject, Dictionary<string, string> optionsInDictionary)
         {
-            string queryXml = EnergisticsConverter.ObjectToXml<T>(queryObject);
+            string queryXml = EnergisticsConverter.ObjectToXml(queryObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 
@@ -217,7 +251,7 @@ namespace Energistics.DataAccess
         /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
         public void Update<T>(T energisticsObject, Dictionary<string, string> optionsInDictionary)
         {
-            string xmlIn = EnergisticsConverter.ObjectToXml<T>(energisticsObject);
+            string xmlIn = EnergisticsConverter.ObjectToXml(energisticsObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 
@@ -286,17 +320,9 @@ namespace Energistics.DataAccess
         /// <param name="methodParms">The array of parameters to pass to the method</param>
         /// <returns>Status code</returns>
         private object WMLSCall(string wmlsMethod, string[] methodParms)
-        {            
-            
-            Type wmlsType = Type.GetType("Energistics.DataAccess." + Enum.GetName(typeof(WMLSVersion), ver) + ".WMLS.WMLS");
-            SoapHttpClientProtocol service = (SoapHttpClientProtocol)wmlsType.GetConstructor(new Type[0]).Invoke(new object[] { });
-
-            service.Url = Url;
-            service.Timeout = Timeout;           
-            service.Proxy = Proxy;
-            service.Credentials = GetNetworkCredential();
-
-            object statusCode = wmlsType.GetMethod(wmlsMethod).Invoke(service, methodParms);
+        {
+            var service = CreateClientProxy();
+            object statusCode = service.GetType().GetMethod(wmlsMethod).Invoke(service, methodParms);
 
             if (statusCode is short)
             {
@@ -309,8 +335,33 @@ namespace Energistics.DataAccess
             return statusCode;
         }
 
-        
-                   
+        /// <summary>
+        /// Initializes an instance of the WMLS client proxy for the specified <see cref="WMLSVersion"/>.
+        /// </summary>
+        /// <returns></returns>
+        public SoapHttpClientProtocol CreateClientProxy()
+        {
+            Type wmlsType = Type.GetType("Energistics.DataAccess." + Enum.GetName(typeof(WMLSVersion), ver) + ".WMLS.WMLS");
+            SoapHttpClientProtocol service = (SoapHttpClientProtocol)wmlsType.GetConstructor(new Type[0]).Invoke(new object[] { });
+
+            service.Url = Url;
+            service.Timeout = Timeout;
+            service.Proxy = Proxy;
+            service.Credentials = GetNetworkCredential();
+            service.PreAuthenticate = IsPreAuthenticationEnabled;
+
+            var client = service as IWitsmlClient;
+            if (client != null)
+            {
+                client.AcceptCompressedResponses = AcceptCompressedResponses;
+                client.CompressRequests = CompressRequests;
+                client.Headers = Headers;
+            }
+
+            return service;
+        }
+
+
         /// <summary>
         /// Build an empty query object of type T
         /// </summary>

@@ -1,0 +1,385 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="obj_timeSeriesData" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="382" rby="716"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="timeSeriesDatas" expanded="1">
+										<entry name="timeSeriesData" outkey="11" expanded="1">
+											<entry name="name" outkey="12"/>
+											<entry name="key" outkey="13">
+												<entry name="keyword" ns="1" type="attribute" outkey="14"/>
+											</entry>
+											<entry name="unit" outkey="15"/>
+											<entry name="measureClass" outkey="16"/>
+											<entry name="comment" outkey="17"/>
+											<entry name="doubleValue" outkey="18" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" outkey="31"/>
+											</entry>
+											<entry name="stringValue" outkey="19" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" outkey="32"/>
+											</entry>
+											<entry name="customData" outkey="20"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesData.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\timeSeriesData.xml" outputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\timeSeriesData.xml" instanceroot="{http://www.prodml.org/schemas/1series}timeSeriesDatas"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TimeSeriesData" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="492" rbx="1128" rby="695"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="TimeSeriesData" ns="2" inpkey="1" expanded="1">
+										<entry name="Citation">
+											<entry name="Title" inpkey="2"/>
+										</entry>
+										<entry name="CustomData" inpkey="3"/>
+										<entry name="Key" ns="2" inpkey="4">
+											<entry name="keyword" ns="1" type="attribute" inpkey="5"/>
+										</entry>
+										<entry name="Unit" ns="2" inpkey="6"/>
+										<entry name="MeasureClass" ns="2" inpkey="7"/>
+										<entry name="Comment" ns="2" inpkey="8"/>
+										<entry name="AbstractValue" ns="2" displayselectionmode="all"/>
+										<entry name="AbstractValue" ns="2" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal" library="core">
+														<expression>
+															<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+														</expression>
+														<expression>
+															<constant value="{http://www.energistics.org/energyml/data/prodmlv2}DoubleValue" datatype="QName"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<entry name="DoubleValue" ns="2" inpkey="33" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" inpkey="34"/>
+											</entry>
+										</entry>
+										<entry name="AbstractValue" ns="2" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal" library="core">
+														<expression>
+															<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+														</expression>
+														<expression>
+															<constant value="{http://www.energistics.org/energyml/data/prodmlv2}StringValue" datatype="QName"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<entry name="StringValue" ns="2" inpkey="35" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" inpkey="36"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\xsd_schemas\TimeSeriesData.xsd" outputinstance="..\..\..\xml_examples\TimeSeriesData.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}TimeSeriesData"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="21">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="1" edgekey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="2" edgekey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="4" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="5" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="6" edgekey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="7" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="8" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="33" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="35" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="3" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="34" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="36" edgekey="40"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="obj_timeSeriesData" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="382" rby="716"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="timeSeriesDatas" expanded="1">
+										<entry name="timeSeriesData" outkey="11" expanded="1">
+											<entry name="name" outkey="12"/>
+											<entry name="key" outkey="13">
+												<entry name="keyword" ns="1" type="attribute" outkey="14"/>
+											</entry>
+											<entry name="unit" outkey="15"/>
+											<entry name="measureClass" outkey="16"/>
+											<entry name="comment" outkey="17"/>
+											<entry name="doubleValue" outkey="18" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" outkey="31"/>
+											</entry>
+											<entry name="stringValue" outkey="19" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" outkey="32"/>
+											</entry>
+											<entry name="customData" outkey="20"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesData.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\timeSeriesData.xml" outputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\timeSeriesData.xml" instanceroot="{http://www.prodml.org/schemas/1series}timeSeriesDatas"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TimeSeriesData" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="492" rbx="1128" rby="695"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="TimeSeriesData" ns="2" inpkey="1" expanded="1">
+										<entry name="Citation">
+											<entry name="Title" inpkey="2"/>
+										</entry>
+										<entry name="CustomData" inpkey="3"/>
+										<entry name="Key" ns="2" inpkey="4">
+											<entry name="keyword" ns="1" type="attribute" inpkey="5"/>
+										</entry>
+										<entry name="Unit" ns="2" inpkey="6"/>
+										<entry name="MeasureClass" ns="2" inpkey="7"/>
+										<entry name="Comment" ns="2" inpkey="8"/>
+										<entry name="AbstractValue" ns="2" displayselectionmode="all"/>
+										<entry name="AbstractValue" ns="2" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal" library="core">
+														<expression>
+															<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+														</expression>
+														<expression>
+															<constant value="{http://www.energistics.org/energyml/data/prodmlv2}DoubleValue" datatype="QName"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<entry name="DoubleValue" ns="2" inpkey="33" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" inpkey="34"/>
+											</entry>
+										</entry>
+										<entry name="AbstractValue" ns="2" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal" library="core">
+														<expression>
+															<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+														</expression>
+														<expression>
+															<constant value="{http://www.energistics.org/energyml/data/prodmlv2}StringValue" datatype="QName"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<entry name="StringValue" ns="2" inpkey="35" expanded="1">
+												<entry name="dTim" ns="1" type="attribute" inpkey="36"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\xsd_schemas\TimeSeriesData.xsd" outputinstance="..\..\..\xml_examples\TimeSeriesData.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}TimeSeriesData"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="21">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="1" edgekey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="2" edgekey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="4" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="5" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="6" edgekey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="7" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="8" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="33" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="35" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="3" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="34" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="36" edgekey="40"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+>>>>>>> 31ed9b747eac7e4dce3c70863641adfa2051b5dd

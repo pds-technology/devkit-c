@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Relationships xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Type="http://schemas.energistics.org/package/2012/relationships/externalPartProxyToMl" Target="EpcExternalPartReference_80a1024d-7547-4f75-8927-a2785022c587.xml" Id="_80a1024d-7547-4f75-8927-a2785022c587"/>
+  <Relationship Type="http://schemas.energistics.org/package/2012/relationships/externalPartProxyToMl" Target="EpcExternalPartReference_602735d9-0ebb-41e4-99c5-281582916805.xml" Id="_602735d9-0ebb-41e4-99c5-281582916805"/>
+  <Relationship TargetMode="Internal" Type="http://schemas.energistics.org/package/2012/relationships/destinationObject" Target="FiberOpticalPath_bfd164f4-f9e3-41c0-a74e-372b69cc2a09.xml" Id="bfd164f4-f9e3-41c0-a74e-372b69cc2a09"/>
+  <Relationship TargetMode="Internal" Type="http://schemas.energistics.org/package/2012/relationships/destinationObject" Target="DasInstrumentBox_df9447a1-8c6b-4634-88eb-ab07b41ac876.xml" Id="df9447a1-8c6b-4634-88eb-ab07b41ac876"/>
+</Relationships>

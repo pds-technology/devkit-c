@@ -77,7 +77,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftSampleAcquisition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about a single formation tester sample acquistion.")]
-    public partial class WftSampleAcquisition : Object, INotifyPropertyChanged
+    public partial class WftSampleAcquisition : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The ID of the sample cylinder in which this sample was collected.")]
 		[XmlElement("sampleCylinderId")]
-        public String SampleCylinderId {
+        public string SampleCylinderId {
             get {
                 return sampleCylinderIdField;
             } 
@@ -114,7 +114,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sampleCylinderIdField; 
+        private string sampleCylinderIdField; 
 
         /// <summary>
         /// A name assigned to the acquisition.
@@ -122,7 +122,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("A name assigned to the acquisition.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -132,7 +132,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The kind of sample acquisition.
@@ -140,7 +140,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The kind of sample acquisition.")]
 		[XmlElement("kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return kindField;
             } 
@@ -150,14 +150,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String kindField; 
+        private string kindField; 
 
         /// <summary>
         ///  Sampling start time. 
         /// </summary>
 		[Description("Sampling  start time.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -168,14 +168,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -185,14 +185,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         ///  Sampling end time. 
         /// </summary>
 		[Description("Sampling  end time.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -203,14 +203,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -220,7 +220,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// Comments created by the field engineers collecting the sample.
@@ -228,7 +228,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comments created by the field engineers collecting the sample.")]
 		[XmlElement("fieldComment")]
-        public String FieldComment {
+        public string FieldComment {
             get {
                 return fieldCommentField;
             } 
@@ -238,7 +238,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String fieldCommentField; 
+        private string fieldCommentField; 
 
         /// <summary>
         /// Comments created by the engineers analysing the sample.
@@ -246,7 +246,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comments created by the engineers analysing the sample.")]
 		[XmlElement("interpretationComment")]
-        public String InterpretationComment {
+        public string InterpretationComment {
             get {
                 return interpretationCommentField;
             } 
@@ -256,7 +256,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String interpretationCommentField; 
+        private string interpretationCommentField; 
 
         /// <summary>
         /// An identifier for the fluid collected as part of this acquistion.
@@ -264,7 +264,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("An identifier for the fluid collected as part of this acquistion.")]
 		[XmlElement("sampleId")]
-        public String SampleId {
+        public string SampleId {
             get {
                 return sampleIdField;
             } 
@@ -274,7 +274,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sampleIdField; 
+        private string sampleIdField; 
 
         /// <summary>
         /// An identifier for the slot in the sample carrier where the sample was acquired.
@@ -282,7 +282,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("An identifier for the slot in the sample carrier where the sample was acquired.")]
 		[XmlElement("sampleCarrierSlotId")]
-        public String SampleCarrierSlotId {
+        public string SampleCarrierSlotId {
             get {
                 return sampleCarrierSlotIdField;
             } 
@@ -292,7 +292,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sampleCarrierSlotIdField; 
+        private string sampleCarrierSlotIdField; 
 
         /// <summary>
         /// An identifier for the formation tester tool section that acquired the sample.
@@ -300,7 +300,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("An identifier for the formation tester tool section that acquired the sample.")]
 		[XmlElement("toolSectionId")]
-        public String ToolSectionId {
+        public string ToolSectionId {
             get {
                 return toolSectionIdField;
             } 
@@ -310,7 +310,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String toolSectionIdField; 
+        private string toolSectionIdField; 
 
         /// <summary>
         /// An identifier for the sample bottle that was used for this acquisition.
@@ -318,7 +318,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("An identifier for the sample bottle that was used for this acquisition.")]
 		[XmlElement("bottleId")]
-        public String BottleId {
+        public string BottleId {
             get {
                 return bottleIdField;
             } 
@@ -328,7 +328,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String bottleIdField; 
+        private string bottleIdField; 
 
         /// <summary>
         /// A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.
@@ -336,7 +336,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.")]
 		[XmlElement("bottleConfiguration")]
-        public String BottleConfiguration {
+        public string BottleConfiguration {
             get {
                 return bottleConfigurationField;
             } 
@@ -346,7 +346,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String bottleConfigurationField; 
+        private string bottleConfigurationField; 
 
         /// <summary>
         /// The pressure that was used to charge the sample bottle.
@@ -372,7 +372,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("The expected kind of the sample, typically oil, water or gas.")]
 		[XmlElement("grossFluidKind")]
-        public String GrossFluidKind {
+        public string GrossFluidKind {
             get {
                 return grossFluidKindField;
             } 
@@ -382,7 +382,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String grossFluidKindField; 
+        private string grossFluidKindField; 
 
         /// <summary>
         /// A result of formation tester analysis that applies to this acquisition.
@@ -512,7 +512,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -522,7 +522,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -568,7 +568,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the RefNameString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public RefNameString(String value)
+        public RefNameString(string value)
         {
             this.Value = value;
         }
@@ -589,7 +589,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
-        public String UidRef {
+        public string UidRef {
             get {
                 return uidRefField;
             } 
@@ -599,14 +599,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidRefField; 
+        private string uidRefField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -616,7 +616,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -663,7 +663,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public GeneralMeasureType(Double value, String uom)
+        public GeneralMeasureType(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -683,7 +683,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(24)]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -693,7 +693,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 
     } //here
@@ -759,7 +759,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -769,7 +769,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -816,7 +816,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumeQualifiedMeasure(Double value, VolumeUom uom)
+        public VolumeQualifiedMeasure(double value, VolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -870,7 +870,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -880,7 +880,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
 		/// <summary>
         /// uom property
@@ -926,7 +926,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumeFlowRateQualifiedMeasure(Double value, VolumeFlowRateUom uom)
+        public VolumeFlowRateQualifiedMeasure(double value, VolumeFlowRateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -980,7 +980,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -990,7 +990,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
 		/// <summary>
         /// uom property
@@ -1036,7 +1036,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public TemperatureSlopeMeasure(Double value, String uom)
+        public TemperatureSlopeMeasure(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1056,7 +1056,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(24)]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -1066,7 +1066,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 
     } //here
@@ -1094,7 +1094,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MeasureOrQuantity(Double value, String uom)
+        public MeasureOrQuantity(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1115,7 +1115,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unit of measure for the quantity. This value must conform to the values allowed by a measure class.  If the value is a measure then the uom must be specified.")]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -1125,7 +1125,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 
     } //here
@@ -1153,7 +1153,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LostVolumeAndReason(Double value, VolumeUom uom)
+        public LostVolumeAndReason(double value, VolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1246,7 +1246,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public GeneralQualifiedMeasure(Double value, String uom)
+        public GeneralQualifiedMeasure(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1300,7 +1300,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -1310,7 +1310,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
 		/// <summary>
         /// The kind of the value component. For example, "X" in a tuple of X and Y.
@@ -1319,7 +1319,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The kind of the value component. For example, \"X\" in a tuple of X and Y.")]
         [XmlAttribute("component")]
 		
-        public String Component {
+        public string Component {
             get {
                 return componentField;
             } 
@@ -1329,7 +1329,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String componentField; 
+        private string componentField; 
 
 		/// <summary>
         /// The unit of measure for the value. This value must conform to the values allowed by the measure class.
@@ -1339,7 +1339,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unit of measure for the value. This value must conform to the values allowed by the measure class.")]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -1349,7 +1349,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 
     } //here
@@ -1377,7 +1377,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public WellElevationCoord(Double value, WellVerticalCoordinateUom uom)
+        public WellElevationCoord(double value, WellVerticalCoordinateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1418,7 +1418,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -1428,7 +1428,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
 
     } //here
@@ -1456,7 +1456,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MeasuredDepthCoord(Double value, MeasuredDepthUom uom)
+        public MeasuredDepthCoord(double value, MeasuredDepthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1497,7 +1497,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -1507,7 +1507,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
 
     } //here
@@ -1535,7 +1535,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerVolumeMeasurePercent(Double value, PercentUom uom)
+        public VolumePerVolumeMeasurePercent(double value, PercentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1593,7 +1593,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerVolumeMeasure(Double value, VolumePerVolumeUom uom)
+        public VolumePerVolumeMeasure(double value, VolumePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1651,7 +1651,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumeFlowRateMeasure(Double value, VolumeFlowRateUom uom)
+        public VolumeFlowRateMeasure(double value, VolumeFlowRateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1709,7 +1709,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumeMeasure(Double value, VolumeUom uom)
+        public VolumeMeasure(double value, VolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1767,7 +1767,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VelocityMeasure(Double value, VelocityUom uom)
+        public VelocityMeasure(double value, VelocityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1825,7 +1825,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public TimeMeasure(Double value, TimeUom uom)
+        public TimeMeasure(double value, TimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1883,7 +1883,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ThermodynamicTemperatureMeasure(Double value, ThermodynamicTemperatureUom uom)
+        public ThermodynamicTemperatureMeasure(double value, ThermodynamicTemperatureUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1941,7 +1941,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PressureMeasure(Double value, PressureUom uom)
+        public PressureMeasure(double value, PressureUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1999,7 +1999,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PlaneAngleMeasure(Double value, PlaneAngleUom uom)
+        public PlaneAngleMeasure(double value, PlaneAngleUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2057,7 +2057,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassMeasure(Double value, MassUom uom)
+        public MassMeasure(double value, MassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2115,7 +2115,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassConcentrationMeasure(Double value, MassConcentrationUom uom)
+        public MassConcentrationMeasure(double value, MassConcentrationUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2173,7 +2173,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LengthPerLengthMeasure(Double value, LengthPerLengthUom uom)
+        public LengthPerLengthMeasure(double value, LengthPerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2231,7 +2231,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LengthMeasure(Double value, LengthUom uom)
+        public LengthMeasure(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2289,7 +2289,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ElectricCurrentMeasure(Double value, ElectricCurrentUom uom)
+        public ElectricCurrentMeasure(double value, ElectricCurrentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2347,7 +2347,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DynamicViscosityMeasure(Double value, DynamicViscosityUom uom)
+        public DynamicViscosityMeasure(double value, DynamicViscosityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2405,7 +2405,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DimensionlessMeasure(Double value, DimensionlessUom uom)
+        public DimensionlessMeasure(double value, DimensionlessUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2463,7 +2463,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DensityMeasure(Double value, DensityUom uom)
+        public DensityMeasure(double value, DensityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2521,7 +2521,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AttenuationMeasure(Double value, AttenuationUom uom)
+        public AttenuationMeasure(double value, AttenuationUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2579,7 +2579,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public WorkMeasure(Double value, WorkUom uom)
+        public WorkMeasure(double value, WorkUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2637,7 +2637,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerStandardVolumeMeasure(Double value, VolumePerVolumeUom uom)
+        public VolumePerStandardVolumeMeasure(double value, VolumePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2695,7 +2695,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public StandardVolumePerVolumeMeasure(Double value, VolumePerVolumeUom uom)
+        public StandardVolumePerVolumeMeasure(double value, VolumePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2753,7 +2753,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public StandardVolumePerStandardVolumeMeasure(Double value, VolumePerVolumeUom uom)
+        public StandardVolumePerStandardVolumeMeasure(double value, VolumePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2811,7 +2811,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public StandardVolumeMeasure(Double value, VolumeUom uom)
+        public StandardVolumeMeasure(double value, VolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2869,7 +2869,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ThermalConductivityMeasure(Double value, ThermalConductivityUom uom)
+        public ThermalConductivityMeasure(double value, ThermalConductivityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2927,7 +2927,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ProductivityIndexMeasure(Double value, ProductivityIndexUom uom)
+        public ProductivityIndexMeasure(double value, ProductivityIndexUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -2985,7 +2985,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MolarVolumeMeasure(Double value, MolarVolumeUom uom)
+        public MolarVolumeMeasure(double value, MolarVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3043,7 +3043,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MolarFractionMeasurePercent(Double value, PercentUom uom)
+        public MolarFractionMeasurePercent(double value, PercentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3101,7 +3101,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ModulusOfCompressionMeasure(Double value, ModulusOfCompressionUom uom)
+        public ModulusOfCompressionMeasure(double value, ModulusOfCompressionUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3159,7 +3159,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassFlowRateMeasure(Double value, MassFlowRateUom uom)
+        public MassFlowRateMeasure(double value, MassFlowRateUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3217,7 +3217,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassConcentrationMeasurePercent(Double value, PercentUom uom)
+        public MassConcentrationMeasurePercent(double value, PercentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3275,7 +3275,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public FrequencyMeasure(Double value, FrequencyUom uom)
+        public FrequencyMeasure(double value, FrequencyUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3333,7 +3333,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public CompressibilityMeasure(Double value, CompressibilityUom uom)
+        public CompressibilityMeasure(double value, CompressibilityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3391,7 +3391,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AmountOfSubstanceMeasure(Double value, AmountOfSubstanceUom uom)
+        public AmountOfSubstanceMeasure(double value, AmountOfSubstanceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -3437,7 +3437,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftTestResult", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A single result derived from analysis of formation tester data.")]
-    public partial class WftTestResult : Object, INotifyPropertyChanged
+    public partial class WftTestResult : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3465,7 +3465,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(40)]
         [Description("The name of a proprietary method which generally  represents a specialization of a result kind.")]
 		[XmlElement("method")]
-        public String Method {
+        public string Method {
             get {
                 return methodField;
             } 
@@ -3475,7 +3475,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String methodField; 
+        private string methodField; 
 
         /// <summary>
         /// The top of the interval to which this result applies.
@@ -3673,7 +3673,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3683,7 +3683,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3718,7 +3718,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftTestData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A reference to a set of formation tester data that was recorded.")]
-    public partial class WftTestData : Object, INotifyPropertyChanged
+    public partial class WftTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3837,7 +3837,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3847,7 +3847,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3882,7 +3882,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftCurveSection", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Points to an interval on a curve in a log (or wellLog).")]
-    public partial class WftCurveSection : Object, INotifyPropertyChanged
+    public partial class WftCurveSection : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3911,7 +3911,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(32)]
         [Description("The mnemonic of the curve in the referenced log or wellLog.")]
 		[XmlElement("mnemonic")]
-        public String Mnemonic {
+        public string Mnemonic {
             get {
                 return mnemonicField;
             } 
@@ -3921,14 +3921,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String mnemonicField; 
+        private string mnemonicField; 
 
         /// <summary>
         /// The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.
         /// </summary>
 		[Description("The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -3939,14 +3939,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -3956,14 +3956,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.
         /// </summary>
 		[Description("The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -3974,14 +3974,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -3991,7 +3991,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -4031,7 +4031,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4041,7 +4041,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4087,7 +4087,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the RefObjectString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public RefObjectString(String value)
+        public RefObjectString(string value)
         {
             this.Value = value;
         }
@@ -4108,7 +4108,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The name of the singular object being referenced.")]
         [XmlAttribute("object")]
 		
-        public String Object {
+        public string Object {
             get {
                 return objectField;
             } 
@@ -4118,7 +4118,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String objectField; 
+        private string objectField; 
 
 		/// <summary>
         /// A reference to the unique identifier (uid attribute) in the object referenced by the name value. This attribute is required within the context of a WITSML server.
@@ -4128,7 +4128,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
-        public String UidRef {
+        public string UidRef {
             get {
                 return uidRefField;
             } 
@@ -4138,14 +4138,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidRefField; 
+        private string uidRefField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -4155,7 +4155,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -4190,7 +4190,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ExtensionNameValue : Object, INotifyPropertyChanged
+    public partial class ExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4253,7 +4253,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -4264,14 +4264,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -4281,7 +4281,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
         /// <summary>
         /// The measured depth associated with the value.
@@ -4306,7 +4306,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Indexes things with the same name.  That is, 1 indicates the first one, 2 incidates the second one, etc.")]
 		[XmlElement("index")]
-        public Int16? Index {
+        public short? Index {
             get {
                 return indexField;
             } 
@@ -4317,14 +4317,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? indexField; 
+        private short? indexField; 
 
         /// <summary>
         /// indexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexSpecified {
+        public bool IndexSpecified {
             get {
                 return indexSpecifiedField;
             } 
@@ -4334,7 +4334,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean indexSpecifiedField; 
+        private bool indexSpecifiedField; 
 
         /// <summary>
         /// The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.
@@ -4359,7 +4359,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -4369,7 +4369,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         /// A textual description of the extension.
@@ -4377,7 +4377,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("A textual description of the extension.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -4387,7 +4387,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 		/// <summary>
         /// uid property
@@ -4397,7 +4397,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4407,7 +4407,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4454,7 +4454,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public Extensionvalue(String value, String uom)
+        public Extensionvalue(string value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4475,7 +4475,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unit of measure for the value. This value must conform to the values allowed by a measure class.")]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -4485,14 +4485,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -4502,7 +4502,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -4537,7 +4537,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftInOutParameter", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Defines a parameter which may have been used for input or output depending on the parent node.")]
-    public partial class WftInOutParameter : Object, INotifyPropertyChanged
+    public partial class WftInOutParameter : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4547,7 +4547,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the parameter.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -4557,7 +4557,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The value of the parameter. If the value represents a measure, then the uom attribute and the corresponding measureClass must be specified.
@@ -4601,7 +4601,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -4611,7 +4611,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -4651,7 +4651,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4661,7 +4661,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4696,7 +4696,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftResultRef", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This defines a set of pointers which collectively identify a particular outputParameter beginning at a point in the hierarchy. Which combination of pointers is needed depends on the starting point.")]
-    public partial class WftResultRef : Object, INotifyPropertyChanged
+    public partial class WftResultRef : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4799,7 +4799,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4809,7 +4809,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4844,7 +4844,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about a single formation tester test.")]
-    public partial class WftTest : Object, INotifyPropertyChanged
+    public partial class WftTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4870,7 +4870,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time when the data collection started for this test.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -4881,14 +4881,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -4898,14 +4898,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time when the data collection ended for this test.
         /// </summary>
 		[Description("The date and time when the data collection ended for this test.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -4916,14 +4916,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -4933,7 +4933,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// A result of formation tester analysis that applies to this test.
@@ -5003,7 +5003,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -5013,7 +5013,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -5048,7 +5048,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftEvent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Captures information about an event that occurred.")]
-    public partial class WftEvent : Object, INotifyPropertyChanged
+    public partial class WftEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5075,7 +5075,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Date and time of the start of the event.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -5085,7 +5085,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// The time duration of the event.
@@ -5112,7 +5112,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A comment about the event.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -5122,7 +5122,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -5162,7 +5162,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -5172,7 +5172,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -5207,7 +5207,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wftStation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about a single station in a wireline formation tester run.")]
-    public partial class WftStation : Object, INotifyPropertyChanged
+    public partial class WftStation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5233,7 +5233,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time when the data collection started for this station.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -5244,14 +5244,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -5261,14 +5261,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time when the data collection completed for this station.
         /// </summary>
 		[Description("The date and time when the data collection completed for this station.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -5279,14 +5279,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -5296,7 +5296,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// The type of flowing interval.
@@ -5378,7 +5378,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A description of the station.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -5388,7 +5388,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// A reference a log containing WFT time-series data at this station (may be superset of all the test log references at this station).
@@ -5596,7 +5596,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -5606,7 +5606,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -5640,7 +5640,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wftRun", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Wireline Formation Test (WFT) object.")]
-    public partial class WftRun : Object, INotifyPropertyChanged
+    public partial class WftRun : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5650,7 +5650,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the well that contains the Wireline Formation Test (WFT).")]
 		[XmlElement("nameWell")]
-        public String NameWell {
+        public string NameWell {
             get {
                 return nameWellField;
             } 
@@ -5660,7 +5660,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameWellField; 
+        private string nameWellField; 
 
         /// <summary>
         /// Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT). 
@@ -5669,7 +5669,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT).")]
 		[XmlElement("nameWellbore")]
-        public String NameWellbore {
+        public string NameWellbore {
             get {
                 return nameWellboreField;
             } 
@@ -5679,7 +5679,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameWellboreField; 
+        private string nameWellboreField; 
 
         /// <summary>
         /// Human recognizable context for the Wireline Formation Test (WFT). 
@@ -5688,7 +5688,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the Wireline Formation Test (WFT).")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -5698,14 +5698,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the "Special Handling of Change Information" within a server. See the relevant API specification for the behavior related to this element.
         /// </summary>
 		[Description("The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the behavior related to this element.")]
 		[XmlElement("objectGrowing")]
-        public Boolean? ObjectGrowing {
+        public bool? ObjectGrowing {
             get {
                 return objectGrowingField;
             } 
@@ -5716,14 +5716,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? objectGrowingField; 
+        private bool? objectGrowingField; 
 
         /// <summary>
         /// objectGrowingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ObjectGrowingSpecified {
+        public bool ObjectGrowingSpecified {
             get {
                 return objectGrowingSpecifiedField;
             } 
@@ -5733,7 +5733,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean objectGrowingSpecifiedField; 
+        private bool objectGrowingSpecifiedField; 
 
         /// <summary>
         /// References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.
@@ -5759,7 +5759,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Name of contractor who provided the service.")]
 		[XmlElement("serviceCompany")]
-        public String ServiceCompany {
+        public string ServiceCompany {
             get {
                 return serviceCompanyField;
             } 
@@ -5769,14 +5769,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String serviceCompanyField; 
+        private string serviceCompanyField; 
 
         /// <summary>
         /// The date and time when the data collection started.
         /// </summary>
 		[Description("The date and time when the data collection started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -5787,14 +5787,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -5804,14 +5804,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time when the data collection completed.
         /// </summary>
 		[Description("The date and time when the data collection completed.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -5822,14 +5822,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -5839,7 +5839,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// The minimum station depth within this WFT. This is an API "structural-range" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
@@ -5883,7 +5883,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A description of the run.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -5893,7 +5893,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// An individual WFT station.
@@ -6028,7 +6028,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
-        public String UidWell {
+        public string UidWell {
             get {
                 return uidWellField;
             } 
@@ -6038,7 +6038,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidWellField; 
+        private string uidWellField; 
 
 		/// <summary>
         /// Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore. 
@@ -6048,7 +6048,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
         [XmlAttribute("uidWellbore")]
 		
-        public String UidWellbore {
+        public string UidWellbore {
             get {
                 return uidWellboreField;
             } 
@@ -6058,7 +6058,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidWellboreField; 
+        private string uidWellboreField; 
 
 		/// <summary>
         /// uid property
@@ -6068,7 +6068,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -6078,8 +6078,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -6121,7 +6135,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
 		[XmlElement("sourceName")]
-        public String SourceName {
+        public string SourceName {
             get {
                 return sourceNameField;
             } 
@@ -6131,14 +6145,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sourceNameField; 
+        private string sourceNameField; 
 
         /// <summary>
         /// When the data was created at the persistent data store. In a query template, a specified value will be interpreted by the server as a request for dTimCreation values that are greater-than the specified value. 
         /// </summary>
 		[Description("When the data was created at the persistent data store.  In a query template, a specified value will be interpreted by the server as a request for dTimCreation values that are greater-than the specified value.")]
 		[XmlElement("dTimCreation")]
-        public DateTime? DateTimeCreation {
+        public Timestamp? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -6149,14 +6163,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimCreationField; 
+        private Timestamp? dTimCreationField; 
 
         /// <summary>
         /// dTimCreationSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeCreationSpecified {
+        public bool DateTimeCreationSpecified {
             get {
                 return dTimCreationSpecifiedField;
             } 
@@ -6166,14 +6180,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimCreationSpecifiedField; 
+        private bool dTimCreationSpecifiedField; 
 
         /// <summary>
         /// Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user). 
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).")]
 		[XmlElement("dTimLastChange")]
-        public DateTime? DateTimeLastChange {
+        public Timestamp? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -6184,14 +6198,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimLastChangeField; 
+        private Timestamp? dTimLastChangeField; 
 
         /// <summary>
         /// dTimLastChangeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeLastChangeSpecified {
+        public bool DateTimeLastChangeSpecified {
             get {
                 return dTimLastChangeSpecifiedField;
             } 
@@ -6201,7 +6215,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimLastChangeSpecifiedField; 
+        private bool dTimLastChangeSpecifiedField; 
 
         /// <summary>
         /// The item state for the data object. 
@@ -6226,7 +6240,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ItemStateSpecified {
+        public bool ItemStateSpecified {
             get {
                 return itemStateSpecifiedField;
             } 
@@ -6236,7 +6250,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean itemStateSpecifiedField; 
+        private bool itemStateSpecifiedField; 
 
         /// <summary>
         /// The category of the service related to the creation of the object. For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime, the combination of "uidWell", "uidWellbore", "idSub" and commonData's "serviceCategory" must be unique. That is, the Store Interface will only retain one realtime for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY being the object selector.
@@ -6244,7 +6258,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of \"uidWell\", \"uidWellbore\", \"idSub\" and commonData's \"serviceCategory\"  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.")]
 		[XmlElement("serviceCategory")]
-        public String ServiceCategory {
+        public string ServiceCategory {
             get {
                 return serviceCategoryField;
             } 
@@ -6254,7 +6268,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String serviceCategoryField; 
+        private string serviceCategoryField; 
 
         /// <summary>
         /// Comments and remarks. 
@@ -6262,7 +6276,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comments and remarks.")]
 		[XmlElement("comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return commentsField;
             } 
@@ -6272,7 +6286,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentsField; 
+        private string commentsField; 
 
         /// <summary>
         /// The local time zone of the original acquisition date-time values. It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.
@@ -6395,7 +6409,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the TimestampedTimeZone class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public TimestampedTimeZone(String value)
+        public TimestampedTimeZone(string value)
         {
             this.Value = value;
         }
@@ -6432,7 +6446,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -6442,14 +6456,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [RegularExpression("[Z]|([\\-+](([01][0-9])|(2[0-3])):[0-5][0-9])")]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -6459,7 +6473,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -6849,7 +6863,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("Class for Natural Gas. This is not valid for oil or water.")]
 		[XmlElement("gasClass")]
-        public String GasClass {
+        public string GasClass {
             get {
                 return gasClassField;
             } 
@@ -6859,7 +6873,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String gasClassField; 
+        private string gasClassField; 
 
 
         
@@ -6939,7 +6953,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("Class for Natural Gas. This is not valid for oil or water.")]
 		[XmlElement("gasClass")]
-        public String GasClass {
+        public string GasClass {
             get {
                 return gasClassField;
             } 
@@ -6949,7 +6963,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String gasClassField; 
+        private string gasClassField; 
 
 
         
@@ -6984,7 +6998,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestInjectionTestData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestInjectionTestData xsd type.")]
-    public partial class WellTestInjectionTestData : Object, INotifyPropertyChanged
+    public partial class WellTestInjectionTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -7046,7 +7060,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InjectedFluidSpecified {
+        public bool InjectedFluidSpecified {
             get {
                 return InjectedFluidSpecifiedField;
             } 
@@ -7056,12 +7070,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean InjectedFluidSpecifiedField; 
+        private bool InjectedFluidSpecifiedField; 
 
         /// <summary>
         /// The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.
         /// </summary>
 		[Description("The cumulative volumes of fluids at the time of the  well test. The fluids are oil, gas, and water.")]
+        [ComponentElement]
 		[XmlElement("wellTestCumulative")]
         public WellTestCumulative WellTestCumulative {
             get {
@@ -7169,6 +7184,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The production results of the test.
         /// </summary>
 		[Description("The production results of the test.")]
+        [ComponentElement]
 		[XmlElement("injectionTestResults")]
         public WellTestInjectionTestResults InjectionTestResults {
             get {
@@ -7190,7 +7206,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -7200,7 +7216,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -7235,7 +7251,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestInterval", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestInterval xsd type.")]
-    public partial class WellTestInterval : Object, INotifyPropertyChanged
+    public partial class WellTestInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -7300,7 +7316,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("A formation that was tested.")]
         [RecurringElement]
 		[XmlElement("testedFormation")]
-        public List<String> TestedFormation {
+        public List<string> TestedFormation {
             get {
                 return testedFormationField;
             } 
@@ -7322,7 +7338,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> testedFormationField; 
+        private List<string> testedFormationField; 
 
         /// <summary>
         /// The relative opening of the downhole control valve for the tested zone. This is for surface controllable valves.
@@ -7350,7 +7366,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -7360,7 +7376,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -7799,7 +7815,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the the split factors  are allocated as opposed to measured.  False (\"false\" or \"0\") or not given indicates otherwise.")]
 		[XmlElement("allocatedSplit")]
-        public Boolean? AllocatedSplit {
+        public bool? AllocatedSplit {
             get {
                 return allocatedSplitField;
             } 
@@ -7810,14 +7826,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? allocatedSplitField; 
+        private bool? allocatedSplitField; 
 
         /// <summary>
         /// allocatedSplitSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AllocatedSplitSpecified {
+        public bool AllocatedSplitSpecified {
             get {
                 return allocatedSplitSpecifiedField;
             } 
@@ -7827,7 +7843,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean allocatedSplitSpecifiedField; 
+        private bool allocatedSplitSpecifiedField; 
 
         /// <summary>
         /// The split factor for Oil relative to the overall volume of the test.
@@ -8042,7 +8058,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestPointData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Well test data gathered at points in the wellbore.")]
-    public partial class WellTestPointData : Object, INotifyPropertyChanged
+    public partial class WellTestPointData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8140,7 +8156,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A value of true (1 or \"true\") indicates that the point is at the bottomhole. A value of false (0 or \"false\") or not given indicates otherwise.")]
 		[XmlElement("bottomhole")]
-        public Boolean? Bottomhole {
+        public bool? Bottomhole {
             get {
                 return bottomholeField;
             } 
@@ -8151,14 +8167,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? bottomholeField; 
+        private bool? bottomholeField; 
 
         /// <summary>
         /// bottomholeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BottomholeSpecified {
+        public bool BottomholeSpecified {
             get {
                 return bottomholeSpecifiedField;
             } 
@@ -8168,14 +8184,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean bottomholeSpecifiedField; 
+        private bool bottomholeSpecifiedField; 
 
         /// <summary>
         /// A value of true (1 or "true") indicates a static (non-flowing) pressure. A value of false (0 or "false") or not given indicates otherwise. The pressure may be measured (e.g., shut-in well) or calculated.
         /// </summary>
 		[Description("A value of true (1 or \"true\") indicates a static (non-flowing) pressure. A value of false (0 or \"false\") or not given indicates otherwise. The pressure may be measured (e.g., shut-in well) or calculated.")]
 		[XmlElement("static")]
-        public Boolean? Static {
+        public bool? Static {
             get {
                 return staticField;
             } 
@@ -8186,14 +8202,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? staticField; 
+        private bool? staticField; 
 
         /// <summary>
         /// staticSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StaticSpecified {
+        public bool StaticSpecified {
             get {
                 return staticSpecifiedField;
             } 
@@ -8203,7 +8219,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean staticSpecifiedField; 
+        private bool staticSpecifiedField; 
 
 		/// <summary>
         /// uid property
@@ -8213,7 +8229,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -8223,7 +8239,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -8672,7 +8688,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestProductionTestData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestProductionTestData xsd type.")]
-    public partial class WellTestProductionTestData : Object, INotifyPropertyChanged
+    public partial class WellTestProductionTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8727,6 +8743,7 @@ namespace Energistics.DataAccess.PRODML131
         /// This element records measurements made and settings made at the wellhead.
         /// </summary>
 		[Description("This element records measurements made and settings made at the wellhead.")]
+        [ComponentElement]
 		[XmlElement("wellheadData")]
         public WellTestWellheadData WellheadData {
             get {
@@ -8744,6 +8761,7 @@ namespace Energistics.DataAccess.PRODML131
         /// DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.
         /// </summary>
 		[Description("DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.")]
+        [ComponentElement]
 		[XmlElement("bottomholeData")]
         public WellTestBottomholeData BottomholeData {
             get {
@@ -8761,6 +8779,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Frequency and electric current measured during the well test for electric submersible pump (ESP) wells. The presumption is that only one pump per well is operational during each test.
         /// </summary>
 		[Description("Frequency and electric current measured during the  well test for electric submersible pump (ESP) wells. The presumption is that only one pump per well is operational during each test.")]
+        [ComponentElement]
 		[XmlElement("espData")]
         public WellTestElectricSubmersiblePumpData EspData {
             get {
@@ -8808,6 +8827,7 @@ namespace Energistics.DataAccess.PRODML131
         /// This element records the measurements (pressure and temperature) at the separator.
         /// </summary>
 		[Description("This element records the measurements (pressure and temperature) at the separator.")]
+        [ComponentElement]
 		[XmlElement("separatorData")]
         public WellTestSeparatorData SeparatorData {
             get {
@@ -8827,7 +8847,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The method being used to operate the well. Examples are 'flowing', 'pumping', 'gas lifted'.")]
 		[XmlElement("operatingMethod")]
-        public String OperatingMethod {
+        public string OperatingMethod {
             get {
                 return operatingMethodField;
             } 
@@ -8837,12 +8857,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String operatingMethodField; 
+        private string operatingMethodField; 
 
         /// <summary>
         /// The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.
         /// </summary>
 		[Description("The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.")]
+        [ComponentElement]
 		[XmlElement("wellTestCumulative")]
         public WellTestCumulative WellTestCumulative {
             get {
@@ -8860,6 +8881,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The production results of the test.
         /// </summary>
 		[Description("The production results of the test.")]
+        [ComponentElement]
 		[XmlElement("productionTestResults")]
         public WellTestProductionTestResults ProductionTestResults {
             get {
@@ -8881,7 +8903,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -8891,7 +8913,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -8972,7 +8994,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The business associate that conducted the test. This is generally a person.")]
 		[XmlElement("testedBy")]
-        public String TestedBy {
+        public string TestedBy {
             get {
                 return testedByField;
             } 
@@ -8982,7 +9004,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String testedByField; 
+        private string testedByField; 
 
 
         
@@ -9017,7 +9039,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellTestValidationOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_wellTestValidationOperation xsd type.")]
-    public partial class WellTestValidationOperation : Object, INotifyPropertyChanged
+    public partial class WellTestValidationOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9079,7 +9101,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateSpecified {
+        public bool DateSpecified {
             get {
                 return dateSpecifiedField;
             } 
@@ -9089,7 +9111,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dateSpecifiedField; 
+        private bool dateSpecifiedField; 
 
         /// <summary>
         /// The tool used for the validation operation.
@@ -9097,7 +9119,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The tool used for the validation operation.")]
 		[XmlElement("tool")]
-        public String Tool {
+        public string Tool {
             get {
                 return toolField;
             } 
@@ -9107,7 +9129,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String toolField; 
+        private string toolField; 
 
         /// <summary>
         /// The method used for the validation operation..
@@ -9115,7 +9137,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The method used for the validation operation..")]
 		[XmlElement("method")]
-        public String Method {
+        public string Method {
             get {
                 return methodField;
             } 
@@ -9125,7 +9147,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String methodField; 
+        private string methodField; 
 
         /// <summary>
         /// A comment about the operation.
@@ -9133,7 +9155,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A comment about the operation.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -9143,7 +9165,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 		/// <summary>
         /// uid property
@@ -9153,7 +9175,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -9163,7 +9185,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -9198,7 +9220,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_location", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML Location Component Schema This is a location that is expressed in terms of 2D coordinates. In order that the location be understood, the coordinate reference system (CRS) must be known. The survey location is given by a pair of tagged values. The pairs may be: (1) latitude/longitude, (2) easting/northing, (3) westing/southing, (4) projectedX/projectedY, or (5) localX/localY. The appropriate pair must be chosen for the data.")]
-    public partial class Location : Object, INotifyPropertyChanged
+    public partial class Location : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9222,6 +9244,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The latitude with north being positive. If you set this property, you must also set Longitude.
         /// </summary>
+        [ComponentElement]
         [XmlElement("latitude")]
         public PlaneAngleMeasure Latitude {
             get {
@@ -9262,6 +9285,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longitude")]
         public PlaneAngleMeasure Longitude {
             get {
@@ -9302,6 +9326,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("easting")]
         public LengthMeasure Easting {
             get {
@@ -9342,6 +9367,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
         /// </summary>
+        [ComponentElement]
         [XmlElement("northing")]
         public LengthMeasure Northing {
             get {
@@ -9382,6 +9408,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("westing")]
         public LengthMeasure Westing {
             get {
@@ -9422,6 +9449,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("southing")]
         public LengthMeasure Southing {
             get {
@@ -9462,6 +9490,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
         /// </summary>
+        [ComponentElement]
         [XmlElement("projectedX")]
         public LengthMeasure ProjectedX {
             get {
@@ -9502,6 +9531,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
         /// </summary>
+        [ComponentElement]
         [XmlElement("projectedY")]
         public LengthMeasure ProjectedY {
             get {
@@ -9542,6 +9572,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localX")]
         public LengthMeasure LocalX {
             get {
@@ -9582,6 +9613,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localY")]
         public LengthMeasure LocalY {
             get {
@@ -9654,7 +9686,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Flag indicating (if \"true\" or \"1\") that this pair of values was  the original data given for the location. If the pair of values was  calculated from an original pair of values, this flag should be \"false\" (or \"0\"),  or not present.")]
 		[XmlElement("original")]
-        public Boolean? Original {
+        public bool? Original {
             get {
                 return originalField;
             } 
@@ -9665,14 +9697,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? originalField; 
+        private bool? originalField; 
 
         /// <summary>
         /// originalSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OriginalSpecified {
+        public bool OriginalSpecified {
             get {
                 return originalSpecifiedField;
             } 
@@ -9682,7 +9714,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean originalSpecifiedField; 
+        private bool originalSpecifiedField; 
 
         /// <summary>
         /// A Comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.
@@ -9690,7 +9722,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("A Comment, generally given to help the reader  interpret the coordinates if the CRS and the chosen pair do not make them clear.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -9700,7 +9732,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -9740,7 +9772,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -9750,7 +9782,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -9960,7 +9992,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the WellKnownNameStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public WellKnownNameStruct(String value)
+        public WellKnownNameStruct(string value)
         {
             this.Value = value;
         }
@@ -9981,7 +10013,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The naming system within the name is unique.")]
         [XmlAttribute("namingSystem")]
 		
-        public String NamingSystem {
+        public string NamingSystem {
             get {
                 return namingSystemField;
             } 
@@ -9991,7 +10023,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String namingSystemField; 
+        private string namingSystemField; 
 
 		/// <summary>
         /// A unique (short) code associated with the name.
@@ -10000,7 +10032,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A unique (short) code associated with the name.")]
         [XmlAttribute("code")]
 		
-        public String Code {
+        public string Code {
             get {
                 return codeField;
             } 
@@ -10010,14 +10042,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String codeField; 
+        private string codeField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -10027,7 +10059,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -10062,7 +10094,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellDatum", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates within the context of a well. ")]
-    public partial class WellDatum : Object, INotifyPropertyChanged
+    public partial class WellDatum : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10071,7 +10103,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The human understandable contextual name of the reference datum.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -10081,7 +10113,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The code value that represents the type of reference datum. This may represent a point on a device (e.g., kelly bushing) or it may represent a vertical reference datum (e.g., mean sea level).
@@ -10106,7 +10138,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CodeSpecified {
+        public bool CodeSpecified {
             get {
                 return codeSpecifiedField;
             } 
@@ -10116,11 +10148,12 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean codeSpecifiedField; 
+        private bool codeSpecifiedField; 
 
         /// <summary>
         /// The name of the vertical reference datum in a particular naming system. This should only be specified if the above 'code' represents some variation of sea level. An optional short name (code) can also be specified. Specifying a well known datum is highly desired if the above code is a variant of sea level because sea level varies over time and space. An example would be to specify a name of 'Caspian Sea' with a code of '5106' in the 'EPSG' naming system.
         /// </summary>
+        [ComponentElement]
         [XmlElement("datumName")]
         public WellKnownNameStruct DatumName {
             get {
@@ -10154,6 +10187,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A reference to the coordinateReferenceSystem object representing the vertical reference datum (i.e., this wellDatum). This should only be specified if the above 'code' represents some variation of sea level. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("datumCRS")]
         public RefNameString DatumCRS {
             get {
@@ -10191,7 +10225,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         [RecurringElement]
 		[XmlElement("kind")]
-        public List<String> Kind {
+        public List<string> Kind {
             get {
                 return kindField;
             } 
@@ -10213,7 +10247,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> kindField; 
+        private List<string> kindField; 
 
         /// <summary>
         /// A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.
@@ -10311,7 +10345,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A contextual description of the well reference datum.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -10321,7 +10355,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -10359,7 +10393,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("True indicates that this is the default reference datum for measured depth coordinates.  False or not given indicates that this is not the default reference datum. Measured depth coordinates that do not specify a datum reference should be  assumed to be measured relative to this default reference datum. Only one reference datum may be designated as the default measured depth datum for each well. Values are \"true\" (or \"1\") and \"false\" ( or \"0\").")]
         [XmlAttribute("defaultMeasuredDepth")]
 		
-        public Boolean DefaultMeasuredDepth {
+        public bool DefaultMeasuredDepth {
             get {
                 return defaultMeasuredDepthField;
             } 
@@ -10370,14 +10404,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean defaultMeasuredDepthField; 
+        private bool defaultMeasuredDepthField; 
 
         /// <summary>
         /// defaultMeasuredDepthSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DefaultMeasuredDepthSpecified {
+        public bool DefaultMeasuredDepthSpecified {
             get {
                 return defaultMeasuredDepthSpecifiedField;
             } 
@@ -10387,7 +10421,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean defaultMeasuredDepthSpecifiedField; 
+        private bool defaultMeasuredDepthSpecifiedField; 
 
 		/// <summary>
         /// True indicates that this is the default reference datum for vertical depth coordinates. False or not given indicates that this is not the default reference datum. Vertical depth coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default vertical depth datum for each well. Values are "true" (or "1") and "false" ( or "0").
@@ -10395,7 +10429,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("True indicates that this is the default reference datum for vertical depth coordinates.  False or not given indicates that this is not the default reference datum. Vertical depth coordinates that do not specify a datum reference should be  assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default vertical depth datum for each well. Values are \"true\" (or \"1\") and \"false\" ( or \"0\").")]
         [XmlAttribute("defaultVerticalDepth")]
 		
-        public Boolean DefaultVerticalDepth {
+        public bool DefaultVerticalDepth {
             get {
                 return defaultVerticalDepthField;
             } 
@@ -10406,14 +10440,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean defaultVerticalDepthField; 
+        private bool defaultVerticalDepthField; 
 
         /// <summary>
         /// defaultVerticalDepthSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DefaultVerticalDepthSpecified {
+        public bool DefaultVerticalDepthSpecified {
             get {
                 return defaultVerticalDepthSpecifiedField;
             } 
@@ -10423,7 +10457,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean defaultVerticalDepthSpecifiedField; 
+        private bool defaultVerticalDepthSpecifiedField; 
 
 		/// <summary>
         /// True indicates that this is the default reference datum for elevation coordinates. False or not given indicates that this is not the default reference datum. Elevation coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default elevation datum for each well. Values are "true" (or "1") and "false" ( or "0").
@@ -10431,7 +10465,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("True indicates that this is the default reference datum for elevation coordinates.   False or not given indicates that this is not the default reference datum. Elevation coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default elevation datum for each well. Values are \"true\" (or \"1\") and \"false\" ( or \"0\").")]
         [XmlAttribute("defaultElevation")]
 		
-        public Boolean DefaultElevation {
+        public bool DefaultElevation {
             get {
                 return defaultElevationField;
             } 
@@ -10442,14 +10476,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean defaultElevationField; 
+        private bool defaultElevationField; 
 
         /// <summary>
         /// defaultElevationSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DefaultElevationSpecified {
+        public bool DefaultElevationSpecified {
             get {
                 return defaultElevationSpecifiedField;
             } 
@@ -10459,7 +10493,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean defaultElevationSpecifiedField; 
+        private bool defaultElevationSpecifiedField; 
 
 		/// <summary>
         /// uid property
@@ -10469,7 +10503,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -10479,7 +10513,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -10618,7 +10652,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FluidWellSpecified {
+        public bool FluidWellSpecified {
             get {
                 return fluidWellSpecifiedField;
             } 
@@ -10628,7 +10662,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean fluidWellSpecifiedField; 
+        private bool fluidWellSpecifiedField; 
 
         /// <summary>
         /// POSC well direction. The direction of flow of the fluids in a well facility (generally, injected or produced, or some combination). 
@@ -10653,7 +10687,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DirectionWellSpecified {
+        public bool DirectionWellSpecified {
             get {
                 return directionWellSpecifiedField;
             } 
@@ -10663,7 +10697,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean directionWellSpecifiedField; 
+        private bool directionWellSpecifiedField; 
 
 
         
@@ -10709,7 +10743,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the NameStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public NameStruct(String value)
+        public NameStruct(string value)
         {
             this.Value = value;
         }
@@ -10729,7 +10763,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The naming system within the name is (hopefully) unique.")]
         [XmlAttribute("namingSystem")]
 		
-        public String NamingSystem {
+        public string NamingSystem {
             get {
                 return namingSystemField;
             } 
@@ -10739,14 +10773,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String namingSystemField; 
+        private string namingSystemField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -10756,7 +10790,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -10790,7 +10824,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Well Test object.")]
-    public partial class WellTest : Object, INotifyPropertyChanged
+    public partial class WellTest : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10800,7 +10834,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the well that contains the well test.")]
 		[XmlElement("nameWell")]
-        public String NameWell {
+        public string NameWell {
             get {
                 return nameWellField;
             } 
@@ -10810,7 +10844,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameWellField; 
+        private string nameWellField; 
 
         /// <summary>
         /// Human recognizable context for the well test. 
@@ -10819,7 +10853,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the well test.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -10829,7 +10863,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
@@ -10872,7 +10906,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The definition of the \"current time\" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the \"most recent\" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dTimCurrent")]
-        public DateTime? DateTimeCurrent {
+        public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
             } 
@@ -10883,14 +10917,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimCurrentField; 
+        private Timestamp? dTimCurrentField; 
 
         /// <summary>
         /// dTimCurrentSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeCurrentSpecified {
+        public bool DateTimeCurrentSpecified {
             get {
                 return dTimCurrentSpecifiedField;
             } 
@@ -10900,7 +10934,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimCurrentSpecifiedField; 
+        private bool dTimCurrentSpecifiedField; 
 
         /// <summary>
         /// Contextual data about the well that was tested.
@@ -10925,7 +10959,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date-time of well test.")]
 		[XmlElement("testDate")]
-        public DateTime? TestDate {
+        public Timestamp? TestDate {
             get {
                 return testDateField;
             } 
@@ -10936,14 +10970,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? testDateField; 
+        private Timestamp? testDateField; 
 
         /// <summary>
         /// testDateSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestDateSpecified {
+        public bool TestDateSpecified {
             get {
                 return testDateSpecifiedField;
             } 
@@ -10953,14 +10987,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testDateSpecifiedField; 
+        private bool testDateSpecifiedField; 
 
         /// <summary>
         /// The date-time of the previous well test.
         /// </summary>
 		[Description("The date-time of the previous well test.")]
 		[XmlElement("previousTestDate")]
-        public DateTime? PreviousTestDate {
+        public Timestamp? PreviousTestDate {
             get {
                 return previousTestDateField;
             } 
@@ -10971,14 +11005,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? previousTestDateField; 
+        private Timestamp? previousTestDateField; 
 
         /// <summary>
         /// previousTestDateSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PreviousTestDateSpecified {
+        public bool PreviousTestDateSpecified {
             get {
                 return previousTestDateSpecifiedField;
             } 
@@ -10988,14 +11022,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean previousTestDateSpecifiedField; 
+        private bool previousTestDateSpecifiedField; 
 
         /// <summary>
         /// The date-time of the last valid well test.
         /// </summary>
 		[Description("The date-time of the last valid well test.")]
 		[XmlElement("lastValidTest")]
-        public DateTime? LastValidTest {
+        public Timestamp? LastValidTest {
             get {
                 return lastValidTestField;
             } 
@@ -11006,14 +11040,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? lastValidTestField; 
+        private Timestamp? lastValidTestField; 
 
         /// <summary>
         /// lastValidTestSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LastValidTestSpecified {
+        public bool LastValidTestSpecified {
             get {
                 return lastValidTestSpecifiedField;
             } 
@@ -11023,7 +11057,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean lastValidTestSpecifiedField; 
+        private bool lastValidTestSpecifiedField; 
 
         /// <summary>
         /// The reason for the well test: initial, periodic, revision.
@@ -11048,7 +11082,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestReasonSpecified {
+        public bool TestReasonSpecified {
             get {
                 return testReasonSpecifiedField;
             } 
@@ -11058,7 +11092,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testReasonSpecifiedField; 
+        private bool testReasonSpecifiedField; 
 
         /// <summary>
         /// The type of well production test.
@@ -11066,7 +11100,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of well production test.")]
 		[XmlElement("testType")]
-        public String TestType {
+        public string TestType {
             get {
                 return testTypeField;
             } 
@@ -11076,7 +11110,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String testTypeField; 
+        private string testTypeField; 
 
         /// <summary>
         /// DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/chokeOrificeSize. The size of the opening in the flow choke at the wellhead.
@@ -11173,7 +11207,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StandardTempPresSpecified {
+        public bool StandardTempPresSpecified {
             get {
                 return standardTempPresSpecifiedField;
             } 
@@ -11183,7 +11217,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean standardTempPresSpecifiedField; 
+        private bool standardTempPresSpecifiedField; 
 
         /// <summary>
         /// The overall state of the test with respect to validation operations.
@@ -11208,7 +11242,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ValidationStateSpecified {
+        public bool ValidationStateSpecified {
             get {
                 return validationStateSpecifiedField;
             } 
@@ -11218,7 +11252,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean validationStateSpecifiedField; 
+        private bool validationStateSpecifiedField; 
 
         /// <summary>
         /// Defines the results of one validation operation.
@@ -11253,6 +11287,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Data from a fluid level test.
         /// </summary>
+        [ComponentElement]
         [XmlElement("fluidLevelTest")]
         public WellTestFluidLevelTest FluidLevelTest {
             get {
@@ -11287,6 +11322,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Data from a production test. Multiple tests generally indicate that there are multiple components of a single overall test. For example, for multi-zoned wells.
         /// </summary>
+        [ComponentElement]
         [XmlElement("productionTest")]
         public WellTestProductionTestData[] ProductionTest {
             get {
@@ -11321,6 +11357,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Data from an injection test. Multiple tests generally indicate that there are multiple components of the overall test. For example, for multi-zoned wells.
         /// </summary>
+        [ComponentElement]
         [XmlElement("injectionTest")]
         public WellTestInjectionTestData[] InjectionTest {
             get {
@@ -11396,7 +11433,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
-        public String UidWell {
+        public string UidWell {
             get {
                 return uidWellField;
             } 
@@ -11406,7 +11443,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidWellField; 
+        private string uidWellField; 
 
 		/// <summary>
         /// uid property
@@ -11416,7 +11453,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11426,8 +11463,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -11524,7 +11575,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EndpointSpecified {
+        public bool EndpointSpecified {
             get {
                 return endpointSpecifiedField;
             } 
@@ -11534,7 +11585,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean endpointSpecifiedField; 
+        private bool endpointSpecifiedField; 
 
         /// <summary>
         /// Value property
@@ -11597,7 +11648,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the EndpointQuantity class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public EndpointQuantity(Double value)
+        public EndpointQuantity(double value)
         {
             this.Value = value;
         }
@@ -11650,7 +11701,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -11660,7 +11711,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -11894,7 +11945,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_timeSeriesStatistic", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of WITSML statistics about a range of time series data.")]
-    public partial class TimeSeriesStatistic : Object, INotifyPropertyChanged
+    public partial class TimeSeriesStatistic : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11904,7 +11955,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the time series.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -11914,7 +11965,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).
@@ -11952,7 +12003,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(24)]
         [Description("If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.")]
 		[XmlElement("unit")]
-        public String Unit {
+        public string Unit {
             get {
                 return unitField;
             } 
@@ -11962,7 +12013,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String unitField; 
+        private string unitField; 
 
         /// <summary>
         /// Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.
@@ -11987,7 +12038,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -11997,7 +12048,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         /// A comment about the time series.
@@ -12005,7 +12056,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A comment about the time series.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -12015,7 +12066,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// The lower bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the data was inclusive or exclusive of this point.
@@ -12060,7 +12111,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum value within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
 		[XmlElement("minimum")]
-        public Double? Minimum {
+        public double? Minimum {
             get {
                 return minimumField;
             } 
@@ -12071,14 +12122,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? minimumField; 
+        private double? minimumField; 
 
         /// <summary>
         /// minimumSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MinimumSpecified {
+        public bool MinimumSpecified {
             get {
                 return minimumSpecifiedField;
             } 
@@ -12088,14 +12139,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean minimumSpecifiedField; 
+        private bool minimumSpecifiedField; 
 
         /// <summary>
         /// The maximum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The maximum value within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
 		[XmlElement("maximum")]
-        public Double? Maximum {
+        public double? Maximum {
             get {
                 return maximumField;
             } 
@@ -12106,14 +12157,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? maximumField; 
+        private double? maximumField; 
 
         /// <summary>
         /// maximumSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MaximumSpecified {
+        public bool MaximumSpecified {
             get {
                 return maximumSpecifiedField;
             } 
@@ -12123,14 +12174,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean maximumSpecifiedField; 
+        private bool maximumSpecifiedField; 
 
         /// <summary>
         /// The sum of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The sum of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
 		[XmlElement("sum")]
-        public Double? Sum {
+        public double? Sum {
             get {
                 return sumField;
             } 
@@ -12141,14 +12192,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? sumField; 
+        private double? sumField; 
 
         /// <summary>
         /// sumSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SumSpecified {
+        public bool SumSpecified {
             get {
                 return sumSpecifiedField;
             } 
@@ -12158,14 +12209,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean sumSpecifiedField; 
+        private bool sumSpecifiedField; 
 
         /// <summary>
         /// The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
 		[XmlElement("mean")]
-        public Double? Mean {
+        public double? Mean {
             get {
                 return meanField;
             } 
@@ -12176,14 +12227,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? meanField; 
+        private double? meanField; 
 
         /// <summary>
         /// meanSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeanSpecified {
+        public bool MeanSpecified {
             get {
                 return meanSpecifiedField;
             } 
@@ -12193,14 +12244,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean meanSpecifiedField; 
+        private bool meanSpecifiedField; 
 
         /// <summary>
         /// The median value of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The median value of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
 		[XmlElement("median")]
-        public Double? Median {
+        public double? Median {
             get {
                 return medianField;
             } 
@@ -12211,14 +12262,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? medianField; 
+        private double? medianField; 
 
         /// <summary>
         /// medianSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MedianSpecified {
+        public bool MedianSpecified {
             get {
                 return medianSpecifiedField;
             } 
@@ -12228,14 +12279,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean medianSpecifiedField; 
+        private bool medianSpecifiedField; 
 
         /// <summary>
         /// The standard deviation of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The standard deviation of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
 		[XmlElement("standardDeviation")]
-        public Double? StandardDeviation {
+        public double? StandardDeviation {
             get {
                 return standardDeviationField;
             } 
@@ -12246,14 +12297,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? standardDeviationField; 
+        private double? standardDeviationField; 
 
         /// <summary>
         /// standardDeviationSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StandardDeviationSpecified {
+        public bool StandardDeviationSpecified {
             get {
                 return standardDeviationSpecifiedField;
             } 
@@ -12263,7 +12314,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean standardDeviationSpecifiedField; 
+        private bool standardDeviationSpecifiedField; 
 
         /// <summary>
         /// Defines a value threshold window and the time duration where values (within the time range of dTimMin to dTimMax) were within that window.
@@ -12326,7 +12377,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -12336,8 +12387,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -12381,7 +12446,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the KeywordValueStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public KeywordValueStruct(String value)
+        public KeywordValueStruct(string value)
         {
             this.Value = value;
         }
@@ -12434,7 +12499,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [StringLength(4000)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -12444,7 +12509,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -12490,7 +12555,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the TimeSeriesStringSample class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public TimeSeriesStringSample(String value)
+        public TimeSeriesStringSample(string value)
         {
             this.Value = value;
         }
@@ -12527,7 +12592,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -12537,7 +12602,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
 		/// <summary>
         /// An indicator of the quality of the value.
@@ -12579,7 +12644,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -12589,14 +12654,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -12606,7 +12671,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -12652,7 +12717,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the TimeSeriesDoubleSample class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public TimeSeriesDoubleSample(Double value)
+        public TimeSeriesDoubleSample(double value)
         {
             this.Value = value;
         }
@@ -12689,7 +12754,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -12699,7 +12764,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
 		/// <summary>
         /// An indicator of the quality of the value.
@@ -12741,7 +12806,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -12751,14 +12816,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -12768,7 +12833,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -12802,7 +12867,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_timeSeriesData", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a PRODML Time Series Data object.")]
-    public partial class TimeSeriesData : Object, INotifyPropertyChanged
+    public partial class TimeSeriesData : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12812,7 +12877,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the time series.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -12822,7 +12887,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).
@@ -12860,7 +12925,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(24)]
         [Description("If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.")]
 		[XmlElement("unit")]
-        public String Unit {
+        public string Unit {
             get {
                 return unitField;
             } 
@@ -12870,7 +12935,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String unitField; 
+        private string unitField; 
 
         /// <summary>
         /// Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.
@@ -12895,7 +12960,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -12905,7 +12970,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         /// A comment about the time series.
@@ -12913,7 +12978,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A comment about the time series.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -12923,11 +12988,12 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// A single double value in the time series.
         /// </summary>
+        [ComponentElement]
         [XmlElement("doubleValue")]
         public TimeSeriesDoubleSample[] DoubleValue {
             get {
@@ -12961,6 +13027,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A single string value in the time series.
         /// </summary>
+        [ComponentElement]
         [XmlElement("stringValue")]
         public TimeSeriesStringSample[] StringValue {
             get {
@@ -13017,7 +13084,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -13027,7 +13094,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -13061,7 +13128,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBalanceEvent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Captures information about an event related to a product balance.")]
-    public partial class ProductVolumeBalanceEvent : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBalanceEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13138,7 +13205,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -13148,7 +13215,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -13183,7 +13250,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBalanceDetail", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Balance Detail Schema.")]
-    public partial class ProductVolumeBalanceDetail : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBalanceDetail : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13247,7 +13314,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("An account identifier for the balance.")]
 		[XmlElement("accountNumber")]
-        public String AccountNumber {
+        public string AccountNumber {
             get {
                 return accountNumberField;
             } 
@@ -13257,7 +13324,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String accountNumberField; 
+        private string accountNumberField; 
 
         /// <summary>
         /// A dated event related to the balance.
@@ -13417,7 +13484,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -13427,7 +13494,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -13462,7 +13529,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_volumeValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A possibly temperature and pressure corrected volume value.")]
-    public partial class VolumeValue : Object, INotifyPropertyChanged
+    public partial class VolumeValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13539,6 +13606,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The temperature to which the volume has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
         /// </summary>
+        [ComponentElement]
         [XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -13572,6 +13640,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The pressure to which the volume has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -13641,7 +13710,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -13651,7 +13720,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -13686,7 +13755,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeComponentContent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Component Content Component Schema.")]
-    public partial class ProductVolumeComponentContent : Object, INotifyPropertyChanged
+    public partial class ProductVolumeComponentContent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13730,7 +13799,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReferenceKindSpecified {
+        public bool ReferenceKindSpecified {
             get {
                 return referenceKindSpecifiedField;
             } 
@@ -13740,7 +13809,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean referenceKindSpecifiedField; 
+        private bool referenceKindSpecifiedField; 
 
         /// <summary>
         /// gor property
@@ -14281,7 +14350,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molecular weight of the product.")]
 		[XmlElement("molecularWeight")]
-        public Double? MolecularWeight {
+        public double? MolecularWeight {
             get {
                 return molecularWeightField;
             } 
@@ -14292,14 +14361,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? molecularWeightField; 
+        private double? molecularWeightField; 
 
         /// <summary>
         /// molecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MolecularWeightSpecified {
+        public bool MolecularWeightSpecified {
             get {
                 return molecularWeightSpecifiedField;
             } 
@@ -14309,7 +14378,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean molecularWeightSpecifiedField; 
+        private bool molecularWeightSpecifiedField; 
 
         /// <summary>
         /// weightPercent property
@@ -14547,7 +14616,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -14557,7 +14626,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -14592,7 +14661,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_flowRateValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A possibly temperature and pressure corrected flow rate value.")]
-    public partial class FlowRateValue : Object, INotifyPropertyChanged
+    public partial class FlowRateValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14651,6 +14720,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The temperature to which the flowRate has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
         /// </summary>
+        [ComponentElement]
         [XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -14684,6 +14754,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The pressure to which the flowRate has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -14753,7 +14824,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -14763,7 +14834,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -14798,7 +14869,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumePortDifference", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_productVolumePortDifference xsd type.")]
-    public partial class ProductVolumePortDifference : Object, INotifyPropertyChanged
+    public partial class ProductVolumePortDifference : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14929,7 +15000,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -14939,7 +15010,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -14974,7 +15045,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_densityValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A possibly temperature and pressure corrected desity value.")]
-    public partial class DensityValue : Object, INotifyPropertyChanged
+    public partial class DensityValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15033,6 +15104,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The temperature to which the density has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
         /// </summary>
+        [ComponentElement]
         [XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -15066,6 +15138,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The pressure to which the density has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -15135,7 +15208,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -15145,7 +15218,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -15189,7 +15262,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the destination.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -15199,7 +15272,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The type of destination.
@@ -15224,7 +15297,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSpecified {
+        public bool TypeSpecified {
             get {
                 return typeSpecifiedField;
             } 
@@ -15234,7 +15307,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean typeSpecifiedField; 
+        private bool typeSpecifiedField; 
 
         /// <summary>
         /// The country of the destination.
@@ -15242,7 +15315,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The country of the destination.")]
 		[XmlElement("country")]
-        public String Country {
+        public string Country {
             get {
                 return countryField;
             } 
@@ -15252,7 +15325,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String countryField; 
+        private string countryField; 
 
 
         
@@ -15287,7 +15360,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBalanceSet", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Balance Set Schema.")]
-    public partial class ProductVolumeBalanceSet : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBalanceSet : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15313,7 +15386,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return kindSpecifiedField;
             } 
@@ -15323,7 +15396,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean kindSpecifiedField; 
+        private bool kindSpecifiedField; 
 
         /// <summary>
         /// A cargo identifier for the product.
@@ -15331,7 +15404,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("A cargo identifier for the product.")]
 		[XmlElement("cargoNumber")]
-        public String CargoNumber {
+        public string CargoNumber {
             get {
                 return cargoNumberField;
             } 
@@ -15341,14 +15414,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String cargoNumberField; 
+        private string cargoNumberField; 
 
         /// <summary>
         /// A cargo batch number. Used if the vessel needs to temporarily disconnect for some reason (e.g., weather).
         /// </summary>
 		[Description("A cargo batch number. Used if the vessel needs to temporarily  disconnect for some reason (e.g., weather).")]
 		[XmlElement("cargoBatchNumber")]
-        public Int16? CargoBatchNumber {
+        public short? CargoBatchNumber {
             get {
                 return cargoBatchNumberField;
             } 
@@ -15359,14 +15432,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? cargoBatchNumberField; 
+        private short? cargoBatchNumberField; 
 
         /// <summary>
         /// cargoBatchNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CargoBatchNumberSpecified {
+        public bool CargoBatchNumberSpecified {
             get {
                 return cargoBatchNumberSpecifiedField;
             } 
@@ -15376,7 +15449,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean cargoBatchNumberSpecifiedField; 
+        private bool cargoBatchNumberSpecifiedField; 
 
         /// <summary>
         /// The name of the shipper
@@ -15384,7 +15457,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the shipper")]
 		[XmlElement("shipper")]
-        public String Shipper {
+        public string Shipper {
             get {
                 return shipperField;
             } 
@@ -15394,7 +15467,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String shipperField; 
+        private string shipperField; 
 
         /// <summary>
         /// Defines the destination of the product.
@@ -15482,7 +15555,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -15492,7 +15565,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -15527,7 +15600,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumePeriod", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Period Component Schema.")]
-    public partial class ProductVolumePeriod : Object, INotifyPropertyChanged
+    public partial class ProductVolumePeriod : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15553,7 +15626,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return kindSpecifiedField;
             } 
@@ -15563,7 +15636,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean kindSpecifiedField; 
+        private bool kindSpecifiedField; 
 
         /// <summary>
         /// The beginning date and time that the period represents.
@@ -16352,7 +16425,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molecular weight of the product.")]
 		[XmlElement("molecularWeight")]
-        public Double? MolecularWeight {
+        public double? MolecularWeight {
             get {
                 return molecularWeightField;
             } 
@@ -16363,14 +16436,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? molecularWeightField; 
+        private double? molecularWeightField; 
 
         /// <summary>
         /// molecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MolecularWeightSpecified {
+        public bool MolecularWeightSpecified {
             get {
                 return molecularWeightSpecifiedField;
             } 
@@ -16380,7 +16453,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean molecularWeightSpecifiedField; 
+        private bool molecularWeightSpecifiedField; 
 
         /// <summary>
         /// weightPercent property
@@ -16726,7 +16799,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -16736,7 +16809,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -16780,7 +16853,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("An XPATH to the target value within the message  containing this XPATH value.")]
 		[XmlElement("target")]
-        public String Target {
+        public string Target {
             get {
                 return targetField;
             } 
@@ -16790,7 +16863,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String targetField; 
+        private string targetField; 
 
         /// <summary>
         /// The level of the alert.
@@ -16798,7 +16871,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The level of the alert.")]
 		[XmlElement("level")]
-        public String Level {
+        public string Level {
             get {
                 return levelField;
             } 
@@ -16808,7 +16881,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String levelField; 
+        private string levelField; 
 
         /// <summary>
         /// The type of alert. For example "off specification".
@@ -16816,7 +16889,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of alert. For example \"off specification\".")]
 		[XmlElement("type")]
-        public String Type {
+        public string Type {
             get {
                 return typeField;
             } 
@@ -16826,7 +16899,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String typeField; 
+        private string typeField; 
 
         /// <summary>
         /// A textual decription of the alert.
@@ -16834,7 +16907,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A textual decription of the alert.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -16844,7 +16917,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 
         
@@ -16879,7 +16952,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_datedComment", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A general timestamped comment structure.")]
-    public partial class DatedComment : Object, INotifyPropertyChanged
+    public partial class DatedComment : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16888,7 +16961,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the person providing the comment.")]
 		[XmlElement("who")]
-        public String Who {
+        public string Who {
             get {
                 return whoField;
             } 
@@ -16898,7 +16971,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String whoField; 
+        private string whoField; 
 
         /// <summary>
         /// The role of the person providing the comment. This is the role of the person within the context of comment.
@@ -16906,7 +16979,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The role of the person providing the comment. This is the role of the person within the context of comment.")]
 		[XmlElement("role")]
-        public String Role {
+        public string Role {
             get {
                 return roleField;
             } 
@@ -16916,14 +16989,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String roleField; 
+        private string roleField; 
 
         /// <summary>
         /// The date and time where the comment begins to be valid.
         /// </summary>
 		[Description("The date and time where the comment begins to be valid.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -16934,14 +17007,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -16951,14 +17024,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time where the comment is no longer valid.
         /// </summary>
 		[Description("The date and time where the comment is no longer valid.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -16969,14 +17042,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -16986,7 +17059,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// The relevant comment.
@@ -16995,7 +17068,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(4000)]
         [Description("The relevant comment.")]
 		[XmlElement("remark")]
-        public String Remark {
+        public string Remark {
             get {
                 return remarkField;
             } 
@@ -17005,7 +17078,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String remarkField; 
+        private string remarkField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -17045,7 +17118,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -17055,7 +17128,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -17164,7 +17237,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeProduct", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Product Component Schema.")]
-    public partial class ProductVolumeProduct : Object, INotifyPropertyChanged
+    public partial class ProductVolumeProduct : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17209,7 +17282,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Range(0, 1)]
         [Description("This factor describes the fraction of fluid in the source flow  that is allocated to this product stream. The volumes reported here are derived from the  source flow based on this split factor. This should be an allocation flow.")]
 		[XmlElement("splitFactor")]
-        public Double? SplitFactor {
+        public double? SplitFactor {
             get {
                 return splitFactorField;
             } 
@@ -17220,14 +17293,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? splitFactorField; 
+        private double? splitFactorField; 
 
         /// <summary>
         /// splitFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SplitFactorSpecified {
+        public bool SplitFactorSpecified {
             get {
                 return splitFactorSpecifiedField;
             } 
@@ -17237,7 +17310,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean splitFactorSpecifiedField; 
+        private bool splitFactorSpecifiedField; 
 
         /// <summary>
         /// A reference to the source flow whose volumes are used to determine the volumes within this target product stream based on the split factor.
@@ -17796,7 +17869,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molecular weight of the product.")]
 		[XmlElement("molecularWeight")]
-        public Double? MolecularWeight {
+        public double? MolecularWeight {
             get {
                 return molecularWeightField;
             } 
@@ -17807,14 +17880,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? molecularWeightField; 
+        private double? molecularWeightField; 
 
         /// <summary>
         /// molecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MolecularWeightSpecified {
+        public bool MolecularWeightSpecified {
             get {
                 return molecularWeightSpecifiedField;
             } 
@@ -17824,7 +17897,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean molecularWeightSpecifiedField; 
+        private bool molecularWeightSpecifiedField; 
 
         /// <summary>
         /// weightPercent property
@@ -18153,7 +18226,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -18163,7 +18236,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -18204,8 +18277,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the facility. The name can be qualified by a naming system. This can also define the kind of facility.
         /// </summary>
-		[Required]
-        [Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
+		[Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
         [ComponentElement]
 		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
@@ -18279,7 +18351,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return kindSpecifiedField;
             } 
@@ -18289,13 +18361,12 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean kindSpecifiedField; 
+        private bool kindSpecifiedField; 
 
         /// <summary>
         /// The Product Flow Port associated with the Product Flow Unit.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Port associated with the Product Flow Unit.")]
+		[Description("The Product Flow Port associated with the Product Flow Unit.")]
         [ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
@@ -18313,8 +18384,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The Product Flow Unit representing the facility.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Unit representing the facility.")]
+		[Description("The Product Flow Unit representing the facility.")]
         [ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
@@ -18391,7 +18461,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the FacilityIdentifierStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public FacilityIdentifierStruct(String value)
+        public FacilityIdentifierStruct(string value)
         {
             this.Value = value;
         }
@@ -18444,7 +18514,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return kindSpecifiedField;
             } 
@@ -18454,7 +18524,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean kindSpecifiedField; 
+        private bool kindSpecifiedField; 
 
 		/// <summary>
         /// A custom sub-categorization of facility kind. This attribute is free-form text and allows implementers to provide a more specific or specialized description of the facility kind.
@@ -18463,7 +18533,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A custom sub-categorization of facility kind. This attribute is free-form text and allows  implementers to provide a more specific or specialized description of the facility kind.")]
         [XmlAttribute("siteKind")]
 		
-        public String SiteKind {
+        public string SiteKind {
             get {
                 return siteKindField;
             } 
@@ -18473,7 +18543,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String siteKindField; 
+        private string siteKindField; 
 
 		/// <summary>
         /// The naming system within which the name is unique. For example, API or NPD.
@@ -18482,7 +18552,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The naming system within which the name is unique. For example, API or NPD.")]
         [XmlAttribute("namingSystem")]
 		
-        public String NamingSystem {
+        public string NamingSystem {
             get {
                 return namingSystemField;
             } 
@@ -18492,7 +18562,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String namingSystemField; 
+        private string namingSystemField; 
 
 		/// <summary>
         /// If the facility is defined and instantiated within the context of a WITSML server, this is a pointer to the uid value of that object instance.
@@ -18502,7 +18572,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("If the facility is defined and instantiated within the context of a WITSML server, this is a pointer to the uid value of that object instance.")]
         [XmlAttribute("uidRef")]
 		
-        public String UidRef {
+        public string UidRef {
             get {
                 return uidRefField;
             } 
@@ -18512,14 +18582,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidRefField; 
+        private string uidRefField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -18529,7 +18599,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -18564,7 +18634,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeFlow", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Flow Component Schema.")]
-    public partial class ProductVolumeFlow : Object, INotifyPropertyChanged
+    public partial class ProductVolumeFlow : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18573,7 +18643,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of this flow within the context of this report. This might reflect some combination of the kind of flow, port, qualifier and related facility.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -18583,7 +18653,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// Indicates the type of flow that is being reported. The type of flow is an indication of the overall source or target of the flow. A production flow has one or more wells as the originating source. An injection flow has one or more wells as the ultimate target. An import flow has an offsite source. An export flow has an offiste target. A consumption flow generally has a kind of equipment as a target.
@@ -18644,7 +18714,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DirectionSpecified {
+        public bool DirectionSpecified {
             get {
                 return directionSpecifiedField;
             } 
@@ -18654,7 +18724,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean directionSpecifiedField; 
+        private bool directionSpecifiedField; 
 
         /// <summary>
         /// The name of the facility represented by the port where the measurements were taken. The name can be qualified by a naming system. This also defines the kind of facility.
@@ -18727,7 +18797,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QualifierSpecified {
+        public bool QualifierSpecified {
             get {
                 return qualifierSpecifiedField;
             } 
@@ -18737,7 +18807,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean qualifierSpecifiedField; 
+        private bool qualifierSpecifiedField; 
 
         /// <summary>
         /// Defines a specialization of the qualifier value. This should only be given if a qualifier is given.
@@ -18762,7 +18832,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SubQualifierSpecified {
+        public bool SubQualifierSpecified {
             get {
                 return subQualifierSpecifiedField;
             } 
@@ -18772,7 +18842,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean subQualifierSpecifiedField; 
+        private bool subQualifierSpecifiedField; 
 
         /// <summary>
         /// A second facility related to this flow. For a production flow, this would represent a role of 'produced for'. For an import flow, this would represent a role of 'inport from'. For an export flow, this would represent a role of 'export to'.
@@ -18797,7 +18867,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A timestamp representing the version of this data.  A flow (same port and products) with a more recent timestamp will represent  the \"current\" version.")]
 		[XmlElement("version")]
-        public DateTime? Version {
+        public Timestamp? Version {
             get {
                 return versionField;
             } 
@@ -18808,14 +18878,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? versionField; 
+        private Timestamp? versionField; 
 
         /// <summary>
         /// versionSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean VersionSpecified {
+        public bool VersionSpecified {
             get {
                 return versionSpecifiedField;
             } 
@@ -18825,7 +18895,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean versionSpecifiedField; 
+        private bool versionSpecifiedField; 
 
         /// <summary>
         /// Identifies the source of the version. This will commonly be the name of the software which created the version. 
@@ -18833,7 +18903,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Identifies the source of the version.  This will commonly be the name of the software which created the version.")]
 		[XmlElement("versionSource")]
-        public String VersionSource {
+        public string VersionSource {
             get {
                 return versionSourceField;
             } 
@@ -18843,7 +18913,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionSourceField; 
+        private string versionSourceField; 
 
         /// <summary>
         /// This is a pointer to the flow from which this flow was derived.
@@ -19402,7 +19472,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molecular weight of the product.")]
 		[XmlElement("molecularWeight")]
-        public Double? MolecularWeight {
+        public double? MolecularWeight {
             get {
                 return molecularWeightField;
             } 
@@ -19413,14 +19483,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? molecularWeightField; 
+        private double? molecularWeightField; 
 
         /// <summary>
         /// molecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MolecularWeightSpecified {
+        public bool MolecularWeightSpecified {
             get {
                 return molecularWeightSpecifiedField;
             } 
@@ -19430,7 +19500,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean molecularWeightSpecifiedField; 
+        private bool molecularWeightSpecifiedField; 
 
         /// <summary>
         /// weightPercent property
@@ -19728,7 +19798,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -19738,7 +19808,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -19784,7 +19854,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the IntegerQualifiedCount class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public IntegerQualifiedCount(Int32 value)
+        public IntegerQualifiedCount(int value)
         {
             this.Value = value;
         }
@@ -19837,7 +19907,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -19847,14 +19917,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Int32 Value {
+        public int Value {
             get {
                 return ValueField;
             } 
@@ -19864,7 +19934,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int32 ValueField; 
+        private int ValueField; 
 
 
         
@@ -19910,7 +19980,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the KindQualifiedString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public KindQualifiedString(String value)
+        public KindQualifiedString(string value)
         {
             this.Value = value;
         }
@@ -19963,7 +20033,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return statusSpecifiedField;
             } 
@@ -19973,14 +20043,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusSpecifiedField; 
+        private bool statusSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -19990,7 +20060,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -20025,7 +20095,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_curveData", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_curveData xsd type.")]
-    public partial class CurveData : Object, INotifyPropertyChanged
+    public partial class CurveData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20035,7 +20105,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         [RecurringElement]
 		[XmlElement("index")]
-        public List<Double> Index {
+        public List<double> Index {
             get {
                 return indexField;
             } 
@@ -20057,7 +20127,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<Double> indexField; 
+        private List<double> indexField; 
 
         /// <summary>
         /// The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false. The second to order=2. And so on. The number of index and data values must match the number of columns in the table.
@@ -20066,7 +20136,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         [RecurringElement]
 		[XmlElement("value")]
-        public List<Double> Value {
+        public List<double> Value {
             get {
                 return valueField;
             } 
@@ -20088,7 +20158,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<Double> valueField; 
+        private List<double> valueField; 
 
 		/// <summary>
         /// uid property
@@ -20098,7 +20168,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -20108,7 +20178,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -20143,7 +20213,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeParameterValue", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Parameter Value Component Schema.")]
-    public partial class ProductVolumeParameterValue : Object, INotifyPropertyChanged
+    public partial class ProductVolumeParameterValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20151,7 +20221,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time at which the parameter applies. If no time is specified then the value is static.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -20162,14 +20232,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -20179,14 +20249,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
         /// <summary>
         /// The date and time at which the parameter no longer applies. The "active" time interval is inclusive of this point. If dTimEnd is given then dTim shall also be given.
         /// </summary>
 		[Description("The date and time at which the parameter no longer applies. The \"active\" time interval is inclusive of this point. If dTimEnd is given then dTim shall also be given.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -20197,14 +20267,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -20214,11 +20284,12 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// A measure value. Unless the parameter is defined as a tuple, only one value should be specified. The measure class is defined by measureClass in the parent set. The unit of measure must conform to the units allowed by the measure class in the unit dictionary file. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
+        [ComponentElement]
         [XmlElement("measureValue")]
         public GeneralQualifiedMeasure[] MeasureValue {
             get {
@@ -20254,6 +20325,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The values in one row of a curve. The aggregate of the curve rows represent the curve.
         /// </summary>
+        [ComponentElement]
         [XmlElement("curveValue")]
         public CurveData[] CurveValue {
             get {
@@ -20289,6 +20361,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A string value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
+        [ComponentElement]
         [XmlElement("stringValue")]
         public KindQualifiedString StringValue {
             get {
@@ -20324,6 +20397,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An integer value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
+        [ComponentElement]
         [XmlElement("integerValue")]
         public IntegerQualifiedCount IntegerValue {
             get {
@@ -20449,7 +20523,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -20459,7 +20533,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -20494,7 +20568,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_curveDefinition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The definition of a curve.")]
-    public partial class CurveDefinition : Object, INotifyPropertyChanged
+    public partial class CurveDefinition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20503,7 +20577,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The order of the value in the index or data tuple. If isIndex is true this is the order of the (independent) index element. If isIndex is false, this is the order of the (dependent) value element.")]
 		[XmlElement("order")]
-        public Int16? Order {
+        public short? Order {
             get {
                 return orderField;
             } 
@@ -20513,7 +20587,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? orderField; 
+        private short? orderField; 
 
         /// <summary>
         /// The name of the variable in this curve.
@@ -20522,7 +20596,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(40)]
         [Description("The name of the variable in this curve.")]
 		[XmlElement("parameter")]
-        public String Parameter {
+        public string Parameter {
             get {
                 return parameterField;
             } 
@@ -20532,14 +20606,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String parameterField; 
+        private string parameterField; 
 
         /// <summary>
         /// True (equal "1" or "true") indicates that this is an independent variable in this curve. At least one column column should be flagged as independent.
         /// </summary>
 		[Description("True (equal \"1\" or \"true\") indicates that this is an independent variable in this curve.  At least one column column should be flagged as independent.")]
 		[XmlElement("isIndex")]
-        public Boolean? IsIndex {
+        public bool? IsIndex {
             get {
                 return isIndexField;
             } 
@@ -20550,14 +20624,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? isIndexField; 
+        private bool? isIndexField; 
 
         /// <summary>
         /// isIndexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsIndexSpecified {
+        public bool IsIndexSpecified {
             get {
                 return isIndexSpecifiedField;
             } 
@@ -20567,7 +20641,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean isIndexSpecifiedField; 
+        private bool isIndexSpecifiedField; 
 
         /// <summary>
         /// The measure class of the variable. This defines which units of measure are valid for the value.
@@ -20594,7 +20668,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(24)]
         [Description("The unit of measure of the variable. The unit of measure must match a unit allowed by the measure class.")]
 		[XmlElement("unit")]
-        public String Unit {
+        public string Unit {
             get {
                 return unitField;
             } 
@@ -20604,7 +20678,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String unitField; 
+        private string unitField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -20644,7 +20718,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -20654,7 +20728,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -20689,7 +20763,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeParameterSet", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume Facility Parameter Set Component Schema.")]
-    public partial class ProductVolumeParameterSet : Object, INotifyPropertyChanged
+    public partial class ProductVolumeParameterSet : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20715,7 +20789,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The \"PRODML Relative Identifier\" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent facility. This identifies a sub-facility which is identified within the context of the  parent facilityParent2/facilityParent1/name identification hierarchy.")]
 		[XmlElement("childFacilityIdentifier", DataType="anyURI")]
-        public String ChildFacilityIdentifier {
+        public string ChildFacilityIdentifier {
             get {
                 return childFacilityIdentifierField;
             } 
@@ -20725,7 +20799,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String childFacilityIdentifierField; 
+        private string childFacilityIdentifierField; 
 
         /// <summary>
         /// The port to which this parameter is assigned. This must be a port on the unit representing the parent facility of this parameter. If not specified then the parameter represents the unit.
@@ -20768,7 +20842,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -20778,7 +20852,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         ///  The pointer to the coordinate reference system. This is needed for coordinates such as measure depth to specify the reference datum. 
@@ -20851,7 +20925,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QualifierSpecified {
+        public bool QualifierSpecified {
             get {
                 return qualifierSpecifiedField;
             } 
@@ -20861,7 +20935,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean qualifierSpecifiedField; 
+        private bool qualifierSpecifiedField; 
 
         /// <summary>
         /// Defines a specialization of the qualifier value. This should only be given if a qualifier is given.
@@ -20886,7 +20960,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SubQualifierSpecified {
+        public bool SubQualifierSpecified {
             get {
                 return subQualifierSpecifiedField;
             } 
@@ -20896,14 +20970,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean subQualifierSpecifiedField; 
+        private bool subQualifierSpecifiedField; 
 
         /// <summary>
         /// A timestamp representing the version of this data. A parameter set with a more recent timestamp will represent the "current" version.
         /// </summary>
 		[Description("A timestamp representing the version of this data.  A parameter set with a more recent timestamp will represent  the \"current\" version.")]
 		[XmlElement("version")]
-        public DateTime? Version {
+        public Timestamp? Version {
             get {
                 return versionField;
             } 
@@ -20914,14 +20988,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? versionField; 
+        private Timestamp? versionField; 
 
         /// <summary>
         /// versionSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean VersionSpecified {
+        public bool VersionSpecified {
             get {
                 return versionSpecifiedField;
             } 
@@ -20931,7 +21005,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean versionSpecifiedField; 
+        private bool versionSpecifiedField; 
 
         /// <summary>
         /// Identifies the source of the version. This will commonly be the name of the software which created the version. 
@@ -20939,7 +21013,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Identifies the source of the version.  This will commonly be the name of the software which created the version.")]
 		[XmlElement("versionSource")]
-        public String VersionSource {
+        public string VersionSource {
             get {
                 return versionSourceField;
             } 
@@ -20949,7 +21023,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionSourceField; 
+        private string versionSourceField; 
 
         /// <summary>
         /// The type of product that is being reported. This would be useful for something like specifying a tank procuct volume or level.
@@ -20974,7 +21048,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ProductSpecified {
+        public bool ProductSpecified {
             get {
                 return productSpecifiedField;
             } 
@@ -20984,7 +21058,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean productSpecifiedField; 
+        private bool productSpecifiedField; 
 
         /// <summary>
         /// The type of period that is being reported.
@@ -21009,7 +21083,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PeriodKindSpecified {
+        public bool PeriodKindSpecified {
             get {
                 return periodKindSpecifiedField;
             } 
@@ -21019,7 +21093,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean periodKindSpecifiedField; 
+        private bool periodKindSpecifiedField; 
 
         /// <summary>
         /// A parameter value, possibly at a time. If a time is not given then only one parameter should be given. If a time is specified with one value then time should be specified for all values. Each value in a time series should be of the same underling kind of value (for example, a length measure).
@@ -21058,7 +21132,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A comment about the parameter.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -21068,7 +21142,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -21108,7 +21182,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -21118,7 +21192,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -21153,7 +21227,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeFacility", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Report Facility Component Schema.")]
-    public partial class ProductVolumeFacility : Object, INotifyPropertyChanged
+    public partial class ProductVolumeFacility : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21244,8 +21318,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
+		[Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
         [ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
@@ -21331,7 +21404,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusWellSpecified {
+        public bool StatusWellSpecified {
             get {
                 return statusWellSpecifiedField;
             } 
@@ -21341,7 +21414,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean statusWellSpecifiedField; 
+        private bool statusWellSpecifiedField; 
 
         /// <summary>
         /// POSC well fluid. The type of fluid being produced from or injected into a well facility. 
@@ -21366,7 +21439,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FluidWellSpecified {
+        public bool FluidWellSpecified {
             get {
                 return fluidWellSpecifiedField;
             } 
@@ -21376,7 +21449,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean fluidWellSpecifiedField; 
+        private bool fluidWellSpecifiedField; 
 
         /// <summary>
         /// The lift method being used to operate the well.
@@ -21401,7 +21474,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OperatingMethodSpecified {
+        public bool OperatingMethodSpecified {
             get {
                 return operatingMethodSpecifiedField;
             } 
@@ -21411,14 +21484,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean operatingMethodSpecifiedField; 
+        private bool operatingMethodSpecifiedField; 
 
         /// <summary>
         /// True (or 1) indicates that the well is producing. False (or 0) or not given indicates that the well is not producing. This only applies if the facility is a well or wellbore.
         /// </summary>
 		[Description("True (or 1) indicates that the well is producing. False (or 0) or not given indicates that the well is not producing. This only applies if the facility is a well or wellbore.")]
 		[XmlElement("wellProducing")]
-        public Boolean? WellProducing {
+        public bool? WellProducing {
             get {
                 return wellProducingField;
             } 
@@ -21429,14 +21502,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? wellProducingField; 
+        private bool? wellProducingField; 
 
         /// <summary>
         /// wellProducingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean WellProducingSpecified {
+        public bool WellProducingSpecified {
             get {
                 return wellProducingSpecifiedField;
             } 
@@ -21446,14 +21519,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean wellProducingSpecifiedField; 
+        private bool wellProducingSpecifiedField; 
 
         /// <summary>
         /// True (or 1) indicates that the well is injecting. False (or 0) or not given indicates that the well is not injecting. This only applies if the facility is a well or wellbore.
         /// </summary>
 		[Description("True (or 1) indicates that the well is injecting. False (or 0) or not given indicates that the well is not injecting. This only applies if the facility is a well or wellbore.")]
 		[XmlElement("wellInjecting")]
-        public Boolean? WellInjecting {
+        public bool? WellInjecting {
             get {
                 return wellInjectingField;
             } 
@@ -21464,14 +21537,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? wellInjectingField; 
+        private bool? wellInjectingField; 
 
         /// <summary>
         /// wellInjectingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean WellInjectingSpecified {
+        public bool WellInjectingSpecified {
             get {
                 return wellInjectingSpecifiedField;
             } 
@@ -21481,7 +21554,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean wellInjectingSpecifiedField; 
+        private bool wellInjectingSpecifiedField; 
 
         /// <summary>
         /// The storage capacity of the facility (e.g., a tank).
@@ -21677,7 +21750,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -21687,7 +21760,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -21721,7 +21794,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productVolume", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Product Volume object.")]
-    public partial class ProductVolume : Object, INotifyPropertyChanged
+    public partial class ProductVolume : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21797,7 +21870,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of report.")]
 		[XmlElement("kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return kindField;
             } 
@@ -21807,7 +21880,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String kindField; 
+        private string kindField; 
 
         /// <summary>
         /// The type of period that is being reported. This value must be consistent with the reporting start and end values.
@@ -21832,7 +21905,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PeriodKindSpecified {
+        public bool PeriodKindSpecified {
             get {
                 return periodKindSpecifiedField;
             } 
@@ -21842,7 +21915,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean periodKindSpecifiedField; 
+        private bool periodKindSpecifiedField; 
 
         /// <summary>
         /// The beginning date and time that the report represents. If you set this property, you must also set DateTimeEnd.
@@ -21988,7 +22061,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The ending date that the report represents.
         /// </summary>
         [XmlElement("month")]
-        public String Month {
+        public string Month {
             get {
                 return monthField;
             } 
@@ -22003,7 +22076,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String monthField; 
+        private string monthField; 
         private bool monthSpecified = false; 
 
         /// <summary>
@@ -22091,7 +22164,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The definition of the \"current time\" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring \"period\" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a \"period\" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dTimCurrent")]
-        public DateTime? DateTimeCurrent {
+        public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
             } 
@@ -22102,14 +22175,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimCurrentField; 
+        private Timestamp? dTimCurrentField; 
 
         /// <summary>
         /// dTimCurrentSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeCurrentSpecified {
+        public bool DateTimeCurrentSpecified {
             get {
                 return dTimCurrentSpecifiedField;
             } 
@@ -22119,7 +22192,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimCurrentSpecifiedField; 
+        private bool dTimCurrentSpecifiedField; 
 
         /// <summary>
         /// The calculation method for for "filling in" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set. This is not to be construed as to prevent concepts such as simulation and forcasting from being applied in order to create a new set. This is a server query parameter.
@@ -22144,7 +22217,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CalculationMethodSpecified {
+        public bool CalculationMethodSpecified {
             get {
                 return calculationMethodSpecifiedField;
             } 
@@ -22154,7 +22227,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean calculationMethodSpecifiedField; 
+        private bool calculationMethodSpecifiedField; 
 
         /// <summary>
         /// The operator of the facilities in the report.
@@ -22233,7 +22306,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IssueDateSpecified {
+        public bool IssueDateSpecified {
             get {
                 return issueDateSpecifiedField;
             } 
@@ -22243,7 +22316,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean issueDateSpecifiedField; 
+        private bool issueDateSpecifiedField; 
 
         /// <summary>
         /// The person or company that issued the report. This may contain the role of the person or company within the context of the report.
@@ -22286,7 +22359,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ApprovalDateSpecified {
+        public bool ApprovalDateSpecified {
             get {
                 return approvalDateSpecifiedField;
             } 
@@ -22296,7 +22369,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean approvalDateSpecifiedField; 
+        private bool approvalDateSpecifiedField; 
 
         /// <summary>
         /// The person or company that approved the report. This may contain the role of the person or company within the context of the report.
@@ -22357,7 +22430,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StandardTempPresSpecified {
+        public bool StandardTempPresSpecified {
             get {
                 return standardTempPresSpecifiedField;
             } 
@@ -22367,7 +22440,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean standardTempPresSpecifiedField; 
+        private bool standardTempPresSpecifiedField; 
 
         /// <summary>
         /// A business unit and related account or ownership share information.
@@ -22473,7 +22546,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -22483,8 +22556,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -22527,7 +22614,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the business associate.  This can be the name of a person, business, group, etc.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -22537,7 +22624,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The role of the business associate within the context. For example, "driller" or "operator", "lead agency - CEQA compliance" "regulatory contact", "safety contact". A business associate will generally have one role but the role may be called different things in different naming systems.
@@ -22790,7 +22877,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The count of the number of personnel in a group.")]
 		[XmlElement("personnelCount")]
-        public Int16? PersonnelCount {
+        public short? PersonnelCount {
             get {
                 return personnelCountField;
             } 
@@ -22801,14 +22888,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? personnelCountField; 
+        private short? personnelCountField; 
 
         /// <summary>
         /// personnelCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PersonnelCountSpecified {
+        public bool PersonnelCountSpecified {
             get {
                 return personnelCountSpecifiedField;
             } 
@@ -22818,7 +22905,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean personnelCountSpecifiedField; 
+        private bool personnelCountSpecifiedField; 
 
         /// <summary>
         /// A general comment. This should not be used to carry semantic information. This is not intended to be machine interpretable. 
@@ -22826,7 +22913,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A general comment. This should not  be used to carry semantic information. This is not  intended to be machine interpretable.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -22836,7 +22923,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -22880,7 +22967,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("A name prefix. Such as, Dr, Ms, Miss, Mr, etc.")]
 		[XmlElement("prefix")]
-        public String Prefix {
+        public string Prefix {
             get {
                 return prefixField;
             } 
@@ -22890,7 +22977,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String prefixField; 
+        private string prefixField; 
 
         /// <summary>
         /// The persons first name.
@@ -22899,7 +22986,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The persons first name.")]
 		[XmlElement("first")]
-        public String First {
+        public string First {
             get {
                 return firstField;
             } 
@@ -22909,7 +22996,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String firstField; 
+        private string firstField; 
 
         /// <summary>
         /// The persons middle name or initial name.
@@ -22917,7 +23004,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The persons middle name or initial name.")]
 		[XmlElement("middle")]
-        public String Middle {
+        public string Middle {
             get {
                 return middleField;
             } 
@@ -22927,7 +23014,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String middleField; 
+        private string middleField; 
 
         /// <summary>
         /// The persons last or given name.
@@ -22936,7 +23023,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The persons last or given name.")]
 		[XmlElement("last")]
-        public String Last {
+        public string Last {
             get {
                 return lastField;
             } 
@@ -22946,7 +23033,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String lastField; 
+        private string lastField; 
 
         /// <summary>
         /// A name suffix. Such as Esq, Phd, etc.
@@ -22954,7 +23041,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("A name suffix. Such as Esq, Phd, etc.")]
         [RecurringElement]
 		[XmlElement("suffix")]
-        public List<String> Suffix {
+        public List<string> Suffix {
             get {
                 return suffixField;
             } 
@@ -22976,7 +23063,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> suffixField; 
+        private List<string> suffixField; 
 
 
         
@@ -23011,7 +23098,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_generalAddress", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("An general address structure. This form is appropriate for most countries. ")]
-    public partial class GeneralAddress : Object, INotifyPropertyChanged
+    public partial class GeneralAddress : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23020,7 +23107,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The Name line of an address.  If missing, use the Name of the business associate.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -23030,7 +23117,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// street property
@@ -23039,7 +23126,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the \"name\" and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
         [RecurringElement]
 		[XmlElement("street")]
-        public List<String> Street {
+        public List<string> Street {
             get {
                 return streetField;
             } 
@@ -23061,7 +23148,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> streetField; 
+        private List<string> streetField; 
 
         /// <summary>
         /// city property
@@ -23070,7 +23157,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The City for the business associate's  address")]
 		[XmlElement("city")]
-        public String City {
+        public string City {
             get {
                 return cityField;
             } 
@@ -23080,13 +23167,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String cityField; 
+        private string cityField; 
 
         /// <summary>
         /// state property
         /// </summary>
         [XmlElement("state")]
-        public String State {
+        public string State {
             get {
                 return stateField;
             } 
@@ -23099,7 +23186,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String stateField; 
+        private string stateField; 
         private bool stateSpecified = false; 
 
         /// <summary>
@@ -23120,7 +23207,7 @@ namespace Energistics.DataAccess.PRODML131
         /// province property
         /// </summary>
         [XmlElement("province")]
-        public String Province {
+        public string Province {
             get {
                 return provinceField;
             } 
@@ -23133,7 +23220,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String provinceField; 
+        private string provinceField; 
         private bool provinceSpecified = false; 
 
         /// <summary>
@@ -23154,7 +23241,7 @@ namespace Energistics.DataAccess.PRODML131
         /// county property
         /// </summary>
         [XmlElement("county")]
-        public String County {
+        public string County {
             get {
                 return countyField;
             } 
@@ -23167,7 +23254,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String countyField; 
+        private string countyField; 
         private bool countySpecified = false; 
 
         /// <summary>
@@ -23208,7 +23295,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The Country may be included. Although  this is optional, it is probably required for most uses.")]
 		[XmlElement("country")]
-        public String Country {
+        public string Country {
             get {
                 return countryField;
             } 
@@ -23218,7 +23305,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String countryField; 
+        private string countryField; 
 
         /// <summary>
         /// A postal code, if appropriate for the country. In the USA this would be the five or nine digit zip code.
@@ -23226,7 +23313,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("A postal code, if appropriate for the country.  In the USA this would be the five or nine digit zip code.")]
 		[XmlElement("postalCode")]
-        public String PostalCode {
+        public string PostalCode {
             get {
                 return postalCodeField;
             } 
@@ -23236,7 +23323,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String postalCodeField; 
+        private string postalCodeField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -23308,7 +23395,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return kindSpecifiedField;
             } 
@@ -23318,7 +23405,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean kindSpecifiedField; 
+        private bool kindSpecifiedField; 
 
 		/// <summary>
         /// uid property
@@ -23328,7 +23415,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -23338,7 +23425,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -23384,7 +23471,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the PhoneNumberStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public PhoneNumberStruct(String value)
+        public PhoneNumberStruct(string value)
         {
             this.Value = value;
         }
@@ -23472,7 +23559,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QualifierSpecified {
+        public bool QualifierSpecified {
             get {
                 return qualifierSpecifiedField;
             } 
@@ -23482,7 +23569,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean qualifierSpecifiedField; 
+        private bool qualifierSpecifiedField; 
 
 		/// <summary>
         /// The phone number extension.
@@ -23491,7 +23578,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The phone number extension.")]
         [XmlAttribute("extension")]
 		
-        public String Extension {
+        public string Extension {
             get {
                 return extensionField;
             } 
@@ -23501,14 +23588,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String extensionField; 
+        private string extensionField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(40)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -23518,7 +23605,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -23564,7 +23651,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the EmailQualifierStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public EmailQualifierStruct(String value)
+        public EmailQualifierStruct(string value)
         {
             this.Value = value;
         }
@@ -23617,7 +23704,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QualifierSpecified {
+        public bool QualifierSpecified {
             get {
                 return qualifierSpecifiedField;
             } 
@@ -23627,14 +23714,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean qualifierSpecifiedField; 
+        private bool qualifierSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(40)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -23644,7 +23731,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -23688,7 +23775,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the country.")]
 		[XmlElement("country")]
-        public String Country {
+        public string Country {
             get {
                 return countryField;
             } 
@@ -23698,7 +23785,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String countryField; 
+        private string countryField; 
 
         /// <summary>
         /// The state of province within the country.
@@ -23706,7 +23793,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The state of province within the country.")]
 		[XmlElement("state")]
-        public String State {
+        public string State {
             get {
                 return stateField;
             } 
@@ -23716,7 +23803,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String stateField; 
+        private string stateField; 
 
         /// <summary>
         /// The name of the field within whose context the report exists.
@@ -23760,7 +23847,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("An general comment that further explains the  offshore location.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -23770,7 +23857,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -23814,7 +23901,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("A general meaning of Area. It may be as  general as 'UK North Sea' or 'Viosca Knoll'. The user community must agree on the meaning of this element.")]
 		[XmlElement("areaName")]
-        public String AreaName {
+        public string AreaName {
             get {
                 return areaNameField;
             } 
@@ -23824,7 +23911,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String areaNameField; 
+        private string areaNameField; 
 
         /// <summary>
         /// A block ID that can more tightly locate the object. The BlockID should be an identifying name or code. The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.
@@ -23833,7 +23920,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
         [RecurringElement]
 		[XmlElement("blockID")]
-        public List<String> BlockID {
+        public List<string> BlockID {
             get {
                 return blockIDField;
             } 
@@ -23855,7 +23942,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> blockIDField; 
+        private List<string> blockIDField; 
 
         /// <summary>
         /// An offshore location using the North Sea Offshore terminology.
@@ -23882,7 +23969,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("An general comment that further explains the  offshore location.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -23892,7 +23979,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -23936,7 +24023,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("An optional, uncontrolled value, which may be  used to describe the general area of offshore North Sea in which the  point is located.")]
 		[XmlElement("areaName")]
-        public String AreaName {
+        public string AreaName {
             get {
                 return areaNameField;
             } 
@@ -23946,7 +24033,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String areaNameField; 
+        private string areaNameField; 
 
         /// <summary>
         /// The number or letter of the quadrant in the North Sea.
@@ -23955,7 +24042,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The number or letter of the quadrant in  the North Sea.")]
 		[XmlElement("quadrant")]
-        public String Quadrant {
+        public string Quadrant {
             get {
                 return quadrantField;
             } 
@@ -23965,7 +24052,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String quadrantField; 
+        private string quadrantField; 
 
         /// <summary>
         /// A lower case letter assigned if a block is subdivided.
@@ -23973,7 +24060,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(2)]
         [Description("A lower case letter assigned if a block is subdivided.")]
 		[XmlElement("blockSuffix")]
-        public String BlockSuffix {
+        public string BlockSuffix {
             get {
                 return blockSuffixField;
             } 
@@ -23983,7 +24070,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String blockSuffixField; 
+        private string blockSuffixField; 
 
 
         
@@ -24018,7 +24105,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessUnit", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining business units.")]
-    public partial class ProductVolumeBusinessUnit : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessUnit : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24045,7 +24132,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The human contextual name of the business unit.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -24055,7 +24142,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// A textual description of the business unit.
@@ -24063,7 +24150,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("A textual description of the business unit.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -24073,7 +24160,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// A component part of the unit. The composition of a unit may vary with time. This defines the ownership share or account information for a sub unit within the context of the whole unit. For ownership shares, at any one point in time the sum of the shares should be 100%.
@@ -24143,7 +24230,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24153,7 +24240,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24188,7 +24275,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessSubUnit", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining ownership shares of business units.")]
-    public partial class ProductVolumeBusinessSubUnit : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessSubUnit : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24213,6 +24300,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines the ownership share in the parent unit at a point in time. This commonly applies at a parent source unit (e.g., a field or platform).
         /// </summary>
+        [ComponentElement]
         [XmlElement("ownershipShare")]
         public ProductVolumeBusinessOwnershipShare[] OwnershipShare {
             get {
@@ -24246,6 +24334,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines account information in the parent unit. This commonly applies at a parent terminus unit (e.g., a terminal),
         /// </summary>
+        [ComponentElement]
         [XmlElement("accountInformation")]
         public ProductVolumeBusinessAccountInfo[] AccountInformation {
             get {
@@ -24315,7 +24404,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24325,7 +24414,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24360,7 +24449,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessAccountInfo", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining account information.")]
-    public partial class ProductVolumeBusinessAccountInfo : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessAccountInfo : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24370,7 +24459,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The identifier of the account of the sub-unit within the whole business unit.")]
 		[XmlElement("accountId")]
-        public String AccountId {
+        public string AccountId {
             get {
                 return accountIdField;
             } 
@@ -24380,7 +24469,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String accountIdField; 
+        private string accountIdField; 
 
         /// <summary>
         /// The product associated with the account identifier.
@@ -24405,7 +24494,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ProductSpecified {
+        public bool ProductSpecified {
             get {
                 return productSpecifiedField;
             } 
@@ -24415,7 +24504,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean productSpecifiedField; 
+        private bool productSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -24455,7 +24544,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24465,7 +24554,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24500,7 +24589,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productVolumeBusinessOwnershipShare", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Volume component schema for defining ownership shares.")]
-    public partial class ProductVolumeBusinessOwnershipShare : Object, INotifyPropertyChanged
+    public partial class ProductVolumeBusinessOwnershipShare : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24545,7 +24634,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StartDateSpecified {
+        public bool StartDateSpecified {
             get {
                 return startDateSpecifiedField;
             } 
@@ -24555,7 +24644,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean startDateSpecifiedField; 
+        private bool startDateSpecifiedField; 
 
         /// <summary>
         /// The final date on which the ownership was valid. If no end date is specified, the share is considered to still be valid.
@@ -24580,7 +24669,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EndDateSpecified {
+        public bool EndDateSpecified {
             get {
                 return endDateSpecifiedField;
             } 
@@ -24590,7 +24679,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean endDateSpecifiedField; 
+        private bool endDateSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -24630,7 +24719,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24640,7 +24729,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24675,7 +24764,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationOperationalComment", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Operational Comments Component Schema.")]
-    public partial class ProductionOperationOperationalComment : Object, INotifyPropertyChanged
+    public partial class ProductionOperationOperationalComment : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24701,7 +24790,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSpecified {
+        public bool TypeSpecified {
             get {
                 return typeSpecifiedField;
             } 
@@ -24711,14 +24800,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean typeSpecifiedField; 
+        private bool typeSpecifiedField; 
 
         /// <summary>
         /// The beginning date and time that the comment represents.
         /// </summary>
 		[Description("The beginning date and time that the comment represents.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -24729,14 +24818,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -24746,14 +24835,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The ending date and time that the comment represents.
         /// </summary>
 		[Description("The ending date and time that the comment represents.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -24764,14 +24853,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -24781,7 +24870,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// A comment about the operation and/or the activities within the operation.
@@ -24789,7 +24878,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("A comment about the operation and/or the activities  within the operation.")]
         [RecurringElement]
 		[XmlElement("comment")]
-        public List<String> Comment {
+        public List<string> Comment {
             get {
                 return commentField;
             } 
@@ -24811,7 +24900,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> commentField; 
+        private List<string> commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -24851,7 +24940,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24861,7 +24950,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24896,7 +24985,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationCargoShipOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Infomation about a cargo ship operation.")]
-    public partial class ProductionOperationCargoShipOperation : Object, INotifyPropertyChanged
+    public partial class ProductionOperationCargoShipOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24905,7 +24994,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Name of the cargo vessel for the installation.")]
 		[XmlElement("vesselName")]
-        public String VesselName {
+        public string VesselName {
             get {
                 return vesselNameField;
             } 
@@ -24915,14 +25004,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String vesselNameField; 
+        private string vesselNameField; 
 
         /// <summary>
         /// The date and time that the vessel arrived.
         /// </summary>
 		[Description("The date and time that the vessel arrived.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -24933,14 +25022,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -24950,14 +25039,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time that the vessel left.
         /// </summary>
 		[Description("The date and time that the vessel left.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -24968,14 +25057,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -24985,7 +25074,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// Name of the captain of the vessel.
@@ -24993,7 +25082,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Name of the captain of the vessel.")]
 		[XmlElement("captain")]
-        public String Captain {
+        public string Captain {
             get {
                 return captainField;
             } 
@@ -25003,7 +25092,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String captainField; 
+        private string captainField; 
 
         /// <summary>
         /// the cargo identifier.
@@ -25011,7 +25100,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("the cargo identifier.")]
 		[XmlElement("cargoNumber")]
-        public String CargoNumber {
+        public string CargoNumber {
             get {
                 return cargoNumberField;
             } 
@@ -25021,14 +25110,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String cargoNumberField; 
+        private string cargoNumberField; 
 
         /// <summary>
         /// The cargo batch number. Used if the vessel needs to temporarily disconnect for some reason (e.g., weather).
         /// </summary>
 		[Description("The cargo batch number. Used if the vessel needs to temporarily  disconnect for some reason (e.g., weather).")]
 		[XmlElement("cargoBatchNumber")]
-        public Int16? CargoBatchNumber {
+        public short? CargoBatchNumber {
             get {
                 return cargoBatchNumberField;
             } 
@@ -25039,14 +25128,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? cargoBatchNumberField; 
+        private short? cargoBatchNumberField; 
 
         /// <summary>
         /// cargoBatchNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CargoBatchNumberSpecified {
+        public bool CargoBatchNumberSpecified {
             get {
                 return cargoBatchNumberSpecifiedField;
             } 
@@ -25056,7 +25145,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean cargoBatchNumberSpecifiedField; 
+        private bool cargoBatchNumberSpecifiedField; 
 
         /// <summary>
         /// Description of cargo on the vessel.
@@ -25064,7 +25153,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("Description of cargo on the vessel.")]
 		[XmlElement("cargo")]
-        public String Cargo {
+        public string Cargo {
             get {
                 return cargoField;
             } 
@@ -25074,7 +25163,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String cargoField; 
+        private string cargoField; 
 
         /// <summary>
         /// Gross oil loaded to the ship during the report period. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.
@@ -25306,7 +25395,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -25316,7 +25405,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -25351,7 +25440,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationMarineOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Infomation about a marine operation.")]
-    public partial class ProductionOperationMarineOperation : Object, INotifyPropertyChanged
+    public partial class ProductionOperationMarineOperation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25359,7 +25448,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The beginning date and time that the information represents.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -25370,14 +25459,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -25387,14 +25476,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The ending date and time that the comment represents.
         /// </summary>
 		[Description("The ending date and time that the comment represents.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -25405,14 +25494,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -25422,7 +25511,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// A general comment on marine activity in the area
@@ -25430,7 +25519,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A general comment on marine activity in the area")]
 		[XmlElement("generalComment")]
-        public String GeneralComment {
+        public string GeneralComment {
             get {
                 return generalCommentField;
             } 
@@ -25440,7 +25529,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String generalCommentField; 
+        private string generalCommentField; 
 
         /// <summary>
         /// Name of supply vessel for the installation.
@@ -25448,7 +25537,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Name of supply vessel for the installation.")]
 		[XmlElement("supplyShip")]
-        public String SupplyShip {
+        public string SupplyShip {
             get {
                 return supplyShipField;
             } 
@@ -25458,7 +25547,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String supplyShipField; 
+        private string supplyShipField; 
 
         /// <summary>
         /// Name of standby vessel for the installation.
@@ -25466,7 +25555,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Name of standby vessel for the installation.")]
 		[XmlElement("standbyVessel")]
-        public String StandbyVessel {
+        public string StandbyVessel {
             get {
                 return standbyVesselField;
             } 
@@ -25476,7 +25565,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String standbyVesselField; 
+        private string standbyVesselField; 
 
         /// <summary>
         /// Comment regarding the supply ship.
@@ -25636,7 +25725,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -25646,7 +25735,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -25681,7 +25770,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationAlarm", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A structure to record informaion about a single alarm.")]
-    public partial class ProductionOperationAlarm : Object, INotifyPropertyChanged
+    public partial class ProductionOperationAlarm : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25689,7 +25778,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time when the alarms went off.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -25700,14 +25789,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -25717,7 +25806,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
         /// <summary>
         /// The area where the alarm went off.
@@ -25725,7 +25814,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The area where the alarm went off.")]
 		[XmlElement("area")]
-        public String Area {
+        public string Area {
             get {
                 return areaField;
             } 
@@ -25735,7 +25824,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String areaField; 
+        private string areaField; 
 
         /// <summary>
         /// The type of alarm that went off.
@@ -25743,7 +25832,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of alarm that went off.")]
 		[XmlElement("type")]
-        public String Type {
+        public string Type {
             get {
                 return typeField;
             } 
@@ -25753,7 +25842,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String typeField; 
+        private string typeField; 
 
         /// <summary>
         /// The reason for the alarm going off.
@@ -25761,7 +25850,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("The reason for the alarm going off.")]
 		[XmlElement("reason")]
-        public String Reason {
+        public string Reason {
             get {
                 return reasonField;
             } 
@@ -25771,7 +25860,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String reasonField; 
+        private string reasonField; 
 
         /// <summary>
         /// A general comment relevant for the alarm.
@@ -25779,7 +25868,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A general comment relevant for the alarm.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -25789,7 +25878,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -25829,7 +25918,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -25839,7 +25928,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -25874,7 +25963,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationShutdown", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Infomation about a shutdown event.")]
-    public partial class ProductionOperationShutdown : Object, INotifyPropertyChanged
+    public partial class ProductionOperationShutdown : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25901,7 +25990,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("A general description of the shutdown with reason and  other relevant information.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -25911,14 +26000,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// The time the shutdown started.
         /// </summary>
 		[Description("The time the shutdown started.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -25929,14 +26018,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -25946,14 +26035,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The time the shutdown ended.
         /// </summary>
 		[Description("The time the shutdown ended.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -25964,14 +26053,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -25981,7 +26070,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// Downtime when the installation is unable to produce 100% of its capability. 
@@ -26105,7 +26194,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -26115,7 +26204,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -26150,7 +26239,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationWaterCleaningQuality", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about the contaminants in water, and the general water quality. The values are measured from a sample, which is described below. Values measured from other samples should be given in different instances of the type.")]
-    public partial class ProductionOperationWaterCleaningQuality : Object, INotifyPropertyChanged
+    public partial class ProductionOperationWaterCleaningQuality : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -26159,7 +26248,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("An identifier of the point from which the sample was taken.  This is an uncontrolled string value, which should be as descriptive as possible.")]
 		[XmlElement("samplePoint")]
-        public String SamplePoint {
+        public string SamplePoint {
             get {
                 return samplePointField;
             } 
@@ -26169,7 +26258,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String samplePointField; 
+        private string samplePointField; 
 
         /// <summary>
         /// Total measured oil in the water after the water cleaning process, but before it is discharged from the installation.
@@ -26284,7 +26373,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pH value of the treated water.  The pH value is best given as a value, with no unit of measure,  since there are no variations from the pH.")]
 		[XmlElement("phValue")]
-        public Double? PHValue {
+        public double? PHValue {
             get {
                 return phValueField;
             } 
@@ -26295,14 +26384,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? phValueField; 
+        private double? phValueField; 
 
         /// <summary>
         /// phValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PHValueSpecified {
+        public bool PHValueSpecified {
             get {
                 return phValueSpecifiedField;
             } 
@@ -26312,7 +26401,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean phValueSpecifiedField; 
+        private bool phValueSpecifiedField; 
 
         /// <summary>
         /// The temperature of the water before it is discharged.
@@ -26373,7 +26462,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A measure of the cloudiness of water caused by suspended particles.")]
 		[XmlElement("turbidity")]
-        public Double? Turbidity {
+        public double? Turbidity {
             get {
                 return turbidityField;
             } 
@@ -26384,14 +26473,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? turbidityField; 
+        private double? turbidityField; 
 
         /// <summary>
         /// turbiditySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TurbiditySpecified {
+        public bool TurbiditySpecified {
             get {
                 return turbiditySpecifiedField;
             } 
@@ -26401,7 +26490,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean turbiditySpecifiedField; 
+        private bool turbiditySpecifiedField; 
 
         /// <summary>
         /// A measure of the number of particles in water as measured by a coulter counter.
@@ -26489,7 +26578,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -26499,7 +26588,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -26534,7 +26623,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationThirdPartyProcessing", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Production losses due to Third Party Processing.")]
-    public partial class ProductionOperationThirdPartyProcessing : Object, INotifyPropertyChanged
+    public partial class ProductionOperationThirdPartyProcessing : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -26629,7 +26718,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -26639,7 +26728,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -27022,7 +27111,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationWeather", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Operations Weather Component Schema")]
-    public partial class ProductionOperationWeather : Object, INotifyPropertyChanged
+    public partial class ProductionOperationWeather : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27031,7 +27120,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -27041,7 +27130,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// Name of company that supplied the data. 
@@ -27049,7 +27138,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("Name of company that supplied the data.")]
 		[XmlElement("agency")]
-        public String Agency {
+        public string Agency {
             get {
                 return agencyField;
             } 
@@ -27059,7 +27148,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String agencyField; 
+        private string agencyField; 
 
         /// <summary>
         /// Atmospheric pressure. 
@@ -27085,7 +27174,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Range(0, 12)]
         [Description("The Beaufort wind scale is a system used to estimate and report wind speeds  when no measuring apparatus is available. It was invented in the early 19th Century by Admiral  Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions.")]
 		[XmlElement("beaufortScaleNumber")]
-        public Int16? BeaufortScaleNumber {
+        public short? BeaufortScaleNumber {
             get {
                 return beaufortScaleNumberField;
             } 
@@ -27096,14 +27185,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? beaufortScaleNumberField; 
+        private short? beaufortScaleNumberField; 
 
         /// <summary>
         /// beaufortScaleNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BeaufortScaleNumberSpecified {
+        public bool BeaufortScaleNumberSpecified {
             get {
                 return beaufortScaleNumberSpecifiedField;
             } 
@@ -27113,7 +27202,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean beaufortScaleNumberSpecifiedField; 
+        private bool beaufortScaleNumberSpecifiedField; 
 
         /// <summary>
         /// Average temperature above ground for the period. Temperature of the atmosphere. 
@@ -27355,7 +27444,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("Type of precipitation.")]
 		[XmlElement("typePrecip")]
-        public String TypePrecip {
+        public string TypePrecip {
             get {
                 return typePrecipField;
             } 
@@ -27365,7 +27454,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String typePrecipField; 
+        private string typePrecipField; 
 
         /// <summary>
         /// Amount of precipitation. 
@@ -27391,7 +27480,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(32)]
         [Description("Description of cloud cover.")]
 		[XmlElement("coverCloud")]
-        public String CoverCloud {
+        public string CoverCloud {
             get {
                 return coverCloudField;
             } 
@@ -27401,7 +27490,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String coverCloudField; 
+        private string coverCloudField; 
 
         /// <summary>
         /// Height of cloud cover. 
@@ -27463,7 +27552,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comments and remarks.")]
 		[XmlElement("comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return commentsField;
             } 
@@ -27473,7 +27562,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentsField; 
+        private string commentsField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -27513,7 +27602,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -27523,7 +27612,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -27569,7 +27658,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the SafetyCount class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public SafetyCount(Int16 value)
+        public SafetyCount(short value)
         {
             this.Value = value;
         }
@@ -27622,7 +27711,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSpecified {
+        public bool TypeSpecified {
             get {
                 return typeSpecifiedField;
             } 
@@ -27632,7 +27721,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean typeSpecifiedField; 
+        private bool typeSpecifiedField; 
 
 		/// <summary>
         /// The type of period being reported by this count.
@@ -27674,7 +27763,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PeriodSpecified {
+        public bool PeriodSpecified {
             get {
                 return periodSpecifiedField;
             } 
@@ -27684,14 +27773,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean periodSpecifiedField; 
+        private bool periodSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Int16 Value {
+        public short Value {
             get {
                 return ValueField;
             } 
@@ -27701,7 +27790,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16 ValueField; 
+        private short ValueField; 
 
 
         
@@ -27736,7 +27825,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationSafety", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Safety Component Schema.")]
-    public partial class ProductionOperationSafety : Object, INotifyPropertyChanged
+    public partial class ProductionOperationSafety : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27855,7 +27944,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -27865,7 +27954,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -27900,7 +27989,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationHSE", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Operational Health, Safety and Environment Component Schema.")]
-    public partial class ProductionOperationHSE : Object, INotifyPropertyChanged
+    public partial class ProductionOperationHSE : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27908,7 +27997,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("the number of incidents of accidents and injuries that were reported.")]
 		[XmlElement("IncidentCount")]
-        public Int16? IncidentCount {
+        public short? IncidentCount {
             get {
                 return IncidentCountField;
             } 
@@ -27919,14 +28008,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? IncidentCountField; 
+        private short? IncidentCountField; 
 
         /// <summary>
         /// IncidentCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IncidentCountSpecified {
+        public bool IncidentCountSpecified {
             get {
                 return IncidentCountSpecifiedField;
             } 
@@ -27936,7 +28025,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean IncidentCountSpecifiedField; 
+        private bool IncidentCountSpecifiedField; 
 
         /// <summary>
         /// The amount of time since the most recent Lost Time Accident.
@@ -27997,7 +28086,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The number of medical treatments that have occurred.")]
 		[XmlElement("medicalTreatmentCount")]
-        public Int16? MedicalTreatmentCount {
+        public short? MedicalTreatmentCount {
             get {
                 return medicalTreatmentCountField;
             } 
@@ -28008,14 +28097,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? medicalTreatmentCountField; 
+        private short? medicalTreatmentCountField; 
 
         /// <summary>
         /// medicalTreatmentCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MedicalTreatmentCountSpecified {
+        public bool MedicalTreatmentCountSpecified {
             get {
                 return medicalTreatmentCountSpecifiedField;
             } 
@@ -28025,14 +28114,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean medicalTreatmentCountSpecifiedField; 
+        private bool medicalTreatmentCountSpecifiedField; 
 
         /// <summary>
         /// The number of system alarms that have occurred.
         /// </summary>
 		[Description("The number of system alarms that have occurred.")]
 		[XmlElement("alarmCount")]
-        public Int16? AlarmCount {
+        public short? AlarmCount {
             get {
                 return alarmCountField;
             } 
@@ -28043,14 +28132,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? alarmCountField; 
+        private short? alarmCountField; 
 
         /// <summary>
         /// alarmCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AlarmCountSpecified {
+        public bool AlarmCountSpecified {
             get {
                 return alarmCountSpecifiedField;
             } 
@@ -28060,14 +28149,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean alarmCountSpecifiedField; 
+        private bool alarmCountSpecifiedField; 
 
         /// <summary>
         /// The number of personnel safety introductions that have occurred.
         /// </summary>
 		[Description("The number of personnel safety introductions that have occurred.")]
 		[XmlElement("safetyIntroCount")]
-        public Int16? SafetyIntroCount {
+        public short? SafetyIntroCount {
             get {
                 return safetyIntroCountField;
             } 
@@ -28078,14 +28167,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? safetyIntroCountField; 
+        private short? safetyIntroCountField; 
 
         /// <summary>
         /// safetyIntroCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SafetyIntroCountSpecified {
+        public bool SafetyIntroCountSpecified {
             get {
                 return safetyIntroCountSpecifiedField;
             } 
@@ -28095,7 +28184,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean safetyIntroCountSpecifiedField; 
+        private bool safetyIntroCountSpecifiedField; 
 
         /// <summary>
         /// A textual description of safety considerations.
@@ -28103,7 +28192,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A textual description of safety considerations.")]
 		[XmlElement("safetyDescription")]
-        public String SafetyDescription {
+        public string SafetyDescription {
             get {
                 return safetyDescriptionField;
             } 
@@ -28113,7 +28202,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String safetyDescriptionField; 
+        private string safetyDescriptionField; 
 
         /// <summary>
         /// Safety information at a specific installatino.
@@ -28213,7 +28302,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -28223,7 +28312,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -28269,7 +28358,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the CrewCount class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CrewCount(Int16 value)
+        public CrewCount(short value)
         {
             this.Value = value;
         }
@@ -28322,7 +28411,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSpecified {
+        public bool TypeSpecified {
             get {
                 return typeSpecifiedField;
             } 
@@ -28332,14 +28421,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean typeSpecifiedField; 
+        private bool typeSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Int16 Value {
+        public short Value {
             get {
                 return ValueField;
             } 
@@ -28349,7 +28438,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16 ValueField; 
+        private short ValueField; 
 
 
         
@@ -28384,7 +28473,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productionOperationInstallationReport", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML -Installation Report Component Schema")]
-    public partial class ProductionOperationInstallationReport : Object, INotifyPropertyChanged
+    public partial class ProductionOperationInstallationReport : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28410,7 +28499,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Total count of beds available on the installation.")]
 		[XmlElement("bedsAvailable")]
-        public Int16? BedsAvailable {
+        public short? BedsAvailable {
             get {
                 return bedsAvailableField;
             } 
@@ -28421,14 +28510,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? bedsAvailableField; 
+        private short? bedsAvailableField; 
 
         /// <summary>
         /// bedsAvailableSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BedsAvailableSpecified {
+        public bool BedsAvailableSpecified {
             get {
                 return bedsAvailableSpecifiedField;
             } 
@@ -28438,7 +28527,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean bedsAvailableSpecifiedField; 
+        private bool bedsAvailableSpecifiedField; 
 
         /// <summary>
         /// The count of personnel on a type of crew. One of the types is all personnel on board.
@@ -28610,7 +28699,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -28620,7 +28709,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -28654,7 +28743,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productionOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The non-contextual content of a WITSML Production Operation object.")]
-    public partial class ProductionOperation : Object, INotifyPropertyChanged
+    public partial class ProductionOperation : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28730,7 +28819,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of report.")]
 		[XmlElement("kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return kindField;
             } 
@@ -28740,7 +28829,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String kindField; 
+        private string kindField; 
 
         /// <summary>
         /// The type of period that is being reported. This value must be consistent with the reporting start and end values.
@@ -28765,7 +28854,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PeriodKindSpecified {
+        public bool PeriodKindSpecified {
             get {
                 return periodKindSpecifiedField;
             } 
@@ -28775,7 +28864,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean periodKindSpecifiedField; 
+        private bool periodKindSpecifiedField; 
 
         /// <summary>
         /// The beginning date and time that the report represents. If you set this property, you must also set DateTimeEnd.
@@ -29020,7 +29109,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IssueDateSpecified {
+        public bool IssueDateSpecified {
             get {
                 return issueDateSpecifiedField;
             } 
@@ -29030,7 +29119,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean issueDateSpecifiedField; 
+        private bool issueDateSpecifiedField; 
 
         /// <summary>
         /// The person or company that issued the report. This may contain the role of the person or company within the context of the report.
@@ -29073,7 +29162,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ApprovalDateSpecified {
+        public bool ApprovalDateSpecified {
             get {
                 return approvalDateSpecifiedField;
             } 
@@ -29083,7 +29172,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean approvalDateSpecifiedField; 
+        private bool approvalDateSpecifiedField; 
 
         /// <summary>
         /// The person or company that approved the report. This may contain the role of the person or company within the context of the report.
@@ -29176,7 +29265,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -29186,8 +29275,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -29219,7 +29322,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productFlowModel", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail.")]
-    public partial class ProductFlowModel : Object, INotifyPropertyChanged
+    public partial class ProductFlowModel : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29229,7 +29332,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the Product Flow Model.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -29239,7 +29342,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The name of the facility which is represented by this model. The name can be qualified by a naming system. This also defines the kind of facility.
@@ -29294,7 +29397,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time of the start of validity for this model.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -29305,14 +29408,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -29322,14 +29425,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time of the termination of validity for this model.
         /// </summary>
 		[Description("The date and time of the termination of validity for this model.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -29340,14 +29443,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -29357,7 +29460,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
@@ -29480,7 +29583,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the model.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -29490,7 +29593,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// A container element that contains elements that are common to all data objects. 
@@ -29535,7 +29638,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -29545,8 +29648,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -29579,7 +29696,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowExternalReference", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A reference to an external port within a different Product Flow Model. This value represents a foreign key from one element to another.")]
-    public partial class ProductFlowExternalReference : Object, INotifyPropertyChanged
+    public partial class ProductFlowExternalReference : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29695,7 +29812,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -29705,7 +29822,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -29740,7 +29857,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowNetwork", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The non-contextual content of a WITSML Product Flow Network object.")]
-    public partial class ProductFlowNetwork : Object, INotifyPropertyChanged
+    public partial class ProductFlowNetwork : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29750,7 +29867,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the Product Flow Network. This must be unique within the context of the overall Product Flow Model.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -29760,7 +29877,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.
@@ -29768,7 +29885,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.")]
 		[XmlElement("planName")]
-        public String PlanName {
+        public string PlanName {
             get {
                 return planNameField;
             } 
@@ -29778,7 +29895,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String planNameField; 
+        private string planNameField; 
 
         /// <summary>
         /// A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation. All other networks represent internal detail and should not be referenced from outside the model. The external ports on the model network represent the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name (i.e., there is a one-to-one correspondence).
@@ -29801,7 +29918,6 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation. All other networks represent internal detail and should not be referenced from outside this model. The external ports on the model network represent the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow Unit.
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside this model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow Unit.")]
         [ComponentElement]
 		[XmlElement("representedUnit")]
@@ -29823,7 +29939,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the network.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -29833,7 +29949,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the Unit (i.e., they are logically the same port).
@@ -29994,7 +30110,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30004,7 +30120,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -30039,7 +30155,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowlExternalPort", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Network External Port Component Schema.")]
-    public partial class ProductFlowlExternalPort : Object, INotifyPropertyChanged
+    public partial class ProductFlowlExternalPort : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30049,7 +30165,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the external port within the context of  the current Product Flow Network.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -30059,7 +30175,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// Defines whether this port is an inlet or outlet. Note that this is a nominal intended direction.
@@ -30084,7 +30200,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the port is an exposed internal port and cannot be used in a connection external to the network. False (\"false\" or \"0\") or not given indicates a normal port.")]
 		[XmlElement("exposed")]
-        public Boolean? Exposed {
+        public bool? Exposed {
             get {
                 return exposedField;
             } 
@@ -30095,14 +30211,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? exposedField; 
+        private bool? exposedField; 
 
         /// <summary>
         /// exposedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ExposedSpecified {
+        public bool ExposedSpecified {
             get {
                 return exposedSpecifiedField;
             } 
@@ -30112,7 +30228,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean exposedSpecifiedField; 
+        private bool exposedSpecifiedField; 
 
         /// <summary>
         /// Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an "exposed" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port. 
@@ -30121,7 +30237,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the  same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an \"exposed\" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port.")]
 		[XmlElement("connectedNode")]
-        public String ConnectedNode {
+        public string ConnectedNode {
             get {
                 return connectedNodeField;
             } 
@@ -30131,7 +30247,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String connectedNodeField; 
+        private string connectedNodeField; 
 
         /// <summary>
         /// A descriptive remark about the port.
@@ -30139,7 +30255,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the port.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -30149,7 +30265,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -30189,7 +30305,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30199,7 +30315,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -30234,7 +30350,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowUnit", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Unit Component Schema.")]
-    public partial class ProductFlowUnit : Object, INotifyPropertyChanged
+    public partial class ProductFlowUnit : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30243,7 +30359,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the Product Flow Unit within the  context of the Product Flow Network.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -30253,7 +30369,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.
@@ -30261,7 +30377,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.")]
 		[XmlElement("planName")]
-        public String PlanName {
+        public string PlanName {
             get {
                 return planNameField;
             } 
@@ -30271,7 +30387,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String planNameField; 
+        private string planNameField; 
 
         /// <summary>
         /// A pointer to the network representing the internal behavior of this unit. The names of the external ports on the internal network must match the names of the ports on this unit. That is they are logically the same ports.
@@ -30439,6 +30555,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the relative coordinate of the unit on a display screen. This is not intended for detailed diagrams. Rather it is intended to allow different applications to present a user view which has a consistent layout.
         /// </summary>
 		[Description("Defines the relative coordinate of the unit on a display screen. This is not intended for detailed diagrams. Rather it is intended to allow different applications to present a user view which has a consistent layout.")]
+        [ComponentElement]
 		[XmlElement("relativeCoordinate")]
         public RelativeCoordinate RelativeCoordinate {
             get {
@@ -30489,7 +30606,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this unit.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -30499,7 +30616,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -30539,7 +30656,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30549,7 +30666,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -30584,7 +30701,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowExpectedUnitProperty", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Defines expected properties of a facility represented by a unit.")]
-    public partial class ProductFlowExpectedUnitProperty : Object, INotifyPropertyChanged
+    public partial class ProductFlowExpectedUnitProperty : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30610,7 +30727,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The \"PRODML Relative Identifier\" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent facility. This identifies a sub-facility which is identified within the context of the parent facilityParent2/facilityParent1/name identification hierarchy. The property will only be expected to be defined for this child and not for the parent.")]
 		[XmlElement("childFacilityIdentifier", DataType="anyURI")]
-        public String ChildFacilityIdentifier {
+        public string ChildFacilityIdentifier {
             get {
                 return childFacilityIdentifierField;
             } 
@@ -30620,11 +30737,12 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String childFacilityIdentifierField; 
+        private string childFacilityIdentifierField; 
 
         /// <summary>
         /// Defines the expected flow and product pairs to be assigned to this unit by a Product Volume report. A set of expected qualifiers can also be defined for each pair. Each unique combination of product, flow and qualifier represents an expected variation of the specified property. This element should only be specified for properties tha represent a flow stream (e.g., volume, pressure).
         /// </summary>
+        [ComponentElement]
         [XmlElement("expectedFlowProduct")]
         public ProductFlowQualifierExpected[] ExpectedFlowProduct {
             get {
@@ -30761,7 +30879,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this property.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -30771,7 +30889,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -30811,7 +30929,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30821,7 +30939,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -30856,7 +30974,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowQualifierExpected", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Defines an expected combination of kinds.")]
-    public partial class ProductFlowQualifierExpected : Object, INotifyPropertyChanged
+    public partial class ProductFlowQualifierExpected : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30900,7 +31018,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ProductSpecified {
+        public bool ProductSpecified {
             get {
                 return productSpecifiedField;
             } 
@@ -30910,7 +31028,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean productSpecifiedField; 
+        private bool productSpecifiedField; 
 
         /// <summary>
         /// The expected kind of qualifier of the flow.
@@ -30980,7 +31098,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30990,7 +31108,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -31115,7 +31233,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowPort", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Port Component Schema.")]
-    public partial class ProductFlowPort : Object, INotifyPropertyChanged
+    public partial class ProductFlowPort : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31125,7 +31243,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the port within the context of the Product Flow Unit.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -31135,7 +31253,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.
@@ -31143,7 +31261,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.")]
 		[XmlElement("planName")]
-        public String PlanName {
+        public string PlanName {
             get {
                 return planNameField;
             } 
@@ -31153,7 +31271,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String planNameField; 
+        private string planNameField; 
 
         /// <summary>
         /// Defines whether this port is an inlet or outlet. This is a nominal intended direction.
@@ -31226,7 +31344,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the port is an exposed internal port and cannot be used in a connection external to the unit. False (\"false\" or \"0\") or not given indicates a normal port.")]
 		[XmlElement("exposed")]
-        public Boolean? Exposed {
+        public bool? Exposed {
             get {
                 return exposedField;
             } 
@@ -31237,14 +31355,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? exposedField; 
+        private bool? exposedField; 
 
         /// <summary>
         /// exposedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ExposedSpecified {
+        public bool ExposedSpecified {
             get {
                 return exposedSpecifiedField;
             } 
@@ -31254,7 +31372,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean exposedSpecifiedField; 
+        private bool exposedSpecifiedField; 
 
         /// <summary>
         /// Defines the node to which this port is connected. A timestamp activates and deactivates the connection. Only one connectedNode should be active at any one point in time. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network. Any node that is internally connected to only one port is presumably a candidate to be connected to an external node. The behavior of ports connected at a common node is as follows: a) There is no pressure drop across the node. All ports connected to the node have the same pressure. That is, there is an assumption of steady state fluid flow. b) Conservation of mass exists across the node. The mass into the node via all connected ports equals the mass out of the node via all connected ports. c) The flow direction of a port connected to the node may be transient. That is, flow direction may change toward any port(s) if the relative internal pressure of the Product Flow Units change and a new steady state is achieved.
@@ -31353,7 +31471,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this port.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -31363,7 +31481,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -31403,7 +31521,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -31413,7 +31531,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -31448,7 +31566,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connectedNode", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Connected Node Component Schema.")]
-    public partial class ConnectedNode : Object, INotifyPropertyChanged
+    public partial class ConnectedNode : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31458,7 +31576,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one node is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
 		[XmlElement("node")]
-        public String Node {
+        public string Node {
             get {
                 return nodeField;
             } 
@@ -31468,7 +31586,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nodeField; 
+        private string nodeField; 
 
         /// <summary>
         /// The name of a network plan. This indicates a planned connection. The connected port must be part of the same plan or be an actual. Not specified indicates an actual connection.
@@ -31476,7 +31594,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned connection. The connected port must be part of the same plan or be an actual. Not specified indicates an actual connection.")]
 		[XmlElement("planName")]
-        public String PlanName {
+        public string PlanName {
             get {
                 return planNameField;
             } 
@@ -31486,14 +31604,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String planNameField; 
+        private string planNameField; 
 
         /// <summary>
         /// The date and time that the connection was activated.
         /// </summary>
 		[Description("The date and time that the connection was activated.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -31504,14 +31622,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -31521,14 +31639,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time that the connection was terminated.
         /// </summary>
 		[Description("The date and time that the connection was terminated.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -31539,14 +31657,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -31556,7 +31674,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// A descriptive remark associated with this connection, possibly including a reason for termination.
@@ -31564,7 +31682,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this connection, possibly including a reason for termination.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -31574,7 +31692,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -31614,7 +31732,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -31624,7 +31742,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -31659,7 +31777,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowExpectedPortProperty", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("WITSML - Product Flow Expected Property Component Schema.")]
-    public partial class ProductFlowExpectedPortProperty : Object, INotifyPropertyChanged
+    public partial class ProductFlowExpectedPortProperty : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31685,7 +31803,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time that the sensor was activated on the port.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -31696,14 +31814,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -31713,14 +31831,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time that the sensor was deactivated on the port.
         /// </summary>
 		[Description("The date and time that the sensor was deactivated on the port.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -31731,14 +31849,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -31748,7 +31866,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// An alternative name for the sensor that will measure the property.
@@ -31852,7 +31970,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this property.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -31862,7 +31980,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -31902,7 +32020,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -31912,7 +32030,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -31947,7 +32065,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowChangeLog", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Documents the point in time where changes were made.")]
-    public partial class ProductFlowChangeLog : Object, INotifyPropertyChanged
+    public partial class ProductFlowChangeLog : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31957,7 +32075,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("A name assigned to the change.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -31967,7 +32085,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The timestamp associated with the change. All changes must use this timestamp.
@@ -31975,7 +32093,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The timestamp associated with the change. All changes must use this timestamp.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -31985,7 +32103,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// A textual reason for the change.
@@ -31993,7 +32111,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A textual reason for the change.")]
 		[XmlElement("reason")]
-        public String Reason {
+        public string Reason {
             get {
                 return reasonField;
             } 
@@ -32003,7 +32121,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String reasonField; 
+        private string reasonField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -32043,7 +32161,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32053,7 +32171,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -32088,7 +32206,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_productFlowNetworkPlan", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A plan to extend an actual network.")]
-    public partial class ProductFlowNetworkPlan : Object, INotifyPropertyChanged
+    public partial class ProductFlowNetworkPlan : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32098,7 +32216,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name assigned to the plan.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -32108,7 +32226,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.
@@ -32116,7 +32234,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -32126,7 +32244,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// A textual description of the purpose of the plan.
@@ -32134,7 +32252,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A textual description of the purpose of the plan.")]
 		[XmlElement("purpose")]
-        public String Purpose {
+        public string Purpose {
             get {
                 return purposeField;
             } 
@@ -32144,7 +32262,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String purposeField; 
+        private string purposeField; 
 
         /// <summary>
         /// Documents that a change occurred at a particular time.
@@ -32214,7 +32332,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32224,7 +32342,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -32258,7 +32376,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidSample", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_fluidSample xsd type.")]
-    public partial class FluidSample : Object, INotifyPropertyChanged
+    public partial class FluidSample : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32268,7 +32386,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the Fluid Sample.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -32278,7 +32396,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -32286,7 +32404,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("sampleBottle")]
-        public String SampleBottle {
+        public string SampleBottle {
             get {
                 return sampleBottleField;
             } 
@@ -32296,7 +32414,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sampleBottleField; 
+        private string sampleBottleField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -32321,7 +32439,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SampleTypeSpecified {
+        public bool SampleTypeSpecified {
             get {
                 return sampleTypeSpecifiedField;
             } 
@@ -32331,7 +32449,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean sampleTypeSpecifiedField; 
+        private bool sampleTypeSpecifiedField; 
 
         /// <summary>
         /// The name of the facility from which the sample was acquired. The name can be qualified by a naming system. This also defines the kind of facility. Common facilities are wells, wellbores within a well, completions within a well.
@@ -32440,7 +32558,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestKindSpecified {
+        public bool TestKindSpecified {
             get {
                 return testKindSpecifiedField;
             } 
@@ -32450,7 +32568,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testKindSpecifiedField; 
+        private bool testKindSpecifiedField; 
 
         /// <summary>
         /// The measured depth of the test in a wellbore.
@@ -32476,7 +32594,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The test identifier.")]
 		[XmlElement("testId")]
-        public String TestId {
+        public string TestId {
             get {
                 return testIdField;
             } 
@@ -32486,7 +32604,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String testIdField; 
+        private string testIdField; 
 
         /// <summary>
         /// The test run number (e.g., for an RFT)
@@ -32494,7 +32612,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The test run number (e.g., for an RFT)")]
 		[XmlElement("testRun")]
-        public String TestRun {
+        public string TestRun {
             get {
                 return testRunField;
             } 
@@ -32504,7 +32622,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String testRunField; 
+        private string testRunField; 
 
         /// <summary>
         /// The name of the company which ran the test.
@@ -32512,7 +32630,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the company which ran the test.")]
 		[XmlElement("testProvider")]
-        public String TestProvider {
+        public string TestProvider {
             get {
                 return testProviderField;
             } 
@@ -32522,7 +32640,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String testProviderField; 
+        private string testProviderField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -32547,7 +32665,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReservoirFluidTypeSpecified {
+        public bool ReservoirFluidTypeSpecified {
             get {
                 return reservoirFluidTypeSpecifiedField;
             } 
@@ -32557,7 +32675,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean reservoirFluidTypeSpecifiedField; 
+        private bool reservoirFluidTypeSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -32582,7 +32700,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AcquisitionDateSpecified {
+        public bool AcquisitionDateSpecified {
             get {
                 return acquisitionDateSpecifiedField;
             } 
@@ -32592,7 +32710,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean acquisitionDateSpecifiedField; 
+        private bool acquisitionDateSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -32672,7 +32790,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("sampleDisposition")]
-        public String SampleDisposition {
+        public string SampleDisposition {
             get {
                 return sampleDispositionField;
             } 
@@ -32682,14 +32800,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sampleDispositionField; 
+        private string sampleDispositionField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("representative")]
-        public Boolean? Representative {
+        public bool? Representative {
             get {
                 return representativeField;
             } 
@@ -32700,14 +32818,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? representativeField; 
+        private bool? representativeField; 
 
         /// <summary>
         /// representativeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RepresentativeSpecified {
+        public bool RepresentativeSpecified {
             get {
                 return representativeSpecifiedField;
             } 
@@ -32717,7 +32835,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean representativeSpecifiedField; 
+        private bool representativeSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -32725,7 +32843,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -32735,7 +32853,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// A container element that contains elements that are common to all data objects. 
@@ -32780,7 +32898,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32790,8 +32908,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -32824,7 +32956,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultContaminant", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultContaminant xsd type.")]
-    public partial class FluidResultContaminant : Object, INotifyPropertyChanged
+    public partial class FluidResultContaminant : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32887,7 +33019,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -32897,7 +33029,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 		/// <summary>
         /// uid property
@@ -32907,7 +33039,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32917,7 +33049,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -32952,7 +33084,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSeparatorTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSeparatorTestStep xsd type.")]
-    public partial class FluidResultSeparatorTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultSeparatorTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32960,7 +33092,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -32971,14 +33103,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -32988,7 +33120,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepTemperature property
@@ -33029,6 +33161,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -33062,6 +33195,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -33113,6 +33247,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilAPIGravity property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilAPIGravity")]
         public DensityMeasure OilAPIGravity {
             get {
@@ -33147,7 +33282,7 @@ namespace Energistics.DataAccess.PRODML131
         /// oilSpecificGravity property
         /// </summary>
         [XmlElement("oilSpecificGravity")]
-        public Double? OilSpecificGravity {
+        public double? OilSpecificGravity {
             get {
                 return oilSpecificGravityField;
             } 
@@ -33159,7 +33294,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? oilSpecificGravityField; 
+        private double? oilSpecificGravityField; 
         private bool oilSpecificGravitySpecified = false; 
 
         /// <summary>
@@ -33231,6 +33366,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilVolume")]
         public VolumeMeasure OilVolume {
             get {
@@ -33265,6 +33401,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("gasVolume")]
         public StandardVolumeMeasure GasVolume {
             get {
@@ -33299,6 +33436,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilShrinkageFactor property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilShrinkageFactor")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
@@ -33333,6 +33471,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stageSeparatorGORStd property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stageSeparatorGORStd")]
         public StandardVolumePerVolumeMeasure StageSeparatorGORStd {
             get {
@@ -33421,7 +33560,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasMolecularWeight")]
-        public Double? GasMolecularWeight {
+        public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
             } 
@@ -33432,14 +33571,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasMolecularWeightField; 
+        private double? gasMolecularWeightField; 
 
         /// <summary>
         /// gasMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasMolecularWeightSpecified {
+        public bool GasMolecularWeightSpecified {
             get {
                 return gasMolecularWeightSpecifiedField;
             } 
@@ -33449,14 +33588,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasMolecularWeightSpecifiedField; 
+        private bool gasMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// gasGravity property
         /// </summary>
 		
 		[XmlElement("gasGravity")]
-        public Double? GasGravity {
+        public double? GasGravity {
             get {
                 return gasGravityField;
             } 
@@ -33467,14 +33606,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityField; 
+        private double? gasGravityField; 
 
         /// <summary>
         /// gasGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravitySpecified {
+        public bool GasGravitySpecified {
             get {
                 return gasGravitySpecifiedField;
             } 
@@ -33484,7 +33623,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravitySpecifiedField; 
+        private bool gasGravitySpecifiedField; 
 
         /// <summary>
         /// gasMassDensity property
@@ -33508,7 +33647,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasZFactor")]
-        public Double? GasZFactor {
+        public double? GasZFactor {
             get {
                 return gasZFactorField;
             } 
@@ -33519,14 +33658,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasZFactorField; 
+        private double? gasZFactorField; 
 
         /// <summary>
         /// gasZFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasZFactorSpecified {
+        public bool GasZFactorSpecified {
             get {
                 return gasZFactorSpecifiedField;
             } 
@@ -33536,7 +33675,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasZFactorSpecifiedField; 
+        private bool gasZFactorSpecifiedField; 
 
         /// <summary>
         /// gasViscosity property
@@ -33577,7 +33716,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -33587,13 +33726,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        public bool? Reservoir {
             get {
                 return reservoirField;
             } 
@@ -33604,7 +33743,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? reservoirField; 
+        private bool? reservoirField; 
         private bool reservoirSpecified = false; 
 
         /// <summary>
@@ -33625,7 +33764,7 @@ namespace Energistics.DataAccess.PRODML131
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
-        public Boolean? Saturated {
+        public bool? Saturated {
             get {
                 return saturatedField;
             } 
@@ -33636,7 +33775,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? saturatedField; 
+        private bool? saturatedField; 
         private bool saturatedSpecified = false; 
 
         /// <summary>
@@ -33656,6 +33795,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -33810,7 +33950,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -33820,7 +33960,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -33908,7 +34048,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultPhaseComposition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultPhaseComposition xsd type.")]
-    public partial class FluidResultPhaseComposition : Object, INotifyPropertyChanged
+    public partial class FluidResultPhaseComposition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33918,7 +34058,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(40)]
         [Description("xxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("componentName")]
-        public String ComponentName {
+        public string ComponentName {
             get {
                 return componentNameField;
             } 
@@ -33928,7 +34068,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String componentNameField; 
+        private string componentNameField; 
 
         /// <summary>
         /// weightPercent property
@@ -33972,7 +34112,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -33982,7 +34122,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -34017,7 +34157,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultCompositeComposition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultCompositeComposition xsd type.")]
-    public partial class FluidResultCompositeComposition : Object, INotifyPropertyChanged
+    public partial class FluidResultCompositeComposition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34026,7 +34166,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(40)]
 		[XmlElement("componentName")]
-        public String ComponentName {
+        public string ComponentName {
             get {
                 return componentNameField;
             } 
@@ -34036,7 +34176,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String componentNameField; 
+        private string componentNameField; 
 
         /// <summary>
         /// weightPercent property
@@ -34077,7 +34217,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("kValue")]
-        public Double? KValue {
+        public double? KValue {
             get {
                 return kValueField;
             } 
@@ -34088,14 +34228,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? kValueField; 
+        private double? kValueField; 
 
         /// <summary>
         /// kValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KValueSpecified {
+        public bool KValueSpecified {
             get {
                 return kValueSpecifiedField;
             } 
@@ -34105,7 +34245,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean kValueSpecifiedField; 
+        private bool kValueSpecifiedField; 
 
 		/// <summary>
         /// uid property
@@ -34115,7 +34255,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -34125,7 +34265,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -34160,7 +34300,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSeparatorTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSeparatorTest xsd type.")]
-    public partial class FluidResultSeparatorTest : Object, INotifyPropertyChanged
+    public partial class FluidResultSeparatorTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34168,7 +34308,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -34179,14 +34319,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -34196,7 +34336,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// shrinkageReference property
@@ -34253,7 +34393,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -34263,7 +34403,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -34340,7 +34480,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -34350,7 +34490,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -34385,7 +34525,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultTransportTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultTransportTestStep xsd type.")]
-    public partial class FluidResultTransportTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultTransportTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34393,7 +34533,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -34404,14 +34544,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -34421,7 +34561,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepTemperature property
@@ -34462,6 +34602,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -34495,6 +34636,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -34599,7 +34741,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("oilMolecularWeight")]
-        public Double? OilMolecularWeight {
+        public double? OilMolecularWeight {
             get {
                 return oilMolecularWeightField;
             } 
@@ -34610,14 +34752,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? oilMolecularWeightField; 
+        private double? oilMolecularWeightField; 
 
         /// <summary>
         /// oilMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OilMolecularWeightSpecified {
+        public bool OilMolecularWeightSpecified {
             get {
                 return oilMolecularWeightSpecifiedField;
             } 
@@ -34627,11 +34769,12 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean oilMolecularWeightSpecifiedField; 
+        private bool oilMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// oilAPIGravity property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilAPIGravity")]
         public DensityMeasure OilAPIGravity {
             get {
@@ -34666,7 +34809,7 @@ namespace Energistics.DataAccess.PRODML131
         /// oilSpecificGravity property
         /// </summary>
         [XmlElement("oilSpecificGravity")]
-        public Double? OilSpecificGravity {
+        public double? OilSpecificGravity {
             get {
                 return oilSpecificGravityField;
             } 
@@ -34678,7 +34821,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? oilSpecificGravityField; 
+        private double? oilSpecificGravityField; 
         private bool oilSpecificGravitySpecified = false; 
 
         /// <summary>
@@ -34769,7 +34912,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasMolecularWeight")]
-        public Double? GasMolecularWeight {
+        public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
             } 
@@ -34780,14 +34923,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasMolecularWeightField; 
+        private double? gasMolecularWeightField; 
 
         /// <summary>
         /// gasMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasMolecularWeightSpecified {
+        public bool GasMolecularWeightSpecified {
             get {
                 return gasMolecularWeightSpecifiedField;
             } 
@@ -34797,14 +34940,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasMolecularWeightSpecifiedField; 
+        private bool gasMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// gasGravity property
         /// </summary>
 		
 		[XmlElement("gasGravity")]
-        public Double? GasGravity {
+        public double? GasGravity {
             get {
                 return gasGravityField;
             } 
@@ -34815,14 +34958,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityField; 
+        private double? gasGravityField; 
 
         /// <summary>
         /// gasGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravitySpecified {
+        public bool GasGravitySpecified {
             get {
                 return gasGravitySpecifiedField;
             } 
@@ -34832,7 +34975,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravitySpecifiedField; 
+        private bool gasGravitySpecifiedField; 
 
         /// <summary>
         /// gasMassDensity property
@@ -34856,7 +34999,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasZFactor")]
-        public Double? GasZFactor {
+        public double? GasZFactor {
             get {
                 return gasZFactorField;
             } 
@@ -34867,14 +35010,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasZFactorField; 
+        private double? gasZFactorField; 
 
         /// <summary>
         /// gasZFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasZFactorSpecified {
+        public bool GasZFactorSpecified {
             get {
                 return gasZFactorSpecifiedField;
             } 
@@ -34884,7 +35027,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasZFactorSpecifiedField; 
+        private bool gasZFactorSpecifiedField; 
 
         /// <summary>
         /// gasCompressibility property
@@ -34959,7 +35102,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -34969,13 +35112,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        public bool? Reservoir {
             get {
                 return reservoirField;
             } 
@@ -34986,7 +35129,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? reservoirField; 
+        private bool? reservoirField; 
         private bool reservoirSpecified = false; 
 
         /// <summary>
@@ -35007,7 +35150,7 @@ namespace Energistics.DataAccess.PRODML131
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
-        public Boolean? Saturated {
+        public bool? Saturated {
             get {
                 return saturatedField;
             } 
@@ -35018,7 +35161,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? saturatedField; 
+        private bool? saturatedField; 
         private bool saturatedSpecified = false; 
 
         /// <summary>
@@ -35038,6 +35181,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -35192,7 +35336,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -35202,7 +35346,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -35237,7 +35381,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultTransportPropertiesTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultTransportPropertiesTest xsd type.")]
-    public partial class FluidResultTransportPropertiesTest : Object, INotifyPropertyChanged
+    public partial class FluidResultTransportPropertiesTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35245,7 +35389,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -35256,14 +35400,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -35273,7 +35417,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// transportTestStep property
@@ -35313,7 +35457,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -35323,7 +35467,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -35358,7 +35502,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultJCurveTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultJCurveTestStep xsd type.")]
-    public partial class FluidResultJCurveTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultJCurveTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35366,7 +35510,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -35377,14 +35521,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -35394,7 +35538,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepPressure property
@@ -35434,6 +35578,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
@@ -35467,6 +35612,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidDropoutPercent property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
@@ -35503,7 +35649,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasMolecularWeight")]
-        public Double? GasMolecularWeight {
+        public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
             } 
@@ -35514,14 +35660,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasMolecularWeightField; 
+        private double? gasMolecularWeightField; 
 
         /// <summary>
         /// gasMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasMolecularWeightSpecified {
+        public bool GasMolecularWeightSpecified {
             get {
                 return gasMolecularWeightSpecifiedField;
             } 
@@ -35531,14 +35677,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasMolecularWeightSpecifiedField; 
+        private bool gasMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// gasGravity property
         /// </summary>
 		
 		[XmlElement("gasGravity")]
-        public Double? GasGravity {
+        public double? GasGravity {
             get {
                 return gasGravityField;
             } 
@@ -35549,14 +35695,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityField; 
+        private double? gasGravityField; 
 
         /// <summary>
         /// gasGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravitySpecified {
+        public bool GasGravitySpecified {
             get {
                 return gasGravitySpecifiedField;
             } 
@@ -35566,7 +35712,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravitySpecifiedField; 
+        private bool gasGravitySpecifiedField; 
 
         /// <summary>
         /// gasFormationVolumeFactorStd property
@@ -35590,7 +35736,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasZFactor")]
-        public Double? GasZFactor {
+        public double? GasZFactor {
             get {
                 return gasZFactorField;
             } 
@@ -35601,14 +35747,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasZFactorField; 
+        private double? gasZFactorField; 
 
         /// <summary>
         /// gasZFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasZFactorSpecified {
+        public bool GasZFactorSpecified {
             get {
                 return gasZFactorSpecifiedField;
             } 
@@ -35618,7 +35764,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasZFactorSpecifiedField; 
+        private bool gasZFactorSpecifiedField; 
 
         /// <summary>
         /// gasViscosity property
@@ -35640,6 +35786,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedVolume")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
@@ -35673,6 +35820,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedRatioStd property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedRatioStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
@@ -35743,7 +35891,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -35753,13 +35901,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        public bool? Reservoir {
             get {
                 return reservoirField;
             } 
@@ -35770,7 +35918,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? reservoirField; 
+        private bool? reservoirField; 
         private bool reservoirSpecified = false; 
 
         /// <summary>
@@ -35791,7 +35939,7 @@ namespace Energistics.DataAccess.PRODML131
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
-        public Boolean? Saturated {
+        public bool? Saturated {
             get {
                 return saturatedField;
             } 
@@ -35802,7 +35950,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? saturatedField; 
+        private bool? saturatedField; 
         private bool saturatedSpecified = false; 
 
         /// <summary>
@@ -35822,6 +35970,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -35976,7 +36125,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -35986,7 +36135,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -36021,7 +36170,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultJCurveTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultJCurveTest xsd type.")]
-    public partial class FluidResultJCurveTest : Object, INotifyPropertyChanged
+    public partial class FluidResultJCurveTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36029,7 +36178,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -36040,14 +36189,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -36057,7 +36206,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// testTemperature property
@@ -36080,6 +36229,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -36113,6 +36263,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -36301,7 +36452,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -36311,7 +36462,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -36346,7 +36497,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultDifferentialLiberationTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultDifferentialLiberationTestStep xsd type.")]
-    public partial class FluidResultDifferentialLiberationTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultDifferentialLiberationTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36354,7 +36505,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -36365,14 +36516,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -36382,7 +36533,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepPressure property
@@ -36473,6 +36624,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilVolume")]
         public VolumeMeasure OilVolume {
             get {
@@ -36506,6 +36658,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilShrinkageFactor property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilShrinkageFactor")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
@@ -36542,7 +36695,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasMolecularWeight")]
-        public Double? GasMolecularWeight {
+        public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
             } 
@@ -36553,14 +36706,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasMolecularWeightField; 
+        private double? gasMolecularWeightField; 
 
         /// <summary>
         /// gasMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasMolecularWeightSpecified {
+        public bool GasMolecularWeightSpecified {
             get {
                 return gasMolecularWeightSpecifiedField;
             } 
@@ -36570,14 +36723,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasMolecularWeightSpecifiedField; 
+        private bool gasMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// gasGravity property
         /// </summary>
 		
 		[XmlElement("gasGravity")]
-        public Double? GasGravity {
+        public double? GasGravity {
             get {
                 return gasGravityField;
             } 
@@ -36588,14 +36741,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityField; 
+        private double? gasGravityField; 
 
         /// <summary>
         /// gasGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravitySpecified {
+        public bool GasGravitySpecified {
             get {
                 return gasGravitySpecifiedField;
             } 
@@ -36605,7 +36758,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravitySpecifiedField; 
+        private bool gasGravitySpecifiedField; 
 
         /// <summary>
         /// gasMassDensity property
@@ -36646,7 +36799,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasZFactor")]
-        public Double? GasZFactor {
+        public double? GasZFactor {
             get {
                 return gasZFactorField;
             } 
@@ -36657,14 +36810,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasZFactorField; 
+        private double? gasZFactorField; 
 
         /// <summary>
         /// gasZFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasZFactorSpecified {
+        public bool GasZFactorSpecified {
             get {
                 return gasZFactorSpecifiedField;
             } 
@@ -36674,7 +36827,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasZFactorSpecifiedField; 
+        private bool gasZFactorSpecifiedField; 
 
         /// <summary>
         /// gasViscosity property
@@ -36783,7 +36936,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -36793,13 +36946,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        public bool? Reservoir {
             get {
                 return reservoirField;
             } 
@@ -36810,7 +36963,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? reservoirField; 
+        private bool? reservoirField; 
         private bool reservoirSpecified = false; 
 
         /// <summary>
@@ -36831,7 +36984,7 @@ namespace Energistics.DataAccess.PRODML131
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
-        public Boolean? Saturated {
+        public bool? Saturated {
             get {
                 return saturatedField;
             } 
@@ -36842,7 +36995,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? saturatedField; 
+        private bool? saturatedField; 
         private bool saturatedSpecified = false; 
 
         /// <summary>
@@ -36862,6 +37015,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -37016,7 +37170,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -37026,7 +37180,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -37061,7 +37215,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultDifferentialLiberationTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultDifferentialLiberationTest xsd type.")]
-    public partial class FluidResultDifferentialLiberationTest : Object, INotifyPropertyChanged
+    public partial class FluidResultDifferentialLiberationTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -37069,7 +37223,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -37080,14 +37234,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -37097,7 +37251,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// testTemperature property
@@ -37120,6 +37274,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -37153,6 +37308,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -37256,7 +37412,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -37266,7 +37422,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -37301,7 +37457,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultCvdTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultCvdTestStep xsd type.")]
-    public partial class FluidResultCvdTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultCvdTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -37309,7 +37465,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -37320,14 +37476,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -37337,7 +37493,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepPressure property
@@ -37377,6 +37533,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
@@ -37410,6 +37567,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidDropoutPercent property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
@@ -37446,7 +37604,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasMolecularWeight")]
-        public Double? GasMolecularWeight {
+        public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
             } 
@@ -37457,14 +37615,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasMolecularWeightField; 
+        private double? gasMolecularWeightField; 
 
         /// <summary>
         /// gasMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasMolecularWeightSpecified {
+        public bool GasMolecularWeightSpecified {
             get {
                 return gasMolecularWeightSpecifiedField;
             } 
@@ -37474,14 +37632,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasMolecularWeightSpecifiedField; 
+        private bool gasMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// gasGravity property
         /// </summary>
 		
 		[XmlElement("gasGravity")]
-        public Double? GasGravity {
+        public double? GasGravity {
             get {
                 return gasGravityField;
             } 
@@ -37492,14 +37650,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityField; 
+        private double? gasGravityField; 
 
         /// <summary>
         /// gasGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravitySpecified {
+        public bool GasGravitySpecified {
             get {
                 return gasGravitySpecifiedField;
             } 
@@ -37509,7 +37667,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravitySpecifiedField; 
+        private bool gasGravitySpecifiedField; 
 
         /// <summary>
         /// gasFormationVolumeFactorStd property
@@ -37533,7 +37691,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasZFactor")]
-        public Double? GasZFactor {
+        public double? GasZFactor {
             get {
                 return gasZFactorField;
             } 
@@ -37544,14 +37702,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasZFactorField; 
+        private double? gasZFactorField; 
 
         /// <summary>
         /// gasZFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasZFactorSpecified {
+        public bool GasZFactorSpecified {
             get {
                 return gasZFactorSpecifiedField;
             } 
@@ -37561,7 +37719,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasZFactorSpecifiedField; 
+        private bool gasZFactorSpecifiedField; 
 
         /// <summary>
         /// gasViscosity property
@@ -37583,6 +37741,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedVolume")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
@@ -37616,6 +37775,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedRatioStd property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedRatioStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
@@ -37652,7 +37812,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -37662,13 +37822,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        public bool? Reservoir {
             get {
                 return reservoirField;
             } 
@@ -37679,7 +37839,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? reservoirField; 
+        private bool? reservoirField; 
         private bool reservoirSpecified = false; 
 
         /// <summary>
@@ -37700,7 +37860,7 @@ namespace Energistics.DataAccess.PRODML131
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
-        public Boolean? Saturated {
+        public bool? Saturated {
             get {
                 return saturatedField;
             } 
@@ -37711,7 +37871,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? saturatedField; 
+        private bool? saturatedField; 
         private bool saturatedSpecified = false; 
 
         /// <summary>
@@ -37731,6 +37891,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -37885,7 +38046,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -37895,7 +38056,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -37930,7 +38091,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultConstantVolumeDepletionTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultConstantVolumeDepletionTest xsd type.")]
-    public partial class FluidResultConstantVolumeDepletionTest : Object, INotifyPropertyChanged
+    public partial class FluidResultConstantVolumeDepletionTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -37938,7 +38099,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -37949,14 +38110,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -37966,7 +38127,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// testTemperature property
@@ -37989,6 +38150,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -38022,6 +38184,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -38143,7 +38306,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -38153,7 +38316,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -38188,7 +38351,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultCceTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultCceTestStep xsd type.")]
-    public partial class FluidResultCceTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultCceTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38196,7 +38359,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -38207,14 +38370,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -38224,7 +38387,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepPressure property
@@ -38298,6 +38461,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// totalVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("totalVolume")]
         public VolumeMeasure TotalVolume {
             get {
@@ -38331,6 +38495,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
@@ -38364,6 +38529,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidDropoutPercent property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
@@ -38464,7 +38630,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("gasZFactor")]
-        public Double? GasZFactor {
+        public double? GasZFactor {
             get {
                 return gasZFactorField;
             } 
@@ -38475,14 +38641,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasZFactorField; 
+        private double? gasZFactorField; 
 
         /// <summary>
         /// gasZFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasZFactorSpecified {
+        public bool GasZFactorSpecified {
             get {
                 return gasZFactorSpecifiedField;
             } 
@@ -38492,7 +38658,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasZFactorSpecifiedField; 
+        private bool gasZFactorSpecifiedField; 
 
         /// <summary>
         /// gasCompressibility property
@@ -38533,7 +38699,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("yFactor")]
-        public Double? YFactor {
+        public double? YFactor {
             get {
                 return yFactorField;
             } 
@@ -38544,14 +38710,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? yFactorField; 
+        private double? yFactorField; 
 
         /// <summary>
         /// yFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean YFactorSpecified {
+        public bool YFactorSpecified {
             get {
                 return yFactorSpecifiedField;
             } 
@@ -38561,14 +38727,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean yFactorSpecifiedField; 
+        private bool yFactorSpecifiedField; 
 
         /// <summary>
         /// comment property
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -38578,13 +38744,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
-        public Boolean? Reservoir {
+        public bool? Reservoir {
             get {
                 return reservoirField;
             } 
@@ -38595,7 +38761,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? reservoirField; 
+        private bool? reservoirField; 
         private bool reservoirSpecified = false; 
 
         /// <summary>
@@ -38616,7 +38782,7 @@ namespace Energistics.DataAccess.PRODML131
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
-        public Boolean? Saturated {
+        public bool? Saturated {
             get {
                 return saturatedField;
             } 
@@ -38627,7 +38793,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? saturatedField; 
+        private bool? saturatedField; 
         private bool saturatedSpecified = false; 
 
         /// <summary>
@@ -38647,6 +38813,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -38801,7 +38968,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -38811,7 +38978,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -38846,7 +39013,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultConstantCompositionExpansionTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultConstantCompositionExpansionTest xsd type.")]
-    public partial class FluidResultConstantCompositionExpansionTest : Object, INotifyPropertyChanged
+    public partial class FluidResultConstantCompositionExpansionTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38854,7 +39021,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -38865,14 +39032,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -38882,7 +39049,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// testTemperature property
@@ -38905,6 +39072,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -38938,6 +39106,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -39058,7 +39227,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -39068,7 +39237,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -39103,7 +39272,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSaturationTestStep", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSaturationTestStep xsd type.")]
-    public partial class FluidResultSaturationTestStep : Object, INotifyPropertyChanged
+    public partial class FluidResultSaturationTestStep : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -39111,7 +39280,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
 		[XmlElement("stepNumber")]
-        public Int16? StepNumber {
+        public short? StepNumber {
             get {
                 return stepNumberField;
             } 
@@ -39122,14 +39291,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? stepNumberField; 
+        private short? stepNumberField; 
 
         /// <summary>
         /// stepNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StepNumberSpecified {
+        public bool StepNumberSpecified {
             get {
                 return stepNumberSpecifiedField;
             } 
@@ -39139,7 +39308,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean stepNumberSpecifiedField; 
+        private bool stepNumberSpecifiedField; 
 
         /// <summary>
         /// stepTemperature property
@@ -39162,6 +39331,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -39195,6 +39365,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -39265,7 +39436,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -39275,7 +39446,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 		/// <summary>
         /// uid property
@@ -39285,7 +39456,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -39295,7 +39466,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -39330,7 +39501,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultSaturationTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultSaturationTest xsd type.")]
-    public partial class FluidResultSaturationTest : Object, INotifyPropertyChanged
+    public partial class FluidResultSaturationTest : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -39338,7 +39509,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxx")]
 		[XmlElement("testNumber")]
-        public Int16? TestNumber {
+        public short? TestNumber {
             get {
                 return testNumberField;
             } 
@@ -39349,14 +39520,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? testNumberField; 
+        private short? testNumberField; 
 
         /// <summary>
         /// testNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return testNumberSpecifiedField;
             } 
@@ -39366,7 +39537,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean testNumberSpecifiedField; 
+        private bool testNumberSpecifiedField; 
 
         /// <summary>
         /// saturationTestStep property
@@ -39406,7 +39577,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -39416,7 +39587,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -39462,7 +39633,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Initializes a new instance of the BinaryInteractionCoefficient class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public BinaryInteractionCoefficient(Double value)
+        public BinaryInteractionCoefficient(double value)
         {
             this.Value = value;
         }
@@ -39482,7 +39653,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(40)]
         [XmlAttribute("referenceComponent")]
 		
-        public String ReferenceComponent {
+        public string ReferenceComponent {
             get {
                 return referenceComponentField;
             } 
@@ -39492,14 +39663,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String referenceComponentField; 
+        private string referenceComponentField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -39509,7 +39680,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -39544,7 +39715,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluidResultComposition", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This class represents the cs_fluidResultComposition xsd type.")]
-    public partial class FluidResultComposition : Object, INotifyPropertyChanged
+    public partial class FluidResultComposition : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -39553,7 +39724,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the component is the  primary component in the composition.  False (\"false\" or \"0\") or not given indicates that this is not a primary component.")]
 		[XmlElement("isPrimary")]
-        public Boolean? IsPrimary {
+        public bool? IsPrimary {
             get {
                 return isPrimaryField;
             } 
@@ -39563,7 +39734,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? isPrimaryField; 
+        private bool? isPrimaryField; 
 
         /// <summary>
         /// componentName property
@@ -39571,7 +39742,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
 		[XmlElement("componentName")]
-        public String ComponentName {
+        public string ComponentName {
             get {
                 return componentNameField;
             } 
@@ -39581,7 +39752,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String componentNameField; 
+        private string componentNameField; 
 
         /// <summary>
         /// componentBaseKind property
@@ -39606,7 +39777,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ComponentBaseKindSpecified {
+        public bool ComponentBaseKindSpecified {
             get {
                 return componentBaseKindSpecifiedField;
             } 
@@ -39616,7 +39787,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean componentBaseKindSpecifiedField; 
+        private bool componentBaseKindSpecifiedField; 
 
         /// <summary>
         /// componentKind property
@@ -39641,7 +39812,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ComponentKindSpecified {
+        public bool ComponentKindSpecified {
             get {
                 return componentKindSpecifiedField;
             } 
@@ -39651,14 +39822,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean componentKindSpecifiedField; 
+        private bool componentKindSpecifiedField; 
 
         /// <summary>
         /// molecularWeight property
         /// </summary>
 		
 		[XmlElement("molecularWeight")]
-        public Double? MolecularWeight {
+        public double? MolecularWeight {
             get {
                 return molecularWeightField;
             } 
@@ -39669,14 +39840,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? molecularWeightField; 
+        private double? molecularWeightField; 
 
         /// <summary>
         /// molecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MolecularWeightSpecified {
+        public bool MolecularWeightSpecified {
             get {
                 return molecularWeightSpecifiedField;
             } 
@@ -39686,7 +39857,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean molecularWeightSpecifiedField; 
+        private bool molecularWeightSpecifiedField; 
 
         /// <summary>
         /// weightPercent property
@@ -39727,7 +39898,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("specificGravity")]
-        public Double? SpecificGravity {
+        public double? SpecificGravity {
             get {
                 return specificGravityField;
             } 
@@ -39738,14 +39909,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? specificGravityField; 
+        private double? specificGravityField; 
 
         /// <summary>
         /// specificGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SpecificGravitySpecified {
+        public bool SpecificGravitySpecified {
             get {
                 return specificGravitySpecifiedField;
             } 
@@ -39755,7 +39926,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean specificGravitySpecifiedField; 
+        private bool specificGravitySpecifiedField; 
 
         /// <summary>
         /// boilingPoint property
@@ -39830,7 +40001,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("acentricFactor")]
-        public Double? AcentricFactor {
+        public double? AcentricFactor {
             get {
                 return acentricFactorField;
             } 
@@ -39841,14 +40012,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? acentricFactorField; 
+        private double? acentricFactorField; 
 
         /// <summary>
         /// acentricFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AcentricFactorSpecified {
+        public bool AcentricFactorSpecified {
             get {
                 return acentricFactorSpecifiedField;
             } 
@@ -39858,7 +40029,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean acentricFactorSpecifiedField; 
+        private bool acentricFactorSpecifiedField; 
 
         /// <summary>
         /// volumeTranslationFactor property
@@ -39882,7 +40053,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("alphaShapeFactor")]
-        public Double? AlphaShapeFactor {
+        public double? AlphaShapeFactor {
             get {
                 return alphaShapeFactorField;
             } 
@@ -39893,14 +40064,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? alphaShapeFactorField; 
+        private double? alphaShapeFactorField; 
 
         /// <summary>
         /// alphaShapeFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AlphaShapeFactorSpecified {
+        public bool AlphaShapeFactorSpecified {
             get {
                 return alphaShapeFactorSpecifiedField;
             } 
@@ -39910,14 +40081,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean alphaShapeFactorSpecifiedField; 
+        private bool alphaShapeFactorSpecifiedField; 
 
         /// <summary>
         /// watsonKExponent property
         /// </summary>
 		
 		[XmlElement("watsonKExponent")]
-        public Double? WatsonKExponent {
+        public double? WatsonKExponent {
             get {
                 return watsonKExponentField;
             } 
@@ -39928,14 +40099,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? watsonKExponentField; 
+        private double? watsonKExponentField; 
 
         /// <summary>
         /// watsonKExponentSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean WatsonKExponentSpecified {
+        public bool WatsonKExponentSpecified {
             get {
                 return watsonKExponentSpecifiedField;
             } 
@@ -39945,14 +40116,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean watsonKExponentSpecifiedField; 
+        private bool watsonKExponentSpecifiedField; 
 
         /// <summary>
         /// splitCount property
         /// </summary>
 		
 		[XmlElement("splitCount")]
-        public Int16? SplitCount {
+        public short? SplitCount {
             get {
                 return splitCountField;
             } 
@@ -39963,14 +40134,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? splitCountField; 
+        private short? splitCountField; 
 
         /// <summary>
         /// splitCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SplitCountSpecified {
+        public bool SplitCountSpecified {
             get {
                 return splitCountSpecifiedField;
             } 
@@ -39980,14 +40151,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean splitCountSpecifiedField; 
+        private bool splitCountSpecifiedField; 
 
         /// <summary>
         /// plusMinimumMolecularWeight property
         /// </summary>
 		
 		[XmlElement("plusMinimumMolecularWeight")]
-        public Double? PlusMinimumMolecularWeight {
+        public double? PlusMinimumMolecularWeight {
             get {
                 return plusMinimumMolecularWeightField;
             } 
@@ -39998,14 +40169,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? plusMinimumMolecularWeightField; 
+        private double? plusMinimumMolecularWeightField; 
 
         /// <summary>
         /// plusMinimumMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PlusMinimumMolecularWeightSpecified {
+        public bool PlusMinimumMolecularWeightSpecified {
             get {
                 return plusMinimumMolecularWeightSpecifiedField;
             } 
@@ -40015,14 +40186,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean plusMinimumMolecularWeightSpecifiedField; 
+        private bool plusMinimumMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// plusMaximumMolecularWeight property
         /// </summary>
 		
 		[XmlElement("plusMaximumMolecularWeight")]
-        public Double? PlusMaximumMolecularWeight {
+        public double? PlusMaximumMolecularWeight {
             get {
                 return plusMaximumMolecularWeightField;
             } 
@@ -40033,14 +40204,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? plusMaximumMolecularWeightField; 
+        private double? plusMaximumMolecularWeightField; 
 
         /// <summary>
         /// plusMaximumMolecularWeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PlusMaximumMolecularWeightSpecified {
+        public bool PlusMaximumMolecularWeightSpecified {
             get {
                 return plusMaximumMolecularWeightSpecifiedField;
             } 
@@ -40050,7 +40221,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean plusMaximumMolecularWeightSpecifiedField; 
+        private bool plusMaximumMolecularWeightSpecifiedField; 
 
         /// <summary>
         /// rvp property
@@ -40122,7 +40293,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		
 		[XmlElement("calculated")]
-        public Boolean? Calculated {
+        public bool? Calculated {
             get {
                 return calculatedField;
             } 
@@ -40133,14 +40304,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? calculatedField; 
+        private bool? calculatedField; 
 
         /// <summary>
         /// calculatedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CalculatedSpecified {
+        public bool CalculatedSpecified {
             get {
                 return calculatedSpecifiedField;
             } 
@@ -40150,7 +40321,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean calculatedSpecifiedField; 
+        private bool calculatedSpecifiedField; 
 
 		/// <summary>
         /// uid property
@@ -40160,7 +40331,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -40170,7 +40341,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -40230,7 +40401,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
 		[XmlElement("source")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -40240,14 +40411,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// purpose property
         /// </summary>
 		[StringLength(256)]
 		[XmlElement("purpose")]
-        public String Purpose {
+        public string Purpose {
             get {
                 return purposeField;
             } 
@@ -40257,7 +40428,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String purposeField; 
+        private string purposeField; 
 
 
         
@@ -40291,7 +40462,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidAnalysisResult", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_fluidAnalysisResult xsd type.")]
-    public partial class FluidAnalysisResult : Object, INotifyPropertyChanged
+    public partial class FluidAnalysisResult : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40300,7 +40471,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Human recognizable context for the fluid sample that was analyzed.")]
 		[XmlElement("nameFluidSample")]
-        public String NameFluidSample {
+        public string NameFluidSample {
             get {
                 return nameFluidSampleField;
             } 
@@ -40310,7 +40481,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameFluidSampleField; 
+        private string nameFluidSampleField; 
 
         /// <summary>
         /// Human recognizable context for the fluid analysis that produced this result. 
@@ -40318,7 +40489,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Human recognizable context for the fluid analysis that produced this result.")]
 		[XmlElement("nameFluidAnalysis")]
-        public String NameFluidAnalysis {
+        public string NameFluidAnalysis {
             get {
                 return nameFluidAnalysisField;
             } 
@@ -40328,7 +40499,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameFluidAnalysisField; 
+        private string nameFluidAnalysisField; 
 
         /// <summary>
         /// The name of the Fluid Analysis Result.
@@ -40337,7 +40508,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the Fluid Analysis Result.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -40347,7 +40518,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -40498,7 +40669,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("gasGravityMeasured")]
-        public Double? GasGravityMeasured {
+        public double? GasGravityMeasured {
             get {
                 return gasGravityMeasuredField;
             } 
@@ -40509,14 +40680,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityMeasuredField; 
+        private double? gasGravityMeasuredField; 
 
         /// <summary>
         /// gasGravityMeasuredSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravityMeasuredSpecified {
+        public bool GasGravityMeasuredSpecified {
             get {
                 return gasGravityMeasuredSpecifiedField;
             } 
@@ -40526,14 +40697,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravityMeasuredSpecifiedField; 
+        private bool gasGravityMeasuredSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("gasGravityCorrected")]
-        public Double? GasGravityCorrected {
+        public double? GasGravityCorrected {
             get {
                 return gasGravityCorrectedField;
             } 
@@ -40544,14 +40715,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? gasGravityCorrectedField; 
+        private double? gasGravityCorrectedField; 
 
         /// <summary>
         /// gasGravityCorrectedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GasGravityCorrectedSpecified {
+        public bool GasGravityCorrectedSpecified {
             get {
                 return gasGravityCorrectedSpecifiedField;
             } 
@@ -40561,14 +40732,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean gasGravityCorrectedSpecifiedField; 
+        private bool gasGravityCorrectedSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("h2oGravityMeasured")]
-        public Double? H2oGravityMeasured {
+        public double? H2oGravityMeasured {
             get {
                 return h2oGravityMeasuredField;
             } 
@@ -40579,14 +40750,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? h2oGravityMeasuredField; 
+        private double? h2oGravityMeasuredField; 
 
         /// <summary>
         /// h2oGravityMeasuredSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean H2oGravityMeasuredSpecified {
+        public bool H2oGravityMeasuredSpecified {
             get {
                 return h2oGravityMeasuredSpecifiedField;
             } 
@@ -40596,14 +40767,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean h2oGravityMeasuredSpecifiedField; 
+        private bool h2oGravityMeasuredSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("h2oGravityCorrected")]
-        public Double? H2oGravityCorrected {
+        public double? H2oGravityCorrected {
             get {
                 return h2oGravityCorrectedField;
             } 
@@ -40614,14 +40785,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? h2oGravityCorrectedField; 
+        private double? h2oGravityCorrectedField; 
 
         /// <summary>
         /// h2oGravityCorrectedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean H2oGravityCorrectedSpecified {
+        public bool H2oGravityCorrectedSpecified {
             get {
                 return h2oGravityCorrectedSpecifiedField;
             } 
@@ -40631,7 +40802,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean h2oGravityCorrectedSpecifiedField; 
+        private bool h2oGravityCorrectedSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -40782,7 +40953,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EosMOdelSpecified {
+        public bool EosMOdelSpecified {
             get {
                 return eosMOdelSpecifiedField;
             } 
@@ -40792,7 +40963,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean eosMOdelSpecifiedField; 
+        private bool eosMOdelSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -40800,7 +40971,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("analysisDescription")]
-        public String AnalysisDescription {
+        public string AnalysisDescription {
             get {
                 return analysisDescriptionField;
             } 
@@ -40810,7 +40981,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String analysisDescriptionField; 
+        private string analysisDescriptionField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -40818,7 +40989,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("analysisPurpose")]
-        public String AnalysisPurpose {
+        public string AnalysisPurpose {
             get {
                 return analysisPurposeField;
             } 
@@ -40828,7 +40999,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String analysisPurposeField; 
+        private string analysisPurposeField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -40881,6 +41052,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("constantCompositionExpansionTest")]
         public FluidResultConstantCompositionExpansionTest ConstantCompositionExpansionTest {
             get {
@@ -40913,6 +41085,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("constantVolumeDepletionTest")]
         public FluidResultConstantVolumeDepletionTest ConstantVolumeDepletionTest {
             get {
@@ -40945,6 +41118,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("differentialLiberationTest")]
         public FluidResultDifferentialLiberationTest DifferentialLiberationTest {
             get {
@@ -40977,6 +41151,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("jCurveTest")]
         public FluidResultJCurveTest JCurveTest {
             get {
@@ -41009,6 +41184,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("saturationTest")]
         public FluidResultSaturationTest SaturationTest {
             get {
@@ -41041,6 +41217,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("separatorTest")]
         public FluidResultSeparatorTest SeparatorTest {
             get {
@@ -41073,6 +41250,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("transportPropertiesTest")]
         public FluidResultTransportPropertiesTest TransportPropertiesTest {
             get {
@@ -41176,7 +41354,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the Fluid Sample that was analyzed.")]
         [XmlAttribute("uidFluidSample")]
 		
-        public String UidFluidSample {
+        public string UidFluidSample {
             get {
                 return uidFluidSampleField;
             } 
@@ -41186,7 +41364,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidFluidSampleField; 
+        private string uidFluidSampleField; 
 
 		/// <summary>
         /// Unique identifier for the Fluid Analysis that produced this result.
@@ -41196,7 +41374,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the Fluid Analysis that produced this result.")]
         [XmlAttribute("uidFluidAnalysis")]
 		
-        public String UidFluidAnalysis {
+        public string UidFluidAnalysis {
             get {
                 return uidFluidAnalysisField;
             } 
@@ -41206,7 +41384,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidFluidAnalysisField; 
+        private string uidFluidAnalysisField; 
 
 		/// <summary>
         /// uid property
@@ -41216,7 +41394,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -41226,8 +41404,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -41259,7 +41451,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidAnalysis", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("This class represents the obj_fluidAnalysis xsd type.")]
-    public partial class FluidAnalysis : Object, INotifyPropertyChanged
+    public partial class FluidAnalysis : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -41269,7 +41461,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of the Fluid Analysis.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -41279,7 +41471,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -41318,7 +41510,7 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
         [XmlElement("laboratorybAnalysisKind")]
-        public String LaboratorybAnalysisKind {
+        public string LaboratorybAnalysisKind {
             get {
                 return laboratorybAnalysisKindField;
             } 
@@ -41330,7 +41522,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String laboratorybAnalysisKindField; 
+        private string laboratorybAnalysisKindField; 
         private bool laboratorybAnalysisKindSpecified = false; 
 
         /// <summary>
@@ -41371,7 +41563,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AnalysisdDateSpecified {
+        public bool AnalysisdDateSpecified {
             get {
                 return analysisdDateSpecifiedField;
             } 
@@ -41381,7 +41573,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean analysisdDateSpecifiedField; 
+        private bool analysisdDateSpecifiedField; 
 
         /// <summary>
         /// The name of the application that was run by the user.
@@ -41389,7 +41581,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the application that was run by the user.")]
 		[XmlElement("applicationName")]
-        public String ApplicationName {
+        public string ApplicationName {
             get {
                 return applicationNameField;
             } 
@@ -41399,7 +41591,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String applicationNameField; 
+        private string applicationNameField; 
 
         /// <summary>
         /// The version of the application that was run by the user.
@@ -41407,7 +41599,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The version of the application that was run by the user.")]
 		[XmlElement("applicationVersion")]
-        public String ApplicationVersion {
+        public string ApplicationVersion {
             get {
                 return applicationVersionField;
             } 
@@ -41417,7 +41609,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String applicationVersionField; 
+        private string applicationVersionField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -41425,7 +41617,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("analysisCompany")]
-        public String AnalysisCompany {
+        public string AnalysisCompany {
             get {
                 return analysisCompanyField;
             } 
@@ -41435,7 +41627,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String analysisCompanyField; 
+        private string analysisCompanyField; 
 
         /// <summary>
         /// The name of the analyst or user who is responsible for the results. 
@@ -41443,7 +41635,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The name of the analyst or user who is responsible for the results.")]
 		[XmlElement("personName")]
-        public String PersonName {
+        public string PersonName {
             get {
                 return personNameField;
             } 
@@ -41453,7 +41645,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String personNameField; 
+        private string personNameField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -41461,7 +41653,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("reportIdentifier")]
-        public String ReportIdentifier {
+        public string ReportIdentifier {
             get {
                 return reportIdentifierField;
             } 
@@ -41471,7 +41663,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String reportIdentifierField; 
+        private string reportIdentifierField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -41496,7 +41688,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReportDateSpecified {
+        public bool ReportDateSpecified {
             get {
                 return reportDateSpecifiedField;
             } 
@@ -41506,7 +41698,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean reportDateSpecifiedField; 
+        private bool reportDateSpecifiedField; 
 
         /// <summary>
         /// xxxxxxxxxxxxxxxx
@@ -41514,7 +41706,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
 		[XmlElement("reportLocation")]
-        public String ReportLocation {
+        public string ReportLocation {
             get {
                 return reportLocationField;
             } 
@@ -41524,7 +41716,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String reportLocationField; 
+        private string reportLocationField; 
 
         /// <summary>
         /// A container element that contains elements that are common to all data objects. 
@@ -41569,7 +41761,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -41579,8 +41771,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -41613,7 +41819,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberOTDR", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("This records the result arrays along with context information for an Optical Time Domain Reflectometry (OTDR) survey. The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber. The actual data values are recorded in a OTDR file and/or image file, which are referenced in subelements.")]
-    public partial class FiberOTDR : Object, INotifyPropertyChanged
+    public partial class FiberOTDR : Object, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -41623,7 +41829,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name for this OTDR.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -41633,7 +41839,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The reason the OTDR test was run. The three main reasons are pre-installation' which is before the installation of the fiber; 'post-installation' which is used to validate a successful fiber installation; and 'DTS run' a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.
@@ -41658,7 +41864,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReasonForRunSpecified {
+        public bool ReasonForRunSpecified {
             get {
                 return reasonForRunSpecifiedField;
             } 
@@ -41668,7 +41874,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean reasonForRunSpecifiedField; 
+        private bool reasonForRunSpecifiedField; 
 
         /// <summary>
         /// The dateTime of the run.
@@ -41676,7 +41882,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The dateTime of the run.")]
 		[XmlElement("dTimRun")]
-        public DateTime? DateTimeRun {
+        public Timestamp? DateTimeRun {
             get {
                 return dTimRunField;
             } 
@@ -41686,7 +41892,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimRunField; 
+        private Timestamp? dTimRunField; 
 
         /// <summary>
         /// A reference to the external file used to record the OTDR data. Note this file will not be in an Energistics format but likely in a special OTDR format.
@@ -41873,7 +42079,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -41883,7 +42089,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -41991,7 +42197,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name for the item of equipment.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -42001,7 +42207,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The manufacturer for this item of equipment.
@@ -42009,7 +42215,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The manufacturer for this item of equipment.")]
 		[XmlElement("manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return manufacturerField;
             } 
@@ -42019,7 +42225,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String manufacturerField; 
+        private string manufacturerField; 
 
         /// <summary>
         /// Date when the equipment (e.g. instrument box) was manufactured
@@ -42044,7 +42250,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ManufacturingDateSpecified {
+        public bool ManufacturingDateSpecified {
             get {
                 return manufacturingDateSpecifiedField;
             } 
@@ -42054,7 +42260,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean manufacturingDateSpecifiedField; 
+        private bool manufacturingDateSpecifiedField; 
 
         /// <summary>
         /// The type of equipment. This might include the model type.
@@ -42062,7 +42268,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of equipment. This might include the model type.")]
 		[XmlElement("type")]
-        public String Type {
+        public string Type {
             get {
                 return typeField;
             } 
@@ -42072,7 +42278,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String typeField; 
+        private string typeField; 
 
         /// <summary>
         /// Contact details for the company/person supplying the equipment. 
@@ -42115,7 +42321,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SupplyDateSpecified {
+        public bool SupplyDateSpecified {
             get {
                 return supplyDateSpecifiedField;
             } 
@@ -42125,7 +42331,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean supplyDateSpecifiedField; 
+        private bool supplyDateSpecifiedField; 
 
         /// <summary>
         /// The model number (alphanumeric) that is used by the supplier to reference the type of fiber that is supplied to the user.
@@ -42133,7 +42339,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The model number (alphanumeric) that is used by the supplier to reference the type of fiber that is supplied to the user.")]
 		[XmlElement("supplierModelNumber")]
-        public String SupplierModelNumber {
+        public string SupplierModelNumber {
             get {
                 return supplierModelNumberField;
             } 
@@ -42143,7 +42349,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String supplierModelNumberField; 
+        private string supplierModelNumberField; 
 
         /// <summary>
         /// Latest known version of the software/firmware that is running in the equipment
@@ -42151,7 +42357,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("Latest known version of the software/firmware that is running in the equipment")]
 		[XmlElement("softwareVersion")]
-        public String SoftwareVersion {
+        public string SoftwareVersion {
             get {
                 return softwareVersionField;
             } 
@@ -42161,7 +42367,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String softwareVersionField; 
+        private string softwareVersionField; 
 
         /// <summary>
         /// A descriptive remark about the equipment (e.g. optical fiber)
@@ -42169,7 +42375,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the equipment (e.g. optical fiber)")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -42179,7 +42385,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -42219,7 +42425,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberCommon", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A specialization of the equipment class containing information on reflectance, loss and reason for decommissioning, from which all equipment in the optical path inherits.")]
-    public partial class FiberCommon : DtsEquipment, INotifyPropertyChanged
+    public partial class FiberCommon : DtsEquipment, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42264,7 +42470,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Any remarks that help understand why the optical fiber is no longer in use.")]
 		[XmlElement("reasonForDecommissioning")]
-        public String ReasonForDecommissioning {
+        public string ReasonForDecommissioning {
             get {
                 return reasonForDecommissioningField;
             } 
@@ -42274,7 +42480,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String reasonForDecommissioningField; 
+        private string reasonForDecommissioningField; 
 
 		/// <summary>
         /// uid property
@@ -42284,7 +42490,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -42294,7 +42500,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -42310,7 +42516,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberTerminator", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The terminator of the optical path. This may be a component (in the case of a single ended fiber installation), or it may be a connection back into the instrument box in the case of a double ended fiber installation.")]
-    public partial class FiberTerminator : FiberCommon, INotifyPropertyChanged
+    public partial class FiberTerminator : FiberCommon, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42345,7 +42551,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberConnection", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A connection component within the optical path.")]
-    public partial class FiberConnection : FiberCommon, INotifyPropertyChanged
+    public partial class FiberConnection : FiberCommon, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42417,7 +42623,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The uid of this object.")]
         [XmlAttribute("connectionID")]
 		
-        public String ConnectionID {
+        public string ConnectionID {
             get {
                 return connectionIDField;
             } 
@@ -42427,7 +42633,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String connectionIDField; 
+        private string connectionIDField; 
 
 
     } //here
@@ -42443,7 +42649,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberSplice", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A splice component within the optical path.")]
-    public partial class FiberSplice : FiberCommon, INotifyPropertyChanged
+    public partial class FiberSplice : FiberCommon, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42487,7 +42693,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PressureRatingSpecified {
+        public bool PressureRatingSpecified {
             get {
                 return pressureRatingSpecifiedField;
             } 
@@ -42497,7 +42703,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean pressureRatingSpecifiedField; 
+        private bool pressureRatingSpecifiedField; 
 
         /// <summary>
         /// The measurement of the bend on the splice.
@@ -42522,7 +42728,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BendAngleSpecified {
+        public bool BendAngleSpecified {
             get {
                 return bendAngleSpecifiedField;
             } 
@@ -42532,14 +42738,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean bendAngleSpecifiedField; 
+        private bool bendAngleSpecifiedField; 
 
         /// <summary>
         /// A useful description of the equipment used to create the splice
         /// </summary>
 		[Description("A useful description of the equipment used to create the splice")]
 		[XmlElement("spliceEquipmentUsed")]
-        public String SpliceEquipmentUsed {
+        public string SpliceEquipmentUsed {
             get {
                 return spliceEquipmentUsedField;
             } 
@@ -42549,14 +42755,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String spliceEquipmentUsedField; 
+        private string spliceEquipmentUsedField; 
 
         /// <summary>
         /// A useful description of the stripping type that was conducted
         /// </summary>
 		[Description("A useful description of the stripping type that was conducted")]
 		[XmlElement("strippingType")]
-        public String StrippingType {
+        public string StrippingType {
             get {
                 return strippingTypeField;
             } 
@@ -42566,14 +42772,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String strippingTypeField; 
+        private string strippingTypeField; 
 
         /// <summary>
         /// A useful description of the type of protector used in the splice.
         /// </summary>
 		[Description("A useful description of the type of protector used in the splice.")]
 		[XmlElement("protectorType")]
-        public String ProtectorType {
+        public string ProtectorType {
             get {
                 return protectorTypeField;
             } 
@@ -42583,7 +42789,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String protectorTypeField; 
+        private string protectorTypeField; 
 
 
     } //here
@@ -42599,7 +42805,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberTurnaround", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A turnaround component within the optical path.")]
-    public partial class FiberTurnaround : FiberCommon, INotifyPropertyChanged
+    public partial class FiberTurnaround : FiberCommon, IDataObject, INotifyPropertyChanged
     {
 
 
@@ -42616,7 +42822,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberOpticalPathSegment", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("A single segment of the optical fiber used for distributed temperature surveys. Multiple such segments may be connected by other types of component including connectors, splices and fiber turnarounds.")]
-    public partial class FiberOpticalPathSegment : FiberCommon, INotifyPropertyChanged
+    public partial class FiberOpticalPathSegment : FiberCommon, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42733,7 +42939,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ModeSpecified {
+        public bool ModeSpecified {
             get {
                 return modeSpecifiedField;
             } 
@@ -42743,7 +42949,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean modeSpecifiedField; 
+        private bool modeSpecifiedField; 
 
         /// <summary>
         /// The type of coating on the fiber.
@@ -42751,7 +42957,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of coating on the fiber.")]
 		[XmlElement("coating")]
-        public String Coating {
+        public string Coating {
             get {
                 return coatingField;
             } 
@@ -42761,7 +42967,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String coatingField; 
+        private string coatingField; 
 
         /// <summary>
         /// The type of jacket covering the fiber.
@@ -42769,7 +42975,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of jacket covering the fiber.")]
 		[XmlElement("jacket")]
-        public String Jacket {
+        public string Jacket {
             get {
                 return jacketField;
             } 
@@ -42779,7 +42985,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String jacketField; 
+        private string jacketField; 
 
         /// <summary>
         /// Property of the fiber core.
@@ -42787,7 +42993,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("Property of the fiber core.")]
 		[XmlElement("coreType")]
-        public String CoreType {
+        public string CoreType {
             get {
                 return coreTypeField;
             } 
@@ -42797,7 +43003,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String coreTypeField; 
+        private string coreTypeField; 
 
         /// <summary>
         /// Additional parameters to define the fiber as a material.
@@ -42835,7 +43041,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The spool number of the particular spool from which this fiber segement was taken. The spool number may contain alphanumeric characters.")]
 		[XmlElement("spoolNumberTag")]
-        public String SpoolNumberTag {
+        public string SpoolNumberTag {
             get {
                 return spoolNumberTagField;
             } 
@@ -42845,7 +43051,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String spoolNumberTagField; 
+        private string spoolNumberTagField; 
 
         /// <summary>
         /// The length of the fiber on the spool when purchased.
@@ -42966,7 +43172,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CableTypeSpecified {
+        public bool CableTypeSpecified {
             get {
                 return cableTypeSpecifiedField;
             } 
@@ -42976,7 +43182,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean cableTypeSpecifiedField; 
+        private bool cableTypeSpecifiedField; 
 
 
     } //here
@@ -43004,7 +43210,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public IndexedObject(String value, String uom)
+        public IndexedObject(string value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -43025,7 +43231,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
         [XmlAttribute("index")]
 		
-        public Int16 Index {
+        public short Index {
             get {
                 return indexField;
             } 
@@ -43035,7 +43241,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16 indexField; 
+        private short indexField; 
 
 		/// <summary>
         /// name property
@@ -43043,7 +43249,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [XmlAttribute("name")]
 		
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -43053,7 +43259,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
 		/// <summary>
         /// uom property
@@ -43061,7 +43267,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(24)]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -43071,7 +43277,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 		/// <summary>
         /// description property
@@ -43079,7 +43285,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(256)]
         [XmlAttribute("description")]
 		
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -43089,14 +43295,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(40)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -43106,7 +43312,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -43141,7 +43347,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberRefractiveIndex", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The refractive index of a material depends on the frequency (or wavelength) of the light. Hence it is necessary to include both the value (a unitless number) and the frequency (or wavelength) it was measured at. The frequency will be a quantity type with a frequency unit such as Hz.")]
-    public partial class FiberRefractiveIndex : Object, INotifyPropertyChanged
+    public partial class FiberRefractiveIndex : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -43207,7 +43413,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -43217,7 +43423,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -43252,7 +43458,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fiberOneWayAttenuation", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("The power loss for one way travel of a beam of light, usually measured in decibels per unit length. It is necessary to include both the value (and its unit) and the wavelength at which this attenuation was measured. ")]
-    public partial class FiberOneWayAttenuation : Object, INotifyPropertyChanged
+    public partial class FiberOneWayAttenuation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -43277,6 +43483,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The frequency for which the one way loss is measured. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
@@ -43310,6 +43517,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The wavelength for which the one way loss is measured. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
@@ -43349,7 +43557,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -43359,7 +43567,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -43400,6 +43608,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Information on type of intervention conveyance used by the optical path. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("intervention")]
         public InterventionConveyance Intervention {
             get {
@@ -43434,6 +43643,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Information on type of permanent conveyance used by the optical path. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("permanent")]
         public PermanentCable Permanent {
             get {
@@ -43468,6 +43678,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Information regarding the control line into which a fiber cable may be pumped in order to measure a facility. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("fiberControlLine")]
         public FiberControlLine FiberControlLine {
             get {
@@ -43614,7 +43825,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the fiber control line")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -43624,7 +43835,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// The activity of pumping the fiber downhole into a control line (small diameter tube). 
@@ -43664,7 +43875,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("A reference to the control line string in a Completion data-object which represents this control line containing a fiber.")]
         [XmlAttribute("downholeControlLineRefUID")]
 		
-        public String DownholeControlLineRefUID {
+        public string DownholeControlLineRefUID {
             get {
                 return downholeControlLineRefUIDField;
             } 
@@ -43674,7 +43885,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String downholeControlLineRefUIDField; 
+        private string downholeControlLineRefUIDField; 
 
 
         
@@ -43718,7 +43929,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("A name which can be used to reference the pumping activity. In general a pumping activity does not have a natural name so that this element will not be often used.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -43728,7 +43939,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// The name of the InstalledFiberInstance that this activity relates to.
@@ -43771,7 +43982,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PumpingDateSpecified {
+        public bool PumpingDateSpecified {
             get {
                 return pumpingDateSpecifiedField;
             } 
@@ -43781,7 +43992,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean pumpingDateSpecifiedField; 
+        private bool pumpingDateSpecifiedField; 
 
         /// <summary>
         /// The person in charge of the pumping activity.
@@ -43789,7 +44000,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The person in charge of the pumping activity.")]
 		[XmlElement("engineerName")]
-        public String EngineerName {
+        public string EngineerName {
             get {
                 return engineerNameField;
             } 
@@ -43799,7 +44010,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String engineerNameField; 
+        private string engineerNameField; 
 
         /// <summary>
         /// The company that performed the pumping activity.
@@ -43807,7 +44018,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The company that performed the pumping activity.")]
 		[XmlElement("serviceCompany")]
-        public String ServiceCompany {
+        public string ServiceCompany {
             get {
                 return serviceCompanyField;
             } 
@@ -43817,7 +44028,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String serviceCompanyField; 
+        private string serviceCompanyField; 
 
         /// <summary>
         /// The type of fluid used in the pump.
@@ -43825,7 +44036,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of fluid used in the pump.")]
 		[XmlElement("pumpFluidType")]
-        public String PumpFluidType {
+        public string PumpFluidType {
             get {
                 return pumpFluidTypeField;
             } 
@@ -43835,7 +44046,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String pumpFluidTypeField; 
+        private string pumpFluidTypeField; 
 
         /// <summary>
         /// The type of fluid used in the control line.
@@ -43843,7 +44054,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of fluid used in the control line.")]
 		[XmlElement("controlLineFluid")]
-        public String ControlLineFluid {
+        public string ControlLineFluid {
             get {
                 return controlLineFluidField;
             } 
@@ -43853,7 +44064,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String controlLineFluidField; 
+        private string controlLineFluidField; 
 
         /// <summary>
         /// The direction of the pumping.
@@ -43861,7 +44072,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The direction of the pumping.")]
 		[XmlElement("pumpDirection")]
-        public String PumpDirection {
+        public string PumpDirection {
             get {
                 return pumpDirectionField;
             } 
@@ -43871,7 +44082,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String pumpDirectionField; 
+        private string pumpDirectionField; 
 
         /// <summary>
         /// The type of end seal on the fiber.
@@ -43879,7 +44090,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of end seal on the fiber.")]
 		[XmlElement("fiberEndSeal")]
-        public String FiberEndSeal {
+        public string FiberEndSeal {
             get {
                 return fiberEndSealField;
             } 
@@ -43889,7 +44100,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String fiberEndSealField; 
+        private string fiberEndSealField; 
 
         /// <summary>
         /// The type of cable meter.
@@ -43897,7 +44108,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of cable meter.")]
 		[XmlElement("cableMeterType")]
-        public String CableMeterType {
+        public string CableMeterType {
             get {
                 return cableMeterTypeField;
             } 
@@ -43907,7 +44118,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String cableMeterTypeField; 
+        private string cableMeterTypeField; 
 
         /// <summary>
         /// The serial number of the cable meter.
@@ -43915,7 +44126,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The serial number of the cable meter.")]
 		[XmlElement("cableMeterSerialNumber")]
-        public String CableMeterSerialNumber {
+        public string CableMeterSerialNumber {
             get {
                 return cableMeterSerialNumberField;
             } 
@@ -43925,7 +44136,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String cableMeterSerialNumberField; 
+        private string cableMeterSerialNumberField; 
 
         /// <summary>
         /// The date the cable meter was calibrated.
@@ -43950,7 +44161,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CableMeterCalibrationDateSpecified {
+        public bool CableMeterCalibrationDateSpecified {
             get {
                 return cableMeterCalibrationDateSpecifiedField;
             } 
@@ -43960,7 +44171,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean cableMeterCalibrationDateSpecifiedField; 
+        private bool cableMeterCalibrationDateSpecifiedField; 
 
         /// <summary>
         /// The length of the excess fiber that was removed.
@@ -44016,7 +44227,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comment about the pump activity.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -44026,7 +44237,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -44088,7 +44299,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comment about the intervention conveyance.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -44098,7 +44309,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -44160,7 +44371,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comment about the intervention conveyance.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -44170,7 +44381,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -44213,7 +44424,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
 		[XmlElement("serial_number")]
-        public String Serial_number {
+        public string Serial_number {
             get {
                 return serial_numberField;
             } 
@@ -44223,7 +44434,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String serial_numberField; 
+        private string serial_numberField; 
 
         /// <summary>
         /// internalOvenLocationNear property
@@ -44437,7 +44648,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dtsCalibration", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is a general type that allows a calibration date, business associate, and many name/value pairs.")]
-    public partial class DtsCalibration : Object, INotifyPropertyChanged
+    public partial class DtsCalibration : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -44463,7 +44674,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeCalibrationSpecified {
+        public bool DateTimeCalibrationSpecified {
             get {
                 return dTimCalibrationSpecifiedField;
             } 
@@ -44473,7 +44684,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimCalibrationSpecifiedField; 
+        private bool dTimCalibrationSpecifiedField; 
 
         /// <summary>
         /// The business associate that performed the calibration.
@@ -44481,7 +44692,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The business associate that performed the calibration.")]
 		[XmlElement("calibratedBy")]
-        public String CalibratedBy {
+        public string CalibratedBy {
             get {
                 return calibratedByField;
             } 
@@ -44491,7 +44702,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String calibratedByField; 
+        private string calibratedByField; 
 
         /// <summary>
         /// This may be a standard protocol, or a software application.
@@ -44499,7 +44710,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("This may be a standard protocol, or a software application.")]
 		[XmlElement("calibrationProtocol")]
-        public String CalibrationProtocol {
+        public string CalibrationProtocol {
             get {
                 return calibrationProtocolField;
             } 
@@ -44509,7 +44720,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String calibrationProtocolField; 
+        private string calibrationProtocolField; 
 
         /// <summary>
         /// Attribute name is the name of the parameter. Optional attribute uom is the unit of measure of the parameter. The value of the element is the value of the parameter. Note that a string value may appear as a parameter.
@@ -44547,7 +44758,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Any remarks that may be useful, regarding the calibration information.")]
 		[XmlElement("remarks")]
-        public String Remarks {
+        public string Remarks {
             get {
                 return remarksField;
             } 
@@ -44557,7 +44768,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String remarksField; 
+        private string remarksField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -44597,7 +44808,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -44607,7 +44818,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -44654,7 +44865,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public CalibrationParameter(String value, String uom)
+        public CalibrationParameter(string value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -44675,7 +44886,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unit of measure of the parameter value.")]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -44685,7 +44896,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 		/// <summary>
         /// The name of the parameter.
@@ -44695,7 +44906,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The name of the parameter.")]
         [XmlAttribute("name")]
 		
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -44705,14 +44916,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -44722,7 +44933,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -44781,11 +44992,10 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual description of the patch cord
         /// </summary>
-		[Required]
-        [StringLength(4000)]
+		[StringLength(4000)]
         [Description("A textual description of the patch cord")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -44795,7 +45005,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 
         
@@ -44857,7 +45067,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A description of which \"port\" ie, connection/end or defined point on a pipeline the facilityLength is indexed from.")]
 		[XmlElement("datumPortReference")]
-        public String DatumPortReference {
+        public string DatumPortReference {
             get {
                 return datumPortReferenceField;
             } 
@@ -44867,7 +45077,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String datumPortReferenceField; 
+        private string datumPortReferenceField; 
 
         /// <summary>
         /// The name of the facility which is represented by this facilityMapping 
@@ -44893,7 +45103,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The kind of facility mapped to the optical path. Expected to be a pipeline but this element can be used to show other facilities being mapped to fiber length in future.")]
 		[XmlElement("kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return kindField;
             } 
@@ -44903,7 +45113,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String kindField; 
+        private string kindField; 
 
         /// <summary>
         /// The name and type of a facility whose context is relevant to the represented installation.
@@ -44966,7 +45176,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("The name of this facilityMapping instance.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -44976,7 +45186,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// Human recognizable context for the well that contains the well.
@@ -44985,7 +45195,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the well that contains the well.")]
 		[XmlElement("nameWell")]
-        public String NameWell {
+        public string NameWell {
             get {
                 return nameWellField;
             } 
@@ -44995,7 +45205,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameWellField; 
+        private string nameWellField; 
 
         /// <summary>
         /// Human recognizable context for the wellbore that contains the optical path being mapped to the wellbore.
@@ -45004,7 +45214,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Human recognizable context for the wellbore that contains the optical path being mapped to the wellbore.")]
 		[XmlElement("nameWellbore")]
-        public String NameWellbore {
+        public string NameWellbore {
             get {
                 return nameWellboreField;
             } 
@@ -45014,7 +45224,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameWellboreField; 
+        private string nameWellboreField; 
 
         /// <summary>
         /// A reference to the wellDatum from which the facilityLength (ie, depth in this case of a wellbore being mapped) is measured from.
@@ -45023,7 +45233,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("A reference to the wellDatum from which the facilityLength (ie, depth in this case of a wellbore being mapped) is measured from.")]
 		[XmlElement("wellDatum")]
-        public String WellDatum {
+        public string WellDatum {
             get {
                 return wellDatumField;
             } 
@@ -45033,7 +45243,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String wellDatumField; 
+        private string wellDatumField; 
 
 		/// <summary>
         /// Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.
@@ -45043,7 +45253,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.")]
         [XmlAttribute("uidWell")]
 		
-        public String UidWell {
+        public string UidWell {
             get {
                 return uidWellField;
             } 
@@ -45053,7 +45263,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidWellField; 
+        private string uidWellField; 
 
 		/// <summary>
         /// Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.
@@ -45063,7 +45273,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.")]
         [XmlAttribute("uidWellbore")]
 		
-        public String UidWellbore {
+        public string UidWellbore {
             get {
                 return uidWellboreField;
             } 
@@ -45073,7 +45283,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidWellboreField; 
+        private string uidWellboreField; 
 
 
         
@@ -45114,8 +45324,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.
         /// </summary>
-		[Required]
-        [Description("Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.")]
+		[Description("Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.")]
         [RecurringElement]
 		[XmlElement("opticalPathDistanceStart")]
         public List<LengthMeasure> OpticalPathDistanceStart {
@@ -45145,8 +45354,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the beginning of the optical path to the distance where the mapping with the facility ends.
         /// </summary>
-		[Required]
-        [Description("Distance between the beginning of the optical path to the distance where the mapping with the facility ends.")]
+		[Description("Distance between the beginning of the optical path to the distance where the mapping with the facility ends.")]
         [RecurringElement]
 		[XmlElement("opticalPathDistanceEnd")]
         public List<LengthMeasure> OpticalPathDistanceEnd {
@@ -45176,8 +45384,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the facility datum and the distance where the mapping with the optical path takes place
         /// </summary>
-		[Required]
-        [Description("Distance between the facility datum and the distance where the mapping with the optical path takes place")]
+		[Description("Distance between the facility datum and the distance where the mapping with the optical path takes place")]
         [RecurringElement]
 		[XmlElement("facilityLengthStart")]
         public List<LengthMeasure> FacilityLengthStart {
@@ -45207,8 +45414,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the facility datum and the distance where the mapping with the optical path ends.
         /// </summary>
-		[Required]
-        [Description("Distance between the facility datum and the distance where the mapping with the optical path ends.")]
+		[Description("Distance between the facility datum and the distance where the mapping with the optical path ends.")]
         [RecurringElement]
 		[XmlElement("facilityLengthEnd")]
         public List<LengthMeasure> FacilityLengthEnd {
@@ -45241,7 +45447,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("A descriptive remark about the facility mapping")]
         [RecurringElement]
 		[XmlElement("comment")]
-        public List<String> Comment {
+        public List<string> Comment {
             get {
                 return commentField;
             } 
@@ -45263,11 +45469,12 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> commentField; 
+        private List<string> commentField; 
 
         /// <summary>
         /// Choice where the facility mapping is inside a well.
         /// </summary>
+        [ComponentElement]
         [XmlElement("well")]
         public FiberFacilityWell Well {
             get {
@@ -45301,6 +45508,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Choice where the facility mapping is a pipeline.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pipeline")]
         public FiberFacilityPipeline Pipeline {
             get {
@@ -45341,7 +45549,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The uid of this facility mapping part.")]
         [XmlAttribute("mappingPartID")]
 		
-        public String MappingPartID {
+        public string MappingPartID {
             get {
                 return mappingPartIDField;
             } 
@@ -45351,7 +45559,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String mappingPartIDField; 
+        private string mappingPartIDField; 
 
 
         
@@ -45395,7 +45603,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Date when the mapping between the facility and the optical path becomes effective")]
 		[XmlElement("timeStart")]
-        public DateTime? TimeStart {
+        public Timestamp? TimeStart {
             get {
                 return timeStartField;
             } 
@@ -45405,14 +45613,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? timeStartField; 
+        private Timestamp? timeStartField; 
 
         /// <summary>
         /// Date when the mapping between the facility and the optical path is no longer valid
         /// </summary>
 		[Description("Date when the mapping between the facility and the optical path is no longer valid")]
 		[XmlElement("timeEnd")]
-        public DateTime? TimeEnd {
+        public Timestamp? TimeEnd {
             get {
                 return timeEndField;
             } 
@@ -45423,14 +45631,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? timeEndField; 
+        private Timestamp? timeEndField; 
 
         /// <summary>
         /// timeEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TimeEndSpecified {
+        public bool TimeEndSpecified {
             get {
                 return timeEndSpecifiedField;
             } 
@@ -45440,7 +45648,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean timeEndSpecifiedField; 
+        private bool timeEndSpecifiedField; 
 
         /// <summary>
         /// Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).
@@ -45479,7 +45687,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the facility mapping")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -45489,7 +45697,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 		/// <summary>
         /// The uid of this facility mapping collection.
@@ -45500,7 +45708,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The uid of this facility mapping collection.")]
         [XmlAttribute("mappingID")]
 		
-        public String MappingID {
+        public string MappingID {
             get {
                 return mappingIDField;
             } 
@@ -45510,7 +45718,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String mappingIDField; 
+        private string mappingIDField; 
 
 
         
@@ -45551,8 +45759,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Starting point of the detected defect as distance in the optical path from the lightbox
         /// </summary>
-		[Required]
-        [Description("Starting point of the detected defect as distance in the optical path from the lightbox")]
+		[Description("Starting point of the detected defect as distance in the optical path from the lightbox")]
         [RecurringElement]
 		[XmlElement("opticalPathDistanceStart")]
         public List<LengthMeasure> OpticalPathDistanceStart {
@@ -45612,8 +45819,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Enum. The type of defect on the optical path.
         /// </summary>
-		[Required]
-        [Description("Enum.  The type of defect on the optical path.")]
+		[Description("Enum.  The type of defect on the optical path.")]
         [RecurringElement]
 		[XmlElement("defectType")]
         public List<PathDefectTypeList> DefectType {
@@ -45706,7 +45912,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("A descriptive remark about the defect found on this location")]
         [RecurringElement]
 		[XmlElement("comment")]
-        public List<String> Comment {
+        public List<string> Comment {
             get {
                 return commentField;
             } 
@@ -45728,7 +45934,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> commentField; 
+        private List<string> commentField; 
 
 		/// <summary>
         /// The uid of this object.
@@ -45738,7 +45944,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The uid of this object.")]
         [XmlAttribute("defectID")]
 		
-        public String DefectID {
+        public string DefectID {
             get {
                 return defectIDField;
             } 
@@ -45748,7 +45954,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String defectIDField; 
+        private string defectIDField; 
 
 
         
@@ -45840,7 +46046,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date and time of the start of validity for this model.")]
 		[XmlElement("dTimStart")]
-        public DateTime? DateTimeStart {
+        public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -45851,14 +46057,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimStartField; 
+        private Timestamp? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeStartSpecified {
+        public bool DateTimeStartSpecified {
             get {
                 return dTimStartSpecifiedField;
             } 
@@ -45868,14 +46074,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimStartSpecifiedField; 
+        private bool dTimStartSpecifiedField; 
 
         /// <summary>
         /// The date and time of the termination of validity for this model.
         /// </summary>
 		[Description("The date and time of the termination of validity for this model.")]
 		[XmlElement("dTimEnd")]
-        public DateTime? DateTimeEnd {
+        public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -45886,14 +46092,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dTimEndField; 
+        private Timestamp? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeEndSpecified {
+        public bool DateTimeEndSpecified {
             get {
                 return dTimEndSpecifiedField;
             } 
@@ -45903,7 +46109,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dTimEndSpecifiedField; 
+        private bool dTimEndSpecifiedField; 
 
         /// <summary>
         /// The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
@@ -46026,7 +46232,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the model.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -46036,7 +46242,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -46263,7 +46469,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fiberOpticalPath", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The group of elements corresponding to a fiber optical path.")]
-    public partial class FiberOpticalPath : Object, INotifyPropertyChanged
+    public partial class FiberOpticalPath : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46273,7 +46479,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("A human understandable name for the fiber. This is used for  identification of the instance.")]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -46283,7 +46489,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// inventory property
@@ -46486,7 +46692,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -46496,8 +46702,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -46577,7 +46797,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Indicates whether the interpretation log contains bad data or not.  This allows you to keep bad data around (so at least you know that something was generated/acquired) and filter it out when doing relevant data-wise operations.")]
 		[XmlElement("badFlag")]
-        public Boolean? BadFlag {
+        public bool? BadFlag {
             get {
                 return badFlagField;
             } 
@@ -46587,7 +46807,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? badFlagField; 
+        private bool? badFlagField; 
 
         /// <summary>
         /// creationStartTime property
@@ -46595,7 +46815,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Time when the interpretation log data was generated.")]
 		[XmlElement("creationStartTime")]
-        public DateTime? CreationStartTime {
+        public Timestamp? CreationStartTime {
             get {
                 return creationStartTimeField;
             } 
@@ -46605,7 +46825,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? creationStartTimeField; 
+        private Timestamp? creationStartTimeField; 
 
         /// <summary>
         /// interpretationProcessingType property
@@ -46632,7 +46852,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(32)]
         [Description("This is the mnemonic of the channel in the InterpretedData which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.")]
 		[XmlElement("indexMnemonic")]
-        public String IndexMnemonic {
+        public string IndexMnemonic {
             get {
                 return indexMnemonicField;
             } 
@@ -46642,7 +46862,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String indexMnemonicField; 
+        private string indexMnemonicField; 
 
         /// <summary>
         /// pointCount property
@@ -46650,7 +46870,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The number of rows in this interpreted data object. Each row or \"point\" represents a measurement along the fiber.")]
 		[XmlElement("pointCount")]
-        public Int16? PointCount {
+        public short? PointCount {
             get {
                 return pointCountField;
             } 
@@ -46660,7 +46880,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? pointCountField; 
+        private short? pointCountField; 
 
         /// <summary>
         /// comment property
@@ -46668,7 +46888,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the interpretation log")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -46678,7 +46898,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// logDataInterpretation property
@@ -46706,7 +46926,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Optional element indicating that the referenced InterpretedData object is the parent from which this InterpretedData is derived. Example, this instance may be derived from a parent by the data having been temperature-shifted to match an external data source. The element InterpretationProcessingType is provided to record which type of operation was peformed on the parent data to obtain this instance of data.")]
         [XmlAttribute("parentInterpretationID")]
 		
-        public String ParentInterpretationID {
+        public string ParentInterpretationID {
             get {
                 return parentInterpretationIDField;
             } 
@@ -46716,7 +46936,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String parentInterpretationIDField; 
+        private string parentInterpretationIDField; 
 
 		/// <summary>
         /// Reference to the interpretation for this set of data.
@@ -46727,7 +46947,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Reference to the  interpretation for this set of data.")]
         [XmlAttribute("interpretationID")]
 		
-        public String InterpretationID {
+        public string InterpretationID {
             get {
                 return interpretationIDField;
             } 
@@ -46737,7 +46957,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String interpretationIDField; 
+        private string interpretationIDField; 
 
 
         
@@ -46800,7 +47020,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A comma delimited list of curve mnemonics. Each mnemonic should only occur once in the list. The order of the mnemonics defines the order of the  delimited values in elements \"unitList\" and \"data\".  If the index curve is specified then it must be first in the list. This is an API \"column-identifier\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("mnemonicList")]
-        public String MnemonicList {
+        public string MnemonicList {
             get {
                 return mnemonicListField;
             } 
@@ -46810,7 +47030,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String mnemonicListField; 
+        private string mnemonicListField; 
 
         /// <summary>
         /// A comma delimited list of unit of measure acronyms that represent the values in "data". The units are in the same order as the mnemonics in element mnemonicList. Each unit value must match the value in the logCurveInfo structure for that curve. A null value (i.e., unitless as opposed to dimensionless) will be defined by adjacent commas.
@@ -46818,7 +47038,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A comma delimited list of unit of measure acronyms that represent the values in \"data\". The units are in the same order as the mnemonics in element mnemonicList. Each unit value must match the value in the logCurveInfo structure for that curve. A null value (i.e., unitless as opposed to dimensionless) will be defined by adjacent commas.")]
 		[XmlElement("unitList")]
-        public String UnitList {
+        public string UnitList {
             get {
                 return unitListField;
             } 
@@ -46828,7 +47048,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String unitListField; 
+        private string unitListField; 
 
         /// <summary>
         /// The actual data corresponding to the curves defined in the "mnemonicList" element. Normally a comma delimited list of data values (see dataDelimiter) with one value for each curve on the log (e.g., "xxx,yyy, zzz"). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., "xxx,aa bb cc,zzz"). This essentially represents one row of a table where the curve mnemonics represent the column headings. This is an API "data-node" query parameter for growing objects. See the relevant API specification for the query behavior related to this element.
@@ -46836,7 +47056,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("The actual data corresponding to the curves defined in  the \"mnemonicList\" element. Normally a comma delimited list of data values (see dataDelimiter) with one  value for each curve on the log (e.g., \"xxx,yyy, zzz\"). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., \"xxx,aa bb cc,zzz\"). This essentially represents one row of a table where the curve  mnemonics represent the column headings. This is an API \"data-node\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         [RecurringElement]
 		[XmlElement("data")]
-        public List<String> Data {
+        public List<string> Data {
             get {
                 return dataField;
             } 
@@ -46858,7 +47078,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> dataField; 
+        private List<string> dataField; 
 
 
         
@@ -46920,7 +47140,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(64)]
         [Description("Where there is a set of dtsInterpretedData logs that are generated from the same measurement (each log having gone through a different post-processing type, for example), if there is one log that is ‘preferred’ for additional business decisions (while the other ones were merely what-if scenarios), then this preferred log in the collection of child dtsInterpretedData can be flagged by referencing its UID with this element.")]
 		[XmlElement("preferredInterpretationID")]
-        public String PreferredInterpretationID {
+        public string PreferredInterpretationID {
             get {
                 return preferredInterpretationIDField;
             } 
@@ -46930,7 +47150,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String preferredInterpretationIDField; 
+        private string preferredInterpretationIDField; 
 
         /// <summary>
         /// interpretationData property
@@ -46970,7 +47190,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Mandatory element indicating that the referenced MeasuredTraceSet object is the raw trace data from which this InterpretedData is derived. This is needed so that any InterpretedData can be related to the raw measurement from which it is derived.")]
         [XmlAttribute("measurementID")]
 		
-        public String MeasurementID {
+        public string MeasurementID {
             get {
                 return measurementIDField;
             } 
@@ -46980,7 +47200,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String measurementIDField; 
+        private string measurementIDField; 
 
 		/// <summary>
         /// The uid of this object.
@@ -46990,7 +47210,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The uid of this object.")]
         [XmlAttribute("interpretationLogID")]
 		
-        public String InterpretationLogID {
+        public string InterpretationLogID {
             get {
                 return interpretationLogIDField;
             } 
@@ -47000,7 +47220,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String interpretationLogIDField; 
+        private string interpretationLogIDField; 
 
 
         
@@ -47082,7 +47302,7 @@ namespace Energistics.DataAccess.PRODML131
         [StringLength(32)]
         [Description("This is the mnemonic of the channel in the MeasuredTraceSet which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.")]
 		[XmlElement("indexMnemonic")]
-        public String IndexMnemonic {
+        public string IndexMnemonic {
             get {
                 return indexMnemonicField;
             } 
@@ -47092,7 +47312,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String indexMnemonicField; 
+        private string indexMnemonicField; 
 
         /// <summary>
         /// pointCount property
@@ -47100,7 +47320,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The number of rows in this interpreted data object. Each row or \"point\" represents a measurement along the fiber.")]
 		[XmlElement("pointCount")]
-        public Int16? PointCount {
+        public short? PointCount {
             get {
                 return pointCountField;
             } 
@@ -47110,7 +47330,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int16? pointCountField; 
+        private short? pointCountField; 
 
         /// <summary>
         /// frequencyRayleigh1 property
@@ -47154,7 +47374,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A descriptive remark about the measured trace set")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -47164,7 +47384,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// logDataTrace property
@@ -47192,7 +47412,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Where this dtsMeasuredTraceSet was derived from a \"parent\" dtsMeasuredTraceSet (having been recalibrated for example), the parent dtsMeasuredTraceSet can be indicated by referencing its UID with this element.")]
         [XmlAttribute("parentMeasurementID")]
 		
-        public String ParentMeasurementID {
+        public string ParentMeasurementID {
             get {
                 return parentMeasurementIDField;
             } 
@@ -47202,7 +47422,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String parentMeasurementIDField; 
+        private string parentMeasurementIDField; 
 
 		/// <summary>
         /// The uid of this object.
@@ -47212,7 +47432,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The uid of this object.")]
         [XmlAttribute("measurementID")]
 		
-        public String MeasurementID {
+        public string MeasurementID {
             get {
                 return measurementIDField;
             } 
@@ -47222,7 +47442,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String measurementIDField; 
+        private string measurementIDField; 
 
 
         
@@ -47256,7 +47476,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsMeasurement", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The group of elements corresponding to a DTS measurement.")]
-    public partial class DtsMeasurement : Object, INotifyPropertyChanged
+    public partial class DtsMeasurement : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47265,7 +47485,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -47275,7 +47495,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// badSetFlag property
@@ -47283,7 +47503,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Set to 'true' when a measurement is included but is known to be bad (i.e. all the values are null).  Use this flag in situations when you want to keep track of the fact that a measurement was generated/received however the measurement was bad.")]
 		[XmlElement("badSetFlag")]
-        public Boolean? BadSetFlag {
+        public bool? BadSetFlag {
             get {
                 return badSetFlagField;
             } 
@@ -47293,7 +47513,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? badSetFlagField; 
+        private bool? badSetFlagField; 
 
         /// <summary>
         /// emptySetFlag property
@@ -47301,7 +47521,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Set to 'true' when the measurement set is empty (only the header is provided).  Use this flag for situations when the instrument box attempts to get a reading but nothing is generated (fiber is disconnected, for example).")]
 		[XmlElement("emptySetFlag")]
-        public Boolean? EmptySetFlag {
+        public bool? EmptySetFlag {
             get {
                 return emptySetFlagField;
             } 
@@ -47311,7 +47531,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean? emptySetFlagField; 
+        private bool? emptySetFlagField; 
 
         /// <summary>
         /// timeStart property
@@ -47319,7 +47539,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Time when the installed system began taking the measurement")]
 		[XmlElement("timeStart")]
-        public DateTime? TimeStart {
+        public Timestamp? TimeStart {
             get {
                 return timeStartField;
             } 
@@ -47329,14 +47549,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? timeStartField; 
+        private Timestamp? timeStartField; 
 
         /// <summary>
         /// timeEnd property
         /// </summary>
 		[Description("Time when the installed system finished taking the measurement")]
 		[XmlElement("timeEnd")]
-        public DateTime? TimeEnd {
+        public Timestamp? TimeEnd {
             get {
                 return timeEndField;
             } 
@@ -47347,14 +47567,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? timeEndField; 
+        private Timestamp? timeEndField; 
 
         /// <summary>
         /// timeEndSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TimeEndSpecified {
+        public bool TimeEndSpecified {
             get {
                 return timeEndSpecifiedField;
             } 
@@ -47364,7 +47584,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean timeEndSpecifiedField; 
+        private bool timeEndSpecifiedField; 
 
         /// <summary>
         /// timeSinceInstrumentStartup property
@@ -47390,7 +47610,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Description("This supports user-defined \"tags\" (in the form of text strings) to be attached to the measurement. Example: to indicate other operations under way at the time (e.g., \"start of injection\").")]
         [RecurringElement]
 		[XmlElement("measurementTags")]
-        public List<String> MeasurementTags {
+        public List<string> MeasurementTags {
             get {
                 return measurementTagsField;
             } 
@@ -47412,7 +47632,7 @@ namespace Energistics.DataAccess.PRODML131
              else return false;
              }
          }
-        private List<String> measurementTagsField; 
+        private List<string> measurementTagsField; 
 
         /// <summary>
         /// installedSystemRef property
@@ -47572,7 +47792,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -47582,8 +47802,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -47615,7 +47849,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsInstrumentBox", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The instrument box used for distributed temperature surveys")]
-    public partial class DtsInstrumentBox : Object, INotifyPropertyChanged
+    public partial class DtsInstrumentBox : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47679,7 +47913,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -47689,8 +47923,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -47722,7 +47970,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsInstalledSystem", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.3.1.1")]
     [Description("The group of elements corresponding to a DTS installed system.")]
-    public partial class DtsInstalledSystem : Object, INotifyPropertyChanged
+    public partial class DtsInstalledSystem : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47731,7 +47979,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
 		[XmlElement("name")]
-        public String Name {
+        public string Name {
             get {
                 return nameField;
             } 
@@ -47741,7 +47989,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String nameField; 
+        private string nameField; 
 
         /// <summary>
         /// dateMin property
@@ -47749,7 +47997,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dateMin")]
-        public DateTime? DateMin {
+        public Timestamp? DateMin {
             get {
                 return dateMinField;
             } 
@@ -47759,14 +48007,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dateMinField; 
+        private Timestamp? dateMinField; 
 
         /// <summary>
         /// dateMax property
         /// </summary>
 		[Description("The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
 		[XmlElement("dateMax")]
-        public DateTime? DateMax {
+        public Timestamp? DateMax {
             get {
                 return dateMaxField;
             } 
@@ -47777,14 +48025,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? dateMaxField; 
+        private Timestamp? dateMaxField; 
 
         /// <summary>
         /// dateMaxSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateMaxSpecified {
+        public bool DateMaxSpecified {
             get {
                 return dateMaxSpecifiedField;
             } 
@@ -47794,7 +48042,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dateMaxSpecifiedField; 
+        private bool dateMaxSpecifiedField; 
 
         /// <summary>
         /// opticalPathLength property
@@ -47819,7 +48067,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Total light budget available for the installation. This is  generally measured in decibels, and indicates the total power loss for two-way  travel of the light in the installed fiber.")]
 		[XmlElement("opticalBudget")]
-        public Double? OpticalBudget {
+        public double? OpticalBudget {
             get {
                 return opticalBudgetField;
             } 
@@ -47830,14 +48078,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Double? opticalBudgetField; 
+        private double? opticalBudgetField; 
 
         /// <summary>
         /// opticalBudgetSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OpticalBudgetSpecified {
+        public bool OpticalBudgetSpecified {
             get {
                 return opticalBudgetSpecifiedField;
             } 
@@ -47847,7 +48095,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean opticalBudgetSpecifiedField; 
+        private bool opticalBudgetSpecifiedField; 
 
         /// <summary>
         /// opticalPathRef property
@@ -47893,7 +48141,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Comment about this installed system.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -47903,7 +48151,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// dtsCalibration property
@@ -47978,7 +48226,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -47988,8 +48236,22 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -48068,7 +48330,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("Type of facility where the fiber is deployed")]
 		[XmlElement("kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return kindField;
             } 
@@ -48078,7 +48340,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String kindField; 
+        private string kindField; 
 
         /// <summary>
         /// The name and type of a facility whose context is relevant to the represented installation.
@@ -48257,7 +48519,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("An event type captures the basic information about an event that has affected the data.")]
-    public partial class DocumentEvent : Object, INotifyPropertyChanged
+    public partial class DocumentEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -48266,7 +48528,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The date on which the event took place.")]
 		[XmlElement("eventDate")]
-        public DateTime? EventDate {
+        public Timestamp? EventDate {
             get {
                 return eventDateField;
             } 
@@ -48276,7 +48538,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? eventDateField; 
+        private Timestamp? eventDateField; 
 
         /// <summary>
         /// The kind of event event.
@@ -48284,7 +48546,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The kind of event event.")]
 		[XmlElement("eventType")]
-        public String EventType {
+        public string EventType {
             get {
                 return eventTypeField;
             } 
@@ -48294,7 +48556,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String eventTypeField; 
+        private string eventTypeField; 
 
         /// <summary>
         /// The party responsible for the event.
@@ -48302,7 +48564,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The party responsible for the event.")]
 		[XmlElement("responsibleParty")]
-        public String ResponsibleParty {
+        public string ResponsibleParty {
             get {
                 return responsiblePartyField;
             } 
@@ -48312,7 +48574,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String responsiblePartyField; 
+        private string responsiblePartyField; 
 
         /// <summary>
         /// A free form comment that can further define the event that occurred.
@@ -48320,7 +48582,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A free form comment that can further  define the event that occurred.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -48330,7 +48592,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -48370,7 +48632,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -48380,7 +48642,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -48415,7 +48677,7 @@ namespace Energistics.DataAccess.PRODML131
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.prodml.org/schemas/1series")]
 	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
-    public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
+    public partial class DocumentSecurityInfo : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -48424,7 +48686,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
-        public String Class {
+        public string Class {
             get {
                 return classField;
             } 
@@ -48434,7 +48696,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String classField; 
+        private string classField; 
 
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
@@ -48442,7 +48704,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
-        public String SecuritySystem {
+        public string SecuritySystem {
             get {
                 return securitySystemField;
             } 
@@ -48452,14 +48714,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String securitySystemField; 
+        private string securitySystemField; 
 
         /// <summary>
         /// The date on which this security class is no longer applicable.
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -48470,14 +48732,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EndDateSpecified {
+        public bool EndDateSpecified {
             get {
                 return endDateSpecifiedField;
             } 
@@ -48487,7 +48749,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean endDateSpecifiedField; 
+        private bool endDateSpecifiedField; 
 
         /// <summary>
         /// A general comment to further define the security class.
@@ -48495,7 +48757,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -48505,7 +48767,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -48545,7 +48807,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -48555,7 +48817,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -48599,7 +48861,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public DateTime? FileCreationDate {
+        public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -48609,7 +48871,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? fileCreationDateField; 
+        private Timestamp? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -48617,7 +48879,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
-        public String SoftwareName {
+        public string SoftwareName {
             get {
                 return softwareNameField;
             } 
@@ -48627,7 +48889,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String softwareNameField; 
+        private string softwareNameField; 
 
         /// <summary>
         /// The person or business associate that created the file.
@@ -48635,7 +48897,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
-        public String FileCreator {
+        public string FileCreator {
             get {
                 return fileCreatorField;
             } 
@@ -48645,7 +48907,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String fileCreatorField; 
+        private string fileCreatorField; 
 
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
@@ -48653,7 +48915,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -48663,7 +48925,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -48755,7 +49017,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public DateTime? DocumentDate {
+        public Timestamp? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -48766,14 +49028,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private DateTime? documentDateField; 
+        private Timestamp? documentDateField; 
 
         /// <summary>
         /// documentDateSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DocumentDateSpecified {
+        public bool DocumentDateSpecified {
             get {
                 return documentDateSpecifiedField;
             } 
@@ -48783,7 +49045,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean documentDateSpecifiedField; 
+        private bool documentDateSpecifiedField; 
 
         /// <summary>
         /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
@@ -48869,7 +49131,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
-        public String Disclaimer {
+        public string Disclaimer {
             get {
                 return disclaimerField;
             } 
@@ -48879,7 +49141,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String disclaimerField; 
+        private string disclaimerField; 
 
         /// <summary>
         /// A collection of events that can document the history of the data.
@@ -48918,7 +49180,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(64)]
         [Description("The owner of the data.")]
 		[XmlElement("owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return ownerField;
             } 
@@ -48928,12 +49190,13 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String ownerField; 
+        private string ownerField; 
 
         /// <summary>
         /// WITSML query parameters.
         /// </summary>
 		[Description("WITSML query parameters.")]
+        [ComponentElement]
 		[XmlElement("queryParam")]
         public DocumentInfoQueryParam QueryParam {
             get {
@@ -48953,7 +49216,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("An optional comment about the document.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -48963,7 +49226,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -49068,7 +49331,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -49078,7 +49341,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -49163,7 +49426,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -49173,7 +49436,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -49258,7 +49521,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -49268,7 +49531,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -49335,7 +49598,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -49345,7 +49608,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -49369,7 +49632,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The type of report.  This should define and constrain the expected content of the report.")]
 		[XmlElement("kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return kindField;
             } 
@@ -49379,7 +49642,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String kindField; 
+        private string kindField; 
 
         /// <summary>
         /// The tile of the report if different from the name of the report.
@@ -49422,7 +49685,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateSpecified {
+        public bool DateSpecified {
             get {
                 return dateSpecifiedField;
             } 
@@ -49432,7 +49695,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dateSpecifiedField; 
+        private bool dateSpecifiedField; 
 
         /// <summary>
         /// The ending date that the report represents if it represents an interval.
@@ -49457,7 +49720,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateEndSpecified {
+        public bool DateEndSpecified {
             get {
                 return dateEndSpecifiedField;
             } 
@@ -49467,7 +49730,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean dateEndSpecifiedField; 
+        private bool dateEndSpecifiedField; 
 
         /// <summary>
         /// The month that the report represents (i.e., not a year, date or date range). Only one of date, month or year should be specified.
@@ -49475,7 +49738,7 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("([1-9][0-9][0-9][0-9])-(([0][0-9])|([1][0-2]))")]
         [Description("The month that the report represents (i.e., not a year, date or date range). Only one of date, month or year should be specified.")]
 		[XmlElement("month")]
-        public String Month {
+        public string Month {
             get {
                 return monthField;
             } 
@@ -49485,7 +49748,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String monthField; 
+        private string monthField; 
 
         /// <summary>
         /// The year that the report represents (i.e., not a month, date or date range). Only one of date, month or year should be specified.
@@ -49493,7 +49756,7 @@ namespace Energistics.DataAccess.PRODML131
 		[Range(1000, 9999)]
         [Description("The year that the report represents (i.e., not a month, date or date range). Only one of date, month or year should be specified.")]
 		[XmlElement("year")]
-        public Int32? Year {
+        public int? Year {
             get {
                 return yearField;
             } 
@@ -49504,14 +49767,14 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Int32? yearField; 
+        private int? yearField; 
 
         /// <summary>
         /// yearSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean YearSpecified {
+        public bool YearSpecified {
             get {
                 return yearSpecifiedField;
             } 
@@ -49521,7 +49784,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean yearSpecifiedField; 
+        private bool yearSpecifiedField; 
 
         /// <summary>
         /// A textual comment about the report.
@@ -49529,7 +49792,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(4000)]
         [Description("A textual comment about the report.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -49539,7 +49802,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// The current report version.
@@ -49547,7 +49810,7 @@ namespace Energistics.DataAccess.PRODML131
 		[StringLength(40)]
         [Description("The current report version.")]
 		[XmlElement("reportVersion")]
-        public String ReportVersion {
+        public string ReportVersion {
             get {
                 return reportVersionField;
             } 
@@ -49557,7 +49820,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String reportVersionField; 
+        private string reportVersionField; 
 
         /// <summary>
         /// The current document version status.
@@ -49582,7 +49845,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReportStatusSpecified {
+        public bool ReportStatusSpecified {
             get {
                 return reportStatusSpecifiedField;
             } 
@@ -49592,7 +49855,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean reportStatusSpecifiedField; 
+        private bool reportStatusSpecifiedField; 
 
         /// <summary>
         /// The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.
@@ -49701,7 +49964,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IssueDateSpecified {
+        public bool IssueDateSpecified {
             get {
                 return issueDateSpecifiedField;
             } 
@@ -49711,7 +49974,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean issueDateSpecifiedField; 
+        private bool issueDateSpecifiedField; 
 
         /// <summary>
         /// The person or company that issued the report. This may contain the role of the person or company within the context of the report.
@@ -49754,7 +50017,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ApprovalDateSpecified {
+        public bool ApprovalDateSpecified {
             get {
                 return approvalDateSpecifiedField;
             } 
@@ -49764,7 +50027,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private Boolean approvalDateSpecifiedField; 
+        private bool approvalDateSpecifiedField; 
 
         /// <summary>
         /// The person or company that approved the report. This may contain the role of the person or company within the context of the report.
@@ -49884,7 +50147,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -49894,7 +50157,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -49980,7 +50243,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -49990,7 +50253,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50075,7 +50338,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50085,7 +50348,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50170,7 +50433,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50180,7 +50443,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50265,7 +50528,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50275,7 +50538,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50360,7 +50623,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50370,7 +50633,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50471,7 +50734,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50481,7 +50744,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50582,7 +50845,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50592,7 +50855,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50693,7 +50956,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50703,7 +50966,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -50804,7 +51067,7 @@ namespace Energistics.DataAccess.PRODML131
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -50814,7 +51077,7 @@ namespace Energistics.DataAccess.PRODML131
             }
         }
 
-        private String versionField = "1.3.1.1(PRODML)"; 
+        private string versionField = "1.3.1.1(PRODML)"; 
 
 
     } //here
@@ -54523,6 +54786,72 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
           [XmlEnum("single-ended")]
           singleended
+        }
+        /// <summary>
+        /// This class represents the InterpretationMnemonicType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the InterpretationMnemonicType xsd enumeration.")]
+        public enum InterpretationMnemonicType 
+        {
+        /// <summary>
+        /// facilityDistanceadjustedTemperature property
+        /// </summary>
+          [XmlEnum("facilityDistance,adjustedTemperature")]
+          facilityDistanceadjustedTemperature
+        }
+        /// <summary>
+        /// This class represents the InterpretationUnitType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the InterpretationUnitType xsd enumeration.")]
+        public enum InterpretationUnitType 
+        {
+        /// <summary>
+        /// mdegC property
+        /// </summary>
+          [XmlEnum("m,degC")]
+          mdegC,
+        /// <summary>
+        /// ftdegF property
+        /// </summary>
+          [XmlEnum("ft,degF")]
+          ftdegF
+        }
+        /// <summary>
+        /// This class represents the MeasurementMnemonicType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the MeasurementMnemonicType xsd enumeration.")]
+        public enum MeasurementMnemonicType 
+        {
+        /// <summary>
+        /// fiberDistanceantistokesstokesreverseAntiStokesreverseStokesrayleigh1rayleigh2brillouinfrequencylosslossRatiocumulativeExcessLossfrequencyQualityMeasuremeasurementUncertaintybrillouinAmplitudeopticalPathTemperatureuncalibratedTemperature1uncalibratedTemperature2 property
+        /// </summary>
+          [XmlEnum("fiberDistance,antistokes,stokes,reverseAntiStokes,reverseStokes,rayleigh1,rayleigh2,brillouinfrequency,loss,lossRatio,cumulativeExcessLoss,frequencyQualityMeasure,measurementUncertainty,brillouinAmplitude,opticalPathTemperature,uncalibratedTemperature1,uncalibratedTemperature2,")]
+          fiberDistanceantistokesstokesreverseAntiStokesreverseStokesrayleigh1rayleigh2brillouinfrequencylosslossRatiocumulativeExcessLossfrequencyQualityMeasuremeasurementUncertaintybrillouinAmplitudeopticalPathTemperatureuncalibratedTemperature1uncalibratedTemperature2
+        }
+        /// <summary>
+        /// This class represents the MeasurementUnitType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the MeasurementUnitType xsd enumeration.")]
+        public enum MeasurementUnitType 
+        {
+        /// <summary>
+        /// mmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegCmWdegCdegCdegC property
+        /// </summary>
+          [XmlEnum("m,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degC,mW,degC,degC,degC,")]
+          mmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegCmWdegCdegCdegC,
+        /// <summary>
+        /// ftmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegFmWdegFdegFdegF property
+        /// </summary>
+          [XmlEnum("ft,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degF,mW,degF,degF,degF,")]
+          ftmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegFmWdegFdegFdegF
         }
     }
     #endregion

@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProductFlowModel xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.2.0.0(PRODML)" uuid="00000000-0000-0000-0000-000000000000" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/ProductFlowModel.xsd">
+	<eml:Citation>
+		<eml:Title>Flow #1 Network Model</eml:Title>
+		<eml:Originator>energistics</eml:Originator>
+		<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+		<eml:Format>xml</eml:Format>
+		<eml:VersionString>2.0</eml:VersionString>
+	</eml:Citation>
+	<Installation kind="field">FLOW-1</Installation>
+	<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+	<Network uid="nw-1">
+		<Name>flow #1 network</Name>
+		<Unit uid="unit-1">
+			<Name>A</Name>
+			<Facility kind="compressor">Compressor Bank A</Facility>
+			<FacilityParent1 kind="field">FLOW-1</FacilityParent1>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<TagAlias>compressor-outlet-flowrate</TagAlias>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>constraint</Qualifier>
+						<Qualifier>recommended</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>constraint</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-3">
+					<Property>temperature</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>estimate</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>A-B</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-2">
+			<Name>B</Name>
+			<Facility kind="manifold">I</Facility>
+			<FacilityParent1 kind="field">FLOW-1</FacilityParent1>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>A-B</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>B-C</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-3">
+				<Direction>outlet</Direction>
+				<Name>3</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>B-CC</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-4">
+				<Direction>outlet</Direction>
+				<Name>4</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>B-CCC</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-3">
+			<Name>C</Name>
+			<Facility kind="controller -- lift">lift gas controller</Facility>
+			<FacilityParent1 kind="well" uidRef="well-1">W1</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>B-C</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>recommended</Qualifier>
+						<Qualifier>constraint</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>C-D</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-4">
+			<Name>D</Name>
+			<Facility kind="wellbore" uidRef="wb-1">0</Facility>
+			<FacilityParent1 kind="well" uidRef="well-1">W1</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<Facility kind="bottomhole">bottomhole</Facility>
+				<ConnectedNode uid="cn-1">
+					<Node>reservoir</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>inlet</Direction>
+				<Name>2</Name>
+				<Comment>casing head</Comment>
+				<ConnectedNode uid="cn-1">
+					<Node>C-D</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-3">
+				<Direction>outlet</Direction>
+				<Name>3</Name>
+				<Comment>connection to wellhead</Comment>
+				<ConnectedNode uid="cn-1">
+					<Node>D-E</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-5">
+			<Name>E</Name>
+			<Facility kind="wellhead">wellhead</Facility>
+			<FacilityParent1 kind="well" uidRef="well-1">W1</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<ExpectedProperty uid="exp-1">
+				<Property>block valve status</Property>
+			</ExpectedProperty>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>temperature</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>D-E</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+					<ExpectedFlowProduct uid="efp-2">
+						<Flow>production</Flow>
+						<Product>water</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+					<ExpectedFlowProduct uid="efp-3">
+						<Flow>production</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>E-F</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-6">
+			<Name>F</Name>
+			<Facility kind="flowline">production flowline</Facility>
+			<FacilityParent1 kind="well" uidRef="well-1">W1</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>E-F</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>F-G</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-7">
+			<Name>CC</Name>
+			<Facility kind="controller -- lift">lift gas controller</Facility>
+			<FacilityParent1 kind="well" uidRef="well-2">W2</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>B-CC</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>recommended</Qualifier>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>CC-DD</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-8">
+			<Name>DD</Name>
+			<Facility kind="wellbore" uidRef="wb-1">0</Facility>
+			<FacilityParent1 kind="well" uidRef="well-2">W2</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<Facility kind="bottomhole">bottomhole</Facility>
+				<ConnectedNode uid="cn-1">
+					<Node>reservoir</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>inlet</Direction>
+				<Name>2</Name>
+				<Comment>casing head</Comment>
+				<ConnectedNode uid="cn-1">
+					<Node>CC-DD</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-3">
+				<Direction>outlet</Direction>
+				<Name>3</Name>
+				<Comment>connection to wellhead</Comment>
+				<ConnectedNode uid="cn-1">
+					<Node>DD-EE</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-9">
+			<Name>EE</Name>
+			<Facility kind="wellhead">wellhead</Facility>
+			<FacilityParent1 kind="well" uidRef="well-2">W2</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<ExpectedProperty uid="exp-1">
+				<Property>block valve status</Property>
+			</ExpectedProperty>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>temperature</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>DD-EE</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-3">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+					<ExpectedFlowProduct uid="efp-2">
+						<Flow>production</Flow>
+						<Product>water</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+					<ExpectedFlowProduct uid="efp-3">
+						<Flow>production</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>EE-FF</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-10">
+			<Name>FF</Name>
+			<Facility kind="flowline">production flowline</Facility>
+			<FacilityParent1 kind="well" uidRef="well-2">W2</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>EE-FF</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>FF-G</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-11">
+			<Name>CCC</Name>
+			<Facility kind="controller -- lift">lift gas controller</Facility>
+			<FacilityParent1 kind="well" uidRef="well-3">W3</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>B-CCC</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>recommended</Qualifier>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>gas lift</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>CCC-DDD</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-12">
+			<Name>DDD</Name>
+			<Facility kind="wellbore" uidRef="wb-1">0</Facility>
+			<FacilityParent1 kind="well" uidRef="well-3">W3</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<Facility kind="bottomhole">bottomhole</Facility>
+				<ConnectedNode uid="cn-1">
+					<Node>reservoir</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>inlet</Direction>
+				<Name>2</Name>
+				<Comment>casing head</Comment>
+				<ConnectedNode uid="cn-1">
+					<Node>CCC-DDD</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>gas lift</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-3">
+				<Direction>outlet</Direction>
+				<Name>3</Name>
+				<Comment>connection to wellhead</Comment>
+				<ConnectedNode uid="cn-1">
+					<Node>DDD-EEE</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-13">
+			<Name>EEE</Name>
+			<Facility kind="wellhead">wellhead</Facility>
+			<FacilityParent1 kind="well" uidRef="well-3">W3</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<ExpectedProperty uid="exp-1">
+				<Property>block valve status</Property>
+			</ExpectedProperty>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>temperature</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>DDD-EEE</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-3">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="efp-1">
+						<Flow>production</Flow>
+						<Product>oil</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+					<ExpectedFlowProduct uid="efp-2">
+						<Flow>production</Flow>
+						<Product>water</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+					<ExpectedFlowProduct uid="efp-3">
+						<Flow>production</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>EEE-FFF</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+		<Unit uid="unit-14">
+			<Name>FFF</Name>
+			<Facility kind="flowline">production flowline</Facility>
+			<FacilityParent1 kind="well" uidRef="well-3">W3</FacilityParent1>
+			<FacilityParent2 kind="field">FLOW-1</FacilityParent2>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>EEE-FFF</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>FFF-G</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-15">
+			<Name>G</Name>
+			<Facility kind="manifold">production manifold</Facility>
+			<FacilityParent1 kind="field">FLOW-1</FacilityParent1>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>F-G</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>inlet</Direction>
+				<Name>2</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>FF-G</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-3">
+				<Direction>inlet</Direction>
+				<Name>3</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>FFF-G</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-4">
+				<Direction>outlet</Direction>
+				<Name>4</Name>
+				<ConnectedNode uid="cn-1">
+					<Node>G-H</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+		</Unit>
+		<Unit uid="unit-16">
+			<Name>H</Name>
+			<Facility kind="separator">separator</Facility>
+			<FacilityParent1 kind="field">FLOW-1</FacilityParent1>
+			<Port uid="port-1">
+				<Direction>inlet</Direction>
+				<Name>1</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>pressure</Property>
+					<ExpectedFlowProduct uid="fp1">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>constraint</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ExpectedFlowProperty uid="exp-2">
+					<Property>temperature</Property>
+					<ExpectedFlowProduct uid="fp2">
+						<Flow>production</Flow>
+						<Product>oil and gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>G-H</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+				<ExpectedFlowProduct uid="efp-1">
+					<Flow>production</Flow>
+					<Product>gas</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-2">
+					<Flow>production</Flow>
+					<Product>oil</Product>
+				</ExpectedFlowProduct>
+				<ExpectedFlowProduct uid="efp-3">
+					<Flow>production</Flow>
+					<Product>water</Product>
+				</ExpectedFlowProduct>
+			</Port>
+			<Port uid="port-2">
+				<Direction>outlet</Direction>
+				<Name>2</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="fp3">
+						<Flow>production</Flow>
+						<Product>oil</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>unknown 1</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-3">
+				<Direction>outlet</Direction>
+				<Name>3</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="fp4">
+						<Flow>production</Flow>
+						<Product>water</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>unknown 2</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+			<Port uid="port-4">
+				<Direction>outlet</Direction>
+				<Name>4</Name>
+				<ExpectedFlowProperty uid="exp-1">
+					<Property>flow rate</Property>
+					<ExpectedFlowProduct uid="fp5">
+						<Flow>production</Flow>
+						<Product>gas</Product>
+						<Qualifier>simulated</Qualifier>
+					</ExpectedFlowProduct>
+				</ExpectedFlowProperty>
+				<ConnectedNode uid="cn-1">
+					<Node>unknown 3</Node>
+					<DTimStart>2005-10-26T00:00:00Z</DTimStart>
+				</ConnectedNode>
+			</Port>
+		</Unit>
+	</Network>
+</ProductFlowModel>

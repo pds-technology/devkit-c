@@ -121,7 +121,7 @@ namespace Energistics.SchemaGatherer
                 return 1;
             }
 
-            foreach (string set in GetAppSetting("SETS").Split(new Char[] { ',' }))
+            foreach (string set in GetAppSetting("SETS").Split(','))
             {
                 ProcessEnergisticsSchemas(set);
             }
@@ -143,7 +143,7 @@ namespace Energistics.SchemaGatherer
             VerifyPath("ENERGY_ML_GENERATOR_PROJ_PATH");
             VerifyPath("MS_SDK");
 
-            foreach (string setname in GetAppSetting("SETS").Split(new Char[] { ',' }))
+            foreach (string setname in GetAppSetting("SETS").Split(','))
             {
                 
                 String set = setname.Trim();
@@ -237,7 +237,7 @@ namespace Energistics.SchemaGatherer
 
             List<string> dataObjectSchemas = new List<string>();
             List<string> apiSchemas = new List<string>();
-            List<string> supportingSchemas = new List<string>();
+            List<string> supportingSchemas = new List<string>();     
             Dictionary<string, string> schemaSubstitutions = new Dictionary<string, string>();
 
             if (!Directory.Exists(targetFolder))
@@ -297,24 +297,19 @@ namespace Energistics.SchemaGatherer
 
             }
 
-            // NOTE: Using CodeDom to generate data object classes
-            //bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
-            //if (addValidation)
-            {
-                List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
+            List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
 
-                // Strip out numbers from the family name
-                string standardFamily = Regex.Replace(setName, @"\d", string.Empty);
+            // Strip out numbers from the family name
+            string standardFamily = Regex.Replace(setName, @"\d", string.Empty);
 
-                // Strip out anything not a digit or a '.'
-                dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
-                ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
-            }
-            //else
-            //{
-            //    GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
-            //}
-            }
+            // Strip out anything not a digit or a '.'
+            dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
+			
+            ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
+			
+            if(File.Exists(targetXmlFile))
+                File.Delete(targetXmlFile);
+        }
 
         private static void GetSchemas(string setName, string enumList, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas, Dictionary<string, string> schemaSubstitutions)
         {
@@ -326,38 +321,23 @@ namespace Energistics.SchemaGatherer
                 supportingSchemas.Add(abstractXsd);
             }
 
-            if (setName.StartsWith("RESQML"))
+            if (setName.StartsWith("RESQML1"))
             {
-                if (setName.StartsWith("RESQML1"))
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
+                if (enumList.Length > 0)
                 {
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
-                    if (enumList.Length > 0)
-                    {
-                        supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
-                        schemaSubstitutions.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"), sourceFolder + @"\typ_catalog.xsd");
-                    }
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
+                    supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
+                    schemaSubstitutions.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"), sourceFolder + @"\typ_catalog.xsd");
                 }
-                // schema 2.0 is not support in this release.
-                    /*
-                else
-                    if (setName.StartsWith("RESQML2"))
-                    {
-                        // we also need to include all xsd file in common v2.
-                        foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
-                        {
-                            supportingSchemas.Add(f);
-                        }
-                    }*/
-                     
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
             }
-            /*
-            else if (setName.StartsWith("WITSML2"))
+
+            if (setName.Contains("ML2"))
             {
                 // we also need to include all xsd file in common v2.
                 foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
@@ -369,10 +349,7 @@ namespace Energistics.SchemaGatherer
                 {
                     dataObjectSchemas.Add(f);
                 }
-
-                // stop processing now since there are no obj*.xsd in WITSML v2+
-                return;
-            }*/
+            }
 
             if (!string.IsNullOrEmpty(wsdlPath))
             {
@@ -384,7 +361,7 @@ namespace Energistics.SchemaGatherer
 
             foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
             {
-                if (!f.Contains("obj_coordinateReferenceSystem.xsd"))
+                if (!f.Contains("obj_coordinateReferenceSystem.xsd") && !dataObjectSchemas.Contains(f))
                 {
                     dataObjectSchemas.Add(f);
                 }
@@ -416,53 +393,6 @@ namespace Energistics.SchemaGatherer
             File.WriteAllText(path, contents, Encoding.UTF8);
         }
 
-        private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
-        {
-            using (Process p = new Process())
-            {
-                p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
-                p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
-                p.StartInfo.RedirectStandardError = true;
-                p.StartInfo.RedirectStandardOutput = true;
-                p.StartInfo.UseShellExecute = false;
-                p.Start();
-
-
-                string output = p.StandardOutput.ReadToEnd();
-                string error = p.StandardError.ReadToEnd();
-
-                p.WaitForExit();
-                if (!String.IsNullOrEmpty(error))
-                {
-                    Debugger.Break();
-                }
-
-                foreach (Match m in Regex.Matches(output, @"Writing file '(" + targetFolder.Replace(@"\", @"\\") + ".*?)'."))
-                {
-                    string sourceFile = m.Groups[1].Value;
-                    string targetCSFile = String.Format(@"{0}\DataObject.cs", targetFolder);
-
-                    if (File.Exists(sourceFile))
-                    {
-                        CleanUpGeneratedCode(sourceFile);
-                        if (File.Exists(targetCSFile))
-                        {
-                            File.Delete(targetCSFile);
-                        }
-                        File.Move(sourceFile, targetCSFile);
-                        File.Delete(targetXmlFile);
-                        File.Delete(newTypeCatalog);
-                        if (File.Exists(newTypeCatalogProdml))
-                        {
-                            File.Delete(newTypeCatalogProdml);
-                        }
-                    }
-
-                    break;
-                }
-            }
-        }
-
         /// <summary>
         /// Parses enumValues.xml and inserts the values into typ_catalog.xsd
         /// </summary>
@@ -472,58 +402,63 @@ namespace Energistics.SchemaGatherer
         /// <param name="sw">StreamWriter to write results to</param>
         private static void ProcessEnumValuesXml(string typeCatalog, string newTypeCatalog, string enumList, StreamWriter sw)
         {
-            if (File.Exists(typeCatalog))
+            if (!File.Exists(typeCatalog)) return;
+
+            string contents = File.ReadAllText(typeCatalog);
+
+            string restrictString = "<xsd:restriction base=\"witsml:abstractTypeEnum\">";
+            if (!contents.Contains(restrictString))
             {
-                string contents = File.ReadAllText(typeCatalog);
-
-                string restrictString = "<xsd:restriction base=\"witsml:abstractTypeEnum\">";
-                if (!contents.Contains(restrictString))
-                {
-                    restrictString = restrictString.Replace("witsml", "prodml");
-                }
-
-                contents = contents.Replace(restrictString.Substring(0, restrictString.Length - 1) + "/>", restrictString + "\n\t\t</xsd:restriction>");
-
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(enumList);
-
-                XmlNodeList nodes = xmlDoc.GetElementsByTagName("enumList");
-                foreach (XmlNode node in nodes)
-                {
-                    string name = node["name"].InnerText;
-
-                    StringBuilder restriction = new StringBuilder();
-                    foreach (XmlNode attr in node.ChildNodes)
-                    {
-                        if (attr.Name == "value")
-                        {
-                            string valName = attr["name"].InnerText;
-                            string valDesc = (attr["description"] != null) ? attr["description"].InnerText : String.Empty;
-                            valDesc = valDesc.Replace("&", "&amp;");
-                            valDesc = valDesc.Replace("<", "&lt;");
-                            valDesc = valDesc.Replace(">", "&gt;");
-
-                            restriction.AppendLine(String.Format("\t\t\t<xsd:enumeration value=\"{0}\">", valName));
-                            restriction.AppendLine("\t\t\t\t<xsd:annotation>");
-                            restriction.AppendLine(String.Format("\t\t\t\t\t<xsd:documentation>{0}</xsd:documentation>", valDesc));
-                            restriction.AppendLine("\t\t\t\t</xsd:annotation>");
-                            restriction.AppendLine("\t\t\t</xsd:enumeration>");
-                        }
-                    }
-
-                    int simpleTypeLoc = contents.IndexOf(String.Format("<xsd:simpleType name=\"{0}\"", name));
-                    if (simpleTypeLoc >= 0)
-                    {
-                        int locRestrictString = contents.IndexOf(restrictString, simpleTypeLoc);
-                        contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
-                    }
-
-                }
-
-                File.WriteAllText(newTypeCatalog, contents);
-
-                sw.WriteLine("    <schema>" + newTypeCatalog + "</schema>");
+                restrictString = restrictString.Replace("witsml", "prodml");
             }
+
+            contents = contents.Replace(restrictString.Substring(0, restrictString.Length - 1) + "/>", restrictString + "\n\t\t</xsd:restriction>");
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(enumList);
+
+            XmlNodeList nodes = xmlDoc.GetElementsByTagName("enumList");
+            foreach (XmlNode node in nodes)
+            {
+                string name = node["name"].InnerText;
+
+                StringBuilder restriction = new StringBuilder();
+                foreach (XmlNode attr in node.ChildNodes)
+                {
+                    if (attr.Name == "value")
+                    {
+                        string valName = attr["name"].InnerText;
+                        string valDesc = (attr["description"] != null) ? attr["description"].InnerText : String.Empty;
+                        valDesc = valDesc.Replace("&", "&amp;");
+                        valDesc = valDesc.Replace("<", "&lt;");
+                        valDesc = valDesc.Replace(">", "&gt;");
+
+                        restriction.AppendLine(String.Format("\t\t\t<xsd:enumeration value=\"{0}\">", valName));
+                        restriction.AppendLine("\t\t\t\t<xsd:annotation>");
+                        restriction.AppendLine(String.Format("\t\t\t\t\t<xsd:documentation>{0}</xsd:documentation>", valDesc));
+                        restriction.AppendLine("\t\t\t\t</xsd:annotation>");
+                        restriction.AppendLine("\t\t\t</xsd:enumeration>");
+                    }
+                }
+
+                int xsSimpleTypeLoc = contents.IndexOf(String.Format("<xs:simpleType name=\"{0}\"", name));
+                int xsdSimpleTypeLoc = contents.IndexOf(String.Format("<xsd:simpleType name=\"{0}\"", name));
+                if (xsSimpleTypeLoc >= 0)
+                {
+                    int locRestrictString = contents.IndexOf(restrictString, xsSimpleTypeLoc);
+                    contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
+                }
+                if (xsdSimpleTypeLoc >= 0)
+                {
+                    int locRestrictString = contents.IndexOf(restrictString, xsdSimpleTypeLoc);
+                    contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
+                }
+
+            }
+
+            File.WriteAllText(newTypeCatalog, contents);
+
+            sw.WriteLine("    <schema>" + newTypeCatalog + "</schema>");
         }
     }
 }

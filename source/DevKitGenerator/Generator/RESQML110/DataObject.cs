@@ -4251,7 +4251,6 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>True ("true" or "1") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False ("false" or "0") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"True (""true"" or ""1"") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False (""false"" or ""0"") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.")]
         public bool inlineParallelToIAxis {
             get {
@@ -4264,7 +4263,6 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The index of the first inline beginning at i=0, j=0.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The index of the first inline beginning at i=0, j=0.")]
         public int originInline {
             get {
@@ -4277,7 +4275,6 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The index of the first crosslineline beginning at i=0, j=0.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The index of the first crosslineline beginning at i=0, j=0.")]
         public int originCrossline {
             get {
@@ -4290,7 +4287,6 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.")]
         public int inlineIncrement {
             get {
@@ -4303,7 +4299,6 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         /// <summary>The crossline increment. The increment can be a positive or negative integer, but not zero.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The crossline increment. The increment can be a positive or negative integer, but" +
             " not zero.")]
         public int crosslineIncrement {
@@ -13189,7 +13184,6 @@ namespace Energistics.Generator.RESQML110 {
     /// <remarks/>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://purl.org/dc/terms/")]
-    [System.Xml.Serialization.XmlRootAttribute("format", Namespace="http://purl.org/dc/terms/", IsNullable=false)]
     public enum ResqmlFormat {
         
         /// <remarks/>
@@ -13208,7 +13202,7 @@ namespace Energistics.Generator.RESQML110 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string eventTypeField;
         
@@ -13224,7 +13218,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The date on which the event took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
-        public System.DateTime eventDate {
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -13314,7 +13308,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private PrimitiveType dataTypeField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -13375,7 +13369,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -13495,7 +13489,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private string securitySystemField;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -13537,7 +13531,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>The date on which this security class is no  longer applicable.</summary>
         [System.ComponentModel.DescriptionAttribute("The date on which this security class is no  longer applicable.")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -13606,7 +13600,7 @@ namespace Energistics.Generator.RESQML110 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
     public partial class cs_documentFileCreation {
         
-        private System.DateTime fileCreationDateField;
+        private Energistics.SchemaGatherer.Timestamp fileCreationDateField;
         
         private string softwareNameField;
         
@@ -13618,7 +13612,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The date and time that the file was created.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time that the file was created.")]
-        public System.DateTime fileCreationDate {
+        public Energistics.SchemaGatherer.Timestamp fileCreationDate {
             get {
                 return this.fileCreationDateField;
             }
@@ -13718,7 +13712,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private nameStruct[] documentAliasField;
         
-        private System.DateTime documentDateField;
+        private Energistics.SchemaGatherer.Timestamp documentDateField;
         
         private bool documentDateFieldSpecified;
         
@@ -13767,7 +13761,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
-        public System.DateTime documentDate {
+        public Energistics.SchemaGatherer.Timestamp documentDate {
             get {
                 return this.documentDateField;
             }

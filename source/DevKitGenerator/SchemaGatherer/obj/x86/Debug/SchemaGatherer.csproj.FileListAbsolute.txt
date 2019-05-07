@@ -1,8 +1,0 @@
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\bin\Debug\Energistics.SchemaGatherer.exe.config
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\bin\Debug\Energistics.SchemaGatherer.exe
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\bin\Debug\Energistics.SchemaGatherer.pdb
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\bin\Debug\Mono.Options.dll
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\SchemaGatherer.csproj.CoreCompileInputs.cache
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\SchemaGatherer.csproj.CopyComplete
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\Energistics.SchemaGatherer.exe
-C:\development\WITSML\devkit-c\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\Energistics.SchemaGatherer.pdb

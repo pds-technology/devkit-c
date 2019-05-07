@@ -1,0 +1,28 @@
+<prodml:DtsInstalledSystem xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2" uuid="dc0e381a-094a-4fd2-ab89-dce867e3b99d" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/DtsInstalledSystem.xsd">
+	<eml:Citation>
+		<eml:Title>Sample Installed System</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+		<eml:Format>XML</eml:Format>
+	</eml:Citation>
+	<prodml:DateMin>2001-12-17T09:30:47Z</prodml:DateMin>
+	<prodml:OpticalPathLength uom="m">517.43</prodml:OpticalPathLength>
+	<prodml:OpticalPathReference>
+		<eml:ContentType>optical path reference</eml:ContentType>
+		<eml:Title>OP1</eml:Title>
+		<eml:Uuid>bfd164f4-f9e3-41c0-a74e-372b69cc2a09</eml:Uuid>
+	</prodml:OpticalPathReference>
+	<prodml:InstrumentBoxReference>
+		<eml:ContentType>instrument box</eml:ContentType>
+		<eml:Title>Sample Instrument Box</eml:Title>
+		<eml:Uuid>dc0e381a-094a-4fd2-ab89-dce867e3b99d</eml:Uuid>
+	</prodml:InstrumentBoxReference>
+	<prodml:FacilityIdentifier uid="System 1">
+		<prodml:Name>Sample Well</prodml:Name>
+		<prodml:Installation>my platform</prodml:Installation>
+		<prodml:Kind>well</prodml:Kind>
+		<prodml:ContextFacility>System 1</prodml:ContextFacility>
+		<prodml:GeographicContext></prodml:GeographicContext>
+	</prodml:FacilityIdentifier>
+</prodml:DtsInstalledSystem>
+

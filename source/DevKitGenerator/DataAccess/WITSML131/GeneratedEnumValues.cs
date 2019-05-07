@@ -7,6 +7,7 @@ namespace Energistics.DataAccess.WITSML131
     /// <summary>
     /// Activity codes.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ActivityCode : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -3643,6 +3644,7 @@ namespace Energistics.DataAccess.WITSML131
     /// These values represent the lithological terminology used 
     ///		in descriptions of rock cuttings in mud logs.
     /// </summary>
+    [System.SerializableAttribute()]
     public class LithologyType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -4884,6 +4886,7 @@ namespace Energistics.DataAccess.WITSML131
     /// <summary>
     /// These values represent the type of qualifier in lithology.
     /// </summary>
+    [System.SerializableAttribute()]
     public class QualifierType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -6287,6 +6290,7 @@ namespace Energistics.DataAccess.WITSML131
     /// <summary>
     /// These values represent the name of a recording channel.
     /// </summary>
+    [System.SerializableAttribute()]
     public class RealtimeData : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11020,6 +11024,7 @@ namespace Energistics.DataAccess.WITSML131
     /// <summary>
     /// Defines the locations where an equipment tag might be found.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagLocation : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11163,6 +11168,7 @@ namespace Energistics.DataAccess.WITSML131
     /// <summary>
     /// Defines the specifications for creating equipment tags.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagNumberingScheme : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11414,6 +11420,7 @@ namespace Energistics.DataAccess.WITSML131
     /// <summary>
     /// Defines the mechanisms for attaching an equipment tag to an item.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagTechnology : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>

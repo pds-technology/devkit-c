@@ -299,6 +299,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines the index locations of one referenced split node. The reference value refers to the order in point3dSet. If you set this property, you must also set SplitNodeSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitNodeReference")]
         public ResqmlSplitNodeReference[] SplitNodeReference {
             get {
@@ -332,6 +333,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of points that are split. There must be splitNodeCount points in the aggregate. If you set this property, you must also set SplitNodeReference.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitNodeSet")]
         public ResqmlPoint3dSet SplitNodeSet {
             get {
@@ -365,6 +367,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
@@ -776,6 +779,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines the index locations of one additional (split) coordinate line. The reference value refers to the order in the lineSet aggregate. If you set this property, you must also set LineSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitLineReference")]
         public ResqmlSplitLineReference[] SplitLineReference {
             get {
@@ -809,6 +813,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a set of node points on coordinate lines, organized by layer. There are "nk+gapCount+1" layers of nodes. Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines. This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations. In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated. The lines are ordered according to a zero-based line_index defined by: (I-startIndexI)+(NI+1)*(J-startIndexJ) where I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1. J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1. The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J. The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences in the order defined by the reference element in splitLineReference. The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index). There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN". For the additional lines, the line kind will never be "null". . If you set this property, you must also set SplitLineReference.
         /// </summary>
+        [ComponentElement]
         [XmlElement("lineSet")]
         public ResqmlPoint3dSet LineSet {
             get {
@@ -842,6 +847,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
@@ -1427,7 +1433,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the cs_resqmlAbstractIJKGrid xsd type.")]
-    public abstract partial class ResqmlAbstractIJKGrid : Object, INotifyPropertyChanged
+    public abstract partial class ResqmlAbstractIJKGrid : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -1706,6 +1712,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// An encoded array of boolean flags which indicate cell node identity without the need for any floating point comparison The underlying type of each item is an integer. Each integer value represents the sum of integer components where:: 1=cellGeometryDefined, 2=iPinch, 4=jPinch, 8=kPinch, 16=iStandardAdjacency, 32=jStandardAdjacency, 64=kStandardAdjacency. This creates a bit encoded array within one integer value. Example: A "standard" cell has a value of 1+16+32+64 = 113 (hex 0x71 binary 1110001). A non-zero value for cellGeometryDefined indicates that the apparent geometry in a cell is well defined. A non-zero value for kPinch indicates that the top four nodes of a cell are identical to the corresponding bottom four nodes of the same cell. Similar for iPinch and jPinch. A non-zero value for iStandardAdjacency indicates that the four "I+" face nodes of cell (I,J,K) are identical to the four corresponding "I-" face nodes of cell (I+1,J,K). iStandardAdjacency=0 indicates that the only kind of adjacency you can expect will be described in the nonStandardAdjacency list. Similar for jStandardAdjacency and kStandardAdjacency. Consistent with this definition, standardAdjacency=0 off the edge of a grid.
         /// </summary>
+        [ComponentElement]
         [XmlElement("gridTopologyFlags")]
         public ShortValueList GridTopologyFlags {
             get {
@@ -1739,6 +1746,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the gridTopologyFlags array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
@@ -2519,7 +2527,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlContinuousPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Information specific to one continuous property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal ")]
-    public partial class ResqmlContinuousPropertyValues : ResqmlAbstractPropertyValues, INotifyPropertyChanged
+    public partial class ResqmlContinuousPropertyValues : ResqmlAbstractPropertyValues, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2561,6 +2569,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -2593,6 +2602,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
+        [ComponentElement]
         [XmlElement("xmlRepresentation")]
         public ResqmlContinuousValues XmlRepresentation {
             get {
@@ -2643,6 +2653,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of byte values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("byteValues")]
         public ByteValueList ByteValues {
             get {
@@ -2675,6 +2686,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of double values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("doubleValues")]
         public DoubleValueList DoubleValues {
             get {
@@ -2707,6 +2719,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of float values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("floatValues")]
         public FloatValueList FloatValues {
             get {
@@ -2739,6 +2752,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of int values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("intValues")]
         public IntValueList IntValues {
             get {
@@ -2771,6 +2785,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of long values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longValues")]
         public LongValueList LongValues {
             get {
@@ -2803,6 +2818,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of short values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("shortValues")]
         public ShortValueList ShortValues {
             get {
@@ -3384,6 +3400,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of byte values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("byteValues")]
         public ByteValueList ByteValues {
             get {
@@ -3416,6 +3433,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of int values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("intValues")]
         public IntValueList IntValues {
             get {
@@ -3448,6 +3466,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of long values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longValues")]
         public LongValueList LongValues {
             get {
@@ -3480,6 +3499,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of short values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("shortValues")]
         public ShortValueList ShortValues {
             get {
@@ -3527,7 +3547,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the cs_resqmlAbstractPropertyValues xsd type.")]
-    public abstract partial class ResqmlAbstractPropertyValues : Object, INotifyPropertyChanged
+    public abstract partial class ResqmlAbstractPropertyValues : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3731,6 +3751,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A pointer to the locally defined property which represents these values. Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localKind")]
         public RefGlobalNameString LocalKind {
             get {
@@ -3816,6 +3837,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The date and time related to the property.
         /// </summary>
+        [ComponentElement]
         [XmlElement("timeStep")]
         public ResqmlRefTimeStep TimeStep {
             get {
@@ -4086,7 +4108,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlExtensionNameValue", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Extension values Schema. The intent is to allow standard named extensions without having to modify the schema. Software can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ResqmlExtensionNameValue : Object, INotifyPropertyChanged
+    public partial class ResqmlExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4345,7 +4367,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlCategoricalPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Information specific to one categorical (i.e., string) property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal ")]
-    public partial class ResqmlCategoricalPropertyValues : ResqmlAbstractPropertyValues, INotifyPropertyChanged
+    public partial class ResqmlCategoricalPropertyValues : ResqmlAbstractPropertyValues, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4382,6 +4404,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -4414,6 +4437,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
+        [ComponentElement]
         [XmlElement("xmlRepresentation")]
         public ResqmlDiscreteValues XmlRepresentation {
             get {
@@ -4458,7 +4482,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlStringLookup", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Defines a string to integer lookup table.")]
-    public partial class ResqmlStringLookup : Object, INotifyPropertyChanged
+    public partial class ResqmlStringLookup : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4551,7 +4575,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlDiscretePropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Information specific to one discrete property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal ")]
-    public partial class ResqmlDiscretePropertyValues : ResqmlAbstractPropertyValues, INotifyPropertyChanged
+    public partial class ResqmlDiscretePropertyValues : ResqmlAbstractPropertyValues, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4593,6 +4617,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -4625,6 +4650,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
+        [ComponentElement]
         [XmlElement("xmlRepresentation")]
         public ResqmlDiscreteValues XmlRepresentation {
             get {
@@ -4669,7 +4695,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlRootIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("An IJK structured root geometry of a volume This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal ")]
-    public partial class ResqmlRootIJKGrid : ResqmlAbstractIJKGrid, INotifyPropertyChanged
+    public partial class ResqmlRootIJKGrid : ResqmlAbstractIJKGrid, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4735,7 +4761,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlLocalIJKGrid", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("An IJK structured local geometry of a volume. This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal ")]
-    public partial class ResqmlLocalIJKGrid : ResqmlAbstractIJKGrid, INotifyPropertyChanged
+    public partial class ResqmlLocalIJKGrid : ResqmlAbstractIJKGrid, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4868,6 +4894,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A 3D corner point grid representation using explicit nodes on coordinate lines.
         /// </summary>
+        [ComponentElement]
         [XmlElement("explicitCornerPointGrid")]
         public ResqmlExplicitCornerPointGridRepresentation ExplicitCornerPointGrid {
             get {
@@ -4900,6 +4927,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Structured IJK grid refinement.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridRefinement")]
         public ResqmlIJKGridRefinement IjkGridRefinement {
             get {
@@ -5162,7 +5190,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlIJKNonStandardAdjacency", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Cell-face-pair non-standard adjacency geometry and properties for structured IJK grids.")]
-    public partial class ResqmlIJKNonStandardAdjacency : Object, INotifyPropertyChanged
+    public partial class ResqmlIJKNonStandardAdjacency : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5351,6 +5379,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A cell-face-pair that defines non-standard-adjacency. The order of the aggregate must be retained. Properties will be assigned to the pair based on the order. An index of zero will represent the first pair.
         /// </summary>
+        [ComponentElement]
         [XmlElement("gridIJKCellFacePair")]
         public ResqmlGridIJKCellFacePair[] GridIJKCellFacePair {
             get {
@@ -5384,6 +5413,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the cell-face-pair array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -5746,7 +5776,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlIJKBlockedWellbore", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("The (surface toward bottomhole) path of a wellbore defined as a list of grid cells. For sidetrack (lateral) wellbores the path starts at the kickoff point.")]
-    public partial class ResqmlIJKBlockedWellbore : Object, INotifyPropertyChanged
+    public partial class ResqmlIJKBlockedWellbore : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6372,7 +6402,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlBinGrid", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Defines the relationship between the 2D grid coordinates and the bin grid.")]
-    public partial class ResqmlBinGrid : Object, INotifyPropertyChanged
+    public partial class ResqmlBinGrid : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6670,8 +6700,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// True ("true" or "1") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and each crossline represents a constant value of i. False ("false" or "0") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and each crossline represents a constant value of j.
         /// </summary>
-		[Required]
-        [Description("True (\"true\" or \"1\") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False (\"false\" or \"0\") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.")]
+		[Description("True (\"true\" or \"1\") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False (\"false\" or \"0\") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.")]
 		[XmlElement("inlineParallelToIAxis")]
         public Boolean? InlineParallelToIAxis {
             get {
@@ -6688,8 +6717,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The index of the first inline beginning at i=0, j=0.
         /// </summary>
-		[Required]
-        [Description("The index of the first inline beginning at i=0, j=0.")]
+		[Description("The index of the first inline beginning at i=0, j=0.")]
 		[XmlElement("originInline")]
         public Int32? OriginInline {
             get {
@@ -6706,8 +6734,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The index of the first crosslineline beginning at i=0, j=0.
         /// </summary>
-		[Required]
-        [Description("The index of the first crosslineline beginning at i=0, j=0.")]
+		[Description("The index of the first crosslineline beginning at i=0, j=0.")]
 		[XmlElement("originCrossline")]
         public Int32? OriginCrossline {
             get {
@@ -6724,8 +6751,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference in the inline number from node i=0, j=0 to node i=0, j=1. The increment can be a positive or negative integer, but not zero.
         /// </summary>
-		[Required]
-        [Description("The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.")]
+		[Description("The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.")]
 		[XmlElement("inlineIncrement")]
         public Int32? InlineIncrement {
             get {
@@ -6742,8 +6768,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The crossline increment. The increment can be a positive or negative integer, but not zero.
         /// </summary>
-		[Required]
-        [Description("The crossline increment. The increment can be a positive or negative integer, but not zero.")]
+		[Description("The crossline increment. The increment can be a positive or negative integer, but not zero.")]
 		[XmlElement("crosslineIncrement")]
         public Int32? CrosslineIncrement {
             get {
@@ -6858,7 +6883,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlPillarSetPatch", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A gemetrical representation which is a set of pillar lines that approximate a surface. Note that that this does not fully represent a surface. It is just a list of lines (typically from seismic). More information is required to define an actual surface. All lines shall utilize the same CRS.")]
-    public partial class ResqmlPillarSetPatch : Object, INotifyPropertyChanged
+    public partial class ResqmlPillarSetPatch : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6882,6 +6907,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A list of points representing all the nodes of all the pillars. The first nodeCountPerPillar points represent the nodes of the first pillar, the second nodeCountPerPillar points represent the nodes of the second pillar, and so on. A point defined by with NaN values shall be ignored.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pillarSet")]
         public ResqmlPoint3dSet PillarSet {
             get {
@@ -6915,6 +6941,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pillarSetHdfGroup")]
         public ResqmlHdfGroup PillarSetHdfGroup {
             get {
@@ -7345,7 +7372,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlWellMarkerPatch", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A gemetrical representation which is a set of points that approximates a surface. Note that that this does not fullly represent a surface. It is just a random set of points (typically from seismic). More information is required to define an actual surface. All points shall utilize the same CRS.")]
-    public partial class ResqmlWellMarkerPatch : Object, INotifyPropertyChanged
+    public partial class ResqmlWellMarkerPatch : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -7451,12 +7478,13 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlPointSetPatch", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A gemetrical representation which is a set of points that approximates a surface. Note that that this does not fullly represent a surface. It is just a random set of points (typically from seismic). More information is required to define an actual surface. All points shall utilize the same CRS.")]
-    public partial class ResqmlPointSetPatch : Object, INotifyPropertyChanged
+    public partial class ResqmlPointSetPatch : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
         /// Defines the set of points that represents a nominal surface. The order of the points in the aggregate is not significant relative to the surface. The order represents the "point index" which is used for assigning properties.
         /// </summary>
+        [ComponentElement]
         [XmlElement("point3dSet")]
         public ResqmlPoint3dSet Point3dSet {
             get {
@@ -7490,6 +7518,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pointSetHdfGroup")]
         public ResqmlHdfGroup PointSetHdfGroup {
             get {
@@ -7888,12 +7917,13 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlTriangulatedPatch", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A gemetrical representation of a surface patch using a triangulated grid.")]
-    public partial class ResqmlTriangulatedPatch : Object, INotifyPropertyChanged
+    public partial class ResqmlTriangulatedPatch : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
         /// A set of coordinate triplets which locates the nodes in the mesh. A value of "NaN" shall NOT exist in any of the points. There is no semantic meaning to the point order except that properties are assigned to the vertices based on the order. This order is called the "vertex index". The first vertex has an index of zero. If you set this property, you must also set TriangleNodeIndexSet, SplitEdgeNodeIndexSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("point3dSet")]
         public ResqmlPoint3dSet Point3dSet {
             get {
@@ -7927,6 +7957,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of triangles in the mesh. A triangle is defined by specifying the "vertex index" of each corner. A corner shall not be defined as "NaN". The aggregate of triangles defines the mesh. There is no semantic meaning to the triangle sequence order except that properties are assigned to the triangles based on the order. This order is called the "face index". The first triangle has an index of zero. If you set this property, you must also set Point3dSet, SplitEdgeNodeIndexSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("triangleNodeIndexSet")]
         public ResqmlTriangleSet TriangleNodeIndexSet {
             get {
@@ -7960,6 +7991,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of split edges. There is no semantics assigned to the order of the edges. If you set this property, you must also set Point3dSet, TriangleNodeIndexSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitEdgeNodeIndexSet")]
         public ResqmlSplitEdgeSet SplitEdgeNodeIndexSet {
             get {
@@ -7993,6 +8025,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("triangulatedHdfGroup")]
         public ResqmlHdfGroup TriangulatedHdfGroup {
             get {
@@ -8097,7 +8130,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlGrid2dPatch", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A gemetrical representation of a surface using a subset of a 2d binset grid.")]
-    public partial class ResqmlGrid2dPatch : Object, INotifyPropertyChanged
+    public partial class ResqmlGrid2dPatch : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8230,6 +8263,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A space delimited list of ni*nj space delimited vertical coordinates which defines the vertical coordinate at each node of the grid. The order of the items in the list is I varies fastest. I=1,J=1 represents the first value while I=2,J=1 represents the second value, etc.
         /// </summary>
+        [ComponentElement]
         [XmlElement("zValueDataset")]
         public DoubleValueList ZValueDataset {
             get {
@@ -8263,6 +8297,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("grid2dHdfGroup")]
         public ResqmlHdfGroup Grid2dHdfGroup {
             get {
@@ -8371,7 +8406,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractFeatureRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.")]
-    public abstract partial class ResqmlAbstractFeatureRepresentation : Object, INotifyPropertyChanged
+    public abstract partial class ResqmlAbstractFeatureRepresentation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8659,7 +8694,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlPillarSetRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A set of pillar (line) set patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlPillarSetRepresentation : ResqmlAbstractFeatureRepresentation, INotifyPropertyChanged
+    public partial class ResqmlPillarSetRepresentation : ResqmlAbstractFeatureRepresentation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8707,7 +8742,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlWellMarkerRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A set of well marker patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlWellMarkerRepresentation : ResqmlAbstractFeatureRepresentation, INotifyPropertyChanged
+    public partial class ResqmlWellMarkerRepresentation : ResqmlAbstractFeatureRepresentation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8743,7 +8778,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlHybridGridRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A hybrid surface composed of one 2D grid patch and one triangulated mesh patch. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlHybridGridRepresentation : ResqmlAbstractFeatureRepresentation, INotifyPropertyChanged
+    public partial class ResqmlHybridGridRepresentation : ResqmlAbstractFeatureRepresentation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8810,7 +8845,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlPointSetRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A set of point set patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlPointSetRepresentation : ResqmlAbstractFeatureRepresentation, INotifyPropertyChanged
+    public partial class ResqmlPointSetRepresentation : ResqmlAbstractFeatureRepresentation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8858,7 +8893,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlTriangulatedRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A set of triangulated mesh patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlTriangulatedRepresentation : ResqmlAbstractFeatureRepresentation, INotifyPropertyChanged
+    public partial class ResqmlTriangulatedRepresentation : ResqmlAbstractFeatureRepresentation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8906,7 +8941,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlGrid2dRepresentation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A set of 2D grid patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlGrid2dRepresentation : ResqmlAbstractFeatureRepresentation, INotifyPropertyChanged
+    public partial class ResqmlGrid2dRepresentation : ResqmlAbstractFeatureRepresentation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8956,7 +8991,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractFeatureInterpretation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the cs_resqmlAbstractFeatureInterpretation xsd type.")]
-    public abstract partial class ResqmlAbstractFeatureInterpretation : Object, INotifyPropertyChanged
+    public abstract partial class ResqmlAbstractFeatureInterpretation : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9225,7 +9260,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlFaultInterpretation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("One interpretation of the geometry of a fault. Multiple representations are supported but all representations must be either in time or in depth. That is, a mixture of time and depth representations is not allowed. At least one representation is required. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlFaultInterpretation : ResqmlAbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class ResqmlFaultInterpretation : ResqmlAbstractFeatureInterpretation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9392,7 +9427,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlHorizonInterpretation", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("One interpretation of the geometry of a horizon. Multiple representations are supported but all representations must be either in time or in depth. That is, a mixture of time and depth representations is not allowed. At least one representation is required. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlHorizonInterpretation : ResqmlAbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class ResqmlHorizonInterpretation : ResqmlAbstractFeatureInterpretation, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9561,7 +9596,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractGeologicFeature", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the cs_resqmlAbstractGeologicFeature xsd type.")]
-    public abstract partial class ResqmlAbstractGeologicFeature : Object, INotifyPropertyChanged
+    public abstract partial class ResqmlAbstractGeologicFeature : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9830,7 +9865,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlFault", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Information specific to one geologic fault. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlFault : ResqmlAbstractGeologicFeature, INotifyPropertyChanged
+    public partial class ResqmlFault : ResqmlAbstractGeologicFeature, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9877,7 +9912,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlHorizon", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Information specific to one geologic horizon. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal ")]
-    public partial class ResqmlHorizon : ResqmlAbstractGeologicFeature, INotifyPropertyChanged
+    public partial class ResqmlHorizon : ResqmlAbstractGeologicFeature, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10360,7 +10395,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlPropertyGroup", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Group of properties used or created together.")]
-    public partial class ResqmlPropertyGroup : Object, INotifyPropertyChanged
+    public partial class ResqmlPropertyGroup : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10810,7 +10845,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlPropertyKind", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("A description of property name relative to a standard definition.")]
-    public partial class StandAloneResqmlPropertyKind : Object, INotifyPropertyChanged
+    public partial class StandAloneResqmlPropertyKind : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11086,6 +11121,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A pointer to parent locally defined property. The semantics of this property is a specialization of the specified local property. Note that all local kinds must directly or indirectly be related to a standard RESQML standard kind.
         /// </summary>
+        [ComponentElement]
         [XmlElement("parentLocalKind")]
         public RefGlobalNameString ParentLocalKind {
             get {
@@ -11442,7 +11478,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlLocal3dCRS", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Defines a local 3D Coordinate Reference System (CRS). The local CRS MUST form a cartesian system of axes. The local areal axes MUST be in the plane of the projected system. The local areal axes MUST be orthogonal to each other. The ordinals of the local system MUST be defined in units of meters. This 3D system is semantically equivalent to a Compound CRS composed of a local 2d areal system and a local 1d vertical system. The vertical axis is always positive when moving from the origin toward the center of the Earth. The ordinal of the vertical axis MUST be defined in units of meter (or second if offset from a time system). The labels associated with the axes on this local system are X, Y, Z. The Y axis is 90 degrees counter-clockwise from the X axis. If this local system 1) has an areal origin which coincides (0,0) with the origin of the projected system 2) and has a rotation of zero then the first two axes of the local system will coincide with the axes of the global 2D system. That is, the Y axis would coincide with the global axis which is 90 degrees from the other global axis.")]
-    public partial class ResqmlLocal3dCRS : Object, INotifyPropertyChanged
+    public partial class ResqmlLocal3dCRS : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11929,6 +11965,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// VerticalCRS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("VerticalCRS", Namespace="http://www.opengis.net/gml/3.2")]
         public VerticalCRSType VerticalCRS {
             get {
@@ -13562,6 +13599,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// pos property
         /// </summary>
+        [ComponentElement]
         [XmlElement("pos")]
         public DirectPositionType Pos {
             get {
@@ -13594,6 +13632,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// posList property
         /// </summary>
+        [ComponentElement]
         [XmlElement("posList")]
         public DirectPositionListType PosList {
             get {
@@ -13898,6 +13937,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// lowerCorner property
         /// </summary>
+        [ComponentElement]
         [XmlElement("lowerCorner")]
         public DirectPositionType LowerCorner {
             get {
@@ -13930,6 +13970,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// pos property
         /// </summary>
+        [ComponentElement]
         [XmlElement("pos")]
         public DirectPositionType Pos {
             get {
@@ -13962,6 +14003,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// upperCorner property
         /// </summary>
+        [ComponentElement]
         [XmlElement("upperCorner")]
         public DirectPositionType UpperCorner {
             get {
@@ -14199,19 +14241,19 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// secondDefiningParameter property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("secondDefiningParameter")]
-        public StandAloneSecondDefiningParameter SecondDefiningParameter {
+        public StandAloneSecondDefParameter SecondDefPara {
             get {
                 return secondDefiningParameterField;
             } 
             set {
                 secondDefiningParameterField = value;
-                NotifyPropertyChanged("SecondDefiningParameter");
+                NotifyPropertyChanged("SecondDefPara");
             }
         }
 
-        private StandAloneSecondDefiningParameter secondDefiningParameterField; 
+        private StandAloneSecondDefParameter secondDefiningParameterField; 
 
 
     } //here
@@ -14373,7 +14415,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
 	[Description("This class represents the secondDefiningParameter xsd type.")]
-    public partial class StandAloneSecondDefiningParameter : Object, INotifyPropertyChanged
+    public partial class StandAloneSecondDefParameter : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14381,13 +14423,13 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[ComponentElement]
 		[XmlElement("SecondDefiningParameter")]
-        public SecondDefiningParameter SecondDefiningParameter {
+        public SecondDefiningParameter SecondDefPara {
             get {
                 return SecondDefiningParameterField;
             } 
             set {
                 SecondDefiningParameterField = value;
-                NotifyPropertyChanged("SecondDefiningParameter");
+                NotifyPropertyChanged("SecondDefPara");
             }
         }
 
@@ -18402,6 +18444,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// cartesianCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cartesianCS")]
         public CartesianCSPropertyType CartesianCS {
             get {
@@ -18434,6 +18477,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// ellipsoidalCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("ellipsoidalCS")]
         public EllipsoidalCSPropertyType EllipsoidalCS {
             get {
@@ -18466,6 +18510,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// sphericalCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("sphericalCS")]
         public SphericalCSPropertyType SphericalCS {
             get {
@@ -19972,6 +20017,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// ProjectedCRS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("ProjectedCRS", Namespace="http://www.opengis.net/gml/3.2")]
         public ProjectedCRSType ProjectedCRS {
             get {
@@ -20193,7 +20239,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_resqmlDocument", Namespace="http://www.resqml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "1.1.0.0")]
     [Description("The non-contextual content of a RESQML document object.")]
-    public partial class ResqmlDocument : Object, INotifyPropertyChanged
+    public partial class ResqmlDocument : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20505,7 +20551,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("An event type captures the basic information about an event that has affected the data.")]
-    public partial class DocumentEvent : Object, INotifyPropertyChanged
+    public partial class DocumentEvent : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20514,7 +20560,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The date on which the event took place.")]
 		[XmlElement("eventDate")]
-        public DateTime? EventDate {
+        public Timestamp? EventDate {
             get {
                 return eventDateField;
             } 
@@ -20524,7 +20570,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? eventDateField; 
+        private Timestamp? eventDateField; 
 
         /// <summary>
         /// The kind of event event.
@@ -20663,7 +20709,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ExtensionNameValue : Object, INotifyPropertyChanged
+    public partial class ExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20726,7 +20772,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public DateTime? DateTime {
+        public Timestamp? DateTime {
             get {
                 return dTimField;
             } 
@@ -20737,7 +20783,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? dTimField; 
+        private Timestamp? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -20915,7 +20961,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
-    public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
+    public partial class DocumentSecurityInfo : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20959,7 +21005,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public DateTime? EndDate {
+        public Timestamp? EndDate {
             get {
                 return endDateField;
             } 
@@ -20970,7 +21016,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? endDateField; 
+        private Timestamp? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -21099,7 +21145,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public DateTime? FileCreationDate {
+        public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -21109,7 +21155,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? fileCreationDateField; 
+        private Timestamp? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -21348,7 +21394,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public DateTime? DocumentDate {
+        public Timestamp? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -21359,7 +21405,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private DateTime? documentDateField; 
+        private Timestamp? documentDateField; 
 
         /// <summary>
         /// documentDateSpecified property

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FluidSampleAcquisitionJob xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" schemaVersion="0.29" uuid="00000001-0001-0000-0000-000000000000" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FluidSampleAcquisitionJob.xsd">
+	<eml:Aliases authority="XOM.EMSDB.DEVSDB1.EG.SAMPLE_ACQUISITION">
+		<eml:Identifier>46C65DC944076D59E06600144F1E6737</eml:Identifier>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>Good Oil 4 Bottomhole Sample Acquisition</eml:Title>
+		<eml:Originator>Good Oil</eml:Originator>
+		<eml:Creation>2015-01-29T12:08:22-06:00</eml:Creation>
+		<eml:Format>xml</eml:Format>
+	</eml:Citation>
+	<EstimatedStartDate>1994-01-01</EstimatedStartDate>
+	
+	<FluidSampleAcquisition uid="00000001-0001-0000-0000-000000003954" xsi:type="DownholeSampleAcquisition">
+		<Date>1994-01-01T12:08:22-06:00</Date> 
+			<AcquisitionPressure  xsi:type="eml:AbsolutePressure"> 
+						<eml:AbsolutePressure uom="psi">3954</eml:AbsolutePressure> 
+			</AcquisitionPressure>
+		<AcquisitionTemperature uom="degF">217</AcquisitionTemperature>
+		<AcquisitionGOR uom="ft3/bbl">600</AcquisitionGOR>
+		<FormationPressure uom="psi">4100</FormationPressure> 
+		
+		<Remark>Shut in 72 hours</Remark>	
+	
+		<FluidSampleContainerReference>
+			<eml:ContentType>FluidSampleContainer</eml:ContentType>                    
+			<eml:Title>GO4 No 1</eml:Title>
+			<eml:Uuid>00000000-0001-0001-0000-000000000000</eml:Uuid>
+		</FluidSampleContainerReference>  
+
+		<FluidSampleReference>
+			<eml:ContentType>FluidSample</eml:ContentType>
+			<eml:Title>Good Oil 4 Sample 01</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0001-000000003954</eml:Uuid>
+		</FluidSampleReference>	 		
+			<TopMD uom="ft">8500</TopMD>
+			<SamplingRun>1</SamplingRun>
+			<WellboreReference>
+				<eml:ContentType>Wellbore</eml:ContentType>
+				<eml:Title>Good Oil 4 Wellbore</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-420123456701</eml:Uuid>
+			</WellboreReference> 
+	</FluidSampleAcquisition>
+	
+	<FluidSampleAcquisition uid="00000001-0001-0000-0000-000000003954" xsi:type="DownholeSampleAcquisition" >
+		<Date>1994-01-01T12:08:22-06:00</Date> 
+					<AcquisitionPressure  xsi:type="eml:AbsolutePressure"> 
+						<eml:AbsolutePressure uom="psi">3954</eml:AbsolutePressure> 
+			</AcquisitionPressure>
+		<AcquisitionTemperature uom="degF">217</AcquisitionTemperature>
+		<AcquisitionGOR uom="ft3/bbl">600</AcquisitionGOR>
+		<FormationPressure uom="psi">4100</FormationPressure> 	
+
+		<Remark>Shut in 72 hours</Remark>
+		<FluidSampleContainerReference>
+			<eml:ContentType>FluidSampleContainer</eml:ContentType>
+			<eml:Title>GO4 No 2</eml:Title>
+			<eml:Uuid>00000000-0002-0001-0000-000000000000</eml:Uuid>
+		</FluidSampleContainerReference>
+				<FluidSampleReference>
+			<eml:ContentType>FluidSample</eml:ContentType>
+			<eml:Title>Good Oil 4 Sample 02</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0002-000000003954</eml:Uuid>
+		</FluidSampleReference>
+		<!-- ServiceCompany schemaVersion="0.24">Core Laboratories</ServiceCompany-->
+		<!--<ServiceCompany objectVersion="0.24" schemaVersion="0.24" uuid="C00E0AB0-0A00-00E1-0000-000000000000" xsi:type="BusinessAssociate"/>-->
+			<TopMD uom="ft">8500</TopMD>
+			<SamplingRun>1</SamplingRun>
+			<WellboreReference>
+				<eml:ContentType>Wellbore</eml:ContentType>
+				<eml:Title>Good Oil 4 Wellbore</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-420123456701</eml:Uuid>
+			</WellboreReference> 
+	</FluidSampleAcquisition>
+	<FluidSystemReference>
+		<eml:ContentType>FluidSystem</eml:ContentType>
+		<eml:Title>Productive Cretaceous</eml:Title>
+		<eml:Uuid>00000001-0000-0000-0000-000000000000</eml:Uuid>
+	</FluidSystemReference>
+	</FluidSampleAcquisitionJob>

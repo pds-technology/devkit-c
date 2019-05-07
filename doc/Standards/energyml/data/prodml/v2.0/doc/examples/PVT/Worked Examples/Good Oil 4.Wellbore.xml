@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wellbore xmlns="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" schemaVersion="2.0" uuid="00000000-0000-0000-0000-420123456701">
+	<eml:Citation>
+		<eml:Title>Good Oil No. 4 Wellbore</eml:Title>
+		<eml:Originator>Daman Opcomp</eml:Originator>
+		<eml:Creation>1979-01-20T06:33:44-06:00</eml:Creation>
+		<eml:Format>obj_Wellbore</eml:Format>
+	</eml:Citation>
+	<Well>
+		<eml:ContentType>Well</eml:ContentType>
+		<eml:Title>Good Oil No. 4 Well</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-420123456700</eml:Uuid>
+	</Well> 
+</Wellbore>

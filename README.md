@@ -3,13 +3,13 @@
 
 ##   How do I get set up?   
 ###   Summary of set up  
-Download the code from BitBucket.  It is suggested that the destination directory be C:\Projects.  The App.Config configuration file defines a Key named "ROOT_FOLDER" which has the value "C:\Projects".  Change this value if you prefer a different folder, but it is highly-recommended not to alter the other file linkages. 
+Download the code from BitBucket.  Building the DevKit relies on passing the root folder of the repository to the applications by using the --root-folder command line argument or the ROOT_FOLDER App.Config setting. 
 
-###The created source_master folder contains the following sub-folders:
+###The repository root folder contains the following sub-folders:
 
-Doc - Contains the Energistics schemas.
+doc - Contains the Energistics schemas.
 
-Source - Contains the following folders:
+source - Contains the following folders:
 
 *  Devkit:  The original Devkit. 
 *  DevKitGenerator: This is where the Devkit java classes can be found.    
