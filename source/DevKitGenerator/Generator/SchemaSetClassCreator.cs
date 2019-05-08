@@ -438,13 +438,6 @@ namespace Energistics.Generator
         /// <returns>The WITSML interface in a string format</returns>
         public string GetDataObjectInterface(Type t)
         {
-            bool addInterfaces = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_DATA_OBJECT_INTERFACE"));
-
-            if (!addInterfaces)
-            {
-                return string.Empty;
-            }
-
             var properties = t.GetProperties()
                 .Where(x => x.Name.Contains("uid") || x.Name.Contains("name"))
                 .Where(x => x.PropertyType == typeof(String))

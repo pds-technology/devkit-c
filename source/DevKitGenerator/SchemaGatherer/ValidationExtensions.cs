@@ -94,7 +94,6 @@ namespace Energistics.SchemaGatherer
     /// </summary>
     public static class ValidationExtensions
     {
-        private static readonly bool UseCustomTimestamp = bool.Parse(SchemaGatherer.GetAppSetting("INCLUDE_CUSTOM_TIMESTAMP_USAGE"));
         private const string EmlTimeStampPattern = ".+T.+[Z+\\-].*";
 
         /// <summary>
@@ -513,7 +512,7 @@ namespace Energistics.SchemaGatherer
                 {
                     if (EmlTimeStampPattern.Equals(pattern.Value))
                     {
-                        if (UseCustomTimestamp && !Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
+                        if (!Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
                         {
                             SetTimestampType(typeDeclaration, memberProperty);
                         }
@@ -530,7 +529,7 @@ namespace Energistics.SchemaGatherer
                 }
                 else if (memberProperty.Type.BaseType == typeof(DateTime).FullName)
                 {
-                    if (UseCustomTimestamp && !Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
+                    if (!Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
                     {
                         SetTimestampType(typeDeclaration, memberProperty);
                     }
