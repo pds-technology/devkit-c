@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -33,16 +33,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Avro, Version=0.9.0.0, Culture=neutral, PublicKeyToken=b1248d7eeb9d0814, processorArchitecture=MSIL">
+      <HintPath>..\DevKitGenerator\packages\Apache.Avro.1.7.7.2\lib\Avro.dll</HintPath>
+    </Reference>
+    <Reference Include="ETP.Messages, Version=0.0.0.0, Culture=neutral, PublicKeyToken=20d1862b690719ea, processorArchitecture=MSIL">
+      <HintPath>..\DevKitGenerator\packages\ETP.1.2.0\lib\ETP.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="HDF5DotNet, Version=1.8.9.0, Culture=neutral, PublicKeyToken=a4952c8df86d6e8c, processorArchitecture=x86">
+      <HintPath>..\DevKitGenerator\packages\HDF5DotNet.x86.1.8.9\lib\net40\HDF5DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\DevKitGenerator\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\DevKitGenerator\packages\Newtonsoft.Json.3.5.8\lib\35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnergisticsUtil.cs" />
+    <Compile Include="EPCCoreProperty.cs" />
+    <Compile Include="EPCDataView.cs" />
+    <Compile Include="EPCObject.cs" />
+    <Compile Include="EPCObjectComparer.cs" />
+    <Compile Include="EPCPartValidator.cs" />
+    <Compile Include="EPCReader.cs" />
+    <Compile Include="HD5DataSetObject.cs" />
+    <Compile Include="HDF5GroupObject.cs" />
+    <Compile Include="HDF5Reader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,9 +78,81 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Energistics\Datatypes\AnyArray.avsc" />
+    <None Include="Energistics\Datatypes\ArrayOfBoolean.avsc" />
+    <None Include="Energistics\Datatypes\ArrayOfDouble.avsc" />
+    <None Include="Energistics\Datatypes\ArrayOfFloat.avsc" />
+    <None Include="Energistics\Datatypes\ArrayOfInt.avsc" />
+    <None Include="Energistics\Datatypes\ArrayOfLong.avsc" />
+    <None Include="Energistics\Datatypes\ChannelDataFrame\DataRow.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\ChannelIndexTypes.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\ChannelMetadataRecord.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\ChannelRangeInfo.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\ChannelStatuses.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\ChannelStreamingInfo.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\DataItem.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\ErrorCodes.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\IndexDirections.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\IndexMetadataRecord.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\IndexValue.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\Roles.avsc" />
+    <None Include="Energistics\Datatypes\ChannelData\StreamingStartIndex.avsc" />
+    <None Include="Energistics\Datatypes\DataAttribute.avsc" />
+    <None Include="Energistics\Datatypes\DataValue.avsc" />
+    <None Include="Energistics\Datatypes\DateTime.avsc" />
+    <None Include="Energistics\Datatypes\ErrorCodes.avsc" />
+    <None Include="Energistics\Datatypes\MessageHeader.avsc" />
+    <None Include="Energistics\Datatypes\Object\DataObject.avsc" />
+    <None Include="Energistics\Datatypes\Object\NotificationRequestRecord.avsc" />
+    <None Include="Energistics\Datatypes\Object\ObjectChange.avsc" />
+    <None Include="Energistics\Datatypes\Object\ObjectChangeTypes.avsc" />
+    <None Include="Energistics\Datatypes\Object\Resource.avsc" />
+    <None Include="Energistics\Datatypes\Protocols.avsc" />
+    <None Include="Energistics\Datatypes\SupportedProtocol.avsc" />
+    <None Include="Energistics\Datatypes\Version.avsc" />
+    <None Include="Energistics\Protocol\ChannelDataFrame\ChannelDataFrame.avsc" />
+    <None Include="Energistics\Protocol\ChannelDataFrame\ChannelMetadata.avsc" />
+    <None Include="Energistics\Protocol\ChannelDataFrame\RequestChannelData.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelData.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelDataChange.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelDelete.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelDescribe.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelMetadata.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelRangeRequest.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelStatusChange.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelStreamingStart.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\ChannelStreamingStop.avsc" />
+    <None Include="Energistics\Protocol\ChannelStreaming\Start.avsc" />
+    <None Include="Energistics\Protocol\Core\Acknowledge.avsc" />
+    <None Include="Energistics\Protocol\Core\CloseSession.avsc" />
+    <None Include="Energistics\Protocol\Core\OpenSession.avsc" />
+    <None Include="Energistics\Protocol\Core\ProtocolException.avsc" />
+    <None Include="Energistics\Protocol\Core\RequestSession.avsc" />
+    <None Include="Energistics\Protocol\DataArray\DataArray.avsc" />
+    <None Include="Energistics\Protocol\DataArray\GetDataArray.avsc" />
+    <None Include="Energistics\Protocol\DataArray\GetDataArraySlice.avsc" />
+    <None Include="Energistics\Protocol\Discovery\GetResources.avsc" />
+    <None Include="Energistics\Protocol\Discovery\GetResourcesResponse.avsc" />
+    <None Include="Energistics\Protocol\GrowingObject\GrowingObjectDelete.avsc" />
+    <None Include="Energistics\Protocol\GrowingObject\GrowingObjectDeleteRange.avsc" />
+    <None Include="Energistics\Protocol\GrowingObject\GrowingObjectGet.avsc" />
+    <None Include="Energistics\Protocol\GrowingObject\GrowingObjectGetRange.avsc" />
+    <None Include="Energistics\Protocol\GrowingObject\GrowingObjectPut.avsc" />
+    <None Include="Energistics\Protocol\GrowingObject\ObjectFragment.avsc" />
+    <None Include="Energistics\Protocol\StoreNotification\ChangeNotification.avsc" />
+    <None Include="Energistics\Protocol\StoreNotification\DeleteNotification.avsc" />
+    <None Include="Energistics\Protocol\StoreNotification\NotificationRequest.avsc" />
+    <None Include="Energistics\Protocol\Store\DeleteObject.avsc" />
+    <None Include="Energistics\Protocol\Store\GetObject.avsc" />
+    <None Include="Energistics\Protocol\Store\Object.avsc" />
+    <None Include="Energistics\Protocol\Store\PutObject.avsc" />
+    <None Include="etp.avpr" />
+    <None Include="packages.config" />
+    <None Include="_CreateNewNuGetPackage\Config.ps1" />
+    <None Include="_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1" />
+    <None Include="_CreateNewNuGetPackage\DoNotModify\New-NuGetPackage.ps1" />
+    <None Include="_CreateNewNuGetPackage\DoNotModify\UploadNuGetPackage.ps1" />
+    <None Include="_CreateNewNuGetPackage\RunMeToUploadNuGetPackage.cmd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevKitGenerator\DataAccess\DataAccess.csproj">
@@ -60,12 +160,15 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>REM Create a NuGet package for this project and place the .nupkg file in the project's output directory.
 REM If you see this in Visual Studio's Error List window, check the Output window's Build tab for the actual error.
 ECHO Creating NuGet package in Post-Build event...
-PowerShell -NoProfile -ExecutionPolicy Bypass -Command "&amp; '$(ProjectDir)_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1' -ProjectFilePath '$(ProjectPath)' -OutputDirectory '$(TargetDir)' -BuildConfiguration '$(ConfigurationName)' -BuildPlatform '$(PlatformName)'"</PostBuildEvent>
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "&amp; '$(ProjectDir)_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1' -ProjectFilePath '$(ProjectPath)' -OutputDirectory '$(TargetDir)' -BuildConfiguration '$(ConfigurationName)' -BuildPlatform '$(PlatformName)'"xcopy /s /y "$(SolutionDir)packages\HDF5DotNet.x86.1.8.9\NativeBinaries\*.*" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

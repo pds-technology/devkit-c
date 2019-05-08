@@ -198,6 +198,26 @@ namespace Energistics.DataAccess
             if (encoding == null) return default(T);
 
             Type type = typeof(T);
+
+            var obj = XmlToObject(typeof(T), xml, encoding);
+
+            if (obj is T)
+            {
+                return (T)obj;
+            }
+
+            return default(T);
+        }
+
+        /// <summary>
+        /// Converts XML to an Energistics object
+        /// </summary>
+        /// <param name="type">The type of the object</param>
+        /// <param name="xml">The XML to convert</param>
+        /// <param name="encoding">The encoding of the XML</param>
+        /// <returns>The Energistics object</returns>
+        public static object XmlToObject(Type type, string xml, Encoding encoding)
+        {
             //var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
             var serializer = new XmlSerializer(type);
             if (type.FullName.Contains("RESQML200") || (type.FullName.Contains("RESQML201")))
@@ -216,15 +236,8 @@ namespace Energistics.DataAccess
 
             using (var memstream = new MemoryStream(encoding.GetBytes(xml)))
             {
-                object xmlobject = serializer.Deserialize(memstream);
-
-                if (xmlobject is T)
-                {
-                    return (T) xmlobject;
-                }
+                return serializer.Deserialize(memstream);
             }
-
-            return default(T);
         }
 
 
