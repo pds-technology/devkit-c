@@ -9359,7 +9359,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool measureClassFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private int indexField;
         
@@ -9422,7 +9422,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -9525,7 +9525,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string eventReferenceIdField;
         
-        private Energistics.SchemaGatherer.Timestamp eventDateField;
+        private Energistics.DataAccess.Timestamp eventDateField;
         
         /// <remarks/>
         /// <summary>The referencing eventledger ID.</summary>
@@ -9543,7 +9543,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Install/pull date.</summary>
         [System.ComponentModel.DescriptionAttribute("Install/pull date.")]
-        public Energistics.SchemaGatherer.Timestamp EventDate {
+        public Energistics.DataAccess.Timestamp EventDate {
             get {
                 return this.eventDateField;
             }
@@ -9564,9 +9564,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool physicalStatusFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp startDateField;
+        private Energistics.DataAccess.Timestamp startDateField;
         
-        private Energistics.SchemaGatherer.Timestamp endDateField;
+        private Energistics.DataAccess.Timestamp endDateField;
         
         private MdInterval statusMdIntervalField;
         
@@ -9604,7 +9604,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The start date of  the status and allocation factor.</summary>
         [System.ComponentModel.DescriptionAttribute("The start date of  the status and allocation factor.")]
-        public Energistics.SchemaGatherer.Timestamp StartDate {
+        public Energistics.DataAccess.Timestamp StartDate {
             get {
                 return this.startDateField;
             }
@@ -9616,7 +9616,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The end date of status and allocation factor.</summary>
         [System.ComponentModel.DescriptionAttribute("The end date of status and allocation factor.")]
-        public Energistics.SchemaGatherer.Timestamp EndDate {
+        public Energistics.DataAccess.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -9717,9 +9717,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool perforationStatusFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp startDateField;
+        private Energistics.DataAccess.Timestamp startDateField;
         
-        private Energistics.SchemaGatherer.Timestamp endDateField;
+        private Energistics.DataAccess.Timestamp endDateField;
         
         private MdInterval perforationMdIntervalField;
         
@@ -9759,7 +9759,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The start date of the status.</summary>
         [System.ComponentModel.DescriptionAttribute("The start date of the status.")]
-        public Energistics.SchemaGatherer.Timestamp StartDate {
+        public Energistics.DataAccess.Timestamp StartDate {
             get {
                 return this.startDateField;
             }
@@ -9771,7 +9771,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The end date of the status.</summary>
         [System.ComponentModel.DescriptionAttribute("The end date of the status.")]
-        public Energistics.SchemaGatherer.Timestamp EndDate {
+        public Energistics.DataAccess.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -10319,9 +10319,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool statusFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp startDateField;
+        private Energistics.DataAccess.Timestamp startDateField;
         
-        private Energistics.SchemaGatherer.Timestamp endDateField;
+        private Energistics.DataAccess.Timestamp endDateField;
         
         private MdInterval perforationMdIntervalField;
         
@@ -10355,7 +10355,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The start date of the status.</summary>
         [System.ComponentModel.DescriptionAttribute("The start date of the status.")]
-        public Energistics.SchemaGatherer.Timestamp StartDate {
+        public Energistics.DataAccess.Timestamp StartDate {
             get {
                 return this.startDateField;
             }
@@ -10367,7 +10367,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The end date of the status.</summary>
         [System.ComponentModel.DescriptionAttribute("The end date of the status.")]
-        public Energistics.SchemaGatherer.Timestamp EndDate {
+        public Energistics.DataAccess.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -15853,9 +15853,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string descriptionField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private VolumePerVolumeMeasure avgBaseFluidQualityField;
         
@@ -16036,7 +16036,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the step started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the step started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -16048,7 +16048,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the step ended.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the step ended.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -17037,7 +17037,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private long numberField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private string commentField;
         
@@ -17065,7 +17065,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of this event.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of this event.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -17216,11 +17216,11 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StimPumpFlowBackTest {
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private VolumeMeasure flowBackVolumeField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
         private TimeMeasure fractureCloseDurationField;
         
@@ -17239,7 +17239,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>End time for the test.</summary>
         [System.ComponentModel.DescriptionAttribute("End time for the test.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -17263,7 +17263,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Start time for the test.</summary>
         [System.ComponentModel.DescriptionAttribute("Start time for the test.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -17367,7 +17367,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StimPumpFlowBackTestStep {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private VolumeMeasure flowbackVolumeField;
         
@@ -17396,7 +17396,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Time stamp of the pressure measurement.</summary>
         [System.ComponentModel.DescriptionAttribute("Time stamp of the pressure measurement.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -17872,9 +17872,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private StimFetTestAnalysisMethod[] analysisMethodField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private TimeMeasure endPdlDurationField;
         
@@ -17922,7 +17922,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Start time for the FET.</summary>
         [System.ComponentModel.DescriptionAttribute("Start time for the FET.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -17934,7 +17934,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>End time for the FET.</summary>
         [System.ComponentModel.DescriptionAttribute("End time for the FET.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -18423,15 +18423,15 @@ namespace Energistics.Generator.WITSML200 {
         
         private LengthMeasure chokeSizeField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPumpOnField;
+        private Energistics.DataAccess.Timestamp dTimPumpOnField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPumpOffField;
+        private Energistics.DataAccess.Timestamp dTimPumpOffField;
         
         private TimeMeasure pumpDurationField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimWellShutinField;
+        private Energistics.DataAccess.Timestamp dTimWellShutinField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimFractureCloseField;
+        private Energistics.DataAccess.Timestamp dTimFractureCloseField;
         
         private PressureMeasure avgBottomholeTreatmentPresField;
         
@@ -18573,7 +18573,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time pumping began.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time pumping began.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPumpOn {
+        public Energistics.DataAccess.Timestamp DTimPumpOn {
             get {
                 return this.dTimPumpOnField;
             }
@@ -18585,7 +18585,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time pumping ended.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time pumping ended.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPumpOff {
+        public Energistics.DataAccess.Timestamp DTimPumpOff {
             get {
                 return this.dTimPumpOffField;
             }
@@ -18609,7 +18609,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time at which a well ceases flowing and the valves are closed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which a well ceases flowing and the valves are closed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimWellShutin {
+        public Energistics.DataAccess.Timestamp DTimWellShutin {
             get {
                 return this.dTimWellShutinField;
             }
@@ -18622,7 +18622,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The date and time when the fluid in the fracture is completely leaked off into the formation and the fracture closes on its faces.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the fluid in the fracture is completely leaked off into th" +
             "e formation and the fracture closes on its faces.")]
-        public Energistics.SchemaGatherer.Timestamp DTimFractureClose {
+        public Energistics.DataAccess.Timestamp DTimFractureClose {
             get {
                 return this.dTimFractureCloseField;
             }
@@ -19849,9 +19849,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string modelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private string typeField;
         
@@ -19918,7 +19918,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the degasser was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the degasser was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -19930,7 +19930,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the degasser was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the degasser was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -20270,7 +20270,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool locationFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp installationDateField;
+        private Energistics.DataAccess.Timestamp installationDateField;
         
         private string installationCompanyField;
         
@@ -20361,7 +20361,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>When the tag was installed in or on the item.</summary>
         [System.ComponentModel.DescriptionAttribute("When the tag was installed in or on the item.")]
-        public Energistics.SchemaGatherer.Timestamp InstallationDate {
+        public Energistics.DataAccess.Timestamp InstallationDate {
             get {
                 return this.installationDateField;
             }
@@ -20533,9 +20533,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string modelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private string typeField;
         
@@ -20578,7 +20578,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the hydroclone was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the hydroclone was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -20590,7 +20590,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Removal date and time the hydroclone was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Removal date and time the hydroclone was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -20693,9 +20693,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string modelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private string typeField;
         
@@ -20738,7 +20738,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the centrifuge was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the centrifuge was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -20750,7 +20750,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the centrifuge was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the centrifuge was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -20854,9 +20854,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string modelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private string ownerField;
         
@@ -20942,7 +20942,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the pump was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the pump was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -20954,7 +20954,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the pump was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the pump was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -21371,9 +21371,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private int indexField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private VolumeMeasure capMxField;
         
@@ -21409,7 +21409,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the pit was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the pit was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -21421,7 +21421,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the pit was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the pit was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -21812,9 +21812,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string modelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private NameTag[] nameTagField;
         
@@ -21909,7 +21909,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the BOP was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the BOP was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -21921,7 +21921,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of the BOP was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of the BOP was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -22338,9 +22338,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string modelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimInstallField;
+        private Energistics.DataAccess.Timestamp dTimInstallField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRemoveField;
+        private Energistics.DataAccess.Timestamp dTimRemoveField;
         
         private string typeField;
         
@@ -22413,7 +22413,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the shaker was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the shaker was installed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimInstall {
+        public Energistics.DataAccess.Timestamp DTimInstall {
             get {
                 return this.dTimInstallField;
             }
@@ -22425,7 +22425,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the shaker was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the shaker was removed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRemove {
+        public Energistics.DataAccess.Timestamp DTimRemove {
             get {
                 return this.dTimRemoveField;
             }
@@ -24570,13 +24570,13 @@ namespace Energistics.Generator.WITSML200 {
         
         private MdInterval chromatographMdIntervalField;
         
-        private Energistics.SchemaGatherer.Timestamp dateTimeGasSampleProcessedField;
+        private Energistics.DataAccess.Timestamp dateTimeGasSampleProcessedField;
         
         private string chromatographTypeField;
         
         private TimeMeasure eTimChromCycleField;
         
-        private Energistics.SchemaGatherer.Timestamp chromReportTimeField;
+        private Energistics.DataAccess.Timestamp chromReportTimeField;
         
         private MassPerVolumeMeasure mudWeightInField;
         
@@ -24673,7 +24673,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time at which the gas sample was processed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the gas sample was processed.")]
-        public Energistics.SchemaGatherer.Timestamp DateTimeGasSampleProcessed {
+        public Energistics.DataAccess.Timestamp DateTimeGasSampleProcessed {
             get {
                 return this.dateTimeGasSampleProcessedField;
             }
@@ -24711,7 +24711,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Chromatograph integrator report time; format may be variable due to recording equipment.</summary>
         [System.ComponentModel.DescriptionAttribute("Chromatograph integrator report time; format may be variable due to recording equ" +
             "ipment.")]
-        public Energistics.SchemaGatherer.Timestamp ChromReportTime {
+        public Energistics.DataAccess.Timestamp ChromReportTime {
             get {
                 return this.chromReportTimeField;
             }
@@ -28271,15 +28271,15 @@ namespace Energistics.Generator.WITSML200 {
         
         private GenericMeasure rangeMaxField;
         
-        private Energistics.SchemaGatherer.Timestamp rangeDateTimeMinField;
+        private Energistics.DataAccess.Timestamp rangeDateTimeMinField;
         
-        private Energistics.SchemaGatherer.Timestamp rangeDateTimeMaxField;
+        private Energistics.DataAccess.Timestamp rangeDateTimeMaxField;
         
         private string mnemonicListField;
         
         private MeasuredDepthCoord referenceDepthField;
         
-        private Energistics.SchemaGatherer.Timestamp referenceDateTimeField;
+        private Energistics.DataAccess.Timestamp referenceDateTimeField;
         
         private ExtensionNameValue[] extensionNameValueField;
         
@@ -28347,7 +28347,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.</summary>
         [System.ComponentModel.DescriptionAttribute("The minimum log date-time index value that applies to this group. The significanc" +
             "e of this range is defined by the groupType.")]
-        public Energistics.SchemaGatherer.Timestamp RangeDateTimeMin {
+        public Energistics.DataAccess.Timestamp RangeDateTimeMin {
             get {
                 return this.rangeDateTimeMinField;
             }
@@ -28360,7 +28360,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum log date-time index value that applies to this group. The significanc" +
             "e of this range is defined by the groupType.")]
-        public Energistics.SchemaGatherer.Timestamp RangeDateTimeMax {
+        public Energistics.DataAccess.Timestamp RangeDateTimeMax {
             get {
                 return this.rangeDateTimeMaxField;
             }
@@ -28402,7 +28402,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("A date and time related to this group.  This does not necessarily represent an ac" +
             "tual index within a growing-object. The significance of this time is defined by " +
             "the groupType.")]
-        public Energistics.SchemaGatherer.Timestamp ReferenceDateTime {
+        public Energistics.DataAccess.Timestamp ReferenceDateTime {
             get {
                 return this.referenceDateTimeField;
             }
@@ -29587,7 +29587,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private LengthMeasure diaOrificeSizeField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimeNextTestDateField;
+        private Energistics.DataAccess.Timestamp dTimeNextTestDateField;
         
         private VolumePerTimeMeasure flowrateRateBledField;
         
@@ -29644,7 +29644,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Next Test Date</summary>
         [System.ComponentModel.DescriptionAttribute("Next Test Date")]
-        public Energistics.SchemaGatherer.Timestamp DTimeNextTestDate {
+        public Energistics.DataAccess.Timestamp DTimeNextTestDate {
             get {
                 return this.dTimeNextTestDateField;
             }
@@ -30376,7 +30376,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class PumpOp {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private int pumpField;
         
@@ -30405,7 +30405,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -30593,7 +30593,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private int pitField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private VolumeMeasure volPitField;
         
@@ -30624,7 +30624,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -30719,7 +30719,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class Scr {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private int pumpField;
         
@@ -30739,7 +30739,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -32102,7 +32102,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class Weather {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private string agencyField;
         
@@ -32158,7 +32158,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -32574,9 +32574,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private SupportCraftType typeSupportCraftField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimArrivedField;
+        private Energistics.DataAccess.Timestamp dTimArrivedField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimDepartedField;
+        private Energistics.DataAccess.Timestamp dTimDepartedField;
         
         private string commentsField;
         
@@ -32614,7 +32614,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time when the vehicle arrived at the rig site.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when the vehicle arrived at the rig site.")]
-        public Energistics.SchemaGatherer.Timestamp DTimArrived {
+        public Energistics.DataAccess.Timestamp DTimArrived {
             get {
                 return this.dTimArrivedField;
             }
@@ -32626,7 +32626,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time when the vehicle departed from the rig site.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when the vehicle departed from the rig site.")]
-        public Energistics.SchemaGatherer.Timestamp DTimDeparted {
+        public Energistics.DataAccess.Timestamp DTimDeparted {
             get {
                 return this.dTimDepartedField;
             }
@@ -32715,7 +32715,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class Incident {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private string reporterField;
         
@@ -32757,7 +32757,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -32999,13 +32999,13 @@ namespace Energistics.Generator.WITSML200 {
         
         private TimeMeasure daysIncFreeField;
         
-        private Energistics.SchemaGatherer.Timestamp lastCsgPresTestField;
+        private Energistics.DataAccess.Timestamp lastCsgPresTestField;
         
         private PressureMeasure presLastCsgField;
         
-        private Energistics.SchemaGatherer.Timestamp lastBopPresTestField;
+        private Energistics.DataAccess.Timestamp lastBopPresTestField;
         
-        private Energistics.SchemaGatherer.Timestamp nextBopPresTestField;
+        private Energistics.DataAccess.Timestamp nextBopPresTestField;
         
         private PressureMeasure presStdPipeField;
         
@@ -33021,21 +33021,21 @@ namespace Energistics.Generator.WITSML200 {
         
         private PressureMeasure presChokeManField;
         
-        private Energistics.SchemaGatherer.Timestamp lastFireBoatDrillField;
+        private Energistics.DataAccess.Timestamp lastFireBoatDrillField;
         
-        private Energistics.SchemaGatherer.Timestamp lastAbandonDrillField;
+        private Energistics.DataAccess.Timestamp lastAbandonDrillField;
         
-        private Energistics.SchemaGatherer.Timestamp lastRigInspectionField;
+        private Energistics.DataAccess.Timestamp lastRigInspectionField;
         
-        private Energistics.SchemaGatherer.Timestamp lastSafetyMeetingField;
+        private Energistics.DataAccess.Timestamp lastSafetyMeetingField;
         
-        private Energistics.SchemaGatherer.Timestamp lastSafetyInspectionField;
+        private Energistics.DataAccess.Timestamp lastSafetyInspectionField;
         
-        private Energistics.SchemaGatherer.Timestamp lastTripDrillField;
+        private Energistics.DataAccess.Timestamp lastTripDrillField;
         
-        private Energistics.SchemaGatherer.Timestamp lastDiverterDrillField;
+        private Energistics.DataAccess.Timestamp lastDiverterDrillField;
         
-        private Energistics.SchemaGatherer.Timestamp lastBopDrillField;
+        private Energistics.DataAccess.Timestamp lastBopDrillField;
         
         private bool regAgencyInspField;
         
@@ -33076,7 +33076,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last casing pressure test date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Last casing pressure test date and time.")]
-        public Energistics.SchemaGatherer.Timestamp LastCsgPresTest {
+        public Energistics.DataAccess.Timestamp LastCsgPresTest {
             get {
                 return this.lastCsgPresTestField;
             }
@@ -33100,7 +33100,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last blow out preventer pressure test.</summary>
         [System.ComponentModel.DescriptionAttribute("Last blow out preventer pressure test.")]
-        public Energistics.SchemaGatherer.Timestamp LastBopPresTest {
+        public Energistics.DataAccess.Timestamp LastBopPresTest {
             get {
                 return this.lastBopPresTestField;
             }
@@ -33112,7 +33112,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Next blow out preventer pressure test.</summary>
         [System.ComponentModel.DescriptionAttribute("Next blow out preventer pressure test.")]
-        public Energistics.SchemaGatherer.Timestamp NextBopPresTest {
+        public Energistics.DataAccess.Timestamp NextBopPresTest {
             get {
                 return this.nextBopPresTestField;
             }
@@ -33208,7 +33208,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last fire or life boat drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last fire or life boat drill.")]
-        public Energistics.SchemaGatherer.Timestamp LastFireBoatDrill {
+        public Energistics.DataAccess.Timestamp LastFireBoatDrill {
             get {
                 return this.lastFireBoatDrillField;
             }
@@ -33220,7 +33220,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last abandonment drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last abandonment drill.")]
-        public Energistics.SchemaGatherer.Timestamp LastAbandonDrill {
+        public Energistics.DataAccess.Timestamp LastAbandonDrill {
             get {
                 return this.lastAbandonDrillField;
             }
@@ -33232,7 +33232,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last rig inspection/check.</summary>
         [System.ComponentModel.DescriptionAttribute("Last rig inspection/check.")]
-        public Energistics.SchemaGatherer.Timestamp LastRigInspection {
+        public Energistics.DataAccess.Timestamp LastRigInspection {
             get {
                 return this.lastRigInspectionField;
             }
@@ -33244,7 +33244,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last safety meeting.</summary>
         [System.ComponentModel.DescriptionAttribute("Last safety meeting.")]
-        public Energistics.SchemaGatherer.Timestamp LastSafetyMeeting {
+        public Energistics.DataAccess.Timestamp LastSafetyMeeting {
             get {
                 return this.lastSafetyMeetingField;
             }
@@ -33256,7 +33256,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last safety inspection.</summary>
         [System.ComponentModel.DescriptionAttribute("Last safety inspection.")]
-        public Energistics.SchemaGatherer.Timestamp LastSafetyInspection {
+        public Energistics.DataAccess.Timestamp LastSafetyInspection {
             get {
                 return this.lastSafetyInspectionField;
             }
@@ -33268,7 +33268,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last trip drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last trip drill.")]
-        public Energistics.SchemaGatherer.Timestamp LastTripDrill {
+        public Energistics.DataAccess.Timestamp LastTripDrill {
             get {
                 return this.lastTripDrillField;
             }
@@ -33280,7 +33280,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last diverter drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last diverter drill.")]
-        public Energistics.SchemaGatherer.Timestamp LastDiverterDrill {
+        public Energistics.DataAccess.Timestamp LastDiverterDrill {
             get {
                 return this.lastDiverterDrillField;
             }
@@ -33292,7 +33292,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Last blow out preventer drill.</summary>
         [System.ComponentModel.DescriptionAttribute("Last blow out preventer drill.")]
-        public Energistics.SchemaGatherer.Timestamp LastBopDrill {
+        public Energistics.DataAccess.Timestamp LastBopDrill {
             get {
                 return this.lastBopDrillField;
             }
@@ -33452,9 +33452,9 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class ShakerScreen {
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private int numDeckField;
         
@@ -33473,7 +33473,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -33485,7 +33485,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time activities were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time activities were completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -33592,7 +33592,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private MeasuredDepthCoord mdHoleField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private TimeMeasure hoursRunField;
         
@@ -33633,7 +33633,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -34864,7 +34864,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string targetField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStnField;
+        private Energistics.DataAccess.Timestamp dTimStnField;
         
         private TrajStationType typeTrajStationField;
         
@@ -35024,7 +35024,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the station was measured or created.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the station was measured or created.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStn {
+        public Energistics.DataAccess.Timestamp DTimStn {
             get {
                 return this.dTimStnField;
             }
@@ -44412,7 +44412,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string crushDamageRatioField;
         
-        private Energistics.SchemaGatherer.Timestamp perforationDateField;
+        private Energistics.DataAccess.Timestamp perforationDateField;
         
         private string permanentRemarksField;
         
@@ -44664,7 +44664,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The original perforation date.</summary>
         [System.ComponentModel.DescriptionAttribute("The original perforation date.")]
-        public Energistics.SchemaGatherer.Timestamp PerforationDate {
+        public Energistics.DataAccess.Timestamp PerforationDate {
             get {
                 return this.perforationDateField;
             }
@@ -44771,7 +44771,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string nameField;
         
-        private Energistics.SchemaGatherer.Timestamp stringInstallDateField;
+        private Energistics.DataAccess.Timestamp stringInstallDateField;
         
         private string parentStringsNameField;
         
@@ -44846,7 +44846,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The install date of the downhole string.</summary>
         [System.ComponentModel.DescriptionAttribute("The install date of the downhole string.")]
-        public Energistics.SchemaGatherer.Timestamp StringInstallDate {
+        public Energistics.DataAccess.Timestamp StringInstallDate {
             get {
                 return this.stringInstallDateField;
             }
@@ -47616,13 +47616,13 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class CementStageReport : AbstractCementStage {
         
-        private Energistics.SchemaGatherer.Timestamp dTimMixStartField;
+        private Energistics.DataAccess.Timestamp dTimMixStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPumpStartField;
+        private Energistics.DataAccess.Timestamp dTimPumpStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPumpEndField;
+        private Energistics.DataAccess.Timestamp dTimPumpEndField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimDisplaceStartField;
+        private Energistics.DataAccess.Timestamp dTimDisplaceStartField;
         
         private PressureMeasure presBreakDownField;
         
@@ -47675,7 +47675,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time when mixing of cement started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when mixing of cement started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimMixStart {
+        public Energistics.DataAccess.Timestamp DTimMixStart {
             get {
                 return this.dTimMixStartField;
             }
@@ -47687,7 +47687,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time when pumping cement started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when pumping cement started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPumpStart {
+        public Energistics.DataAccess.Timestamp DTimPumpStart {
             get {
                 return this.dTimPumpStartField;
             }
@@ -47699,7 +47699,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time when pumping cement ended.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when pumping cement ended.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPumpEnd {
+        public Energistics.DataAccess.Timestamp DTimPumpEnd {
             get {
                 return this.dTimPumpEndField;
             }
@@ -47711,7 +47711,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time when displacing of cement started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time when displacing of cement started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimDisplaceStart {
+        public Energistics.DataAccess.Timestamp DTimDisplaceStart {
             get {
                 return this.dTimDisplaceStartField;
             }
@@ -48275,27 +48275,27 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class CementJobReport : AbstractCementJob {
         
-        private Energistics.SchemaGatherer.Timestamp dTimJobEndField;
+        private Energistics.DataAccess.Timestamp dTimJobEndField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimJobStartField;
+        private Energistics.DataAccess.Timestamp dTimJobStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPlugSetField;
+        private Energistics.DataAccess.Timestamp dTimPlugSetField;
         
         private bool cementDrillOutField;
         
         private bool cementDrillOutFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimCementDrillOutField;
+        private Energistics.DataAccess.Timestamp dTimCementDrillOutField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimSqueezeField;
+        private Energistics.DataAccess.Timestamp dTimSqueezeField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPipeRotStartField;
+        private Energistics.DataAccess.Timestamp dTimPipeRotStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPipeRotEndField;
+        private Energistics.DataAccess.Timestamp dTimPipeRotEndField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRecipStartField;
+        private Energistics.DataAccess.Timestamp dTimRecipStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRecipEndField;
+        private Energistics.DataAccess.Timestamp dTimRecipEndField;
         
         private string densMeasByField;
         
@@ -48304,7 +48304,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of the end of the cement job.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of the end of the cement job.")]
-        public Energistics.SchemaGatherer.Timestamp DTimJobEnd {
+        public Energistics.DataAccess.Timestamp DTimJobEnd {
             get {
                 return this.dTimJobEndField;
             }
@@ -48316,7 +48316,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of the start of the cement job.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of the start of the cement job.")]
-        public Energistics.SchemaGatherer.Timestamp DTimJobStart {
+        public Energistics.DataAccess.Timestamp DTimJobStart {
             get {
                 return this.dTimJobStartField;
             }
@@ -48328,7 +48328,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that cement plug was set.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that cement plug was set.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPlugSet {
+        public Energistics.DataAccess.Timestamp DTimPlugSet {
             get {
                 return this.dTimPlugSetField;
             }
@@ -48363,7 +48363,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that the cement was drilled out.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the cement was drilled out.")]
-        public Energistics.SchemaGatherer.Timestamp DTimCementDrillOut {
+        public Energistics.DataAccess.Timestamp DTimCementDrillOut {
             get {
                 return this.dTimCementDrillOutField;
             }
@@ -48375,7 +48375,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of a squeeze.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of a squeeze.")]
-        public Energistics.SchemaGatherer.Timestamp DTimSqueeze {
+        public Energistics.DataAccess.Timestamp DTimSqueeze {
             get {
                 return this.dTimSqueezeField;
             }
@@ -48387,7 +48387,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that pipe rotation started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that pipe rotation started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPipeRotStart {
+        public Energistics.DataAccess.Timestamp DTimPipeRotStart {
             get {
                 return this.dTimPipeRotStartField;
             }
@@ -48399,7 +48399,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that pipe rotation started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that pipe rotation started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPipeRotEnd {
+        public Energistics.DataAccess.Timestamp DTimPipeRotEnd {
             get {
                 return this.dTimPipeRotEndField;
             }
@@ -48411,7 +48411,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that pipe reciprocation started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that pipe reciprocation started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRecipStart {
+        public Energistics.DataAccess.Timestamp DTimRecipStart {
             get {
                 return this.dTimRecipStartField;
             }
@@ -48423,7 +48423,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that pipe reciprocation ended.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that pipe reciprocation ended.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRecipEnd {
+        public Energistics.DataAccess.Timestamp DTimRecipEnd {
             get {
                 return this.dTimRecipEndField;
             }
@@ -48908,13 +48908,13 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class TimeIndexValue : AbstractIndexValue {
         
-        private Energistics.SchemaGatherer.Timestamp timeField;
+        private Energistics.DataAccess.Timestamp timeField;
         
         /// <remarks/>
         /// <summary>Used to specify the channel start and end index.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Used to specify the channel start and end index.")]
-        public Energistics.SchemaGatherer.Timestamp Time {
+        public Energistics.DataAccess.Timestamp Time {
             get {
                 return this.timeField;
             }
@@ -50477,7 +50477,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportSurveyStation {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -50501,7 +50501,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The date at which the directional survey took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date at which the directional survey took place.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -50671,7 +50671,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private MassPerVolumeMeasure equivalentMudWeightField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -50710,7 +50710,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time at the reading was recorded.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at the reading was recorded.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -50875,7 +50875,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string locationSampleField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -51072,7 +51072,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The time when fluid readings were recorded.</summary>
         [System.ComponentModel.DescriptionAttribute("The time when fluid readings were recorded.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -52097,7 +52097,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportStatusInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -52236,7 +52236,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time for which the well status is reported.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time for which the well status is reported.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -53151,9 +53151,9 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportWellboreInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimSpudField;
+        private Energistics.DataAccess.Timestamp dTimSpudField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPreSpudField;
+        private Energistics.DataAccess.Timestamp dTimPreSpudField;
         
         private System.DateTime dateDrillCompleteField;
         
@@ -53169,7 +53169,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Date and time at which the well was spudded. This is when the well drilling equipment began to bore into the earth's surface for the purpose of drilling a well.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which the well was spudded. This is when the well drilling equip" +
             "ment began to bore into the earth\'s surface for the purpose of drilling a well.")]
-        public Energistics.SchemaGatherer.Timestamp DTimSpud {
+        public Energistics.DataAccess.Timestamp DTimSpud {
             get {
                 return this.dTimSpudField;
             }
@@ -53183,7 +53183,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("Date and time at which the well was predrilled.  This is when the well drilling e" +
             "quipment begin to bore into  the earth\'s surface for the purpose of drilling a w" +
             "ell.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPreSpud {
+        public Energistics.DataAccess.Timestamp DTimPreSpud {
             get {
                 return this.dTimPreSpudField;
             }
@@ -53262,7 +53262,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportGasReadingInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private GasPeakType readingTypeField;
         
@@ -53295,7 +53295,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of the gas reading.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of the gas reading.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -53483,9 +53483,9 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportPerfInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimOpenField;
+        private Energistics.DataAccess.Timestamp dTimOpenField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimCloseField;
+        private Energistics.DataAccess.Timestamp dTimCloseField;
         
         private MdInterval perforationMdIntervalField;
         
@@ -53498,7 +53498,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time at which the well perforation interval is opened.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the well perforation interval is opened.")]
-        public Energistics.SchemaGatherer.Timestamp DTimOpen {
+        public Energistics.DataAccess.Timestamp DTimOpen {
             get {
                 return this.dTimOpenField;
             }
@@ -53510,7 +53510,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time at which the well perforation interval is closed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the well perforation interval is closed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimClose {
+        public Energistics.DataAccess.Timestamp DTimClose {
             get {
                 return this.dTimCloseField;
             }
@@ -53579,7 +53579,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportStratInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdTopField;
         
@@ -53594,7 +53594,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time at which a preliminary zonation was established.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which a preliminary zonation was established.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -53676,7 +53676,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportControlIncidentInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdInflowField;
         
@@ -53692,7 +53692,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private TimeMeasure eTimLostField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRegainedField;
+        private Energistics.DataAccess.Timestamp dTimRegainedField;
         
         private LengthMeasure diaBitField;
         
@@ -53737,7 +53737,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of the well control incident.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of the well control incident.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -53835,7 +53835,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time at which control of the well was regained.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which control of the well was regained.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRegained {
+        public Energistics.DataAccess.Timestamp DTimRegained {
             get {
                 return this.dTimRegainedField;
             }
@@ -54961,7 +54961,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportEquipFailureInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -54971,7 +54971,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private TimeMeasure eTimMissProductionField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRepairField;
+        private Energistics.DataAccess.Timestamp dTimRepairField;
         
         private string descriptionField;
         
@@ -54982,7 +54982,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that the equipment failed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the equipment failed.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -55045,7 +55045,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The date and time at which the production equipment was  repaired and ready for production.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the production equipment was  repaired and ready for p" +
             "roduction.")]
-        public Energistics.SchemaGatherer.Timestamp DTimRepair {
+        public Energistics.DataAccess.Timestamp DTimRepair {
             get {
                 return this.dTimRepairField;
             }
@@ -55103,7 +55103,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportLithShowInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MdInterval showMdIntervalField;
         
@@ -55120,7 +55120,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that the well test was completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the well test was completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -55215,7 +55215,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportFormTestInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -55244,7 +55244,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that the wireline formation test was completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the wireline formation test was completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -55413,7 +55413,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportWellTestInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private WellTestType testTypeField;
         
@@ -55472,7 +55472,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that the well test was completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the well test was completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -55831,7 +55831,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportCoreInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private string coreNumberField;
         
@@ -55858,7 +55858,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that the core was completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that the core was completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -56084,7 +56084,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillReportLogInfo {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private string runNumberField;
         
@@ -56109,7 +56109,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date and time that the log was completed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the log was completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -56252,9 +56252,9 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DrillActivity {
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private TimeMeasure durationField;
         
@@ -56313,7 +56313,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -56325,7 +56325,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities ended.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities ended.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -63933,7 +63933,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private EventInfo[] eventHistoryField;
         
-        private Energistics.SchemaGatherer.Timestamp wellboreCompletionDateField;
+        private Energistics.DataAccess.Timestamp wellboreCompletionDateField;
         
         private string suffixAPIField;
         
@@ -63945,7 +63945,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool currentStatusFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp statusDateField;
+        private Energistics.DataAccess.Timestamp statusDateField;
         
         private CompletionStatusHistory[] statusHistoryField;
         
@@ -64011,7 +64011,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Completion date.</summary>
         [System.ComponentModel.DescriptionAttribute("Completion date.")]
-        public Energistics.SchemaGatherer.Timestamp WellboreCompletionDate {
+        public Energistics.DataAccess.Timestamp WellboreCompletionDate {
             get {
                 return this.wellboreCompletionDateField;
             }
@@ -64083,7 +64083,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date for when the status was established.</summary>
         [System.ComponentModel.DescriptionAttribute("Date for when the status was established.")]
-        public Energistics.SchemaGatherer.Timestamp StatusDate {
+        public Energistics.DataAccess.Timestamp StatusDate {
             get {
                 return this.statusDateField;
             }
@@ -64151,9 +64151,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string fieldTypeField;
         
-        private Energistics.SchemaGatherer.Timestamp effectiveDateField;
+        private Energistics.DataAccess.Timestamp effectiveDateField;
         
-        private Energistics.SchemaGatherer.Timestamp expiredDateField;
+        private Energistics.DataAccess.Timestamp expiredDateField;
         
         private string e_P_RightsIDField;
         
@@ -64161,7 +64161,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool currentStatusFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp statusDateField;
+        private Energistics.DataAccess.Timestamp statusDateField;
         
         private CompletionStatusHistory[] statusHistoryField;
         
@@ -64209,7 +64209,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Field date.</summary>
         [System.ComponentModel.DescriptionAttribute("Field date.")]
-        public Energistics.SchemaGatherer.Timestamp EffectiveDate {
+        public Energistics.DataAccess.Timestamp EffectiveDate {
             get {
                 return this.effectiveDateField;
             }
@@ -64221,7 +64221,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Expiration date.</summary>
         [System.ComponentModel.DescriptionAttribute("Expiration date.")]
-        public Energistics.SchemaGatherer.Timestamp ExpiredDate {
+        public Energistics.DataAccess.Timestamp ExpiredDate {
             get {
                 return this.expiredDateField;
             }
@@ -64269,7 +64269,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Timestamp for when this status was established.</summary>
         [System.ComponentModel.DescriptionAttribute("Timestamp for when this status was established.")]
-        public Energistics.SchemaGatherer.Timestamp StatusDate {
+        public Energistics.DataAccess.Timestamp StatusDate {
             get {
                 return this.statusDateField;
             }
@@ -64481,9 +64481,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private PressureMeasure closurePresField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
         private LengthMeasure formationBreakLengthPerDayField;
         
@@ -64881,7 +64881,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Ending date and time for the stage treatment.</summary>
         [System.ComponentModel.DescriptionAttribute("Ending date and time for the stage treatment.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -64893,7 +64893,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Starting date and time for the stage treatment.</summary>
         [System.ComponentModel.DescriptionAttribute("Starting date and time for the stage treatment.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -65848,11 +65848,11 @@ namespace Energistics.Generator.WITSML200 {
         
         private string customerNameField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimArrivalField;
+        private Energistics.DataAccess.Timestamp dTimArrivalField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
         private PressureMeasure flowBackPresField;
         
@@ -65947,7 +65947,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time at which the stimulation contractor arrives on location.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which the stimulation contractor arrives on location.")]
-        public Energistics.SchemaGatherer.Timestamp DTimArrival {
+        public Energistics.DataAccess.Timestamp DTimArrival {
             get {
                 return this.dTimArrivalField;
             }
@@ -65959,7 +65959,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Ending date and time of the stimulation job.</summary>
         [System.ComponentModel.DescriptionAttribute("Ending date and time of the stimulation job.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -65971,7 +65971,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Start date and time of the stimulation job.</summary>
         [System.ComponentModel.DescriptionAttribute("Start date and time of the stimulation job.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -66395,9 +66395,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private RiskAffectedPersonnel[] affectedPersonnelField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private MeasuredDepthCoord mdHoleStartField;
         
@@ -66513,7 +66513,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities (related to the risk) started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities (related to the risk) started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -66525,7 +66525,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities (related to the risk) were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities (related to the risk) were completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -67757,9 +67757,9 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     public partial class RigUtilization : AbstractObject {
         
-        private Energistics.SchemaGatherer.Timestamp startOperationTimeField;
+        private Energistics.DataAccess.Timestamp startOperationTimeField;
         
-        private Energistics.SchemaGatherer.Timestamp endOperationTimeField;
+        private Energistics.DataAccess.Timestamp endOperationTimeField;
         
         private LengthMeasure startHoleDepthField;
         
@@ -67906,7 +67906,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Start time of the operation in which the rig was used.</summary>
         [System.ComponentModel.DescriptionAttribute("Start time of the operation in which the rig was used.")]
-        public Energistics.SchemaGatherer.Timestamp StartOperationTime {
+        public Energistics.DataAccess.Timestamp StartOperationTime {
             get {
                 return this.startOperationTimeField;
             }
@@ -67918,7 +67918,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>End time of the operation in which the rig was used.</summary>
         [System.ComponentModel.DescriptionAttribute("End time of the operation in which the rig was used.")]
-        public Energistics.SchemaGatherer.Timestamp EndOperationTime {
+        public Energistics.DataAccess.Timestamp EndOperationTime {
             get {
                 return this.endOperationTimeField;
             }
@@ -70038,9 +70038,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string parentEventIDField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private TimeMeasure durationField;
         
@@ -70120,7 +70120,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -70132,7 +70132,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities were completed.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -70540,7 +70540,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private LengthMeasure distSteeringField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private string engineerField;
         
@@ -70799,7 +70799,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -71526,9 +71526,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private ChannelStatus growingStatusField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimTrajStartField;
+        private Energistics.DataAccess.Timestamp dTimTrajStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimTrajEndField;
+        private Energistics.DataAccess.Timestamp dTimTrajEndField;
         
         private MeasuredDepthCoord mdMnField;
         
@@ -71586,7 +71586,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Start date and time of trajectory station measurements. Note that this is NOT a server query parameter.</summary>
         [System.ComponentModel.DescriptionAttribute("Start date and time of trajectory station measurements. Note that this is NOT a s" +
             "erver query parameter.")]
-        public Energistics.SchemaGatherer.Timestamp DTimTrajStart {
+        public Energistics.DataAccess.Timestamp DTimTrajStart {
             get {
                 return this.dTimTrajStartField;
             }
@@ -71599,7 +71599,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>End date and time of trajectory station measurements. Note that this is NOT a server query parameter.</summary>
         [System.ComponentModel.DescriptionAttribute("End date and time of trajectory station measurements. Note that this is NOT a ser" +
             "ver query parameter.")]
-        public Energistics.SchemaGatherer.Timestamp DTimTrajEnd {
+        public Energistics.DataAccess.Timestamp DTimTrajEnd {
             get {
                 return this.dTimTrajEndField;
             }
@@ -71982,9 +71982,9 @@ namespace Energistics.Generator.WITSML200 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class DownholeComponent : AbstractObject {
         
-        private Energistics.SchemaGatherer.Timestamp startDateField;
+        private Energistics.DataAccess.Timestamp startDateField;
         
-        private Energistics.SchemaGatherer.Timestamp endDateField;
+        private Energistics.DataAccess.Timestamp endDateField;
         
         private DownholeString[] downholeStringSetField;
         
@@ -72001,7 +72001,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date this equipment was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date this equipment was installed.")]
-        public Energistics.SchemaGatherer.Timestamp StartDate {
+        public Energistics.DataAccess.Timestamp StartDate {
             get {
                 return this.startDateField;
             }
@@ -72013,7 +72013,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The date the equipment was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date the equipment was removed.")]
-        public Energistics.SchemaGatherer.Timestamp EndDate {
+        public Energistics.DataAccess.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -74294,13 +74294,13 @@ namespace Energistics.Generator.WITSML200 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class BhaRun : AbstractObject {
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStopField;
+        private Energistics.DataAccess.Timestamp dTimStopField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartDrillingField;
+        private Energistics.DataAccess.Timestamp dTimStartDrillingField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStopDrillingField;
+        private Energistics.DataAccess.Timestamp dTimStopDrillingField;
         
         private AnglePerLengthMeasure planDoglegField;
         
@@ -74333,7 +74333,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities for this run started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities for this run started.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -74345,7 +74345,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time that activities for this run stopped.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities for this run stopped.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStop {
+        public Energistics.DataAccess.Timestamp DTimStop {
             get {
                 return this.dTimStopField;
             }
@@ -74357,7 +74357,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Start on bottom: date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Start on bottom: date and time.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStartDrilling {
+        public Energistics.DataAccess.Timestamp DTimStartDrilling {
             get {
                 return this.dTimStartDrillingField;
             }
@@ -74369,7 +74369,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Stop off bottom: date and time.</summary>
         [System.ComponentModel.DescriptionAttribute("Stop off bottom: date and time.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStopDrilling {
+        public Energistics.DataAccess.Timestamp DTimStopDrilling {
             get {
                 return this.dTimStopDrillingField;
             }
@@ -74566,7 +74566,7 @@ namespace Energistics.Generator.WITSML200 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class FluidsReport : AbstractObject {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private MeasuredDepthCoord mdField;
         
@@ -74584,7 +74584,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -74673,15 +74673,15 @@ namespace Energistics.Generator.WITSML200 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class DrillReport : AbstractObject {
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private OpsReportVersion versionKindField;
         
         private bool versionKindFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp createDateField;
+        private Energistics.DataAccess.Timestamp createDateField;
         
         private WellDatum[] wellDatumField;
         
@@ -74732,7 +74732,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time that the reporting period started. A report period is commonly 24 h" +
             "ours.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -74746,7 +74746,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time that the reporting period ended. A report period is commonly 24 hou" +
             "rs.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -74783,7 +74783,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("The date and time the report was created. A later timestamp indicates a newer ver" +
             "sion of the report. To update values in a report, a full updated copy of the ori" +
             "ginal report should be submitted.")]
-        public Energistics.SchemaGatherer.Timestamp CreateDate {
+        public Energistics.DataAccess.Timestamp CreateDate {
             get {
                 return this.createDateField;
             }
@@ -75426,7 +75426,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool shapeFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimKickoffField;
+        private Energistics.DataAccess.Timestamp dTimKickoffField;
         
         private bool achievedTDField;
         
@@ -75617,7 +75617,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time of wellbore kickoff.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time of wellbore kickoff.")]
-        public Energistics.SchemaGatherer.Timestamp DTimKickoff {
+        public Energistics.DataAccess.Timestamp DTimKickoff {
             get {
                 return this.dTimKickoffField;
             }
@@ -75954,7 +75954,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string numGovtField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimLicenseField;
+        private Energistics.DataAccess.Timestamp dTimLicenseField;
         
         private string fieldField;
         
@@ -75998,9 +75998,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool directionWellFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimSpudField;
+        private Energistics.DataAccess.Timestamp dTimSpudField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimPaField;
+        private Energistics.DataAccess.Timestamp dTimPaField;
         
         private LengthMeasure waterDepthField;
         
@@ -76060,7 +76060,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time the license  was issued.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time the license  was issued.")]
-        public Energistics.SchemaGatherer.Timestamp DTimLicense {
+        public Energistics.DataAccess.Timestamp DTimLicense {
             get {
                 return this.dTimLicenseField;
             }
@@ -76337,7 +76337,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time at which the well was spudded.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which the well was spudded.")]
-        public Energistics.SchemaGatherer.Timestamp DTimSpud {
+        public Energistics.DataAccess.Timestamp DTimSpud {
             get {
                 return this.dTimSpudField;
             }
@@ -76349,7 +76349,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Date and time at which the well was plugged and abandoned.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time at which the well was plugged and abandoned.")]
-        public Energistics.SchemaGatherer.Timestamp DTimPa {
+        public Energistics.DataAccess.Timestamp DTimPa {
             get {
                 return this.dTimPaField;
             }
@@ -76564,7 +76564,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool conformanceField;
         
-        private Energistics.SchemaGatherer.Timestamp dateField;
+        private Energistics.DataAccess.Timestamp dateField;
         
         private string commentField;
         
@@ -76663,7 +76663,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date the policy was last checked. This is the date for which the Conformance valu" +
             "e is valid.")]
-        public Energistics.SchemaGatherer.Timestamp Date {
+        public Energistics.DataAccess.Timestamp Date {
             get {
                 return this.dateField;
             }
@@ -76992,7 +76992,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private bool isAbstractField;
         
-        private Energistics.SchemaGatherer.Timestamp deprecationDateField;
+        private Energistics.DataAccess.Timestamp deprecationDateField;
         
         private Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> quantityClassField;
         
@@ -77016,7 +77016,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("Date at which this property dictionary entry must no longer be used. Files genera" +
             "ted before this date would have used this entry so it is left here for reference" +
             ".   A null value means the property kind is still valid.")]
-        public Energistics.SchemaGatherer.Timestamp DeprecationDate {
+        public Energistics.DataAccess.Timestamp DeprecationDate {
             get {
                 return this.deprecationDateField;
             }

@@ -589,17 +589,17 @@ namespace Energistics.SchemaGatherer
 
         private static void SetDateTimeType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty)
         {
-            SetMemberPropertyType(typeDeclaration, memberProperty, "System.DateTime");
+            SetMemberPropertyType(typeDeclaration, memberProperty, typeof(DateTime).FullName);
         }
 
         private static void SetTimestampType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty)
         {
-            SetMemberPropertyType(typeDeclaration, memberProperty, "Energistics.SchemaGatherer.Timestamp");
+            SetMemberPropertyType(typeDeclaration, memberProperty, typeof(DataAccess.Timestamp).FullName);
         }
 
         private static void SetExtensibleEnum(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, string typeName)
         {
-            var typeReference = new CodeTypeReference("Energistics.DataAccess.ExtensibleEnum", new[] { new CodeTypeReference(typeName) });
+            var typeReference = new CodeTypeReference(typeof(DataAccess.ExtensibleEnum<>).FullName, new[] { new CodeTypeReference(typeName) });
             SetMemberPropertyType(typeDeclaration, memberProperty, typeReference);
         }
 

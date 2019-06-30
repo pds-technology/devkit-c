@@ -16054,7 +16054,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private bool measureClassFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private int indexField;
         
@@ -16117,7 +16117,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -21341,7 +21341,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private bool isAbstractField;
         
-        private Energistics.SchemaGatherer.Timestamp deprecationDateField;
+        private Energistics.DataAccess.Timestamp deprecationDateField;
         
         private Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> quantityClassField;
         
@@ -21365,7 +21365,7 @@ namespace Energistics.Generator.RESQML210 {
         [System.ComponentModel.DescriptionAttribute("Date at which this property dictionary entry must no longer be used. Files genera" +
             "ted before this date would have used this entry so it is left here for reference" +
             ".   A null value means the property kind is still valid.")]
-        public Energistics.SchemaGatherer.Timestamp DeprecationDate {
+        public Energistics.DataAccess.Timestamp DeprecationDate {
             get {
                 return this.deprecationDateField;
             }
@@ -25495,7 +25495,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private bool conformanceField;
         
-        private Energistics.SchemaGatherer.Timestamp dateField;
+        private Energistics.DataAccess.Timestamp dateField;
         
         private string commentField;
         
@@ -25594,7 +25594,7 @@ namespace Energistics.Generator.RESQML210 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date the policy was last checked. This is the date for which the Conformance valu" +
             "e is valid.")]
-        public Energistics.SchemaGatherer.Timestamp Date {
+        public Energistics.DataAccess.Timestamp Date {
             get {
                 return this.dateField;
             }

@@ -33256,7 +33256,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private bool measureClassFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private Energistics.DataAccess.Timestamp dTimField;
         
         private int indexField;
         
@@ -33319,7 +33319,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
+        public Energistics.DataAccess.Timestamp DTim {
             get {
                 return this.dTimField;
             }
@@ -36133,15 +36133,15 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class DasExternalDatasetPart : ExternalDatasetPart {
         
-        private Energistics.SchemaGatherer.Timestamp partStartTimeField;
+        private Energistics.DataAccess.Timestamp partStartTimeField;
         
-        private Energistics.SchemaGatherer.Timestamp partEndTimeField;
+        private Energistics.DataAccess.Timestamp partEndTimeField;
         
         /// <remarks/>
         /// <summary>The timestamp in human readable, ISO 8601 format of the first recorded sample in the sub-record of the raw data array stored in the corresponding HDF data file.</summary>
         [System.ComponentModel.DescriptionAttribute("The timestamp in human readable, ISO 8601 format of the first recorded sample in " +
             "the sub-record of the raw data array stored in the corresponding HDF data file.")]
-        public Energistics.SchemaGatherer.Timestamp PartStartTime {
+        public Energistics.DataAccess.Timestamp PartStartTime {
             get {
                 return this.partStartTimeField;
             }
@@ -36154,7 +36154,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>The timestamp in human readable, ISO 8601 format of the last recorded sample in the sub-record of the raw data array stored in the corresponding HDF data file.</summary>
         [System.ComponentModel.DescriptionAttribute("The timestamp in human readable, ISO 8601 format of the last recorded sample in t" +
             "he sub-record of the raw data array stored in the corresponding HDF data file.")]
-        public Energistics.SchemaGatherer.Timestamp PartEndTime {
+        public Energistics.DataAccess.Timestamp PartEndTime {
             get {
                 return this.partEndTimeField;
             }
@@ -36984,16 +36984,16 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class DasTimeArray {
         
-        private Energistics.SchemaGatherer.Timestamp startTimeField;
+        private Energistics.DataAccess.Timestamp startTimeField;
         
-        private Energistics.SchemaGatherer.Timestamp endTimeField;
+        private Energistics.DataAccess.Timestamp endTimeField;
         
         private IntegerExternalArray timeArrayField;
         
         /// <remarks/>
         /// <summary>The timestamp in human readable, ISO 8601 format of the last recorded sample in the acquistion. Note that this is the start time of the acquistion if a raw dataset is stored in multiple HDF files. The end time of the sub-record stored in an individual HDF file is stored in PartStartTime.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The timestamp in human readable, ISO 8601 format of the last recorded sample in the acquistion. Note that this is the start time of the acquistion if a raw dataset is stored in multiple HDF files. The end time of the sub-record stored in an individual HDF file is stored in PartStartTime.")]
-        public Energistics.SchemaGatherer.Timestamp StartTime {
+        public Energistics.DataAccess.Timestamp StartTime {
             get {
                 return this.startTimeField;
             }
@@ -37005,7 +37005,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>The timestamp in human readable, ISO 8601 format of the last recorded sample in the acquisition. Note that this is the end time of the acquistion if a raw data set is stored in multiple HDF files. The end time of the sub-record stored in an individual HDF file is stored in PartEndTime.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The timestamp in human readable, ISO 8601 format of the last recorded sample in the acquisition. Note that this is the end time of the acquistion if a raw data set is stored in multiple HDF files. The end time of the sub-record stored in an individual HDF file is stored in PartEndTime.")]
-        public Energistics.SchemaGatherer.Timestamp EndTime {
+        public Energistics.DataAccess.Timestamp EndTime {
             get {
                 return this.endTimeField;
             }
@@ -46699,7 +46699,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public abstract partial class AbstractDateTimeClass {
         
-        private Energistics.SchemaGatherer.Timestamp dTimeField;
+        private Energistics.DataAccess.Timestamp dTimeField;
         
         private System.DateTime dateField;
         
@@ -46710,7 +46710,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>DTime.</summary>
         [System.ComponentModel.DescriptionAttribute("DTime.")]
-        public Energistics.SchemaGatherer.Timestamp DTime {
+        public Energistics.DataAccess.Timestamp DTime {
             get {
                 return this.dTimeField;
             }
@@ -46764,14 +46764,14 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class StartEndTime : AbstractDateTimeClass {
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         /// <remarks/>
         /// <summary>The beginning date and time that the period represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The beginning date and time that the period represents.")]
-        public Energistics.SchemaGatherer.Timestamp DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -46783,7 +46783,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>The ending date and time that the period represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The ending date and time that the period represents.")]
-        public Energistics.SchemaGatherer.Timestamp DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -47303,7 +47303,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private bool subQualifierFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp versionField;
+        private Energistics.DataAccess.Timestamp versionField;
         
         private string versionSourceField;
         
@@ -47455,7 +47455,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>Version.</summary>
         [System.ComponentModel.DescriptionAttribute("Version.")]
-        public Energistics.SchemaGatherer.Timestamp Version {
+        public Energistics.DataAccess.Timestamp Version {
             get {
                 return this.versionField;
             }
@@ -56403,7 +56403,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private long startLocusIndexField;
         
-        private Energistics.SchemaGatherer.Timestamp measurementStartTimeField;
+        private Energistics.DataAccess.Timestamp measurementStartTimeField;
         
         private bool triggeredMeasurementField;
         
@@ -56655,7 +56655,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DescriptionAttribute("The time-date specification of the beginning of a data ‘sample’ in a ‘time series" +
             "’ in ISO 8601 compatible format. This is typically a GPS-locked time measurement" +
             ".")]
-        public Energistics.SchemaGatherer.Timestamp MeasurementStartTime {
+        public Energistics.DataAccess.Timestamp MeasurementStartTime {
             get {
                 return this.measurementStartTimeField;
             }
@@ -57816,7 +57816,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private bool conformanceField;
         
-        private Energistics.SchemaGatherer.Timestamp dateField;
+        private Energistics.DataAccess.Timestamp dateField;
         
         private string commentField;
         
@@ -57915,7 +57915,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date the policy was last checked. This is the date for which the Conformance valu" +
             "e is valid.")]
-        public Energistics.SchemaGatherer.Timestamp Date {
+        public Energistics.DataAccess.Timestamp Date {
             get {
                 return this.dateField;
             }
@@ -58244,7 +58244,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private bool isAbstractField;
         
-        private Energistics.SchemaGatherer.Timestamp deprecationDateField;
+        private Energistics.DataAccess.Timestamp deprecationDateField;
         
         private Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> quantityClassField;
         
@@ -58268,7 +58268,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DescriptionAttribute("Date at which this property dictionary entry must no longer be used. Files genera" +
             "ted before this date would have used this entry so it is left here for reference" +
             ".   A null value means the property kind is still valid.")]
-        public Energistics.SchemaGatherer.Timestamp DeprecationDate {
+        public Energistics.DataAccess.Timestamp DeprecationDate {
             get {
                 return this.deprecationDateField;
             }
