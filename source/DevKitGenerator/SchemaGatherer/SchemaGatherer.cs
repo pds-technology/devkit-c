@@ -228,6 +228,7 @@ namespace Energistics.SchemaGatherer
         {
             string targetFolder = GetAppSetting("ENERGY_ML_GENERATOR_PROJ_PATH") + @"\" + setName;
             string sourceFolder = GetAppSetting(setName + "_XSD_PATH");
+            string sourceRasterFolder = GetAppSetting(setName + "_RASTERXSD_PATH");
             string nameSpace = "Energistics.Generator." + setName;
             string enumList = GetAppSetting(setName + "_ENUMVAL_PATH");
             string enumProdList = "";
@@ -268,6 +269,12 @@ namespace Energistics.SchemaGatherer
                     sw.WriteLine("    <schema>" + schema + "</schema>");
                 }
 
+                if (!string.IsNullOrEmpty(sourceRasterFolder))
+                {
+                    string newRasterTypeCatalog = targetFolder + @"\new_raster_typ_catalog.xsd";
+                    ProcessEnumValuesXml(sourceRasterFolder + @"\typ_catalogRaster.xsd", newRasterTypeCatalog, enumList, sw);
+                    schemaSubstitutions.Add(newRasterTypeCatalog, sourceRasterFolder + @"\typ_catalogRaster.xsd");
+                }
                 if (!setName.StartsWith("RESQML") && !setName.StartsWith("WITSML2"))
                 {
                     if (setName.StartsWith("COMPLETION"))
@@ -315,6 +322,7 @@ namespace Energistics.SchemaGatherer
         {
             string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
             string wsdlPath = GetAppSetting(setName + "_WSDL");
+            string sourceRasterFolder = GetAppSetting(setName + "_RASTERXSD_PATH");
 
             if (!string.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
             {
@@ -346,6 +354,14 @@ namespace Energistics.SchemaGatherer
                 }
 
                 foreach (string f in Directory.GetFiles(sourceFolder, "*.xsd", SearchOption.TopDirectoryOnly))
+                {
+                    dataObjectSchemas.Add(f);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(sourceRasterFolder))
+            {
+                foreach (string f in Directory.GetFiles(sourceRasterFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
                 {
                     dataObjectSchemas.Add(f);
                 }

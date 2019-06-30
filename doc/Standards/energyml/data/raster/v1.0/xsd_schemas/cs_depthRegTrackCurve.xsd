@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2015 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="attgrp_uid.xsd"/>
+	<xsd:include schemaLocation="typ_catalogRaster.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_depthRegTrackCurve">
+		<xsd:annotation>
+			<xsd:documentation>Descriptions of the actual curve.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="curveInfo" type="witsml:shortNameStruct" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Curve mnemonic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lineStyle" type="witsml:LineStyle" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Image line style</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lineWeight" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Description of line graveness</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lineColor" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Color of this line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveScaleType" type="witsml:ScaleType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Scale linearity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveUnit" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Unit of data represented</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveLeftScaleValue" type="xsd:double" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Scale value on the left axis</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveRightScaleValue" type="xsd:double" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Scale value on the right axis</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveBackupScaleType" type="witsml:BackupScaleType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Scale of the backup curve</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Details of the line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the curve.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

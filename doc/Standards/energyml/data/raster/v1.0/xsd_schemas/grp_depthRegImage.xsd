@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2015 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_depthRegLogSection.xsd"/>
+	<xsd:include schemaLocation="cs_depthRegRectangular.xsd"/>
+	<xsd:include schemaLocation="cs_depthRegLogRect.xsd"/>
+	<!--                                                         -->
+	<xsd:group name="grp_depthRegImage">
+		<xsd:annotation>
+			<xsd:documentation>The non-contextual content of a depth registration object.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="fileName" type="witsml:fileName" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Reference to file containing image content.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mimetype" type="witsml:MimeType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Mimetype of image file content.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fileSize" type="witsml:fileSize" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Size of image file, in bytes.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="checksum" type="witsml:checksum" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Image file checksum.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="imagePixelWidth" type="witsml:nonNegativeBigCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Image file width, in pixels.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="imagePixelHeight" type="witsml:nonNegativeBigCount" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Image file height, in pixels.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="version" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>File version.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alias" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A blank field that can be "populated" through batch processing of XML files</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="logSection" type="witsml:cs_depthRegLogSection" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description and coordinates of well log section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="imageBoundary" type="witsml:cs_depthRegRectangular" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Bounding box of actual image within image extent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="headerSection" type="witsml:cs_depthRegLogRect" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description and coordinates of the header section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="alternateSection" type="witsml:cs_depthRegLogRect" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description and coordinates of information box e. g. tool diagram.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+</xsd:schema>

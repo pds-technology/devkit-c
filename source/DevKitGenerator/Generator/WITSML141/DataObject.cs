@@ -41,6 +41,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_cementJobs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_bhaRuns))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_attachments))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_depthRegImages))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49766,43 +49767,6 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    public partial class shortNameStruct {
-        
-        private string namingSystemField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        /// <summary>The naming system within the name is (hopefully) unique.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The naming system within the name is (hopefully) unique.")]
-        public string namingSystem {
-            get {
-                return this.namingSystemField;
-            }
-            set {
-                this.namingSystemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_logCurveInfo {
         
         private shortNameStruct mnemonicField;
@@ -50211,6 +50175,43 @@ namespace Energistics.Generator.WITSML141 {
             }
             set {
                 this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class shortNameStruct {
+        
+        private string namingSystemField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>The naming system within the name is (hopefully) unique.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The naming system within the name is (hopefully) unique.")]
+        public string namingSystem {
+            get {
+                return this.namingSystemField;
+            }
+            set {
+                this.namingSystemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
             }
         }
     }
@@ -62075,6 +62076,1889 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegLogRect {
+        
+        private LogRectangularType typeField;
+        
+        private bool typeFieldSpecified;
+        
+        private string nameField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_depthRegRectangular positionField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>A region of an image containing a log section image.</summary>
+        [System.ComponentModel.DescriptionAttribute("A region of an image containing a log section image.")]
+        public LogRectangularType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeSpecified {
+            get {
+                return this.typeFieldSpecified;
+            }
+            set {
+                this.typeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of a rectangular section.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of a rectangular section.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The bounding box of the log section image.</summary>
+        [System.ComponentModel.DescriptionAttribute("The bounding box of the log section image.")]
+        public cs_depthRegRectangular position {
+            get {
+                return this.positionField;
+            }
+            set {
+                this.positionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum LogRectangularType {
+        
+        /// <remarks/>
+        header,
+        
+        /// <remarks/>
+        blank,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegRectangular {
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_depthRegPoint urField;
+        
+        private cs_depthRegPoint ulField;
+        
+        private cs_depthRegPoint llField;
+        
+        private cs_depthRegPoint lrField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The upper right point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The upper right point of a rectangular region.")]
+        public cs_depthRegPoint ur {
+            get {
+                return this.urField;
+            }
+            set {
+                this.urField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The upper left point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The upper left point of a rectangular region.")]
+        public cs_depthRegPoint ul {
+            get {
+                return this.ulField;
+            }
+            set {
+                this.ulField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lower left point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lower left point of a rectangular region.")]
+        public cs_depthRegPoint ll {
+            get {
+                return this.llField;
+            }
+            set {
+                this.llField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lower right point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lower right point of a rectangular region.")]
+        public cs_depthRegPoint lr {
+            get {
+                return this.lrField;
+            }
+            set {
+                this.lrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegPoint {
+        
+        private int xField;
+        
+        private int yField;
+        
+        private string typeField;
+        
+        /// <remarks/>
+        /// <summary>The x pixel position of a point.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The x pixel position of a point.")]
+        public int x {
+            get {
+                return this.xField;
+            }
+            set {
+                this.xField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The y pixel position of a point.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The y pixel position of a point.")]
+        public int y {
+            get {
+                return this.yField;
+            }
+            set {
+                this.yField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Position Types include: topLeft, topRight, bottomLeft, bottomRight, Index</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Position Types include: topLeft, topRight, bottomLeft, bottomRight, Index")]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegTrackCurve {
+        
+        private shortNameStruct curveInfoField;
+        
+        private LineStyle lineStyleField;
+        
+        private string lineWeightField;
+        
+        private string lineColorField;
+        
+        private ScaleType curveScaleTypeField;
+        
+        private string curveUnitField;
+        
+        private double curveLeftScaleValueField;
+        
+        private double curveRightScaleValueField;
+        
+        private BackupScaleType curveBackupScaleTypeField;
+        
+        private string descriptionField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Curve mnemonic</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Curve mnemonic")]
+        public shortNameStruct curveInfo {
+            get {
+                return this.curveInfoField;
+            }
+            set {
+                this.curveInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Image line style</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Image line style")]
+        public LineStyle lineStyle {
+            get {
+                return this.lineStyleField;
+            }
+            set {
+                this.lineStyleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of line graveness</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Description of line graveness")]
+        public string lineWeight {
+            get {
+                return this.lineWeightField;
+            }
+            set {
+                this.lineWeightField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Color of this line</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Color of this line")]
+        public string lineColor {
+            get {
+                return this.lineColorField;
+            }
+            set {
+                this.lineColorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Scale linearity</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Scale linearity")]
+        public ScaleType curveScaleType {
+            get {
+                return this.curveScaleTypeField;
+            }
+            set {
+                this.curveScaleTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unit of data represented</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of data represented")]
+        public string curveUnit {
+            get {
+                return this.curveUnitField;
+            }
+            set {
+                this.curveUnitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Scale value on the left axis</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Scale value on the left axis")]
+        public double curveLeftScaleValue {
+            get {
+                return this.curveLeftScaleValueField;
+            }
+            set {
+                this.curveLeftScaleValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Scale value on the right axis</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Scale value on the right axis")]
+        public double curveRightScaleValue {
+            get {
+                return this.curveRightScaleValueField;
+            }
+            set {
+                this.curveRightScaleValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Scale of the backup curve</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Scale of the backup curve")]
+        public BackupScaleType curveBackupScaleType {
+            get {
+                return this.curveBackupScaleTypeField;
+            }
+            set {
+                this.curveBackupScaleTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Details of the line</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("Details of the line")]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum LineStyle {
+        
+        /// <remarks/>
+        dashed,
+        
+        /// <remarks/>
+        solid,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum ScaleType {
+        
+        /// <remarks/>
+        linear,
+        
+        /// <remarks/>
+        logarithmic,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum BackupScaleType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("offscale left/right")]
+        offscaleleftright,
+        
+        /// <remarks/>
+        x10,
+        
+        /// <remarks/>
+        other,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegTrack {
+        
+        private string nameField;
+        
+        private LogTrackType typeField;
+        
+        private int leftEdgeField;
+        
+        private int rightEdgeField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_depthRegTrackCurve[] associatedCurveField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>A label associated with the track.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A label associated with the track.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The kind of track.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The kind of track.")]
+        public LogTrackType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The position of the left edge of the track.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The position of the left edge of the track.")]
+        public int leftEdge {
+            get {
+                return this.leftEdgeField;
+            }
+            set {
+                this.leftEdgeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The position of the right edge of the track.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The position of the right edge of the track.")]
+        public int rightEdge {
+            get {
+                return this.rightEdgeField;
+            }
+            set {
+                this.rightEdgeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>One or more curves specified in this track.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("associatedCurve")]
+        [System.ComponentModel.DescriptionAttribute("One or more curves specified in this track.")]
+        public cs_depthRegTrackCurve[] associatedCurve {
+            get {
+                return this.associatedCurveField;
+            }
+            set {
+                this.associatedCurveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum LogTrackType {
+        
+        /// <remarks/>
+        depth,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegParameter {
+        
+        private string mnemonicField;
+        
+        private string dictionaryField;
+        
+        private genericMeasure topIndexField;
+        
+        private genericMeasure bottomIndexField;
+        
+        private genericMeasure valueField;
+        
+        private string descriptionField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>A dictionary-controlled mnemonic.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A dictionary-controlled mnemonic.")]
+        public string mnemonic {
+            get {
+                return this.mnemonicField;
+            }
+            set {
+                this.mnemonicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name or identifier of the controlling dictionary.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name or identifier of the controlling dictionary.")]
+        public string dictionary {
+            get {
+                return this.dictionaryField;
+            }
+            set {
+                this.dictionaryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DescriptionAttribute("The upper limit of a vertical region for which the parameter value is applicable." +
+            "  \'@uom\' must be consistent with \'//indexType\'.")]
+        public genericMeasure topIndex {
+            get {
+                return this.topIndexField;
+            }
+            set {
+                this.topIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lower limit of a vertical region for which the parameter value is applicable." +
+            "  \'@uom\' must be consistent with \'//indexType\'.")]
+        public genericMeasure bottomIndex {
+            get {
+                return this.bottomIndexField;
+            }
+            set {
+                this.bottomIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless then a unit of 'Euc' should be used.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The value assigned to the parameter.   The unit of measure should be consistent w" +
+            "ith the property implied by \'mnemonic\' in \'dictionary\'. If the value is unitless" +
+            " then a unit of \'Euc\' should be used.")]
+        public genericMeasure value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A description or definition for the mnemonic; required when ../dictionary is absent.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("A description or definition for the mnemonic; required when ../dictionary is abse" +
+            "nt.")]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegCalibrationPoint {
+        
+        private genericMeasure indexField;
+        
+        private refNameString trackField;
+        
+        private CalibrationPointRole roleField;
+        
+        private string curveNameField;
+        
+        private double fractionField;
+        
+        private bool fractionFieldSpecified;
+        
+        private string[] commentField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_depthRegParameter[] parameterField;
+        
+        private cs_depthRegPoint pointField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The index (depth or time) for the calibration point.   The uom value must be consistent with the indexType.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The index (depth or time) for the calibration point.   The uom value must be cons" +
+            "istent with the indexType.")]
+        public genericMeasure index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A pointer to the track containing the point.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A pointer to the track containing the point.")]
+        public refNameString track {
+            get {
+                return this.trackField;
+            }
+            set {
+                this.trackField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The horizontal position on the grid which the calibration  point represents.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The horizontal position on the grid which the calibration  point represents.")]
+        public CalibrationPointRole role {
+            get {
+                return this.roleField;
+            }
+            set {
+                this.roleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Facilitates searching for logs based on curve type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Facilitates searching for logs based on curve type.")]
+        public string curveName {
+            get {
+                return this.curveNameField;
+            }
+            set {
+                this.curveNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An intermediate Point from left edge to right edge  (required when role is "fraction", not allowed otherwise);  used to extrapolate the rectified position of a track boundary which has  wandered off the edge of the image.</summary>
+        [System.ComponentModel.DescriptionAttribute("An intermediate Point from left edge to right edge  (required when role is \"fract" +
+            "ion\", not allowed otherwise);  used to extrapolate the rectified position of a t" +
+            "rack boundary which has  wandered off the edge of the image.")]
+        public double fraction {
+            get {
+                return this.fractionField;
+            }
+            set {
+                this.fractionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fractionSpecified {
+            get {
+                return this.fractionFieldSpecified;
+            }
+            set {
+                this.fractionFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Comments about the calibration.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.ComponentModel.DescriptionAttribute("Comments about the calibration.")]
+        public string[] comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Parameters associated with the calibration point.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.ComponentModel.DescriptionAttribute("Parameters associated with the calibration point.")]
+        public cs_depthRegParameter[] parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The position on the image of the calibration point</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The position on the image of the calibration point")]
+        public cs_depthRegPoint point {
+            get {
+                return this.pointField;
+            }
+            set {
+                this.pointField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum CalibrationPointRole {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("left edge")]
+        leftedge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("right edge")]
+        rightedge,
+        
+        /// <remarks/>
+        fraction,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_depthRegLogSection {
+        
+        private short logSectionSequenceNumberField;
+        
+        private LogSectionType logSectionTypeField;
+        
+        private bool logSectionTypeFieldSpecified;
+        
+        private string logSectionNameField;
+        
+        private string logMatrixField;
+        
+        private lengthMeasure scaleNumeratorField;
+        
+        private genericMeasure scaleDenominatorField;
+        
+        private LogIndexType indexTypeField;
+        
+        private string indexUomField;
+        
+        private ElevCodeEnum indexReferenceField;
+        
+        private bool indexReferenceFieldSpecified;
+        
+        private refNameString logField;
+        
+        private genericMeasure minIntervalField;
+        
+        private genericMeasure maxIntervalField;
+        
+        private string verticalLabelField;
+        
+        private string verticalRatioField;
+        
+        private string[] commentField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_depthRegRectangular[] upperCurveScaleRectField;
+        
+        private cs_depthRegRectangular[] lowerCurveScaleRectField;
+        
+        private cs_depthRegCalibrationPoint[] calibrationPointField;
+        
+        private cs_depthRegParameter[] parameterField;
+        
+        private cs_depthRegRectangular[] whitespaceField;
+        
+        private cs_depthRegTrack[] trackField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Zero-based index in log sections, in order of appearance.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Zero-based index in log sections, in order of appearance.")]
+        public short logSectionSequenceNumber {
+            get {
+                return this.logSectionSequenceNumberField;
+            }
+            set {
+                this.logSectionSequenceNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Type of log section.</summary>
+        [System.ComponentModel.DescriptionAttribute("Type of log section.")]
+        public LogSectionType logSectionType {
+            get {
+                return this.logSectionTypeField;
+            }
+            set {
+                this.logSectionTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool logSectionTypeSpecified {
+            get {
+                return this.logSectionTypeFieldSpecified;
+            }
+            set {
+                this.logSectionTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of log section;  used to distinguish log sections of same type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of log section;  used to distinguish log sections of same type.")]
+        public string logSectionName {
+            get {
+                return this.logSectionNameField;
+            }
+            set {
+                this.logSectionNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log matrix assumed for porosity computations.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Log matrix assumed for porosity computations.")]
+        public string logMatrix {
+            get {
+                return this.logMatrixField;
+            }
+            set {
+                this.logMatrixField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The numerator of the index (depth or time) scale of the original log, e. g. "5 in".</summary>
+        [System.ComponentModel.DescriptionAttribute("The numerator of the index (depth or time) scale of the original log, e. g. \"5 in" +
+            "\".")]
+        public lengthMeasure scaleNumerator {
+            get {
+                return this.scaleNumeratorField;
+            }
+            set {
+                this.scaleNumeratorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The denominator of the index (depth or time) scale of the original log, e. g. "100 ft".  '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DescriptionAttribute("The denominator of the index (depth or time) scale of the original log, e. g. \"10" +
+            "0 ft\".  \'@uom\' must be consistent with \'//indexType\'.")]
+        public genericMeasure scaleDenominator {
+            get {
+                return this.scaleDenominatorField;
+            }
+            set {
+                this.scaleDenominatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Primary index type. For date-time indexes, any specified index values should be defined as a time offset (e.g., in seconds) from the  creationDate of the well log.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Primary index type. For date-time indexes, any specified index values should be d" +
+            "efined as a time offset (e.g., in seconds) from the  creationDate of the well lo" +
+            "g.")]
+        public LogIndexType indexType {
+            get {
+                return this.indexTypeField;
+            }
+            set {
+                this.indexTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Index uom of original log.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Index uom of original log.")]
+        public string indexUom {
+            get {
+                return this.indexUomField;
+            }
+            set {
+                this.indexUomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The origin for vertical coordinates on the original log. If this is not specified, information about the datum should be specified in comment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The origin for vertical coordinates on the original log. If this is not specified" +
+            ", information about the datum should be specified in comment.")]
+        public ElevCodeEnum indexReference {
+            get {
+                return this.indexReferenceField;
+            }
+            set {
+                this.indexReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool indexReferenceSpecified {
+            get {
+                return this.indexReferenceFieldSpecified;
+            }
+            set {
+                this.indexReferenceFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The log ID being referred to by this section.</summary>
+        [System.ComponentModel.DescriptionAttribute("The log ID being referred to by this section.")]
+        public refNameString log {
+            get {
+                return this.logField;
+            }
+            set {
+                this.logField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Minimum of range of index values.  '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Minimum of range of index values.  \'@uom\' must be consistent with \'//indexType\'.")]
+        public genericMeasure minInterval {
+            get {
+                return this.minIntervalField;
+            }
+            set {
+                this.minIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum of range of index values. '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Maximum of range of index values. \'@uom\' must be consistent with \'//indexType\'.")]
+        public genericMeasure maxInterval {
+            get {
+                return this.maxIntervalField;
+            }
+            set {
+                this.maxIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Vertical Log Scale Label (Ex. 1 IN/100 F).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("Vertical Log Scale Label (Ex. 1 IN/100 F).")]
+        public string verticalLabel {
+            get {
+                return this.verticalLabelField;
+            }
+            set {
+                this.verticalLabelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Second Term of the Vertical Scale Ratio (Ex. 240 for a 5 inch per 100 Foot log section).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("Second Term of the Vertical Scale Ratio (Ex. 240 for a 5 inch per 100 Foot log se" +
+            "ction).")]
+        public string verticalRatio {
+            get {
+                return this.verticalRatioField;
+            }
+            set {
+                this.verticalRatioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Comments about the log section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.ComponentModel.DescriptionAttribute("Comments about the log section.")]
+        public string[] comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The part of image containing upper curve scale banner.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("upperCurveScaleRect")]
+        [System.ComponentModel.DescriptionAttribute("The part of image containing upper curve scale banner.")]
+        public cs_depthRegRectangular[] upperCurveScaleRect {
+            get {
+                return this.upperCurveScaleRectField;
+            }
+            set {
+                this.upperCurveScaleRectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The part of image containing lower curve scale banner.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("lowerCurveScaleRect")]
+        [System.ComponentModel.DescriptionAttribute("The part of image containing lower curve scale banner.")]
+        public cs_depthRegRectangular[] lowerCurveScaleRect {
+            get {
+                return this.lowerCurveScaleRectField;
+            }
+            set {
+                this.lowerCurveScaleRectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mapping of pixel positions to rectified or depth-registered log image positions.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("calibrationPoint")]
+        [System.ComponentModel.DescriptionAttribute("A mapping of pixel positions to rectified or depth-registered log image positions" +
+            ".")]
+        public cs_depthRegCalibrationPoint[] calibrationPoint {
+            get {
+                return this.calibrationPointField;
+            }
+            set {
+                this.calibrationPointField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Parameters associated with the log section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.ComponentModel.DescriptionAttribute("Parameters associated with the log section.")]
+        public cs_depthRegParameter[] parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The part of image left blank on original log.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("whitespace")]
+        [System.ComponentModel.DescriptionAttribute("The part of image left blank on original log.")]
+        public cs_depthRegRectangular[] whitespace {
+            get {
+                return this.whitespaceField;
+            }
+            set {
+                this.whitespaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines the position of the tracks within this section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("track")]
+        [System.ComponentModel.DescriptionAttribute("Defines the position of the tracks within this section.")]
+        public cs_depthRegTrack[] track {
+            get {
+                return this.trackField;
+            }
+            set {
+                this.trackField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum LogSectionType {
+        
+        /// <remarks/>
+        main,
+        
+        /// <remarks/>
+        repeat,
+        
+        /// <remarks/>
+        calibration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tie in")]
+        tiein,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("going in hole")]
+        goinginhole,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class checksum {
+        
+        private MessageDigestType typeField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>Message digest type.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Message digest type.")]
+        public MessageDigestType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum MessageDigestType {
+        
+        /// <remarks/>
+        MD5,
+        
+        /// <remarks/>
+        SHA1,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class fileSize {
+        
+        private FileSizeUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public FileSizeUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum FileSizeUom {
+        
+        /// <remarks/>
+        bytes,
+        
+        /// <remarks/>
+        kBytes,
+        
+        /// <remarks/>
+        MBytes,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class fileName {
+        
+        private FileNameType nameTypeField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>Type of file reference.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Type of file reference.")]
+        public FileNameType nameType {
+            get {
+                return this.nameTypeField;
+            }
+            set {
+                this.nameTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum FileNameType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("file name")]
+        filename,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("path name")]
+        pathname,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("universal resource locator")]
+        universalresourcelocator,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_depthRegImage {
+        
+        private string nameWellField;
+        
+        private string nameWellboreField;
+        
+        private string nameField;
+        
+        private fileName fileNameField;
+        
+        private MimeType mimetypeField;
+        
+        private bool mimetypeFieldSpecified;
+        
+        private fileSize fileSizeField;
+        
+        private checksum checksumField;
+        
+        private int imagePixelWidthField;
+        
+        private bool imagePixelWidthFieldSpecified;
+        
+        private int imagePixelHeightField;
+        
+        private bool imagePixelHeightFieldSpecified;
+        
+        private string versionField;
+        
+        private string aliasField;
+        
+        private cs_depthRegLogSection[] logSectionField;
+        
+        private cs_depthRegRectangular imageBoundaryField;
+        
+        private cs_depthRegLogRect[] headerSectionField;
+        
+        private cs_depthRegLogRect[] alternateSectionField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidWellField;
+        
+        private string uidWellboreField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
+        public string nameWell {
+            get {
+                return this.nameWellField;
+            }
+            set {
+                this.nameWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the wellbore that contains the image.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the image.")]
+        public string nameWellbore {
+            get {
+                return this.nameWellboreField;
+            }
+            set {
+                this.nameWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the image.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the image.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to file containing image content.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to file containing image content.")]
+        public fileName fileName {
+            get {
+                return this.fileNameField;
+            }
+            set {
+                this.fileNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Mimetype of image file content.</summary>
+        [System.ComponentModel.DescriptionAttribute("Mimetype of image file content.")]
+        public MimeType mimetype {
+            get {
+                return this.mimetypeField;
+            }
+            set {
+                this.mimetypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool mimetypeSpecified {
+            get {
+                return this.mimetypeFieldSpecified;
+            }
+            set {
+                this.mimetypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Size of image file, in bytes.</summary>
+        [System.ComponentModel.DescriptionAttribute("Size of image file, in bytes.")]
+        public fileSize fileSize {
+            get {
+                return this.fileSizeField;
+            }
+            set {
+                this.fileSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Image file checksum.</summary>
+        [System.ComponentModel.DescriptionAttribute("Image file checksum.")]
+        public checksum checksum {
+            get {
+                return this.checksumField;
+            }
+            set {
+                this.checksumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Image file width, in pixels.</summary>
+        [System.ComponentModel.DescriptionAttribute("Image file width, in pixels.")]
+        public int imagePixelWidth {
+            get {
+                return this.imagePixelWidthField;
+            }
+            set {
+                this.imagePixelWidthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool imagePixelWidthSpecified {
+            get {
+                return this.imagePixelWidthFieldSpecified;
+            }
+            set {
+                this.imagePixelWidthFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Image file height, in pixels.</summary>
+        [System.ComponentModel.DescriptionAttribute("Image file height, in pixels.")]
+        public int imagePixelHeight {
+            get {
+                return this.imagePixelHeightField;
+            }
+            set {
+                this.imagePixelHeightField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool imagePixelHeightSpecified {
+            get {
+                return this.imagePixelHeightFieldSpecified;
+            }
+            set {
+                this.imagePixelHeightFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>File version.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("File version.")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A blank field that can be "populated" through batch processing of XML files</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("A blank field that can be \"populated\" through batch processing of XML files")]
+        public string alias {
+            get {
+                return this.aliasField;
+            }
+            set {
+                this.aliasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description and coordinates of well log section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("logSection")]
+        [System.ComponentModel.DescriptionAttribute("Description and coordinates of well log section.")]
+        public cs_depthRegLogSection[] logSection {
+            get {
+                return this.logSectionField;
+            }
+            set {
+                this.logSectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Bounding box of actual image within image extent.</summary>
+        [System.ComponentModel.DescriptionAttribute("Bounding box of actual image within image extent.")]
+        public cs_depthRegRectangular imageBoundary {
+            get {
+                return this.imageBoundaryField;
+            }
+            set {
+                this.imageBoundaryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description and coordinates of the header section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("headerSection")]
+        [System.ComponentModel.DescriptionAttribute("Description and coordinates of the header section.")]
+        public cs_depthRegLogRect[] headerSection {
+            get {
+                return this.headerSectionField;
+            }
+            set {
+                this.headerSectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description and coordinates of information box e. g. tool diagram.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("alternateSection")]
+        [System.ComponentModel.DescriptionAttribute("Description and coordinates of information box e. g. tool diagram.")]
+        public cs_depthRegLogRect[] alternateSection {
+            get {
+                return this.alternateSectionField;
+            }
+            set {
+                this.alternateSectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data  objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents the well referenced by t" +
+            "he (possibly non-unique) nameWell.")]
+        public string uidWell {
+            get {
+                return this.uidWellField;
+            }
+            set {
+                this.uidWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents the wellbore referen" +
+            "ced by the (possibly non-unique) nameWellbore.")]
+        public string uidWellbore {
+            get {
+                return this.uidWellboreField;
+            }
+            set {
+                this.uidWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the registration image.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the registration image.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum MimeType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("image/tiff")]
+        imagetiff,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("image/gif")]
+        imagegif,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("image/png")]
+        imagepng,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("image/xml+svg")]
+        imagexmlsvg,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
         private Energistics.DataAccess.Timestamp eventDateField;
@@ -64070,6 +65954,63 @@ namespace Energistics.Generator.WITSML141 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("depthRegImages", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class obj_depthRegImages : abstractObject {
+        
+        private cs_documentInfo documentInfoField;
+        
+        private obj_depthRegImage[] depthRegImageField;
+        
+        private string versionField;
+        
+        /// <remarks/>
+        /// <summary>Information about the XML message instance.</summary>
+        [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        public cs_documentInfo documentInfo {
+            get {
+                return this.documentInfoField;
+            }
+            set {
+                this.documentInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("depthRegImage")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public obj_depthRegImage[] depthRegImage {
+            get {
+                return this.depthRegImageField;
+            }
+            set {
+                this.depthRegImageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
+            "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
+            "ent instance.")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/api/141")]
     [System.Xml.Serialization.XmlRootAttribute("capClients", Namespace="http://www.witsml.org/api/141", IsNullable=false)]
     public partial class obj_capClients {
@@ -64731,5 +66672,51 @@ namespace Energistics.Generator.WITSML141 {
                 this.valueField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class resolution {
+        
+        private ResolutionUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ResolutionUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum ResolutionUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pixels/inch")]
+        pixelsinch,
     }
 }

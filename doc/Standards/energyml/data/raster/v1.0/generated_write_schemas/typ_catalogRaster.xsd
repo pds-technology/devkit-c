@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2015 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>WITSML- Catalog of Value Constrainted Types.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:simpleType name="LogRectangularType">
+      <xsd:annotation>
+         <xsd:documentation>Type of rectangular log area.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="header" />
+         <xsd:enumeration value="blank" />
+         <xsd:enumeration value="other" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LogSectionType">
+      <xsd:annotation>
+         <xsd:documentation>Type of log section.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="main" />
+         <xsd:enumeration value="repeat" />
+         <xsd:enumeration value="calibration" />
+         <xsd:enumeration value="tie in" />
+         <xsd:enumeration value="going in hole" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LogTrackType">
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="depth" />
+         <xsd:enumeration value="other" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MessageDigestType">
+      <xsd:annotation>
+         <xsd:documentation>Message digest type. Note: the open source toolkit OpenSSL (http://www.openssl.org) includes utilities to generate and compare message
+         digests.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="MD5">
+            <xsd:annotation>
+               <xsd:documentation>See IETF RFC 1321 (http://www.ietf.org/rfc/rfc1321.txt).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SHA1">
+            <xsd:annotation>
+               <xsd:documentation>See IETF RFC 3174 (http://www.ietf.org/rfc/rfc3174.txt).</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="MimeType">
+      <xsd:annotation>
+         <xsd:documentation>A partial list of mimetypes</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="image/tiff" />
+         <xsd:enumeration value="image/gif" />
+         <xsd:enumeration value="image/png" />
+         <xsd:enumeration value="image/xml+svg" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CalibrationPointRole">
+      <xsd:annotation>
+         <xsd:documentation>The role of a calibration point in a log depth registration.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="left edge" />
+         <xsd:enumeration value="right edge" />
+         <xsd:enumeration value="fraction" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="FileNameType">
+      <xsd:annotation>
+         <xsd:documentation>Type of file reference.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="file name" />
+         <xsd:enumeration value="path name" />
+         <xsd:enumeration value="universal resource locator" />
+         <xsd:enumeration value="unknown">
+            <xsd:annotation>
+               <xsd:documentation>The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate
+               value. Use of this value may result in rejection in some situations.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LineStyle">
+      <xsd:annotation>
+         <xsd:documentation>Line style types.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="dashed" />
+         <xsd:enumeration value="solid" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ScaleType">
+      <xsd:annotation>
+         <xsd:documentation>Main line scale types.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="linear" />
+         <xsd:enumeration value="logarithmic" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="BackupScaleType">
+      <xsd:annotation>
+         <xsd:documentation>Backup scale types.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractTypeEnum">
+         <xsd:enumeration value="offscale left/right" />
+         <xsd:enumeration value="x10" />
+         <xsd:enumeration value="other" />
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:schema>

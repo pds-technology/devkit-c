@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2015 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_depthRegRectangular.xsd"/>
+	<xsd:include schemaLocation="cs_depthRegCalibrationPoint.xsd"/>
+	<xsd:include schemaLocation="cs_depthRegParameter.xsd"/>
+	<xsd:include schemaLocation="cs_depthRegTrack.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_depthRegLogSection">
+		<xsd:annotation>
+			<xsd:documentation>Description and coordinates of well log section.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="logSectionSequenceNumber" type="witsml:nonNegativeCount" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Zero-based index in log sections, in order of appearance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="logSectionType" type="witsml:LogSectionType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Type of log section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="logSectionName" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Name of log section;  used to distinguish log sections of same type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="logMatrix" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Log matrix assumed for porosity computations.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="scaleNumerator" type="witsml:lengthMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The numerator of the index (depth or time) scale of the original log, e. g. "5 in".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="scaleDenominator" type="witsml:genericMeasure" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The denominator of the index (depth or time) scale of the original log, e. g. "100 ft".  '@uom' must be consistent with '//indexType'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="indexType" type="witsml:LogIndexType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Primary index type. For date-time indexes, any specified
+					index values should be defined as a time offset (e.g., in seconds) from the 
+					creationDate of the well log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="indexUom" type="witsml:nameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Index uom of original log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="indexReference" type="witsml:ElevCodeEnum" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The origin for vertical coordinates on the original log.
+					If this is not specified, information about the datum should be specified
+					in comment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="log" type="witsml:refNameString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The log ID being referred to by this section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="minInterval" type="witsml:genericMeasure" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Minimum of range of index values.  '@uom' must be consistent with '//indexType'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxInterval" type="witsml:genericMeasure" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Maximum of range of index values. '@uom' must be consistent with '//indexType'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="verticalLabel" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Vertical Log Scale Label (Ex. 1 IN/100 F).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="verticalRatio" type="witsml:descriptionString" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Second Term of the Vertical Scale Ratio (Ex. 240 for a 5 inch per 100 Foot log section).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="witsml:commentString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Comments about the log section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="upperCurveScaleRect" type="witsml:cs_depthRegRectangular" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The part of image containing upper curve scale banner.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lowerCurveScaleRect" type="witsml:cs_depthRegRectangular" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The part of image containing lower curve scale banner.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="calibrationPoint" type="witsml:cs_depthRegCalibrationPoint" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A mapping of pixel positions to rectified or depth-registered log image positions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameter" type="witsml:cs_depthRegParameter" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Parameters associated with the log section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="whitespace" type="witsml:cs_depthRegRectangular" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The part of image left blank on original log.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="track" type="witsml:cs_depthRegTrack" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Defines the position of the tracks within this section.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the log section.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>

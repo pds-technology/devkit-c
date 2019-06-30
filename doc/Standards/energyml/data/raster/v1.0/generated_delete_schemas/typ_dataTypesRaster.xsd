@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2015 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_quantityClassRaster.xsd" />
+   <xsd:include schemaLocation="typ_catalogRaster.xsd" />
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:element name="checksum" type="witsml:checksum" />
+   <xsd:complexType name="checksum">
+      <xsd:annotation>
+         <xsd:documentation>A message digest (hashsum) of image file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="type" type="witsml:MessageDigestType" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Message digest type.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:element name="fileName" type="witsml:fileName" />
+   <xsd:complexType name="fileName">
+      <xsd:annotation>
+         <xsd:documentation>The name of a file. May be a simple name, a path or a URL.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractNameString">
+            <xsd:attribute name="nameType" type="witsml:FileNameType" use="optional">
+               <xsd:annotation>
+                  <xsd:documentation>Type of file reference.</xsd:documentation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:element name="fileSize" type="witsml:fileSize" />
+   <xsd:complexType name="fileSize">
+      <xsd:annotation>
+         <xsd:documentation>The size of a file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDouble">
+            <xsd:attribute name="uom" type="witsml:FileSizeUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:element name="resolution" type="witsml:resolution" />
+   <xsd:complexType name="resolution">
+      <xsd:annotation>
+         <xsd:documentation>Fineness of image detail, e.g., dpi.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="prodml:abstractDouble">
+            <xsd:attribute name="uom" type="witsml:ResolutionUom" use="optional">
+               <xsd:annotation>
+                  <xsd:appinfo>write-constraint:@use="required"</xsd:appinfo>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:simpleType name="nonNegativeBigCount">
+      <xsd:annotation>
+         <xsd:documentation>A large non-negative integer (zero based count or index) with a maximum value of 2,147,483,647 (4-bytes).</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractInt">
+         <xsd:minInclusive value="0" />
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2015 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:annotation>
+      <xsd:documentation>This file defines a set of standard POSC units of measure for various quantity classes. This units list captures information contained in the POSC units
+      dictionary at http://www.posc.org/refs/poscUnits20.xml. The enumerated lists do not contain any deprecated units.</xsd:documentation>
+   </xsd:annotation>
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_baseType.xsd" />
+   <!--                                                         -->
+   <xsd:simpleType name="FileSizeUom">
+      <xsd:annotation>
+         <xsd:documentation>Unit of measure of the size of a file.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="bytes" />
+         <xsd:enumeration value="kBytes" />
+         <xsd:enumeration value="MBytes" />
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ResolutionUom">
+      <xsd:annotation>
+         <xsd:documentation>Unit of measure for image resolution.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="prodml:abstractUomEnum">
+         <xsd:enumeration value="pixels/inch" />
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:schema>

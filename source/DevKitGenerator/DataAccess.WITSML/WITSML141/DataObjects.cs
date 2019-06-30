@@ -47,6 +47,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRunList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttachmentList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthRegImageList))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55875,99 +55876,6 @@ namespace Energistics.DataAccess.WITSML141
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the shortNameStruct xsd type.
-    /// </summary>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="shortNameStruct", Namespace="http://www.witsml.org/schemas/1series")]
-	[Description("This class represents the shortNameStruct xsd type.")]
-    public partial class ShortNameStruct : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the ShortNameStruct class.
-        /// </summary>
-        public ShortNameStruct() {}
-
-        /// <summary>
-        /// Initializes a new instance of the ShortNameStruct class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public ShortNameStruct(string value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-		/// <summary>
-        /// The naming system within the name is (hopefully) unique.
-        /// </summary>
-		[StringLength(64)]
-        [Description("The naming system within the name is (hopefully) unique.")]
-        [XmlAttribute("namingSystem")]
-		
-        public string NamingSystem {
-            get {
-                return namingSystemField;
-            } 
-            set {
-                namingSystemField = value;
-                NotifyPropertyChanged("NamingSystem");
-            }
-        }
-
-        private string namingSystemField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public string Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private string ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// WITSML Log - Curve Information
     /// </summary>
     [System.SerializableAttribute()]
@@ -56502,6 +56410,99 @@ namespace Energistics.DataAccess.WITSML141
         }
 
         private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the shortNameStruct xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="shortNameStruct", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the shortNameStruct xsd type.")]
+    public partial class ShortNameStruct : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the ShortNameStruct class.
+        /// </summary>
+        public ShortNameStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ShortNameStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public ShortNameStruct(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// The naming system within the name is (hopefully) unique.
+        /// </summary>
+		[StringLength(64)]
+        [Description("The naming system within the name is (hopefully) unique.")]
+        [XmlAttribute("namingSystem")]
+		
+        public string NamingSystem {
+            get {
+                return namingSystemField;
+            } 
+            set {
+                namingSystemField = value;
+                NotifyPropertyChanged("NamingSystem");
+            }
+        }
+
+        private string namingSystemField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public string Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private string ValueField; 
 
 
         
@@ -72649,6 +72650,2669 @@ namespace Energistics.DataAccess.WITSML141
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the cs_depthRegLogRect xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegLogRect", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegLogRect xsd type.")]
+    public partial class DepthRegLogRect : Object, IDataObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// type property
+        /// </summary>
+		[Description("A region of an image containing a log section image.")]
+		[XmlElement("type")]
+        public LogRectangularType? Type {
+            get {
+                return typeField;
+            } 
+            set {
+                typeField = value;
+                 this.TypeSpecified = true;
+                NotifyPropertyChanged("Type");
+            }
+        }
+
+        private LogRectangularType? typeField; 
+
+        /// <summary>
+        /// typeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeSpecified {
+            get {
+                return typeSpecifiedField;
+            } 
+            set {
+                typeSpecifiedField = value;
+                NotifyPropertyChanged("TypeSpecified");
+            }
+        }
+
+        private bool typeSpecifiedField; 
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The name of a rectangular section.")]
+		[XmlElement("name")]
+        public string Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private string nameField; 
+
+        /// <summary>
+        /// extensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("extensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+             get {
+             if(extensionNameValueField!=null)
+                 return extensionNameValueField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<ExtensionNameValue> extensionNameValueField; 
+
+        /// <summary>
+        /// position property
+        /// </summary>
+		[Description("The bounding box of the log section image.")]
+        [ComponentElement]
+		[XmlElement("position")]
+        public DepthRegRectangular Position {
+            get {
+                return positionField;
+            } 
+            set {
+                positionField = value;
+                NotifyPropertyChanged("Position");
+            }
+        }
+
+        private DepthRegRectangular positionField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegRectangular xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegRectangular", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegRectangular xsd type.")]
+    public partial class DepthRegRectangular : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// extensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("extensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+             get {
+             if(extensionNameValueField!=null)
+                 return extensionNameValueField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<ExtensionNameValue> extensionNameValueField; 
+
+        /// <summary>
+        /// ur property
+        /// </summary>
+		[Description("The upper right point of a rectangular region.")]
+        [ComponentElement]
+		[XmlElement("ur")]
+        public DepthRegPoint UpperRight {
+            get {
+                return urField;
+            } 
+            set {
+                urField = value;
+                NotifyPropertyChanged("UpperRight");
+            }
+        }
+
+        private DepthRegPoint urField; 
+
+        /// <summary>
+        /// ul property
+        /// </summary>
+		[Description("The upper left point of a rectangular region.")]
+        [ComponentElement]
+		[XmlElement("ul")]
+        public DepthRegPoint UpperLeft {
+            get {
+                return ulField;
+            } 
+            set {
+                ulField = value;
+                NotifyPropertyChanged("UpperLeft");
+            }
+        }
+
+        private DepthRegPoint ulField; 
+
+        /// <summary>
+        /// ll property
+        /// </summary>
+		[Description("The lower left point of a rectangular region.")]
+        [ComponentElement]
+		[XmlElement("ll")]
+        public DepthRegPoint LowerLeft {
+            get {
+                return llField;
+            } 
+            set {
+                llField = value;
+                NotifyPropertyChanged("LowerLeft");
+            }
+        }
+
+        private DepthRegPoint llField; 
+
+        /// <summary>
+        /// lr property
+        /// </summary>
+		[Description("The lower right point of a rectangular region.")]
+        [ComponentElement]
+		[XmlElement("lr")]
+        public DepthRegPoint LowerRight {
+            get {
+                return lrField;
+            } 
+            set {
+                lrField = value;
+                NotifyPropertyChanged("LowerRight");
+            }
+        }
+
+        private DepthRegPoint lrField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegPoint xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegPoint", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegPoint xsd type.")]
+    public partial class DepthRegPoint : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// x property
+        /// </summary>
+		[Required]
+        [Description("The x pixel position of a point.")]
+		[XmlElement("x")]
+        public int? X {
+            get {
+                return xField;
+            } 
+            set {
+                xField = value;
+                NotifyPropertyChanged("X");
+            }
+        }
+
+        private int? xField; 
+
+        /// <summary>
+        /// y property
+        /// </summary>
+		[Required]
+        [Description("The y pixel position of a point.")]
+		[XmlElement("y")]
+        public int? Y {
+            get {
+                return yField;
+            } 
+            set {
+                yField = value;
+                NotifyPropertyChanged("Y");
+            }
+        }
+
+        private int? yField; 
+
+        /// <summary>
+        /// type property
+        /// </summary>
+		[StringLength(32)]
+        [Description("Position Types include: topLeft, topRight, bottomLeft, bottomRight, Index")]
+		[XmlElement("type")]
+        public string Type {
+            get {
+                return typeField;
+            } 
+            set {
+                typeField = value;
+                NotifyPropertyChanged("Type");
+            }
+        }
+
+        private string typeField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegTrackCurve xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegTrackCurve", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegTrackCurve xsd type.")]
+    public partial class DepthRegTrackCurve : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// curveInfo property
+        /// </summary>
+		[Required]
+        [Description("Curve mnemonic")]
+        [ComponentElement]
+		[XmlElement("curveInfo")]
+        public ShortNameStruct CurveInfo {
+            get {
+                return curveInfoField;
+            } 
+            set {
+                curveInfoField = value;
+                NotifyPropertyChanged("CurveInfo");
+            }
+        }
+
+        private ShortNameStruct curveInfoField; 
+
+        /// <summary>
+        /// lineStyle property
+        /// </summary>
+		[Required]
+        [Description("Image line style")]
+		[XmlElement("lineStyle")]
+        public LineStyle? LineStyle {
+            get {
+                return lineStyleField;
+            } 
+            set {
+                lineStyleField = value;
+                NotifyPropertyChanged("LineStyle");
+            }
+        }
+
+        private LineStyle? lineStyleField; 
+
+        /// <summary>
+        /// lineWeight property
+        /// </summary>
+		[Required]
+        [Description("Description of line graveness")]
+		[XmlElement("lineWeight")]
+        public string LineWeight {
+            get {
+                return lineWeightField;
+            } 
+            set {
+                lineWeightField = value;
+                NotifyPropertyChanged("LineWeight");
+            }
+        }
+
+        private string lineWeightField; 
+
+        /// <summary>
+        /// lineColor property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Color of this line")]
+		[XmlElement("lineColor")]
+        public string LineColor {
+            get {
+                return lineColorField;
+            } 
+            set {
+                lineColorField = value;
+                NotifyPropertyChanged("LineColor");
+            }
+        }
+
+        private string lineColorField; 
+
+        /// <summary>
+        /// curveScaleType property
+        /// </summary>
+		[Required]
+        [Description("Scale linearity")]
+		[XmlElement("curveScaleType")]
+        public ScaleType? CurveScaleType {
+            get {
+                return curveScaleTypeField;
+            } 
+            set {
+                curveScaleTypeField = value;
+                NotifyPropertyChanged("CurveScaleType");
+            }
+        }
+
+        private ScaleType? curveScaleTypeField; 
+
+        /// <summary>
+        /// curveUnit property
+        /// </summary>
+		[Required]
+        [Description("Unit of data represented")]
+		[XmlElement("curveUnit")]
+        public string CurveUnit {
+            get {
+                return curveUnitField;
+            } 
+            set {
+                curveUnitField = value;
+                NotifyPropertyChanged("CurveUnit");
+            }
+        }
+
+        private string curveUnitField; 
+
+        /// <summary>
+        /// curveLeftScaleValue property
+        /// </summary>
+		[Required]
+        [Description("Scale value on the left axis")]
+		[XmlElement("curveLeftScaleValue")]
+        public double? CurveLeftScaleValue {
+            get {
+                return curveLeftScaleValueField;
+            } 
+            set {
+                curveLeftScaleValueField = value;
+                NotifyPropertyChanged("CurveLeftScaleValue");
+            }
+        }
+
+        private double? curveLeftScaleValueField; 
+
+        /// <summary>
+        /// curveRightScaleValue property
+        /// </summary>
+		[Required]
+        [Description("Scale value on the right axis")]
+		[XmlElement("curveRightScaleValue")]
+        public double? CurveRightScaleValue {
+            get {
+                return curveRightScaleValueField;
+            } 
+            set {
+                curveRightScaleValueField = value;
+                NotifyPropertyChanged("CurveRightScaleValue");
+            }
+        }
+
+        private double? curveRightScaleValueField; 
+
+        /// <summary>
+        /// curveBackupScaleType property
+        /// </summary>
+		[Required]
+        [Description("Scale of the backup curve")]
+		[XmlElement("curveBackupScaleType")]
+        public BackupScaleType? CurveBackupScaleType {
+            get {
+                return curveBackupScaleTypeField;
+            } 
+            set {
+                curveBackupScaleTypeField = value;
+                NotifyPropertyChanged("CurveBackupScaleType");
+            }
+        }
+
+        private BackupScaleType? curveBackupScaleTypeField; 
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[StringLength(256)]
+        [Description("Details of the line")]
+		[XmlElement("description")]
+        public string Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private string descriptionField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegTrack xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegTrack", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegTrack xsd type.")]
+    public partial class DepthRegTrack : Object, IDataObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A label associated with the track.")]
+		[XmlElement("name")]
+        public string Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private string nameField; 
+
+        /// <summary>
+        /// type property
+        /// </summary>
+		[Required]
+        [Description("The kind of track.")]
+		[XmlElement("type")]
+        public LogTrackType? Type {
+            get {
+                return typeField;
+            } 
+            set {
+                typeField = value;
+                NotifyPropertyChanged("Type");
+            }
+        }
+
+        private LogTrackType? typeField; 
+
+        /// <summary>
+        /// leftEdge property
+        /// </summary>
+		[Required]
+        [Description("The position of the left edge of the track.")]
+		[XmlElement("leftEdge")]
+        public int? LeftEdge {
+            get {
+                return leftEdgeField;
+            } 
+            set {
+                leftEdgeField = value;
+                NotifyPropertyChanged("LeftEdge");
+            }
+        }
+
+        private int? leftEdgeField; 
+
+        /// <summary>
+        /// rightEdge property
+        /// </summary>
+		[Required]
+        [Description("The position of the right edge of the track.")]
+		[XmlElement("rightEdge")]
+        public int? RightEdge {
+            get {
+                return rightEdgeField;
+            } 
+            set {
+                rightEdgeField = value;
+                NotifyPropertyChanged("RightEdge");
+            }
+        }
+
+        private int? rightEdgeField; 
+
+        /// <summary>
+        /// extensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("extensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+             get {
+             if(extensionNameValueField!=null)
+                 return extensionNameValueField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<ExtensionNameValue> extensionNameValueField; 
+
+        /// <summary>
+        /// associatedCurve property
+        /// </summary>
+		[Description("One or more curves specified in this track.")]
+        [RecurringElement]
+		[XmlElement("associatedCurve")]
+        public List<DepthRegTrackCurve> AssociatedCurve {
+            get {
+                return associatedCurveField;
+            } 
+            set {
+                associatedCurveField = value;
+                NotifyPropertyChanged("AssociatedCurve");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if AssociatedCurve has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool AssociatedCurveSpecified
+         {
+             get {
+             if(associatedCurveField!=null)
+                 return associatedCurveField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegTrackCurve> associatedCurveField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegParameter xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegParameter", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegParameter xsd type.")]
+    public partial class DepthRegParameter : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// mnemonic property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A dictionary-controlled mnemonic.")]
+		[XmlElement("mnemonic")]
+        public string Mnemonic {
+            get {
+                return mnemonicField;
+            } 
+            set {
+                mnemonicField = value;
+                NotifyPropertyChanged("Mnemonic");
+            }
+        }
+
+        private string mnemonicField; 
+
+        /// <summary>
+        /// dictionary property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The name or identifier of the controlling dictionary.")]
+		[XmlElement("dictionary")]
+        public string Dictionary {
+            get {
+                return dictionaryField;
+            } 
+            set {
+                dictionaryField = value;
+                NotifyPropertyChanged("Dictionary");
+            }
+        }
+
+        private string dictionaryField; 
+
+        /// <summary>
+        /// topIndex property
+        /// </summary>
+		[Description("The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("topIndex")]
+        public GenericMeasure TopIndex {
+            get {
+                return topIndexField;
+            } 
+            set {
+                topIndexField = value;
+                NotifyPropertyChanged("TopIndex");
+            }
+        }
+
+        private GenericMeasure topIndexField; 
+
+        /// <summary>
+        /// bottomIndex property
+        /// </summary>
+		[Description("The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("bottomIndex")]
+        public GenericMeasure BottomIndex {
+            get {
+                return bottomIndexField;
+            } 
+            set {
+                bottomIndexField = value;
+                NotifyPropertyChanged("BottomIndex");
+            }
+        }
+
+        private GenericMeasure bottomIndexField; 
+
+        /// <summary>
+        /// value property
+        /// </summary>
+		[Required]
+        [Description("The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless then a unit of 'Euc' should be used.")]
+        [ComponentElement]
+		[XmlElement("value")]
+        public GenericMeasure Value {
+            get {
+                return valueField;
+            } 
+            set {
+                valueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private GenericMeasure valueField; 
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[StringLength(256)]
+        [Description("A description or definition for the mnemonic; required when ../dictionary is absent.")]
+		[XmlElement("description")]
+        public string Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private string descriptionField; 
+
+        /// <summary>
+        /// extensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("extensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+             get {
+             if(extensionNameValueField!=null)
+                 return extensionNameValueField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<ExtensionNameValue> extensionNameValueField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegCalibrationPoint xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegCalibrationPoint", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegCalibrationPoint xsd type.")]
+    public partial class DepthRegCalibrationPoint : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// index property
+        /// </summary>
+		[Required]
+        [Description("The index (depth or time) for the calibration point.   The uom value must be consistent with the indexType.")]
+        [ComponentElement]
+		[XmlElement("index")]
+        public GenericMeasure Index {
+            get {
+                return indexField;
+            } 
+            set {
+                indexField = value;
+                NotifyPropertyChanged("Index");
+            }
+        }
+
+        private GenericMeasure indexField; 
+
+        /// <summary>
+        /// track property
+        /// </summary>
+		[Required]
+        [Description("A pointer to the track containing the point.")]
+        [ComponentElement]
+		[XmlElement("track")]
+        public RefNameString Track {
+            get {
+                return trackField;
+            } 
+            set {
+                trackField = value;
+                NotifyPropertyChanged("Track");
+            }
+        }
+
+        private RefNameString trackField; 
+
+        /// <summary>
+        /// role property
+        /// </summary>
+		[Required]
+        [Description("The horizontal position on the grid which the calibration  point represents.")]
+		[XmlElement("role")]
+        public CalibrationPointRole? Role {
+            get {
+                return roleField;
+            } 
+            set {
+                roleField = value;
+                NotifyPropertyChanged("Role");
+            }
+        }
+
+        private CalibrationPointRole? roleField; 
+
+        /// <summary>
+        /// curveName property
+        /// </summary>
+		[StringLength(32)]
+        [Description("Facilitates searching for logs based on curve type.")]
+		[XmlElement("curveName")]
+        public string CurveName {
+            get {
+                return curveNameField;
+            } 
+            set {
+                curveNameField = value;
+                NotifyPropertyChanged("CurveName");
+            }
+        }
+
+        private string curveNameField; 
+
+        /// <summary>
+        /// fraction property
+        /// </summary>
+		[Description("An intermediate Point from left edge to right edge  (required when role is \"fraction\", not allowed otherwise);  used to extrapolate the rectified position of a track boundary which has  wandered off the edge of the image.")]
+		[XmlElement("fraction")]
+        public double? Fraction {
+            get {
+                return fractionField;
+            } 
+            set {
+                fractionField = value;
+                 this.FractionSpecified = true;
+                NotifyPropertyChanged("Fraction");
+            }
+        }
+
+        private double? fractionField; 
+
+        /// <summary>
+        /// fractionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FractionSpecified {
+            get {
+                return fractionSpecifiedField;
+            } 
+            set {
+                fractionSpecifiedField = value;
+                NotifyPropertyChanged("FractionSpecified");
+            }
+        }
+
+        private bool fractionSpecifiedField; 
+
+        /// <summary>
+        /// comment property
+        /// </summary>
+		[Description("Comments about the calibration.")]
+        [RecurringElement]
+		[XmlElement("comment")]
+        public List<string> Comment {
+            get {
+                return commentField;
+            } 
+            set {
+                commentField = value;
+                NotifyPropertyChanged("Comment");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Comment has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+             get {
+             if(commentField!=null)
+                 return commentField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<string> commentField; 
+
+        /// <summary>
+        /// extensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("extensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+             get {
+             if(extensionNameValueField!=null)
+                 return extensionNameValueField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<ExtensionNameValue> extensionNameValueField; 
+
+        /// <summary>
+        /// parameter property
+        /// </summary>
+		[Description("Parameters associated with the calibration point.")]
+        [RecurringElement]
+		[XmlElement("parameter")]
+        public List<DepthRegParameter> Parameter {
+            get {
+                return parameterField;
+            } 
+            set {
+                parameterField = value;
+                NotifyPropertyChanged("Parameter");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+             get {
+             if(parameterField!=null)
+                 return parameterField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegParameter> parameterField; 
+
+        /// <summary>
+        /// point property
+        /// </summary>
+		[Required]
+        [Description("The position on the image of the calibration point")]
+        [ComponentElement]
+		[XmlElement("point")]
+        public DepthRegPoint Point {
+            get {
+                return pointField;
+            } 
+            set {
+                pointField = value;
+                NotifyPropertyChanged("Point");
+            }
+        }
+
+        private DepthRegPoint pointField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_depthRegLogSection xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_depthRegLogSection", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the cs_depthRegLogSection xsd type.")]
+    public partial class DepthRegLogSection : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// logSectionSequenceNumber property
+        /// </summary>
+		[Required]
+        [Description("Zero-based index in log sections, in order of appearance.")]
+		[XmlElement("logSectionSequenceNumber")]
+        public short? LogSectionSequenceNumber {
+            get {
+                return logSectionSequenceNumberField;
+            } 
+            set {
+                logSectionSequenceNumberField = value;
+                NotifyPropertyChanged("LogSectionSequenceNumber");
+            }
+        }
+
+        private short? logSectionSequenceNumberField; 
+
+        /// <summary>
+        /// logSectionType property
+        /// </summary>
+		[Description("Type of log section.")]
+		[XmlElement("logSectionType")]
+        public LogSectionType? LogSectionType {
+            get {
+                return logSectionTypeField;
+            } 
+            set {
+                logSectionTypeField = value;
+                 this.LogSectionTypeSpecified = true;
+                NotifyPropertyChanged("LogSectionType");
+            }
+        }
+
+        private LogSectionType? logSectionTypeField; 
+
+        /// <summary>
+        /// logSectionTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LogSectionTypeSpecified {
+            get {
+                return logSectionTypeSpecifiedField;
+            } 
+            set {
+                logSectionTypeSpecifiedField = value;
+                NotifyPropertyChanged("LogSectionTypeSpecified");
+            }
+        }
+
+        private bool logSectionTypeSpecifiedField; 
+
+        /// <summary>
+        /// logSectionName property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name of log section;  used to distinguish log sections of same type.")]
+		[XmlElement("logSectionName")]
+        public string LogSectionName {
+            get {
+                return logSectionNameField;
+            } 
+            set {
+                logSectionNameField = value;
+                NotifyPropertyChanged("LogSectionName");
+            }
+        }
+
+        private string logSectionNameField; 
+
+        /// <summary>
+        /// logMatrix property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Log matrix assumed for porosity computations.")]
+		[XmlElement("logMatrix")]
+        public string LogMatrix {
+            get {
+                return logMatrixField;
+            } 
+            set {
+                logMatrixField = value;
+                NotifyPropertyChanged("LogMatrix");
+            }
+        }
+
+        private string logMatrixField; 
+
+        /// <summary>
+        /// scaleNumerator property
+        /// </summary>
+		[Description("The numerator of the index (depth or time) scale of the original log, e. g. \"5 in\".")]
+        [ComponentElement]
+		[XmlElement("scaleNumerator")]
+        public LengthMeasure ScaleNumerator {
+            get {
+                return scaleNumeratorField;
+            } 
+            set {
+                scaleNumeratorField = value;
+                NotifyPropertyChanged("ScaleNumerator");
+            }
+        }
+
+        private LengthMeasure scaleNumeratorField; 
+
+        /// <summary>
+        /// scaleDenominator property
+        /// </summary>
+		[Description("The denominator of the index (depth or time) scale of the original log, e. g. \"100 ft\".  '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("scaleDenominator")]
+        public GenericMeasure ScaleDenominator {
+            get {
+                return scaleDenominatorField;
+            } 
+            set {
+                scaleDenominatorField = value;
+                NotifyPropertyChanged("ScaleDenominator");
+            }
+        }
+
+        private GenericMeasure scaleDenominatorField; 
+
+        /// <summary>
+        /// indexType property
+        /// </summary>
+		[Required]
+        [Description("Primary index type. For date-time indexes, any specified index values should be defined as a time offset (e.g., in seconds) from the  creationDate of the well log.")]
+		[XmlElement("indexType")]
+        public LogIndexType? IndexType {
+            get {
+                return indexTypeField;
+            } 
+            set {
+                indexTypeField = value;
+                NotifyPropertyChanged("IndexType");
+            }
+        }
+
+        private LogIndexType? indexTypeField; 
+
+        /// <summary>
+        /// indexUom property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Index uom of original log.")]
+		[XmlElement("indexUom")]
+        public string IndexUom {
+            get {
+                return indexUomField;
+            } 
+            set {
+                indexUomField = value;
+                NotifyPropertyChanged("IndexUom");
+            }
+        }
+
+        private string indexUomField; 
+
+        /// <summary>
+        /// indexReference property
+        /// </summary>
+		[Description("The origin for vertical coordinates on the original log. If this is not specified, information about the datum should be specified in comment.")]
+		[XmlElement("indexReference")]
+        public ElevCodeEnum? IndexReference {
+            get {
+                return indexReferenceField;
+            } 
+            set {
+                indexReferenceField = value;
+                 this.IndexReferenceSpecified = true;
+                NotifyPropertyChanged("IndexReference");
+            }
+        }
+
+        private ElevCodeEnum? indexReferenceField; 
+
+        /// <summary>
+        /// indexReferenceSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexReferenceSpecified {
+            get {
+                return indexReferenceSpecifiedField;
+            } 
+            set {
+                indexReferenceSpecifiedField = value;
+                NotifyPropertyChanged("IndexReferenceSpecified");
+            }
+        }
+
+        private bool indexReferenceSpecifiedField; 
+
+        /// <summary>
+        /// log property
+        /// </summary>
+		[Description("The log ID being referred to by this section.")]
+        [ComponentElement]
+		[XmlElement("log")]
+        public RefNameString Log {
+            get {
+                return logField;
+            } 
+            set {
+                logField = value;
+                NotifyPropertyChanged("Log");
+            }
+        }
+
+        private RefNameString logField; 
+
+        /// <summary>
+        /// minInterval property
+        /// </summary>
+		[Required]
+        [Description("Minimum of range of index values.  '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("minInterval")]
+        public GenericMeasure MinInterval {
+            get {
+                return minIntervalField;
+            } 
+            set {
+                minIntervalField = value;
+                NotifyPropertyChanged("MinInterval");
+            }
+        }
+
+        private GenericMeasure minIntervalField; 
+
+        /// <summary>
+        /// maxInterval property
+        /// </summary>
+		[Required]
+        [Description("Maximum of range of index values. '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("maxInterval")]
+        public GenericMeasure MaxInterval {
+            get {
+                return maxIntervalField;
+            } 
+            set {
+                maxIntervalField = value;
+                NotifyPropertyChanged("MaxInterval");
+            }
+        }
+
+        private GenericMeasure maxIntervalField; 
+
+        /// <summary>
+        /// verticalLabel property
+        /// </summary>
+		[StringLength(256)]
+        [Description("Vertical Log Scale Label (Ex. 1 IN/100 F).")]
+		[XmlElement("verticalLabel")]
+        public string VerticalLabel {
+            get {
+                return verticalLabelField;
+            } 
+            set {
+                verticalLabelField = value;
+                NotifyPropertyChanged("VerticalLabel");
+            }
+        }
+
+        private string verticalLabelField; 
+
+        /// <summary>
+        /// verticalRatio property
+        /// </summary>
+		[StringLength(256)]
+        [Description("Second Term of the Vertical Scale Ratio (Ex. 240 for a 5 inch per 100 Foot log section).")]
+		[XmlElement("verticalRatio")]
+        public string VerticalRatio {
+            get {
+                return verticalRatioField;
+            } 
+            set {
+                verticalRatioField = value;
+                NotifyPropertyChanged("VerticalRatio");
+            }
+        }
+
+        private string verticalRatioField; 
+
+        /// <summary>
+        /// comment property
+        /// </summary>
+		[Description("Comments about the log section.")]
+        [RecurringElement]
+		[XmlElement("comment")]
+        public List<string> Comment {
+            get {
+                return commentField;
+            } 
+            set {
+                commentField = value;
+                NotifyPropertyChanged("Comment");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Comment has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool CommentSpecified
+         {
+             get {
+             if(commentField!=null)
+                 return commentField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<string> commentField; 
+
+        /// <summary>
+        /// extensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("extensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return extensionNameValueField;
+            } 
+            set {
+                extensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+             get {
+             if(extensionNameValueField!=null)
+                 return extensionNameValueField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<ExtensionNameValue> extensionNameValueField; 
+
+        /// <summary>
+        /// upperCurveScaleRect property
+        /// </summary>
+		[Description("The part of image containing upper curve scale banner.")]
+        [RecurringElement]
+		[XmlElement("upperCurveScaleRect")]
+        public List<DepthRegRectangular> UpperCurveScaleRect {
+            get {
+                return upperCurveScaleRectField;
+            } 
+            set {
+                upperCurveScaleRectField = value;
+                NotifyPropertyChanged("UpperCurveScaleRect");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if UpperCurveScaleRect has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool UpperCurveScaleRectSpecified
+         {
+             get {
+             if(upperCurveScaleRectField!=null)
+                 return upperCurveScaleRectField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegRectangular> upperCurveScaleRectField; 
+
+        /// <summary>
+        /// lowerCurveScaleRect property
+        /// </summary>
+		[Description("The part of image containing lower curve scale banner.")]
+        [RecurringElement]
+		[XmlElement("lowerCurveScaleRect")]
+        public List<DepthRegRectangular> LowerCurveScaleRect {
+            get {
+                return lowerCurveScaleRectField;
+            } 
+            set {
+                lowerCurveScaleRectField = value;
+                NotifyPropertyChanged("LowerCurveScaleRect");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if LowerCurveScaleRect has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool LowerCurveScaleRectSpecified
+         {
+             get {
+             if(lowerCurveScaleRectField!=null)
+                 return lowerCurveScaleRectField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegRectangular> lowerCurveScaleRectField; 
+
+        /// <summary>
+        /// calibrationPoint property
+        /// </summary>
+		[Description("A mapping of pixel positions to rectified or depth-registered log image positions.")]
+        [RecurringElement]
+		[XmlElement("calibrationPoint")]
+        public List<DepthRegCalibrationPoint> CalibrationPoint {
+            get {
+                return calibrationPointField;
+            } 
+            set {
+                calibrationPointField = value;
+                NotifyPropertyChanged("CalibrationPoint");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if CalibrationPoint has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool CalibrationPointSpecified
+         {
+             get {
+             if(calibrationPointField!=null)
+                 return calibrationPointField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegCalibrationPoint> calibrationPointField; 
+
+        /// <summary>
+        /// parameter property
+        /// </summary>
+		[Description("Parameters associated with the log section.")]
+        [RecurringElement]
+		[XmlElement("parameter")]
+        public List<DepthRegParameter> Parameter {
+            get {
+                return parameterField;
+            } 
+            set {
+                parameterField = value;
+                NotifyPropertyChanged("Parameter");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+             get {
+             if(parameterField!=null)
+                 return parameterField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegParameter> parameterField; 
+
+        /// <summary>
+        /// whitespace property
+        /// </summary>
+		[Description("The part of image left blank on original log.")]
+        [RecurringElement]
+		[XmlElement("whitespace")]
+        public List<DepthRegRectangular> Whitespace {
+            get {
+                return whitespaceField;
+            } 
+            set {
+                whitespaceField = value;
+                NotifyPropertyChanged("Whitespace");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Whitespace has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool WhitespaceSpecified
+         {
+             get {
+             if(whitespaceField!=null)
+                 return whitespaceField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegRectangular> whitespaceField; 
+
+        /// <summary>
+        /// track property
+        /// </summary>
+		[Description("Defines the position of the tracks within this section.")]
+        [RecurringElement]
+		[XmlElement("track")]
+        public List<DepthRegTrack> Track {
+            get {
+                return trackField;
+            } 
+            set {
+                trackField = value;
+                NotifyPropertyChanged("Track");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Track has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool TrackSpecified
+         {
+             get {
+             if(trackField!=null)
+                 return trackField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegTrack> trackField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the checksum xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+	[Description("This class represents the checksum xsd type.")]
+    public partial class Checksum : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the Checksum class.
+        /// </summary>
+        public Checksum() {}
+
+        /// <summary>
+        /// Initializes a new instance of the Checksum class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public Checksum(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// type property
+        /// </summary>
+		[Required]
+        [Description("Message digest type.")]
+        [XmlAttribute("type")]
+		
+        public MessageDigestType Type {
+            get {
+                return typeField;
+            } 
+            set {
+                typeField = value;
+                NotifyPropertyChanged("Type");
+            }
+        }
+
+        private MessageDigestType typeField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public string Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private string ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the fileSize xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+	[Description("This class represents the fileSize xsd type.")]
+    public partial class FileSize : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the FileSize class.
+        /// </summary>
+        public FileSize() {}
+
+        /// <summary>
+        /// Initializes a new instance of the FileSize class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public FileSize(double value, FileSizeUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public FileSizeUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private FileSizeUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the fileName xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+	[Description("This class represents the fileName xsd type.")]
+    public partial class FileName : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the FileName class.
+        /// </summary>
+        public FileName() {}
+
+        /// <summary>
+        /// Initializes a new instance of the FileName class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public FileName(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// nameType property
+        /// </summary>
+		[Required]
+        [Description("Type of file reference.")]
+        [XmlAttribute("nameType")]
+		
+        public FileNameType NameType {
+            get {
+                return nameTypeField;
+            } 
+            set {
+                nameTypeField = value;
+                NotifyPropertyChanged("NameType");
+            }
+        }
+
+        private FileNameType nameTypeField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public string Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private string ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the obj_depthRegImage xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_depthRegImage", Namespace="http://www.witsml.org/schemas/1series")]
+	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
+    [Description("This class represents the obj_depthRegImage xsd type.")]
+    public partial class DepthRegImage : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// nameWell property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Human recognizable context for the well that contains the wellbore.")]
+		[XmlElement("nameWell")]
+        public string NameWell {
+            get {
+                return nameWellField;
+            } 
+            set {
+                nameWellField = value;
+                NotifyPropertyChanged("NameWell");
+            }
+        }
+
+        private string nameWellField; 
+
+        /// <summary>
+        /// nameWellbore property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Human recognizable context for the wellbore that contains the image.")]
+		[XmlElement("nameWellbore")]
+        public string NameWellbore {
+            get {
+                return nameWellboreField;
+            } 
+            set {
+                nameWellboreField = value;
+                NotifyPropertyChanged("NameWellbore");
+            }
+        }
+
+        private string nameWellboreField; 
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Human recognizable context for the image.")]
+		[XmlElement("name")]
+        public string Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private string nameField; 
+
+        /// <summary>
+        /// fileName property
+        /// </summary>
+		[Required]
+        [Description("Reference to file containing image content.")]
+        [ComponentElement]
+		[XmlElement("fileName")]
+        public FileName FileName {
+            get {
+                return fileNameField;
+            } 
+            set {
+                fileNameField = value;
+                NotifyPropertyChanged("FileName");
+            }
+        }
+
+        private FileName fileNameField; 
+
+        /// <summary>
+        /// mimetype property
+        /// </summary>
+		[Description("Mimetype of image file content.")]
+		[XmlElement("mimetype")]
+        public MimeType? Mimetype {
+            get {
+                return mimetypeField;
+            } 
+            set {
+                mimetypeField = value;
+                 this.MimetypeSpecified = true;
+                NotifyPropertyChanged("Mimetype");
+            }
+        }
+
+        private MimeType? mimetypeField; 
+
+        /// <summary>
+        /// mimetypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MimetypeSpecified {
+            get {
+                return mimetypeSpecifiedField;
+            } 
+            set {
+                mimetypeSpecifiedField = value;
+                NotifyPropertyChanged("MimetypeSpecified");
+            }
+        }
+
+        private bool mimetypeSpecifiedField; 
+
+        /// <summary>
+        /// fileSize property
+        /// </summary>
+		[Description("Size of image file, in bytes.")]
+        [ComponentElement]
+		[XmlElement("fileSize")]
+        public FileSize FileSize {
+            get {
+                return fileSizeField;
+            } 
+            set {
+                fileSizeField = value;
+                NotifyPropertyChanged("FileSize");
+            }
+        }
+
+        private FileSize fileSizeField; 
+
+        /// <summary>
+        /// checksum property
+        /// </summary>
+		[Description("Image file checksum.")]
+        [ComponentElement]
+		[XmlElement("checksum")]
+        public Checksum Checksum {
+            get {
+                return checksumField;
+            } 
+            set {
+                checksumField = value;
+                NotifyPropertyChanged("Checksum");
+            }
+        }
+
+        private Checksum checksumField; 
+
+        /// <summary>
+        /// imagePixelWidth property
+        /// </summary>
+		[Description("Image file width, in pixels.")]
+		[XmlElement("imagePixelWidth")]
+        public int? ImagePixelWidth {
+            get {
+                return imagePixelWidthField;
+            } 
+            set {
+                imagePixelWidthField = value;
+                 this.ImagePixelWidthSpecified = true;
+                NotifyPropertyChanged("ImagePixelWidth");
+            }
+        }
+
+        private int? imagePixelWidthField; 
+
+        /// <summary>
+        /// imagePixelWidthSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ImagePixelWidthSpecified {
+            get {
+                return imagePixelWidthSpecifiedField;
+            } 
+            set {
+                imagePixelWidthSpecifiedField = value;
+                NotifyPropertyChanged("ImagePixelWidthSpecified");
+            }
+        }
+
+        private bool imagePixelWidthSpecifiedField; 
+
+        /// <summary>
+        /// imagePixelHeight property
+        /// </summary>
+		[Description("Image file height, in pixels.")]
+		[XmlElement("imagePixelHeight")]
+        public int? ImagePixelHeight {
+            get {
+                return imagePixelHeightField;
+            } 
+            set {
+                imagePixelHeightField = value;
+                 this.ImagePixelHeightSpecified = true;
+                NotifyPropertyChanged("ImagePixelHeight");
+            }
+        }
+
+        private int? imagePixelHeightField; 
+
+        /// <summary>
+        /// imagePixelHeightSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ImagePixelHeightSpecified {
+            get {
+                return imagePixelHeightSpecifiedField;
+            } 
+            set {
+                imagePixelHeightSpecifiedField = value;
+                NotifyPropertyChanged("ImagePixelHeightSpecified");
+            }
+        }
+
+        private bool imagePixelHeightSpecifiedField; 
+
+        /// <summary>
+        /// version property
+        /// </summary>
+		[StringLength(32)]
+        [Description("File version.")]
+		[XmlElement("version")]
+        public string Version {
+            get {
+                return versionField;
+            } 
+            set {
+                versionField = value;
+                NotifyPropertyChanged("Version");
+            }
+        }
+
+        private string versionField = "1.4.1.1"; 
+
+        /// <summary>
+        /// alias property
+        /// </summary>
+		[StringLength(32)]
+        [Description("A blank field that can be \"populated\" through batch processing of XML files")]
+		[XmlElement("alias")]
+        public string Alias {
+            get {
+                return aliasField;
+            } 
+            set {
+                aliasField = value;
+                NotifyPropertyChanged("Alias");
+            }
+        }
+
+        private string aliasField; 
+
+        /// <summary>
+        /// logSection property
+        /// </summary>
+		[Description("Description and coordinates of well log section.")]
+        [RecurringElement]
+		[XmlElement("logSection")]
+        public List<DepthRegLogSection> LogSection {
+            get {
+                return logSectionField;
+            } 
+            set {
+                logSectionField = value;
+                NotifyPropertyChanged("LogSection");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if LogSection has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool LogSectionSpecified
+         {
+             get {
+             if(logSectionField!=null)
+                 return logSectionField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegLogSection> logSectionField; 
+
+        /// <summary>
+        /// imageBoundary property
+        /// </summary>
+		[Description("Bounding box of actual image within image extent.")]
+        [ComponentElement]
+		[XmlElement("imageBoundary")]
+        public DepthRegRectangular ImageBoundary {
+            get {
+                return imageBoundaryField;
+            } 
+            set {
+                imageBoundaryField = value;
+                NotifyPropertyChanged("ImageBoundary");
+            }
+        }
+
+        private DepthRegRectangular imageBoundaryField; 
+
+        /// <summary>
+        /// headerSection property
+        /// </summary>
+		[Description("Description and coordinates of the header section.")]
+        [RecurringElement]
+		[XmlElement("headerSection")]
+        public List<DepthRegLogRect> HeaderSection {
+            get {
+                return headerSectionField;
+            } 
+            set {
+                headerSectionField = value;
+                NotifyPropertyChanged("HeaderSection");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if HeaderSection has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool HeaderSectionSpecified
+         {
+             get {
+             if(headerSectionField!=null)
+                 return headerSectionField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegLogRect> headerSectionField; 
+
+        /// <summary>
+        /// alternateSection property
+        /// </summary>
+		[Description("Description and coordinates of information box e. g. tool diagram.")]
+        [RecurringElement]
+		[XmlElement("alternateSection")]
+        public List<DepthRegLogRect> AlternateSection {
+            get {
+                return alternateSectionField;
+            } 
+            set {
+                alternateSectionField = value;
+                NotifyPropertyChanged("AlternateSection");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if AlternateSection has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool AlternateSectionSpecified
+         {
+             get {
+             if(alternateSectionField!=null)
+                 return alternateSectionField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegLogRect> alternateSectionField; 
+
+        /// <summary>
+        /// commonData property
+        /// </summary>
+		[Description("A container element that contains elements that are common to all data  objects.")]
+        [ComponentElement]
+		[XmlElement("commonData")]
+        public CommonData CommonData {
+            get {
+                return commonDataField;
+            } 
+            set {
+                commonDataField = value;
+                NotifyPropertyChanged("CommonData");
+            }
+        }
+
+        private CommonData commonDataField; 
+
+        /// <summary>
+        /// customData property
+        /// </summary>
+		[Description("A container element that can contain custom or user defined  data elements.")]
+		[XmlElement("customData")]
+        public CustomData CustomData {
+            get {
+                return customDataField;
+            } 
+            set {
+                customDataField = value;
+                NotifyPropertyChanged("CustomData");
+            }
+        }
+
+        private CustomData customDataField; 
+
+		/// <summary>
+        /// uidWell property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.")]
+        [XmlAttribute("uidWell")]
+		
+        public string UidWell {
+            get {
+                return uidWellField;
+            } 
+            set {
+                uidWellField = value;
+                NotifyPropertyChanged("UidWell");
+            }
+        }
+
+        private string uidWellField; 
+
+		/// <summary>
+        /// uidWellbore property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.")]
+        [XmlAttribute("uidWellbore")]
+		
+        public string UidWellbore {
+            get {
+                return uidWellboreField;
+            } 
+            set {
+                uidWellboreField = value;
+                NotifyPropertyChanged("UidWellbore");
+            }
+        }
+
+        private string uidWellboreField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for the registration image.")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// An event type captures the basic information about an event that has affected the data.
     /// </summary>
     [System.SerializableAttribute()]
@@ -75866,6 +78530,101 @@ namespace Energistics.DataAccess.WITSML141
     } //here
 
     /// <summary>
+    /// This class represents the obj_depthRegImages xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("depthRegImages", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+	[Description("This class represents the obj_depthRegImages xsd type.")]
+    public partial class DepthRegImageList : AbstractObject, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// documentInfo property
+        /// </summary>
+		[Description("Information about the XML message instance.")]
+        [ComponentElement]
+		[XmlElement("documentInfo")]
+        public DocumentInfo DocumentInfo {
+            get {
+                return documentInfoField;
+            } 
+            set {
+                documentInfoField = value;
+                NotifyPropertyChanged("DocumentInfo");
+            }
+        }
+
+        private DocumentInfo documentInfoField; 
+
+        /// <summary>
+        /// depthRegImage property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+		[XmlElement("depthRegImage")]
+        public List<DepthRegImage> DepthRegImage {
+            get {
+                return depthRegImageField;
+            } 
+            set {
+                depthRegImageField = value;
+                NotifyPropertyChanged("DepthRegImage");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DepthRegImage has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DepthRegImageSpecified
+         {
+             get {
+             if(depthRegImageField!=null)
+                 return depthRegImageField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DepthRegImage> depthRegImageField; 
+
+        /// <summary>
+        /// depthRegImage property
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return DepthRegImage;
+			}
+        }
+		/// <summary>
+        /// version property
+        /// </summary>
+		[Required]
+        [RegularExpression("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [StringLength(16)]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+        [XmlAttribute("version")]
+		
+        public string Version {
+            get {
+                return versionField;
+            } 
+            set {
+                versionField = value;
+                NotifyPropertyChanged("Version");
+            }
+        }
+
+        private string versionField = "1.4.1.1"; 
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the obj_capClients xsd type.
     /// </summary>
     [System.SerializableAttribute()]
@@ -76944,6 +79703,98 @@ namespace Energistics.DataAccess.WITSML141
         #endregion INotifyPropertyChanged Members
     } //here
     }
+
+    /// <summary>
+    /// This class represents the resolution xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+	[Description("This class represents the resolution xsd type.")]
+    public partial class Resolution : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the Resolution class.
+        /// </summary>
+        public Resolution() {}
+
+        /// <summary>
+        /// Initializes a new instance of the Resolution class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public Resolution(double value, ResolutionUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public ResolutionUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private ResolutionUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
 
     #endregion
 
@@ -88620,6 +91471,283 @@ namespace Energistics.DataAccess.WITSML141
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
+        }
+        /// <summary>
+        /// This class represents the LogRectangularType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the LogRectangularType xsd enumeration.")]
+        public enum LogRectangularType 
+        {
+        /// <summary>
+        /// header property
+        /// </summary>
+          header,
+        /// <summary>
+        /// blank property
+        /// </summary>
+          blank,
+        /// <summary>
+        /// other property
+        /// </summary>
+          other,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LineStyle xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the LineStyle xsd enumeration.")]
+        public enum LineStyle 
+        {
+        /// <summary>
+        /// dashed property
+        /// </summary>
+          dashed,
+        /// <summary>
+        /// solid property
+        /// </summary>
+          solid
+        }
+        /// <summary>
+        /// This class represents the ScaleType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the ScaleType xsd enumeration.")]
+        public enum ScaleType 
+        {
+        /// <summary>
+        /// linear property
+        /// </summary>
+          linear,
+        /// <summary>
+        /// logarithmic property
+        /// </summary>
+          logarithmic
+        }
+        /// <summary>
+        /// This class represents the BackupScaleType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the BackupScaleType xsd enumeration.")]
+        public enum BackupScaleType 
+        {
+        /// <summary>
+        /// offscaleleftright property
+        /// </summary>
+          [XmlEnum("offscale left/right")]
+          offscaleleftright,
+        /// <summary>
+        /// x10 property
+        /// </summary>
+          x10,
+        /// <summary>
+        /// other property
+        /// </summary>
+          other
+        }
+        /// <summary>
+        /// This class represents the LogTrackType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the LogTrackType xsd enumeration.")]
+        public enum LogTrackType 
+        {
+        /// <summary>
+        /// depth property
+        /// </summary>
+          depth,
+        /// <summary>
+        /// other property
+        /// </summary>
+          other,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the CalibrationPointRole xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the CalibrationPointRole xsd enumeration.")]
+        public enum CalibrationPointRole 
+        {
+        /// <summary>
+        /// leftedge property
+        /// </summary>
+          [XmlEnum("left edge")]
+          leftedge,
+        /// <summary>
+        /// rightedge property
+        /// </summary>
+          [XmlEnum("right edge")]
+          rightedge,
+        /// <summary>
+        /// fraction property
+        /// </summary>
+          fraction,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LogSectionType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the LogSectionType xsd enumeration.")]
+        public enum LogSectionType 
+        {
+        /// <summary>
+        /// main property
+        /// </summary>
+          main,
+        /// <summary>
+        /// repeat property
+        /// </summary>
+          repeat,
+        /// <summary>
+        /// calibration property
+        /// </summary>
+          calibration,
+        /// <summary>
+        /// tiein property
+        /// </summary>
+          [XmlEnum("tie in")]
+          tiein,
+        /// <summary>
+        /// goinginhole property
+        /// </summary>
+          [XmlEnum("going in hole")]
+          goinginhole,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MessageDigestType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the MessageDigestType xsd enumeration.")]
+        public enum MessageDigestType 
+        {
+        /// <summary>
+        /// MD5 property
+        /// </summary>
+          MD5,
+        /// <summary>
+        /// SHA1 property
+        /// </summary>
+          SHA1
+        }
+        /// <summary>
+        /// This class represents the FileSizeUom xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the FileSizeUom xsd enumeration.")]
+        public enum FileSizeUom 
+        {
+        /// <summary>
+        /// bytes property
+        /// </summary>
+          bytes,
+        /// <summary>
+        /// kBytes property
+        /// </summary>
+          kBytes,
+        /// <summary>
+        /// MBytes property
+        /// </summary>
+          MBytes
+        }
+        /// <summary>
+        /// This class represents the FileNameType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the FileNameType xsd enumeration.")]
+        public enum FileNameType 
+        {
+        /// <summary>
+        /// filename property
+        /// </summary>
+          [XmlEnum("file name")]
+          filename,
+        /// <summary>
+        /// pathname property
+        /// </summary>
+          [XmlEnum("path name")]
+          pathname,
+        /// <summary>
+        /// universalresourcelocator property
+        /// </summary>
+          [XmlEnum("universal resource locator")]
+          universalresourcelocator,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MimeType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the MimeType xsd enumeration.")]
+        public enum MimeType 
+        {
+        /// <summary>
+        /// imagetiff property
+        /// </summary>
+          [XmlEnum("image/tiff")]
+          imagetiff,
+        /// <summary>
+        /// imagegif property
+        /// </summary>
+          [XmlEnum("image/gif")]
+          imagegif,
+        /// <summary>
+        /// imagepng property
+        /// </summary>
+          [XmlEnum("image/png")]
+          imagepng,
+        /// <summary>
+        /// imagexmlsvg property
+        /// </summary>
+          [XmlEnum("image/xml+svg")]
+          imagexmlsvg,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ResolutionUom xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+        [Description("This class represents the ResolutionUom xsd enumeration.")]
+        public enum ResolutionUom 
+        {
+        /// <summary>
+        /// pixelsinch property
+        /// </summary>
+          [XmlEnum("pixels/inch")]
+          pixelsinch
         }
     }
     #endregion

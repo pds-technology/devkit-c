@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified"
+version="1.0">
+   <!--                                                         -->
+   <!-- Energistics License Agreement
+        This file is distributed under the Energistics License Agreement at
+        http://www.energistics.org
+        Use of this file constitutes agreement with the Energistics License Agreement.
+        Copyright (c) 2015 Energistics. All rights reserved.
+        Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+        -->
+   <!--                                                         -->
+   <xsd:include schemaLocation="typ_dataTypesRaster.xsd" />
+   <xsd:include schemaLocation="typ_dataTypes.xsd" />
+   <!--                                                         -->
+   <xsd:complexType name="cs_depthRegPoint">
+      <xsd:annotation>
+         <xsd:documentation>The position of a pixel of an image, in x-y coordinates.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence minOccurs="0">
+         <xsd:element name="x" type="witsml:nonNegativeBigCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The x pixel position of a point.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="y" type="witsml:nonNegativeBigCount" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>The y pixel position of a point.</xsd:documentation>
+               <xsd:appinfo>write-constraint:@minOccurs="1"</xsd:appinfo>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="type" type="witsml:str32" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>Position Types include: topLeft, topRight, bottomLeft, bottomRight, Index</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

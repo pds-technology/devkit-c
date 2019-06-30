@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1252">
+
+<title>WITSML Index</title><style>
+<!--
+	 /* Style Definitions */
+	h1
+		{
+		margin-top:12.0pt;
+		margin-right:0in;
+		margin-bottom:3.0pt;
+		margin-left:0in;
+		page-break-after:avoid;
+		font-size:18.0pt;
+		font-family:Arial;
+		font-weight:bold;}
+	h2
+		{
+		margin-top:18.0pt;
+		margin-right:0in;
+		margin-bottom:3.0pt;
+		margin-left:0in;
+		page-break-after:avoid;
+		font-size:16.0pt;
+		font-family:Arial;
+		font-weight:bold;
+		font-style:italic;}
+	h3
+		{mso-style-next:Normal;
+		margin:0in;
+		margin-bottom:.0001pt;
+		page-break-after:avoid;
+		font-size:14.0pt;
+		font-family:"Times New Roman";
+		font-weight:bold;}
+	h4
+		{mso-style-next:Normal;
+		margin:0in;
+		margin-bottom:.0001pt;
+		page-break-after:avoid;
+		font-size:12.0pt;
+		font-family:"Times New Roman";
+		font-weight:bold;
+		font-style:italic;}
+	p
+		{align:left;
+		margin-right:0in;
+		margin-top:.0001pt;
+		font-size:12.0pt;
+		font-family:"Times New Roman";}
+	tr
+		{border-top: 2.60pt double #000000;
+		border-bottom: 1.00pt solid #000000;
+		border-left: none;
+		border-right: 1.00pt solid #000000;
+		padding-top: 0.02in;
+		padding-bottom: 0.02in;
+		padding-left: 0in;
+		padding-right: 0.08in}
+	li
+		{margin-bottom: 0in}
+-->
+</style></head>
+
+<body>
+<h1 align="center">Energistics WITSML v1.4.1.1 Data Schema Files with Raster v1.0</h1>
+
+<p>Following is a listing of all the artifacts contained in this release.</p>
+
+
+<h2>Normative Files</h2>
+
+<p>The normative data schema specification consists of the following files.</p>
+<ul>
+	<li>./xsd_schemas/*.xsd</li>
+</ul>
+<p>and the content of files:</p>
+<ul>
+	<li><a href="./ancillary/enumValues.xml">./ancillary/enumValues.xml</a>
+	[WITSML standard instance values (enumeration loader file)]</li>
+	<li><a href="./ancillary/witsmlUnitDict.xml">./ancillary/witsmlUnitDict.xml</a>
+	[Unit of measure acronyms and their conversion factors.]</li>
+</ul>
+
+<p>The schema files assume that the Energistics abstract schema is copied into
+the proper relative folder structure. The above zip file includes a copy of the
+"abstract_v1.0" folder in the proper location.</p>
+
+
+<h2>Variant Schemas</h2>
+<p>The following files represent generated variants of the normative data schemas.
+These files are only normative when used within the context of a web service.</p>
+<ul>
+	<li>./generated_read_schemas/*.xsd</li>
+	<li>./generated_write_schemas/*.xsd</li>
+	<li>./generated_update_schemas/*.xsd</li>
+	<li>./generated_delete_schemas/*.xsd</li>
+</ul>
+
+<h4>Read Schemas</h4>
+<p>The generated read schema files are a copy of the normative files except that all
+choices, elements and attributes are optional.
+Just as in SQL, mandatory data is not required to be requested.
+If used within a WITSML web service, these schema files must represent the XMLout
+response from the WITSML WMLS_GetFromStore method.
+</p>
+
+<h4>Write Schemas</h4>
+<p>The generated write schema files are a copy of the normative files except that
+some unique identifier attributes have had their optionality changed.
+If used within a WITSML web service, these schema files must represent the XMLin input
+to the WITSML WMLS_AddToStore method.
+</p>
+
+<h4>Update Schemas</h4>
+<p>The generated update schema files are a copy of the normative files with
+all elements and attributes optional except that all unique identifier attributes and uom attributes are mandatory.
+If used within a WITSML web service, these schema files must represent the XMLin input
+to the WITSML WMLS_UpdateInStore method.</p>
+
+<h4>Delete Schemas</h4>
+<p>The generated delete schema files  schema files are a copy of the normative files with
+all elements and attributes optional except for all object uids and parentage-pointers which are mandatory.
+If used within a WITSML web service, these schema files must represent the QueryIn input
+to the WITSML WMLS_DeleteFromStore method.</p>
+
+
+<h2>Non-normative files</h2>
+
+<p>The following files are informative and are not part of the normative specification.</p>
+<ul>
+	<li>./doc/*.*</li>
+	<li>./XML_Examples/*.*</li>
+	<li>./stylesheets/*.*</li>
+	<li><a href="./CHANGE_DETAIL_WITSML.TXT">CHANGE_DETAIL_WITSML.TXT</a>
+	[Change history within this release cycle.
+	Schema changes are also indicated in the XSD files using "appinfo" elements.]</li>
+	<li><a href="./ancillary/enumValues_spreadsheet.xls">./ancillary/enumValues_spreadsheet.xls</a>
+	[A spreadsheet representing the content of enumValues.xml] </li>
+	<li><a href="./ancillary/typ_catalog.xsd">./ancillary/typ_catalog.xsd</a>
+[A copy of the normative typ_catalog.xsd file with the standard values
+from enumValues.xml incorporated as explicit enumerations. By
+substituting this file for the normative file, the resulting schema set
+can be used to validate standard values in XML files.] </li>
+	<li><a href="./ancillary/witsmlUnitDict.html">./ancillary/witsmlUnitDict.html</a>
+	[Browsable version of witsmlUnitDict.xml] </li>
+	<li><a href="./ancillary/WITSML_Abbreviations.html">./ancillary/WITSML_Abbreviations.html</a>
+	[Abbreviations contained in the schema names.</li>
+	<li><a href="./ancillary/WITSML_v1411_content.xls">./ancillary/WITSML_v1411_content.xls</a>
+	[Spreadsheet of the v1.4.1.1 data schema's semantic content.]</li>
+</ul>
+
+<p>File <a href="./doc/witsml_schema_overview.html">./doc/witsml_schema_overview.html</a>
+represents the <b>browsable</b> overview documentation.
+The files "./doc/schema/*.html" represent browsable versions of the
+"./xsd_schemas/*.xsd" files and are referenced from the overview file.</p>
+
+
+<h4>GML Profile</h4>
+<p>Files contained within the following folder represent a subset of
+the normative GML schema. Schema types which are not used by WITSML
+have been eliminated. An application that utilizes the
+coordinateReferenceSystem object can generate code from these files in
+order to minimize the number of classes.</p>
+<ul>
+	<li>./gml_witsml_v1.4.1_profile/</li>
+</ul>
+
+
+<h2>Growing Objects</h2>
+
+<p>The following object files represent randomly growing objects as defined by the WITSML
+API Specification:</p>
+<ul>
+	<li>obj_trajectory.xsd</li>
+	<li>obj_mudLog.xsd</li>
+</ul>
+
+<p>The following object files represent systematically growing objects as defined by the WITSML
+API Specification:</p>
+<ul>
+	<li>obj_log.xsd</li>
+</ul>
+
+</body></html>

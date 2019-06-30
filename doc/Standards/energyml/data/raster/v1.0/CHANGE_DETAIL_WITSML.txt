@@ -1,0 +1,153 @@
+WCR-2012-0002
+
+Added element analysisMethod to cs_stimFetTest.xsd
+Added StimAnalysisMethod enumeration to the typ_catalog.xsd
+	average
+	delta pressure over g-time
+	delta pressure over linear time
+	delta pressure over radial time
+	gdk 2-d
+	horner
+	linear
+	log-log
+	nolte
+	pdl coefficient
+	perkins and kern 2-d
+	radial 2-d
+	square root
+	third-party software
+	other
+	unknown
+
+WCR-2012-0003
+
+Added 2 new elements in cs_stimJobInterval.xsd
+	avgBHStaticTemperature
+	avgBHTreatingTemperature
+
+WCR-2012-0004
+
+Added cs_drillingParams reference to grp_risk
+Added mudClass to cs_drillingParams
+Added mudSubClass to cs_drillingParams
+Added pneumatic to MudClass in typ_catalog.xsd
+Added MudSubClass to enums
+	water-based drilling fluids
+	freshwater
+	brackish water
+	sea water
+	brine
+	caesium formate
+	potassium formate
+	sodium formate
+	lignite/lignosulfonate mud
+	lime mud
+	potassium-treated mud
+	salt water mud
+	saturated salt mud
+	seawater mud
+	spud mud
+	native/natural mud
+	low solids, non-dispersed
+	lightly treated non-dispersed
+	polymer mud
+	silicate mud
+	glycol mud
+	mixed-metal oxide mud
+	non-aqueous (invert emulsion) drilling fluids
+	diesel oil-based
+	mineral oil-based
+	low toxicity mineral oil-based
+	internal-olefin synthetic-based
+	linear-alpha-olefin synthetic-based
+	linear paraffin synthetic-based
+	ester synthetic-based
+	pneumatic (gaseous) drilling fluids
+	air
+	mist
+	stiff foam
+	stable foam
+	natural gas
+	aerated mud
+	nitrogen-aerated mud
+
+WCR-2012-0006
+
+In formation marker,
+Added lithostratigraphic element
+Modified type of chronostratigraphic element from str32 to chronostratigraphyStruct and maxOccurs from unbounded to 1
+Deprecated nameFormation element
+
+Corrected type of nameFormation element in opsReport, convCore and swcSample to nameString
+
+WCR-2012-0021
+
+Added elements density, pH, purpose, description, supplier, fluidType and fluidSubtype to cs_stimFluid.xsd
+Added StimFluidType to the typ_catalog.xsd
+	acid-based
+	gas
+	oil-based
+	water-based
+Added StimFluidSubtype to the typ_catalog.xsd
+	acid
+	base
+	carbon dioxide
+	carbon dioxide and nitrogen
+	carbon dioxide and water
+	condensate
+	cross-linked gel
+	crude oil
+	diesel
+	foam
+	fracturing oil
+	fresh water
+	gelled acid
+	gelled condensate
+	gelled crude
+	gelled diesel
+	gelled oil
+	gelled salt water
+	hot condensate
+	hot fresh water
+	hot oil
+	hot salt water
+	hybrid
+	linear gel
+	liquefied petroleum gas
+	nitrogen
+	oil
+	produced water
+	salt water
+	slick water
+	other
+
+WCR-2012-0025
+
+Deleted ObjectGroupKind from the typ_catalog.xsd
+Changed type of groupType to nameString in grp_objectGroup.xsd
+Added new element groupSubtype (also nameString) in grp_objectGroup.xsd
+
+WCR-2012-0030
+
+Corrected description of WITSML - Rig schema documentation in obj_rig.xsd
+
+WCR-2012-0031
+
+Added coiled tubing and tubing and annulus into StimStageFlowPath in typ_catalog.xsd
+
+WCR-2012-0032
+
+Included reference to cs_stimAdditive in cs_stimJobInterval
+Added element additive in cs_stimJobInterval
+
+WCR-2012-0033
+
+Modified pattern of schemaVersionString
+
+WITS-CR-2
+
+Removed requestLatestValue element from the log data-object
+
+SLC-PROJECT
+
+Implemented the Raster Object

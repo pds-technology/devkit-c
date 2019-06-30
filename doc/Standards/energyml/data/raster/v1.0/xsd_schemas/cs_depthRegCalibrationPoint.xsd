@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:witsml="http://www.witsml.org/schemas/1series" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.witsml.org/schemas/1series" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!--                                                         -->
+	<!-- Energistics License Agreement
+	This file is distributed under the Energistics License Agreement at
+	http://www.energistics.org
+	Use of this file constitutes agreement with the Energistics License Agreement.
+	Copyright (c) 2015 Energistics. All rights reserved.
+	Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+	-->
+	<!--                                                         -->
+	<xsd:include schemaLocation="cs_depthRegParameter.xsd"/>
+	<xsd:include schemaLocation="cs_depthRegPoint.xsd"/>
+	<!--                                                         -->
+	<xsd:complexType name="cs_depthRegCalibrationPoint">
+		<xsd:annotation>
+			<xsd:documentation>A mapping of pixel positions to rectified or depth-registered log image positions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="index" type="witsml:genericMeasure" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The index (depth or time) for the calibration point.  
+					The uom value must be consistent with the indexType.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="track" type="witsml:refNameString" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A pointer to the track containing the point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="role" type="witsml:CalibrationPointRole" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The horizontal position on the grid which the calibration 
+					point represents.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="curveName" type="witsml:str32" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Facilitates searching for logs based on curve type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="fraction" type="witsml:unitlessQuantity" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>An intermediate Point from left edge to right edge 
+					(required when role is "fraction", not allowed otherwise); 
+					used to extrapolate the rectified position of a track boundary which has 
+					wandered off the edge of the image.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="comment" type="witsml:commentString" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Comments about the calibration.  </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extensionNameValue" type="witsml:cs_extensionNameValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Extensions to the schema based on a name-value construct.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="parameter" type="witsml:cs_depthRegParameter" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Parameters associated with the calibration point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="point" type="witsml:cs_depthRegPoint" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The position on the image of the calibration point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="witsml:attgrp_uid">
+			<xsd:annotation>
+				<xsd:documentation>Unique identifier for the calibration point.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attributeGroup>
+	</xsd:complexType>
+</xsd:schema>
