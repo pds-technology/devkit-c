@@ -82,6 +82,18 @@
     <None Include="_CreateNewNuGetPackage\RunMeToUploadNuGetPackage.cmd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess.PRODML\DataAccess.PRODML.csproj">
+      <Project>{57ea0f9f-5e9a-4788-9738-be3381343e1a}</Project>
+      <Name>DataAccess.PRODML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess.RESQML\DataAccess.RESQML.csproj">
+      <Project>{6d7cdb8e-b137-4ad0-8a8d-7eeaafb69960}</Project>
+      <Name>DataAccess.RESQML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess.WITSML\DataAccess.WITSML.csproj">
+      <Project>{8184e6c9-3746-40e5-8b81-6f24785c3739}</Project>
+      <Name>DataAccess.WITSML</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{3f3d2683-6036-4c06-911d-2db5c1682d91}</Project>
       <Name>DataAccess</Name>

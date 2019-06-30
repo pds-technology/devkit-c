@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8184E6C9-3746-40E5-8B81-6F24785C3739}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Energistics.DataAccess</RootNamespace>
+    <AssemblyName>Energistics.DataAccess.WITSML</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Energistics.DataAccess.WITSML.xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientCompression.cs" />
+    <Compile Include="IWitsmlClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WITSML131\CommonData.cs" />
+    <Compile Include="WITSML131\DataObjects.cs" />
+    <Compile Include="WITSML131\GeneratedEnumValues.cs" />
+    <Compile Include="WITSML131\WMLP.cs" />
+    <Compile Include="WITSML131\WMLS.cs" />
+    <Compile Include="WITSML131\WMLS.custom.cs" />
+    <Compile Include="WITSML141\CommonData.cs" />
+    <Compile Include="WITSML141\DataObjects.cs" />
+    <Compile Include="WITSML141\GeneratedEnumValues.cs" />
+    <Compile Include="WITSML141\WMLS.cs" />
+    <Compile Include="WITSML141\WMLS.custom.cs" />
+    <Compile Include="WITSML200\DataObjects.cs" />
+    <Compile Include="WITSML200\Extensions.cs" />
+    <Compile Include="WITSML200\GeneratedEnumValues.cs" />
+    <Compile Include="WITSML200\WellboreGeology.cs" />
+    <Compile Include="WITSMLWebServiceConnection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WITSML141\WITSML_conversion_v1311-v141_vers07.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{3f3d2683-6036-4c06-911d-2db5c1682d91}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
