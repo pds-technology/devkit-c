@@ -9,6 +9,9 @@ new_typ_catalog.xsd
 **/PRODML122/typ_catalogProdml.xsd
 **/PRODML131/typ_catalogProdml.xsd
 new_raster_typ_catalog.xsd
+new_completions_typ_catalog.xsd
+new_cs_equipmentCatalog.xsd
+
 
 # User-specific files
 *.suo

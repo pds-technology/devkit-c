@@ -67,7 +67,6 @@
       <Link>EnumValue\EnumValuesXMLToClass.cs</Link>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="COMPLETION100\DataObject.cs" />
     <Compile Include="EnergisticsTextTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

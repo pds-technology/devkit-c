@@ -85,7 +85,6 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Reflection;
 using System.Runtime.Remoting;
-using Energistics.DataAccess.COMPLETION100;
 using Energistics.DataAccess.WITSML131;
 using Energistics.DataAccess.WITSML141;
 using Energistics.DataAccess.PRODML122;
@@ -180,10 +179,6 @@ namespace DevkitTest
 			
             product = "PRODML_v1.3";
             testDemoFile(assemblyName, "Energistics.DataAccess.PRODML131", product);
-
-            product = "Completion_v1.0";
-            testDemoFile(assemblyName, "Energistics.DataAccess.COMPLETION100", product);
-
 
             product = "WITSML_v1.3.1.1";
             testDemoFile(assemblyName, "Energistics.DataAccess.WITSML131", product);
@@ -509,10 +504,6 @@ namespace DevkitTest
 
         private static String ConverterOutput(Type type, string xmlstr)
         {
-            if (type.FullName.Contains("COMPLETION100"))
-            {
-                return converterCompletion(type, xmlstr);
-            }
             if (type.FullName.Contains("PRODML122"))
             {
                 return converterProdml122(type, xmlstr);
@@ -710,47 +701,12 @@ namespace DevkitTest
             {
                 schemaFilePath += "\\Witsml_v1.4.1.1" + "\\witsml_v1.4.1.1_data\\xsd_schemas\\";
             }
-            if(name.Contains("COMPLETION100"))
-            {
-                schemaFilePath += "\\Completions_v1.0"+ "\\completions_v1.0\\xsd_schemas\\";
-            }
             if(name.Contains("RESQML11"))
             {
                 schemaFilePath += "\\Resqml_v1.1\\resqml_v1.1.0_data\\xsd_schemas\\";
             }
             return schemaFilePath +"obj_"+ objName + ".xsd";
 
-        }
-
-        private static String converterCompletion(Type type, string xmlstr)
-        {
-                String xmloutput = "";   
-                if (type == typeof(Energistics.DataAccess.COMPLETION100.DownholeComponentList))
-                {
-                    Energistics.DataAccess.COMPLETION100.DownholeComponentList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.COMPLETION100.DownholeComponentList>(xmlstr);
-                    xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                    return xmloutput;
-                }
-
-                if (type == typeof(Energistics.DataAccess.COMPLETION100.WellboreCompletionList))
-                {
-                    Energistics.DataAccess.COMPLETION100.WellboreCompletionList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.COMPLETION100.WellboreCompletionList>(xmlstr);
-                    xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                    return xmloutput;
-                }
-                if (type == typeof(Energistics.DataAccess.COMPLETION100.WellCMLedgerList))
-                {
-                    Energistics.DataAccess.COMPLETION100.WellCMLedgerList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.COMPLETION100.WellCMLedgerList>(xmlstr);
-                    xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                    return xmloutput;
-                }
-                if (type == typeof(Energistics.DataAccess.COMPLETION100.WellCompletionList))
-                {
-                    Energistics.DataAccess.COMPLETION100.WellCompletionList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.COMPLETION100.WellCompletionList>(xmlstr);
-                    xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                    return xmloutput;
-                }
-                return xmloutput;
         }
 
         private static String converterProdml122(Type type, string xmlstr)
@@ -1104,7 +1060,38 @@ namespace DevkitTest
                 xmloutput = EnergisticsConverter.ObjectToXml(obj);
                 return xmloutput;
             }
-          
+            if (type == typeof(Energistics.DataAccess.WITSML141.DownholeComponentList))
+            {
+                Energistics.DataAccess.WITSML141.DownholeComponentList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.WITSML141.DownholeComponentList>(xmlstr);
+                xmloutput = EnergisticsConverter.ObjectToXml(obj);
+                return xmloutput;
+            }
+
+            if (type == typeof(Energistics.DataAccess.WITSML141.WellboreCompletionList))
+            {
+                Energistics.DataAccess.WITSML141.WellboreCompletionList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.WITSML141.WellboreCompletionList>(xmlstr);
+                xmloutput = EnergisticsConverter.ObjectToXml(obj);
+                return xmloutput;
+            }
+            if (type == typeof(Energistics.DataAccess.WITSML141.WellCMLedgerList))
+            {
+                Energistics.DataAccess.WITSML141.WellCMLedgerList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.WITSML141.WellCMLedgerList>(xmlstr);
+                xmloutput = EnergisticsConverter.ObjectToXml(obj);
+                return xmloutput;
+            }
+            if (type == typeof(Energistics.DataAccess.WITSML141.WellCompletionList))
+            {
+                Energistics.DataAccess.WITSML141.WellCompletionList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.WITSML141.WellCompletionList>(xmlstr);
+                xmloutput = EnergisticsConverter.ObjectToXml(obj);
+                return xmloutput;
+            }
+            if (type == typeof(Energistics.DataAccess.WITSML141.DepthRegImageList))
+            {
+                Energistics.DataAccess.WITSML141.DepthRegImageList obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.WITSML141.DepthRegImageList>(xmlstr);
+                xmloutput = EnergisticsConverter.ObjectToXml(obj);
+                return xmloutput;
+            }
+
             return xmloutput;
         }
 

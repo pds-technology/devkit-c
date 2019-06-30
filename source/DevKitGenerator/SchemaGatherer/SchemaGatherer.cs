@@ -229,6 +229,7 @@ namespace Energistics.SchemaGatherer
             string targetFolder = GetAppSetting("ENERGY_ML_GENERATOR_PROJ_PATH") + @"\" + setName;
             string sourceFolder = GetAppSetting(setName + "_XSD_PATH");
             string sourceRasterFolder = GetAppSetting(setName + "_RASTERXSD_PATH");
+            string sourceCompletionsFolder = GetAppSetting(setName + "_COMPLETIONSXSD_PATH");
             string nameSpace = "Energistics.Generator." + setName;
             string enumList = GetAppSetting(setName + "_ENUMVAL_PATH");
             string enumProdList = "";
@@ -239,7 +240,8 @@ namespace Energistics.SchemaGatherer
             List<string> dataObjectSchemas = new List<string>();
             List<string> apiSchemas = new List<string>();
             List<string> supportingSchemas = new List<string>();     
-            Dictionary<string, string> schemaSubstitutions = new Dictionary<string, string>();
+            Dictionary<string, string> schemaSubstitutions = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
+            Dictionary<string, string> namespaceSubstitutions = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
 
             if (!Directory.Exists(targetFolder))
             {
@@ -275,14 +277,45 @@ namespace Energistics.SchemaGatherer
                     ProcessEnumValuesXml(sourceRasterFolder + @"\typ_catalogRaster.xsd", newRasterTypeCatalog, enumList, sw);
                     schemaSubstitutions.Add(newRasterTypeCatalog, sourceRasterFolder + @"\typ_catalogRaster.xsd");
                 }
+                if (!string.IsNullOrEmpty(sourceCompletionsFolder))
+                {
+                    string newCompletionsTypeCatalog = targetFolder + @"\new_completions_typ_catalog.xsd";
+                    string newEquipmentCatalog = targetFolder + @"\new_cs_equipmentCatalog.xsd";
+                    ProcessEnumValuesXml(sourceCompletionsFolder + @"\typ_catalogCompletion.xsd", newCompletionsTypeCatalog, enumList, sw);
+                    ProcessEnumValuesXml(sourceCompletionsFolder + @"\cs_equipmentCatalog.xsd", newEquipmentCatalog, enumList, sw);
+                    schemaSubstitutions.Add(newCompletionsTypeCatalog, sourceCompletionsFolder + @"\typ_catalogCompletion.xsd");
+                    schemaSubstitutions.Add(newEquipmentCatalog, sourceCompletionsFolder + @"\cs_equipmentCatalog.xsd");
+
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\attgrp_objectUid.xsd", sourceFolder + @"\attgrp_objectUid.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\attgrp_uid.xsd", sourceFolder + @"\attgrp_uid.xsd");
+
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_commonData.xsd", sourceFolder + @"\cs_commonData.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_connection.xsd", sourceFolder + @"\cs_connection.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_customData.xsd", sourceFolder + @"\cs_customData.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_dayCost.xsd", sourceFolder + @"\cs_dayCost.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_documentAudit.xsd", sourceFolder + @"\cs_documentAudit.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_documentEvent.xsd", sourceFolder + @"\cs_documentEvent.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_documentFileCreation.xsd", sourceFolder + @"\cs_documentFileCreation.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_documentInfo.xsd", sourceFolder + @"\cs_documentInfo.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_documentSecurityInfo.xsd", sourceFolder + @"\cs_documentSecurityInfo.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_extensionAny.xsd", sourceFolder + @"\cs_extensionAny.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_extensionNameValue.xsd", sourceFolder + @"\cs_extensionNameValue.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_memberObject.xsd", sourceFolder + @"\cs_memberObject.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\cs_nameTag.xsd", sourceFolder + @"\cs_nameTag.xsd");
+
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\typ_baseType.xsd", sourceFolder + @"\typ_baseType.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\typ_catalog.xsd", newTypeCatalog);
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\typ_dataTypes.xsd", sourceFolder + @"\typ_dataTypes.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\typ_measureType.xsd", sourceFolder + @"\typ_measureType.xsd");
+                    schemaSubstitutions.Add(sourceCompletionsFolder + @"\typ_quantityClass.xsd", sourceFolder + @"\typ_quantityClass.xsd");
+
+                    if (setName.StartsWith("PRODML"))
+                    {
+                        namespaceSubstitutions.Add(@"http://www.witsml.org/schemas/1series", @"http://www.prodml.org/schemas/1series");
+                    }
+                }
                 if (!setName.StartsWith("RESQML") && !setName.StartsWith("WITSML2"))
                 {
-                    if (setName.StartsWith("COMPLETION"))
-                    {
-                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalogCompletion.xsd", newTypeCatalog, enumList, sw);
-
-                        ProcessEnumValuesXml(sourceFolder + @"\cs_equipmentCatalog.xsd", newTypeCatalog, enumList, sw);
-                    }
                     ProcessEnumValuesXml(sourceFolder + @"\typ_catalog.xsd", newTypeCatalog, enumList, sw);
                     ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
                     schemaSubstitutions.Add(newTypeCatalog, sourceFolder + @"\typ_catalog.xsd");
@@ -312,7 +345,7 @@ namespace Energistics.SchemaGatherer
             // Strip out anything not a digit or a '.'
             dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
 			
-            ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
+            ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions, namespaceSubstitutions);
 			
             if(File.Exists(targetXmlFile))
                 File.Delete(targetXmlFile);
@@ -323,6 +356,7 @@ namespace Energistics.SchemaGatherer
             string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
             string wsdlPath = GetAppSetting(setName + "_WSDL");
             string sourceRasterFolder = GetAppSetting(setName + "_RASTERXSD_PATH");
+            string sourceCompletionsFolder = GetAppSetting(setName + "_COMPLETIONSXSD_PATH");
 
             if (!string.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
             {
@@ -362,6 +396,14 @@ namespace Energistics.SchemaGatherer
             if (!string.IsNullOrEmpty(sourceRasterFolder))
             {
                 foreach (string f in Directory.GetFiles(sourceRasterFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
+                {
+                    dataObjectSchemas.Add(f);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(sourceCompletionsFolder))
+            {
+                foreach (string f in Directory.GetFiles(sourceCompletionsFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
                 {
                     dataObjectSchemas.Add(f);
                 }

@@ -94,10 +94,5 @@ namespace Energistics.DataAccess.Reflection
         /// RESQML
         /// </summary>
         RESQML,
-
-        /// <summary>
-        /// Completion object (shared by WITSML and PRODML)
-        /// </summary>
-        COMPLETION
     }
 }

@@ -107,9 +107,9 @@ namespace Energistics.SchemaGatherer
         /// <param name="dataSchemaVersion">The data schema version.</param>
         /// <param name="dataObjects">The data objects.</param>
         /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the top-level schemas are to be substituted for.</param>
-        public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string dataSchemaRootFolder, string standardFamily, string dataSchemaVersion, List<string> dataObjects, Dictionary<string, string> schemaSubstitutions)
+        public static void GenerateDataObjectsWithCodeDom(string targetFolder, string targetXmlFile, string nameSpace, string dataSchemaRootFolder, string standardFamily, string dataSchemaVersion, List<string> dataObjects, Dictionary<string, string> schemaSubstitutions, Dictionary<string, string> namespaceSubstitutions)
         {
-            var schemas = LoadAndCompileAllSchemas(targetXmlFile, dataSchemaRootFolder, schemaSubstitutions);
+            var schemas = LoadAndCompileAllSchemas(targetXmlFile, dataSchemaRootFolder, schemaSubstitutions, namespaceSubstitutions);
 
             var codeProvider = CodeDomProvider.CreateProvider("CS");
             var codeNamespace = new CodeNamespace(nameSpace);
@@ -196,13 +196,20 @@ namespace Energistics.SchemaGatherer
         /// Loads the schema from the specified path and sets its SourceUri.
         /// </summary>
         /// <param name="schemaPath">The path to the schema to load.</param>
+        /// <param name="namespaceSubstitutions">Namespace substitutions.</param>
         /// <returns>The loaded schema.</returns>
-        private static XmlSchema LoadSchema(string schemaPath)
+        private static XmlSchema LoadSchema(string schemaPath, Dictionary<string, string> namespaceSubstitutions)
         {
             using (var stream = File.OpenRead(schemaPath))
             {
                 var schema = XmlSchema.Read(stream, null);
                 schema.SourceUri = Path.GetFullPath(schemaPath).ToLowerInvariant();
+
+                string substitution;
+                if (namespaceSubstitutions.TryGetValue(schema.TargetNamespace, out substitution))
+                {
+                    schema.TargetNamespace = substitution;
+                }
 
                 return schema;
             }
@@ -212,14 +219,15 @@ namespace Energistics.SchemaGatherer
         /// Loads the top level schemas from the specified XML file.
         /// </summary>
         /// <param name="targetXmlFile">The target XML file specifying the list of top-level schemas to process.</param>
+        /// <param name="namespaceSubstitutions">Namespace substitutions.</param>
         /// <returns>A collection of the loaded top-level schemas.</returns>
-        private static XmlSchemas LoadTopLevelSchemas(string targetXmlFile)
+        private static XmlSchemas LoadTopLevelSchemas(string targetXmlFile, Dictionary<string, string> namespaceSubstitutions)
         {
             var topLevelSchemas = new XmlSchemas();
 
             foreach (var schemaPath in GetTopLevelSchemaPaths(targetXmlFile))
             {
-                topLevelSchemas.Add(LoadSchema(schemaPath));
+                topLevelSchemas.Add(LoadSchema(schemaPath, namespaceSubstitutions));
             }
 
             return topLevelSchemas;
@@ -260,13 +268,14 @@ namespace Energistics.SchemaGatherer
         /// </summary>
         /// <param name="targetXmlFile">The target XML file specifying the list of top-level schemas to process.</param>
         /// <param name="dataSchemaRootFolder">The root folder for the data schemas.</param>
-        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the top-level schemas are to be substituted for.</param>
-        /// <returns></returns>
-        private static XmlSchemas LoadAndCompileAllSchemas(string targetXmlFile, string dataSchemaRootFolder, Dictionary<string, string> schemaSubstitutions)
+        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the schemas are to be substituted for.</param>
+        /// <param name="namespaceSubstitutions">Namespace substitutions.</param>
+        /// <returns>The loaded and compiled schemas.</returns>
+        private static XmlSchemas LoadAndCompileAllSchemas(string targetXmlFile, string dataSchemaRootFolder, Dictionary<string, string> schemaSubstitutions, Dictionary<string, string> namespaceSubstitutions)
         {
-            XmlSchemas topLevelSchemas = LoadTopLevelSchemas(targetXmlFile);
+            XmlSchemas topLevelSchemas = LoadTopLevelSchemas(targetXmlFile, namespaceSubstitutions);
             var loadedSchemas = GetLoadedSchemasWithSbustituations(topLevelSchemas, schemaSubstitutions);
-            LoadIncludesFromAllSchemas(topLevelSchemas, dataSchemaRootFolder, loadedSchemas);
+            LoadIncludesFromAllSchemas(topLevelSchemas, dataSchemaRootFolder, loadedSchemas, schemaSubstitutions, namespaceSubstitutions);
 
             topLevelSchemas.Compile(null, true);
 
@@ -279,11 +288,13 @@ namespace Energistics.SchemaGatherer
         /// <param name="topLevelSchemas">The top-level schemas.</param>
         /// <param name="dataSchemaRootFolder">The data schema root folder.</param>
         /// <param name="loadedSchemas">The mapping for schema paths to schemas that have already been loaded or have substitutes loaded.</param>
-        private static void LoadIncludesFromAllSchemas(IEnumerable<XmlSchema> topLevelSchemas, string dataSchemaRootFolder, IDictionary<string, XmlSchema> loadedSchemas)
+        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the schemas are to be substituted for.</param>
+        /// <param name="namespaceSubstitutions">Namespace substitutions.</param>
+        private static void LoadIncludesFromAllSchemas(IEnumerable<XmlSchema> topLevelSchemas, string dataSchemaRootFolder, IDictionary<string, XmlSchema> loadedSchemas, Dictionary<string, string> schemaSubstitutions, Dictionary<string, string> namespaceSubstitutions)
         {
             foreach (var topLevelSchema in topLevelSchemas)
             {
-                LoadIncludesFromSchema(topLevelSchema, loadedSchemas, dataSchemaRootFolder);
+                LoadIncludesFromSchema(topLevelSchema, loadedSchemas, dataSchemaRootFolder, schemaSubstitutions, namespaceSubstitutions);
                 EnsureElementsForSimpleTypes(topLevelSchema);
             }
         }
@@ -319,7 +330,9 @@ namespace Energistics.SchemaGatherer
         /// <param name="parentSchema">The parent schema.</param>
         /// <param name="loadedSchemas">The loaded schemas.</param>
         /// <param name="dataSchemaRootFolder">The data schema root folder.</param>
-        private static void LoadIncludesFromSchema(XmlSchema parentSchema, IDictionary<string, XmlSchema> loadedSchemas, string dataSchemaRootFolder)
+        /// <param name="schemaSubstitutions">The schema substitutions.  The keys are top-level schemas.  The values are included schemas that the schemas are to be substituted for.</param>
+        /// <param name="namespaceSubstitutions">Namespace substitutions.</param>
+        private static void LoadIncludesFromSchema(XmlSchema parentSchema, IDictionary<string, XmlSchema> loadedSchemas, string dataSchemaRootFolder, Dictionary<string, string> schemaSubstitutions, Dictionary<string, string> namespaceSubstitutions)
         {
             foreach (var include in parentSchema.Includes)
             {
@@ -329,13 +342,19 @@ namespace Energistics.SchemaGatherer
 
                 var path = GetPathToExternalSchema(externalSchema, parentSchema, dataSchemaRootFolder);
 
+                string alias;
+                if (schemaSubstitutions.TryGetValue(path, out alias))
+                {
+                    path = alias.ToLowerInvariant();
+                }
+
                 XmlSchema includedSchema;
                 if (!loadedSchemas.TryGetValue(path, out includedSchema) && File.Exists(path))
                 {
-                    includedSchema = LoadSchema(path);
+                    includedSchema = LoadSchema(path, namespaceSubstitutions);
                     loadedSchemas.Add(path, includedSchema);
 
-                    LoadIncludesFromSchema(includedSchema, loadedSchemas, dataSchemaRootFolder);
+                    LoadIncludesFromSchema(includedSchema, loadedSchemas, dataSchemaRootFolder, schemaSubstitutions, namespaceSubstitutions);
                 }
 
                 externalSchema.Schema = includedSchema;

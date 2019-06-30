@@ -41,6 +41,10 @@ namespace Energistics.Generator.WITSML141 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_cementJobs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_bhaRuns))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_attachments))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_wellCompletions))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_wellCMLedgers))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_wellboreCompletions))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_downholeComponents))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_depthRegImages))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -12696,260 +12700,6 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    public partial class cs_connection {
-        
-        private lengthMeasure idField;
-        
-        private lengthMeasure odField;
-        
-        private lengthMeasure lenField;
-        
-        private string typeThreadField;
-        
-        private lengthMeasure sizeThreadField;
-        
-        private pressureMeasure tensYieldField;
-        
-        private momentOfForceMeasure tqYieldField;
-        
-        private ConnectionPosition positionField;
-        
-        private bool positionFieldSpecified;
-        
-        private areaMeasure criticalCrossSectionField;
-        
-        private pressureMeasure presLeakField;
-        
-        private momentOfForceMeasure tqMakeupField;
-        
-        private cs_customData customDataField;
-        
-        private cs_extensionAny extensionAnyField;
-        
-        private cs_extensionNameValue[] extensionNameValueField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>Internal diameter of object.</summary>
-        [System.ComponentModel.DescriptionAttribute("Internal diameter of object.")]
-        public lengthMeasure id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Outside diameter of the body of the item.</summary>
-        [System.ComponentModel.DescriptionAttribute("Outside diameter of the body of the item.")]
-        public lengthMeasure od {
-            get {
-                return this.odField;
-            }
-            set {
-                this.odField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Length of the item.</summary>
-        [System.ComponentModel.DescriptionAttribute("Length of the item.")]
-        public lengthMeasure len {
-            get {
-                return this.lenField;
-            }
-            set {
-                this.lenField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Thread type from API RP7G, 5CT.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("Thread type from API RP7G, 5CT.")]
-        public string typeThread {
-            get {
-                return this.typeThreadField;
-            }
-            set {
-                this.typeThreadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Thread size.</summary>
-        [System.ComponentModel.DescriptionAttribute("Thread size.")]
-        public lengthMeasure sizeThread {
-            get {
-                return this.sizeThreadField;
-            }
-            set {
-                this.sizeThreadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Yield stress of steel - worn stress.</summary>
-        [System.ComponentModel.DescriptionAttribute("Yield stress of steel - worn stress.")]
-        public pressureMeasure tensYield {
-            get {
-                return this.tensYieldField;
-            }
-            set {
-                this.tensYieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Torque at which yield occurs.</summary>
-        [System.ComponentModel.DescriptionAttribute("Torque at which yield occurs.")]
-        public momentOfForceMeasure tqYield {
-            get {
-                return this.tqYieldField;
-            }
-            set {
-                this.tqYieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Where connected.</summary>
-        [System.ComponentModel.DescriptionAttribute("Where connected.")]
-        public ConnectionPosition position {
-            get {
-                return this.positionField;
-            }
-            set {
-                this.positionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool positionSpecified {
-            get {
-                return this.positionFieldSpecified;
-            }
-            set {
-                this.positionFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>For bending stiffness ratio.</summary>
-        [System.ComponentModel.DescriptionAttribute("For bending stiffness ratio.")]
-        public areaMeasure criticalCrossSection {
-            get {
-                return this.criticalCrossSectionField;
-            }
-            set {
-                this.criticalCrossSectionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Leak pressure rating.</summary>
-        [System.ComponentModel.DescriptionAttribute("Leak pressure rating.")]
-        public pressureMeasure presLeak {
-            get {
-                return this.presLeakField;
-            }
-            set {
-                this.presLeakField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Make up torque.</summary>
-        [System.ComponentModel.DescriptionAttribute("Make up torque.")]
-        public momentOfForceMeasure tqMakeup {
-            get {
-                return this.tqMakeupField;
-            }
-            set {
-                this.tqMakeupField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
-        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
-        public cs_customData customData {
-            get {
-                return this.customDataField;
-            }
-            set {
-                this.customDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
-        public cs_extensionAny extensionAny {
-            get {
-                return this.extensionAnyField;
-            }
-            set {
-                this.extensionAnyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public cs_extensionNameValue[] extensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    public enum ConnectionPosition {
-        
-        /// <remarks/>
-        both,
-        
-        /// <remarks/>
-        bottom,
-        
-        /// <remarks/>
-        top,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_nozzle {
         
         private short indexField;
@@ -15616,6 +15366,468 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         unknown,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cs_equipmentConnection))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_connection {
+        
+        private lengthMeasure idField;
+        
+        private lengthMeasure odField;
+        
+        private lengthMeasure lenField;
+        
+        private string typeThreadField;
+        
+        private lengthMeasure sizeThreadField;
+        
+        private pressureMeasure tensYieldField;
+        
+        private momentOfForceMeasure tqYieldField;
+        
+        private ConnectionPosition positionField;
+        
+        private bool positionFieldSpecified;
+        
+        private areaMeasure criticalCrossSectionField;
+        
+        private pressureMeasure presLeakField;
+        
+        private momentOfForceMeasure tqMakeupField;
+        
+        private cs_customData customDataField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Internal diameter of object.</summary>
+        [System.ComponentModel.DescriptionAttribute("Internal diameter of object.")]
+        public lengthMeasure id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Outside diameter of the body of the item.</summary>
+        [System.ComponentModel.DescriptionAttribute("Outside diameter of the body of the item.")]
+        public lengthMeasure od {
+            get {
+                return this.odField;
+            }
+            set {
+                this.odField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Length of the item.</summary>
+        [System.ComponentModel.DescriptionAttribute("Length of the item.")]
+        public lengthMeasure len {
+            get {
+                return this.lenField;
+            }
+            set {
+                this.lenField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Thread type from API RP7G, 5CT.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Thread type from API RP7G, 5CT.")]
+        public string typeThread {
+            get {
+                return this.typeThreadField;
+            }
+            set {
+                this.typeThreadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Thread size.</summary>
+        [System.ComponentModel.DescriptionAttribute("Thread size.")]
+        public lengthMeasure sizeThread {
+            get {
+                return this.sizeThreadField;
+            }
+            set {
+                this.sizeThreadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Yield stress of steel - worn stress.</summary>
+        [System.ComponentModel.DescriptionAttribute("Yield stress of steel - worn stress.")]
+        public pressureMeasure tensYield {
+            get {
+                return this.tensYieldField;
+            }
+            set {
+                this.tensYieldField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Torque at which yield occurs.</summary>
+        [System.ComponentModel.DescriptionAttribute("Torque at which yield occurs.")]
+        public momentOfForceMeasure tqYield {
+            get {
+                return this.tqYieldField;
+            }
+            set {
+                this.tqYieldField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Where connected.</summary>
+        [System.ComponentModel.DescriptionAttribute("Where connected.")]
+        public ConnectionPosition position {
+            get {
+                return this.positionField;
+            }
+            set {
+                this.positionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool positionSpecified {
+            get {
+                return this.positionFieldSpecified;
+            }
+            set {
+                this.positionFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>For bending stiffness ratio.</summary>
+        [System.ComponentModel.DescriptionAttribute("For bending stiffness ratio.")]
+        public areaMeasure criticalCrossSection {
+            get {
+                return this.criticalCrossSectionField;
+            }
+            set {
+                this.criticalCrossSectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Leak pressure rating.</summary>
+        [System.ComponentModel.DescriptionAttribute("Leak pressure rating.")]
+        public pressureMeasure presLeak {
+            get {
+                return this.presLeakField;
+            }
+            set {
+                this.presLeakField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Make up torque.</summary>
+        [System.ComponentModel.DescriptionAttribute("Make up torque.")]
+        public momentOfForceMeasure tqMakeup {
+            get {
+                return this.tqMakeupField;
+            }
+            set {
+                this.tqMakeupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum ConnectionPosition {
+        
+        /// <remarks/>
+        both,
+        
+        /// <remarks/>
+        bottom,
+        
+        /// <remarks/>
+        top,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_equipmentConnection : cs_connection {
+        
+        private lengthMeasure radialOffsetField;
+        
+        private object itemField;
+        
+        private ConnectionFormType connectionFormField;
+        
+        private bool connectionFormFieldSpecified;
+        
+        private string connectionUpsetField;
+        
+        private string stringEquipmentRefUIDField;
+        
+        /// <remarks/>
+        /// <summary>measurement of radial offset</summary>
+        [System.ComponentModel.DescriptionAttribute("measurement of radial offset")]
+        public lengthMeasure radialOffset {
+            get {
+                return this.radialOffsetField;
+            }
+            set {
+                this.radialOffsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("casingConnectionType", typeof(CasingConnectionType))]
+        [System.Xml.Serialization.XmlElementAttribute("otherConnectionType", typeof(OtherConnectionType))]
+        [System.Xml.Serialization.XmlElementAttribute("rodConnectionType", typeof(RodConnectionType))]
+        [System.Xml.Serialization.XmlElementAttribute("tubingConnectionType", typeof(TubingConnectionType))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The form of connection: Box or Pin</summary>
+        [System.ComponentModel.DescriptionAttribute("The form of connection: Box or Pin")]
+        public ConnectionFormType connectionForm {
+            get {
+                return this.connectionFormField;
+            }
+            set {
+                this.connectionFormField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool connectionFormSpecified {
+            get {
+                return this.connectionFormFieldSpecified;
+            }
+            set {
+                this.connectionFormFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Connection upset</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Connection upset")]
+        public string connectionUpset {
+            get {
+                return this.connectionUpsetField;
+            }
+            set {
+                this.connectionUpsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to the string equipment</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the string equipment")]
+        public string stringEquipmentRefUID {
+            get {
+                return this.stringEquipmentRefUIDField;
+            }
+            set {
+                this.stringEquipmentRefUIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum CasingConnectionType {
+        
+        /// <remarks/>
+        Landed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SelfSealing-Threaded")]
+        SelfSealingThreaded,
+        
+        /// <remarks/>
+        Welded,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum OtherConnectionType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DogsCompressionFit-Sealed")]
+        DogsCompressionFitSealed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Cemented-in-place")]
+        Cementedinplace,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum RodConnectionType {
+        
+        /// <remarks/>
+        Latched,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Seating Nipple-Cup")]
+        SeatingNippleCup,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SeatingNipple-Mechanical")]
+        SeatingNippleMechanical,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SlipFit-Sealed")]
+        SlipFitSealed,
+        
+        /// <remarks/>
+        Threaded,
+        
+        /// <remarks/>
+        Welded,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum TubingConnectionType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DogsCompressionFit-NotSealed")]
+        DogsCompressionFitNotSealed,
+        
+        /// <remarks/>
+        Latched,
+        
+        /// <remarks/>
+        Landed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SelfSealing-Threaded")]
+        SelfSealingThreaded,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SlipFit-Sealed")]
+        SlipFitSealed,
+        
+        /// <remarks/>
+        Threaded,
+        
+        /// <remarks/>
+        Radial,
+        
+        /// <remarks/>
+        Unknown,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum ConnectionFormType {
+        
+        /// <remarks/>
+        Flange,
+        
+        /// <remarks/>
+        Mandrel,
+        
+        /// <remarks/>
+        Welded,
+        
+        /// <remarks/>
+        Pin,
+        
+        /// <remarks/>
+        Box,
     }
     
     /// <remarks/>
@@ -41007,440 +41219,6 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    public partial class cs_dayCost {
-        
-        private string numAFEField;
-        
-        private string costGroupField;
-        
-        private string costClassField;
-        
-        private string costCodeField;
-        
-        private string costSubCodeField;
-        
-        private string costItemDescriptionField;
-        
-        private cost costPerItemField;
-        
-        private string itemKindField;
-        
-        private double itemSizeField;
-        
-        private bool itemSizeFieldSpecified;
-        
-        private short qtyItemField;
-        
-        private bool qtyItemFieldSpecified;
-        
-        private cost costAmountField;
-        
-        private string numInvoiceField;
-        
-        private string numPOField;
-        
-        private string numTicketField;
-        
-        private bool isCarryOverField;
-        
-        private bool isCarryOverFieldSpecified;
-        
-        private bool isRentalField;
-        
-        private bool isRentalFieldSpecified;
-        
-        private cs_nameTag[] nameTagField;
-        
-        private string numSerialField;
-        
-        private string nameVendorField;
-        
-        private string numVendorField;
-        
-        private string poolField;
-        
-        private bool estimatedField;
-        
-        private bool estimatedFieldSpecified;
-        
-        private cs_extensionNameValue[] extensionNameValueField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>AFE number that this cost item applies to.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("AFE number that this cost item applies to.")]
-        public string numAFE {
-            get {
-                return this.numAFEField;
-            }
-            set {
-                this.numAFEField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cost group code.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
-        [System.ComponentModel.DescriptionAttribute("Cost group code.")]
-        public string costGroup {
-            get {
-                return this.costGroupField;
-            }
-            set {
-                this.costGroupField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cost class code.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
-        [System.ComponentModel.DescriptionAttribute("Cost class code.")]
-        public string costClass {
-            get {
-                return this.costClassField;
-            }
-            set {
-                this.costClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cost code.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
-        [System.ComponentModel.DescriptionAttribute("Cost code.")]
-        public string costCode {
-            get {
-                return this.costCodeField;
-            }
-            set {
-                this.costCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cost subcode.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
-        [System.ComponentModel.DescriptionAttribute("Cost subcode.")]
-        public string costSubCode {
-            get {
-                return this.costSubCodeField;
-            }
-            set {
-                this.costSubCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Description of cost item.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Description of cost item.")]
-        public string costItemDescription {
-            get {
-                return this.costItemDescriptionField;
-            }
-            set {
-                this.costItemDescriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cost per cost item, assume same currency.</summary>
-        [System.ComponentModel.DescriptionAttribute("Cost per cost item, assume same currency.")]
-        public cost costPerItem {
-            get {
-                return this.costPerItemField;
-            }
-            set {
-                this.costPerItemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The kind of cost item specified (e.g., rig dayrate, joints casing).</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
-        [System.ComponentModel.DescriptionAttribute("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
-        public string itemKind {
-            get {
-                return this.itemKindField;
-            }
-            set {
-                this.itemKindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Size of one cost item.</summary>
-        [System.ComponentModel.DescriptionAttribute("Size of one cost item.")]
-        public double itemSize {
-            get {
-                return this.itemSizeField;
-            }
-            set {
-                this.itemSizeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool itemSizeSpecified {
-            get {
-                return this.itemSizeFieldSpecified;
-            }
-            set {
-                this.itemSizeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing.</summary>
-        [System.ComponentModel.DescriptionAttribute("Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing.")]
-        public short qtyItem {
-            get {
-                return this.qtyItemField;
-            }
-            set {
-                this.qtyItemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool qtyItemSpecified {
-            get {
-                return this.qtyItemFieldSpecified;
-            }
-            set {
-                this.qtyItemFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cost for the item for this record.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Cost for the item for this record.")]
-        public cost costAmount {
-            get {
-                return this.costAmountField;
-            }
-            set {
-                this.costAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Invoice number for cost item, bill sent to Operator.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("Invoice number for cost item, bill sent to Operator.")]
-        public string numInvoice {
-            get {
-                return this.numInvoiceField;
-            }
-            set {
-                this.numInvoiceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Purchase order number, provided by Operator.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("Purchase order number, provided by Operator.")]
-        public string numPO {
-            get {
-                return this.numPOField;
-            }
-            set {
-                this.numPOField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Field Ticket number, issued by service company on location.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("Field Ticket number, issued by service company on location.")]
-        public string numTicket {
-            get {
-                return this.numTicketField;
-            }
-            set {
-                this.numTicketField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Is this item carried from day to day? Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.ComponentModel.DescriptionAttribute("Is this item carried from day to day? Values are \"true\" (or \"1\") and \"false\" (or " +
-            "\"0\").")]
-        public bool isCarryOver {
-            get {
-                return this.isCarryOverField;
-            }
-            set {
-                this.isCarryOverField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool isCarryOverSpecified {
-            get {
-                return this.isCarryOverFieldSpecified;
-            }
-            set {
-                this.isCarryOverFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Is this item a rental? Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.ComponentModel.DescriptionAttribute("Is this item a rental? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
-        public bool isRental {
-            get {
-                return this.isRentalField;
-            }
-            set {
-                this.isRentalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool isRentalSpecified {
-            get {
-                return this.isRentalFieldSpecified;
-            }
-            set {
-                this.isRentalFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("nameTag")]
-        [System.ComponentModel.DescriptionAttribute("An identification tag for the item. A serial number is a type of identification t" +
-            "ag however some tags contain many pieces of information. This structure just ide" +
-            "ntifies the tag and does not describe the contents.")]
-        public cs_nameTag[] nameTag {
-            get {
-                return this.nameTagField;
-            }
-            set {
-                this.nameTagField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Serial number.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("Serial number.")]
-        public string numSerial {
-            get {
-                return this.numSerialField;
-            }
-            set {
-                this.numSerialField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of vendor.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        [System.ComponentModel.DescriptionAttribute("Name of vendor.")]
-        public string nameVendor {
-            get {
-                return this.nameVendorField;
-            }
-            set {
-                this.nameVendorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Vendor number.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
-        [System.ComponentModel.DescriptionAttribute("Vendor number.")]
-        public string numVendor {
-            get {
-                return this.numVendorField;
-            }
-            set {
-                this.numVendorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of pool/reservoir that this cost item can be accounted to.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of pool/reservoir that this cost item can be accounted to.")]
-        public string pool {
-            get {
-                return this.poolField;
-            }
-            set {
-                this.poolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Is this an estimated cost? Values are "true" (or "1") and "false" (or "0").</summary>
-        [System.ComponentModel.DescriptionAttribute("Is this an estimated cost? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
-        public bool estimated {
-            get {
-                return this.estimatedField;
-            }
-            set {
-                this.estimatedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool estimatedSpecified {
-            get {
-                return this.estimatedFieldSpecified;
-            }
-            set {
-                this.estimatedFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public cs_extensionNameValue[] extensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_opsReport {
         
@@ -45103,6 +44881,440 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_dayCost {
+        
+        private string numAFEField;
+        
+        private string costGroupField;
+        
+        private string costClassField;
+        
+        private string costCodeField;
+        
+        private string costSubCodeField;
+        
+        private string costItemDescriptionField;
+        
+        private cost costPerItemField;
+        
+        private string itemKindField;
+        
+        private double itemSizeField;
+        
+        private bool itemSizeFieldSpecified;
+        
+        private short qtyItemField;
+        
+        private bool qtyItemFieldSpecified;
+        
+        private cost costAmountField;
+        
+        private string numInvoiceField;
+        
+        private string numPOField;
+        
+        private string numTicketField;
+        
+        private bool isCarryOverField;
+        
+        private bool isCarryOverFieldSpecified;
+        
+        private bool isRentalField;
+        
+        private bool isRentalFieldSpecified;
+        
+        private cs_nameTag[] nameTagField;
+        
+        private string numSerialField;
+        
+        private string nameVendorField;
+        
+        private string numVendorField;
+        
+        private string poolField;
+        
+        private bool estimatedField;
+        
+        private bool estimatedFieldSpecified;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>AFE number that this cost item applies to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("AFE number that this cost item applies to.")]
+        public string numAFE {
+            get {
+                return this.numAFEField;
+            }
+            set {
+                this.numAFEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cost group code.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Cost group code.")]
+        public string costGroup {
+            get {
+                return this.costGroupField;
+            }
+            set {
+                this.costGroupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cost class code.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Cost class code.")]
+        public string costClass {
+            get {
+                return this.costClassField;
+            }
+            set {
+                this.costClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cost code.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Cost code.")]
+        public string costCode {
+            get {
+                return this.costCodeField;
+            }
+            set {
+                this.costCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cost subcode.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Cost subcode.")]
+        public string costSubCode {
+            get {
+                return this.costSubCodeField;
+            }
+            set {
+                this.costSubCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of cost item.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of cost item.")]
+        public string costItemDescription {
+            get {
+                return this.costItemDescriptionField;
+            }
+            set {
+                this.costItemDescriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cost per cost item, assume same currency.</summary>
+        [System.ComponentModel.DescriptionAttribute("Cost per cost item, assume same currency.")]
+        public cost costPerItem {
+            get {
+                return this.costPerItemField;
+            }
+            set {
+                this.costPerItemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The kind of cost item specified (e.g., rig dayrate, joints casing).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
+        [System.ComponentModel.DescriptionAttribute("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
+        public string itemKind {
+            get {
+                return this.itemKindField;
+            }
+            set {
+                this.itemKindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Size of one cost item.</summary>
+        [System.ComponentModel.DescriptionAttribute("Size of one cost item.")]
+        public double itemSize {
+            get {
+                return this.itemSizeField;
+            }
+            set {
+                this.itemSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool itemSizeSpecified {
+            get {
+                return this.itemSizeFieldSpecified;
+            }
+            set {
+                this.itemSizeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing.</summary>
+        [System.ComponentModel.DescriptionAttribute("Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing.")]
+        public short qtyItem {
+            get {
+                return this.qtyItemField;
+            }
+            set {
+                this.qtyItemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool qtyItemSpecified {
+            get {
+                return this.qtyItemFieldSpecified;
+            }
+            set {
+                this.qtyItemFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cost for the item for this record.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Cost for the item for this record.")]
+        public cost costAmount {
+            get {
+                return this.costAmountField;
+            }
+            set {
+                this.costAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Invoice number for cost item, bill sent to Operator.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Invoice number for cost item, bill sent to Operator.")]
+        public string numInvoice {
+            get {
+                return this.numInvoiceField;
+            }
+            set {
+                this.numInvoiceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Purchase order number, provided by Operator.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Purchase order number, provided by Operator.")]
+        public string numPO {
+            get {
+                return this.numPOField;
+            }
+            set {
+                this.numPOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Field Ticket number, issued by service company on location.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Field Ticket number, issued by service company on location.")]
+        public string numTicket {
+            get {
+                return this.numTicketField;
+            }
+            set {
+                this.numTicketField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this item carried from day to day? Values are "true" (or "1") and "false" (or "0").</summary>
+        [System.ComponentModel.DescriptionAttribute("Is this item carried from day to day? Values are \"true\" (or \"1\") and \"false\" (or " +
+            "\"0\").")]
+        public bool isCarryOver {
+            get {
+                return this.isCarryOverField;
+            }
+            set {
+                this.isCarryOverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isCarryOverSpecified {
+            get {
+                return this.isCarryOverFieldSpecified;
+            }
+            set {
+                this.isCarryOverFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this item a rental? Values are "true" (or "1") and "false" (or "0").</summary>
+        [System.ComponentModel.DescriptionAttribute("Is this item a rental? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
+        public bool isRental {
+            get {
+                return this.isRentalField;
+            }
+            set {
+                this.isRentalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isRentalSpecified {
+            get {
+                return this.isRentalFieldSpecified;
+            }
+            set {
+                this.isRentalFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An identification tag for the item. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("nameTag")]
+        [System.ComponentModel.DescriptionAttribute("An identification tag for the item. A serial number is a type of identification t" +
+            "ag however some tags contain many pieces of information. This structure just ide" +
+            "ntifies the tag and does not describe the contents.")]
+        public cs_nameTag[] nameTag {
+            get {
+                return this.nameTagField;
+            }
+            set {
+                this.nameTagField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Serial number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Serial number.")]
+        public string numSerial {
+            get {
+                return this.numSerialField;
+            }
+            set {
+                this.numSerialField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of vendor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Name of vendor.")]
+        public string nameVendor {
+            get {
+                return this.nameVendorField;
+            }
+            set {
+                this.nameVendorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Vendor number.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Vendor number.")]
+        public string numVendor {
+            get {
+                return this.numVendorField;
+            }
+            set {
+                this.numVendorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of pool/reservoir that this cost item can be accounted to.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of pool/reservoir that this cost item can be accounted to.")]
+        public string pool {
+            get {
+                return this.poolField;
+            }
+            set {
+                this.poolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this an estimated cost? Values are "true" (or "1") and "false" (or "0").</summary>
+        [System.ComponentModel.DescriptionAttribute("Is this an estimated cost? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
+        public bool estimated {
+            get {
+                return this.estimatedField;
+            }
+            set {
+                this.estimatedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool estimatedSpecified {
+            get {
+                return this.estimatedFieldSpecified;
+            }
+            set {
+                this.estimatedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_fluid {
         
         private string typeField;
@@ -46235,17 +46447,136 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    public partial class objectSequence {
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_objectGroup {
+        
+        private string nameWellField;
+        
+        private string nameWellboreField;
+        
+        private string nameField;
+        
+        private string groupTypeField;
+        
+        private string groupSubtypeField;
+        
+        private short sequenceField;
+        
+        private bool sequenceFieldSpecified;
         
         private string descriptionField;
         
-        private short valueField;
+        private indexedObject[] paramField;
+        
+        private cs_memberObject[] memberObjectField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidWellField;
+        
+        private string uidWellboreField;
+        
+        private string uidField;
         
         /// <remarks/>
-        /// <summary>A description related to the sequence number.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
-        [System.ComponentModel.DescriptionAttribute("A description related to the sequence number.")]
+        /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
+        public string nameWell {
+            get {
+                return this.nameWellField;
+            }
+            set {
+                this.nameWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.")]
+        public string nameWellbore {
+            get {
+                return this.nameWellboreField;
+            }
+            set {
+                this.nameWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the objectGroup.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the objectGroup.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines the type of group.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Defines the type of group.")]
+        public string groupType {
+            get {
+                return this.groupTypeField;
+            }
+            set {
+                this.groupTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>This is a free-form text field to extend groupType for custom implementations.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("This is a free-form text field to extend groupType for custom implementations.")]
+        public string groupSubtype {
+            get {
+                return this.groupSubtypeField;
+            }
+            set {
+                this.groupSubtypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The sequence number related to the group.  The meaning of the sequence is defined by the groupType.</summary>
+        [System.ComponentModel.DescriptionAttribute("The sequence number related to the group.  The meaning of the sequence is defined" +
+            " by the groupType.")]
+        public short sequence {
+            get {
+                return this.sequenceField;
+            }
+            set {
+                this.sequenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sequenceSpecified {
+            get {
+                return this.sequenceFieldSpecified;
+            }
+            set {
+                this.sequenceFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A description of attachment</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A description of attachment")]
         public string description {
             get {
                 return this.descriptionField;
@@ -46256,13 +46587,102 @@ namespace Energistics.Generator.WITSML141 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public short Value {
+        /// <summary>Any extra parameter data.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("param")]
+        [System.ComponentModel.DescriptionAttribute("Any extra parameter data.  For this usage the name attribute MUST be specified be" +
+            "cause it represents the meaning of the data. While the index attribute is mandat" +
+            "ory, it is only significant if the same name repeats.")]
+        public indexedObject[] param {
             get {
-                return this.valueField;
+                return this.paramField;
             }
             set {
-                this.valueField = value;
+                this.paramField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>References a specific data-object that is a member of this group.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("memberObject")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("References a specific data-object that is a member of this group.")]
+        public cs_memberObject[] memberObject {
+            get {
+                return this.memberObjectField;
+            }
+            set {
+                this.memberObjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data  objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
+            "the (possibly non-unique) nameWell.")]
+        public string uidWell {
+            get {
+                return this.uidWellField;
+            }
+            set {
+                this.uidWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
+            "nced by the (possibly non-unique) nameWellbore.")]
+        public string uidWellbore {
+            get {
+                return this.uidWellboreField;
+            }
+            set {
+                this.uidWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
             }
         }
     }
@@ -46590,136 +47010,17 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
-    public partial class obj_objectGroup {
-        
-        private string nameWellField;
-        
-        private string nameWellboreField;
-        
-        private string nameField;
-        
-        private string groupTypeField;
-        
-        private string groupSubtypeField;
-        
-        private short sequenceField;
-        
-        private bool sequenceFieldSpecified;
+    public partial class objectSequence {
         
         private string descriptionField;
         
-        private indexedObject[] paramField;
-        
-        private cs_memberObject[] memberObjectField;
-        
-        private cs_commonData commonDataField;
-        
-        private cs_customData customDataField;
-        
-        private string uidWellField;
-        
-        private string uidWellboreField;
-        
-        private string uidField;
+        private short valueField;
         
         /// <remarks/>
-        /// <summary>Human recognizable context for the well that contains the wellbore.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
-        public string nameWell {
-            get {
-                return this.nameWellField;
-            }
-            set {
-                this.nameWellField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"Human recognizable context for the wellbore that contains the (sub) object that is represented by the objectGroup. If no wellbore is specified then the objectGroup represents the well. If a wellbore is specified but no other object is specified then the  objectGroup represents the wellbore.")]
-        public string nameWellbore {
-            get {
-                return this.nameWellboreField;
-            }
-            set {
-                this.nameWellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Human recognizable context for the objectGroup.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the objectGroup.")]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Defines the type of group.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Defines the type of group.")]
-        public string groupType {
-            get {
-                return this.groupTypeField;
-            }
-            set {
-                this.groupTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>This is a free-form text field to extend groupType for custom implementations.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("This is a free-form text field to extend groupType for custom implementations.")]
-        public string groupSubtype {
-            get {
-                return this.groupSubtypeField;
-            }
-            set {
-                this.groupSubtypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The sequence number related to the group.  The meaning of the sequence is defined by the groupType.</summary>
-        [System.ComponentModel.DescriptionAttribute("The sequence number related to the group.  The meaning of the sequence is defined" +
-            " by the groupType.")]
-        public short sequence {
-            get {
-                return this.sequenceField;
-            }
-            set {
-                this.sequenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool sequenceSpecified {
-            get {
-                return this.sequenceFieldSpecified;
-            }
-            set {
-                this.sequenceFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A description of attachment</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
-        [System.ComponentModel.DescriptionAttribute("A description of attachment")]
+        /// <summary>A description related to the sequence number.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("A description related to the sequence number.")]
         public string description {
             get {
                 return this.descriptionField;
@@ -46730,102 +47031,13 @@ namespace Energistics.Generator.WITSML141 {
         }
         
         /// <remarks/>
-        /// <summary>Any extra parameter data.  For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("param")]
-        [System.ComponentModel.DescriptionAttribute("Any extra parameter data.  For this usage the name attribute MUST be specified be" +
-            "cause it represents the meaning of the data. While the index attribute is mandat" +
-            "ory, it is only significant if the same name repeats.")]
-        public indexedObject[] param {
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public short Value {
             get {
-                return this.paramField;
+                return this.valueField;
             }
             set {
-                this.paramField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>References a specific data-object that is a member of this group.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("memberObject")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("References a specific data-object that is a member of this group.")]
-        public cs_memberObject[] memberObject {
-            get {
-                return this.memberObjectField;
-            }
-            set {
-                this.memberObjectField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A container element that contains elements that are common to all data  objects.</summary>
-        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
-        public cs_commonData commonData {
-            get {
-                return this.commonDataField;
-            }
-            set {
-                this.commonDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
-        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
-        public cs_customData customData {
-            get {
-                return this.customDataField;
-            }
-            set {
-                this.customDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
-            "the (possibly non-unique) nameWell.")]
-        public string uidWell {
-            get {
-                return this.uidWellField;
-            }
-            set {
-                this.uidWellField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
-            "nced by the (possibly non-unique) nameWellbore.")]
-        public string uidWellbore {
-            get {
-                return this.uidWellboreField;
-            }
-            set {
-                this.uidWellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
+                this.valueField = value;
             }
         }
     }
@@ -62076,6 +62288,8981 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_wellCompletion {
+        
+        private string nameWellField;
+        
+        private string nameField;
+        
+        private string fieldIDField;
+        
+        private string fieldCodeField;
+        
+        private string fieldTypeField;
+        
+        private Energistics.DataAccess.Timestamp effectiveDateField;
+        
+        private bool effectiveDateFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp expiredDateField;
+        
+        private bool expiredDateFieldSpecified;
+        
+        private string e_P_RightsIDField;
+        
+        private CompletionStatus currentStatusField;
+        
+        private bool currentStatusFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp statusDateField;
+        
+        private bool statusDateFieldSpecified;
+        
+        private CompletionStatusHistory[] statusHistoryField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidWellField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the well that contains the completion.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the completion.")]
+        public string nameWell {
+            get {
+                return this.nameWellField;
+            }
+            set {
+                this.nameWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the completion.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the completion.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Field ID.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Field ID.")]
+        public string fieldID {
+            get {
+                return this.fieldIDField;
+            }
+            set {
+                this.fieldIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Field code.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Field code.")]
+        public string fieldCode {
+            get {
+                return this.fieldCodeField;
+            }
+            set {
+                this.fieldCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Field type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Field type.")]
+        public string fieldType {
+            get {
+                return this.fieldTypeField;
+            }
+            set {
+                this.fieldTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Field date.</summary>
+        [System.ComponentModel.DescriptionAttribute("Field date.")]
+        public Energistics.DataAccess.Timestamp effectiveDate {
+            get {
+                return this.effectiveDateField;
+            }
+            set {
+                this.effectiveDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool effectiveDateSpecified {
+            get {
+                return this.effectiveDateFieldSpecified;
+            }
+            set {
+                this.effectiveDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Expiration date</summary>
+        [System.ComponentModel.DescriptionAttribute("Expiration date")]
+        public Energistics.DataAccess.Timestamp expiredDate {
+            get {
+                return this.expiredDateField;
+            }
+            set {
+                this.expiredDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool expiredDateSpecified {
+            get {
+                return this.expiredDateFieldSpecified;
+            }
+            set {
+                this.expiredDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Documents exploration and production rights</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Documents exploration and production rights")]
+        public string E_P_RightsID {
+            get {
+                return this.e_P_RightsIDField;
+            }
+            set {
+                this.e_P_RightsIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CompletionStatus currentStatus {
+            get {
+                return this.currentStatusField;
+            }
+            set {
+                this.currentStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool currentStatusSpecified {
+            get {
+                return this.currentStatusFieldSpecified;
+            }
+            set {
+                this.currentStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Energistics.DataAccess.Timestamp statusDate {
+            get {
+                return this.statusDateField;
+            }
+            set {
+                this.statusDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool statusDateSpecified {
+            get {
+                return this.statusDateFieldSpecified;
+            }
+            set {
+                this.statusDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("statusHistory")]
+        public CompletionStatusHistory[] statusHistory {
+            get {
+                return this.statusHistoryField;
+            }
+            set {
+                this.statusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data  objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
+            "the (possibly non-unique) nameWell.")]
+        public string uidWell {
+            get {
+                return this.uidWellField;
+            }
+            set {
+                this.uidWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum CompletionStatus {
+        
+        /// <remarks/>
+        Planned,
+        
+        /// <remarks/>
+        Active,
+        
+        /// <remarks/>
+        Inactive,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Permanent Abandoned")]
+        PermanentAbandoned,
+        
+        /// <remarks/>
+        Suspended,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Temporary Abandoned")]
+        TemporaryAbandoned,
+        
+        /// <remarks/>
+        Testing,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class CompletionStatusHistory {
+        
+        private CompletionStatus statusField;
+        
+        private bool statusFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp startDateField;
+        
+        private bool startDateFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp endDateField;
+        
+        private bool endDateFieldSpecified;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private string commentField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Completion status</summary>
+        [System.ComponentModel.DescriptionAttribute("Completion status")]
+        public CompletionStatus status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool statusSpecified {
+            get {
+                return this.statusFieldSpecified;
+            }
+            set {
+                this.statusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the start date of status</summary>
+        [System.ComponentModel.DescriptionAttribute("the start date of status")]
+        public Energistics.DataAccess.Timestamp startDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool startDateSpecified {
+            get {
+                return this.startDateFieldSpecified;
+            }
+            set {
+                this.startDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the end date of status</summary>
+        [System.ComponentModel.DescriptionAttribute("the end date of status")]
+        public Energistics.DataAccess.Timestamp endDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool endDateSpecified {
+            get {
+                return this.endDateFieldSpecified;
+            }
+            set {
+                this.endDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured bottom of perforation</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom of perforation")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured top of perforation</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top of perforation")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The description about the status</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description about the status")]
+        public string comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_participant {
+        
+        private cs_memberObject[] participantField;
+        
+        private cs_extensionNameValue[] extNameValuesField;
+        
+        /// <remarks/>
+        /// <summary>A collection of involved participants.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("participant")]
+        [System.ComponentModel.DescriptionAttribute("A collection of involved participants.")]
+        public cs_memberObject[] participant {
+            get {
+                return this.participantField;
+            }
+            set {
+                this.participantField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extNameValues")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extNameValues {
+            get {
+                return this.extNameValuesField;
+            }
+            set {
+                this.extNameValuesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_downholeExtension {
+        
+        private string downholeComponentRefIDField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Reference to downhole component</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to downhole component")]
+        public string downholeComponentRefID {
+            get {
+                return this.downholeComponentRefIDField;
+            }
+            set {
+                this.downholeComponentRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_fluidReportExtension {
+        
+        private string fluidReportRefIDField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Reference to the fluid report</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the fluid report")]
+        public string fluidReportRefID {
+            get {
+                return this.fluidReportRefIDField;
+            }
+            set {
+                this.fluidReportRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perforating {
+        
+        private short stageNumberField;
+        
+        private bool stageNumberFieldSpecified;
+        
+        private measuredDepthCoord bottomPackerSetField;
+        
+        private string perforationFluidTypeField;
+        
+        private pressureMeasure hydrostaticPressureField;
+        
+        private pressureMeasure surfacePressureField;
+        
+        private pressureMeasure reservoirPressureField;
+        
+        private densityMeasure fluidDensityField;
+        
+        private measuredDepthCoord fluidLevelField;
+        
+        private PerfConveyanceMethod conveyanceMethodField;
+        
+        private bool conveyanceMethodFieldSpecified;
+        
+        private short shotsPlannedField;
+        
+        private bool shotsPlannedFieldSpecified;
+        
+        private perLengthMeasure shotsDensityField;
+        
+        private short shotsMisfiredField;
+        
+        private bool shotsMisfiredFieldSpecified;
+        
+        private string orientationField;
+        
+        private string orientationMethodField;
+        
+        private string perforationCompanyField;
+        
+        private string carrierManufacturerField;
+        
+        private lengthMeasure carrierSizeField;
+        
+        private string carrierDescriptionField;
+        
+        private string chargeManufacturerField;
+        
+        private lengthMeasure chargeSizeField;
+        
+        private massMeasure chargeWeightField;
+        
+        private string chargeTypeField;
+        
+        private string refLogField;
+        
+        private string gunCentralizedField;
+        
+        private lengthMeasure gunSizeField;
+        
+        private string gunDesciptionField;
+        
+        private bool gunLeftInHoleField;
+        
+        private bool gunLeftInHoleFieldSpecified;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>index number of stage</summary>
+        [System.ComponentModel.DescriptionAttribute("index number of stage")]
+        public short stageNumber {
+            get {
+                return this.stageNumberField;
+            }
+            set {
+                this.stageNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool stageNumberSpecified {
+            get {
+                return this.stageNumberFieldSpecified;
+            }
+            set {
+                this.stageNumberFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Perf-Bottom of packer set depth</summary>
+        [System.ComponentModel.DescriptionAttribute("Perf-Bottom of packer set depth")]
+        public measuredDepthCoord bottomPackerSet {
+            get {
+                return this.bottomPackerSetField;
+            }
+            set {
+                this.bottomPackerSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Perforation fluid type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Perforation fluid type")]
+        public string perforationFluidType {
+            get {
+                return this.perforationFluidTypeField;
+            }
+            set {
+                this.perforationFluidTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>hydrostaticPressure</summary>
+        [System.ComponentModel.DescriptionAttribute("hydrostaticPressure")]
+        public pressureMeasure hydrostaticPressure {
+            get {
+                return this.hydrostaticPressureField;
+            }
+            set {
+                this.hydrostaticPressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Surface pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Surface pressure")]
+        public pressureMeasure surfacePressure {
+            get {
+                return this.surfacePressureField;
+            }
+            set {
+                this.surfacePressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reservoir pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Reservoir pressure")]
+        public pressureMeasure reservoirPressure {
+            get {
+                return this.reservoirPressureField;
+            }
+            set {
+                this.reservoirPressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The density of fluid</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of fluid")]
+        public densityMeasure fluidDensity {
+            get {
+                return this.fluidDensityField;
+            }
+            set {
+                this.fluidDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid level.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid level.")]
+        public measuredDepthCoord fluidLevel {
+            get {
+                return this.fluidLevelField;
+            }
+            set {
+                this.fluidLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The conveyance method</summary>
+        [System.ComponentModel.DescriptionAttribute("The conveyance method")]
+        public PerfConveyanceMethod conveyanceMethod {
+            get {
+                return this.conveyanceMethodField;
+            }
+            set {
+                this.conveyanceMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool conveyanceMethodSpecified {
+            get {
+                return this.conveyanceMethodFieldSpecified;
+            }
+            set {
+                this.conveyanceMethodFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Number of shots planned</summary>
+        [System.ComponentModel.DescriptionAttribute("Number of shots planned")]
+        public short shotsPlanned {
+            get {
+                return this.shotsPlannedField;
+            }
+            set {
+                this.shotsPlannedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool shotsPlannedSpecified {
+            get {
+                return this.shotsPlannedFieldSpecified;
+            }
+            set {
+                this.shotsPlannedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Number of shots per unit length (ft, m)</summary>
+        [System.ComponentModel.DescriptionAttribute("Number of shots per unit length (ft, m)")]
+        public perLengthMeasure shotsDensity {
+            get {
+                return this.shotsDensityField;
+            }
+            set {
+                this.shotsDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The number of missed firings from the gun.</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of missed firings from the gun.")]
+        public short shotsMisfired {
+            get {
+                return this.shotsMisfiredField;
+            }
+            set {
+                this.shotsMisfiredField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool shotsMisfiredSpecified {
+            get {
+                return this.shotsMisfiredFieldSpecified;
+            }
+            set {
+                this.shotsMisfiredFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>orientaton</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("orientaton")]
+        public string orientation {
+            get {
+                return this.orientationField;
+            }
+            set {
+                this.orientationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of orientaton method</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of orientaton method")]
+        public string orientationMethod {
+            get {
+                return this.orientationMethodField;
+            }
+            set {
+                this.orientationMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of company providing the perforation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of company providing the perforation.")]
+        public string perforationCompany {
+            get {
+                return this.perforationCompanyField;
+            }
+            set {
+                this.perforationCompanyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The manufacturer of the carrier.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The manufacturer of the carrier.")]
+        public string carrierManufacturer {
+            get {
+                return this.carrierManufacturerField;
+            }
+            set {
+                this.carrierManufacturerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Size of the carrier.</summary>
+        [System.ComponentModel.DescriptionAttribute("Size of the carrier.")]
+        public lengthMeasure carrierSize {
+            get {
+                return this.carrierSizeField;
+            }
+            set {
+                this.carrierSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description from carrier</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Description from carrier")]
+        public string carrierDescription {
+            get {
+                return this.carrierDescriptionField;
+            }
+            set {
+                this.carrierDescriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The manufacturer of the charge.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The manufacturer of the charge.")]
+        public string chargeManufacturer {
+            get {
+                return this.chargeManufacturerField;
+            }
+            set {
+                this.chargeManufacturerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The size of the charge.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the charge.")]
+        public lengthMeasure chargeSize {
+            get {
+                return this.chargeSizeField;
+            }
+            set {
+                this.chargeSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The weight of the charge.</summary>
+        [System.ComponentModel.DescriptionAttribute("The weight of the charge.")]
+        public massMeasure chargeWeight {
+            get {
+                return this.chargeWeightField;
+            }
+            set {
+                this.chargeWeightField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The type of the charge.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The type of the charge.")]
+        public string chargeType {
+            get {
+                return this.chargeTypeField;
+            }
+            set {
+                this.chargeTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to the log</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the log")]
+        public string refLog {
+            get {
+                return this.refLogField;
+            }
+            set {
+                this.refLogField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True if centralized, else decentralized.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("True if centralized, else decentralized.")]
+        public string gunCentralized {
+            get {
+                return this.gunCentralizedField;
+            }
+            set {
+                this.gunCentralizedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The size of the perforation gun.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the perforation gun.")]
+        public lengthMeasure gunSize {
+            get {
+                return this.gunSizeField;
+            }
+            set {
+                this.gunSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description about the perforating gun.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Description about the perforating gun.")]
+        public string gunDesciption {
+            get {
+                return this.gunDesciptionField;
+            }
+            set {
+                this.gunDesciptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating whether the gun is left in hole or not.</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether the gun is left in hole or not.")]
+        public bool gunLeftInHole {
+            get {
+                return this.gunLeftInHoleField;
+            }
+            set {
+                this.gunLeftInHoleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool gunLeftInHoleSpecified {
+            get {
+                return this.gunLeftInHoleFieldSpecified;
+            }
+            set {
+                this.gunLeftInHoleFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum PerfConveyanceMethod {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/A")]
+        NA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Slick Line")]
+        SlickLine,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Conveyed")]
+        TubingConveyed,
+        
+        /// <remarks/>
+        Wireline,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perforatingExtension {
+        
+        private string perforationSetRefIDField;
+        
+        private cs_perforating[] perforatingField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        /// <remarks/>
+        /// <summary>The perforationSet reference ID.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The perforationSet reference ID.")]
+        public string perforationSetRefID {
+            get {
+                return this.perforationSetRefIDField;
+            }
+            set {
+                this.perforationSetRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Information on perforating event.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("perforating")]
+        [System.ComponentModel.DescriptionAttribute("Information on perforating event.")]
+        public cs_perforating[] perforating {
+            get {
+                return this.perforatingField;
+            }
+            set {
+                this.perforatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_waitingOnExtension {
+        
+        private string subCategoryField;
+        
+        private string chargeTypeCodeField;
+        
+        private string businessOrgWaitingOnField;
+        
+        private bool isNoChargeToProducerField;
+        
+        private bool isNoChargeToProducerFieldSpecified;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Sub category</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Sub category")]
+        public string subCategory {
+            get {
+                return this.subCategoryField;
+            }
+            set {
+                this.subCategoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Code for charge type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Code for charge type")]
+        public string chargeTypeCode {
+            get {
+                return this.chargeTypeCodeField;
+            }
+            set {
+                this.chargeTypeCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Business organization waiting on</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Business organization waiting on")]
+        public string businessOrgWaitingOn {
+            get {
+                return this.businessOrgWaitingOnField;
+            }
+            set {
+                this.businessOrgWaitingOnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating whether producer is charged or not</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether producer is charged or not")]
+        public bool isNoChargeToProducer {
+            get {
+                return this.isNoChargeToProducerField;
+            }
+            set {
+                this.isNoChargeToProducerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isNoChargeToProducerSpecified {
+            get {
+                return this.isNoChargeToProducerFieldSpecified;
+            }
+            set {
+                this.isNoChargeToProducerFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_pressureTestExtension {
+        
+        private lengthMeasure diaOrificeSizeField;
+        
+        private Energistics.DataAccess.Timestamp dTimeNextTestDateField;
+        
+        private bool dTimeNextTestDateFieldSpecified;
+        
+        private volumeFlowRateMeasure flowrateRateBledField;
+        
+        private string identifierJobField;
+        
+        private bool isSuccessField;
+        
+        private bool isSuccessFieldSpecified;
+        
+        private pressureMeasure maxPressureDurationField;
+        
+        private string circulatingPositionField;
+        
+        private string fluidBledTypeField;
+        
+        private string orientationMethodField;
+        
+        private string testFluidTypeField;
+        
+        private string testSubTypeField;
+        
+        private string testTypeField;
+        
+        private pressureMeasure annulusPressureField;
+        
+        private string wellPressureUsedField;
+        
+        private string str10ReferenceField;
+        
+        private string uidAssemblyField;
+        
+        private volumeMeasure volumeBledField;
+        
+        private volumeMeasure volumeLostField;
+        
+        private volumeMeasure volumePumpedField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Orifice Size</summary>
+        [System.ComponentModel.DescriptionAttribute("Orifice Size")]
+        public lengthMeasure diaOrificeSize {
+            get {
+                return this.diaOrificeSizeField;
+            }
+            set {
+                this.diaOrificeSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Next Test Date</summary>
+        [System.ComponentModel.DescriptionAttribute("Next Test Date")]
+        public Energistics.DataAccess.Timestamp dTimeNextTestDate {
+            get {
+                return this.dTimeNextTestDateField;
+            }
+            set {
+                this.dTimeNextTestDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dTimeNextTestDateSpecified {
+            get {
+                return this.dTimeNextTestDateFieldSpecified;
+            }
+            set {
+                this.dTimeNextTestDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Rate Bled</summary>
+        [System.ComponentModel.DescriptionAttribute("Rate Bled")]
+        public volumeFlowRateMeasure flowrateRateBled {
+            get {
+                return this.flowrateRateBledField;
+            }
+            set {
+                this.flowrateRateBledField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>String Being Tested</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("String Being Tested")]
+        public string identifierJob {
+            get {
+                return this.identifierJobField;
+            }
+            set {
+                this.identifierJobField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True if successful</summary>
+        [System.ComponentModel.DescriptionAttribute("True if successful")]
+        public bool isSuccess {
+            get {
+                return this.isSuccessField;
+            }
+            set {
+                this.isSuccessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isSuccessSpecified {
+            get {
+                return this.isSuccessFieldSpecified;
+            }
+            set {
+                this.isSuccessFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum pressure held during test</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum pressure held during test")]
+        public pressureMeasure maxPressureDuration {
+            get {
+                return this.maxPressureDurationField;
+            }
+            set {
+                this.maxPressureDurationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Circulating position</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Circulating position")]
+        public string circulatingPosition {
+            get {
+                return this.circulatingPositionField;
+            }
+            set {
+                this.circulatingPositionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid bled type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Fluid bled type")]
+        public string fluidBledType {
+            get {
+                return this.fluidBledTypeField;
+            }
+            set {
+                this.fluidBledTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of orientaton method</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of orientaton method")]
+        public string orientationMethod {
+            get {
+                return this.orientationMethodField;
+            }
+            set {
+                this.orientationMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Test fluid type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Test fluid type")]
+        public string testFluidType {
+            get {
+                return this.testFluidTypeField;
+            }
+            set {
+                this.testFluidTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Test sub type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Test sub type")]
+        public string testSubType {
+            get {
+                return this.testSubTypeField;
+            }
+            set {
+                this.testSubTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Test type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Test type")]
+        public string testType {
+            get {
+                return this.testTypeField;
+            }
+            set {
+                this.testTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Annulus pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Annulus pressure")]
+        public pressureMeasure annulusPressure {
+            get {
+                return this.annulusPressureField;
+            }
+            set {
+                this.annulusPressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Well pressure used</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Well pressure used")]
+        public string wellPressureUsed {
+            get {
+                return this.wellPressureUsedField;
+            }
+            set {
+                this.wellPressureUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference #</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference #")]
+        public string str10Reference {
+            get {
+                return this.str10ReferenceField;
+            }
+            set {
+                this.str10ReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Well (Assembly)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Well (Assembly)")]
+        public string uidAssembly {
+            get {
+                return this.uidAssemblyField;
+            }
+            set {
+                this.uidAssemblyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Volume Bled</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume Bled")]
+        public volumeMeasure volumeBled {
+            get {
+                return this.volumeBledField;
+            }
+            set {
+                this.volumeBledField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Volume Lost</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume Lost")]
+        public volumeMeasure volumeLost {
+            get {
+                return this.volumeLostField;
+            }
+            set {
+                this.volumeLostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Volume Pumped</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume Pumped")]
+        public volumeMeasure volumePumped {
+            get {
+                return this.volumePumpedField;
+            }
+            set {
+                this.volumePumpedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_jobExtension {
+        
+        private string jobReasonField;
+        
+        private string jobStatusField;
+        
+        private string primaryMotivationForJobField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Comment on the reason for the job</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment on the reason for the job")]
+        public string jobReason {
+            get {
+                return this.jobReasonField;
+            }
+            set {
+                this.jobReasonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Status of job</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Status of job")]
+        public string jobStatus {
+            get {
+                return this.jobStatusField;
+            }
+            set {
+                this.jobStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The primary reason for doing this job.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The primary reason for doing this job.")]
+        public string primaryMotivationForJob {
+            get {
+                return this.primaryMotivationForJobField;
+            }
+            set {
+                this.primaryMotivationForJobField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_acidizefracExtension {
+        
+        private string stimJobIDField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        /// <remarks/>
+        /// <summary>Reference to stimJob</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to stimJob")]
+        public string stimJobID {
+            get {
+                return this.stimJobIDField;
+            }
+            set {
+                this.stimJobIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_BHPExtension {
+        
+        private string bHPRefIDField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Reference to bottom hole pressure</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to bottom hole pressure")]
+        public string BHPRefID {
+            get {
+                return this.bHPRefIDField;
+            }
+            set {
+                this.bHPRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_lostCirculationExtension {
+        
+        private volumeMeasure volumeLostField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>Volume lost</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume lost")]
+        public volumeMeasure volumeLost {
+            get {
+                return this.volumeLostField;
+            }
+            set {
+                this.volumeLostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_directionalSurveyExtension {
+        
+        private string trajectoryRefIDField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>trajectory reference id.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("trajectory reference id.")]
+        public string trajectoryRefID {
+            get {
+                return this.trajectoryRefIDField;
+            }
+            set {
+                this.trajectoryRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_cleanFillExtension {
+        
+        private string fillCleaningMethodField;
+        
+        private lengthMeasure toolSizeField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>method of fill and cleaning</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("method of fill and cleaning")]
+        public string fillCleaningMethod {
+            get {
+                return this.fillCleaningMethodField;
+            }
+            set {
+                this.fillCleaningMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the size of the tool</summary>
+        [System.ComponentModel.DescriptionAttribute("the size of the tool")]
+        public lengthMeasure toolSize {
+            get {
+                return this.toolSizeField;
+            }
+            set {
+                this.toolSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_cementExtension {
+        
+        private string cementJobRefIDField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        /// <remarks/>
+        /// <summary>unique id of cementJob</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("unique id of cementJob")]
+        public string cementJobRefID {
+            get {
+                return this.cementJobRefIDField;
+            }
+            set {
+                this.cementJobRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_eventExtension {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("BHPExtension", typeof(cs_BHPExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("acidizeFracExtension", typeof(cs_acidizefracExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("cementExtension", typeof(cs_cementExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("cleanFillExtension", typeof(cs_cleanFillExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("directionalSurveyExtension", typeof(cs_directionalSurveyExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("downholeExtension", typeof(cs_downholeExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("fluidReportExtension", typeof(cs_fluidReportExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("jobExtension", typeof(cs_jobExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("lostCirculationExtension", typeof(cs_lostCirculationExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("perforationExtension", typeof(cs_perforatingExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("pressureTestExtension", typeof(cs_pressureTestExtension))]
+        [System.Xml.Serialization.XmlElementAttribute("waitingOnExtension", typeof(cs_waitingOnExtension))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class downholeStringRef {
+        
+        private string[] stringEquipmentRefIDField;
+        
+        private string downholeStringRefIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
+        public string[] stringEquipmentRefID {
+            get {
+                return this.stringEquipmentRefIDField;
+            }
+            set {
+                this.stringEquipmentRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string downholeStringRefID {
+            get {
+                return this.downholeStringRefIDField;
+            }
+            set {
+                this.downholeStringRefIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class boreholeStringRef {
+        
+        private string[] stringEquipmentRefIDField;
+        
+        private string boreholeStringRefIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
+        public string[] stringEquipmentRefID {
+            get {
+                return this.stringEquipmentRefIDField;
+            }
+            set {
+                this.stringEquipmentRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string boreholeStringRefID {
+            get {
+                return this.boreholeStringRefIDField;
+            }
+            set {
+                this.boreholeStringRefIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class downholeComponentRef {
+        
+        private string[] stringEquipmentRefIDField;
+        
+        private boreholeStringRef[] boreholeStringRefField;
+        
+        private downholeStringRef[] downholeStringsRefField;
+        
+        private string[] perforationSetRefIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("stringEquipmentRefID")]
+        public string[] stringEquipmentRefID {
+            get {
+                return this.stringEquipmentRefIDField;
+            }
+            set {
+                this.stringEquipmentRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("boreholeStringRef")]
+        public boreholeStringRef[] boreholeStringRef {
+            get {
+                return this.boreholeStringRefField;
+            }
+            set {
+                this.boreholeStringRefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("downholeStringsRef")]
+        public downholeStringRef[] downholeStringsRef {
+            get {
+                return this.downholeStringsRefField;
+            }
+            set {
+                this.downholeStringsRefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("perforationSetRefID")]
+        public string[] perforationSetRefID {
+            get {
+                return this.perforationSetRefIDField;
+            }
+            set {
+                this.perforationSetRefIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class eventType {
+        
+        private EventClassType classField;
+        
+        private bool classFieldSpecified;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>Class of the event type (job, daily report, etc.)</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Class of the event type (job, daily report, etc.)")]
+        public EventClassType @class {
+            get {
+                return this.classField;
+            }
+            set {
+                this.classField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool classSpecified {
+            get {
+                return this.classFieldSpecified;
+            }
+            set {
+                this.classFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum EventClassType {
+        
+        /// <remarks/>
+        Job,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Daily Report")]
+        DailyReport,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Time Log (Time Measure)")]
+        TimeLogTimeMeasure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Daily Cost")]
+        DailyCost,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NPT (lost time event)")]
+        NPTlosttimeevent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Failure (downhole equipment only)")]
+        Failuredownholeequipmentonly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mud Attributes")]
+        MudAttributes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Job Plan (phases)")]
+        JobPlanphases,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_wellCMLedger {
+        
+        private string nameWellField;
+        
+        private string nameWellboreField;
+        
+        private string nameField;
+        
+        private string parentEventIDField;
+        
+        private Energistics.DataAccess.Timestamp dTimStartField;
+        
+        private bool dTimStartFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp dTimEndField;
+        
+        private bool dTimEndFieldSpecified;
+        
+        private timeMeasure durationField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private short eventOrderField;
+        
+        private bool eventOrderFieldSpecified;
+        
+        private string[] rigIDField;
+        
+        private ActivityCode activityCodeField;
+        
+        private bool activityCodeFieldSpecified;
+        
+        private eventType typeField;
+        
+        private bool isPlanField;
+        
+        private bool isPlanFieldSpecified;
+        
+        private string workOrderIDField;
+        
+        private downholeComponentRef downholeComponentRefField;
+        
+        private cs_eventExtension[] eventExtensionField;
+        
+        private string businessAssociateField;
+        
+        private string responsiblePersonField;
+        
+        private string contactField;
+        
+        private cs_dayCost[] costField;
+        
+        private bool nonproductiveField;
+        
+        private bool nonproductiveFieldSpecified;
+        
+        private bool troubleField;
+        
+        private bool troubleFieldSpecified;
+        
+        private bool preventiveMaintenanceField;
+        
+        private bool preventiveMaintenanceFieldSpecified;
+        
+        private bool unplannedField;
+        
+        private bool unplannedFieldSpecified;
+        
+        private string phaseField;
+        
+        private cs_participant participantField;
+        
+        private string commentField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string descriptionField;
+        
+        private string uidWellField;
+        
+        private string uidWellboreField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Well name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Well name.")]
+        public string nameWell {
+            get {
+                return this.nameWellField;
+            }
+            set {
+                this.nameWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Wellbore name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Wellbore name.")]
+        public string nameWellbore {
+            get {
+                return this.nameWellboreField;
+            }
+            set {
+                this.nameWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ledger name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Ledger name.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Parent event reference id.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Parent event reference id.")]
+        public string parentEventID {
+            get {
+                return this.parentEventIDField;
+            }
+            set {
+                this.parentEventIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date and time that activities started.</summary>
+        [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
+        public Energistics.DataAccess.Timestamp dTimStart {
+            get {
+                return this.dTimStartField;
+            }
+            set {
+                this.dTimStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dTimStartSpecified {
+            get {
+                return this.dTimStartFieldSpecified;
+            }
+            set {
+                this.dTimStartFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date and time that activities were completed.</summary>
+        [System.ComponentModel.DescriptionAttribute("Date and time that activities were completed.")]
+        public Energistics.DataAccess.Timestamp dTimEnd {
+            get {
+                return this.dTimEndField;
+            }
+            set {
+                this.dTimEndField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dTimEndSpecified {
+            get {
+                return this.dTimEndFieldSpecified;
+            }
+            set {
+                this.dTimEndFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The activity duration (commonly in hours).</summary>
+        [System.ComponentModel.DescriptionAttribute("The activity duration (commonly in hours).")]
+        public timeMeasure duration {
+            get {
+                return this.durationField;
+            }
+            set {
+                this.durationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at Top of Interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at Top of Interval.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at bottom of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at bottom of the section.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Order number of event.</summary>
+        [System.ComponentModel.DescriptionAttribute("Order number of event.")]
+        public short eventOrder {
+            get {
+                return this.eventOrderField;
+            }
+            set {
+                this.eventOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool eventOrderSpecified {
+            get {
+                return this.eventOrderFieldSpecified;
+            }
+            set {
+                this.eventOrderFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Rig reference id.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("rigID")]
+        [System.ComponentModel.DescriptionAttribute("Rig reference id.")]
+        public string[] rigID {
+            get {
+                return this.rigIDField;
+            }
+            set {
+                this.rigIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Activity code</summary>
+        [System.ComponentModel.DescriptionAttribute("Activity code")]
+        public ActivityCode activityCode {
+            get {
+                return this.activityCodeField;
+            }
+            set {
+                this.activityCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool activityCodeSpecified {
+            get {
+                return this.activityCodeFieldSpecified;
+            }
+            set {
+                this.activityCodeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Comment on type of this event, either referring to a job type or an  activity type e.g. a safety meeting.</summary>
+        [System.ComponentModel.DescriptionAttribute("Comment on type of this event, either referring to a job type or an  activity typ" +
+            "e e.g. a safety meeting.")]
+        public eventType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True if planned.</summary>
+        [System.ComponentModel.DescriptionAttribute("True if planned.")]
+        public bool isPlan {
+            get {
+                return this.isPlanField;
+            }
+            set {
+                this.isPlanField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isPlanSpecified {
+            get {
+                return this.isPlanFieldSpecified;
+            }
+            set {
+                this.isPlanFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extension event for work order id.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Extension event for work order id.")]
+        public string workOrderID {
+            get {
+                return this.workOrderIDField;
+            }
+            set {
+                this.workOrderIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>this is to associate with verb(Event) and noun (downholeEquipment). to refer to the whole downholeComponent using downholeComponentExtension.</summary>
+        [System.ComponentModel.DescriptionAttribute("this is to associate with verb(Event) and noun (downholeEquipment). to refer to t" +
+            "he whole downholeComponent using downholeComponentExtension.")]
+        public downholeComponentRef downholeComponentRef {
+            get {
+                return this.downholeComponentRefField;
+            }
+            set {
+                this.downholeComponentRefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Event extensions</summary>
+        [System.Xml.Serialization.XmlElementAttribute("eventExtension")]
+        [System.ComponentModel.DescriptionAttribute("Event extensions")]
+        public cs_eventExtension[] eventExtension {
+            get {
+                return this.eventExtensionField;
+            }
+            set {
+                this.eventExtensionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Service company or business</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Service company or business")]
+        public string businessAssociate {
+            get {
+                return this.businessAssociateField;
+            }
+            set {
+                this.businessAssociateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name or information about person responsible who is implementing the service or job.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name or information about person responsible who is implementing the service or j" +
+            "ob.")]
+        public string responsiblePerson {
+            get {
+                return this.responsiblePersonField;
+            }
+            set {
+                this.responsiblePersonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Contact name or person to get in touch with. Might not necessarily be the person responsible.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Contact name or person to get in touch with. Might not necessarily be the person " +
+            "responsible.")]
+        public string contact {
+            get {
+                return this.contactField;
+            }
+            set {
+                this.contactField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The job or event cost detail.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("cost")]
+        [System.ComponentModel.DescriptionAttribute("The job or event cost detail.")]
+        public cs_dayCost[] cost {
+            get {
+                return this.costField;
+            }
+            set {
+                this.costField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True if event is not productive.</summary>
+        [System.ComponentModel.DescriptionAttribute("True if event is not productive.")]
+        public bool nonproductive {
+            get {
+                return this.nonproductiveField;
+            }
+            set {
+                this.nonproductiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nonproductiveSpecified {
+            get {
+                return this.nonproductiveFieldSpecified;
+            }
+            set {
+                this.nonproductiveFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True if event implies is in-trouble</summary>
+        [System.ComponentModel.DescriptionAttribute("True if event implies is in-trouble")]
+        public bool trouble {
+            get {
+                return this.troubleField;
+            }
+            set {
+                this.troubleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool troubleSpecified {
+            get {
+                return this.troubleFieldSpecified;
+            }
+            set {
+                this.troubleFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True of event is for preventive maintenance</summary>
+        [System.ComponentModel.DescriptionAttribute("True of event is for preventive maintenance")]
+        public bool preventiveMaintenance {
+            get {
+                return this.preventiveMaintenanceField;
+            }
+            set {
+                this.preventiveMaintenanceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool preventiveMaintenanceSpecified {
+            get {
+                return this.preventiveMaintenanceFieldSpecified;
+            }
+            set {
+                this.preventiveMaintenanceFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True if there is no planning infomation for this activity.</summary>
+        [System.ComponentModel.DescriptionAttribute("True if there is no planning infomation for this activity.")]
+        public bool unplanned {
+            get {
+                return this.unplannedField;
+            }
+            set {
+                this.unplannedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool unplannedSpecified {
+            get {
+                return this.unplannedFieldSpecified;
+            }
+            set {
+                this.unplannedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Phase (large activity classification) e.g. Drill Surface Hole.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
+        [System.ComponentModel.DescriptionAttribute("Phase (large activity classification) e.g. Drill Surface Hole.")]
+        public string phase {
+            get {
+                return this.phaseField;
+            }
+            set {
+                this.phaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Participant points to the involved witsmlobjects</summary>
+        [System.ComponentModel.DescriptionAttribute("Participant points to the involved witsmlobjects")]
+        public cs_participant participant {
+            get {
+                return this.participantField;
+            }
+            set {
+                this.participantField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Comment on this ledger</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment on this ledger")]
+        public string comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of this ledger</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Description of this ledger")]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
+            "the (possibly non-unique) nameWell.")]
+        public string uidWell {
+            get {
+                return this.uidWellField;
+            }
+            set {
+                this.uidWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
+            "nced by the (possibly non-unique) nameWellbore.")]
+        public string uidWellbore {
+            get {
+                return this.uidWellboreField;
+            }
+            set {
+                this.uidWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_slotsInterval {
+        
+        private string stringEquipmentRefUIDField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private cs_intervalStatusHistory[] intervalStatusHistoryField;
+        
+        private cs_eventInfo eventHistoryField;
+        
+        private string[] geologyFeatureRefIDField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string stringEquipmentRefUID {
+            get {
+                return this.stringEquipmentRefUIDField;
+            }
+            set {
+                this.stringEquipmentRefUIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the top perforation.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the bottom perforation.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval history information</summary>
+        [System.Xml.Serialization.XmlElementAttribute("intervalStatusHistory")]
+        [System.ComponentModel.DescriptionAttribute("The contactInterval history information")]
+        public cs_intervalStatusHistory[] intervalStatusHistory {
+            get {
+                return this.intervalStatusHistoryField;
+            }
+            set {
+                this.intervalStatusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
+        public cs_eventInfo eventHistory {
+            get {
+                return this.eventHistoryField;
+            }
+            set {
+                this.eventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        public string[] geologyFeatureRefID {
+            get {
+                return this.geologyFeatureRefIDField;
+            }
+            set {
+                this.geologyFeatureRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_intervalStatusHistory {
+        
+        private PhysicalStatus physicalStatusField;
+        
+        private bool physicalStatusFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp startDateField;
+        
+        private bool startDateFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp endDateField;
+        
+        private bool endDateFieldSpecified;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private double allocationFactorField;
+        
+        private bool allocationFactorFieldSpecified;
+        
+        private string commentField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The physical status of an interval (e.g., open, closed, proposed)</summary>
+        [System.ComponentModel.DescriptionAttribute("The physical status of an interval (e.g., open, closed, proposed)")]
+        public PhysicalStatus physicalStatus {
+            get {
+                return this.physicalStatusField;
+            }
+            set {
+                this.physicalStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool physicalStatusSpecified {
+            get {
+                return this.physicalStatusFieldSpecified;
+            }
+            set {
+                this.physicalStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The start date of status and allocation factor</summary>
+        [System.ComponentModel.DescriptionAttribute("The start date of status and allocation factor")]
+        public Energistics.DataAccess.Timestamp startDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool startDateSpecified {
+            get {
+                return this.startDateFieldSpecified;
+            }
+            set {
+                this.startDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The end date of status and allocation factor</summary>
+        [System.ComponentModel.DescriptionAttribute("The end date of status and allocation factor")]
+        public Energistics.DataAccess.Timestamp endDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool endDateSpecified {
+            get {
+                return this.endDateFieldSpecified;
+            }
+            set {
+                this.endDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured top depth of the interval</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top depth of the interval")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured bottom depth of the interval</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom depth of the interval")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore</summary>
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("defines the proportional amount of fluid from the well completion  that is flowin" +
+            "g through this interval whithin a wellbore")]
+        public double allocationFactor {
+            get {
+                return this.allocationFactorField;
+            }
+            set {
+                this.allocationFactorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool allocationFactorSpecified {
+            get {
+                return this.allocationFactorFieldSpecified;
+            }
+            set {
+                this.allocationFactorFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A remark about the interval over this period of time</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A remark about the interval over this period of time")]
+        public string comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum PhysicalStatus {
+        
+        /// <remarks/>
+        open,
+        
+        /// <remarks/>
+        closed,
+        
+        /// <remarks/>
+        proposed,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_eventInfo {
+        
+        private cs_eventRefInfo beginEventField;
+        
+        private cs_eventRefInfo endEventField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>The referencing event was initailized</summary>
+        [System.ComponentModel.DescriptionAttribute("The referencing event was initailized")]
+        public cs_eventRefInfo beginEvent {
+            get {
+                return this.beginEventField;
+            }
+            set {
+                this.beginEventField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The referencing event when the even was end</summary>
+        [System.ComponentModel.DescriptionAttribute("The referencing event when the even was end")]
+        public cs_eventRefInfo endEvent {
+            get {
+                return this.endEventField;
+            }
+            set {
+                this.endEventField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_eventRefInfo {
+        
+        private string eventRefIDField;
+        
+        private Energistics.DataAccess.Timestamp eventDateField;
+        
+        private bool eventDateFieldSpecified;
+        
+        /// <remarks/>
+        /// <summary>The referencing eventledger ID</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The referencing eventledger ID")]
+        public string eventRefID {
+            get {
+                return this.eventRefIDField;
+            }
+            set {
+                this.eventRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>install/pull date</summary>
+        [System.ComponentModel.DescriptionAttribute("install/pull date")]
+        public Energistics.DataAccess.Timestamp eventDate {
+            get {
+                return this.eventDateField;
+            }
+            set {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool eventDateSpecified {
+            get {
+                return this.eventDateFieldSpecified;
+            }
+            set {
+                this.eventDateFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perforationStatusHistory {
+        
+        private PerforationStatus perforationStatusField;
+        
+        private bool perforationStatusFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp startDateField;
+        
+        private bool startDateFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp endDateField;
+        
+        private bool endDateFieldSpecified;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private double allocationFactorField;
+        
+        private bool allocationFactorFieldSpecified;
+        
+        private string commentField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>perforation status</summary>
+        [System.ComponentModel.DescriptionAttribute("perforation status")]
+        public PerforationStatus perforationStatus {
+            get {
+                return this.perforationStatusField;
+            }
+            set {
+                this.perforationStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool perforationStatusSpecified {
+            get {
+                return this.perforationStatusFieldSpecified;
+            }
+            set {
+                this.perforationStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the start date of status</summary>
+        [System.ComponentModel.DescriptionAttribute("the start date of status")]
+        public Energistics.DataAccess.Timestamp startDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool startDateSpecified {
+            get {
+                return this.startDateFieldSpecified;
+            }
+            set {
+                this.startDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the end date of status</summary>
+        [System.ComponentModel.DescriptionAttribute("the end date of status")]
+        public Energistics.DataAccess.Timestamp endDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool endDateSpecified {
+            get {
+                return this.endDateFieldSpecified;
+            }
+            set {
+                this.endDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured top of perforation</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top of perforation")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured bottom of perforation</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom of perforation")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>defines the proportional amount of fluid from the well completion  that is flowing through this interval whithin a wellbore</summary>
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("defines the proportional amount of fluid from the well completion  that is flowin" +
+            "g through this interval whithin a wellbore")]
+        public double allocationFactor {
+            get {
+                return this.allocationFactorField;
+            }
+            set {
+                this.allocationFactorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool allocationFactorSpecified {
+            get {
+                return this.allocationFactorFieldSpecified;
+            }
+            set {
+                this.allocationFactorFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The description about the status</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description about the status")]
+        public string comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum PerforationStatus {
+        
+        /// <remarks/>
+        open,
+        
+        /// <remarks/>
+        squeezed,
+        
+        /// <remarks/>
+        proposed,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perforationSetInterval {
+        
+        private string perforationSetRefIDField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private cs_perforationStatusHistory[] perforationStatusHistoryField;
+        
+        private cs_eventInfo eventHistoryField;
+        
+        private string[] geologyFeatureRefIDField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string perforationSetRefID {
+            get {
+                return this.perforationSetRefIDField;
+            }
+            set {
+                this.perforationSetRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the top perforation.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the bottom perforation.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval history information</summary>
+        [System.Xml.Serialization.XmlElementAttribute("perforationStatusHistory")]
+        [System.ComponentModel.DescriptionAttribute("The contactInterval history information")]
+        public cs_perforationStatusHistory[] perforationStatusHistory {
+            get {
+                return this.perforationStatusHistoryField;
+            }
+            set {
+                this.perforationStatusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
+        public cs_eventInfo eventHistory {
+            get {
+                return this.eventHistoryField;
+            }
+            set {
+                this.eventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        public string[] geologyFeatureRefID {
+            get {
+                return this.geologyFeatureRefIDField;
+            }
+            set {
+                this.geologyFeatureRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_openHoleInterval {
+        
+        private string boreholeStringRefIDField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private cs_intervalStatusHistory[] intervalStatusHistoryField;
+        
+        private cs_eventInfo eventHistoryField;
+        
+        private string[] geologyFeatureRefIDField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string boreholeStringRefID {
+            get {
+                return this.boreholeStringRefIDField;
+            }
+            set {
+                this.boreholeStringRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the top perforation.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the bottom perforation.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval history information</summary>
+        [System.Xml.Serialization.XmlElementAttribute("intervalStatusHistory")]
+        [System.ComponentModel.DescriptionAttribute("The contactInterval history information")]
+        public cs_intervalStatusHistory[] intervalStatusHistory {
+            get {
+                return this.intervalStatusHistoryField;
+            }
+            set {
+                this.intervalStatusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
+        public cs_eventInfo eventHistory {
+            get {
+                return this.eventHistoryField;
+            }
+            set {
+                this.eventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        public string[] geologyFeatureRefID {
+            get {
+                return this.geologyFeatureRefIDField;
+            }
+            set {
+                this.geologyFeatureRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_gravelPackInterval {
+        
+        private string downholeStringRefIDField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private cs_intervalStatusHistory[] intervalStatusHistoryField;
+        
+        private cs_eventInfo eventHistoryField;
+        
+        private string[] geologyFeatureRefIDField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string downholeStringRefID {
+            get {
+                return this.downholeStringRefIDField;
+            }
+            set {
+                this.downholeStringRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the top perforation.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth of the bottom perforation.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval history information</summary>
+        [System.Xml.Serialization.XmlElementAttribute("intervalStatusHistory")]
+        [System.ComponentModel.DescriptionAttribute("The contactInterval history information")]
+        public cs_intervalStatusHistory[] intervalStatusHistory {
+            get {
+                return this.intervalStatusHistoryField;
+            }
+            set {
+                this.intervalStatusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
+        public cs_eventInfo eventHistory {
+            get {
+                return this.eventHistoryField;
+            }
+            set {
+                this.eventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("geologyFeatureRefID")]
+        public string[] geologyFeatureRefID {
+            get {
+                return this.geologyFeatureRefIDField;
+            }
+            set {
+                this.geologyFeatureRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_contactIntervalSet {
+        
+        private cs_gravelPackInterval[] gravelPackIntervalField;
+        
+        private cs_openHoleInterval[] openHoleIntervalField;
+        
+        private cs_perforationSetInterval[] perforationSetIntervalField;
+        
+        private cs_slotsInterval[] slotsIntervalField;
+        
+        /// <remarks/>
+        /// <summary>gravelPack interval</summary>
+        [System.Xml.Serialization.XmlElementAttribute("gravelPackInterval")]
+        [System.ComponentModel.DescriptionAttribute("gravelPack interval")]
+        public cs_gravelPackInterval[] gravelPackInterval {
+            get {
+                return this.gravelPackIntervalField;
+            }
+            set {
+                this.gravelPackIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>cs_openHole interval</summary>
+        [System.Xml.Serialization.XmlElementAttribute("openHoleInterval")]
+        [System.ComponentModel.DescriptionAttribute("cs_openHole interval")]
+        public cs_openHoleInterval[] openHoleInterval {
+            get {
+                return this.openHoleIntervalField;
+            }
+            set {
+                this.openHoleIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>perforation interval</summary>
+        [System.Xml.Serialization.XmlElementAttribute("perforationSetInterval")]
+        [System.ComponentModel.DescriptionAttribute("perforation interval")]
+        public cs_perforationSetInterval[] perforationSetInterval {
+            get {
+                return this.perforationSetIntervalField;
+            }
+            set {
+                this.perforationSetIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>cs_slots interval</summary>
+        [System.Xml.Serialization.XmlElementAttribute("slotsInterval")]
+        [System.ComponentModel.DescriptionAttribute("cs_slots interval")]
+        public cs_slotsInterval[] slotsInterval {
+            get {
+                return this.slotsIntervalField;
+            }
+            set {
+                this.slotsIntervalField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_wellboreCompletion {
+        
+        private string nameWellField;
+        
+        private string nameWellboreField;
+        
+        private string nameWellCompletionField;
+        
+        private string nameField;
+        
+        private string wellboreCompletionNoField;
+        
+        private string wellboreCompletionAliasField;
+        
+        private cs_eventInfo[] evenHistoryField;
+        
+        private Energistics.DataAccess.Timestamp wellboreCompletionDateField;
+        
+        private bool wellboreCompletionDateFieldSpecified;
+        
+        private string suffixAPIField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private CompletionStatus currentStatusField;
+        
+        private bool currentStatusFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp statusDateField;
+        
+        private bool statusDateFieldSpecified;
+        
+        private CompletionStatusHistory[] statusHistoryField;
+        
+        private cs_contactIntervalSet contactIntervalSetField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidWellField;
+        
+        private string uidWellboreField;
+        
+        private string uidWellCompletionField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the well that contains the completion.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the completion.")]
+        public string nameWell {
+            get {
+                return this.nameWellField;
+            }
+            set {
+                this.nameWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the wellbore that contains the completion.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the completion.")]
+        public string nameWellbore {
+            get {
+                return this.nameWellboreField;
+            }
+            set {
+                this.nameWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the well completion that contains the completion.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well completion that contains the completion.")]
+        public string nameWellCompletion {
+            get {
+                return this.nameWellCompletionField;
+            }
+            set {
+                this.nameWellCompletionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Preferred name</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Preferred name")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>CompletionNo, etc API14</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("CompletionNo, etc API14")]
+        public string wellboreCompletionNo {
+            get {
+                return this.wellboreCompletionNoField;
+            }
+            set {
+                this.wellboreCompletionNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Preferred alias name</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Preferred alias name")]
+        public string wellboreCompletionAlias {
+            get {
+                return this.wellboreCompletionAliasField;
+            }
+            set {
+                this.wellboreCompletionAliasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("evenHistory")]
+        public cs_eventInfo[] evenHistory {
+            get {
+                return this.evenHistoryField;
+            }
+            set {
+                this.evenHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Completion Date</summary>
+        [System.ComponentModel.DescriptionAttribute("Completion Date")]
+        public Energistics.DataAccess.Timestamp wellboreCompletionDate {
+            get {
+                return this.wellboreCompletionDateField;
+            }
+            set {
+                this.wellboreCompletionDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool wellboreCompletionDateSpecified {
+            get {
+                return this.wellboreCompletionDateFieldSpecified;
+            }
+            set {
+                this.wellboreCompletionDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>API suffix.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("API suffix.")]
+        public string suffixAPI {
+            get {
+                return this.suffixAPIField;
+            }
+            set {
+                this.suffixAPIField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at top of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at top of interval.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at base of interval.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at top of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CompletionStatus currentStatus {
+            get {
+                return this.currentStatusField;
+            }
+            set {
+                this.currentStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool currentStatusSpecified {
+            get {
+                return this.currentStatusFieldSpecified;
+            }
+            set {
+                this.currentStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Energistics.DataAccess.Timestamp statusDate {
+            get {
+                return this.statusDateField;
+            }
+            set {
+                this.statusDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool statusDateSpecified {
+            get {
+                return this.statusDateFieldSpecified;
+            }
+            set {
+                this.statusDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("statusHistory")]
+        public CompletionStatusHistory[] statusHistory {
+            get {
+                return this.statusHistoryField;
+            }
+            set {
+                this.statusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A collection of contact interval information</summary>
+        [System.ComponentModel.DescriptionAttribute("A collection of contact interval information")]
+        public cs_contactIntervalSet contactIntervalSet {
+            get {
+                return this.contactIntervalSetField;
+            }
+            set {
+                this.contactIntervalSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
+            "the (possibly non-unique) nameWell.")]
+        public string uidWell {
+            get {
+                return this.uidWellField;
+            }
+            set {
+                this.uidWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the wellbore..</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore..")]
+        public string uidWellbore {
+            get {
+                return this.uidWellboreField;
+            }
+            set {
+                this.uidWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well completion.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well completion.")]
+        public string uidWellCompletion {
+            get {
+                return this.uidWellCompletionField;
+            }
+            set {
+                this.uidWellCompletionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perforationSet {
+        
+        private string[] boreholeStringRefIDField;
+        
+        private string[] downholeStringRefIDField;
+        
+        private cs_eventInfo eventHistoryField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private lengthMeasure holeDiameterField;
+        
+        private planeAngleMeasure holeAngleField;
+        
+        private string holePatternField;
+        
+        private perLengthMeasure holeDensityField;
+        
+        private short holeCountField;
+        
+        private bool holeCountFieldSpecified;
+        
+        private double frictionFactorField;
+        
+        private bool frictionFactorFieldSpecified;
+        
+        private pressureMeasure frictionPresField;
+        
+        private double dischargeCoefficientField;
+        
+        private bool dischargeCoefficientFieldSpecified;
+        
+        private PerforationToolType perforationToolField;
+        
+        private bool perforationToolFieldSpecified;
+        
+        private lengthMeasure perforationPenetrationField;
+        
+        private lengthMeasure crushZoneDiameterField;
+        
+        private string crushDamageRatioField;
+        
+        private Energistics.DataAccess.Timestamp perforationDateField;
+        
+        private bool perforationDateFieldSpecified;
+        
+        private string permanentRemarksField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>perforation on borehole String</summary>
+        [System.Xml.Serialization.XmlElementAttribute("boreholeStringRefID")]
+        [System.ComponentModel.DescriptionAttribute("perforation on borehole String")]
+        public string[] boreholeStringRefID {
+            get {
+                return this.boreholeStringRefIDField;
+            }
+            set {
+                this.boreholeStringRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>perforation on downholeStringRefID</summary>
+        [System.Xml.Serialization.XmlElementAttribute("downholeStringRefID")]
+        [System.ComponentModel.DescriptionAttribute("perforation on downholeStringRefID")]
+        public string[] downholeStringRefID {
+            get {
+                return this.downholeStringRefIDField;
+            }
+            set {
+                this.downholeStringRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
+        public cs_eventInfo eventHistory {
+            get {
+                return this.eventHistoryField;
+            }
+            set {
+                this.eventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured top depth of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top depth of the hole")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured bottom of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom of the hole")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The diameter of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The diameter of the hole")]
+        public lengthMeasure holeDiameter {
+            get {
+                return this.holeDiameterField;
+            }
+            set {
+                this.holeDiameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The angle of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The angle of the holes")]
+        public planeAngleMeasure holeAngle {
+            get {
+                return this.holeAngleField;
+            }
+            set {
+                this.holeAngleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The pattern of the holes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The pattern of the holes")]
+        public string holePattern {
+            get {
+                return this.holePatternField;
+            }
+            set {
+                this.holePatternField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The density of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the holes")]
+        public perLengthMeasure holeDensity {
+            get {
+                return this.holeDensityField;
+            }
+            set {
+                this.holeDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The number of holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of holes")]
+        public short holeCount {
+            get {
+                return this.holeCountField;
+            }
+            set {
+                this.holeCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool holeCountSpecified {
+            get {
+                return this.holeCountFieldSpecified;
+            }
+            set {
+                this.holeCountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The friction factor of each perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction factor of each perforation set.")]
+        public double frictionFactor {
+            get {
+                return this.frictionFactorField;
+            }
+            set {
+                this.frictionFactorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool frictionFactorSpecified {
+            get {
+                return this.frictionFactorFieldSpecified;
+            }
+            set {
+                this.frictionFactorFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The friction pressure for the perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction pressure for the perforation set.")]
+        public pressureMeasure frictionPres {
+            get {
+                return this.frictionPresField;
+            }
+            set {
+                this.frictionPresField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A coefficient used in the equation for calculation of pressure drop  across a perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("A coefficient used in the equation for calculation of pressure drop  across a per" +
+            "foration set.")]
+        public double dischargeCoefficient {
+            get {
+                return this.dischargeCoefficientField;
+            }
+            set {
+                this.dischargeCoefficientField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dischargeCoefficientSpecified {
+            get {
+                return this.dischargeCoefficientFieldSpecified;
+            }
+            set {
+                this.dischargeCoefficientFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The type of perforation tool.</summary>
+        [System.ComponentModel.DescriptionAttribute("The type of perforation tool.")]
+        public PerforationToolType perforationTool {
+            get {
+                return this.perforationToolField;
+            }
+            set {
+                this.perforationToolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool perforationToolSpecified {
+            get {
+                return this.perforationToolFieldSpecified;
+            }
+            set {
+                this.perforationToolFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The Penetration length of perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("The Penetration length of perforation.")]
+        public lengthMeasure perforationPenetration {
+            get {
+                return this.perforationPenetrationField;
+            }
+            set {
+                this.perforationPenetrationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The diameter of crushed zone</summary>
+        [System.ComponentModel.DescriptionAttribute("The diameter of crushed zone")]
+        public lengthMeasure crushZoneDiameter {
+            get {
+                return this.crushZoneDiameterField;
+            }
+            set {
+                this.crushZoneDiameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The ratio value of cursh damage</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The ratio value of cursh damage")]
+        public string crushDamageRatio {
+            get {
+                return this.crushDamageRatioField;
+            }
+            set {
+                this.crushDamageRatioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The original perforation date</summary>
+        [System.ComponentModel.DescriptionAttribute("The original perforation date")]
+        public Energistics.DataAccess.Timestamp perforationDate {
+            get {
+                return this.perforationDateField;
+            }
+            set {
+                this.perforationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool perforationDateSpecified {
+            get {
+                return this.perforationDateFieldSpecified;
+            }
+            set {
+                this.perforationDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Remarks regarding this perforationSet</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks regarding this perforationSet")]
+        public string permanentRemarks {
+            get {
+                return this.permanentRemarksField;
+            }
+            set {
+                this.permanentRemarksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum PerforationToolType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/A")]
+        NA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Gun")]
+        CasingGun,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Through Tubing Gun")]
+        ThroughTubingGun,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Slots-Machine Cut")]
+        SlotsMachineCut,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Slots-Undercut")]
+        SlotsUndercut,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TCP Gun")]
+        TCPGun,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Strip Gun")]
+        StripGun,
+        
+        /// <remarks/>
+        Drilled,
+        
+        /// <remarks/>
+        Mandrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Coiled Tubing Jet Tool")]
+        CoiledTubingJetTool,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perfHole {
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private lengthMeasure holeDiameterField;
+        
+        private planeAngleMeasure holeAngleField;
+        
+        private string holePatternField;
+        
+        private perLengthMeasure holeDensityField;
+        
+        private short holeCountField;
+        
+        private bool holeCountFieldSpecified;
+        
+        private string remarksField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>The measured top depth of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top depth of the hole")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured bottom of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom of the hole")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The diameter of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The diameter of the hole")]
+        public lengthMeasure holeDiameter {
+            get {
+                return this.holeDiameterField;
+            }
+            set {
+                this.holeDiameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The angle of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The angle of the holes")]
+        public planeAngleMeasure holeAngle {
+            get {
+                return this.holeAngleField;
+            }
+            set {
+                this.holeAngleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The pattern of the holes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The pattern of the holes")]
+        public string holePattern {
+            get {
+                return this.holePatternField;
+            }
+            set {
+                this.holePatternField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The density of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the holes")]
+        public perLengthMeasure holeDensity {
+            get {
+                return this.holeDensityField;
+            }
+            set {
+                this.holeDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The number of holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of holes")]
+        public short holeCount {
+            get {
+                return this.holeCountField;
+            }
+            set {
+                this.holeCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool holeCountSpecified {
+            get {
+                return this.holeCountFieldSpecified;
+            }
+            set {
+                this.holeCountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Remarks regarding this perforated hole</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks regarding this perforated hole")]
+        public string remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                this.remarksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_perfSlot {
+        
+        private lengthMeasure slotHeightField;
+        
+        private lengthMeasure slotWidthField;
+        
+        private lengthMeasure slotCenterDistanceField;
+        
+        private short slotCountField;
+        
+        private bool slotCountFieldSpecified;
+        
+        private string remarksField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        /// <remarks/>
+        /// <summary>The height of slot</summary>
+        [System.ComponentModel.DescriptionAttribute("The height of slot")]
+        public lengthMeasure slotHeight {
+            get {
+                return this.slotHeightField;
+            }
+            set {
+                this.slotHeightField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The width of the slot</summary>
+        [System.ComponentModel.DescriptionAttribute("The width of the slot")]
+        public lengthMeasure slotWidth {
+            get {
+                return this.slotWidthField;
+            }
+            set {
+                this.slotWidthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Distance from center point</summary>
+        [System.ComponentModel.DescriptionAttribute("Distance from center point")]
+        public lengthMeasure slotCenterDistance {
+            get {
+                return this.slotCenterDistanceField;
+            }
+            set {
+                this.slotCenterDistanceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The number of the slot</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of the slot")]
+        public short slotCount {
+            get {
+                return this.slotCountField;
+            }
+            set {
+                this.slotCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool slotCountSpecified {
+            get {
+                return this.slotCountFieldSpecified;
+            }
+            set {
+                this.slotCountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Remarks regarding this perforation slot</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks regarding this perforation slot")]
+        public string remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                this.remarksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_extPropNameValue {
+        
+        private string nameField;
+        
+        private extensionvalue valueField;
+        
+        /// <remarks/>
+        /// <summary>A string representing the name of property.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A string representing the name of property.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A value string representing the units of measure of the value.</summary>
+        [System.ComponentModel.DescriptionAttribute("A value string representing the units of measure of the value.")]
+        public extensionvalue value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_equipment {
+        
+        private string equipmentNameField;
+        
+        private EquipmentType equipmentTypeField;
+        
+        private string manufacturerField;
+        
+        private string modelField;
+        
+        private string catalogIDField;
+        
+        private string catalogNameField;
+        
+        private string brandNameField;
+        
+        private string modelTypeField;
+        
+        private string seriesField;
+        
+        private bool isSerializedField;
+        
+        private bool isSerializedFieldSpecified;
+        
+        private string serialNumberField;
+        
+        private string partNoField;
+        
+        private string surfaceConditionField;
+        
+        private string materialField;
+        
+        private GradeType gradeField;
+        
+        private bool gradeFieldSpecified;
+        
+        private massPerLengthMeasure unitWeightField;
+        
+        private bool coatingLinerappliedField;
+        
+        private bool coatingLinerappliedFieldSpecified;
+        
+        private Coating outsideCoatingField;
+        
+        private bool outsideCoatingFieldSpecified;
+        
+        private Coating insideCoatingField;
+        
+        private bool insideCoatingFieldSpecified;
+        
+        private lengthMeasure unitLengthField;
+        
+        private lengthMeasure majorODField;
+        
+        private lengthMeasure minorODField;
+        
+        private lengthMeasure odField;
+        
+        private lengthMeasure maxODField;
+        
+        private lengthMeasure minODField;
+        
+        private lengthMeasure majorIDField;
+        
+        private lengthMeasure minorIDField;
+        
+        private lengthMeasure idField;
+        
+        private lengthMeasure maxIDField;
+        
+        private lengthMeasure minIDField;
+        
+        private lengthMeasure driftField;
+        
+        private lengthMeasure nominalSizeField;
+        
+        private string nameServiceField;
+        
+        private string descriptionField;
+        
+        private string descriptionPermanentField;
+        
+        private string remarkField;
+        
+        private cs_extPropNameValue[] propertyField;
+        
+        private cs_perfSlot[] slotAsManufacturedField;
+        
+        private cs_perfHole[] holeAsManufacturedField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The name of the piece of equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the piece of equipment.")]
+        public string equipmentName {
+            get {
+                return this.equipmentNameField;
+            }
+            set {
+                this.equipmentNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The equipment type etc. bridge plug, bull plug. capillary tubing..</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The equipment type etc. bridge plug, bull plug. capillary tubing..")]
+        public EquipmentType equipmentType {
+            get {
+                return this.equipmentTypeField;
+            }
+            set {
+                this.equipmentTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Manufacturer of this equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Manufacturer of this equipment.")]
+        public string manufacturer {
+            get {
+                return this.manufacturerField;
+            }
+            set {
+                this.manufacturerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The model of the equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The model of the equipment.")]
+        public string model {
+            get {
+                return this.modelField;
+            }
+            set {
+                this.modelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Catalog where equipment can be found.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Catalog where equipment can be found.")]
+        public string catalogID {
+            get {
+                return this.catalogIDField;
+            }
+            set {
+                this.catalogIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of equipment as found in catalog.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of equipment as found in catalog.")]
+        public string catalogName {
+            get {
+                return this.catalogNameField;
+            }
+            set {
+                this.catalogNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The equipment's brand name .</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The equipment\'s brand name .")]
+        public string brandName {
+            get {
+                return this.brandNameField;
+            }
+            set {
+                this.brandNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The equipment's model type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The equipment\'s model type.")]
+        public string modelType {
+            get {
+                return this.modelTypeField;
+            }
+            set {
+                this.modelTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Series number</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Series number")]
+        public string series {
+            get {
+                return this.seriesField;
+            }
+            set {
+                this.seriesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>a flag indicates the equipment has serialNumber.</summary>
+        [System.ComponentModel.DescriptionAttribute("a flag indicates the equipment has serialNumber.")]
+        public bool isSerialized {
+            get {
+                return this.isSerializedField;
+            }
+            set {
+                this.isSerializedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isSerializedSpecified {
+            get {
+                return this.isSerializedFieldSpecified;
+            }
+            set {
+                this.isSerializedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>serial number</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("serial number")]
+        public string serialNumber {
+            get {
+                return this.serialNumberField;
+            }
+            set {
+                this.serialNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Number that identifies this part.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Number that identifies this part.")]
+        public string partNo {
+            get {
+                return this.partNoField;
+            }
+            set {
+                this.partNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>surface condition.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("surface condition.")]
+        public string surfaceCondition {
+            get {
+                return this.surfaceConditionField;
+            }
+            set {
+                this.surfaceConditionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Material that equipment is made from</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Material that equipment is made from")]
+        public string material {
+            get {
+                return this.materialField;
+            }
+            set {
+                this.materialField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Grade level of this material.</summary>
+        [System.ComponentModel.DescriptionAttribute("Grade level of this material.")]
+        public GradeType grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool gradeSpecified {
+            get {
+                return this.gradeFieldSpecified;
+            }
+            set {
+                this.gradeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The weight per length of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The weight per length of this equipment.")]
+        public massPerLengthMeasure unitWeight {
+            get {
+                return this.unitWeightField;
+            }
+            set {
+                this.unitWeightField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating whether equipment has coating</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether equipment has coating")]
+        public bool coatingLinerapplied {
+            get {
+                return this.coatingLinerappliedField;
+            }
+            set {
+                this.coatingLinerappliedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool coatingLinerappliedSpecified {
+            get {
+                return this.coatingLinerappliedFieldSpecified;
+            }
+            set {
+                this.coatingLinerappliedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Equipment's outside coating based on enumeration value</summary>
+        [System.ComponentModel.DescriptionAttribute("Equipment\'s outside coating based on enumeration value")]
+        public Coating outsideCoating {
+            get {
+                return this.outsideCoatingField;
+            }
+            set {
+                this.outsideCoatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool outsideCoatingSpecified {
+            get {
+                return this.outsideCoatingFieldSpecified;
+            }
+            set {
+                this.outsideCoatingFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Equipment's inner coating based on enumeration value</summary>
+        [System.ComponentModel.DescriptionAttribute("Equipment\'s inner coating based on enumeration value")]
+        public Coating insideCoating {
+            get {
+                return this.insideCoatingField;
+            }
+            set {
+                this.insideCoatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool insideCoatingSpecified {
+            get {
+                return this.insideCoatingFieldSpecified;
+            }
+            set {
+                this.insideCoatingFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The length of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The length of this equipment.")]
+        public lengthMeasure unitLength {
+            get {
+                return this.unitLengthField;
+            }
+            set {
+                this.unitLengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The major outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The major outside diameter of this equipment.")]
+        public lengthMeasure majorOD {
+            get {
+                return this.majorODField;
+            }
+            set {
+                this.majorODField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The minor outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minor outside diameter of this equipment.")]
+        public lengthMeasure minorOD {
+            get {
+                return this.minorODField;
+            }
+            set {
+                this.minorODField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The outside diameter of this equipment.")]
+        public lengthMeasure OD {
+            get {
+                return this.odField;
+            }
+            set {
+                this.odField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The maximum outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The maximum outside diameter of this equipment.")]
+        public lengthMeasure MaxOD {
+            get {
+                return this.maxODField;
+            }
+            set {
+                this.maxODField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The minimum outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minimum outside diameter of this equipment.")]
+        public lengthMeasure MinOD {
+            get {
+                return this.minODField;
+            }
+            set {
+                this.minODField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The major inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The major inside diameter of this equipment.")]
+        public lengthMeasure majorID {
+            get {
+                return this.majorIDField;
+            }
+            set {
+                this.majorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The minor inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minor inside diameter of this equipment.")]
+        public lengthMeasure minorID {
+            get {
+                return this.minorIDField;
+            }
+            set {
+                this.minorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The inside diameter of this equipment.")]
+        public lengthMeasure ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The maximum inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The maximum inside diameter of this equipment.")]
+        public lengthMeasure MaxID {
+            get {
+                return this.maxIDField;
+            }
+            set {
+                this.maxIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The minimum inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minimum inside diameter of this equipment.")]
+        public lengthMeasure MinID {
+            get {
+                return this.minIDField;
+            }
+            set {
+                this.minIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The drift diameter is the minimum inside diameter of pipe through which another tool or string can be pulled.</summary>
+        [System.ComponentModel.DescriptionAttribute("The drift diameter is the minimum inside diameter of pipe through which another t" +
+            "ool or string can be pulled.")]
+        public lengthMeasure drift {
+            get {
+                return this.driftField;
+            }
+            set {
+                this.driftField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal size of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The nominal size of this equipment.")]
+        public lengthMeasure nominalSize {
+            get {
+                return this.nominalSizeField;
+            }
+            set {
+                this.nominalSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>sweet or sour service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("sweet or sour service.")]
+        public string nameService {
+            get {
+                return this.nameServiceField;
+            }
+            set {
+                this.nameServiceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The description of this equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this equipment.")]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The description of this equipment to be permanently kept.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this equipment to be permanently kept.")]
+        public string descriptionPermanent {
+            get {
+                return this.descriptionPermanentField;
+            }
+            set {
+                this.descriptionPermanentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Remarks about this equipment property.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks about this equipment property.")]
+        public string remark {
+            get {
+                return this.remarkField;
+            }
+            set {
+                this.remarkField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Property description</summary>
+        [System.Xml.Serialization.XmlElementAttribute("property")]
+        [System.ComponentModel.DescriptionAttribute("Property description")]
+        public cs_extPropNameValue[] property {
+            get {
+                return this.propertyField;
+            }
+            set {
+                this.propertyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the slot in equipment.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("slotAsManufactured")]
+        [System.ComponentModel.DescriptionAttribute("Describes the slot in equipment.")]
+        public cs_perfSlot[] slotAsManufactured {
+            get {
+                return this.slotAsManufacturedField;
+            }
+            set {
+                this.slotAsManufacturedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the hole in equipment.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("holeAsManufactured")]
+        [System.ComponentModel.DescriptionAttribute("Describes the hole in equipment.")]
+        public cs_perfHole[] holeAsManufactured {
+            get {
+                return this.holeAsManufacturedField;
+            }
+            set {
+                this.holeAsManufacturedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum EquipmentType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Bridge Plug")]
+        BridgePlug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Bull Plug")]
+        BullPlug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Capillary Tubing")]
+        CapillaryTubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Crossover")]
+        CasingCrossover,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Hanger")]
+        CasingHanger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Head")]
+        CasingHead,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Liner-Expandable")]
+        CasingLinerExpandable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Shoe")]
+        CasingShoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing Spool")]
+        CasingSpool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Casing/Casing Liner")]
+        CasingCasingLiner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Cement (behind Casing)")]
+        CementbehindCasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Cement Basket")]
+        CementBasket,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Cement Retainer")]
+        CementRetainer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Cement Squeeze")]
+        CementSqueeze,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Cement Stage Tool")]
+        CementStageTool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Chemical Injection Mandrel")]
+        ChemicalInjectionMandrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Chemical Injection Valve")]
+        ChemicalInjectionValve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Corrosion Coupon Carrier")]
+        CorrosionCouponCarrier,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Dip Tube")]
+        DipTube,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Downhole Choke")]
+        DownholeChoke,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Downhole Sensor")]
+        DownholeSensor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Assembly")]
+        ESPAssembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Bolt on Discharge")]
+        ESPBoltonDischarge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Bolt on Intake")]
+        ESPBoltonIntake,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Bolt on Motor Base")]
+        ESPBoltonMotorBase,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Bolt on Motor Head")]
+        ESPBoltonMotorHead,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Cable")]
+        ESPCable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Gas Handler")]
+        ESPGasHandler,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Gas Separator")]
+        ESPGasSeparator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Lower Pigtail")]
+        ESPLowerPigtail,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Motor")]
+        ESPMotor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Motor Base Centralizer")]
+        ESPMotorBaseCentralizer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Motor Flat Cable")]
+        ESPMotorFlatCable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Motor Shroud")]
+        ESPMotorShroud,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Promotor")]
+        ESPPromotor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Pump")]
+        ESPPump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Pump Discharge Sensor Sub")]
+        ESPPumpDischargeSensorSub,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ESP Seal")]
+        ESPSeal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Expansion Joint")]
+        ExpansionJoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("External Cementing Port")]
+        ExternalCementingPort,
+        
+        /// <remarks/>
+        Fill,
+        
+        /// <remarks/>
+        Fish,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Float Collar")]
+        FloatCollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Float Shoe/Guide Shoe")]
+        FloatShoeGuideShoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gas Anchor")]
+        GasAnchor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gas Lift Mandrel")]
+        GasLiftMandrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gas Lift Valve")]
+        GasLiftValve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gravel Pack Screen")]
+        GravelPackScreen,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Hydraulic Pump")]
+        HydraulicPump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Injection Mandrel")]
+        InjectionMandrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Injection Valve")]
+        InjectionValve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Junk in Wellbore")]
+        JunkinWellbore,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Landing Collar")]
+        LandingCollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Liner Entry Guide")]
+        LinerEntryGuide,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Liner Hanger")]
+        LinerHanger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mule Shoe")]
+        MuleShoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Notched Collar")]
+        NotchedCollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("On-Off Tool")]
+        OnOffTool,
+        
+        /// <remarks/>
+        Overshot,
+        
+        /// <remarks/>
+        Packer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Packer-Multiple Strings")]
+        PackerMultipleStrings,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Packer Plug")]
+        PackerPlug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Packoff (Tubing)")]
+        PackoffTubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP-Flex shaft Intake")]
+        PCPFlexshaftIntake,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP-Gear Reducer (Subsurface)")]
+        PCPGearReducerSubsurface,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP-No Turn Tool/Torque Anchor")]
+        PCPNoTurnToolTorqueAnchor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP-Rotor")]
+        PCPRotor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP-Stator")]
+        PCPStator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP-Tag Bar")]
+        PCPTagBar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plug - Cement")]
+        PlugCement,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plug - Mud")]
+        PlugMud,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plunger Lift Ball")]
+        PlungerLiftBall,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plunger Lift Bottom Hole Bumper Assembly")]
+        PlungerLiftBottomHoleBumperAssembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plunger Lift Bumper Spring")]
+        PlungerLiftBumperSpring,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plunger Lift Collar Stop")]
+        PlungerLiftCollarStop,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plunger Lift Plunger")]
+        PlungerLiftPlunger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Polished Rod")]
+        PolishedRod,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Polished Rod Liner")]
+        PolishedRodLiner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ported Collar")]
+        PortedCollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Profile Nipple")]
+        ProfileNipple,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Profile Nipple Plug")]
+        ProfileNipplePlug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pump-Out Plug")]
+        PumpOutPlug,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Seal Assembly")]
+        SealAssembly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod")]
+        SuckerRod,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod Backoff Coupling")]
+        SuckerRodBackoffCoupling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod-Continuous")]
+        SuckerRodContinuous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod Pump-Insert")]
+        SuckerRodPumpInsert,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod Pump-Jacket")]
+        SuckerRodPumpJacket,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod Pump-Tubing Pump Barrel")]
+        SuckerRodPumpTubingPumpBarrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod Pump-Tubing Pump Plunger")]
+        SuckerRodPumpTubingPumpPlunger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod-Ribbon")]
+        SuckerRodRibbon,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod-Sinker Bar")]
+        SuckerRodSinkerBar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sucker Rod Sub")]
+        SuckerRodSub,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sand Screen-Tubing")]
+        SandScreenTubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sand Separator")]
+        SandSeparator,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Screen Liner/Insert")]
+        ScreenLinerInsert,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Seal Bore Extension")]
+        SealBoreExtension,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Seat Nipple/Shoe")]
+        SeatNippleShoe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Shear Tool")]
+        ShearTool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sliding Sleeve")]
+        SlidingSleeve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Steam Cup Mandrel")]
+        SteamCupMandrel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Steam Deflectors")]
+        SteamDeflectors,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Strainer Nipple")]
+        StrainerNipple,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Subsurface Safety Valve")]
+        SubsurfaceSafetyValve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TCP Gun")]
+        TCPGun,
+        
+        /// <remarks/>
+        Tubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing (Coiled)")]
+        TubingCoiled,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Anchor/Catcher")]
+        TubingAnchorCatcher,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Crossover")]
+        TubingCrossover,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Drain")]
+        TubingDrain,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Hanger")]
+        TubingHanger,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Head (Spool)")]
+        TubingHeadSpool,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Purge Check Valve")]
+        TubingPurgeCheckValve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tubing Sub")]
+        TubingSub,
+        
+        /// <remarks/>
+        Whipstock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wireline Re-Entry Guide (Bell Collar)")]
+        WirelineReEntryGuideBellCollar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wellbore Notes")]
+        WellboreNotes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Y-Tool")]
+        YTool,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum GradeType {
+        
+        /// <remarks/>
+        DE,
+        
+        /// <remarks/>
+        DER,
+        
+        /// <remarks/>
+        DR,
+        
+        /// <remarks/>
+        FG,
+        
+        /// <remarks/>
+        SE,
+        
+        /// <remarks/>
+        SER,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("T-66")]
+        T66,
+        
+        /// <remarks/>
+        HS,
+        
+        /// <remarks/>
+        KD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-97")]
+        N97,
+        
+        /// <remarks/>
+        C,
+        
+        /// <remarks/>
+        K,
+        
+        /// <remarks/>
+        D,
+        
+        /// <remarks/>
+        E,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("E-75")]
+        E75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("G-105")]
+        G105,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-135")]
+        S135,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("V-150")]
+        V150,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-95")]
+        X95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Armco-95")]
+        Armco95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C-110")]
+        C110,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C-75")]
+        C75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C-90")]
+        C90,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C-95")]
+        C95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("F-25")]
+        F25,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("H-40")]
+        H40,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HC-95")]
+        HC95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J-20")]
+        J20,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J-55")]
+        J55,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("K-40")]
+        K40,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("K-55")]
+        K55,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L-80")]
+        L80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("LS-50")]
+        LS50,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("LS-65")]
+        LS65,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("M-65")]
+        M65,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("M-90")]
+        M90,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("M-95")]
+        M95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MAV-50")]
+        MAV50,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-105")]
+        N105,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-23")]
+        N23,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-80")]
+        N80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("P-105")]
+        P105,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("P-110")]
+        P110,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Q-125")]
+        Q125,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-80")]
+        S80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-95")]
+        S95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("T-95")]
+        T95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-140")]
+        X140,
+        
+        /// <remarks/>
+        Unknown,
+        
+        /// <remarks/>
+        EL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MD-56")]
+        MD56,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-60")]
+        S60,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-67")]
+        S67,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-87")]
+        S87,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-88")]
+        S88,
+        
+        /// <remarks/>
+        XD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S-59")]
+        S59,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("KD-63")]
+        KD63,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-30")]
+        N30,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-40")]
+        N40,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-54")]
+        N54,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-78")]
+        N78,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-75")]
+        N75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-90")]
+        N90,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N-96")]
+        N96,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("35")]
+        Item35,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("50")]
+        Item50,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("45")]
+        Item45,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("T-K65")]
+        TK65,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("46")]
+        Item46,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("T-D61")]
+        TD61,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("T-D63")]
+        TD63,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("75")]
+        Item75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("75A")]
+        Item75A,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("95")]
+        Item95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PH-6")]
+        PH6,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("WC-50")]
+        WC50,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SOO-95")]
+        SOO95,
+        
+        /// <remarks/>
+        A53B,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("FS-80")]
+        FS80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("FSS-95")]
+        FSS95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SC-90")]
+        SC90,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("USS-95")]
+        USS95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("USS-125")]
+        USS125,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("USS-140")]
+        USS140,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("GT-80S")]
+        GT80S,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("USS-50")]
+        USS50,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("LS-140")]
+        LS140,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HCL-80")]
+        HCL80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HCN-80")]
+        HCN80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HCP-110")]
+        HCP110,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HCQ-125")]
+        HCQ125,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("H2S-90")]
+        H2S90,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("QT-700")]
+        QT700,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("QT-800")]
+        QT800,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("QT-900")]
+        QT900,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("QT-1000")]
+        QT1000,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("QT-1200")]
+        QT1200,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HO-70")]
+        HO70,
+        
+        /// <remarks/>
+        A53,
+        
+        /// <remarks/>
+        A53A,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("H2S-95")]
+        H2S95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HCK-55")]
+        HCK55,
+        
+        /// <remarks/>
+        B,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-42")]
+        X42,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-52")]
+        X52,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-56")]
+        X56,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("13CR")]
+        Item13CR,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("13CR- 80")]
+        Item13CR80,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("13CR- 85")]
+        Item13CR85,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("13CR- 95")]
+        Item13CR95,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("13CR-110")]
+        Item13CR110,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-46")]
+        X46,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-60")]
+        X60,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("X-70")]
+        X70,
+        
+        /// <remarks/>
+        X,
+        
+        /// <remarks/>
+        G,
+        
+        /// <remarks/>
+        S,
+        
+        /// <remarks/>
+        Stainless,
+        
+        /// <remarks/>
+        SWR,
+        
+        /// <remarks/>
+        DWR,
+        
+        /// <remarks/>
+        T,
+        
+        /// <remarks/>
+        SM,
+        
+        /// <remarks/>
+        UHS,
+        
+        /// <remarks/>
+        MMS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP  900")]
+        PCP900,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP 1000")]
+        PCP1000,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP 1500")]
+        PCP1500,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PCP 2500")]
+        PCP2500,
+        
+        /// <remarks/>
+        Plus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("620C")]
+        Item620C,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("780M")]
+        Item780M,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("750N")]
+        Item750N,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("960M")]
+        Item960M,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("970N")]
+        Item970N,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum Coating {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/A")]
+        NA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAY-METAL-MONEL")]
+        SPRAYMETALMONEL,
+        
+        /// <remarks/>
+        TUFFR,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CORROSION COATING")]
+        CORROSIONCOATING,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CARBURIZED-HARDENED")]
+        CARBURIZEDHARDENED,
+        
+        /// <remarks/>
+        CARBURIZED,
+        
+        /// <remarks/>
+        CARBONNITRIDED,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CHROMEPLATED-GROOVED")]
+        CHROMEPLATEDGROOVED,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CHROMEPLATED-HEAVY")]
+        CHROMEPLATEDHEAVY,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("HARD-LINED")]
+        HARDLINED,
+        
+        /// <remarks/>
+        HARDENED,
+        
+        /// <remarks/>
+        INS,
+        
+        /// <remarks/>
+        LP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-S505")]
+        IPCS505,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-S650")]
+        IPCS650,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-TK70")]
+        IPCTK70,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("CHROME-PLATED")]
+        CHROMEPLATED,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NICKEL-CARBIDE")]
+        NICKELCARBIDE,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAY-METAL")]
+        SPRAYMETAL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PLUNGER-LUBRICANT")]
+        PLUNGERLUBRICANT,
+        
+        /// <remarks/>
+        MOLY,
+        
+        /// <remarks/>
+        MTR,
+        
+        /// <remarks/>
+        NITRIDED,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NICKEL-PLATED")]
+        NICKELPLATED,
+        
+        /// <remarks/>
+        PAP,
+        
+        /// <remarks/>
+        PHOSPHORUS,
+        
+        /// <remarks/>
+        PLASTIC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TEFLON-RED")]
+        TEFLONRED,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAYMETAL-OD/NICKELPLATED-ID")]
+        SPRAYMETALODNICKELPLATEDID,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAYMETAL-THICK")]
+        SPRAYMETALTHICK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TEFLON-TAN")]
+        TEFLONTAN,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TEFLON-YELLOW")]
+        TEFLONYELLOW,
+        
+        /// <remarks/>
+        DBLGALV,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-NYLON")]
+        IPCNYLON,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-EPXTHK")]
+        IPCEPXTHK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-EPXTHN")]
+        IPCEPXTHN,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("FIBERGLASS-LINED")]
+        FIBERGLASSLINED,
+        
+        /// <remarks/>
+        CEMENTLINED,
+        
+        /// <remarks/>
+        PVCLINED,
+        
+        /// <remarks/>
+        PELINED,
+        
+        /// <remarks/>
+        SSLINED,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-EPOXY")]
+        IPCEPOXY,
+        
+        /// <remarks/>
+        BARE,
+        
+        /// <remarks/>
+        DUOLINE,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-1")]
+        RODGUIDE1,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-2")]
+        RODGUIDE2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-2.")]
+        RODGUIDE21,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-3")]
+        RODGUIDE3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-4")]
+        RODGUIDE4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-5")]
+        RODGUIDE5,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-6")]
+        RODGUIDE6,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-7")]
+        RODGUIDE7,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO")]
+        RODGUIDESO,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-Sp")]
+        RODGUIDESp,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-Fx")]
+        RODGUIDEFx,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO1")]
+        RODGUIDESO1,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO2")]
+        RODGUIDESO2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO3")]
+        RODGUIDESO3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO4")]
+        RODGUIDESO4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO5")]
+        RODGUIDESO5,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO6")]
+        RODGUIDESO6,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("RODGUIDE-SO8")]
+        RODGUIDESO8,
+        
+        /// <remarks/>
+        POLYPROPYLENE,
+        
+        /// <remarks/>
+        EPDM,
+        
+        /// <remarks/>
+        NITRILE,
+        
+        /// <remarks/>
+        TEFLON,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PPW/Nitrl")]
+        PPWNitrl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TK-99")]
+        TK99,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-RWrap")]
+        IPCRWrap,
+        
+        /// <remarks/>
+        IPC,
+        
+        /// <remarks/>
+        THERMO,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TK-4")]
+        TK4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("POLISHED-RODLINER")]
+        POLISHEDRODLINER,
+        
+        /// <remarks/>
+        ZINCPLATED,
+        
+        /// <remarks/>
+        PHOSPHATE,
+        
+        /// <remarks/>
+        GALVANIZED,
+        
+        /// <remarks/>
+        DUOLINE10,
+        
+        /// <remarks/>
+        DUOLINE20,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("IPC-TK75")]
+        IPCTK75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAYMETAL-MONEL")]
+        SPRAYMETALMONEL1,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAYMETAL-NICKEL")]
+        SPRAYMETALNICKEL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("SPRAYMETAL-STEEL")]
+        SPRAYMETALSTEEL,
+        
+        /// <remarks/>
+        DUOLIN20WR,
+        
+        /// <remarks/>
+        CHROME,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TUNGSTEN PLATED")]
+        TUNGSTENPLATED,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_geologyFeature {
+        
+        private string nameField;
+        
+        private GeologyType geologyTypeField;
+        
+        private bool geologyTypeFieldSpecified;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private wellVerticalDepthCoord tvdBaseField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Name of the feature</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the feature")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Aquifer or reservoir</summary>
+        [System.ComponentModel.DescriptionAttribute("Aquifer or reservoir")]
+        public GeologyType geologyType {
+            get {
+                return this.geologyTypeField;
+            }
+            set {
+                this.geologyTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool geologyTypeSpecified {
+            get {
+                return this.geologyTypeFieldSpecified;
+            }
+            set {
+                this.geologyTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at top of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at top of interval.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at base of interval.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at top of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at base of interval.")]
+        public wellVerticalDepthCoord tvdBase {
+            get {
+                return this.tvdBaseField;
+            }
+            set {
+                this.tvdBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum GeologyType {
+        
+        /// <remarks/>
+        Aquifer,
+        
+        /// <remarks/>
+        Reservoir,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_borehole {
+        
+        private string nameField;
+        
+        private BoreholeType typeBoreholeField;
+        
+        private bool typeBoreholeFieldSpecified;
+        
+        private cs_eventInfo equipmentEventHistoryField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private lengthMeasure diaBoreholeField;
+        
+        private string descriptionPermanentField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The name of borehole</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of borehole")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam</summary>
+        [System.ComponentModel.DescriptionAttribute("Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam")]
+        public BoreholeType typeBorehole {
+            get {
+                return this.typeBoreholeField;
+            }
+            set {
+                this.typeBoreholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeBoreholeSpecified {
+            get {
+                return this.typeBoreholeFieldSpecified;
+            }
+            set {
+                this.typeBoreholeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Event reference pointing to the eventledger.</summary>
+        [System.ComponentModel.DescriptionAttribute("Event reference pointing to the eventledger.")]
+        public cs_eventInfo equipmentEventHistory {
+            get {
+                return this.equipmentEventHistoryField;
+            }
+            set {
+                this.equipmentEventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at Top of Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at Top of Interval")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at bottom of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at bottom of the section")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at top of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Borehole diameter</summary>
+        [System.ComponentModel.DescriptionAttribute("Borehole diameter")]
+        public lengthMeasure diaBorehole {
+            get {
+                return this.diaBoreholeField;
+            }
+            set {
+                this.diaBoreholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The description of this equipment to be permanently kept.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this equipment to be permanently kept.")]
+        public string descriptionPermanent {
+            get {
+                return this.descriptionPermanentField;
+            }
+            set {
+                this.descriptionPermanentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum BoreholeType {
+        
+        /// <remarks/>
+        Cavern,
+        
+        /// <remarks/>
+        Cavity,
+        
+        /// <remarks/>
+        NormalBorehole,
+        
+        /// <remarks/>
+        UnderReam,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_boreholeString {
+        
+        private string nameWellboreField;
+        
+        private string nameField;
+        
+        private cs_borehole[] boreholeField;
+        
+        private cs_geologyFeature[] geologyFeatureField;
+        
+        private cs_stringEquipment[] accessoriesField;
+        
+        private string uidWellboreField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the downhole equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the downhole equipment.")]
+        public string nameWellbore {
+            get {
+                return this.nameWellboreField;
+            }
+            set {
+                this.nameWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of the borehole String</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the borehole String")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The collection of boreholes</summary>
+        [System.Xml.Serialization.XmlElementAttribute("borehole")]
+        [System.ComponentModel.DescriptionAttribute("The collection of boreholes")]
+        public cs_borehole[] borehole {
+            get {
+                return this.boreholeField;
+            }
+            set {
+                this.boreholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Geology feature information</summary>
+        [System.Xml.Serialization.XmlElementAttribute("geologyFeature")]
+        [System.ComponentModel.DescriptionAttribute("Geology feature information")]
+        public cs_geologyFeature[] geologyFeature {
+            get {
+                return this.geologyFeatureField;
+            }
+            set {
+                this.geologyFeatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The borehole accessories.</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("accessory", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("The borehole accessories.")]
+        public cs_stringEquipment[] accessories {
+            get {
+                return this.accessoriesField;
+            }
+            set {
+                this.accessoriesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the wellbore.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore.")]
+        public string uidWellbore {
+            get {
+                return this.uidWellboreField;
+            }
+            set {
+                this.uidWellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_stringEquipment {
+        
+        private EquipmentType equipmentTypeField;
+        
+        private bool equipmentTypeFieldSpecified;
+        
+        private string nameField;
+        
+        private cs_eventInfo[] equipmentEventHistoryField;
+        
+        private objectSequence orderOfObjectField;
+        
+        private string statusField;
+        
+        private string runNoField;
+        
+        private timeMeasure previousRunDaysField;
+        
+        private string objectConditionField;
+        
+        private string surfaceConditionField;
+        
+        private short countField;
+        
+        private bool countFieldSpecified;
+        
+        private lengthMeasure lengthField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private wellVerticalDepthCoord tvdTopField;
+        
+        private wellVerticalDepthCoord tvdBottomField;
+        
+        private wellVerticalDepthCoord tvdBaseField;
+        
+        private bool outsideStringField;
+        
+        private bool outsideStringFieldSpecified;
+        
+        private cs_refContainer[] insideComponentField;
+        
+        private cs_refContainer[] outsideComponentField;
+        
+        private forceMeasure tensileMaxField;
+        
+        private pressureMeasure presRatingField;
+        
+        private pressureMeasure presCollapseField;
+        
+        private pressureMeasure presBurstField;
+        
+        private thermodynamicTemperatureMeasure heatRatingField;
+        
+        private bool isLinetoSurfaceField;
+        
+        private bool isLinetoSurfaceFieldSpecified;
+        
+        private bool isCentralizedField;
+        
+        private bool isCentralizedFieldSpecified;
+        
+        private bool hasScratchersField;
+        
+        private bool hasScratchersFieldSpecified;
+        
+        private cs_equipmentConnection[] connectionNextField;
+        
+        private cs_stringEquipment[] assemblyField;
+        
+        private string[] perforationSetRefIDField;
+        
+        private string permanentRemarksField;
+        
+        private string usageCommentField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidField;
+        
+        private string equipmentRefUIDField;
+        
+        /// <remarks/>
+        /// <summary>The type of the equipment.  Enumeration is defined in cs_equipmentCatalog.xsd. "Optional" is for expansion purpose, strong suggest that only ignore it if the equipment type could not found from equipmentType definition.</summary>
+        [System.ComponentModel.DescriptionAttribute("The type of the equipment.  Enumeration is defined in cs_equipmentCatalog.xsd. \"O" +
+            "ptional\" is for expansion purpose, strong suggest that only ignore it if the equ" +
+            "ipment type could not found from equipmentType definition.")]
+        public EquipmentType equipmentType {
+            get {
+                return this.equipmentTypeField;
+            }
+            set {
+                this.equipmentTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool equipmentTypeSpecified {
+            get {
+                return this.equipmentTypeFieldSpecified;
+            }
+            set {
+                this.equipmentTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of the equipment.  Length of this element is 256 characters.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("The name of the equipment.  Length of this element is 256 characters.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>History of event tied to this equipment</summary>
+        [System.Xml.Serialization.XmlElementAttribute("equipmentEventHistory")]
+        [System.ComponentModel.DescriptionAttribute("History of event tied to this equipment")]
+        public cs_eventInfo[] equipmentEventHistory {
+            get {
+                return this.equipmentEventHistoryField;
+            }
+            set {
+                this.equipmentEventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines a sequence number and with an optional description attribute</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines a sequence number and with an optional description attribute")]
+        public objectSequence orderOfObject {
+            get {
+                return this.orderOfObjectField;
+            }
+            set {
+                this.orderOfObjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The status of the piece of equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The status of the piece of equipment.")]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The well run No</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The well run No")]
+        public string runNo {
+            get {
+                return this.runNoField;
+            }
+            set {
+                this.runNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The days that the equipment has run.</summary>
+        [System.ComponentModel.DescriptionAttribute("The days that the equipment has run.")]
+        public timeMeasure previousRunDays {
+            get {
+                return this.previousRunDaysField;
+            }
+            set {
+                this.previousRunDaysField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Object condition at installation</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Object condition at installation")]
+        public string objectCondition {
+            get {
+                return this.objectConditionField;
+            }
+            set {
+                this.objectConditionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Object surface condition</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Object surface condition")]
+        public string surfaceCondition {
+            get {
+                return this.surfaceConditionField;
+            }
+            set {
+                this.surfaceConditionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The count number of the same equipment. The default is 1.  In some cases, multiple pieces group into one component.</summary>
+        [System.ComponentModel.DescriptionAttribute("The count number of the same equipment. The default is 1.  In some cases, multipl" +
+            "e pieces group into one component.")]
+        public short count {
+            get {
+                return this.countField;
+            }
+            set {
+                this.countField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool countSpecified {
+            get {
+                return this.countFieldSpecified;
+            }
+            set {
+                this.countFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The total length of the equipment.  This is NOT length per unit.                     This is the length of unit stored at equipmentset's equipment information section.</summary>
+        [System.ComponentModel.DescriptionAttribute("The total length of the equipment.  This is NOT length per unit.                 " +
+            "    This is the length of unit stored at equipmentset\'s equipment information se" +
+            "ction.")]
+        public lengthMeasure length {
+            get {
+                return this.lengthField;
+            }
+            set {
+                this.lengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at top of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at top of interval.")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at base of interval.")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at top of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section.")]
+        public wellVerticalDepthCoord tvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section.")]
+        public wellVerticalDepthCoord tvdBottom {
+            get {
+                return this.tvdBottomField;
+            }
+            set {
+                this.tvdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at base of interval.")]
+        public wellVerticalDepthCoord tvdBase {
+            get {
+                return this.tvdBaseField;
+            }
+            set {
+                this.tvdBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating whether this component is inside the string or not .</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether this component is inside the string or not .")]
+        public bool outsideString {
+            get {
+                return this.outsideStringField;
+            }
+            set {
+                this.outsideStringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool outsideStringSpecified {
+            get {
+                return this.outsideStringFieldSpecified;
+            }
+            set {
+                this.outsideStringFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The list of components contained in the equipment</summary>
+        [System.Xml.Serialization.XmlElementAttribute("insideComponent")]
+        [System.ComponentModel.DescriptionAttribute("The list of components contained in the equipment")]
+        public cs_refContainer[] insideComponent {
+            get {
+                return this.insideComponentField;
+            }
+            set {
+                this.insideComponentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The list of components outside of this piece of equipment</summary>
+        [System.Xml.Serialization.XmlElementAttribute("outsideComponent")]
+        [System.ComponentModel.DescriptionAttribute("The list of components outside of this piece of equipment")]
+        public cs_refContainer[] outsideComponent {
+            get {
+                return this.outsideComponentField;
+            }
+            set {
+                this.outsideComponentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Max Tensile Strength</summary>
+        [System.ComponentModel.DescriptionAttribute("Max Tensile Strength")]
+        public forceMeasure tensileMax {
+            get {
+                return this.tensileMaxField;
+            }
+            set {
+                this.tensileMaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Pressure  Rating</summary>
+        [System.ComponentModel.DescriptionAttribute("Pressure  Rating")]
+        public pressureMeasure presRating {
+            get {
+                return this.presRatingField;
+            }
+            set {
+                this.presRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Collapse Pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Collapse Pressure")]
+        public pressureMeasure presCollapse {
+            get {
+                return this.presCollapseField;
+            }
+            set {
+                this.presCollapseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Burst Pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Burst Pressure")]
+        public pressureMeasure presBurst {
+            get {
+                return this.presBurstField;
+            }
+            set {
+                this.presBurstField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>heat rating</summary>
+        [System.ComponentModel.DescriptionAttribute("heat rating")]
+        public thermodynamicTemperatureMeasure heatRating {
+            get {
+                return this.heatRatingField;
+            }
+            set {
+                this.heatRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating the equipment has line connected to surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating the equipment has line connected to surface.")]
+        public bool isLinetoSurface {
+            get {
+                return this.isLinetoSurfaceField;
+            }
+            set {
+                this.isLinetoSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isLinetoSurfaceSpecified {
+            get {
+                return this.isLinetoSurfaceFieldSpecified;
+            }
+            set {
+                this.isLinetoSurfaceFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating equipment is centralized</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating equipment is centralized")]
+        public bool isCentralized {
+            get {
+                return this.isCentralizedField;
+            }
+            set {
+                this.isCentralizedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isCentralizedSpecified {
+            get {
+                return this.isCentralizedFieldSpecified;
+            }
+            set {
+                this.isCentralizedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Flag indicating scratchers have been added to the equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating scratchers have been added to the equipment.")]
+        public bool hasScratchers {
+            get {
+                return this.hasScratchersField;
+            }
+            set {
+                this.hasScratchersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool hasScratchersSpecified {
+            get {
+                return this.hasScratchersFieldSpecified;
+            }
+            set {
+                this.hasScratchersFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the next component connected.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("connectionNext")]
+        [System.ComponentModel.DescriptionAttribute("Describes the next component connected.")]
+        public cs_equipmentConnection[] connectionNext {
+            get {
+                return this.connectionNextField;
+            }
+            set {
+                this.connectionNextField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the assembly connected.</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("part", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("Describes the assembly connected.")]
+        public cs_stringEquipment[] assembly {
+            get {
+                return this.assemblyField;
+            }
+            set {
+                this.assemblyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>reference the perforated hole in equipment after perforation event.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("perforationSetRefID")]
+        [System.ComponentModel.DescriptionAttribute("reference the perforated hole in equipment after perforation event.")]
+        public string[] perforationSetRefID {
+            get {
+                return this.perforationSetRefIDField;
+            }
+            set {
+                this.perforationSetRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Remarks on the equipment stored permanently.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks on the equipment stored permanently.")]
+        public string permanentRemarks {
+            get {
+                return this.permanentRemarksField;
+            }
+            set {
+                this.permanentRemarksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Remarks on usage of this equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks on usage of this equipment.")]
+        public string usageComment {
+            get {
+                return this.usageCommentField;
+            }
+            set {
+                this.usageCommentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique reference for the equipment.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique reference for the equipment.")]
+        public string equipmentRefUID {
+            get {
+                return this.equipmentRefUIDField;
+            }
+            set {
+                this.equipmentRefUIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_refContainer {
+        
+        private string stringRefIDField;
+        
+        private string equipmentRefIDField;
+        
+        private string accesoryEquipmentRefIDField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        /// <summary>DownholeString reference id</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("DownholeString reference id")]
+        public string stringRefID {
+            get {
+                return this.stringRefIDField;
+            }
+            set {
+                this.stringRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Equipment reference id</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Equipment reference id")]
+        public string equipmentRefID {
+            get {
+                return this.equipmentRefIDField;
+            }
+            set {
+                this.equipmentRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to the equipment for this accessory</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the equipment for this accessory")]
+        public string accesoryEquipmentRefID {
+            get {
+                return this.accesoryEquipmentRefIDField;
+            }
+            set {
+                this.accesoryEquipmentRefIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Comment on this container reference</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment on this container reference")]
+        public string comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_downholeString {
+        
+        private DownholeStringType stringTypeField;
+        
+        private SubStringType subStringTypeField;
+        
+        private bool subStringTypeFieldSpecified;
+        
+        private string nameField;
+        
+        private Energistics.DataAccess.Timestamp stringInstallDateField;
+        
+        private bool stringInstallDateFieldSpecified;
+        
+        private string parentStringsNameField;
+        
+        private measuredDepthCoord mdTopField;
+        
+        private measuredDepthCoord mdBottomField;
+        
+        private lengthMeasure axisOffsetField;
+        
+        private cs_stringEquipment[] stringEquipmentSetField;
+        
+        private cs_stringEquipment[] accessoriesField;
+        
+        private cs_extensionAny extensionAnyField;
+        
+        private cs_extensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        private string uidParentStringField;
+        
+        private string uidWellboreField;
+        
+        /// <remarks/>
+        /// <summary>An enumeration type defined in equipmentCatelog, the "DownholeStringEnum"                     contains valid option of "case","rod","tubing", "otherString".</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An enumeration type defined in equipmentCatelog, the \"DownholeStringEnum\"        " +
+            "             contains valid option of \"case\",\"rod\",\"tubing\", \"otherString\".")]
+        public DownholeStringType stringType {
+            get {
+                return this.stringTypeField;
+            }
+            set {
+                this.stringTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An enumeration type define for express further string type etc. "SurfaceCasing", "IntermediaCasing", "productionCasing".</summary>
+        [System.ComponentModel.DescriptionAttribute("An enumeration type define for express further string type etc. \"SurfaceCasing\", " +
+            "\"IntermediaCasing\", \"productionCasing\".")]
+        public SubStringType subStringType {
+            get {
+                return this.subStringTypeField;
+            }
+            set {
+                this.subStringTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool subStringTypeSpecified {
+            get {
+                return this.subStringTypeFieldSpecified;
+            }
+            set {
+                this.subStringTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of downhole string.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of downhole string.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The install date of downhole string.</summary>
+        [System.ComponentModel.DescriptionAttribute("The install date of downhole string.")]
+        public Energistics.DataAccess.Timestamp stringInstallDate {
+            get {
+                return this.stringInstallDateField;
+            }
+            set {
+                this.stringInstallDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool stringInstallDateSpecified {
+            get {
+                return this.stringInstallDateFieldSpecified;
+            }
+            set {
+                this.stringInstallDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of parent string.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of parent string.")]
+        public string parentStringsName {
+            get {
+                return this.parentStringsNameField;
+            }
+            set {
+                this.parentStringsNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at Top of Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at Top of Interval")]
+        public measuredDepthCoord mdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at bottom of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at bottom of the section")]
+        public measuredDepthCoord mdBottom {
+            get {
+                return this.mdBottomField;
+            }
+            set {
+                this.mdBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the distance from the sibling string.</summary>
+        [System.ComponentModel.DescriptionAttribute("the distance from the sibling string.")]
+        public lengthMeasure axisOffset {
+            get {
+                return this.axisOffsetField;
+            }
+            set {
+                this.axisOffsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the list of equipment in the string. each equipment is liner connected and carry the rest of weight</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("stringEquipment", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("the list of equipment in the string. each equipment is liner connected and carry " +
+            "the rest of weight")]
+        public cs_stringEquipment[] stringEquipmentSet {
+            get {
+                return this.stringEquipmentSetField;
+            }
+            set {
+                this.stringEquipmentSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>the accessories equipment of the string. It locates in the downhole string, but it is not equipment which liner connected in string (from top to down), and it is not carraying the weight of string</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("accessory", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("the accessories equipment of the string. It locates in the downhole string, but i" +
+            "t is not equipment which liner connected in string (from top to down), and it is" +
+            " not carraying the weight of string")]
+        public cs_stringEquipment[] accessories {
+            get {
+                return this.accessoriesField;
+            }
+            set {
+                this.accessoriesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        public cs_extensionAny extensionAny {
+            get {
+                return this.extensionAnyField;
+            }
+            set {
+                this.extensionAnyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public cs_extensionNameValue[] extensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The uidParentString points to the parent string. Even if the string is not physically connected together, this string is             still considered as a continuation of the parent string.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The uidParentString points to the parent string. Even if the string is not physic" +
+            "ally connected together, this string is             still considered as a contin" +
+            "uation of the parent string.")]
+        public string uidParentString {
+            get {
+                return this.uidParentStringField;
+            }
+            set {
+                this.uidParentStringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
+            "nced by the (possibly non-unique) nameWellbore.")]
+        public string uidWellbore {
+            get {
+                return this.uidWellboreField;
+            }
+            set {
+                this.uidWellboreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum DownholeStringType {
+        
+        /// <remarks/>
+        Casing,
+        
+        /// <remarks/>
+        Rod,
+        
+        /// <remarks/>
+        Tubing,
+        
+        /// <remarks/>
+        Wellhead,
+        
+        /// <remarks/>
+        Others,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum SubStringType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Abandoned Junk/Fish")]
+        AbandonedJunkFish,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Capillary String (inside Tubing)")]
+        CapillaryStringinsideTubing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute(" Capillary String (Tubing/Casing Annulus)")]
+        CapillaryStringTubingCasingAnnulus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Surface Casing")]
+        SurfaceCasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Conductor Casing")]
+        ConductorCasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Intermediate Casing")]
+        IntermediateCasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Production Casing")]
+        ProductionCasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute(" Protective Casing")]
+        ProtectiveCasing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Drill String")]
+        DrillString,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Production Liner ")]
+        ProductionLiner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wellbore Notes")]
+        WellboreNotes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Y-Tool String")]
+        YToolString,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Inner Liner ")]
+        InnerLiner,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Geological Objects")]
+        GeologicalObjects,
+        
+        /// <remarks/>
+        Flowline,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_downholeComponent {
+        
+        private string nameWellField;
+        
+        private string nameField;
+        
+        private Energistics.DataAccess.Timestamp startDateField;
+        
+        private bool startDateFieldSpecified;
+        
+        private Energistics.DataAccess.Timestamp endDateField;
+        
+        private bool endDateFieldSpecified;
+        
+        private cs_downholeString wellHeadField;
+        
+        private cs_boreholeString[] boreholeStringSetField;
+        
+        private cs_downholeString[] downholeStringSetField;
+        
+        private cs_equipment[] equipmentSetField;
+        
+        private cs_perforationSet[] perforationSetsField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidWellField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the well.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well.")]
+        public string nameWell {
+            get {
+                return this.nameWellField;
+            }
+            set {
+                this.nameWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Human recognizable context for the downhole equipment.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the downhole equipment.")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The date range specification: start date</summary>
+        [System.ComponentModel.DescriptionAttribute("The date range specification: start date")]
+        public Energistics.DataAccess.Timestamp startDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool startDateSpecified {
+            get {
+                return this.startDateFieldSpecified;
+            }
+            set {
+                this.startDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The date range specification: end date</summary>
+        [System.ComponentModel.DescriptionAttribute("The date range specification: end date")]
+        public Energistics.DataAccess.Timestamp endDate {
+            get {
+                return this.endDateField;
+            }
+            set {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool endDateSpecified {
+            get {
+                return this.endDateFieldSpecified;
+            }
+            set {
+                this.endDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>This section contains wellhead information, and is composed of string equipment</summary>
+        [System.ComponentModel.DescriptionAttribute("This section contains wellhead information, and is composed of string equipment")]
+        public cs_downholeString wellHead {
+            get {
+                return this.wellHeadField;
+            }
+            set {
+                this.wellHeadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>This section contains bore hole string information including flow interval</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("boreholeString", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("This section contains bore hole string information including flow interval")]
+        public cs_boreholeString[] boreholeStringSet {
+            get {
+                return this.boreholeStringSetField;
+            }
+            set {
+                this.boreholeStringSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The linear downhole string equipment</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("downholeString", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("The linear downhole string equipment")]
+        public cs_downholeString[] downholeStringSet {
+            get {
+                return this.downholeStringSetField;
+            }
+            set {
+                this.downholeStringSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A collection of equipment / component</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("equipment", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("A collection of equipment / component")]
+        public cs_equipment[] equipmentSet {
+            get {
+                return this.equipmentSetField;
+            }
+            set {
+                this.equipmentSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A collection of contact interval information</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute("perforationSet", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("A collection of contact interval information")]
+        public cs_perforationSet[] perforationSets {
+            get {
+                return this.perforationSetsField;
+            }
+            set {
+                this.perforationSetsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data objects.")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined data elements.")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents the well referenced by t" +
+            "he (possibly non-unique) nameWell.")]
+        public string uidWell {
+            get {
+                return this.uidWellField;
+            }
+            set {
+                this.uidWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_depthRegLogRect {
         
         private LogRectangularType typeField;
@@ -65955,6 +75142,238 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("wellCompletions", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class obj_wellCompletions : abstractObject {
+        
+        private cs_documentInfo documentInfoField;
+        
+        private obj_wellCompletion[] wellCompletionField;
+        
+        private string versionField;
+        
+        /// <remarks/>
+        /// <summary>Information about the well completion.</summary>
+        [System.ComponentModel.DescriptionAttribute("Information about the well completion.")]
+        public cs_documentInfo documentInfo {
+            get {
+                return this.documentInfoField;
+            }
+            set {
+                this.documentInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Information about a wellbore completion.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("wellCompletion")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Information about a wellbore completion.")]
+        public obj_wellCompletion[] wellCompletion {
+            get {
+                return this.wellCompletionField;
+            }
+            set {
+                this.wellCompletionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
+            "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
+            "ent instance.")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("wellCMLedgers", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class obj_wellCMLedgers : abstractObject {
+        
+        private cs_documentInfo documentInfoField;
+        
+        private obj_wellCMLedger[] wellCMLedgerField;
+        
+        private string versionField;
+        
+        /// <remarks/>
+        /// <summary>Information about the event ledger instance.</summary>
+        [System.ComponentModel.DescriptionAttribute("Information about the event ledger instance.")]
+        public cs_documentInfo documentInfo {
+            get {
+                return this.documentInfoField;
+            }
+            set {
+                this.documentInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The non-contextual elements for general event ledger information.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("wellCMLedger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The non-contextual elements for general event ledger information.")]
+        public obj_wellCMLedger[] wellCMLedger {
+            get {
+                return this.wellCMLedgerField;
+            }
+            set {
+                this.wellCMLedgerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
+            "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
+            "ent instance.")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("wellboreCompletions", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class obj_wellboreCompletions : abstractObject {
+        
+        private cs_documentInfo documentInfoField;
+        
+        private obj_wellboreCompletion[] wellboreCompletionField;
+        
+        private string versionField;
+        
+        /// <remarks/>
+        /// <summary>Information about the downhole component.</summary>
+        [System.ComponentModel.DescriptionAttribute("Information about the downhole component.")]
+        public cs_documentInfo documentInfo {
+            get {
+                return this.documentInfoField;
+            }
+            set {
+                this.documentInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Wellbore completion type</summary>
+        [System.Xml.Serialization.XmlElementAttribute("wellboreCompletion")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Wellbore completion type")]
+        public obj_wellboreCompletion[] wellboreCompletion {
+            get {
+                return this.wellboreCompletionField;
+            }
+            set {
+                this.wellboreCompletionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Data object schema version.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Data object schema version.")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("downholeComponents", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class obj_downholeComponents : abstractObject {
+        
+        private cs_documentInfo documentInfoField;
+        
+        private obj_downholeComponent[] downholeComponentField;
+        
+        private string versionField;
+        
+        /// <remarks/>
+        /// <summary>Information about the downhole component.</summary>
+        [System.ComponentModel.DescriptionAttribute("Information about the downhole component.")]
+        public cs_documentInfo documentInfo {
+            get {
+                return this.documentInfoField;
+            }
+            set {
+                this.documentInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Information about a downhole equipment</summary>
+        [System.Xml.Serialization.XmlElementAttribute("downholeComponent")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Information about a downhole equipment")]
+        public obj_downholeComponent[] downholeComponent {
+            get {
+                return this.downholeComponentField;
+            }
+            set {
+                this.downholeComponentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Data object schema version.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Data object schema version.")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [System.Xml.Serialization.XmlRootAttribute("depthRegImages", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
     public partial class obj_depthRegImages : abstractObject {
         
@@ -66005,6 +75424,291 @@ namespace Energistics.Generator.WITSML141 {
                 this.versionField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum ContactIntervalType {
+        
+        /// <remarks/>
+        GravelPack,
+        
+        /// <remarks/>
+        Openhole,
+        
+        /// <remarks/>
+        Perforation,
+        
+        /// <remarks/>
+        Slots,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum CrudeOilClass {
+        
+        /// <remarks/>
+        bitumous,
+        
+        /// <remarks/>
+        condensate,
+        
+        /// <remarks/>
+        heavy,
+        
+        /// <remarks/>
+        light,
+        
+        /// <remarks/>
+        medium,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("premium light")]
+        premiumlight,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum CrudeOilType {
+        
+        /// <remarks/>
+        sour,
+        
+        /// <remarks/>
+        sweet,
+        
+        /// <remarks/>
+        heavy,
+        
+        /// <remarks/>
+        light,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum FluidType {
+        
+        /// <remarks/>
+        Bitumen,
+        
+        /// <remarks/>
+        Condensate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Hydrocabon Gas")]
+        HydrocabonGas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Non-combustible Gas")]
+        NoncombustibleGas,
+        
+        /// <remarks/>
+        Oil,
+        
+        /// <remarks/>
+        Water,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum GasType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acid gas")]
+        acidgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coalbed methane")]
+        coalbedmethane,
+        
+        /// <remarks/>
+        methane,
+        
+        /// <remarks/>
+        ethane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ethane plus")]
+        ethaneplus,
+        
+        /// <remarks/>
+        propane,
+        
+        /// <remarks/>
+        butane,
+        
+        /// <remarks/>
+        pentane,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C5H12 - pentane plus")]
+        C5H12pentaneplus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide")]
+        carbondioxide,
+        
+        /// <remarks/>
+        condensate,
+        
+        /// <remarks/>
+        helium,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("liquid petroleum gas")]
+        liquidpetroleumgas,
+        
+        /// <remarks/>
+        sulphur,
+        
+        /// <remarks/>
+        miscible,
+        
+        /// <remarks/>
+        H2S,
+        
+        /// <remarks/>
+        air,
+        
+        /// <remarks/>
+        nitrogen,
+        
+        /// <remarks/>
+        hydrogen,
+        
+        /// <remarks/>
+        oxygen,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum LiftMethod {
+        
+        /// <remarks/>
+        Flowing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("GasLift-Continuous")]
+        GasLiftContinuous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("GasLift-NonContinuous")]
+        GasLiftNonContinuous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Jet/Hydraulic Pump")]
+        JetHydraulicPump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("JackLine Pump")]
+        JackLinePump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Progressive Cavity Pump")]
+        ProgressiveCavityPump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Plunger Lift")]
+        PlungerLift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Rod Pump")]
+        RodPump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Submersible Pump")]
+        SubmersiblePump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sumbersible Pump Tandem")]
+        SumbersiblePumpTandem,
+        
+        /// <remarks/>
+        GasLift,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum PerforationFluidType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/A")]
+        NA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Brine Water")]
+        BrineWater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Fresh Water")]
+        FreshWater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Producing Oil")]
+        ProducingOil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Producing Water")]
+        ProducingWater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Salt Water (CaCl)")]
+        SaltWaterCaCl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Salt Water (KCl)")]
+        SaltWaterKCl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Salt Water (NaCl)")]
+        SaltWaterNaCl,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum PerforationPattern {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/A")]
+        NA,
+        
+        /// <remarks/>
+        Cluster,
+        
+        /// <remarks/>
+        Linear,
+        
+        /// <remarks/>
+        Logarithmic,
+        
+        /// <remarks/>
+        Oriented,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public enum WaterSalinity {
+        
+        /// <remarks/>
+        brackishwater,
+        
+        /// <remarks/>
+        brine,
+        
+        /// <remarks/>
+        fresh,
+        
+        /// <remarks/>
+        saline,
     }
     
     /// <remarks/>
