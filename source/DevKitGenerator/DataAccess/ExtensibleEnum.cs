@@ -87,7 +87,7 @@ namespace Energistics.DataAccess
     /// </summary>
     /// <typeparam name="TEnum">The <typeparamref name="TEnum"/> enumeration to use as the native enumeration.</typeparam>
     [Serializable]
-    public struct ExtensibleEnum<TEnum> : IComparable<ExtensibleEnum<TEnum>>, IEquatable<ExtensibleEnum<TEnum>>, IXmlSerializable
+    public struct ExtensibleEnum<TEnum> : IComparable<ExtensibleEnum<TEnum>>, IEquatable<ExtensibleEnum<TEnum>>, IComparable<TEnum>, IEquatable<TEnum>, IXmlSerializable
         where TEnum : struct, Enum
     {
         /// <summary>
@@ -172,18 +172,48 @@ namespace Energistics.DataAccess
         }
 
         /// <summary>
+        /// Compares two <typeparamref name="TEnum"/> instances.
+        /// </summary>
+        /// <param name="other">The instance to compare against.</param>
+        /// <returns>The result of the comparison.</returns>
+        public int CompareTo(TEnum other)
+        {
+            if (!IsEnum) return -1;
+
+            return Enum.CompareTo(other);
+        }
+
+        /// <summary>
+        /// Compares two <typeparamref name="TEnum"/> instances for equality.
+        /// </summary>
+        /// <param name="other">The instance to compare against.</param>
+        /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        public bool Equals(TEnum other)
+        {
+            return (IsEnum && other.Equals(Enum));
+        }
+
+        /// <summary>
         /// Compares this <see cref="ExtensibleEnum{TEnum}"/> with an object for equality.
         /// </summary>
         /// <param name="obj">The object to compare against.</param>
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
         public override bool Equals(object obj)
         {
-            if (obj == null || !(obj is TEnum))
+            if (obj == null)
                 return false;
 
-            var other = (ExtensibleEnum<TEnum>)obj;
+            if (obj is TEnum)
+                return (IsEnum && ((TEnum)obj).Equals(Enum));
 
-            return (other.Enum.Equals(Enum) && other.Extension == Extension);
+            if (obj is ExtensibleEnum<TEnum>)
+            {
+                var other = (ExtensibleEnum<TEnum>)obj;
+
+                return (other.Enum.Equals(Enum) && other.Extension == Extension);
+            }
+
+            return false;
         }
 
         /// <summary>
