@@ -17995,7 +17995,8 @@ namespace Energistics.DataAccess.RESQML200
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractCitedDataObject", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the AbstractCitedDataObject xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0")]
+    [Description("This class represents the AbstractCitedDataObject xsd type.")]
     public abstract partial class AbstractCitedDataObject : AbstractObject, INotifyPropertyChanged
     {
 

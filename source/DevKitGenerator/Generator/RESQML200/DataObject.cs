@@ -12062,6 +12062,7 @@ namespace Energistics.Generator.RESQML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
     public abstract partial class AbstractCitedDataObject : AbstractObject {
     }
     

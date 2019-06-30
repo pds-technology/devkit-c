@@ -409,7 +409,7 @@ namespace Energistics.SchemaGatherer
 
             types.Add(typeDeclaration.Name);
 
-            if (dataObjects.Contains(typeDeclaration.Name))
+            if (dataObjects.Contains(typeDeclaration.Name) || schemaType?.BaseXmlSchemaType?.Name == "AbstractObject")
                 AddEnergisticsDataObjectAttribute(typeDeclaration, standardFamily, dataSchemaVersion);
 
             foreach (var attribute in schemaType.AttributeUses.Values.OfType<XmlSchemaAttribute>())

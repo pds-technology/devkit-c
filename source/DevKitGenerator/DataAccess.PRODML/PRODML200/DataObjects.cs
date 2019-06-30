@@ -16511,7 +16511,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractSimpleProductVolume", Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
-	[Description("This class represents the AbstractSimpleProductVolume xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the AbstractSimpleProductVolume xsd type.")]
     public abstract partial class AbstractSimpleProductVolume : AbstractObject, INotifyPropertyChanged
     {
 
@@ -64576,7 +64577,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
-	[Description("This class represents the ReportingHierarchy xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the ReportingHierarchy xsd type.")]
     public partial class ReportingHierarchy : AbstractObject, INotifyPropertyChanged
     {
 
@@ -64621,7 +64623,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
-	[Description("This class represents the ReportingEntity xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the ReportingEntity xsd type.")]
     public partial class ReportingEntity : AbstractObject, INotifyPropertyChanged
     {
 
@@ -66589,7 +66592,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
-	[Description("This class represents the DasInstrumentBox xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the DasInstrumentBox xsd type.")]
     public partial class DasInstrumentBox : AbstractObject, INotifyPropertyChanged
     {
 
@@ -68648,7 +68652,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the GraphicalInformationSet xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the GraphicalInformationSet xsd type.")]
     public partial class GraphicalInformationSet : AbstractObject, INotifyPropertyChanged
     {
 
@@ -68692,7 +68697,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the DataAssuranceRecord xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the DataAssuranceRecord xsd type.")]
     public partial class DataAssuranceRecord : AbstractObject, INotifyPropertyChanged
     {
 
@@ -68916,7 +68922,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticCrs xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the GeodeticCrs xsd type.")]
     public partial class GeodeticCrs : AbstractObject, INotifyPropertyChanged
     {
 
@@ -68950,7 +68957,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ProjectedCrs xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the ProjectedCrs xsd type.")]
     public partial class ProjectedCrs : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69019,7 +69027,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VerticalCrs xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the VerticalCrs xsd type.")]
     public partial class VerticalCrs : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69087,7 +69096,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the ActivityTemplate xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the ActivityTemplate xsd type.")]
     public partial class ActivityTemplate : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69132,7 +69142,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the Activity xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the Activity xsd type.")]
     public partial class Activity : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69212,7 +69223,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the TimeSeries xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the TimeSeries xsd type.")]
     public partial class TimeSeries : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69275,7 +69287,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the PropertyKind xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the PropertyKind xsd type.")]
     public partial class PropertyKind : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69361,7 +69374,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the PropertyKindDictionary xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the PropertyKindDictionary xsd type.")]
     public partial class PropertyKindDictionary : AbstractObject, INotifyPropertyChanged
     {
 
@@ -69407,7 +69421,8 @@ namespace Energistics.DataAccess.PRODML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the EpcExternalPartReference xsd type.")]
+	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "2.0")]
+    [Description("This class represents the EpcExternalPartReference xsd type.")]
     public partial class EpcExternalPartReference : AbstractObject, INotifyPropertyChanged
     {
 

@@ -21368,6 +21368,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public abstract partial class AbstractSimpleProductVolume : AbstractObject {
         
         private AbstractTemperaturePressure standardConditionsField;
@@ -54752,6 +54753,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class ReportingHierarchy : AbstractObject {
         
         private ReportingHierarchyNode[] reportingNodeField;
@@ -54775,6 +54777,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class ReportingEntity : AbstractObject {
         
         private ReportingEntityKind kindField;
@@ -56248,6 +56251,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class DasInstrumentBox : AbstractObject {
         
         private string serialNumberField;
@@ -57780,6 +57784,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class GraphicalInformationSet : AbstractObject {
         
         private AbstractGraphicalInformation[] graphicalInformationField;
@@ -57802,6 +57807,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class DataAssuranceRecord : AbstractObject {
         
         private string policyIdField;
@@ -57972,6 +57978,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class GeodeticCrs : AbstractObject {
         
         private AbstractGeodeticCrs abstractGeodeticCrsField;
@@ -57993,6 +58000,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class ProjectedCrs : AbstractObject {
         
         private AxisOrder2d axisOrderField;
@@ -58070,6 +58078,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class VerticalCrs : AbstractObject {
         
         private VerticalDirection directionField;
@@ -58131,6 +58140,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class ActivityTemplate : AbstractObject {
         
         private ParameterTemplate[] parameterField;
@@ -58154,6 +58164,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class Activity : AbstractObject {
         
         private DataObjectReference activityDescriptorField;
@@ -58202,6 +58213,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class TimeSeries : AbstractObject {
         
         private GeologicTime[] timeField;
@@ -58240,6 +58252,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class PropertyKind : AbstractObject {
         
         private bool isAbstractField;
@@ -58312,6 +58325,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class PropertyKindDictionary : AbstractObject {
         
         private PropertyKind[] propertyKindField;
@@ -58337,6 +58351,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.0")]
     public partial class EpcExternalPartReference : AbstractObject {
         
         private string filenameField;

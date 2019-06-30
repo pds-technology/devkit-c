@@ -63753,6 +63753,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class WellboreMarkerSet : AbstractObject {
         
         private MdInterval markerSetIntervalField;
@@ -63803,6 +63804,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class WellboreMarker : AbstractObject {
         
         private GeochronologicalUnit chronostratigraphicTopField;
@@ -64435,6 +64437,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class StimJobStage : AbstractObject {
         
         private long numberField;
@@ -65648,6 +65651,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class StimPerforationCluster : AbstractObject {
         
         private MdInterval mdPerforatedIntervalField;
@@ -67755,6 +67759,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class RigUtilization : AbstractObject {
         
         private Energistics.DataAccess.Timestamp startOperationTimeField;
@@ -68981,6 +68986,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class CuttingsGeologyInterval : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -69207,6 +69213,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class CuttingsGeology : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -69273,6 +69280,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class InterpretedGeologyInterval : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -69370,6 +69378,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class InterpretedGeology : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -69437,6 +69446,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class ShowEvaluationInterval : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -69545,6 +69555,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class ShowEvaluation : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -72508,6 +72519,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class CementJobEvaluation : AbstractObject {
         
         private PressureMeasure presTestField;
@@ -73544,6 +73556,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class ChannelSet : AbstractObject {
         
         private ChannelIndex[] indexField;
@@ -73870,6 +73883,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class Channel : AbstractObject {
         
         private string mnemonicField;
@@ -76528,6 +76542,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class GraphicalInformationSet : AbstractObject {
         
         private AbstractGraphicalInformation[] graphicalInformationField;
@@ -76550,6 +76565,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class DataAssuranceRecord : AbstractObject {
         
         private string policyIdField;
@@ -76720,6 +76736,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class GeodeticCrs : AbstractObject {
         
         private AbstractGeodeticCrs abstractGeodeticCrsField;
@@ -76741,6 +76758,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class ProjectedCrs : AbstractObject {
         
         private AxisOrder2d axisOrderField;
@@ -76818,6 +76836,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class VerticalCrs : AbstractObject {
         
         private VerticalDirection directionField;
@@ -76879,6 +76898,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class ActivityTemplate : AbstractObject {
         
         private ParameterTemplate[] parameterField;
@@ -76902,6 +76922,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class Activity : AbstractObject {
         
         private DataObjectReference activityDescriptorField;
@@ -76950,6 +76971,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class TimeSeries : AbstractObject {
         
         private GeologicTime[] timeField;
@@ -76988,6 +77010,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class PropertyKind : AbstractObject {
         
         private bool isAbstractField;
@@ -77060,6 +77083,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class PropertyKindDictionary : AbstractObject {
         
         private PropertyKind[] propertyKindField;
@@ -77085,6 +77109,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class EpcExternalPartReference : AbstractObject {
         
         private string filenameField;
