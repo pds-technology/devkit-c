@@ -66,9 +66,6 @@
     <Compile Include="WITSMLWebServiceConnection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WITSML141\WITSML_conversion_v1311-v141_vers07.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{3f3d2683-6036-4c06-911d-2db5c1682d91}</Project>
       <Name>DataAccess</Name>

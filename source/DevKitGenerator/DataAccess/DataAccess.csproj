@@ -91,7 +91,9 @@
     <None Include="DataAccess.nuspec" />
     <None Include="Documentation\DoxygenConfiguration" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="WITSML_conversion_v1311-v141_vers07.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

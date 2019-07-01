@@ -403,7 +403,7 @@ namespace Energistics.DataAccess
             if ((oldNamespace == "Energistics.DataAccess.WITSML131" && newNamespace == "Energistics.DataAccess.WITSML141") ||
                 (oldNamespace == "Energistics.DataAccess.WITSML141" && newNamespace == "Energistics.DataAccess.WITSML131"))
             {
-                return UpgradeVersion<T, TU>(oldObject, "Energistics.DataAccess.WITSML141.WITSML_conversion_v1311-v141_vers07.xml");
+                return UpgradeVersion<T, TU>(oldObject, "Energistics.DataAccess.WITSML_conversion_v1311-v141_vers07.xml");
             }
             throw new Exception(String.Format("No converters found from {0} to {1}", oldNamespace, newNamespace));
         }
