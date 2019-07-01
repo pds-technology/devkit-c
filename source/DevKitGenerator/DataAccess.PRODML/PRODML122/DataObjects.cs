@@ -5579,7 +5579,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wftRun", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Wireline Formation Test (WFT) object.")]
-    public partial class WftRun : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class WftRun : Object, IProdmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9158,7 +9158,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellTest", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Well Test object.")]
-    public partial class WellTest : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
+    public partial class WellTest : Object, IProdmlDataObject, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11884,7 +11884,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_timeSeriesStatistic", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of WITSML statistics about a range of time series data.")]
-    public partial class TimeSeriesStatistic : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class TimeSeriesStatistic : Object, IProdmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12806,7 +12806,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_timeSeriesData", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a PRODML Time Series Data object.")]
-    public partial class TimeSeriesData : Object, IDataObject, INotifyPropertyChanged
+    public partial class TimeSeriesData : Object, IProdmlDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22392,7 +22392,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productVolume", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Product Volume object.")]
-    public partial class ProductVolume : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
+    public partial class ProductVolume : Object, IProdmlDataObject, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28682,7 +28682,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productionOperation", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Production Operation object.")]
-    public partial class ProductionOperation : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
+    public partial class ProductionOperation : Object, IProdmlDataObject, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31942,7 +31942,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_productFlowModel", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The non-contextual content of a WITSML Product Flow Model object.")]
-    public partial class ProductFlowModel : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class ProductFlowModel : Object, IProdmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32315,7 +32315,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidSample", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("This class represents the obj_fluidSample xsd type.")]
-    public partial class FluidSample : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class FluidSample : Object, IProdmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40401,7 +40401,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidAnalysisResult", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("This class represents the obj_fluidAnalysisResult xsd type.")]
-    public partial class FluidAnalysisResult : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class FluidAnalysisResult : Object, IProdmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -41390,7 +41390,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidAnalysis", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("This class represents the obj_fluidAnalysis xsd type.")]
-    public partial class FluidAnalysis : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class FluidAnalysis : Object, IProdmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42069,7 +42069,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsMeasurement", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The information content of a DTS temperature run is captured in the following elements, and in the referenced dtsInstalledFiber (for context) and the reference well log (captures the table of data).")]
-    public partial class DtsMeasurement : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class DtsMeasurement : Object, IProdmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46391,7 +46391,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_dtsInstalledSystem", Namespace="http://www.prodml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("The optical fiber is installed in a wellbore and attached to an instrument box. Calibrations are performed. In general, this should be a subelement of a DTS object.")]
-    public partial class DtsInstalledSystem : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class DtsInstalledSystem : Object, IProdmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -48139,7 +48139,7 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlRootAttribute("report", Namespace="http://www.prodml.org/schemas/1series", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.PRODML, "1.2.0.0")]
     [Description("This class represents the obj_report xsd type.")]
-    public partial class Report : AbstractObject, INotifyPropertyChanged
+    public partial class Report : AbstractObject, IProdmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>

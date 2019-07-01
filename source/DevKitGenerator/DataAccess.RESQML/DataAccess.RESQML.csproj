@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IResqmlDataObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RESQML110\DataObjects.cs" />
     <Compile Include="RESQML110\GeneratedEnumValues.cs" />

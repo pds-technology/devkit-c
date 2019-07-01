@@ -19237,7 +19237,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractCitedDataObject", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("This class represents the AbstractCitedDataObject xsd type.")]
-    public abstract partial class AbstractCitedDataObject : AbstractObject, INotifyPropertyChanged
+    public abstract partial class AbstractCitedDataObject : AbstractObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -19398,7 +19398,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("MdDatum", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Specifies the location of the measured depth = 0 reference point. The location of this reference point is defined with respect to a CRS, which need not be the same as the CRS of a wellbore trajectory representation, which may reference this location.")]
-    public partial class MdDatum : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class MdDatum : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19468,7 +19468,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("ActivityTemplate", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Description of one type of activity.")]
-    public partial class ActivityTemplate : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class ActivityTemplate : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19514,7 +19514,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("Activity", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Instance of a given activity")]
-    public partial class Activity : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class Activity : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19845,7 +19845,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CategoricalProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Information specific to one categorical property. Contains discrete integer. This type of property is associated either as: - an internally stored index to a string through a lookup mapping. - an internally stored double to another double value through an explicitly provided table.")]
-    public partial class CategoricalProperty : AbstractValuesProperty, INotifyPropertyChanged
+    public partial class CategoricalProperty : AbstractValuesProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19879,7 +19879,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CategoricalPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Information specific to one comment property. Used to capture comments or annotations associated with a given element type in a data-object, for example, associating comments on the specific location of a well path.")]
-    public partial class CategoricalPropertySeries : CategoricalProperty, INotifyPropertyChanged
+    public partial class CategoricalPropertySeries : CategoricalProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19930,7 +19930,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("DiscreteProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Contains discrete integer values; typically used to store any type of index. So that the value range can be known before accessing all values, it also stores the minimum and maximum value in the range.")]
-    public partial class DiscreteProperty : AbstractValuesProperty, INotifyPropertyChanged
+    public partial class DiscreteProperty : AbstractValuesProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20006,7 +20006,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("DiscretePropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Information specific to one comment property. Used to capture comments or annotations associated with a given element type in a data-object, for example, associating comments on the specific location of a well path.")]
-    public partial class DiscretePropertySeries : DiscreteProperty, INotifyPropertyChanged
+    public partial class DiscretePropertySeries : DiscreteProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20057,7 +20057,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CommentProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Information specific to one comment property. Used to capture comments or annotations associated with a given element type in a data-object, for example, associating comments on the specific location of a well path.")]
-    public partial class CommentProperty : AbstractValuesProperty, INotifyPropertyChanged
+    public partial class CommentProperty : AbstractValuesProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20090,7 +20090,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CommentPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Information specific to one comment property. Used to capture comments or annotations associated with a given element type in a data-object, for example, associating comments on the specific location of a well path.")]
-    public partial class CommentPropertySeries : CommentProperty, INotifyPropertyChanged
+    public partial class CommentPropertySeries : CommentProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20141,7 +20141,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("ContinuousProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Most common type of property used for storing rock or fluid attributes; all are represented as doubles. So that the value range can be known before accessing all values, the min and max values of the range are also stored. BUSINESS RULE: It also contains a unit of measure that can be different from the unit of measure of its property type, but it must be convertible into this unit.")]
-    public partial class ContinuousProperty : AbstractValuesProperty, INotifyPropertyChanged
+    public partial class ContinuousProperty : AbstractValuesProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20235,7 +20235,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("ContinuousPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Information specific to one comment property. Used to capture comments or annotations associated with a given element type in a data-object, for example, associating comments on the specific location of a well path.")]
-    public partial class ContinuousPropertySeries : ContinuousProperty, INotifyPropertyChanged
+    public partial class ContinuousPropertySeries : ContinuousProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20285,7 +20285,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PointsProperty", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Represents the geometric information that should *not* be used as representation geometry, but should be used in another context where the location or geometrical vectorial distances are needed.")]
-    public partial class PointsProperty : AbstractProperty, INotifyPropertyChanged
+    public partial class PointsProperty : AbstractProperty, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20331,7 +20331,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PropertySet", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A set of properties collected together for a specific purpose. For example, a property set can be used to collect all the properties corresponding to the simulation output at a single time, or all the values of a single property type for all times.")]
-    public partial class PropertySet : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class PropertySet : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20479,7 +20479,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StringTableLookup", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defines an integer-to-string lookup table, for example, stores facies properties, where a facies index is associated with a facies name. . Used for categorical properties, which also may use a double table lookup. ")]
-    public partial class StringTableLookup : AbstractPropertyLookup, INotifyPropertyChanged
+    public partial class StringTableLookup : AbstractPropertyLookup, IResqmlDataObject, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the StringTableLookup class.
@@ -20546,7 +20546,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("DoubleTableLookup", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defines a function for table lookups. For example, used for linear interpolation, such as PVT. Used for categorical property, which also may use StringTableLookup.")]
-    public partial class DoubleTableLookup : AbstractPropertyLookup, INotifyPropertyChanged
+    public partial class DoubleTableLookup : AbstractPropertyLookup, IResqmlDataObject, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the DoubleTableLookup class.
@@ -20613,7 +20613,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PropertyKind", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A description of a property name relative to a standard definition. For example, you may specify if the property kind is abstract, the dictionary in which the property is unique, and the representative unit of measure. ")]
-    public partial class PropertyKind : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class PropertyKind : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20922,7 +20922,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StreamlinesRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Representation of streamlines associated with a streamline feature and interpretation. Use StreamlinesFeature to define the vector field that supports the streamlines, i.e., describes what flux is being traced. Use Interpretation to distinguish between shared and differing interpretations. Usage Note: When defining streamline geometry, the PatchIndex will not be referenced, and may be set to a value of 0.")]
-    public partial class StreamlinesRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class StreamlinesRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21057,7 +21057,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("Grid2dSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Set of representations based on a 2D grid. Each 2D grid representation corresponds to one patch of the set.")]
-    public partial class Grid2dSetRepresentation : AbstractSurfaceRepresentation, INotifyPropertyChanged
+    public partial class Grid2dSetRepresentation : AbstractSurfaceRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21103,7 +21103,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("Grid2dRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Representation based on a 2D grid. For definitions of slowest and fastest axes of the array, see Grid2dPatch. ")]
-    public partial class Grid2dRepresentation : AbstractSurfaceRepresentation, INotifyPropertyChanged
+    public partial class Grid2dRepresentation : AbstractSurfaceRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21137,7 +21137,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PlaneSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defines a plane representation, which can be made up of multiple patches. Commonly represented features are fluid contacts or frontiers. Common geometries of this representation are titled or horizontal planes. BUSINESS RULE: If the plane representation is made up of multiple patches, then you must specify the outer rings for each plane patch.")]
-    public partial class PlaneSetRepresentation : AbstractSurfaceRepresentation, INotifyPropertyChanged
+    public partial class PlaneSetRepresentation : AbstractSurfaceRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21183,7 +21183,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TriangulatedSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A representation based on set of triangulated mesh patches, which gets its geometry from a 1D array of points. BUSINESS RULE: The orientation of all the triangles of this representation must be consistent.")]
-    public partial class TriangulatedSetRepresentation : AbstractSurfaceRepresentation, INotifyPropertyChanged
+    public partial class TriangulatedSetRepresentation : AbstractSurfaceRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21229,7 +21229,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PolylineRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A representation made up of a single polyline or polygonal chain, which may be closed or not. Definition from Wikipedia (http://en.wikipedia.org/wiki/Piecewise_linear_curve): A polygonal chain, polygonal curve, polygonal path, or piecewise linear curve, is a connected series of line segments. More formally, a polygonal chain P is a curve specified by a sequence of points A_1, A_2, ..., A_n called its vertices so that the curve consists of the line segments connecting the consecutive vertices. In computer graphics a polygonal chain is called a polyline and is often used to approximate curved paths. BUSINESS RULE: To record a polyline the writer software must give the values of the geometry of each node in an order corresponding to the logical series of segments (edges). The geometry of a polyline must be a 1D array of points. A simple polygonal chain is one in which only consecutive (or the first and the last) segments intersect and only at their endpoints. A closed polygonal chain (isClosed=True) is one in which the first vertex coincides with the last one, or the first and the last vertices are connected by a line segment. ")]
-    public partial class PolylineRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class PolylineRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21315,7 +21315,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PolylineSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A representation made up of a set of polylines or a set of polygonal chains (for more information, see PolylineRepresentation). For compactness, it is organized by line patch as a unique polyline set patch. if allPolylineClosed = True, all the polylines are connected between the first and the last point. Its geometry is a 1D array of points, corresponding to the concatenation of the points of all polyline points.")]
-    public partial class PolylineSetRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class PolylineSetRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21396,7 +21396,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("PointSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A representation that consists of one or more node patches. Each node patch is an array of XYZ coordinates for the 3D points. There is no implied linkage between the multiple patches.")]
-    public partial class PointSetRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class PointSetRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21442,7 +21442,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("WellboreTrajectoryRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Representation of a wellbore trajectory.")]
-    public partial class WellboreTrajectoryRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class WellboreTrajectoryRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21637,7 +21637,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("WellboreFrameRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Representation of a wellbore that is organized along a wellbore trajectory by its MD values. RESQML uses MD values to associate properties on points and to organize association of properties on intervals between MD points. ")]
-    public partial class WellboreFrameRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class WellboreFrameRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21759,7 +21759,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("WellboreMarkerFrameRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A well log frame where each entry represents a well marker")]
-    public partial class WellboreMarkerFrameRepresentation : WellboreFrameRepresentation, INotifyPropertyChanged
+    public partial class WellboreMarkerFrameRepresentation : WellboreFrameRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21805,7 +21805,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("BlockedWellboreRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("The information that allows you to locate, on one or several grids (existing or planned), the intersection of volume (cells) and surface (faces) elements with a wellbore trajectory (existing or planned).")]
-    public partial class BlockedWellboreRepresentation : WellboreFrameRepresentation, INotifyPropertyChanged
+    public partial class BlockedWellboreRepresentation : WellboreFrameRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21923,7 +21923,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("DeviationSurveyRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Specifies the station data from a deviation survey. The deviation survey does not provide a complete specification of the geometry of a wellbore trajectory. Although a minimum-curvature algorithm is used in most cases, the implementation varies sufficiently that no single algorithmic specification is available as a data transfer standard. Instead, the geometry of a RESQML wellbore trajectory is represented by a parametric line, parameterized by the MD. CRS and units of measure do not need to be consistent with the CRS and units of measure for wellbore trajectory representation.")]
-    public partial class DeviationSurveyRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class DeviationSurveyRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22136,7 +22136,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("SubRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("An ordered list of indexable elements and/or indexable element pairs of an existing representation. Because the representation concepts of topology, geometry, and property values are separate in RESQML, it is now possible to select a range of nodes, edges, faces, or volumes (cell) indices from the topological support of an existing representation to define a sub-representation. A sub-representation may describe a different feature interpretation using the same geometry or property as the parent representation. In this case, the only information exchanged is a set of potentially non-consecutive indices of the topological support of the representation.")]
-    public partial class SubRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class SubRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22217,7 +22217,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("RedefinedGeometryRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A representation derived from an existing representation by redefining its geometry. Example use cases include deformation of the geometry of an object, change of coordinate system, and change of time &lt;=&gt; depth.")]
-    public partial class RedefinedGeometryRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class RedefinedGeometryRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22285,7 +22285,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("RepresentationSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("The parent class of the framework representations. It is used to group together individual representations which may be of the same kind to represent a “bag” of representations. If the bag is homogeneous, then this may be indicated. These “bags” do not imply any geologic consistency. For example, you can define a set of wellbore frames, a set of wellbore trajectories, a set of blocked wellbores. Because the framework representations inherit from this class, they inherit the capability to gather individual representations into sealed and non-sealed surface framework representations, or sealed volume framework representations.")]
-    public partial class RepresentationSetRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class RepresentationSetRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22349,7 +22349,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("SealedVolumeFrameworkRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A strict boundary representation (BREP), which represents the volume region by assembling together shells. BUSINESS RULE: The sealed structural framework must be part of the same earth model as this sealed volume framework.")]
-    public partial class SealedVolumeFrameworkRepresentation : RepresentationSetRepresentation, INotifyPropertyChanged
+    public partial class SealedVolumeFrameworkRepresentation : RepresentationSetRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22491,7 +22491,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("SealedSurfaceFrameworkRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A collection of contact representations parts, which are a list of contact patches and their identities. This collection of contact representations is completed by a set of representations gathered at the representation set representation level.")]
-    public partial class SealedSurfaceFrameworkRepresentation : AbstractSurfaceFrameworkRepresentation, INotifyPropertyChanged
+    public partial class SealedSurfaceFrameworkRepresentation : AbstractSurfaceFrameworkRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22536,7 +22536,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("NonSealedSurfaceFrameworkRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A collection of contact representations parts, which are a list of contact patches with no identity. This collection of contact representations is completed by a set of representations gathered at the representation set representation level.")]
-    public partial class NonSealedSurfaceFrameworkRepresentation : AbstractSurfaceFrameworkRepresentation, INotifyPropertyChanged
+    public partial class NonSealedSurfaceFrameworkRepresentation : AbstractSurfaceFrameworkRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22581,7 +22581,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GridConnectionSetRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Representation which consists of a list of connections between grid cells, potentially on different grids. Connections are in the form of (Grid,Cell,Face)1&lt;=&gt;(Grid,Cell,Face)2 and are stored as three integer pair arrays corresponding to these six elements. Grid connection sets are the preferred means of representing faults on a grid. The use of cell-face-pairs is more complete than single cell-faces, which are missing a corresponding cell face entry, and only provide an incomplete representation of the topology of a fault. Unlike what is sometimes the case in reservoir simulation software, RESQML does not distinguish between standard and non-standard connections. Within RESQML if a grid connection corresponds to a nearest neighbor as defined by the cell indices, then it is never additive to the implicit nearest neighbor connection. BUSINESS RULE: A single cell-face-pair should not appear within more than a single grid connection set. This rule is designed to simplify the interpretation of properties assigned to multiple grid connection sets, which might otherwise have the same property defined more than once on a single connection, with no clear means of resolving the multiple values.")]
-    public partial class GridConnectionSetRepresentation : AbstractRepresentation, INotifyPropertyChanged
+    public partial class GridConnectionSetRepresentation : AbstractRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22844,7 +22844,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("IjkGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Grid whose topology is characterized by structured column indices (I,J) and a layer index, K. Cell geometry is characterized by nodes on coordinate lines, where each column of the model has 4 sides. Geometric degeneracy is permitted. IJK grids support the following specific extensions: IJK radial grids K-Layer gaps IJ-Column gaps")]
-    public partial class IjkGridRepresentation : AbstractColumnLayerGridRepresentation, INotifyPropertyChanged
+    public partial class IjkGridRepresentation : AbstractColumnLayerGridRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22965,7 +22965,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("UnstructuredColumnLayerGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Grid whose topology is characterized by an unstructured column index and a layer index, K. Cell geometry is characterized by nodes on coordinate lines, where each column of the model may have an arbitrary number of sides.")]
-    public partial class UnstructuredColumnLayerGridRepresentation : AbstractColumnLayerGridRepresentation, INotifyPropertyChanged
+    public partial class UnstructuredColumnLayerGridRepresentation : AbstractColumnLayerGridRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23071,7 +23071,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TruncatedIjkGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Grid class with an underlying IJK topology, together with a 1D split cell list. The truncated IJK cells have more than the usual 6 faces. The split cells are arbitrary polyhedra, identical to those of an unstructured cell grid.")]
-    public partial class TruncatedIjkGridRepresentation : AbstractTruncatedColumnLayerGridRepresentation, INotifyPropertyChanged
+    public partial class TruncatedIjkGridRepresentation : AbstractTruncatedColumnLayerGridRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23141,7 +23141,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TruncatedUnstructuredColumnLayerGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Grid class with an underlying unstructured column layer topology, together with a 1D split cell list. The truncated cells have more than the usual number of faces within each column. The split cells are arbitrary polyhedra, identical to those of an unstructured cell grid.")]
-    public partial class TruncatedUnstructuredColumnLayerGridRepresentation : AbstractTruncatedColumnLayerGridRepresentation, INotifyPropertyChanged
+    public partial class TruncatedUnstructuredColumnLayerGridRepresentation : AbstractTruncatedColumnLayerGridRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23193,7 +23193,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GpGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("General purpose (GP) grid representation, which includes and/or extends the features from all other grid representations. This general purpose representation is included in the schema for research and/or advanced modeling purposes, but is not expected to be used for routine data transfer.")]
-    public partial class GpGridRepresentation : AbstractGridRepresentation, INotifyPropertyChanged
+    public partial class GpGridRepresentation : AbstractGridRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23267,7 +23267,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("UnstructuredGridRepresentation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Unstructured grid representation characterized by a cell count, and potentially nothing else. Both the oldest and newest simulation formats are based on this format.")]
-    public partial class UnstructuredGridRepresentation : AbstractGridRepresentation, INotifyPropertyChanged
+    public partial class UnstructuredGridRepresentation : AbstractGridRepresentation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23318,7 +23318,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("RepresentationIdentitySet", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A collection of representation identities.")]
-    public partial class RepresentationIdentitySet : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class RepresentationIdentitySet : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23364,7 +23364,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalGridSet", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Used to activate and/or deactivate the specified children grids as local grids on their parents. Once activated, this object indicates that a child grid replaces local portions of the corresponding parent grid. Parentage is inferred from the child grid construction. Without a grid set activation, the local grids are always active. Otherwise, the grid set activation is used to activate and/or deactivate the local grids in the set at specific times.")]
-    public partial class LocalGridSet : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class LocalGridSet : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23427,7 +23427,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicColumn", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A global interpretation of the stratigraphy, which can be made up of several ranks of stratigraphic unit interpretations. BUSINESS RULE: All stratigraphic column rank interpretations that make up a stratigraphic column must be ordered by age.")]
-    public partial class StratigraphicColumn : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class StratigraphicColumn : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23562,7 +23562,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GeologicUnitInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("The main class for data describing an opinion of a volume-based geologic feature or unit.")]
-    public partial class GeologicUnitInterpretation : AbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class GeologicUnitInterpretation : AbstractFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23648,7 +23648,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicUnitInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Interpretation of a stratigraphic unit which includes the knowledge of the top, the bottom, the deposition mode.")]
-    public partial class StratigraphicUnitInterpretation : GeologicUnitInterpretation, INotifyPropertyChanged
+    public partial class StratigraphicUnitInterpretation : GeologicUnitInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23733,7 +23733,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GeobodyInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A type of rock feature, this class identifies if a rock feature is a geobody with any qualifications on the interpretation of the geobody. ")]
-    public partial class GeobodyInterpretation : GeologicUnitInterpretation, INotifyPropertyChanged
+    public partial class GeobodyInterpretation : GeologicUnitInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23784,7 +23784,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("RockFluidUnitInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A type of rock fluid feature interpretation , this class identifies if a rock fluid feature by its phase")]
-    public partial class RockFluidUnitInterpretation : GeologicUnitInterpretation, INotifyPropertyChanged
+    public partial class RockFluidUnitInterpretation : GeologicUnitInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23835,7 +23835,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("EarthModelInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("An earth model interpretation has a specific role: it gathers a maximum of one of each of these other organization interpretations: structural organization interpretation, stratigraphic organization interpretation, and/or fluid organization interpretation. BUSINESS RULE: An earth model Interpretation interprets only an earth model feature. ")]
-    public partial class EarthModelInterpretation : AbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class EarthModelInterpretation : AbstractFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23934,7 +23934,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("BoundaryFeatureInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("The main class for data describing an opinion of a surface feature between two volumes. BUSINESS RULE: The data-object reference (of type interprets) must reference only a boundary feature.")]
-    public partial class BoundaryFeatureInterpretation : AbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class BoundaryFeatureInterpretation : AbstractFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -23950,7 +23950,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("HorizonInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A type of boundary feature, the class specifies if the boundary feature is a horizon. Maximum Flooding Surface - Transgressive Surface ( for erosion or intrusion ?) - Sequence Boundary - Stratigraphic Limit ")]
-    public partial class HorizonInterpretation : BoundaryFeatureInterpretation, INotifyPropertyChanged
+    public partial class HorizonInterpretation : BoundaryFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24030,7 +24030,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("FaultInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A type of boundary feature, this class contains the data describing an opinion about the characterization of the fault, which includes the attributes listed below. ")]
-    public partial class FaultInterpretation : BoundaryFeatureInterpretation, INotifyPropertyChanged
+    public partial class FaultInterpretation : BoundaryFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24161,7 +24161,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GeobodyBoundaryInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A type of boundary feature, this class identifies if the boundary is a geobody and the type of the boundary.")]
-    public partial class GeobodyBoundaryInterpretation : BoundaryFeatureInterpretation, INotifyPropertyChanged
+    public partial class GeobodyBoundaryInterpretation : BoundaryFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24206,7 +24206,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("WellboreInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("This class contains the data describing an opinion of a borehole. This interpretation is relative to one particular well trajectory. ")]
-    public partial class WellboreInterpretation : AbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class WellboreInterpretation : AbstractFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24240,7 +24240,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GenericFeatureInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("This class represents the obj_GenericFeatureInterpretation xsd type.")]
-    public partial class GenericFeatureInterpretation : AbstractFeatureInterpretation, INotifyPropertyChanged
+    public partial class GenericFeatureInterpretation : AbstractFeatureInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -24343,7 +24343,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicOccurrenceInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A local Interpretation—it could be along a well, on a 2D map, or on a 2D section or on a part of the global volume of an earth model—of a succession of rock feature elements. The stratigraphic column rank interpretation composing a stratigraphic occurrence can be ordered by the criteria listed in OrderingCriteria. BUSINESS RULE: A representation of a stratigraphic occurrence interpretation can be a wellbore marker or a wellbore frame.")]
-    public partial class StratigraphicOccurrenceInterpretation : AbstractStratigraphicOrganizationInterpretation, INotifyPropertyChanged
+    public partial class StratigraphicOccurrenceInterpretation : AbstractStratigraphicOrganizationInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24405,7 +24405,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicColumnRankInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A global hierarchy containing an ordered list of stratigraphic unit interpretations.")]
-    public partial class StratigraphicColumnRankInterpretation : AbstractStratigraphicOrganizationInterpretation, INotifyPropertyChanged
+    public partial class StratigraphicColumnRankInterpretation : AbstractStratigraphicOrganizationInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24468,7 +24468,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StructuralOrganizationInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("One of the main types of RESQML organizations, this class gathers boundary interpretations (e.g., horizons and faults) plus frontier features and their relationships (contacts interpretations), which when taken together define the structure of a part of the earth.")]
-    public partial class StructuralOrganizationInterpretation : AbstractOrganizationInterpretation, INotifyPropertyChanged
+    public partial class StructuralOrganizationInterpretation : AbstractOrganizationInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24646,7 +24646,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("RockFluidOrganizationInterpretation", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Interpretation of the fluid organization units.")]
-    public partial class RockFluidOrganizationInterpretation : AbstractOrganizationInterpretation, INotifyPropertyChanged
+    public partial class RockFluidOrganizationInterpretation : AbstractOrganizationInterpretation, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24680,7 +24680,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GlobalChronostratigraphicColumn", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Chronological successions of some chronostratigraphic units organized into 1 to n chronological ranks.")]
-    public partial class GlobalChronostratigraphicColumn : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class GlobalChronostratigraphicColumn : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24787,7 +24787,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StreamlinesFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Specification of the vector field upon which the streamlines are based. Streamlines are commonly used to trace the flow of phases (water / oil / gas / total) based upon their flux at a specified time. They may also be used for trace components for compositional simulation, e.g., CO2, or temperatures for thermal simulation. The flux enumeration provides support for the most usual cases with provision for extensions to other fluxes.")]
-    public partial class StreamlinesFeature : AbstractTechnicalFeature, INotifyPropertyChanged
+    public partial class StreamlinesFeature : AbstractTechnicalFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24877,7 +24877,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("SeismicLatticeFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defined by two lateral ordered dimensions: inline (lateral), crossline (lateral and orthogonal to the inline dimension), which are fixed. To specify its location, a seismic feature can be associated with the seismic coordinates of the points of a representation.")]
-    public partial class SeismicLatticeFeature : AbstractSeismicSurveyFeature, INotifyPropertyChanged
+    public partial class SeismicLatticeFeature : AbstractSeismicSurveyFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25035,7 +25035,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("SeismicLineFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defined by one lateral dimension: trace (lateral). Seismic trace of the 3D seismic survey. To specify its location, the seismic feature can be associated with the seismic coordinates of the points of a representation.")]
-    public partial class SeismicLineFeature : AbstractSeismicSurveyFeature, INotifyPropertyChanged
+    public partial class SeismicLineFeature : AbstractSeismicSurveyFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25122,7 +25122,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("SeismicLineSetFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("An unordered set of several seismic lines. Generally, it has no direct interpretation or representation.")]
-    public partial class SeismicLineSetFeature : AbstractSeismicSurveyFeature, INotifyPropertyChanged
+    public partial class SeismicLineSetFeature : AbstractSeismicSurveyFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -25138,7 +25138,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("WellboreFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("May refer to one of these: wellbore. A unique, oriented path from the bottom of a drilled borehole to the surface of the earth. The path must not overlap or cross itself. borehole. A hole excavated in the earth as a result of drilling or boring operations. The borehole may represent the hole of an entire wellbore (when no sidetracks are present), or a sidetrack extension. A borehole extends from an originating point (the surface location for the initial borehole or kickoff point for sidetracks) to a terminating (bottomhole) point. sidetrack. A borehole that originates in another borehole as opposed to originating at the surface.")]
-    public partial class WellboreFeature : AbstractTechnicalFeature, INotifyPropertyChanged
+    public partial class WellboreFeature : AbstractTechnicalFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25171,7 +25171,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("FrontierFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Identifies a frontier or boundary in the earth model that is not a geological feature but an arbitrary geographic/geometric surface used to delineate the boundary of the model.")]
-    public partial class FrontierFeature : AbstractTechnicalFeature, INotifyPropertyChanged
+    public partial class FrontierFeature : AbstractTechnicalFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -25213,7 +25213,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("OrganizationFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("The explicit description of the relationships between geologic features, such as rock features (e.g., stratigraphic units, geobodies, phase unit) and boundary features (e.g., genetic, tectonic, and fluid boundaries). For types of organizations, see OrganizationKind.")]
-    public partial class OrganizationFeature : AbstractGeologicFeature, INotifyPropertyChanged
+    public partial class OrganizationFeature : AbstractGeologicFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25249,7 +25249,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("BoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("An interface between two geological objects, such as horizons and faults. It is a surface object. ")]
-    public partial class BoundaryFeature : AbstractGeologicFeature, INotifyPropertyChanged
+    public partial class BoundaryFeature : AbstractGeologicFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -25265,7 +25265,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TectonicBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A boundary caused by tectonic movement or metamorphism, such as a fault or a fracture. For types, see TectonicBoundaryKind.")]
-    public partial class TectonicBoundaryFeature : BoundaryFeature, INotifyPropertyChanged
+    public partial class TectonicBoundaryFeature : BoundaryFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25298,7 +25298,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GeneticBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A boundary between two units produced by a contrast between two deposits that occurred at two different geologic time periods. For types, see GeneticBoundaryKind.")]
-    public partial class GeneticBoundaryFeature : BoundaryFeature, INotifyPropertyChanged
+    public partial class GeneticBoundaryFeature : BoundaryFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25348,7 +25348,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("FluidBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A boundary (usually a plane) separating two fluid phases, such as a gas-oil contact (GOC), a water-oil contact (WOC), a gas-oil contact (GOC), or others. For types, see FluidContact.")]
-    public partial class FluidBoundaryFeature : BoundaryFeature, INotifyPropertyChanged
+    public partial class FluidBoundaryFeature : BoundaryFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25384,7 +25384,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GeologicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A volume of rock located between one or more boundary features. The limiting boundary features should be genetic boundary features (i.e. should not be faults).")]
-    public partial class GeologicUnitFeature : AbstractGeologicFeature, INotifyPropertyChanged
+    public partial class GeologicUnitFeature : AbstractGeologicFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -25400,7 +25400,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("GeobodyFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A volume of rock that is identified based on some specific attribute, like its mineral content or other physical characteristic. Unlike stratigraphic or phase units, there is no associated time or fluid content semantic. For types, see GeobodyKind.")]
-    public partial class GeobodyFeature : GeologicUnitFeature, INotifyPropertyChanged
+    public partial class GeobodyFeature : GeologicUnitFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -25416,7 +25416,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("StratigraphicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A stratigraphic unit that can have a well-known (e.g., Jurassic) chronostratigraphic top and chronostratigraphic bottom. These chronostratigraphic units have no associated interpretations or representations. BUSINESS RULE: The name must reference a well-known chronostratigraphic unit (such as Jurassic), for example, from the International Commission on Stratigraphy (http://www.stratigraphy.org).")]
-    public partial class StratigraphicUnitFeature : GeologicUnitFeature, INotifyPropertyChanged
+    public partial class StratigraphicUnitFeature : GeologicUnitFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25466,7 +25466,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("RockFluidUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("A fluid phase plus one or more stratigraphic units. A unit may correspond to a pair of horizons that are not adjacent stratigraphically, e.g., a coarse zonation, and is often used to define the reservoir. For types, see Phase.")]
-    public partial class RockFluidUnitFeature : GeologicUnitFeature, INotifyPropertyChanged
+    public partial class RockFluidUnitFeature : GeologicUnitFeature, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25535,7 +25535,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Stores an ordered list of times, for example, for time-dependent properties, geometries, or representations. It is used in conjunction with the time index to specify times for RESQML.")]
-    public partial class TimeSeries : AbstractResqmlDataObject, INotifyPropertyChanged
+    public partial class TimeSeries : AbstractResqmlDataObject, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25797,7 +25797,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defines a local depth coordinate system, the geometrical origin and location is defined by the elements of the base class AbstractLocal3dCRS. This CRS uses the units of measure of its projected and vertical CRS.")]
-    public partial class LocalDepth3dCrs : AbstractLocal3dCrs, INotifyPropertyChanged
+    public partial class LocalDepth3dCrs : AbstractLocal3dCrs, IResqmlDataObject, INotifyPropertyChanged
     {
 
 
@@ -25813,7 +25813,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "2.0.1")]
     [Description("Defines a local time coordinate system, the geometrical origin and location is defined by the elements of the base class AbstractLocal3dCRS. This CRS defines the time unit that the time-based geometries that refers it will use.")]
-    public partial class LocalTime3dCrs : AbstractLocal3dCrs, INotifyPropertyChanged
+    public partial class LocalTime3dCrs : AbstractLocal3dCrs, IResqmlDataObject, INotifyPropertyChanged
     {
 
         /// <summary>

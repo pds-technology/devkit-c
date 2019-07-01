@@ -92,7 +92,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellbore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Wellbore object.")]
-    public partial class Wellbore : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
+    public partial class Wellbore : Object, IWitsmlDataObject, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6220,7 +6220,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_well", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Well object.")]
-    public partial class Well : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class Well : Object, IWitsmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9357,7 +9357,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wbGeometry", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("WITSML - Wellbore Geometry Component Schema ")]
-    public partial class StandAloneWellboreGeometry : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class StandAloneWellboreGeometry : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15238,7 +15238,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_tubular", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML tubular object.")]
-    public partial class Tubular : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Tubular : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15647,7 +15647,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_trajectory", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Trajectory object.")]
-    public partial class Trajectory : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Trajectory : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19228,7 +19228,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_toolErrorTermSet", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML error term set object.")]
-    public partial class ToolErrorTermSet : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class ToolErrorTermSet : Object, IWitsmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20270,7 +20270,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_toolErrorModel", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Tool Error Model object.")]
-    public partial class ToolErrorModel : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    public partial class ToolErrorModel : Object, IWitsmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20779,7 +20779,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_target", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Target object.")]
-    public partial class Target : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Target : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21755,7 +21755,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_surveyProgram", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Survey Program object.")]
-    public partial class SurveyProgram : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class SurveyProgram : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30788,7 +30788,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_stimJob", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML well stimulation Job.")]
-    public partial class StimJob : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class StimJob : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33090,7 +33090,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_sidewallCore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Sidewall Core object.")]
-    public partial class SidewallCore : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class SidewallCore : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33763,7 +33763,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_risk", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Risk object.")]
-    public partial class Risk : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Risk : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38818,7 +38818,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_rig", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Rig object.")]
-    public partial class Rig : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Rig : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -45602,7 +45602,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_opsReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Operations Report object.")]
-    public partial class OpsReport : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class OpsReport : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -51395,7 +51395,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_objectGroup", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML objectGroup object.")]
-    public partial class ObjectGroup : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class ObjectGroup : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -52700,7 +52700,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_mudLog", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Mud Log object.")]
-    public partial class MudLog : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class MudLog : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -55282,7 +55282,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_message", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Message object.")]
-    public partial class Message : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Message : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -56777,7 +56777,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_log", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Log.")]
-    public partial class Log : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Log : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57564,7 +57564,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_formationMarker", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Formation Marker.")]
-    public partial class FormationMarker : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class FormationMarker : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -58035,7 +58035,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidsReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Fluids Report.")]
-    public partial class FluidsReport : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class FluidsReport : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -64140,7 +64140,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_drillReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Drilling Report object.")]
-    public partial class DrillReport : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class DrillReport : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -65070,7 +65070,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_convCore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Conventional Core.")]
-    public partial class ConvCore : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class ConvCore : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -66122,7 +66122,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_changeLog", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML attachment object.")]
-    public partial class ChangeLog : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
+    public partial class ChangeLog : Object, IWitsmlDataObject, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -70685,7 +70685,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_cementJob", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Cement Job.")]
-    public partial class CementJob : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class CementJob : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -71945,7 +71945,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_bhaRun", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML bottom hole assembly run object.")]
-    public partial class BhaRun : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class BhaRun : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72512,7 +72512,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_attachment", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML attachment object.")]
-    public partial class Attachment : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class Attachment : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72897,7 +72897,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCompletion", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("This class represents the obj_wellCompletion xsd type.")]
-    public partial class WellCompletion : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
+    public partial class WellCompletion : Object, IWitsmlDataObject, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -76812,7 +76812,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCMLedger", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("This class represents the obj_wellCMLedger xsd type.")]
-    public partial class WellCMLedger : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class WellCMLedger : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -79559,7 +79559,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellboreCompletion", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("This class represents the obj_wellboreCompletion xsd type.")]
-    public partial class WellboreCompletion : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class WellboreCompletion : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -84183,7 +84183,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_downholeComponent", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("This class represents the obj_downholeComponent xsd type.")]
-    public partial class DownholeComponent : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
+    public partial class DownholeComponent : Object, IWitsmlDataObject, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -86716,7 +86716,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_depthRegImage", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("This class represents the obj_depthRegImage xsd type.")]
-    public partial class DepthRegImage : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
+    public partial class DepthRegImage : Object, IWitsmlDataObject, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IProdmlDataObject.cs" />
     <Compile Include="PRODML122\CommonData.cs" />
     <Compile Include="PRODML122\DataObjects.cs" />
     <Compile Include="PRODML122\GeneratedEnumValues.cs" />

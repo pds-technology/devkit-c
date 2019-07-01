@@ -444,11 +444,10 @@ namespace Energistics.Generator
                 .Select(x => x.Name.ToLowerInvariant())
                 .ToList();
 
-            var interfaces = string.Empty;
-
+            var interfaces = GetFamilyDataObjectInterface(t);
             if (t.GetProperty("commonData") != null && t.GetProperty("customData") != null)
             {
-                interfaces = ", ICommonDataObject";
+                interfaces += ", ICommonDataObject";
             }
 
             if (properties.Contains("uid") && properties.Contains("name")
@@ -472,6 +471,23 @@ namespace Energistics.Generator
             }
 
             return interfaces;
+        }
+
+        public static string GetFamilyDataObjectInterface(Type t)
+        {
+            var name = t.Name;
+            var attribute = t.GetCustomAttributes(typeof(EnergisticsDataObjectAttribute), false).FirstOrDefault() as EnergisticsDataObjectAttribute;
+            if (attribute == null)
+                return string.Empty;
+
+            if (attribute.StandardFamily == "WITSML")
+                return ", IWitsmlDataObject";
+            if (attribute.StandardFamily == "PRODML")
+                return ", IProdmlDataObject";
+            if (attribute.StandardFamily == "RESQML")
+                return ", IResqmlDataObject";
+
+            return string.Empty;
         }
 
         public string GetPropertyType(PropertyInfo property)

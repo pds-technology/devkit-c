@@ -20184,7 +20184,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_resqmlDocument", Namespace="http://www.resqml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.RESQML, "1.1.0.0")]
     [Description("The non-contextual content of a RESQML document object.")]
-    public partial class ResqmlDocument : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ResqmlDocument : Object, IResqmlDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
