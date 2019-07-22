@@ -90,6 +90,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reference to the Sample that was collected at this point.</summary>
         [System.ComponentModel.DescriptionAttribute("Reference to the Sample that was collected at this point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString sampleRef {
             get {
                 return this.sampleRefField;
@@ -103,6 +104,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The ID of the sample cylinder in which this sample was collected.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The ID of the sample cylinder in which this sample was collected.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string sampleCylinderId {
             get {
                 return this.sampleCylinderIdField;
@@ -116,6 +118,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A name assigned to the acquisition.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name assigned to the acquisition.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -129,6 +132,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of sample acquisition.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The kind of sample acquisition.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string kind {
             get {
                 return this.kindField;
@@ -141,6 +145,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Sampling  start time.</summary>
         [System.ComponentModel.DescriptionAttribute("Sampling  start time.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -164,6 +169,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Sampling  end time.</summary>
         [System.ComponentModel.DescriptionAttribute("Sampling  end time.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -188,6 +194,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Comments created by the field engineers collecting the sample.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments created by the field engineers collecting the sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string fieldComment {
             get {
                 return this.fieldCommentField;
@@ -201,6 +208,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Comments created by the engineers analysing the sample.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments created by the engineers analysing the sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string interpretationComment {
             get {
                 return this.interpretationCommentField;
@@ -214,6 +222,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An identifier for the fluid collected as part of this acquistion.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the fluid collected as part of this acquistion.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string sampleId {
             get {
                 return this.sampleIdField;
@@ -227,6 +236,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An identifier for the slot in the sample carrier where the sample was acquired.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the slot in the sample carrier where the sample was acquired.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string sampleCarrierSlotId {
             get {
                 return this.sampleCarrierSlotIdField;
@@ -240,6 +250,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An identifier for the formation tester tool section that acquired the sample.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the formation tester tool section that acquired the sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string toolSectionId {
             get {
                 return this.toolSectionIdField;
@@ -253,6 +264,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An identifier for the sample bottle that was used for this acquisition.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("An identifier for the sample bottle that was used for this acquisition.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string bottleId {
             get {
                 return this.bottleIdField;
@@ -267,6 +279,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("A description of the kind of bottle used, for example whether the bottle is press" +
             "urized with Nitrogen or not.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string bottleConfiguration {
             get {
                 return this.bottleConfigurationField;
@@ -279,6 +292,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The pressure that was used to charge the sample bottle.</summary>
         [System.ComponentModel.DescriptionAttribute("The pressure that was used to charge the sample bottle.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="generalMeasureType")]
         public generalMeasureType cushionPressure {
             get {
                 return this.cushionPressureField;
@@ -292,6 +306,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The expected kind of the sample, typically oil, water or gas.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The expected kind of the sample, typically oil, water or gas.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string grossFluidKind {
             get {
                 return this.grossFluidKindField;
@@ -303,7 +318,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A result of formation tester analysis that applies to this acquisition.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.Xml.Serialization.XmlElementAttribute("result", DataType="cs_wftTestResult")]
         [System.ComponentModel.DescriptionAttribute("A result of formation tester analysis that applies to this acquisition.")]
         public cs_wftTestResult[] result {
             get {
@@ -316,7 +331,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A refererence to a test (uid) under the current station.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("testRef")]
+        [System.Xml.Serialization.XmlElementAttribute("testRef", DataType="refNameString")]
         [System.ComponentModel.DescriptionAttribute("A refererence to a test (uid) under the current station.")]
         public refNameString[] testRef {
             get {
@@ -329,7 +344,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to the associated data acquired during this acquisition.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("testData")]
+        [System.Xml.Serialization.XmlElementAttribute("testData", DataType="cs_wftTestData")]
         [System.ComponentModel.DescriptionAttribute("A reference to the associated data acquired during this acquisition.")]
         public cs_wftTestData[] testData {
             get {
@@ -342,7 +357,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -355,7 +370,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -382,7 +397,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="refString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the unique identifier (uid attribute) in the node referenced by th" +
@@ -420,7 +435,7 @@ namespace Energistics.Generator.PRODML122 {
         private string uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
@@ -509,7 +524,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -532,7 +547,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
@@ -726,7 +741,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -749,7 +764,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumeFlowRateUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeFlowRateUom uom {
             get {
@@ -905,7 +920,7 @@ namespace Energistics.Generator.PRODML122 {
         private string uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
@@ -928,7 +943,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unit of measure for the quantity. This value must conform to the values allowed by a measure class.  If the value is a measure then the uom must be specified.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity. This value must conform to the values allow" +
             "ed by a measure class.  If the value is a measure then the uom must be specified" +
@@ -955,7 +970,7 @@ namespace Energistics.Generator.PRODML122 {
         private ReasonLost reasonLostField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
@@ -968,7 +983,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines why the volume was lost.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ReasonLost")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines why the volume was lost.")]
         public ReasonLost reasonLost {
@@ -1103,7 +1118,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -1127,7 +1142,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The kind of the value component. For example, "X" in a tuple of X and Y.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="kindString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The kind of the value component. For example, \"X\" in a tuple of X and Y.")]
         public string component {
@@ -1141,7 +1156,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unit of measure for the value. This value must conform to the values allowed by the measure class.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the value. This value must conform to the values allowed " +
@@ -1169,7 +1184,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="WellVerticalCoordinateUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value. If not given then the default unit of " +
             "measure of the explicitly or implicitly given datum must be assumed.")]
@@ -1184,7 +1199,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="refWellDatum")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A pointer to the reference datum for this coordinate  value as defined in WellDat" +
@@ -1231,7 +1246,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unit of measure of the quantity value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="MeasuredDepthUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value.")]
         public MeasuredDepthUom uom {
@@ -1245,7 +1260,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="refWellDatum")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A pointer to the reference datum for this coordinate  value as defined in WellDat" +
@@ -1286,7 +1301,7 @@ namespace Energistics.Generator.PRODML122 {
         private PercentUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="PercentUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
@@ -1318,7 +1333,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumePerVolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumePerVolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
@@ -1536,7 +1551,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumeFlowRateUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumeFlowRateUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeFlowRateUom uom {
             get {
@@ -1558,7 +1573,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
@@ -1580,7 +1595,7 @@ namespace Energistics.Generator.PRODML122 {
         private VelocityUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VelocityUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VelocityUom uom {
             get {
@@ -1719,7 +1734,7 @@ namespace Energistics.Generator.PRODML122 {
         private TimeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="TimeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeUom uom {
             get {
@@ -1798,7 +1813,7 @@ namespace Energistics.Generator.PRODML122 {
         private ThermodynamicTemperatureUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ThermodynamicTemperatureUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermodynamicTemperatureUom uom {
             get {
@@ -1838,7 +1853,7 @@ namespace Energistics.Generator.PRODML122 {
         private PressureUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="PressureUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PressureUom uom {
             get {
@@ -1996,7 +2011,7 @@ namespace Energistics.Generator.PRODML122 {
         private PlaneAngleUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="PlaneAngleUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PlaneAngleUom uom {
             get {
@@ -2072,7 +2087,7 @@ namespace Energistics.Generator.PRODML122 {
         private MassUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="MassUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassUom uom {
             get {
@@ -2159,7 +2174,7 @@ namespace Energistics.Generator.PRODML122 {
         private MassConcentrationUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="MassConcentrationUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassConcentrationUom uom {
             get {
@@ -2222,7 +2237,7 @@ namespace Energistics.Generator.PRODML122 {
         private LengthPerLengthUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="LengthPerLengthUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthPerLengthUom uom {
             get {
@@ -2298,7 +2313,7 @@ namespace Energistics.Generator.PRODML122 {
         private LengthUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="LengthUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
@@ -2505,7 +2520,7 @@ namespace Energistics.Generator.PRODML122 {
         private ElectricCurrentUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ElectricCurrentUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ElectricCurrentUom uom {
             get {
@@ -2554,7 +2569,7 @@ namespace Energistics.Generator.PRODML122 {
         private DynamicViscosityUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="DynamicViscosityUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DynamicViscosityUom uom {
             get {
@@ -2620,7 +2635,7 @@ namespace Energistics.Generator.PRODML122 {
         private DimensionlessUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="DimensionlessUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DimensionlessUom uom {
             get {
@@ -2667,7 +2682,7 @@ namespace Energistics.Generator.PRODML122 {
         private DensityUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="DensityUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DensityUom uom {
             get {
@@ -2810,7 +2825,7 @@ namespace Energistics.Generator.PRODML122 {
         private WorkUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="WorkUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public WorkUom uom {
             get {
@@ -2932,7 +2947,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumePerVolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumePerVolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
@@ -2954,7 +2969,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumePerVolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumePerVolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
@@ -2976,7 +2991,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumePerVolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumePerVolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
@@ -2998,7 +3013,7 @@ namespace Energistics.Generator.PRODML122 {
         private VolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="VolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
@@ -3020,7 +3035,7 @@ namespace Energistics.Generator.PRODML122 {
         private ThermalConductivityUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ThermalConductivityUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermalConductivityUom uom {
             get {
@@ -3068,7 +3083,7 @@ namespace Energistics.Generator.PRODML122 {
         private ProductivityIndexUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ProductivityIndexUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ProductivityIndexUom uom {
             get {
@@ -3144,7 +3159,7 @@ namespace Energistics.Generator.PRODML122 {
         private MolarVolumeUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="MolarVolumeUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MolarVolumeUom uom {
             get {
@@ -3196,7 +3211,7 @@ namespace Energistics.Generator.PRODML122 {
         private PercentUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="PercentUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
@@ -3218,7 +3233,7 @@ namespace Energistics.Generator.PRODML122 {
         private ModulusOfCompressionUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ModulusOfCompressionUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ModulusOfCompressionUom uom {
             get {
@@ -3350,7 +3365,7 @@ namespace Energistics.Generator.PRODML122 {
         private MassFlowRateUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="MassFlowRateUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassFlowRateUom uom {
             get {
@@ -3478,7 +3493,7 @@ namespace Energistics.Generator.PRODML122 {
         private PercentUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="PercentUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
@@ -3500,7 +3515,7 @@ namespace Energistics.Generator.PRODML122 {
         private FrequencyUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="FrequencyUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public FrequencyUom uom {
             get {
@@ -3578,7 +3593,7 @@ namespace Energistics.Generator.PRODML122 {
         private CompressibilityUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="CompressibilityUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CompressibilityUom uom {
             get {
@@ -3630,7 +3645,7 @@ namespace Energistics.Generator.PRODML122 {
         private AmountOfSubstanceUom uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="AmountOfSubstanceUom")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AmountOfSubstanceUom uom {
             get {
@@ -3703,6 +3718,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of result represents a combination of test kind and  analysis method app" +
             "lied.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WftTestResultKind")]
         public WftTestResultKind kind {
             get {
                 return this.kindField;
@@ -3718,6 +3734,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The name of a proprietary method which generally  represents a specialization of " +
             "a result kind.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string method {
             get {
                 return this.methodField;
@@ -3731,6 +3748,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The top of the interval to which this result applies.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The top of the interval to which this result applies.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -3744,6 +3762,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The bottom of the interval to which this result applies.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The bottom of the interval to which this result applies.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -3755,7 +3774,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to the formation tester data used to derive this result.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("testData")]
+        [System.Xml.Serialization.XmlElementAttribute("testData", DataType="cs_wftTestData")]
         [System.ComponentModel.DescriptionAttribute("A reference to the formation tester data used to derive this result.")]
         public cs_wftTestData[] testData {
             get {
@@ -3768,7 +3787,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An input parameter to the analysis method.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("inputParameter")]
+        [System.Xml.Serialization.XmlElementAttribute("inputParameter", DataType="cs_wftInOutParameter")]
         [System.ComponentModel.DescriptionAttribute("An input parameter to the analysis method.")]
         public cs_wftInOutParameter[] inputParameter {
             get {
@@ -3781,7 +3800,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An output (result) parameter from the analysis of the test. The aggregate of parameters might represent something like the simulated response  of the test, to compare with actual.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("outputParameter")]
+        [System.Xml.Serialization.XmlElementAttribute("outputParameter", DataType="cs_wftInOutParameter")]
         [System.ComponentModel.DescriptionAttribute("An output (result) parameter from the analysis of the test. The aggregate of para" +
             "meters might represent something like the simulated response  of the test, to co" +
             "mpare with actual.")]
@@ -3796,7 +3815,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to an outputParameter of another result which was used as an input to this result. For a test result, the other result will be in the same test (i.e., ../result). For a station result, the other result will be in the same station (i.e., ../result) or  will be a test result in the same station (../test/result) or  will be an sampleAcquisition in the same station (i.e., ../sampleAcquisition/result). For a wftRun result, the other result will be in the same wftRun (i.e., ../result) or will be a result in a station (i.e., ../station/result) or will be a result in a station's test (i.e., ../station/test/result) or  will be a result in a station's sampleAcquisition (i.e., ../station/sampleAcquisition/result). The "../result" notation means: starting in the parent node, traverse down to the  appropriate child result using the provided pointers.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("inputResultRef")]
+        [System.Xml.Serialization.XmlElementAttribute("inputResultRef", DataType="cs_wftResultRef")]
         [System.ComponentModel.DescriptionAttribute(@"A reference to an outputParameter of another result which was used as an input to this result. For a test result, the other result will be in the same test (i.e., ../result). For a station result, the other result will be in the same station (i.e., ../result) or  will be a test result in the same station (../test/result) or  will be an sampleAcquisition in the same station (i.e., ../sampleAcquisition/result). For a wftRun result, the other result will be in the same wftRun (i.e., ../result) or will be a result in a station (i.e., ../station/result) or will be a result in a station's test (i.e., ../station/test/result) or  will be a result in a station's sampleAcquisition (i.e., ../station/sampleAcquisition/result). The ""../result"" notation means: starting in the parent node, traverse down to the  appropriate child result using the provided pointers.")]
         public cs_wftResultRef[] inputResultRef {
             get {
@@ -3809,7 +3828,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -3822,7 +3841,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -3875,6 +3894,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The role of the test data.  The role applies either to a curve or to a point para" +
             "meter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WftTestDataRole")]
         public WftTestDataRole role {
             get {
                 return this.roleField;
@@ -3886,7 +3906,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to a specific interval of a specific curve in a specific log.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("curveSection")]
+        [System.Xml.Serialization.XmlElementAttribute("curveSection", DataType="cs_wftCurveSection")]
         [System.ComponentModel.DescriptionAttribute("A reference to a specific interval of a specific curve in a specific log.")]
         public cs_wftCurveSection[] curveSection {
             get {
@@ -3899,7 +3919,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Test parameters used here are either control parameters used to govern  the test or are single value parameters measured by the test (and not by subsequent analysis).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.Xml.Serialization.XmlElementAttribute("parameter", DataType="cs_wftInOutParameter")]
         [System.ComponentModel.DescriptionAttribute("Test parameters used here are either control parameters used to govern  the test " +
             "or are single value parameters measured by the test (and not by subsequent analy" +
             "sis).")]
@@ -3914,7 +3934,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -3927,7 +3947,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -3985,6 +4005,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to a specific log or wellLog that contains the curve.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to a specific log or wellLog that contains the curve.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refObjectString")]
         public refObjectString logRef {
             get {
                 return this.logRefField;
@@ -3999,6 +4020,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("The mnemonic of the curve in the referenced log or wellLog.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string mnemonic {
             get {
                 return this.mnemonicField;
@@ -4012,6 +4034,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the start of the relevant interval. If not specified then th" +
             "e beginning of the curve is assumed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -4036,6 +4059,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the end of the relevant interval. If not specified then the " +
             "end of the curve is assumed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -4058,7 +4082,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -4071,7 +4095,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -4100,7 +4124,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the singular object being referenced.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nameString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the singular object being referenced.")]
@@ -4115,7 +4139,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="refString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the unique identifier (uid attribute) in the object referenced by " +
@@ -4178,6 +4202,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  WITSML SIG Technical Team before use.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  WITSML SIG Technical Team before use.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ExtensionName")]
         public ExtensionName name {
             get {
                 return this.nameField;
@@ -4192,6 +4217,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The value of the extension.  This may also include a uom attribute.  The content " +
             "should conform to constraints defined by the data type.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="extensionvalue")]
         public extensionvalue value {
             get {
                 return this.valueField;
@@ -4205,6 +4231,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The underlying XML type of the value.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The underlying XML type of the value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="PrimitiveType")]
         public PrimitiveType dataType {
             get {
                 return this.dataTypeField;
@@ -4217,6 +4244,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -4240,6 +4268,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The measured depth associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The measured depth associated with the value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord md {
             get {
                 return this.mdField;
@@ -4253,6 +4282,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Indexes things with the same name.  That is, 1 indicates the first one, 2 incidates the second one, etc.</summary>
         [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is, 1 indicates the first one, 2 incidat" +
             "es the second one, etc.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short index {
             get {
                 return this.indexField;
@@ -4277,6 +4307,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.</summary>
         [System.ComponentModel.DescriptionAttribute("The kind of the measure. For example, \"length\". This should be specified if the v" +
             "alue requires a unit of measure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="MeasureClass")]
         public MeasureClass measureClass {
             get {
                 return this.measureClassField;
@@ -4301,6 +4332,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual description of the extension.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -4312,7 +4344,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -4357,7 +4389,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unit of measure for the value. This value must conform to the values allowed by a measure class.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure for the value. This value must conform to the values allowed " +
             "by a measure class.")]
@@ -5136,6 +5168,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -5150,6 +5183,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The value of the parameter.  If the value represents a measure, then the uom attr" +
             "ibute  and the corresponding measureClass must be specified.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measureOrQuantity")]
         public measureOrQuantity value {
             get {
                 return this.valueField;
@@ -5163,6 +5197,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.</summary>
         [System.ComponentModel.DescriptionAttribute("The kind of the measure. For example, \"length\". This should be specified if the v" +
             "alue requires a unit of measure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="MeasureClass")]
         public MeasureClass measureClass {
             get {
                 return this.measureClassField;
@@ -5185,7 +5220,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -5198,7 +5233,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -5234,6 +5269,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A pointer to the station node containing the specified nodes.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the station node containing the specified nodes.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString stationRef {
             get {
                 return this.stationRefField;
@@ -5246,6 +5282,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A pointer to the test node containing the specified nodes.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the test node containing the specified nodes.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString testRef {
             get {
                 return this.testRefField;
@@ -5258,6 +5295,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A pointer to the sampleAcquisition node containing the specified nodes.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the sampleAcquisition node containing the specified nodes.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString sampleAcquisitionRef {
             get {
                 return this.sampleAcquisitionRefField;
@@ -5271,6 +5309,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the desired result containing the outputParameter.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the desired result containing the outputParameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString resultRef {
             get {
                 return this.resultRefField;
@@ -5284,6 +5323,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the desired outputParameter.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the desired outputParameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString outputParameterRef {
             get {
                 return this.outputParameterRefField;
@@ -5295,7 +5335,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -5336,6 +5376,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Describes whether the test is associated with a pressure buildup or a drawdown.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Describes whether the test is associated with a pressure buildup or a drawdown.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WftTestKind")]
         public WftTestKind testKind {
             get {
                 return this.testKindField;
@@ -5348,6 +5389,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection started for this test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection started for this test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -5371,6 +5413,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection ended for this test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection ended for this test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -5393,7 +5436,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A result of formation tester analysis that applies to this test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.Xml.Serialization.XmlElementAttribute("result", DataType="cs_wftTestResult")]
         [System.ComponentModel.DescriptionAttribute("A result of formation tester analysis that applies to this test.")]
         public cs_wftTestResult[] result {
             get {
@@ -5406,7 +5449,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -5419,7 +5462,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -5471,6 +5514,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of event.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WftEventKind")]
         public WftEventKind kind {
             get {
                 return this.kindField;
@@ -5484,6 +5528,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Date and time of the start of the event.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time of the start of the event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -5497,6 +5542,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The time duration of the event.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The time duration of the event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure duration {
             get {
                 return this.durationField;
@@ -5510,6 +5556,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A comment about the event.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -5521,7 +5568,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -5534,7 +5581,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -5612,6 +5659,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of the station (such as, conventional, observation).</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of the station (such as, conventional, observation).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WftStationKind")]
         public WftStationKind stationKind {
             get {
                 return this.stationKindField;
@@ -5624,6 +5672,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection started for this station.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection started for this station.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -5647,6 +5696,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection completed for this station.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection completed for this station.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -5671,6 +5721,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of flowing interval.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of flowing interval.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WftFlowingIntervalKind")]
         public WftFlowingIntervalKind flowingIntervalKind {
             get {
                 return this.flowingIntervalKindField;
@@ -5685,6 +5736,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Top depth of station if flowingIntervalKind=\"packed interval\". Depth of probe if " +
             "flowingIntervalKind=\"probe\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -5699,6 +5751,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Bottom depth of station if flowingIntervalKind=\"packed interval\".  Depth of probe" +
             " if flowingIntervalKind=\"probe\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -5712,6 +5765,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The diameter of the probe used, only valid if flowingIntervalKind is equal to "probe".</summary>
         [System.ComponentModel.DescriptionAttribute("The diameter of the probe used, only valid if flowingIntervalKind is equal to \"pr" +
             "obe\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure diaProbe {
             get {
                 return this.diaProbeField;
@@ -5725,6 +5779,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A description of the station.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of the station.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -5736,7 +5791,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference a log containing WFT time-series data at this station (may be superset of all the test log references at this station).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("logRef")]
+        [System.Xml.Serialization.XmlElementAttribute("logRef", DataType="refObjectString")]
         [System.ComponentModel.DescriptionAttribute("A reference a log containing WFT time-series data at this station (may be superse" +
             "t of all the test log references at this station).")]
         public refObjectString[] logRef {
@@ -5750,7 +5805,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A formation tester event that occurs during this station.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("event")]
+        [System.Xml.Serialization.XmlElementAttribute("event", DataType="cs_wftEvent")]
         [System.ComponentModel.DescriptionAttribute("A formation tester event that occurs during this station.")]
         public cs_wftEvent[] @event {
             get {
@@ -5763,7 +5818,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A formation tester test period that is recorded as part of this station.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("test")]
+        [System.Xml.Serialization.XmlElementAttribute("test", DataType="cs_wftTest")]
         [System.ComponentModel.DescriptionAttribute("A formation tester test period that is recorded as part of this station.")]
         public cs_wftTest[] test {
             get {
@@ -5776,7 +5831,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A formation tester sample that is collected as part of this station.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("sampleAcquisition")]
+        [System.Xml.Serialization.XmlElementAttribute("sampleAcquisition", DataType="cs_wftSampleAcquisition")]
         [System.ComponentModel.DescriptionAttribute("A formation tester sample that is collected as part of this station.")]
         public cs_wftSampleAcquisition[] sampleAcquisition {
             get {
@@ -5789,7 +5844,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A result of formation tester analysis that applies to this station.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.Xml.Serialization.XmlElementAttribute("result", DataType="cs_wftTestResult")]
         [System.ComponentModel.DescriptionAttribute("A result of formation tester analysis that applies to this station.")]
         public cs_wftTestResult[] result {
             get {
@@ -5804,6 +5859,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>References a station containing the flowing flowing Interval in  cases where this station is an observation station.</summary>
         [System.ComponentModel.DescriptionAttribute("References a station containing the flowing flowing Interval in  cases where this" +
             " station is an observation station.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString stationRef {
             get {
                 return this.stationRefField;
@@ -5815,7 +5871,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -5828,7 +5884,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -5931,6 +5987,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the Wireline Formation Test" +
             " (WFT).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWell {
             get {
                 return this.nameWellField;
@@ -5946,6 +6003,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the Wireline Formation " +
             "Test (WFT).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWellbore {
             get {
                 return this.nameWellboreField;
@@ -5960,6 +6018,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the Wireline Formation Test (WFT).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -5972,6 +6031,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the "Special Handling of Change Information" within a server.  See the relevant API specification for the behavior related to this element.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the ""Special Handling of Change Information"" within a server.  See the relevant API specification for the behavior related to this element.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool objectGrowing {
             get {
                 return this.objectGrowingField;
@@ -5995,6 +6055,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.</summary>
         [System.ComponentModel.DescriptionAttribute("References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refObjectString")]
         public refObjectString tieInLogRef {
             get {
                 return this.tieInLogRefField;
@@ -6008,6 +6069,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Name of contractor who provided the service.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of contractor who provided the service.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string serviceCompany {
             get {
                 return this.serviceCompanyField;
@@ -6020,6 +6082,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection started.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection started.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -6043,6 +6106,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection completed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection completed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -6068,6 +6132,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The minimum station depth within this WFT. This is an API \"structural-range\" quer" +
             "y parameter for growing objects.  See the relevant API specification for the que" +
             "ry behavior related to this element.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord minIndex {
             get {
                 return this.minIndexField;
@@ -6082,6 +6147,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The maximum station depth within this WFT. This is an API \"structural-range\" quer" +
             "y parameter for growing objects.  See the relevant API specification for the que" +
             "ry behavior related to this element.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord maxIndex {
             get {
                 return this.maxIndexField;
@@ -6095,6 +6161,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A description of the run.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of the run.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -6106,7 +6173,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An individual WFT station.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("station")]
+        [System.Xml.Serialization.XmlElementAttribute("station", DataType="cs_wftStation")]
         [System.ComponentModel.DescriptionAttribute("An individual WFT station.")]
         public cs_wftStation[] station {
             get {
@@ -6119,7 +6186,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A single result derived from analysis of formation tester data.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.Xml.Serialization.XmlElementAttribute("result", DataType="cs_wftTestResult")]
         [System.ComponentModel.DescriptionAttribute("A single result derived from analysis of formation tester data.")]
         public cs_wftTestResult[] result {
             get {
@@ -6132,7 +6199,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -6146,6 +6213,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -6158,6 +6226,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -6169,7 +6238,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
@@ -6185,7 +6254,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
@@ -6201,7 +6270,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -6252,6 +6321,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("An identifier to indicate the data originator. This identifies the server that or" +
             "iginally created  the object and thus most of the uids in the object (but not  n" +
             "ecessarily the uids of the parents). This is typically a url.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string sourceName {
             get {
                 return this.sourceNameField;
@@ -6266,6 +6336,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("When the data was created at the persistent data store.  In a query template, a s" +
             "pecified value will be interpreted by the server as a request for dTimCreation v" +
             "alues that are greater-than the specified value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimCreation {
             get {
                 return this.dTimCreationField;
@@ -6289,6 +6360,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).</summary>
         [System.ComponentModel.DescriptionAttribute(@"Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimLastChange {
             get {
                 return this.dTimLastChangeField;
@@ -6312,6 +6384,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The item state for the data object.</summary>
         [System.ComponentModel.DescriptionAttribute("The item state for the data object.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ItemState")]
         public ItemState itemState {
             get {
                 return this.itemStateField;
@@ -6336,6 +6409,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The category of the service related to the creation of the object.  For example, "mud log service", "cement service", "LWD service", "rig service", "drilling service". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of "uidWell", "uidWellbore", "idSub" and commonData's "serviceCategory"  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute(@"The category of the service related to the creation of the object.  For example, ""mud log service"", ""cement service"", ""LWD service"", ""rig service"", ""drilling service"". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of ""uidWell"", ""uidWellbore"", ""idSub"" and commonData's ""serviceCategory""  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string serviceCategory {
             get {
                 return this.serviceCategoryField;
@@ -6349,6 +6423,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Comments and remarks.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comments {
             get {
                 return this.commentsField;
@@ -6360,7 +6435,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("acquisitionTimeZone")]
+        [System.Xml.Serialization.XmlElementAttribute("acquisitionTimeZone", DataType="timestampedTimeZone")]
         [System.ComponentModel.DescriptionAttribute(@"The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
         public timestampedTimeZone[] acquisitionTimeZone {
             get {
@@ -6374,6 +6449,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Extensions to the schema using an xsd:any construct.</summary>
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_extensionAny")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -6385,7 +6461,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -6430,7 +6506,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="timestamp")]
         [System.ComponentModel.DescriptionAttribute("The date and time when this local time zone became active. This value must be def" +
             "ined on the second and subsequent occurrences.")]
         public System.DateTime dTim {
@@ -6530,6 +6606,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Oil volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Oil volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume oilVolume {
             get {
                 return this.oilVolumeField;
@@ -6542,6 +6619,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Oil rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Oil rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate oilRate {
             get {
                 return this.oilRateField;
@@ -6554,6 +6632,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Gas volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume gasVolume {
             get {
                 return this.gasVolumeField;
@@ -6566,6 +6645,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Gas rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate gasRate {
             get {
                 return this.gasRateField;
@@ -6578,6 +6658,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Water volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Water volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume waterVolume {
             get {
                 return this.waterVolumeField;
@@ -6590,6 +6671,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Water rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Water rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate waterRate {
             get {
                 return this.waterRateField;
@@ -6621,6 +6703,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The volume is the fluid, corrected to standard conditions of temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The volume is the fluid, corrected to standard conditions of temperature and pres" +
             "sure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure volumeStdTempPres {
             get {
                 return this.volumeStdTempPresField;
@@ -6634,6 +6717,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The volume, uncorrected. This volume is generally reported at reservoir conditions.</summary>
         [System.ComponentModel.DescriptionAttribute("The volume, uncorrected. This volume is generally reported at reservoir condition" +
             "s.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure volume {
             get {
                 return this.volumeField;
@@ -6647,6 +6731,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The density of the fluid,  corrected to standard conditions of temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of the fluid,  corrected to standard conditions of temperature and pr" +
             "essure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStdTempPres {
             get {
                 return this.densityStdTempPresField;
@@ -6659,6 +6744,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The density of the fluid, uncorrected.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of the fluid, uncorrected.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -6672,6 +6758,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Class for Natural Gas. This is not valid for oil or water.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("Class for Natural Gas. This is not valid for oil or water.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string gasClass {
             get {
                 return this.gasClassField;
@@ -6698,6 +6785,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The fluid flow rate.</summary>
         [System.ComponentModel.DescriptionAttribute("The fluid flow rate.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateMeasure")]
         public volumeFlowRateMeasure fluidRate {
             get {
                 return this.fluidRateField;
@@ -6711,6 +6799,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The fluid flow rate that has been corrected to standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The fluid flow rate that has been corrected to standard temperature and pressure." +
             "")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateMeasure")]
         public volumeFlowRateMeasure fluidRateStdTempPres {
             get {
                 return this.fluidRateStdTempPresField;
@@ -6724,6 +6813,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Class for Natural Gas. This is not valid for oil or water.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("Class for Natural Gas. This is not valid for oil or water.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string gasClass {
             get {
                 return this.gasClassField;
@@ -6768,6 +6858,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time length (with uom) of the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The time length (with uom) of the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure testDuration {
             get {
                 return this.testDurationField;
@@ -6781,6 +6872,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The interval tested. This element includes a top and base  depth, and the formation tested.</summary>
         [System.ComponentModel.DescriptionAttribute("The interval tested. This element includes a top and base  depth, and the formati" +
             "on tested.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestInterval")]
         public cs_wellTestInterval testInterval {
             get {
                 return this.testIntervalField;
@@ -6793,6 +6885,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The fluid that is being injected.</summary>
         [System.ComponentModel.DescriptionAttribute("The fluid that is being injected.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="InjectionFluid")]
         public InjectionFluid InjectedFluid {
             get {
                 return this.injectedFluidField;
@@ -6817,6 +6910,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The cumulative volumes of fluids at the time of the  well test. The fluids are oil, gas, and water.</summary>
         [System.ComponentModel.DescriptionAttribute("The cumulative volumes of fluids at the time of the  well test. The fluids are oi" +
             "l, gas, and water.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestCumulative")]
         public cs_wellTestCumulative wellTestCumulative {
             get {
                 return this.wellTestCumulativeField;
@@ -6829,6 +6923,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The size of the opening in the flow choke at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("The size of the opening in the flow choke at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure chokeOrificeSize {
             get {
                 return this.chokeOrificeSizeField;
@@ -6841,6 +6936,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The minimum pressure measured at the annulus.</summary>
         [System.ComponentModel.DescriptionAttribute("The minimum pressure measured at the annulus.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure minimumAnnularPressure {
             get {
                 return this.minimumAnnularPressureField;
@@ -6853,6 +6949,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum pressure measured at the annulus.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum pressure measured at the annulus.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure maximumAnnularPressure {
             get {
                 return this.maximumAnnularPressureField;
@@ -6865,6 +6962,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The flowing pressure measured at the wellhead during the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The flowing pressure measured at the wellhead during the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure wellheadFlowingPressure {
             get {
                 return this.wellheadFlowingPressureField;
@@ -6877,6 +6975,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum pressure measured at the wellhead during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum pressure measured at the wellhead during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure wellheadMaximumPressure {
             get {
                 return this.wellheadMaximumPressureField;
@@ -6889,6 +6988,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The production results of the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The production results of the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestInjectionTestResults")]
         public cs_wellTestInjectionTestResults injectionTestResults {
             get {
                 return this.injectionTestResultsField;
@@ -6900,7 +7000,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -6937,6 +7037,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The measured depth to the top of the interval.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The measured depth to the top of the interval.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -6950,6 +7051,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The measured depth to the bottom of the interval.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The measured depth to the bottom of the interval.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord mdBase {
             get {
                 return this.mdBaseField;
@@ -6964,6 +7066,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the wellbore (sidetract) represented by the measured depth. This must be " +
             "given when the well has multiple wellbores and the measured depth  value is deep" +
             "er than the first kickoff point. It is recommended that it always be given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellbore {
             get {
                 return this.wellboreField;
@@ -6975,7 +7078,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A formation that was tested.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("testedFormation")]
+        [System.Xml.Serialization.XmlElementAttribute("testedFormation", DataType="kindString")]
         [System.ComponentModel.DescriptionAttribute("A formation that was tested.")]
         public string[] testedFormation {
             get {
@@ -6990,6 +7093,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The relative opening of the downhole control valve for the tested zone. This is for surface controllable valves.</summary>
         [System.ComponentModel.DescriptionAttribute("The relative opening of the downhole control valve for the tested zone. This is f" +
             "or surface controllable valves.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthPerLengthMeasure")]
         public lengthPerLengthMeasure valvePosition {
             get {
                 return this.valvePositionField;
@@ -7001,7 +7105,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -7090,6 +7194,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The cumulative amount of oil.</summary>
         [System.ComponentModel.DescriptionAttribute("The cumulative amount of oil.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure cumulativeOil {
             get {
                 return this.cumulativeOilField;
@@ -7102,6 +7207,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The cumulative amount of gas.</summary>
         [System.ComponentModel.DescriptionAttribute("The cumulative amount of gas.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure cumulativeGas {
             get {
                 return this.cumulativeGasField;
@@ -7114,6 +7220,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The cumulative amount of water.</summary>
         [System.ComponentModel.DescriptionAttribute("The cumulative amount of water.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure cumulativeWater {
             get {
                 return this.cumulativeWaterField;
@@ -7184,6 +7291,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Oil volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Oil volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume oilVolume {
             get {
                 return this.oilVolumeField;
@@ -7196,6 +7304,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Oil rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Oil rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate oilRate {
             get {
                 return this.oilRateField;
@@ -7208,6 +7317,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Gas volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume gasVolume {
             get {
                 return this.gasVolumeField;
@@ -7220,6 +7330,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Gas rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate gasRate {
             get {
                 return this.gasRateField;
@@ -7232,6 +7343,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Water volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Water volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume waterVolume {
             get {
                 return this.waterVolumeField;
@@ -7244,6 +7356,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Water rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Water rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate waterRate {
             get {
                 return this.waterRateField;
@@ -7256,6 +7369,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>condensate volumes measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("condensate volumes measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume condensateVolume {
             get {
                 return this.condensateVolumeField;
@@ -7268,6 +7382,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Condensate rates measured during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("Condensate rates measured during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate condensateRate {
             get {
                 return this.condensateRateField;
@@ -7280,6 +7395,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The ratio of the volume of gas and the volume of oil that was produced.</summary>
         [System.ComponentModel.DescriptionAttribute("The ratio of the volume of gas and the volume of oil that was produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gasOilRatio {
             get {
                 return this.gasOilRatioField;
@@ -7292,6 +7408,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The ratio of water produced compared to the volume of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("The ratio of water produced compared to the volume of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure waterCut {
             get {
                 return this.waterCutField;
@@ -7304,6 +7421,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The density of the fluid mixture.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of the fluid mixture.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -7316,6 +7434,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The velocity of the overall fluid mixture.</summary>
         [System.ComponentModel.DescriptionAttribute("The velocity of the overall fluid mixture.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="velocityMeasure")]
         public velocityMeasure fluidVelocity {
             get {
                 return this.fluidVelocityField;
@@ -7329,6 +7448,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>This is the condensate yield, which describes the amount  of condensate per unit of natural gas produced</summary>
         [System.ComponentModel.DescriptionAttribute("This is the condensate yield, which describes the amount  of condensate per unit " +
             "of natural gas produced")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure condensateYield {
             get {
                 return this.condensateYieldField;
@@ -7343,6 +7463,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("This is the measured of impurities present in crude oil  as it comes from the wel" +
             "l. BSandW content is commonly used as a measure for  treating performance of hyd" +
             "rocarbon liquids")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure basicSedimentAndWater {
             get {
                 return this.basicSedimentAndWaterField;
@@ -7356,6 +7477,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>This is the the potential of the well to produce crude oil.  This represents the flow rate that could be achieved under maximum drawdown.</summary>
         [System.ComponentModel.DescriptionAttribute("This is the the potential of the well to produce crude oil.  This represents the " +
             "flow rate that could be achieved under maximum drawdown.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateMeasure")]
         public volumeFlowRateMeasure oilPotential {
             get {
                 return this.oilPotentialField;
@@ -7369,6 +7491,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>This is the potential of the well to produce natural gas.  This represents the flow rate that could be achieved under maximum drawdown.</summary>
         [System.ComponentModel.DescriptionAttribute("This is the potential of the well to produce natural gas.  This represents the fl" +
             "ow rate that could be achieved under maximum drawdown.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateMeasure")]
         public volumeFlowRateMeasure gasPotential {
             get {
                 return this.gasPotentialField;
@@ -7381,6 +7504,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The volume of sand that was produced.</summary>
         [System.ComponentModel.DescriptionAttribute("The volume of sand that was produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure sandVolume {
             get {
                 return this.sandVolumeField;
@@ -7394,6 +7518,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True ("true" or "1") indicates that the the split factors  are allocated as opposed to measured.  False ("false" or "0") or not given indicates otherwise.</summary>
         [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the the split factors  are allocated as oppos" +
             "ed to measured.  False (\"false\" or \"0\") or not given indicates otherwise.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool allocatedSplit {
             get {
                 return this.allocatedSplitField;
@@ -7417,6 +7542,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The split factor for Oil relative to the overall volume of the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The split factor for Oil relative to the overall volume of the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure oilSplitFactor {
             get {
                 return this.oilSplitFactorField;
@@ -7429,6 +7555,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The split factor for Gas relative to the overall volume of the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The split factor for Gas relative to the overall volume of the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gasSplitFactor {
             get {
                 return this.gasSplitFactorField;
@@ -7441,6 +7568,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The split factor for Water relative to the overall volume of the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The split factor for Water relative to the overall volume of the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure waterSplitFactor {
             get {
                 return this.waterSplitFactorField;
@@ -7453,6 +7581,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The split factor for Condensate relative to the overall volume of the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The split factor for Condensate relative to the overall volume of the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure condensateSplitFactor {
             get {
                 return this.condensateSplitFactorField;
@@ -7467,6 +7596,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Productivity Index (PI) is an expression which defines the pressure drop in  the " +
             "reservoir to produce a unit of oil per day. That is, the energy to produce a uni" +
             "t of oil. The value was defined at ambient temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="productivityIndexMeasure")]
         public productivityIndexMeasure productivityIndex {
             get {
                 return this.productivityIndexField;
@@ -7479,6 +7609,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="productivityIndexMeasure")]
         public productivityIndexMeasure productivityIndexStdTempPres {
             get {
                 return this.productivityIndexStdTempPresField;
@@ -7503,6 +7634,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The pressure measured at the separator during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The pressure measured at the separator during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure separatorPressure {
             get {
                 return this.separatorPressureField;
@@ -7515,6 +7647,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature measured at the separator during the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature measured at the separator during the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure separatorTemperature {
             get {
                 return this.separatorTemperatureField;
@@ -7555,6 +7688,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The pressure at the point.</summary>
         [System.ComponentModel.DescriptionAttribute("The pressure at the point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pres {
             get {
                 return this.presField;
@@ -7567,6 +7701,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at the point.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at the point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temp {
             get {
                 return this.tempField;
@@ -7580,6 +7715,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The P/Z value at the point. This is P/Z, pressure  over gas compressibility factor (z).  Note that the uom is units of pressure., since Z is dimensionless.</summary>
         [System.ComponentModel.DescriptionAttribute("The P/Z value at the point. This is P/Z, pressure  over gas compressibility facto" +
             "r (z).  Note that the uom is units of pressure., since Z is dimensionless.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pOverZ {
             get {
                 return this.pOverZField;
@@ -7592,6 +7728,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The measured depth of the bottomhole.</summary>
         [System.ComponentModel.DescriptionAttribute("The measured depth of the bottomhole.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord md {
             get {
                 return this.mdField;
@@ -7606,6 +7743,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the wellbore (sidetract) represented by the measured depth. This must be " +
             "given when the well has multiple wellbores and the measured depth  value is deep" +
             "er than the first kickoff point. It is recommended that it always be given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellbore {
             get {
                 return this.wellboreField;
@@ -7619,6 +7757,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A value of true (1 or "true") indicates that the point is at the bottomhole. A value of false (0 or "false") or not given indicates otherwise.</summary>
         [System.ComponentModel.DescriptionAttribute("A value of true (1 or \"true\") indicates that the point is at the bottomhole. A va" +
             "lue of false (0 or \"false\") or not given indicates otherwise.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool bottomhole {
             get {
                 return this.bottomholeField;
@@ -7644,6 +7783,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A value of true (1 or \"true\") indicates a static (non-flowing) pressure. A value " +
             "of false (0 or \"false\") or not given indicates otherwise. The pressure may be me" +
             "asured (e.g., shut-in well) or calculated.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool @static {
             get {
                 return this.staticField;
@@ -7666,7 +7806,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -7696,6 +7836,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The average electric current of the electric submersible pump (ESP) during the te" +
             "st. The presumption is that only one pump per well is operational during each te" +
             "st.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="electricCurrentMeasure")]
         public electricCurrentMeasure electricCurrent {
             get {
                 return this.electricCurrentField;
@@ -7709,6 +7850,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The average frequency of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.</summary>
         [System.ComponentModel.DescriptionAttribute("The average frequency of the electric submersible pump (ESP) during the test. The" +
             " presumption is that only one pump per well is operational during each test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="frequencyMeasure")]
         public frequencyMeasure frequency {
             get {
                 return this.frequencyField;
@@ -7739,6 +7881,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The pressure at the bottomhole of the well.</summary>
         [System.ComponentModel.DescriptionAttribute("The pressure at the bottomhole of the well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure bottomholePres {
             get {
                 return this.bottomholePresField;
@@ -7751,6 +7894,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at the bottomhole of the well.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at the bottomhole of the well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure bottomholeTemp {
             get {
                 return this.bottomholeTempField;
@@ -7765,6 +7909,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The P/Z value at the bottomhole. This is P/Z, pressure  over gas compressibility " +
             "factor (z), at the bottomhole of the well.  Note that the uom is units of pressu" +
             "re., since Z is dimensionless.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure bottomholePOverZ {
             get {
                 return this.bottomholePOverZField;
@@ -7777,6 +7922,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The measured depth of the bottomhole.</summary>
         [System.ComponentModel.DescriptionAttribute("The measured depth of the bottomhole.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord bottomholeMD {
             get {
                 return this.bottomholeMDField;
@@ -7791,6 +7937,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the wellbore (sidetract) represented by the measured depth. This must be " +
             "given when the well has multiple wellbores and the measured depth  value is deep" +
             "er than the first kickoff point. It is recommended that it always be given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellbore {
             get {
                 return this.wellboreField;
@@ -7831,6 +7978,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature measured at the wellhead during the  well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature measured at the wellhead during the  well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temperature {
             get {
                 return this.temperatureField;
@@ -7843,6 +7991,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The flowing pressure measured at the wellhead during the  well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The flowing pressure measured at the wellhead during the  well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure flowingPressure {
             get {
                 return this.flowingPressureField;
@@ -7855,6 +8004,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The shut-in pressure measured at the wellhead during the  well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The shut-in pressure measured at the wellhead during the  well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure shutInPressure {
             get {
                 return this.shutInPressureField;
@@ -7868,6 +8018,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The pressure measured at the flow line connected to the  wellhead during this well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The pressure measured at the flow line connected to the  wellhead during this wel" +
             "l test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure flowLinePressure {
             get {
                 return this.flowLinePressureField;
@@ -7880,6 +8031,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The size of the choke opening at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("The size of the choke opening at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure chokeOrificeSize {
             get {
                 return this.chokeOrificeSizeField;
@@ -7892,6 +8044,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The pressure of the lift gas at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("The pressure of the lift gas at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure gasLiftPres {
             get {
                 return this.gasLiftPresField;
@@ -7904,6 +8057,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature of the lift gas at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature of the lift gas at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure gasLiftTemp {
             get {
                 return this.gasLiftTempField;
@@ -7916,6 +8070,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Lift gas volumes injected during the well test at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("Lift gas volumes injected during the well test at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestTestVolume")]
         public cs_wellTestTestVolume gasLiftVolume {
             get {
                 return this.gasLiftVolumeField;
@@ -7928,6 +8083,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Lift gas rates injected during the well test at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("Lift gas rates injected during the well test at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestFluidRate")]
         public cs_wellTestFluidRate gasLiftRate {
             get {
                 return this.gasLiftRateField;
@@ -7940,6 +8096,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The size of the gas lift choke opening.</summary>
         [System.ComponentModel.DescriptionAttribute("The size of the gas lift choke opening.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure gasLiftchokeOrificeSize {
             get {
                 return this.gasLiftchokeOrificeSizeField;
@@ -7982,6 +8139,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time length (with uom) of the well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The time length (with uom) of the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure testDuration {
             get {
                 return this.testDurationField;
@@ -7993,7 +8151,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The interval tested. This element includes a top and base depth,  and the formation(s) tested. It also includes control data for the tested interval.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("testInterval")]
+        [System.Xml.Serialization.XmlElementAttribute("testInterval", DataType="cs_wellTestInterval")]
         [System.ComponentModel.DescriptionAttribute("The interval tested. This element includes a top and base depth,  and the formati" +
             "on(s) tested. It also includes control data for the tested interval.")]
         public cs_wellTestInterval[] testInterval {
@@ -8008,6 +8166,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>This element records measurements made and settings made at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("This element records measurements made and settings made at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestWellheadData")]
         public cs_wellTestWellheadData wellheadData {
             get {
                 return this.wellheadDataField;
@@ -8021,6 +8180,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED - Use pointData instead. This element records measurements made at the" +
             " bottomhole.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestBottomholeData")]
         public cs_wellTestBottomholeData bottomholeData {
             get {
                 return this.bottomholeDataField;
@@ -8035,6 +8195,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Frequency and electric current measured during the  well test for electric submer" +
             "sible pump (ESP) wells. The presumption is that only one pump per well is operat" +
             "ional during each test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestElectricSubmersiblePumpData")]
         public cs_wellTestElectricSubmersiblePumpData espData {
             get {
                 return this.espDataField;
@@ -8046,7 +8207,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>This element records temperature and pressure at points in the wellbore.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("pointData")]
+        [System.Xml.Serialization.XmlElementAttribute("pointData", DataType="cs_wellTestPointData")]
         [System.ComponentModel.DescriptionAttribute("This element records temperature and pressure at points in the wellbore.")]
         public cs_wellTestPointData[] pointData {
             get {
@@ -8061,6 +8222,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>This element records the measurements (pressure and temperature) at the separator.</summary>
         [System.ComponentModel.DescriptionAttribute("This element records the measurements (pressure and temperature) at the separator" +
             ".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestSeparatorData")]
         public cs_wellTestSeparatorData separatorData {
             get {
                 return this.separatorDataField;
@@ -8075,6 +8237,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The method being used to operate the well. Examples are \'flowing\', \'pumping\', \'ga" +
             "s lifted\'.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string operatingMethod {
             get {
                 return this.operatingMethodField;
@@ -8088,6 +8251,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.</summary>
         [System.ComponentModel.DescriptionAttribute("The cumulative volumes of fluids at the time of the well test. The fluids are oil" +
             ", gas, and water.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestCumulative")]
         public cs_wellTestCumulative wellTestCumulative {
             get {
                 return this.wellTestCumulativeField;
@@ -8100,6 +8264,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The production results of the test.</summary>
         [System.ComponentModel.DescriptionAttribute("The production results of the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellTestProductionTestResults")]
         public cs_wellTestProductionTestResults productionTestResults {
             get {
                 return this.productionTestResultsField;
@@ -8111,7 +8276,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -8143,6 +8308,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The fluid level achieved in the well.  The value is given as length units from th" +
             "e top of the well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure fluidLevel {
             get {
                 return this.fluidLevelField;
@@ -8155,6 +8321,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The lowest usable water depth as measured from the  surface. See TxRRC H-15.</summary>
         [System.ComponentModel.DescriptionAttribute("The lowest usable water depth as measured from the  surface. See TxRRC H-15.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure baseUsableWater {
             get {
                 return this.baseUsableWaterField;
@@ -8168,6 +8335,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The business associate that conducted the test. This is generally a person.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The business associate that conducted the test. This is generally a person.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string testedBy {
             get {
                 return this.testedByField;
@@ -8205,6 +8373,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of validation operation.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of validation operation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ValidationOperation")]
         public ValidationOperation kind {
             get {
                 return this.kindField;
@@ -8218,6 +8387,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The result of the validation operation.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The result of the validation operation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ValidationResult")]
         public ValidationResult result {
             get {
                 return this.resultField;
@@ -8255,6 +8425,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The tool used for the validation operation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The tool used for the validation operation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string tool {
             get {
                 return this.toolField;
@@ -8268,6 +8439,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The method used for the validation operation..</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The method used for the validation operation..")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string method {
             get {
                 return this.methodField;
@@ -8281,6 +8453,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A comment about the operation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the operation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -8292,7 +8465,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -8431,6 +8604,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWell {
             get {
                 return this.nameWellField;
@@ -8445,6 +8619,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -8457,6 +8632,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -8469,6 +8645,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -8481,6 +8658,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the ""most recent"" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimCurrent {
             get {
                 return this.dTimCurrentField;
@@ -8504,6 +8682,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Contextual data about the well that was tested.</summary>
         [System.ComponentModel.DescriptionAttribute("Contextual data about the well that was tested.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellContext")]
         public cs_wellContext wellContext {
             get {
                 return this.wellContextField;
@@ -8516,6 +8695,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time of well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time of well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp testDate {
             get {
                 return this.testDateField;
@@ -8539,6 +8719,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time of the previous well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time of the previous well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp previousTestDate {
             get {
                 return this.previousTestDateField;
@@ -8562,6 +8743,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time of the last valid well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time of the last valid well test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp lastValidTest {
             get {
                 return this.lastValidTestField;
@@ -8585,6 +8767,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The reason for the well test: initial, periodic, revision.</summary>
         [System.ComponentModel.DescriptionAttribute("The reason for the well test: initial, periodic, revision.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="TestReason")]
         public TestReason testReason {
             get {
                 return this.testReasonField;
@@ -8609,6 +8792,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of well production test.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of well production test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string testType {
             get {
                 return this.testTypeField;
@@ -8622,6 +8806,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/chokeOrificeSize. The size of the opening in the flow choke at the wellhead.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/cho" +
             "keOrificeSize. The size of the opening in the flow choke at the wellhead.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure chokeOrificeSize {
             get {
                 return this.chokeOrificeSizeField;
@@ -8634,6 +8819,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A port on a Product Flow Unit that is represented by this test.</summary>
         [System.ComponentModel.DescriptionAttribute("A port on a Product Flow Unit that is represented by this test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString productFlowPort {
             get {
                 return this.productFlowPortField;
@@ -8647,6 +8833,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Product Flow Unit represented by the port. This is defined within the Product Flow Model</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit represented by the port. This is defined within the Product" +
             " Flow Model")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString productFlowUnit {
             get {
                 return this.productFlowUnitField;
@@ -8659,6 +8846,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The Product Flow Model that represents the above Product Flow Unit.</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Model that represents the above Product Flow Unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString productFlowModel {
             get {
                 return this.productFlowModelField;
@@ -8673,6 +8861,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the standard temperature and pressure to which all standard volumes in th" +
             "is report have been corrected. This applies to all elements whose name is suffix" +
             "ed by StdTempPres.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="StandardTempPress")]
         public StandardTempPress standardTempPres {
             get {
                 return this.standardTempPresField;
@@ -8696,6 +8885,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The overall state of the test with respect to validation operations.</summary>
         [System.ComponentModel.DescriptionAttribute("The overall state of the test with respect to validation operations.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ValidationState")]
         public ValidationState validationState {
             get {
                 return this.validationStateField;
@@ -8718,7 +8908,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the results of one validation operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("validationOperation")]
+        [System.Xml.Serialization.XmlElementAttribute("validationOperation", DataType="cs_wellTestValidationOperation")]
         [System.ComponentModel.DescriptionAttribute("Defines the results of one validation operation.")]
         public cs_wellTestValidationOperation[] validationOperation {
             get {
@@ -8745,6 +8935,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -8757,6 +8948,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -8768,7 +8960,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
@@ -8784,7 +8976,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -8813,7 +9005,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The default is "inclusive".</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="EndpointQualifier")]
         [System.ComponentModel.DescriptionAttribute("The default is \"inclusive\".")]
         public EndpointQualifier endpoint {
             get {
@@ -8893,6 +9085,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Name of the field in which the well is located.</summary>
         [System.ComponentModel.DescriptionAttribute("Name of the field in which the well is located.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct field {
             get {
                 return this.fieldField;
@@ -8904,7 +9097,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alias name associated with the well. If the wellName is associated with a naming system then it should be included in this list.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("wellAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("wellAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alias name associated with the well. If the wellName is associated with a nami" +
             "ng system then it should be included in this list.")]
         public nameStruct[] wellAlias {
@@ -8918,7 +9111,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A datum to which elevations and depths are referenced.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("wellDatum")]
+        [System.Xml.Serialization.XmlElementAttribute("wellDatum", DataType="cs_wellDatum")]
         [System.ComponentModel.DescriptionAttribute("A datum to which elevations and depths are referenced.")]
         public cs_wellDatum[] wellDatum {
             get {
@@ -8933,6 +9126,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>POSC well fluid. The type of fluid being produced from or injected  into a well facility.</summary>
         [System.ComponentModel.DescriptionAttribute("POSC well fluid. The type of fluid being produced from or injected  into a well f" +
             "acility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WellFluid")]
         public WellFluid fluidWell {
             get {
                 return this.fluidWellField;
@@ -8957,6 +9151,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>POSC well direction. The direction of flow of the fluids in a well facility (generally, injected or produced, or some combination).</summary>
         [System.ComponentModel.DescriptionAttribute("POSC well direction. The direction of flow of the fluids in a well facility (gene" +
             "rally, injected or produced, or some combination).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WellDirection")]
         public WellDirection directionWell {
             get {
                 return this.directionWellField;
@@ -8991,7 +9186,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The naming system within the name is (hopefully) unique.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nameString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The naming system within the name is (hopefully) unique.")]
         public string namingSystem {
@@ -9065,6 +9260,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The human understandable contextual name of the reference datum.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The human understandable contextual name of the reference datum.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -9079,6 +9275,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The code value that represents the type of reference datum.  This may represent a" +
             " point on a device (e.g., kelly bushing) or it may represent  a vertical referen" +
             "ce datum (e.g., mean sea level).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ElevCodeEnum")]
         public ElevCodeEnum code {
             get {
                 return this.codeField;
@@ -9100,8 +9297,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("datumCRS", typeof(refNameString))]
-        [System.Xml.Serialization.XmlElementAttribute("datumName", typeof(wellKnownNameStruct))]
+        [System.Xml.Serialization.XmlElementAttribute("datumCRS", typeof(refNameString), DataType="refNameString")]
+        [System.Xml.Serialization.XmlElementAttribute("datumName", typeof(wellKnownNameStruct), DataType="wellKnownNameStruct")]
         public object Item {
             get {
                 return this.itemField;
@@ -9113,7 +9310,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("kind")]
+        [System.Xml.Serialization.XmlElementAttribute("kind", DataType="kindString")]
         [System.ComponentModel.DescriptionAttribute(@"Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         public string[] kind {
             get {
@@ -9128,6 +9325,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the wellbore that contains the reference datum. This should be speci" +
             "fied if a measured depth is given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_refWellWellbore")]
         public cs_refWellWellbore wellbore {
             get {
                 return this.wellboreField;
@@ -9142,6 +9340,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A pointer to the rig that contains the device used  as a reference datum. The rig" +
             " may be associated with a wellbore in another well (e.g., pattern drilling using" +
             " a rig on a track).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_refWellWellboreRig")]
         public cs_refWellWellboreRig rig {
             get {
                 return this.rigField;
@@ -9156,6 +9355,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The gravity based elevation coordinate of this reference datum  as measured from " +
             "another datum. Positive moving upward from the elevation datum. An elevation sho" +
             "uld be given unless this is a vertical reference datum (e.g., sea level).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="wellElevationCoord")]
         public wellElevationCoord elevation {
             get {
                 return this.elevationField;
@@ -9168,6 +9368,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is "downhole",  such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is ""downhole"",  such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord measuredDepth {
             get {
                 return this.measuredDepthField;
@@ -9180,6 +9381,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The horizontal location of the point being used as a well datum.  This may be used when the point is not directly above or below the well point location.  For example, a well being drilled from a platform may have its location at the entrance  into the sea floor, while the well datum may be located on the drilling rig.  Or the well datum may be a kickoff point, that is not directly under the well surface point.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The horizontal location of the point being used as a well datum.  This may be used when the point is not directly above or below the well point location.  For example, a well being drilled from a platform may have its location at the entrance  into the sea floor, while the well datum may be located on the drilling rig.  Or the well datum may be a kickoff point, that is not directly under the well surface point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_location")]
         public cs_location horizontalLocation {
             get {
                 return this.horizontalLocationField;
@@ -9193,6 +9395,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A contextual description of the well reference datum.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A contextual description of the well reference datum.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -9204,7 +9407,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -9217,7 +9420,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>True indicates that this is the default reference datum for measured depth coordinates.  False or not given indicates that this is not the default reference datum. Measured depth coordinates that do not specify a datum reference should be  assumed to be measured relative to this default reference datum. Only one reference datum may be designated as the default measured depth datum for each well. Values are "true" (or "1") and "false" ( or "0").</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="logicalBoolean")]
         [System.ComponentModel.DescriptionAttribute(@"True indicates that this is the default reference datum for measured depth coordinates.  False or not given indicates that this is not the default reference datum. Measured depth coordinates that do not specify a datum reference should be  assumed to be measured relative to this default reference datum. Only one reference datum may be designated as the default measured depth datum for each well. Values are ""true"" (or ""1"") and ""false"" ( or ""0"").")]
         public bool defaultMeasuredDepth {
             get {
@@ -9241,7 +9444,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>True indicates that this is the default reference datum for vertical depth coordinates.  False or not given indicates that this is not the default reference datum. Vertical depth coordinates that do not specify a datum reference should be  assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default vertical depth datum for each well. Values are "true" (or "1") and "false" ( or "0").</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="logicalBoolean")]
         [System.ComponentModel.DescriptionAttribute(@"True indicates that this is the default reference datum for vertical depth coordinates.  False or not given indicates that this is not the default reference datum. Vertical depth coordinates that do not specify a datum reference should be  assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default vertical depth datum for each well. Values are ""true"" (or ""1"") and ""false"" ( or ""0"").")]
         public bool defaultVerticalDepth {
             get {
@@ -9265,7 +9468,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>True indicates that this is the default reference datum for elevation coordinates.   False or not given indicates that this is not the default reference datum. Elevation coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default elevation datum for each well. Values are "true" (or "1") and "false" ( or "0").</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="logicalBoolean")]
         [System.ComponentModel.DescriptionAttribute(@"True indicates that this is the default reference datum for elevation coordinates.   False or not given indicates that this is not the default reference datum. Elevation coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default elevation datum for each well. Values are ""true"" (or ""1"") and ""false"" ( or ""0"").")]
         public bool defaultElevation {
             get {
@@ -9289,7 +9492,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -9375,7 +9578,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The naming system within the name is unique.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nameString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The naming system within the name is unique.")]
@@ -9390,7 +9593,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A unique (short) code associated with the name.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="kindString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A unique (short) code associated with the name.")]
         public string code {
@@ -9429,6 +9632,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer the wellbore with which there is a relationship.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer the wellbore with which there is a relationship.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellboreReference {
             get {
                 return this.wellboreReferenceField;
@@ -9442,6 +9646,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the  context of a common parent well.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the well that contains the wellboreReference. This is not needed unl" +
             "ess the referenced wellbore is outside the  context of a common parent well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellParent {
             get {
                 return this.wellParentField;
@@ -9469,6 +9674,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the rig with which there is a relationship.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the rig with which there is a relationship.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString rigReference {
             get {
                 return this.rigReferenceField;
@@ -9482,6 +9688,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the  context of a common parent wellbore.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the wellbore that contains the rigReference. This is not needed unle" +
             "ss the referenced rig is outside the  context of a common parent wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellboreParent {
             get {
                 return this.wellboreParentField;
@@ -9495,6 +9702,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the  context of a common parent well.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the well that contains the wellboreParent. This is not needed unless" +
             " the referenced wellbore is outside the  context of a common parent well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellParent {
             get {
                 return this.wellParentField;
@@ -9532,6 +9740,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the wellCRS that defines the CRS for the coordinates.  While optional, it is strongly recommended that this be specified.</summary>
         [System.ComponentModel.DescriptionAttribute("A pointer to the wellCRS that defines the CRS for the coordinates.  While optiona" +
             "l, it is strongly recommended that this be specified.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString wellCRS {
             get {
                 return this.wellCRSField;
@@ -9542,16 +9751,16 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("easting", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("latitude", typeof(planeAngleMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("localX", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("localY", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("longitude", typeof(planeAngleMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("northing", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("projectedX", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("projectedY", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("southing", typeof(lengthMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("westing", typeof(lengthMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("easting", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("latitude", typeof(planeAngleMeasure), DataType="planeAngleMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("localX", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("localY", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("longitude", typeof(planeAngleMeasure), DataType="planeAngleMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("northing", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("projectedX", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("projectedY", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("southing", typeof(lengthMeasure), DataType="lengthMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("westing", typeof(lengthMeasure), DataType="lengthMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public abstractMeasure[] Items {
             get {
@@ -9579,6 +9788,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Flag indicating (if \"true\" or \"1\") that this pair of values was  the original dat" +
             "a given for the location. If the pair of values was  calculated from an original" +
             " pair of values, this flag should be \"false\" (or \"0\"),  or not present.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool original {
             get {
                 return this.originalField;
@@ -9604,6 +9814,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A Comment, generally given to help the reader  interpret the coordinates if the C" +
             "RS and the chosen pair do not make them clear.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -9615,7 +9826,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -9628,7 +9839,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -9831,7 +10042,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="EndpointQualifierInterval")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines the semantics (inclusive or exclusive) of the endpoint  within the contex" +
             "t of the interval.")]
@@ -9887,6 +10098,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The lower bound of the threshold for testing whether values are within a specific range. Element "unit" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMinimum must be less than thresholdMaximum. If thresholdMinimum is not specified then the minimum shall be  assumed to be minus infinity.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The lower bound of the threshold for testing whether values are within a specific range. Element ""unit"" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMinimum must be less than thresholdMaximum. If thresholdMinimum is not specified then the minimum shall be  assumed to be minus infinity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQuantity")]
         public endpointQuantity thresholdMinimum {
             get {
                 return this.thresholdMinimumField;
@@ -9899,6 +10111,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The upper bound of the threshold for testing whether values are within a specific range. Element "unit" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMaximum must be greater than thresholdMinimum. If thresholdMaximum is not specified then the maximum shall be  assumed to be plus infinity.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The upper bound of the threshold for testing whether values are within a specific range. Element ""unit"" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMaximum must be greater than thresholdMinimum. If thresholdMaximum is not specified then the maximum shall be  assumed to be plus infinity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQuantity")]
         public endpointQuantity thresholdMaximum {
             get {
                 return this.thresholdMaximumField;
@@ -9913,6 +10126,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The sum of the time intervals over the range of dTimMin to dTimMax  during which " +
             "the values were within the specified threshold range.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure duration {
             get {
                 return this.durationField;
@@ -9936,7 +10150,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="EndpointQualifierInterval")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines the semantics (inclusive or exclusive) of the endpoint  within the contex" +
             "t of the interval.")]
@@ -10022,6 +10236,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the time series.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -10033,7 +10248,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("key")]
+        [System.Xml.Serialization.XmlElementAttribute("key", DataType="keywordValueStruct")]
         [System.ComponentModel.DescriptionAttribute(@"A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
         public keywordValueStruct[] key {
             get {
@@ -10050,6 +10265,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("If the time series is a measure then this specifies the unit of measure. The unit" +
             " acronym must be chosen from the list that is valid for the measure class. If th" +
             "is is specified then the measure class must be specified.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="uomString")]
         public string unit {
             get {
                 return this.unitField;
@@ -10062,6 +10278,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="MeasureClass")]
         public MeasureClass measureClass {
             get {
                 return this.measureClassField;
@@ -10086,6 +10303,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A comment about the time series.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the time series.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -10101,6 +10319,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The lower bound of the analyzed time range. Only data within the range was includ" +
             "ed in the analysis. The endpoint attribute specifies whether the data was inclus" +
             "ive or exclusive of this point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointDateTime")]
         public endpointDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -10116,6 +10335,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The upper bound of the analyzed time range. Only data within the range was includ" +
             "ed in the analysis. The endpoint attribute specifies whether the data was inclus" +
             "ive or exclusive of this point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointDateTime")]
         public endpointDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -10129,6 +10349,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The minimum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
         [System.ComponentModel.DescriptionAttribute("The minimum value within the time range of dTimMin to dTimMax. Element \"unit\" def" +
             "ines the unit of measure of this value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double minimum {
             get {
                 return this.minimumField;
@@ -10153,6 +10374,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The maximum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum value within the time range of dTimMin to dTimMax. Element \"unit\" def" +
             "ines the unit of measure of this value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double maximum {
             get {
                 return this.maximumField;
@@ -10177,6 +10399,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The sum of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
         [System.ComponentModel.DescriptionAttribute("The sum of all values within the time range of dTimMin to dTimMax. Element \"unit\"" +
             " defines the unit of measure of this value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double sum {
             get {
                 return this.sumField;
@@ -10201,6 +10424,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
         [System.ComponentModel.DescriptionAttribute("The arithmetic mean (sum divided by count) of all values within the time range of" +
             " dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double mean {
             get {
                 return this.meanField;
@@ -10225,6 +10449,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The median value of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
         [System.ComponentModel.DescriptionAttribute("The median value of all values within the time range of dTimMin to dTimMax. Eleme" +
             "nt \"unit\" defines the unit of measure of this value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double median {
             get {
                 return this.medianField;
@@ -10249,6 +10474,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The standard deviation of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
         [System.ComponentModel.DescriptionAttribute("The standard deviation of all values within the time range of dTimMin to dTimMax." +
             " Element \"unit\" defines the unit of measure of this value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double standardDeviation {
             get {
                 return this.standardDeviationField;
@@ -10273,6 +10499,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Defines a value threshold window and the time duration where values  (within the time range of dTimMin to dTimMax) were within that window.</summary>
         [System.ComponentModel.DescriptionAttribute("Defines a value threshold window and the time duration where values  (within the " +
             "time range of dTimMin to dTimMax) were within that window.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_timeSeriesThreshold")]
         public cs_timeSeriesThreshold timeAtThreshold {
             get {
                 return this.timeAtThresholdField;
@@ -10285,6 +10512,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -10297,6 +10525,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -10308,7 +10537,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -10335,7 +10564,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The keyword within which the value is unique. The concept of a keyword is very close to the concept of a classification system.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="TimeSeriesKeyword")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The keyword within which the value is unique. The concept of a keyword is very cl" +
             "ose to the concept of a classification system.")]
@@ -10405,7 +10634,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="timestamp")]
         [System.ComponentModel.DescriptionAttribute(@"The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not ""NaN"", the data value can be assumed to be good with no restrictions.")]
         public System.DateTime dTim {
             get {
@@ -10429,7 +10658,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -10482,7 +10711,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="timestamp")]
         [System.ComponentModel.DescriptionAttribute(@"The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not ""NaN"", the data value can be assumed to be good with no restrictions.")]
         public System.DateTime dTim {
             get {
@@ -10506,7 +10735,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -10571,6 +10800,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the time series.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -10582,7 +10812,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("key")]
+        [System.Xml.Serialization.XmlElementAttribute("key", DataType="keywordValueStruct")]
         [System.ComponentModel.DescriptionAttribute(@"A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
         public keywordValueStruct[] key {
             get {
@@ -10599,6 +10829,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("If the time series is a measure then this specifies the unit of measure. The unit" +
             " acronym must be chosen from the list that is valid for the measure class. If th" +
             "is is specified then the measure class must be specified.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="uomString")]
         public string unit {
             get {
                 return this.unitField;
@@ -10611,6 +10842,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="MeasureClass")]
         public MeasureClass measureClass {
             get {
                 return this.measureClassField;
@@ -10635,6 +10867,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A comment about the time series.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the time series.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -10659,6 +10892,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -10670,7 +10904,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -10717,6 +10951,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of event.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="BalanceEventKind")]
         public BalanceEventKind kind {
             get {
                 return this.kindField;
@@ -10728,7 +10963,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -10741,7 +10976,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -10803,6 +11038,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the business unit which owns the product.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the business unit which owns the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString owner {
             get {
                 return this.ownerField;
@@ -10815,6 +11051,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Points to the business unit from which the product originated.</summary>
         [System.ComponentModel.DescriptionAttribute("Points to the business unit from which the product originated.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString sourceUnit {
             get {
                 return this.sourceUnitField;
@@ -10827,6 +11064,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The owner's share of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The owner\'s share of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasurePercent")]
         public volumePerVolumeMeasurePercent share {
             get {
                 return this.shareField;
@@ -10840,6 +11078,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An account identifier for the balance.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("An account identifier for the balance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string accountNumber {
             get {
                 return this.accountNumberField;
@@ -10851,7 +11090,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A dated event related to the balance.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("event")]
+        [System.Xml.Serialization.XmlElementAttribute("event", DataType="cs_productVolumeBalanceEvent")]
         [System.ComponentModel.DescriptionAttribute("A dated event related to the balance.")]
         public cs_productVolumeBalanceEvent[] @event {
             get {
@@ -10864,7 +11103,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. Different volumes may be defined at different conditions but they should all represent the same mass of material.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("volumeValue")]
+        [System.Xml.Serialization.XmlElementAttribute("volumeValue", DataType="cs_volumeValue")]
         [System.ComponentModel.DescriptionAttribute("The volume of the fluid, possibly corrected to specific  conditions of temperatur" +
             "e and pressure. Different volumes may be defined at different conditions but the" +
             "y should all represent the same mass of material.")]
@@ -10879,7 +11118,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A pointer to a fluid sample analysis result object that is relevant to the balance.  This sample may have been acquired previous to or after this period and is  used for determining the allocated characteristics.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("sampleAnalysisResult")]
+        [System.Xml.Serialization.XmlElementAttribute("sampleAnalysisResult", DataType="refNameString")]
         [System.ComponentModel.DescriptionAttribute("A pointer to a fluid sample analysis result object that is relevant to the balanc" +
             "e.  This sample may have been acquired previous to or after this period and is  " +
             "used for determining the allocated characteristics.")]
@@ -10894,7 +11133,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The relative amount of a component product in the product.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("componentContent")]
+        [System.Xml.Serialization.XmlElementAttribute("componentContent", DataType="cs_productVolumeComponentContent")]
         [System.ComponentModel.DescriptionAttribute("The relative amount of a component product in the product.")]
         public cs_productVolumeComponentContent[] componentContent {
             get {
@@ -10907,7 +11146,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -10920,7 +11159,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -10955,6 +11194,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The volume of the product. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The volume of the product. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volume {
             get {
                 return this.volumeField;
@@ -10969,6 +11209,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The amount of heat which would be released by the complete combustion in air of t" +
             "he above volume of product.  This is considered to be a condition of measurement" +
             " (i.e., the volume may have been converted to this condition).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure grossCalorificValue {
             get {
                 return this.grossCalorificValueField;
@@ -10979,9 +11220,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("pres", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("standardTempPres", typeof(StandardCondition))]
-        [System.Xml.Serialization.XmlElementAttribute("temp", typeof(thermodynamicTemperatureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("pres", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("standardTempPres", typeof(StandardCondition), DataType="StandardCondition")]
+        [System.Xml.Serialization.XmlElementAttribute("temp", typeof(thermodynamicTemperatureMeasure), DataType="thermodynamicTemperatureMeasure")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -10993,7 +11234,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -11006,7 +11247,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -11146,6 +11387,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of product whose relative content is being described. This should be a s" +
             "pecific component (e.g., water) rather than a phase (e.g., aqueous).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProduct")]
         public ReportingProduct kind {
             get {
                 return this.kindField;
@@ -11159,6 +11401,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of product to which the product is being compared. If not given then the product is being compared against the overall flow stream.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of product to which the product is being compared. If not given then the" +
             " product is being compared against the overall flow stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProduct")]
         public ReportingProduct referenceKind {
             get {
                 return this.referenceKindField;
@@ -11183,6 +11426,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio. The ratio between the total produced gas volume and the total prod" +
             "uced oil volume including oil and gas volumes used on the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gor {
             get {
                 return this.gorField;
@@ -11196,6 +11440,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  t" +
             "o the end of the reporting priod.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gorMTD {
             get {
                 return this.gorMTDField;
@@ -11208,6 +11453,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The volumetric ratio of gas to liquid for all products in the whole flow.</summary>
         [System.ComponentModel.DescriptionAttribute("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gasLiquidRatio {
             get {
                 return this.gasLiquidRatioField;
@@ -11221,6 +11467,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration mass basis.  The ratio of water produced compared to the mass" +
             " of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure waterConcMass {
             get {
                 return this.waterConcMassField;
@@ -11234,6 +11481,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration volume basis. The ratio of water produced compared to the mas" +
             "s of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure waterConcVol {
             get {
                 return this.waterConcVolField;
@@ -11246,6 +11494,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The average atmospheric pressure during the reporting period.</summary>
         [System.ComponentModel.DescriptionAttribute("The average atmospheric pressure during the reporting period.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure atmosphere {
             get {
                 return this.atmosphereField;
@@ -11257,7 +11506,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("volumeValue")]
+        [System.Xml.Serialization.XmlElementAttribute("volumeValue", DataType="cs_volumeValue")]
         [System.ComponentModel.DescriptionAttribute(@"The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         public cs_volumeValue[] volumeValue {
             get {
@@ -11271,6 +11520,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volume {
             get {
                 return this.volumeField;
@@ -11283,6 +11533,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volumeStd {
             get {
                 return this.volumeStdField;
@@ -11294,7 +11545,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("flowRateValue")]
+        [System.Xml.Serialization.XmlElementAttribute("flowRateValue", DataType="cs_flowRateValue")]
         [System.ComponentModel.DescriptionAttribute(@"The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         public cs_flowRateValue[] flowRateValue {
             get {
@@ -11308,6 +11559,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateQualifiedMeasure")]
         public volumeFlowRateQualifiedMeasure flowRate {
             get {
                 return this.flowRateField;
@@ -11321,6 +11573,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Temperature of the port. Specifying the temperature here (as opposed to in Period" +
             ") implies that the temperature is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temp {
             get {
                 return this.tempField;
@@ -11334,6 +11587,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Pressure of the port. Specifying the pressure here (as opposed to in Period) impl" +
             "ies that the pressure is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pres {
             get {
                 return this.presField;
@@ -11346,6 +11600,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Absolute minimum pressure before the system will give an alarm.</summary>
         [System.ComponentModel.DescriptionAttribute("Absolute minimum pressure before the system will give an alarm.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure absoluteMinPres {
             get {
                 return this.absoluteMinPresField;
@@ -11357,7 +11612,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The internal differences between this port and one other port on this unit.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("portDiff")]
+        [System.Xml.Serialization.XmlElementAttribute("portDiff", DataType="cs_productVolumePortDifference")]
         [System.ComponentModel.DescriptionAttribute("The internal differences between this port and one other port on this unit.")]
         public cs_productVolumePortDifference[] portDiff {
             get {
@@ -11371,6 +11626,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mass of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massMeasure")]
         public massMeasure mass {
             get {
                 return this.massField;
@@ -11383,6 +11639,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The electrical energy represented by the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The electrical energy represented by the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="workMeasure")]
         public workMeasure work {
             get {
                 return this.workField;
@@ -11395,6 +11652,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The actual volume divided by the potential volume.</summary>
         [System.ComponentModel.DescriptionAttribute("The actual volume divided by the potential volume.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure efficiency {
             get {
                 return this.efficiencyField;
@@ -11407,6 +11665,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvp {
             get {
                 return this.rvpField;
@@ -11420,6 +11679,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.</summary>
         [System.ComponentModel.DescriptionAttribute("True vapor pressure of the product. The equilibrium partial pressure exerted by a" +
             " petroleum liquid  as determined in accordance with standard methods.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure tvp {
             get {
                 return this.tvpField;
@@ -11434,6 +11694,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water is measured from a liquid sample  of the production stre" +
             "am. It includes free water, sediment and emulsion and  is measured as a volume p" +
             "ercentage of the production stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bsw {
             get {
                 return this.bswField;
@@ -11447,6 +11708,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The basic sediment and water as measured on the  previous reporting period (e.g., day).</summary>
         [System.ComponentModel.DescriptionAttribute("The basic sediment and water as measured on the  previous reporting period (e.g.," +
             " day).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswPrevious {
             get {
                 return this.bswPreviousField;
@@ -11458,7 +11720,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("densityValue")]
+        [System.Xml.Serialization.XmlElementAttribute("densityValue", DataType="cs_densityValue")]
         [System.ComponentModel.DescriptionAttribute("The density of the fluid, possibly corrected to specific  conditions of temperatu" +
             "re and pressure. If more than one value is specified then all values must repres" +
             "ent the same  opinion of the density (at different conditions).")]
@@ -11474,6 +11736,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -11487,6 +11750,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The mass basis flow rate of the product. This is used for things like a sand component.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass basis flow rate of the product. This is used for things like a sand comp" +
             "onent.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massFlowRateMeasure")]
         public massFlowRateMeasure densityFlowRate {
             get {
                 return this.densityFlowRateField;
@@ -11500,6 +11764,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product after it ha" +
             "s been  corrected to standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStd {
             get {
                 return this.densityStdField;
@@ -11512,6 +11777,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The concentration of the product as a volume  percentage of the product stream.</summary>
         [System.ComponentModel.DescriptionAttribute("The concentration of the product as a volume  percentage of the product stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure concentration {
             get {
                 return this.concentrationField;
@@ -11524,6 +11790,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molecular weight of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The molecular weight of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double molecularWeight {
             get {
                 return this.molecularWeightField;
@@ -11547,6 +11814,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The weight fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The weight fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -11559,6 +11827,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mole fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mole fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -11571,6 +11840,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molar amount.</summary>
         [System.ComponentModel.DescriptionAttribute("The molar amount.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="amountOfSubstanceMeasure")]
         public amountOfSubstanceMeasure moleAmt {
             get {
                 return this.moleAmtField;
@@ -11583,6 +11853,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The specific gravity of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The specific gravity of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dimensionlessMeasure")]
         public dimensionlessMeasure sg {
             get {
                 return this.sgField;
@@ -11595,6 +11866,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the heavier hydrocarbons come out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the heavier hydrocarbons come out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure hcDewpoint {
             get {
                 return this.hcDewpointField;
@@ -11607,6 +11879,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the first water comes out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the first water comes out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure waterDewpoint {
             get {
                 return this.waterDewpointField;
@@ -11621,6 +11894,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Wobbe Index. A number which indicates interchangeability of fuel gasses and is ob" +
             "tained by dividing the heating value of a gas by the  square root of its specifi" +
             "c gravity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure wobbeIndex {
             get {
                 return this.wobbeIndexField;
@@ -11634,6 +11908,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of heat which would be released by the complete combustion in air of a" +
             " specific quantity of product at standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure grossCalorificValueStd {
             get {
                 return this.grossCalorificValueStdField;
@@ -11646,6 +11921,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Reid vapor pressure of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvpStabilizedCrude {
             get {
                 return this.rvpStabilizedCrudeField;
@@ -11658,6 +11934,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Basic sediment and water content in stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water content in stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswStabilizedCrude {
             get {
                 return this.bswStabilizedCrudeField;
@@ -11670,6 +11947,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The density of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStabilizedCrude {
             get {
                 return this.densityStabilizedCrudeField;
@@ -11681,7 +11959,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -11694,7 +11972,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -12054,6 +12332,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The flow rate of the product. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The flow rate of the product. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateQualifiedMeasure")]
         public volumeFlowRateQualifiedMeasure flowRate {
             get {
                 return this.flowRateField;
@@ -12064,9 +12343,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("pres", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("standardTempPres", typeof(StandardCondition))]
-        [System.Xml.Serialization.XmlElementAttribute("temp", typeof(thermodynamicTemperatureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("pres", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("standardTempPres", typeof(StandardCondition), DataType="StandardCondition")]
+        [System.Xml.Serialization.XmlElementAttribute("temp", typeof(thermodynamicTemperatureMeasure), DataType="thermodynamicTemperatureMeasure")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -12078,7 +12357,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -12091,7 +12370,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -12129,6 +12408,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A port on the other end of an internal connection. This should always be specified if a Product Flow Network is being referenced by this report. If this is not specified then there is an assumption that there is only one other port for the unit. For example, if this end of the connection represents an inlet port then the implied other end is the outlet port for the unit.</summary>
         [System.ComponentModel.DescriptionAttribute(@"A port on the other end of an internal connection. This should always be specified if a Product Flow Network is being referenced by this report. If this is not specified then there is an assumption that there is only one other port for the unit. For example, if this end of the connection represents an inlet port then the implied other end is the outlet port for the unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString port {
             get {
                 return this.portField;
@@ -12141,6 +12421,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The differential pressure between the ports.</summary>
         [System.ComponentModel.DescriptionAttribute("The differential pressure between the ports.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure presDiff {
             get {
                 return this.presDiffField;
@@ -12153,6 +12434,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The differential temperature between the ports.</summary>
         [System.ComponentModel.DescriptionAttribute("The differential temperature between the ports.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure tempDiff {
             get {
                 return this.tempDiffField;
@@ -12167,6 +12449,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The size of the choke. This characterizes the overall unit with respect to the fl" +
             "ow restriction between the ports. The restriction might be implemented using a v" +
             "alve or an actual choke.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure chokeSize {
             get {
                 return this.chokeSizeField;
@@ -12181,6 +12464,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The relative size of the choke restriction. This characterizes the overall unit w" +
             "ith respect to the flow restriction between the ports. The restriction might be " +
             "implemented using a valve or an actual choke.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthPerLengthMeasure")]
         public lengthPerLengthMeasure chokeRelative {
             get {
                 return this.chokeRelativeField;
@@ -12192,7 +12476,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -12205,7 +12489,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -12238,6 +12522,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The density of the product.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The density of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -12248,9 +12533,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("pres", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("standardTempPres", typeof(StandardCondition))]
-        [System.Xml.Serialization.XmlElementAttribute("temp", typeof(thermodynamicTemperatureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("pres", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("standardTempPres", typeof(StandardCondition), DataType="StandardCondition")]
+        [System.Xml.Serialization.XmlElementAttribute("temp", typeof(thermodynamicTemperatureMeasure), DataType="thermodynamicTemperatureMeasure")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -12262,7 +12547,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -12275,7 +12560,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -12308,6 +12593,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the destination.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the destination.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -12320,6 +12606,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The type of destination.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of destination.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="BalanceDestinationType")]
         public BalanceDestinationType type {
             get {
                 return this.typeField;
@@ -12344,6 +12631,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The country of the destination.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The country of the destination.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string country {
             get {
                 return this.countryField;
@@ -12399,6 +12687,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the aspect being described.</summary>
         [System.ComponentModel.DescriptionAttribute("Defines the aspect being described.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="BalanceFlowPart")]
         public BalanceFlowPart kind {
             get {
                 return this.kindField;
@@ -12423,6 +12712,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A cargo identifier for the product.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A cargo identifier for the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string cargoNumber {
             get {
                 return this.cargoNumberField;
@@ -12436,6 +12726,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A cargo batch number. Used if the vessel needs to temporarily  disconnect for some reason (e.g., weather).</summary>
         [System.ComponentModel.DescriptionAttribute("A cargo batch number. Used if the vessel needs to temporarily  disconnect for som" +
             "e reason (e.g., weather).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short cargoBatchNumber {
             get {
                 return this.cargoBatchNumberField;
@@ -12460,6 +12751,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the shipper</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the shipper")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string shipper {
             get {
                 return this.shipperField;
@@ -12472,6 +12764,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the destination of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("Defines the destination of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productVolumeDestination")]
         public cs_productVolumeDestination destination {
             get {
                 return this.destinationField;
@@ -12483,7 +12776,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Provides details on the product.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("balanceDetail")]
+        [System.Xml.Serialization.XmlElementAttribute("balanceDetail", DataType="cs_productVolumeBalanceDetail")]
         [System.ComponentModel.DescriptionAttribute("Provides details on the product.")]
         public cs_productVolumeBalanceDetail[] balanceDetail {
             get {
@@ -12496,7 +12789,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -12509,7 +12802,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -12721,6 +13014,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of period that is being reported. If not  specified and a time is not given then the period is defined by the reporting period.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of period that is being reported. If not  specified and a time is not gi" +
             "ven then the period is defined by the reporting period.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingPeriod")]
         public ReportingPeriod kind {
             get {
                 return this.kindField;
@@ -12742,9 +13036,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("dTim", typeof(System.DateTime))]
-        [System.Xml.Serialization.XmlElementAttribute("dTimEnd", typeof(System.DateTime))]
-        [System.Xml.Serialization.XmlElementAttribute("dTimStart", typeof(System.DateTime))]
+        [System.Xml.Serialization.XmlElementAttribute("dTim", typeof(System.DateTime), DataType="timestamp")]
+        [System.Xml.Serialization.XmlElementAttribute("dTimEnd", typeof(System.DateTime), DataType="timestamp")]
+        [System.Xml.Serialization.XmlElementAttribute("dTimStart", typeof(System.DateTime), DataType="timestamp")]
         [System.Xml.Serialization.XmlElementAttribute("date", typeof(System.DateTime), DataType="date")]
         [System.Xml.Serialization.XmlElementAttribute("dateEnd", typeof(System.DateTime), DataType="date")]
         [System.Xml.Serialization.XmlElementAttribute("dateStart", typeof(System.DateTime), DataType="date")]
@@ -12774,6 +13068,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio. The ratio between the total produced gas volume and the total prod" +
             "uced oil volume including oil and gas volumes used on the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gor {
             get {
                 return this.gorField;
@@ -12787,6 +13082,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  t" +
             "o the end of the reporting priod.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gorMTD {
             get {
                 return this.gorMTDField;
@@ -12799,6 +13095,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The volumetric ratio of gas to liquid for all products in the whole flow.</summary>
         [System.ComponentModel.DescriptionAttribute("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gasLiquidRatio {
             get {
                 return this.gasLiquidRatioField;
@@ -12812,6 +13109,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration mass basis.  The ratio of water produced compared to the mass" +
             " of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure waterConcMass {
             get {
                 return this.waterConcMassField;
@@ -12825,6 +13123,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration volume basis. The ratio of water produced compared to the mas" +
             "s of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure waterConcVol {
             get {
                 return this.waterConcVolField;
@@ -12837,6 +13136,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The average atmospheric pressure during the reporting period.</summary>
         [System.ComponentModel.DescriptionAttribute("The average atmospheric pressure during the reporting period.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure atmosphere {
             get {
                 return this.atmosphereField;
@@ -12848,7 +13148,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("volumeValue")]
+        [System.Xml.Serialization.XmlElementAttribute("volumeValue", DataType="cs_volumeValue")]
         [System.ComponentModel.DescriptionAttribute(@"The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         public cs_volumeValue[] volumeValue {
             get {
@@ -12862,6 +13162,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volume {
             get {
                 return this.volumeField;
@@ -12874,6 +13175,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volumeStd {
             get {
                 return this.volumeStdField;
@@ -12885,7 +13187,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("flowRateValue")]
+        [System.Xml.Serialization.XmlElementAttribute("flowRateValue", DataType="cs_flowRateValue")]
         [System.ComponentModel.DescriptionAttribute(@"The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         public cs_flowRateValue[] flowRateValue {
             get {
@@ -12899,6 +13201,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateQualifiedMeasure")]
         public volumeFlowRateQualifiedMeasure flowRate {
             get {
                 return this.flowRateField;
@@ -12912,6 +13215,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Temperature of the port. Specifying the temperature here (as opposed to in Period" +
             ") implies that the temperature is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temp {
             get {
                 return this.tempField;
@@ -12925,6 +13229,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Pressure of the port. Specifying the pressure here (as opposed to in Period) impl" +
             "ies that the pressure is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pres {
             get {
                 return this.presField;
@@ -12937,6 +13242,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Absolute minimum pressure before the system will give an alarm.</summary>
         [System.ComponentModel.DescriptionAttribute("Absolute minimum pressure before the system will give an alarm.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure absoluteMinPres {
             get {
                 return this.absoluteMinPresField;
@@ -12948,7 +13254,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The internal differences between this port and one other port on this unit.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("portDiff")]
+        [System.Xml.Serialization.XmlElementAttribute("portDiff", DataType="cs_productVolumePortDifference")]
         [System.ComponentModel.DescriptionAttribute("The internal differences between this port and one other port on this unit.")]
         public cs_productVolumePortDifference[] portDiff {
             get {
@@ -12962,6 +13268,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mass of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massMeasure")]
         public massMeasure mass {
             get {
                 return this.massField;
@@ -12974,6 +13281,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The electrical energy represented by the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The electrical energy represented by the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="workMeasure")]
         public workMeasure work {
             get {
                 return this.workField;
@@ -12986,6 +13294,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The actual volume divided by the potential volume.</summary>
         [System.ComponentModel.DescriptionAttribute("The actual volume divided by the potential volume.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure efficiency {
             get {
                 return this.efficiencyField;
@@ -12998,6 +13307,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvp {
             get {
                 return this.rvpField;
@@ -13011,6 +13321,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.</summary>
         [System.ComponentModel.DescriptionAttribute("True vapor pressure of the product. The equilibrium partial pressure exerted by a" +
             " petroleum liquid  as determined in accordance with standard methods.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure tvp {
             get {
                 return this.tvpField;
@@ -13025,6 +13336,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water is measured from a liquid sample  of the production stre" +
             "am. It includes free water, sediment and emulsion and  is measured as a volume p" +
             "ercentage of the production stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bsw {
             get {
                 return this.bswField;
@@ -13038,6 +13350,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The basic sediment and water as measured on the  previous reporting period (e.g., day).</summary>
         [System.ComponentModel.DescriptionAttribute("The basic sediment and water as measured on the  previous reporting period (e.g.," +
             " day).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswPrevious {
             get {
                 return this.bswPreviousField;
@@ -13049,7 +13362,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("densityValue")]
+        [System.Xml.Serialization.XmlElementAttribute("densityValue", DataType="cs_densityValue")]
         [System.ComponentModel.DescriptionAttribute("The density of the fluid, possibly corrected to specific  conditions of temperatu" +
             "re and pressure. If more than one value is specified then all values must repres" +
             "ent the same  opinion of the density (at different conditions).")]
@@ -13065,6 +13378,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -13078,6 +13392,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The mass basis flow rate of the product. This is used for things like a sand component.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass basis flow rate of the product. This is used for things like a sand comp" +
             "onent.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massFlowRateMeasure")]
         public massFlowRateMeasure densityFlowRate {
             get {
                 return this.densityFlowRateField;
@@ -13091,6 +13406,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product after it ha" +
             "s been  corrected to standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStd {
             get {
                 return this.densityStdField;
@@ -13103,6 +13419,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The concentration of the product as a volume  percentage of the product stream.</summary>
         [System.ComponentModel.DescriptionAttribute("The concentration of the product as a volume  percentage of the product stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure concentration {
             get {
                 return this.concentrationField;
@@ -13115,6 +13432,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molecular weight of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The molecular weight of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double molecularWeight {
             get {
                 return this.molecularWeightField;
@@ -13138,6 +13456,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The weight fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The weight fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -13150,6 +13469,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mole fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mole fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -13162,6 +13482,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molar amount.</summary>
         [System.ComponentModel.DescriptionAttribute("The molar amount.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="amountOfSubstanceMeasure")]
         public amountOfSubstanceMeasure moleAmt {
             get {
                 return this.moleAmtField;
@@ -13174,6 +13495,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The specific gravity of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The specific gravity of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dimensionlessMeasure")]
         public dimensionlessMeasure sg {
             get {
                 return this.sgField;
@@ -13186,6 +13508,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the heavier hydrocarbons come out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the heavier hydrocarbons come out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure hcDewpoint {
             get {
                 return this.hcDewpointField;
@@ -13198,6 +13521,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the first water comes out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the first water comes out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure waterDewpoint {
             get {
                 return this.waterDewpointField;
@@ -13212,6 +13536,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Wobbe Index. A number which indicates interchangeability of fuel gasses and is ob" +
             "tained by dividing the heating value of a gas by the  square root of its specifi" +
             "c gravity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure wobbeIndex {
             get {
                 return this.wobbeIndexField;
@@ -13225,6 +13550,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of heat which would be released by the complete combustion in air of a" +
             " specific quantity of product at standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure grossCalorificValueStd {
             get {
                 return this.grossCalorificValueStdField;
@@ -13237,6 +13563,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Reid vapor pressure of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvpStabilizedCrude {
             get {
                 return this.rvpStabilizedCrudeField;
@@ -13249,6 +13576,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Basic sediment and water content in stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water content in stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswStabilizedCrude {
             get {
                 return this.bswStabilizedCrudeField;
@@ -13261,6 +13589,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The density of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStabilizedCrude {
             get {
                 return this.densityStabilizedCrudeField;
@@ -13272,7 +13601,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The relative amount of a component product in the product stream.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("componentContent")]
+        [System.Xml.Serialization.XmlElementAttribute("componentContent", DataType="cs_productVolumeComponentContent")]
         [System.ComponentModel.DescriptionAttribute("The relative amount of a component product in the product stream.")]
         public cs_productVolumeComponentContent[] componentContent {
             get {
@@ -13285,7 +13614,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Provides the sales context for this period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("balanceSet")]
+        [System.Xml.Serialization.XmlElementAttribute("balanceSet", DataType="cs_productVolumeBalanceSet")]
         [System.ComponentModel.DescriptionAttribute("Provides the sales context for this period.")]
         public cs_productVolumeBalanceSet[] balanceSet {
             get {
@@ -13300,6 +13629,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An indication of some sort of abnormal condition relative the values in this period.</summary>
         [System.ComponentModel.DescriptionAttribute("An indication of some sort of abnormal condition relative the values in this peri" +
             "od.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productVolumeAlert")]
         public cs_productVolumeAlert alert {
             get {
                 return this.alertField;
@@ -13311,7 +13641,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A timestamped remark about the amounts.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A timestamped remark about the amounts.")]
         public cs_datedComment[] comment {
             get {
@@ -13324,7 +13654,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -13337,7 +13667,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -13480,6 +13810,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An XPATH to the target value within the message  containing this XPATH value.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An XPATH to the target value within the message  containing this XPATH value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string target {
             get {
                 return this.targetField;
@@ -13493,6 +13824,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The level of the alert.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The level of the alert.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string level {
             get {
                 return this.levelField;
@@ -13506,6 +13838,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of alert. For example "off specification".</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of alert. For example \"off specification\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string type {
             get {
                 return this.typeField;
@@ -13519,6 +13852,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual decription of the alert.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual decription of the alert.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -13558,6 +13892,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the person providing the comment.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the person providing the comment.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string who {
             get {
                 return this.whoField;
@@ -13572,6 +13907,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The role of the person providing the comment. This is the role of the person with" +
             "in the context of comment.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string role {
             get {
                 return this.roleField;
@@ -13584,6 +13920,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time where the comment begins to be valid.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time where the comment begins to be valid.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -13607,6 +13944,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time where the comment is no longer valid.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time where the comment is no longer valid.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -13632,6 +13970,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("The relevant comment.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string remark {
             get {
                 return this.remarkField;
@@ -13643,7 +13982,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -13656,7 +13995,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -13685,6 +14024,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the flow within the facility.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the flow within the facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString referencedFlow {
             get {
                 return this.referencedFlowField;
@@ -13698,6 +14038,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the facility that contains the flow.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the facility that contains the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString parentfacility {
             get {
                 return this.parentfacilityField;
@@ -13819,6 +14160,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of product that is being reported.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of product that is being reported.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProduct")]
         public ReportingProduct kind {
             get {
                 return this.kindField;
@@ -13832,6 +14174,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of product that is being reported. This is reserved for generic kinds like chemical.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of product that is being reported. This is reserved for generic kinds li" +
             "ke chemical.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct name {
             get {
                 return this.nameField;
@@ -13847,6 +14190,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("This factor describes the fraction of fluid in the source flow  that is allocated" +
             " to this product stream. The volumes reported here are derived from the  source " +
             "flow based on this split factor. This should be an allocation flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeFraction")]
         public double splitFactor {
             get {
                 return this.splitFactorField;
@@ -13871,6 +14215,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A reference to the source flow whose volumes are used to determine the volumes within this target product stream based on the split factor.</summary>
         [System.ComponentModel.DescriptionAttribute("A reference to the source flow whose volumes are used to determine the volumes wi" +
             "thin this target product stream based on the split factor.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_refProductFlow")]
         public cs_refProductFlow sourceFlow {
             get {
                 return this.sourceFlowField;
@@ -13884,6 +14229,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio. The ratio between the total produced gas volume and the total prod" +
             "uced oil volume including oil and gas volumes used on the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gor {
             get {
                 return this.gorField;
@@ -13897,6 +14243,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  t" +
             "o the end of the reporting priod.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gorMTD {
             get {
                 return this.gorMTDField;
@@ -13909,6 +14256,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The volumetric ratio of gas to liquid for all products in the whole flow.</summary>
         [System.ComponentModel.DescriptionAttribute("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gasLiquidRatio {
             get {
                 return this.gasLiquidRatioField;
@@ -13922,6 +14270,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration mass basis.  The ratio of water produced compared to the mass" +
             " of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure waterConcMass {
             get {
                 return this.waterConcMassField;
@@ -13935,6 +14284,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration volume basis. The ratio of water produced compared to the mas" +
             "s of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure waterConcVol {
             get {
                 return this.waterConcVolField;
@@ -13947,6 +14297,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The average atmospheric pressure during the reporting period.</summary>
         [System.ComponentModel.DescriptionAttribute("The average atmospheric pressure during the reporting period.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure atmosphere {
             get {
                 return this.atmosphereField;
@@ -13958,7 +14309,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("volumeValue")]
+        [System.Xml.Serialization.XmlElementAttribute("volumeValue", DataType="cs_volumeValue")]
         [System.ComponentModel.DescriptionAttribute(@"The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         public cs_volumeValue[] volumeValue {
             get {
@@ -13972,6 +14323,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volume {
             get {
                 return this.volumeField;
@@ -13984,6 +14336,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volumeStd {
             get {
                 return this.volumeStdField;
@@ -13995,7 +14348,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("flowRateValue")]
+        [System.Xml.Serialization.XmlElementAttribute("flowRateValue", DataType="cs_flowRateValue")]
         [System.ComponentModel.DescriptionAttribute(@"The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         public cs_flowRateValue[] flowRateValue {
             get {
@@ -14009,6 +14362,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateQualifiedMeasure")]
         public volumeFlowRateQualifiedMeasure flowRate {
             get {
                 return this.flowRateField;
@@ -14022,6 +14376,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Temperature of the port. Specifying the temperature here (as opposed to in Period" +
             ") implies that the temperature is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temp {
             get {
                 return this.tempField;
@@ -14035,6 +14390,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Pressure of the port. Specifying the pressure here (as opposed to in Period) impl" +
             "ies that the pressure is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pres {
             get {
                 return this.presField;
@@ -14047,6 +14403,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Absolute minimum pressure before the system will give an alarm.</summary>
         [System.ComponentModel.DescriptionAttribute("Absolute minimum pressure before the system will give an alarm.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure absoluteMinPres {
             get {
                 return this.absoluteMinPresField;
@@ -14058,7 +14415,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The internal differences between this port and one other port on this unit.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("portDiff")]
+        [System.Xml.Serialization.XmlElementAttribute("portDiff", DataType="cs_productVolumePortDifference")]
         [System.ComponentModel.DescriptionAttribute("The internal differences between this port and one other port on this unit.")]
         public cs_productVolumePortDifference[] portDiff {
             get {
@@ -14072,6 +14429,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mass of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massMeasure")]
         public massMeasure mass {
             get {
                 return this.massField;
@@ -14084,6 +14442,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The electrical energy represented by the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The electrical energy represented by the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="workMeasure")]
         public workMeasure work {
             get {
                 return this.workField;
@@ -14096,6 +14455,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The actual volume divided by the potential volume.</summary>
         [System.ComponentModel.DescriptionAttribute("The actual volume divided by the potential volume.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure efficiency {
             get {
                 return this.efficiencyField;
@@ -14108,6 +14468,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvp {
             get {
                 return this.rvpField;
@@ -14121,6 +14482,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.</summary>
         [System.ComponentModel.DescriptionAttribute("True vapor pressure of the product. The equilibrium partial pressure exerted by a" +
             " petroleum liquid  as determined in accordance with standard methods.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure tvp {
             get {
                 return this.tvpField;
@@ -14135,6 +14497,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water is measured from a liquid sample  of the production stre" +
             "am. It includes free water, sediment and emulsion and  is measured as a volume p" +
             "ercentage of the production stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bsw {
             get {
                 return this.bswField;
@@ -14148,6 +14511,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The basic sediment and water as measured on the  previous reporting period (e.g., day).</summary>
         [System.ComponentModel.DescriptionAttribute("The basic sediment and water as measured on the  previous reporting period (e.g.," +
             " day).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswPrevious {
             get {
                 return this.bswPreviousField;
@@ -14159,7 +14523,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("densityValue")]
+        [System.Xml.Serialization.XmlElementAttribute("densityValue", DataType="cs_densityValue")]
         [System.ComponentModel.DescriptionAttribute("The density of the fluid, possibly corrected to specific  conditions of temperatu" +
             "re and pressure. If more than one value is specified then all values must repres" +
             "ent the same  opinion of the density (at different conditions).")]
@@ -14175,6 +14539,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -14188,6 +14553,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The mass basis flow rate of the product. This is used for things like a sand component.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass basis flow rate of the product. This is used for things like a sand comp" +
             "onent.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massFlowRateMeasure")]
         public massFlowRateMeasure densityFlowRate {
             get {
                 return this.densityFlowRateField;
@@ -14201,6 +14567,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product after it ha" +
             "s been  corrected to standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStd {
             get {
                 return this.densityStdField;
@@ -14213,6 +14580,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The concentration of the product as a volume  percentage of the product stream.</summary>
         [System.ComponentModel.DescriptionAttribute("The concentration of the product as a volume  percentage of the product stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure concentration {
             get {
                 return this.concentrationField;
@@ -14225,6 +14593,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molecular weight of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The molecular weight of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double molecularWeight {
             get {
                 return this.molecularWeightField;
@@ -14248,6 +14617,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The weight fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The weight fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -14260,6 +14630,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mole fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mole fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -14272,6 +14643,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molar amount.</summary>
         [System.ComponentModel.DescriptionAttribute("The molar amount.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="amountOfSubstanceMeasure")]
         public amountOfSubstanceMeasure moleAmt {
             get {
                 return this.moleAmtField;
@@ -14284,6 +14656,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The specific gravity of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The specific gravity of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dimensionlessMeasure")]
         public dimensionlessMeasure sg {
             get {
                 return this.sgField;
@@ -14296,6 +14669,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the heavier hydrocarbons come out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the heavier hydrocarbons come out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure hcDewpoint {
             get {
                 return this.hcDewpointField;
@@ -14308,6 +14682,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the first water comes out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the first water comes out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure waterDewpoint {
             get {
                 return this.waterDewpointField;
@@ -14322,6 +14697,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Wobbe Index. A number which indicates interchangeability of fuel gasses and is ob" +
             "tained by dividing the heating value of a gas by the  square root of its specifi" +
             "c gravity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure wobbeIndex {
             get {
                 return this.wobbeIndexField;
@@ -14335,6 +14711,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of heat which would be released by the complete combustion in air of a" +
             " specific quantity of product at standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure grossCalorificValueStd {
             get {
                 return this.grossCalorificValueStdField;
@@ -14347,6 +14724,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Reid vapor pressure of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvpStabilizedCrude {
             get {
                 return this.rvpStabilizedCrudeField;
@@ -14359,6 +14737,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Basic sediment and water content in stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water content in stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswStabilizedCrude {
             get {
                 return this.bswStabilizedCrudeField;
@@ -14371,6 +14750,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The density of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStabilizedCrude {
             get {
                 return this.densityStabilizedCrudeField;
@@ -14382,7 +14762,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The relative amount of a component product in the product stream.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("componentContent")]
+        [System.Xml.Serialization.XmlElementAttribute("componentContent", DataType="cs_productVolumeComponentContent")]
         [System.ComponentModel.DescriptionAttribute("The relative amount of a component product in the product stream.")]
         public cs_productVolumeComponentContent[] componentContent {
             get {
@@ -14395,7 +14775,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Product amounts for a specific period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("period")]
+        [System.Xml.Serialization.XmlElementAttribute("period", DataType="cs_productVolumePeriod")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Product amounts for a specific period.")]
         public cs_productVolumePeriod[] period {
@@ -14409,7 +14789,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A (possibly timstamped) remark about the product.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A (possibly timstamped) remark about the product.")]
         public cs_datedComment[] comment {
             get {
@@ -14422,7 +14802,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -14435,7 +14815,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -14476,6 +14856,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the facility. The name can be qualified by a naming system.  This can" +
             " also define the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct name {
             get {
                 return this.nameField;
@@ -14490,6 +14871,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("For facilities whose name is unique within the context of another  facility, the " +
             "name of the parent facility.  The name can be qualified by a naming system. This" +
             " also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent1 {
             get {
                 return this.facilityParent1Field;
@@ -14504,6 +14886,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("For facilities whose name is unique within the context of another  facility, the " +
             "name of the parent facility of parent1.  The name can be qualified by a naming s" +
             "ystem. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent2 {
             get {
                 return this.facilityParent2Field;
@@ -14516,6 +14899,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A kind of facility where the specific name is not relevant.</summary>
         [System.ComponentModel.DescriptionAttribute("A kind of facility where the specific name is not relevant.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingFacility")]
         public ReportingFacility kind {
             get {
                 return this.kindField;
@@ -14539,6 +14923,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The Product Flow Port associated with the Product Flow Unit.</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Port associated with the Product Flow Unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString port {
             get {
                 return this.portField;
@@ -14551,6 +14936,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The Product Flow Unit representing the facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit representing the facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString unit {
             get {
                 return this.unitField;
@@ -14563,6 +14949,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The Product Flow Network representing the facility. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The Product Flow Network representing the facility. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString network {
             get {
                 return this.networkField;
@@ -14594,7 +14981,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The kind of facility.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ReportingFacility")]
         [System.ComponentModel.DescriptionAttribute("The kind of facility.")]
         public ReportingFacility kind {
             get {
@@ -14618,7 +15005,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A custom sub-categorization of facility kind. This attribute is free-form text and allows  implementers to provide a more specific or specialized description of the facility kind.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nameString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A custom sub-categorization of facility kind. This attribute is free-form text an" +
             "d allows  implementers to provide a more specific or specialized description of " +
@@ -14634,7 +15021,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The naming system within which the name is unique. For example, API or NPD.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nameString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The naming system within which the name is unique. For example, API or NPD.")]
         public string namingSystem {
@@ -14648,7 +15035,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>If the facility is defined and instantiated within the context of a WITSML server, this is a pointer to the uid value of that object instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If the facility is defined and instantiated within the context of a WITSML server" +
@@ -15015,6 +15402,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of this flow within the context of this report. This might reflect some " +
             "combination of the kind of flow, port, qualifier and related facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -15028,6 +15416,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Indicates the type of flow that is being reported. The type of flow is an indication of the overall source or target of the flow. A production flow has one or more wells as the originating source. An injection flow has one or more wells as the ultimate target. An import flow has an offsite source. An export flow has an offiste target. A consumption flow generally has a kind of equipment as a target.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"Indicates the type of flow that is being reported. The type of flow is an indication of the overall source or target of the flow. A production flow has one or more wells as the originating source. An injection flow has one or more wells as the ultimate target. An import flow has an offsite source. An export flow has an offiste target. A consumption flow generally has a kind of equipment as a target.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingFlow")]
         public ReportingFlow kind {
             get {
                 return this.kindField;
@@ -15041,6 +15430,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Product Flow Port to which the flow is assigned. This is the port on the Product Flow Unit that represents the facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Port to which the flow is assigned. This is the port on the Prod" +
             "uct Flow Unit that represents the facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString port {
             get {
                 return this.portField;
@@ -15053,6 +15443,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The kind of port that this flow represents: inlet or outlet.</summary>
         [System.ComponentModel.DescriptionAttribute("The kind of port that this flow represents: inlet or outlet.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ProductFlowPortType")]
         public ProductFlowPortType direction {
             get {
                 return this.directionField;
@@ -15078,6 +15469,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The name of the facility represented by the port  where the measurements were tak" +
             "en.  The name can be qualified by a naming system.  This also defines the kind o" +
             "f facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facility {
             get {
                 return this.facilityField;
@@ -15089,7 +15481,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternatative name of a facility represented by the port. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("facilityAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("facilityAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternatative name of a facility represented by the port. This is generally un" +
             "ique within a naming system. The above contextually unique name (that is, within" +
             "  the context of a parent) should also be listed as an alias.")]
@@ -15105,6 +15497,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Qualifies the type of flow that is being reported.</summary>
         [System.ComponentModel.DescriptionAttribute("Qualifies the type of flow that is being reported.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FlowQualifier")]
         public FlowQualifier qualifier {
             get {
                 return this.qualifierField;
@@ -15129,6 +15522,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Defines a specialization of the qualifier value. This should only be given if a qualifier is given.</summary>
         [System.ComponentModel.DescriptionAttribute("Defines a specialization of the qualifier value. This should only be given if a q" +
             "ualifier is given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FlowSubQualifier")]
         public FlowSubQualifier subQualifier {
             get {
                 return this.subQualifierField;
@@ -15154,6 +15548,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A second facility related to this flow.  For a production flow, this would repres" +
             "ent a role of \'produced for\'. For an import flow, this would represent a role of" +
             " \'inport from\'. For an export flow, this would represent a role of \'export to\'.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productVolumeRelatedFacility")]
         public cs_productVolumeRelatedFacility relatedFacility {
             get {
                 return this.relatedFacilityField;
@@ -15167,6 +15562,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A timestamp representing the version of this data.  A flow (same port and products) with a more recent timestamp will represent  the "current" version.</summary>
         [System.ComponentModel.DescriptionAttribute("A timestamp representing the version of this data.  A flow (same port and product" +
             "s) with a more recent timestamp will represent  the \"current\" version.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp version {
             get {
                 return this.versionField;
@@ -15192,6 +15588,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Identifies the source of the version.  This will commonly be the name of the soft" +
             "ware which created the version.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string versionSource {
             get {
                 return this.versionSourceField;
@@ -15204,6 +15601,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>This is a pointer to the flow from which this flow was derived.</summary>
         [System.ComponentModel.DescriptionAttribute("This is a pointer to the flow from which this flow was derived.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString sourceFlow {
             get {
                 return this.sourceFlowField;
@@ -15217,6 +15615,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio. The ratio between the total produced gas volume and the total prod" +
             "uced oil volume including oil and gas volumes used on the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gor {
             get {
                 return this.gorField;
@@ -15230,6 +15629,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.</summary>
         [System.ComponentModel.DescriptionAttribute("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  t" +
             "o the end of the reporting priod.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gorMTD {
             get {
                 return this.gorMTDField;
@@ -15242,6 +15642,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The volumetric ratio of gas to liquid for all products in the whole flow.</summary>
         [System.ComponentModel.DescriptionAttribute("The volumetric ratio of gas to liquid for all products in the whole flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure gasLiquidRatio {
             get {
                 return this.gasLiquidRatioField;
@@ -15255,6 +15656,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration mass basis.  The ratio of water produced compared to the mass" +
             " of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure waterConcMass {
             get {
                 return this.waterConcMassField;
@@ -15268,6 +15670,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.</summary>
         [System.ComponentModel.DescriptionAttribute("Water concentration volume basis. The ratio of water produced compared to the mas" +
             "s of total liquids produced.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure waterConcVol {
             get {
                 return this.waterConcVolField;
@@ -15280,6 +15683,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The average atmospheric pressure during the reporting period.</summary>
         [System.ComponentModel.DescriptionAttribute("The average atmospheric pressure during the reporting period.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure atmosphere {
             get {
                 return this.atmosphereField;
@@ -15291,7 +15695,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("volumeValue")]
+        [System.Xml.Serialization.XmlElementAttribute("volumeValue", DataType="cs_volumeValue")]
         [System.ComponentModel.DescriptionAttribute(@"The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         public cs_volumeValue[] volumeValue {
             get {
@@ -15305,6 +15709,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volume {
             get {
                 return this.volumeField;
@@ -15317,6 +15722,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeQualifiedMeasure")]
         public volumeQualifiedMeasure volumeStd {
             get {
                 return this.volumeStdField;
@@ -15328,7 +15734,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("flowRateValue")]
+        [System.Xml.Serialization.XmlElementAttribute("flowRateValue", DataType="cs_flowRateValue")]
         [System.ComponentModel.DescriptionAttribute(@"The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         public cs_flowRateValue[] flowRateValue {
             get {
@@ -15342,6 +15748,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not "NaN",  the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not ""NaN"",  the data value can be assumed to be good with no restrictions. A value of ""NaN"" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeFlowRateQualifiedMeasure")]
         public volumeFlowRateQualifiedMeasure flowRate {
             get {
                 return this.flowRateField;
@@ -15355,6 +15762,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Temperature of the port. Specifying the temperature here (as opposed to in Period" +
             ") implies that the temperature is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temp {
             get {
                 return this.tempField;
@@ -15368,6 +15776,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("Pressure of the port. Specifying the pressure here (as opposed to in Period) impl" +
             "ies that the pressure is constant for all periods of the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pres {
             get {
                 return this.presField;
@@ -15380,6 +15789,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Absolute minimum pressure before the system will give an alarm.</summary>
         [System.ComponentModel.DescriptionAttribute("Absolute minimum pressure before the system will give an alarm.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure absoluteMinPres {
             get {
                 return this.absoluteMinPresField;
@@ -15391,7 +15801,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The internal differences between this port and one other port on this unit.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("portDiff")]
+        [System.Xml.Serialization.XmlElementAttribute("portDiff", DataType="cs_productVolumePortDifference")]
         [System.ComponentModel.DescriptionAttribute("The internal differences between this port and one other port on this unit.")]
         public cs_productVolumePortDifference[] portDiff {
             get {
@@ -15405,6 +15815,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mass of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massMeasure")]
         public massMeasure mass {
             get {
                 return this.massField;
@@ -15417,6 +15828,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The electrical energy represented by the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The electrical energy represented by the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="workMeasure")]
         public workMeasure work {
             get {
                 return this.workField;
@@ -15429,6 +15841,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The actual volume divided by the potential volume.</summary>
         [System.ComponentModel.DescriptionAttribute("The actual volume divided by the potential volume.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure efficiency {
             get {
                 return this.efficiencyField;
@@ -15441,6 +15854,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvp {
             get {
                 return this.rvpField;
@@ -15454,6 +15868,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.</summary>
         [System.ComponentModel.DescriptionAttribute("True vapor pressure of the product. The equilibrium partial pressure exerted by a" +
             " petroleum liquid  as determined in accordance with standard methods.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure tvp {
             get {
                 return this.tvpField;
@@ -15468,6 +15883,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water is measured from a liquid sample  of the production stre" +
             "am. It includes free water, sediment and emulsion and  is measured as a volume p" +
             "ercentage of the production stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bsw {
             get {
                 return this.bswField;
@@ -15481,6 +15897,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The basic sediment and water as measured on the  previous reporting period (e.g., day).</summary>
         [System.ComponentModel.DescriptionAttribute("The basic sediment and water as measured on the  previous reporting period (e.g.," +
             " day).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswPrevious {
             get {
                 return this.bswPreviousField;
@@ -15492,7 +15909,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("densityValue")]
+        [System.Xml.Serialization.XmlElementAttribute("densityValue", DataType="cs_densityValue")]
         [System.ComponentModel.DescriptionAttribute("The density of the fluid, possibly corrected to specific  conditions of temperatu" +
             "re and pressure. If more than one value is specified then all values must repres" +
             "ent the same  opinion of the density (at different conditions).")]
@@ -15508,6 +15925,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -15521,6 +15939,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The mass basis flow rate of the product. This is used for things like a sand component.</summary>
         [System.ComponentModel.DescriptionAttribute("The mass basis flow rate of the product. This is used for things like a sand comp" +
             "onent.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massFlowRateMeasure")]
         public massFlowRateMeasure densityFlowRate {
             get {
                 return this.densityFlowRateField;
@@ -15534,6 +15953,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("DEPRECATED. Use densityValue for new work. The density of the product after it ha" +
             "s been  corrected to standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStd {
             get {
                 return this.densityStdField;
@@ -15546,6 +15966,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The concentration of the product as a volume  percentage of the product stream.</summary>
         [System.ComponentModel.DescriptionAttribute("The concentration of the product as a volume  percentage of the product stream.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure concentration {
             get {
                 return this.concentrationField;
@@ -15558,6 +15979,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molecular weight of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The molecular weight of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double molecularWeight {
             get {
                 return this.molecularWeightField;
@@ -15581,6 +16003,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The weight fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The weight fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -15593,6 +16016,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mole fraction of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The mole fraction of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -15605,6 +16029,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The molar amount.</summary>
         [System.ComponentModel.DescriptionAttribute("The molar amount.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="amountOfSubstanceMeasure")]
         public amountOfSubstanceMeasure moleAmt {
             get {
                 return this.moleAmtField;
@@ -15617,6 +16042,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The specific gravity of the product.</summary>
         [System.ComponentModel.DescriptionAttribute("The specific gravity of the product.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dimensionlessMeasure")]
         public dimensionlessMeasure sg {
             get {
                 return this.sgField;
@@ -15629,6 +16055,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the heavier hydrocarbons come out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the heavier hydrocarbons come out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure hcDewpoint {
             get {
                 return this.hcDewpointField;
@@ -15641,6 +16068,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at which the first water comes out of solution.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at which the first water comes out of solution.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure waterDewpoint {
             get {
                 return this.waterDewpointField;
@@ -15655,6 +16083,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Wobbe Index. A number which indicates interchangeability of fuel gasses and is ob" +
             "tained by dividing the heating value of a gas by the  square root of its specifi" +
             "c gravity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure wobbeIndex {
             get {
                 return this.wobbeIndexField;
@@ -15668,6 +16097,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of heat which would be released by the complete combustion in air of a" +
             " specific quantity of product at standard temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure grossCalorificValueStd {
             get {
                 return this.grossCalorificValueStdField;
@@ -15680,6 +16110,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Reid vapor pressure of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvpStabilizedCrude {
             get {
                 return this.rvpStabilizedCrudeField;
@@ -15692,6 +16123,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Basic sediment and water content in stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water content in stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bswStabilizedCrude {
             get {
                 return this.bswStabilizedCrudeField;
@@ -15704,6 +16136,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The density of stabilized crude.</summary>
         [System.ComponentModel.DescriptionAttribute("The density of stabilized crude.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStabilizedCrude {
             get {
                 return this.densityStabilizedCrudeField;
@@ -15715,7 +16148,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Reports a product flow stream.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("product")]
+        [System.Xml.Serialization.XmlElementAttribute("product", DataType="cs_productVolumeProduct")]
         [System.ComponentModel.DescriptionAttribute("Reports a product flow stream.")]
         public cs_productVolumeProduct[] product {
             get {
@@ -15728,7 +16161,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A timestamped remark about the flow.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A timestamped remark about the flow.")]
         public cs_datedComment[] comment {
             get {
@@ -15741,7 +16174,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -15754,7 +16187,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -16003,7 +16436,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -16052,7 +16485,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An indicator of the quality of the value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ValueStatus")]
         [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
@@ -16101,7 +16534,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("index")]
+        [System.Xml.Serialization.XmlElementAttribute("index", DataType="unitlessQuantity")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         public double[] index {
@@ -16115,7 +16548,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("value")]
+        [System.Xml.Serialization.XmlElementAttribute("value", DataType="unitlessQuantity")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         public double[] value {
@@ -16129,7 +16562,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -16174,6 +16607,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time at which the parameter applies. If no time is specified then the value is static.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the parameter applies. If no time is specified then th" +
             "e value is static.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -16199,6 +16633,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The date and time at which the parameter no longer applies. The \"active\" time int" +
             "erval is inclusive of this point. If dTimEnd is given then dTim shall also be gi" +
             "ven.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -16220,10 +16655,10 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("curveValue", typeof(cs_curveData))]
-        [System.Xml.Serialization.XmlElementAttribute("integerValue", typeof(integerQualifiedCount))]
-        [System.Xml.Serialization.XmlElementAttribute("measureValue", typeof(generalQualifiedMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("stringValue", typeof(kindQualifiedString))]
+        [System.Xml.Serialization.XmlElementAttribute("curveValue", typeof(cs_curveData), DataType="cs_curveData")]
+        [System.Xml.Serialization.XmlElementAttribute("integerValue", typeof(integerQualifiedCount), DataType="integerQualifiedCount")]
+        [System.Xml.Serialization.XmlElementAttribute("measureValue", typeof(generalQualifiedMeasure), DataType="generalQualifiedMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("stringValue", typeof(kindQualifiedString), DataType="kindQualifiedString")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -16238,6 +16673,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A port related to the parameter. If a port is given then the corresponding unit u" +
             "sually must be given. For example, an \"offset along network\" parameter must spec" +
             "ify a port from which the offset was measured.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString port {
             get {
                 return this.portField;
@@ -16251,6 +16687,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A unit related to the parameter. For example, an "offset along network" parameter must specify a port (on a unit) from which the offset was measured.</summary>
         [System.ComponentModel.DescriptionAttribute("A unit related to the parameter. For example, an \"offset along network\" parameter" +
             " must specify a port (on a unit) from which the offset was measured.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString unit {
             get {
                 return this.unitField;
@@ -16263,6 +16700,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>An indication of some sort of abnormal condition relative this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute("An indication of some sort of abnormal condition relative this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productVolumeAlert")]
         public cs_productVolumeAlert alert {
             get {
                 return this.alertField;
@@ -16274,7 +16712,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -16287,7 +16725,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -16330,6 +16768,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The order of the value in the index or data tuple. If isIndex is true this is the" +
             " order of the (independent) index element. If isIndex is false, this is the orde" +
             "r of the (dependent) value element.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short order {
             get {
                 return this.orderField;
@@ -16344,6 +16783,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The name of the variable in this curve.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string parameter {
             get {
                 return this.parameterField;
@@ -16357,6 +16797,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True (equal "1" or "true") indicates that this is an independent variable in this curve.  At least one column column should be flagged as independent.</summary>
         [System.ComponentModel.DescriptionAttribute("True (equal \"1\" or \"true\") indicates that this is an independent variable in this" +
             " curve.  At least one column column should be flagged as independent.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool isIndex {
             get {
                 return this.isIndexField;
@@ -16382,6 +16823,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The measure class of the variable. This defines which units of measure are valid " +
             "for the value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="MeasureClass")]
         public MeasureClass measureClass {
             get {
                 return this.measureClassField;
@@ -16397,6 +16839,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the variable. The unit of measure must match a unit allowe" +
             "d by the measure class.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="uomString")]
         public string unit {
             get {
                 return this.unitField;
@@ -16408,7 +16851,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -16421,7 +16864,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -16492,6 +16935,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The name of the facility parameter. This should reflect the business semantics of" +
             " all values in the set and not   the underlying kind. For example, specify \"diam" +
             "eter\" rather than \"length\" or \"distance\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FacilityParameter")]
         public FacilityParameter name {
             get {
                 return this.nameField;
@@ -16519,6 +16963,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The port to which this parameter is assigned. This must be a port on the unit rep" +
             "resenting the parent facility of this parameter. If not specified then the param" +
             "eter represents the unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString port {
             get {
                 return this.portField;
@@ -16531,6 +16976,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>If the value is a measure (value with unit of measure), this defines the  measurement class of the value. The units of measure for the value must conform to the  list allowed by the measurement class in the unit dictionary file. Mutually exclusive with curveDefinition.</summary>
         [System.ComponentModel.DescriptionAttribute(@"If the value is a measure (value with unit of measure), this defines the  measurement class of the value. The units of measure for the value must conform to the  list allowed by the measurement class in the unit dictionary file. Mutually exclusive with curveDefinition.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="MeasureClass")]
         public MeasureClass measureClass {
             get {
                 return this.measureClassField;
@@ -16555,6 +17001,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The pointer to the coordinate reference system. This is needed for coordinates such as measure depth to specify the reference datum.</summary>
         [System.ComponentModel.DescriptionAttribute("The pointer to the coordinate reference system. This is needed for coordinates su" +
             "ch as measure depth to specify the reference datum.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString coordinateReferenceSystem {
             get {
                 return this.coordinateReferenceSystemField;
@@ -16566,7 +17013,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>If the value is a curve, this defines the meaning of the one column  in the table representing the curve. Mutually exclusive with measureClass.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("curveDefinition")]
+        [System.Xml.Serialization.XmlElementAttribute("curveDefinition", DataType="cs_curveDefinition")]
         [System.ComponentModel.DescriptionAttribute("If the value is a curve, this defines the meaning of the one column  in the table" +
             " representing the curve. Mutually exclusive with measureClass.")]
         public cs_curveDefinition[] curveDefinition {
@@ -16581,6 +17028,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Qualifies the type of parameter that is being reported.</summary>
         [System.ComponentModel.DescriptionAttribute("Qualifies the type of parameter that is being reported.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FlowQualifier")]
         public FlowQualifier qualifier {
             get {
                 return this.qualifierField;
@@ -16605,6 +17053,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Defines a specialization of the qualifier value. This should only be given if a qualifier is given.</summary>
         [System.ComponentModel.DescriptionAttribute("Defines a specialization of the qualifier value. This should only be given if a q" +
             "ualifier is given.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FlowSubQualifier")]
         public FlowSubQualifier subQualifier {
             get {
                 return this.subQualifierField;
@@ -16629,6 +17078,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A timestamp representing the version of this data.  A parameter set with a more recent timestamp will represent  the "current" version.</summary>
         [System.ComponentModel.DescriptionAttribute("A timestamp representing the version of this data.  A parameter set with a more r" +
             "ecent timestamp will represent  the \"current\" version.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp version {
             get {
                 return this.versionField;
@@ -16654,6 +17104,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Identifies the source of the version.  This will commonly be the name of the soft" +
             "ware which created the version.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string versionSource {
             get {
                 return this.versionSourceField;
@@ -16667,6 +17118,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of product that is being reported. This would be useful for something like specifying a tank procuct volume or level.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of product that is being reported. This would be useful for something li" +
             "ke specifying a tank procuct volume or level.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProduct")]
         public ReportingProduct product {
             get {
                 return this.productField;
@@ -16690,6 +17142,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The type of period that is being reported.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of period that is being reported.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingPeriod")]
         public ReportingPeriod periodKind {
             get {
                 return this.periodKindField;
@@ -16712,7 +17165,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A parameter value, possibly at a time. If a time is not given then only one parameter should be given. If a time is specified with one value then time should be specified for all values. Each value in a time series should be of the same  underling kind of value (for example, a length measure).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.Xml.Serialization.XmlElementAttribute("parameter", DataType="cs_productVolumeParameterValue")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"A parameter value, possibly at a time. If a time is not given then only one parameter should be given. If a time is specified with one value then time should be specified for all values. Each value in a time series should be of the same  underling kind of value (for example, a length measure).")]
         public cs_productVolumeParameterValue[] parameter {
@@ -16728,6 +17181,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A comment about the parameter.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -16739,7 +17193,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -16752,7 +17206,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -17800,6 +18254,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The name of the facility. The name can be qualified by a naming system.  This als" +
             "o defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct name {
             get {
                 return this.nameField;
@@ -17812,6 +18267,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute(@"For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent1 {
             get {
                 return this.facilityParent1Field;
@@ -17826,6 +18282,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("For facilities whose name is unique within the context of another  facility, the " +
             "name of the parent facility of parent1.  The name can be qualified by a naming s" +
             "ystem. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent2 {
             get {
                 return this.facilityParent2Field;
@@ -17837,7 +18294,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("facilityAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("facilityAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternatative name of a facility. This is generally unique within a naming sys" +
             "tem. The above contextually unique name (that is, within  the context of a paren" +
             "t) should also be listed as an alias.")]
@@ -17854,6 +18311,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit representing the facility. This must be unique within the c" +
             "ontext of the Product Flow Network.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString unit {
             get {
                 return this.unitField;
@@ -17866,6 +18324,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The Product Flow Network representing the facility. This can only be given if unit is given. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The Product Flow Network representing the facility. This can only be given if unit is given. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString network {
             get {
                 return this.networkField;
@@ -17877,7 +18336,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to this facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.Xml.Serialization.XmlElementAttribute("contextFacility", DataType="facilityIdentifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to this facility.")]
         public facilityIdentifierStruct[] contextFacility {
             get {
@@ -17894,6 +18353,7 @@ namespace Energistics.Generator.PRODML122 {
             "PRECATED. Instead, use \"active\" with wellProducing=true. In PRODML, the value of" +
             " \"active -- producing\" has been DEPRECATED. Instead, use \"active\" with wellInjec" +
             "ting=true.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WellStatus")]
         public WellStatus statusWell {
             get {
                 return this.statusWellField;
@@ -17918,6 +18378,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>POSC well fluid. The type of fluid being produced from or injected  into a well facility.</summary>
         [System.ComponentModel.DescriptionAttribute("POSC well fluid. The type of fluid being produced from or injected  into a well f" +
             "acility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WellFluid")]
         public WellFluid fluidWell {
             get {
                 return this.fluidWellField;
@@ -17941,6 +18402,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The lift method being used to operate the well.</summary>
         [System.ComponentModel.DescriptionAttribute("The lift method being used to operate the well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="WellOperationMethod")]
         public WellOperationMethod operatingMethod {
             get {
                 return this.operatingMethodField;
@@ -17966,6 +18428,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("True (or 1) indicates that the well is producing. False (or 0) or not given indic" +
             "ates that the well is not producing. This only applies if the facility is a well" +
             " or wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool wellProducing {
             get {
                 return this.wellProducingField;
@@ -17991,6 +18454,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("True (or 1) indicates that the well is injecting. False (or 0) or not given indic" +
             "ates that the well is not injecting. This only applies if the facility is a well" +
             " or wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool wellInjecting {
             get {
                 return this.wellInjectingField;
@@ -18014,6 +18478,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The storage capacity of the facility (e.g., a tank).</summary>
         [System.ComponentModel.DescriptionAttribute("The storage capacity of the facility (e.g., a tank).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure capacity {
             get {
                 return this.capacityField;
@@ -18026,6 +18491,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The amount of time that the facility was active during the  reporting period.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of time that the facility was active during the  reporting period.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure operationTime {
             get {
                 return this.operationTimeField;
@@ -18037,7 +18503,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The reason for any down time during the reporting period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("downtimeReason")]
+        [System.Xml.Serialization.XmlElementAttribute("downtimeReason", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("The reason for any down time during the reporting period.")]
         public cs_datedComment[] downtimeReason {
             get {
@@ -18050,7 +18516,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Usage values for one parameter associated with the facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameterSet")]
+        [System.Xml.Serialization.XmlElementAttribute("parameterSet", DataType="cs_productVolumeParameterSet")]
         [System.ComponentModel.DescriptionAttribute("Usage values for one parameter associated with the facility.")]
         public cs_productVolumeParameterSet[] parameterSet {
             get {
@@ -18063,7 +18529,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Reports a flow of a product.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("flow")]
+        [System.Xml.Serialization.XmlElementAttribute("flow", DataType="cs_productVolumeFlow")]
         [System.ComponentModel.DescriptionAttribute("Reports a flow of a product.")]
         public cs_productVolumeFlow[] flow {
             get {
@@ -18076,7 +18542,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A timestamped remark about the facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A timestamped remark about the facility.")]
         public cs_datedComment[] comment {
             get {
@@ -18089,7 +18555,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -18102,7 +18568,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -18250,6 +18716,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The identifier of the account of the sub-unit within the whole business unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string accountId {
             get {
                 return this.accountIdField;
@@ -18262,6 +18729,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The product associated with the account identifier.</summary>
         [System.ComponentModel.DescriptionAttribute("The product associated with the account identifier.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProduct")]
         public ReportingProduct product {
             get {
                 return this.productField;
@@ -18284,7 +18752,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -18297,7 +18765,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -18336,6 +18804,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The percent ownership of the sub-unit in the unit during the specified time.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The percent ownership of the sub-unit in the unit during the specified time.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasurePercent")]
         public volumePerVolumeMeasurePercent share {
             get {
                 return this.shareField;
@@ -18396,7 +18865,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -18409,7 +18878,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -18442,6 +18911,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Points to business unit which is part of another business unit.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Points to business unit which is part of another business unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString kind {
             get {
                 return this.kindField;
@@ -18452,8 +18922,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("accountInformation", typeof(cs_productVolumeBusinessAccountInfo))]
-        [System.Xml.Serialization.XmlElementAttribute("ownershipShare", typeof(cs_productVolumeBusinessOwnershipShare))]
+        [System.Xml.Serialization.XmlElementAttribute("accountInformation", typeof(cs_productVolumeBusinessAccountInfo), DataType="cs_productVolumeBusinessAccountInfo")]
+        [System.Xml.Serialization.XmlElementAttribute("ownershipShare", typeof(cs_productVolumeBusinessOwnershipShare), DataType="cs_productVolumeBusinessOwnershipShare")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -18465,7 +18935,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -18478,7 +18948,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -18515,6 +18985,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of business unit.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of business unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="BusinessUnitKind")]
         public BusinessUnitKind kind {
             get {
                 return this.kindField;
@@ -18528,6 +18999,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The human contextual name of the business unit.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The human contextual name of the business unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -18541,6 +19013,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual description of the business unit.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the business unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -18552,7 +19025,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A component part of the unit.  The composition of a unit may vary with time. This defines the ownership share or account information for a sub unit within the context of the whole unit. For ownership shares, at any one point in time the sum of the shares should be 100%.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("subUnit")]
+        [System.Xml.Serialization.XmlElementAttribute("subUnit", DataType="cs_productVolumeBusinessSubUnit")]
         [System.ComponentModel.DescriptionAttribute(@"A component part of the unit.  The composition of a unit may vary with time. This defines the ownership share or account information for a sub unit within the context of the whole unit. For ownership shares, at any one point in time the sum of the shares should be 100%.")]
         public cs_productVolumeBusinessSubUnit[] subUnit {
             get {
@@ -18565,7 +19038,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -18578,7 +19051,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -18694,6 +19167,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Human recognizable context for the Product Volume Report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the Product Volume Report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct name {
             get {
                 return this.nameField;
@@ -18707,6 +19181,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this report.  The name can be qu" +
             "alified by a naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -18718,7 +19193,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.Xml.Serialization.XmlElementAttribute("contextFacility", DataType="facilityIdentifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         public facilityIdentifierStruct[] contextFacility {
@@ -18734,6 +19209,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of report.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string kind {
             get {
                 return this.kindField;
@@ -18747,6 +19223,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of period that is being reported. This value must be consistent with the reporting start and end values.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of period that is being reported. This value must be consistent with the" +
             " reporting start and end values.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingPeriod")]
         public ReportingPeriod periodKind {
             get {
                 return this.periodKindField;
@@ -18798,6 +19275,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The minimum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The minimum time index contained within the report. For the purposes of this parameter, a ""period"" or ""facility parameter"" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -18810,6 +19288,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The maximum time index contained within the report. For the purposes of this parameter, a ""period"" or ""facility parameter"" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -18822,6 +19301,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring "period" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a "period" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring ""period"" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a ""period"" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimCurrent {
             get {
                 return this.dTimCurrentField;
@@ -18845,6 +19325,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The calculation method for for "filling in" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set.  This is not to be construed as to prevent concepts such as simulation  and forcasting from being applied in order to create a new set. This is a server query parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The calculation method for for ""filling in"" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set.  This is not to be construed as to prevent concepts such as simulation  and forcasting from being applied in order to create a new set. This is a server query parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="CalculationMethod")]
         public CalculationMethod calculationMethod {
             get {
                 return this.calculationMethodField;
@@ -18868,6 +19349,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The operator of the facilities in the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The operator of the facilities in the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate @operator {
             get {
                 return this.operatorField;
@@ -18880,6 +19362,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The tile of the report if different from the name of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The tile of the report if different from the name of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct title {
             get {
                 return this.titleField;
@@ -18892,6 +19375,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The geographic context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The geographic context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_geographicContext")]
         public cs_geographicContext geographicContext {
             get {
                 return this.geographicContextField;
@@ -18929,6 +19413,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or company that issued the report. This may contain the role of the person or company within the context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The person or company that issued the report. This may contain the role of the pe" +
             "rson or company within the context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate issuedBy {
             get {
                 return this.issuedByField;
@@ -18966,6 +19451,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or company that approved the report. This may contain the role of the person or company within the context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The person or company that approved the report. This may contain the role of the " +
             "person or company within the context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate approver {
             get {
                 return this.approverField;
@@ -18979,6 +19465,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Product Flow Model for the overall installation. This model represents all Product Flow Units referenced within this report.</summary>
         [System.ComponentModel.DescriptionAttribute("The Product Flow Model for the overall installation. This model represents all Pr" +
             "oduct Flow Units referenced within this report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString productFlowModel {
             get {
                 return this.productFlowModelField;
@@ -18991,6 +19478,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions  (i.e., uncorrected) unless otherwise specified at a local level.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions  (i.e., uncorrected) unless otherwise specified at a local level.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="StandardCondition")]
         public StandardCondition standardTempPres {
             get {
                 return this.standardTempPresField;
@@ -19013,7 +19501,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A business unit and related account or ownership share information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("businessUnit")]
+        [System.Xml.Serialization.XmlElementAttribute("businessUnit", DataType="cs_productVolumeBusinessUnit")]
         [System.ComponentModel.DescriptionAttribute("A business unit and related account or ownership share information.")]
         public cs_productVolumeBusinessUnit[] businessUnit {
             get {
@@ -19026,7 +19514,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A facility for which product information is being reported.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("facility")]
+        [System.Xml.Serialization.XmlElementAttribute("facility", DataType="cs_productVolumeFacility")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A facility for which product information is being reported.")]
         public cs_productVolumeFacility[] facility {
@@ -19041,6 +19529,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -19053,6 +19542,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -19064,7 +19554,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -19154,6 +19644,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the business associate.  This can be the name of a person, business, " +
             "group, etc.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -19165,7 +19656,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The role of the business associate within the  context. For example, "driller" or "operator",  "lead agency - CEQA compliance" "regulatory contact", "safety contact".  A business associate will generally have one role but the role may be called different things in different naming systems.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("role")]
+        [System.Xml.Serialization.XmlElementAttribute("role", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute(@"The role of the business associate within the  context. For example, ""driller"" or ""operator"",  ""lead agency - CEQA compliance"" ""regulatory contact"", ""safety contact"".  A business associate will generally have one role but the role may be called different things in different naming systems.")]
         public nameStruct[] role {
             get {
@@ -19180,6 +19671,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>If the business associate is a person, this specifies the component names of the person.</summary>
         [System.ComponentModel.DescriptionAttribute("If the business associate is a person, this specifies the component names of the " +
             "person.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_personName")]
         public cs_personName personName {
             get {
                 return this.personNameField;
@@ -19191,7 +19683,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The alias is an alternate name of a  business associate. It is generally associated with a  naming system. An alias is not necessarily unique  within the naming system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("alias")]
+        [System.Xml.Serialization.XmlElementAttribute("alias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("The alias is an alternate name of a  business associate. It is generally associat" +
             "ed with a  naming system. An alias is not necessarily unique  within the naming " +
             "system.")]
@@ -19206,7 +19698,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Note that address may occur more than  once, because it may be necessary to give a physical  address, a mailing address, or both.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("address")]
+        [System.Xml.Serialization.XmlElementAttribute("address", DataType="cs_generalAddress")]
         [System.ComponentModel.DescriptionAttribute("Note that address may occur more than  once, because it may be necessary to give " +
             "a physical  address, a mailing address, or both.")]
         public cs_generalAddress[] address {
@@ -19220,7 +19712,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The various types of phone numbers may  be given. The may be office or home, they may be a  number for a cell phone, or for a fax, etc. Attributes  of PhoneNumber declare the type of phone number that is  being given.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("phoneNumber")]
+        [System.Xml.Serialization.XmlElementAttribute("phoneNumber", DataType="phoneNumberStruct")]
         [System.ComponentModel.DescriptionAttribute("The various types of phone numbers may  be given. The may be office or home, they" +
             " may be a  number for a cell phone, or for a fax, etc. Attributes  of PhoneNumbe" +
             "r declare the type of phone number that is  being given.")]
@@ -19235,7 +19727,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The email address may be home, office,  or permanent. More than one may be given.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("email")]
+        [System.Xml.Serialization.XmlElementAttribute("email", DataType="emailQualifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The email address may be home, office,  or permanent. More than one may be given." +
             "")]
         public emailQualifierStruct[] email {
@@ -19249,7 +19741,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The preferred method of being contacted within the context of this role.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contactPreference")]
+        [System.Xml.Serialization.XmlElementAttribute("contactPreference", DataType="ContactPreference")]
         [System.ComponentModel.DescriptionAttribute("The preferred method of being contacted within the context of this role.")]
         public ContactPreference[] contactPreference {
             get {
@@ -19266,6 +19758,7 @@ namespace Energistics.Generator.PRODML122 {
             "ed with. The most common situation is that  of an employee being associated with" +
             " a company. But it may also be, for  example, a work group associated with a uni" +
             "versity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString associatedWith {
             get {
                 return this.associatedWithField;
@@ -19277,7 +19770,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A pointer to a business associate  (generally a person) who serves as a contact for this  business associate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contact")]
+        [System.Xml.Serialization.XmlElementAttribute("contact", DataType="refNameString")]
         [System.ComponentModel.DescriptionAttribute("A pointer to a business associate  (generally a person) who serves as a contact f" +
             "or this  business associate.")]
         public refNameString[] contact {
@@ -19292,6 +19785,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The count of the number of personnel in a group.</summary>
         [System.ComponentModel.DescriptionAttribute("The count of the number of personnel in a group.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short personnelCount {
             get {
                 return this.personnelCountField;
@@ -19317,6 +19811,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment. This should not  be used to carry semantic information. This i" +
             "s not  intended to be machine interpretable.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -19348,6 +19843,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A name prefix. Such as, Dr, Ms, Miss, Mr, etc.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name prefix. Such as, Dr, Ms, Miss, Mr, etc.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string prefix {
             get {
                 return this.prefixField;
@@ -19362,6 +19858,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The persons first name.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string first {
             get {
                 return this.firstField;
@@ -19375,6 +19872,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The persons middle name or initial name.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The persons middle name or initial name.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string middle {
             get {
                 return this.middleField;
@@ -19389,6 +19887,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The persons last or given name.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string last {
             get {
                 return this.lastField;
@@ -19400,7 +19899,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A name suffix. Such as Esq, Phd, etc.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("suffix")]
+        [System.Xml.Serialization.XmlElementAttribute("suffix", DataType="nameString")]
         [System.ComponentModel.DescriptionAttribute("A name suffix. Such as Esq, Phd, etc.")]
         public string[] suffix {
             get {
@@ -19446,6 +19945,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The Name line of an address.  If missing, use the Name of the business associate." +
             "")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -19457,7 +19957,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the "name" and "city" lines. This may be repeated  for up to four, ordered lines.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("street")]
+        [System.Xml.Serialization.XmlElementAttribute("street", DataType="nameString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Street is a generic term for the  middle lines of an address. They may be a s" +
             "treet address, PO Box, Suite number, or any lines that come  between the \"name\" " +
@@ -19476,6 +19976,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The City for the business associate\'s  address")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string city {
             get {
                 return this.cityField;
@@ -19486,9 +19987,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("county", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("province", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("state", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("county", typeof(string), DataType="nameString")]
+        [System.Xml.Serialization.XmlElementAttribute("province", typeof(string), DataType="nameString")]
+        [System.Xml.Serialization.XmlElementAttribute("state", typeof(string), DataType="nameString")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public string Item {
             get {
@@ -19515,6 +20016,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The Country may be included. Although  this is optional, it is probably required " +
             "for most uses.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string country {
             get {
                 return this.countryField;
@@ -19529,6 +20031,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A postal code, if appropriate for the country.  In the USA this would be the five" +
             " or nine digit zip code.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string postalCode {
             get {
                 return this.postalCodeField;
@@ -19540,7 +20043,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -19553,7 +20056,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of address: mailing, physical, or both.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="AddressKindEnum")]
         [System.ComponentModel.DescriptionAttribute("The type of address: mailing, physical, or both.")]
         public AddressKindEnum kind {
             get {
@@ -19577,7 +20080,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -19643,7 +20146,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The kind of phone such as voice or fax.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="PhoneType")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of phone such as voice or fax.")]
         public PhoneType type {
@@ -19657,7 +20160,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Indicates whether the number  is personal, business or both.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="AddressQualifier")]
         [System.ComponentModel.DescriptionAttribute("Indicates whether the number  is personal, business or both.")]
         public AddressQualifier qualifier {
             get {
@@ -19681,7 +20184,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The phone number extension.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="kindString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The phone number extension.")]
         public string extension {
@@ -19766,7 +20269,7 @@ namespace Energistics.Generator.PRODML122 {
         private string valueField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="AddressQualifier")]
         public AddressQualifier qualifier {
             get {
                 return this.qualifierField;
@@ -19872,6 +20375,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the country.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the country.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string country {
             get {
                 return this.countryField;
@@ -19885,6 +20389,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The state of province within the country.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The state of province within the country.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string state {
             get {
                 return this.stateField;
@@ -19897,6 +20402,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the field within whose context the report exists.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the field within whose context the report exists.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct field {
             get {
                 return this.fieldField;
@@ -19909,6 +20415,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>An offshore context.</summary>
         [System.ComponentModel.DescriptionAttribute("An offshore context.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_offshoreLocation")]
         public cs_offshoreLocation offshoreLocation {
             get {
                 return this.offshoreLocationField;
@@ -19922,6 +20429,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An general comment that further explains the  offshore location.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An general comment that further explains the  offshore location.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -19952,6 +20460,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A general meaning of Area. It may be as  general as \'UK North Sea\' or \'Viosca Kno" +
             "ll\'. The user community must agree on the meaning of this element.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string areaName {
             get {
                 return this.areaNameField;
@@ -19963,7 +20472,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("blockID")]
+        [System.Xml.Serialization.XmlElementAttribute("blockID", DataType="nameString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
         public string[] blockID {
@@ -19979,6 +20488,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An offshore location using the North Sea Offshore  terminology.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("An offshore location using the North Sea Offshore  terminology.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_northSeaOffshore")]
         public cs_northSeaOffshore northSeaOffshore {
             get {
                 return this.northSeaOffshoreField;
@@ -19992,6 +20502,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An general comment that further explains the  offshore location.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An general comment that further explains the  offshore location.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -20020,6 +20531,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An optional, uncontrolled value, which may be  used to describe the general area " +
             "of offshore North Sea in which the  point is located.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string areaName {
             get {
                 return this.areaNameField;
@@ -20034,6 +20546,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The number or letter of the quadrant in  the North Sea.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string quadrant {
             get {
                 return this.quadrantField;
@@ -20047,6 +20560,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A lower case letter assigned if a block is subdivided.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2)]
         [System.ComponentModel.DescriptionAttribute("A lower case letter assigned if a block is subdivided.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str2")]
         public string blockSuffix {
             get {
                 return this.blockSuffixField;
@@ -20085,6 +20599,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The kind of operation</summary>
         [System.ComponentModel.DescriptionAttribute("The kind of operation")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="OperationKind")]
         public OperationKind type {
             get {
                 return this.typeField;
@@ -20108,6 +20623,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The beginning date and time that the comment represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The beginning date and time that the comment represents.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -20131,6 +20647,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The ending date and time that the comment represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The ending date and time that the comment represents.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -20153,7 +20670,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about the operation and/or the activities  within the operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="commentString")]
         [System.ComponentModel.DescriptionAttribute("A comment about the operation and/or the activities  within the operation.")]
         public string[] comment {
             get {
@@ -20166,7 +20683,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -20179,7 +20696,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -20283,6 +20800,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Name of the cargo vessel for the installation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the cargo vessel for the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string vesselName {
             get {
                 return this.vesselNameField;
@@ -20295,6 +20813,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the vessel arrived.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the vessel arrived.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -20318,6 +20837,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the vessel left.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the vessel left.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -20342,6 +20862,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Name of the captain of the vessel.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of the captain of the vessel.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string captain {
             get {
                 return this.captainField;
@@ -20355,6 +20876,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>the cargo identifier.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("the cargo identifier.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string cargoNumber {
             get {
                 return this.cargoNumberField;
@@ -20368,6 +20890,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The cargo batch number. Used if the vessel needs to temporarily  disconnect for some reason (e.g., weather).</summary>
         [System.ComponentModel.DescriptionAttribute("The cargo batch number. Used if the vessel needs to temporarily  disconnect for s" +
             "ome reason (e.g., weather).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short cargoBatchNumber {
             get {
                 return this.cargoBatchNumberField;
@@ -20392,6 +20915,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Description of cargo on the vessel.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("Description of cargo on the vessel.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string cargo {
             get {
                 return this.cargoField;
@@ -20406,6 +20930,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Gross oil loaded to the ship during the report period. Gross oil includes BS and " +
             "W. This volume has been corrected to standard conditions of temperature and pres" +
             "sure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure oilGrossStdTempPres {
             get {
                 return this.oilGrossStdTempPresField;
@@ -20420,6 +20945,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Gross oil loaded to the ship in total during the operation. Gross oil includes BS" +
             " and W. This volume has been corrected to standard conditions of temperature and" +
             " pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure oilGrossTotalStdTempPres {
             get {
                 return this.oilGrossTotalStdTempPresField;
@@ -20434,6 +20960,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Net oil loaded to the ship during the report period. Net oil excludes BS and W, f" +
             "uel, spill and leaks. This volume has been corrected to standard conditions of t" +
             "emperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure oilNetStdTempPres {
             get {
                 return this.oilNetStdTempPresField;
@@ -20448,6 +20975,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Net oil loaded to the ship from the beginning of the  month to the end of the rep" +
             "orting period. Net oil excludes BS and W, fuel, spill and leaks. This volume has" +
             " been corrected to standard conditions of temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure oilNetMonthToDateStdTempPres {
             get {
                 return this.oilNetMonthToDateStdTempPresField;
@@ -20461,6 +20989,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Density of the liquid loaded to the tanker. This density has been corrected to standard conditions of temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("Density of the liquid loaded to the tanker. This density has been corrected to st" +
             "andard conditions of temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure densityStdTempPres {
             get {
                 return this.densityStdTempPresField;
@@ -20473,6 +21002,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Density of the liquid loaded to the tanker.</summary>
         [System.ComponentModel.DescriptionAttribute("Density of the liquid loaded to the tanker.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -20485,6 +21015,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of the liquid.</summary>
         [System.ComponentModel.DescriptionAttribute("Reid vapor pressure of the liquid.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvp {
             get {
                 return this.rvpField;
@@ -20499,6 +21030,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Basic sediment and water is measured from a liquid sample  of the production stre" +
             "am. It includes free water, sediment and emulsion and  is measured as a volume p" +
             "ercentage of the liquid.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure bsw {
             get {
                 return this.bswField;
@@ -20512,6 +21044,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Salt content. The product formed by neutralization of an acid  and a base. The term is more specifically applied to sodium chloride.</summary>
         [System.ComponentModel.DescriptionAttribute("Salt content. The product formed by neutralization of an acid  and a base. The te" +
             "rm is more specifically applied to sodium chloride.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure salt {
             get {
                 return this.saltField;
@@ -20523,7 +21056,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A commnet about the operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A commnet about the operation.")]
         public cs_datedComment[] comment {
             get {
@@ -20536,7 +21069,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -20549,7 +21082,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -20599,6 +21132,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The beginning date and time that the information represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The beginning date and time that the information represents.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -20622,6 +21156,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The ending date and time that the comment represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The ending date and time that the comment represents.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -20646,6 +21181,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A general comment on marine activity in the area</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment on marine activity in the area")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string generalComment {
             get {
                 return this.generalCommentField;
@@ -20659,6 +21195,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Name of supply vessel for the installation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of supply vessel for the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string supplyShip {
             get {
                 return this.supplyShipField;
@@ -20672,6 +21209,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Name of standby vessel for the installation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Name of standby vessel for the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string standbyVessel {
             get {
                 return this.standbyVesselField;
@@ -20683,7 +21221,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Comment regarding the supply ship.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("supplyShipComment")]
+        [System.Xml.Serialization.XmlElementAttribute("supplyShipComment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("Comment regarding the supply ship.")]
         public cs_datedComment[] supplyShipComment {
             get {
@@ -20696,7 +21234,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Comment regarding the standby vessel.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("standbyVesselComment")]
+        [System.Xml.Serialization.XmlElementAttribute("standbyVesselComment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("Comment regarding the standby vessel.")]
         public cs_datedComment[] standbyVesselComment {
             get {
@@ -20709,7 +21247,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Report of any basket movement to and from the installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("basketMovement")]
+        [System.Xml.Serialization.XmlElementAttribute("basketMovement", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("Report of any basket movement to and from the installation.")]
         public cs_datedComment[] basketMovement {
             get {
@@ -20722,7 +21260,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment on a special event in the marine area.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("activity")]
+        [System.Xml.Serialization.XmlElementAttribute("activity", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A comment on a special event in the marine area.")]
         public cs_datedComment[] activity {
             get {
@@ -20735,7 +21273,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -20748,7 +21286,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -20788,6 +21326,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the alarms went off.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the alarms went off.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -20812,6 +21351,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The area where the alarm went off.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The area where the alarm went off.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string area {
             get {
                 return this.areaField;
@@ -20825,6 +21365,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of alarm that went off.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of alarm that went off.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string type {
             get {
                 return this.typeField;
@@ -20838,6 +21379,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The reason for the alarm going off.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("The reason for the alarm going off.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string reason {
             get {
                 return this.reasonField;
@@ -20851,6 +21393,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A general comment relevant for the alarm.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment relevant for the alarm.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -20862,7 +21405,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -20875,7 +21418,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -20924,6 +21467,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the installation which was shut down.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the installation which was shut down.  The name can be qualified by a" +
             " naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -20938,6 +21482,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("A general description of the shutdown with reason and  other relevant information" +
             ".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -20950,6 +21495,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time the shutdown started.</summary>
         [System.ComponentModel.DescriptionAttribute("The time the shutdown started.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -20973,6 +21519,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time the shutdown ended.</summary>
         [System.ComponentModel.DescriptionAttribute("The time the shutdown ended.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -20996,6 +21543,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Downtime when the installation is unable to produce 100% of its capability.</summary>
         [System.ComponentModel.DescriptionAttribute("Downtime when the installation is unable to produce 100% of its capability.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure volumetricDownTime {
             get {
                 return this.volumetricDownTimeField;
@@ -21009,6 +21557,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Estimated loss of oil deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("Estimated loss of oil deliveries because of the shutdown. This volume has been co" +
             "rrected to standard conditions of temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure lossOilStdTempPres {
             get {
                 return this.lossOilStdTempPresField;
@@ -21022,6 +21571,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Estimated loss of gas deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("Estimated loss of gas deliveries because of the shutdown. This volume has been co" +
             "rrected to standard conditions of temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure lossGasStdTempPres {
             get {
                 return this.lossGasStdTempPresField;
@@ -21033,7 +21583,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A description of main activities from time to time during the shutdown period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("activity")]
+        [System.Xml.Serialization.XmlElementAttribute("activity", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("A description of main activities from time to time during the shutdown period.")]
         public cs_datedComment[] activity {
             get {
@@ -21046,7 +21596,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -21059,7 +21609,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -21121,6 +21671,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identifier of the point from which the sample was taken.  This is an uncontrol" +
             "led string value, which should be as descriptive as possible.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string samplePoint {
             get {
                 return this.samplePointField;
@@ -21134,6 +21685,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Total measured oil in the water after the water cleaning process,  but before it is discharged from the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Total measured oil in the water after the water cleaning process,  but before it " +
             "is discharged from the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure oilInWaterProduced {
             get {
                 return this.oilInWaterProducedField;
@@ -21147,6 +21699,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Total measured oil in the water after the water cleaning process,  but before it is discharged from the installation</summary>
         [System.ComponentModel.DescriptionAttribute("Total measured oil in the water after the water cleaning process,  but before it " +
             "is discharged from the installation")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massMeasure")]
         public massMeasure amountOfOil {
             get {
                 return this.amountOfOilField;
@@ -21159,6 +21712,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The amount of ammonium found in the water sample.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of ammonium found in the water sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure ammonium {
             get {
                 return this.ammoniumField;
@@ -21172,6 +21726,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The amount of total organic carbon found in the water.  The water is under high temperature and the carbon left is measured</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of total organic carbon found in the water.  The water is under high t" +
             "emperature and the carbon left is measured")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure totalOrganicCarbon {
             get {
                 return this.totalOrganicCarbonField;
@@ -21184,6 +21739,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The amount of Fenol found in the water sample.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of Fenol found in the water sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure phenol {
             get {
                 return this.phenolField;
@@ -21196,6 +21752,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The amount of Glycol found in the water sample.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of Glycol found in the water sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure glycol {
             get {
                 return this.glycolField;
@@ -21209,6 +21766,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The pH value of the treated water.  The pH value is best given as a value, with no unit of measure,  since there are no variations from the pH.</summary>
         [System.ComponentModel.DescriptionAttribute("The pH value of the treated water.  The pH value is best given as a value, with n" +
             "o unit of measure,  since there are no variations from the pH.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double phValue {
             get {
                 return this.phValueField;
@@ -21232,6 +21790,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature of the water before it is discharged.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature of the water before it is discharged.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure waterTemperature {
             get {
                 return this.waterTemperatureField;
@@ -21245,6 +21804,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Total measured residual clorines in the water after the  water cleaning process, but before it is discharged from the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Total measured residual clorines in the water after the  water cleaning process, " +
             "but before it is discharged from the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure residualChloride {
             get {
                 return this.residualChlorideField;
@@ -21258,6 +21818,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Total measured Oxygen in the water after the water cleaning  process, but before it is discharged from the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Total measured Oxygen in the water after the water cleaning  process, but before " +
             "it is discharged from the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure oxygen {
             get {
                 return this.oxygenField;
@@ -21270,6 +21831,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A measure of the cloudiness of water caused by suspended particles.</summary>
         [System.ComponentModel.DescriptionAttribute("A measure of the cloudiness of water caused by suspended particles.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double turbidity {
             get {
                 return this.turbidityField;
@@ -21293,6 +21855,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A measure of the number of particles in water as measured by a coulter counter.</summary>
         [System.ComponentModel.DescriptionAttribute("A measure of the number of particles in water as measured by a coulter counter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure coulterCounter {
             get {
                 return this.coulterCounterField;
@@ -21304,7 +21867,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Any comment that may be useful in describing the water quality.  There can be multiple comments.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("Any comment that may be useful in describing the water quality.  There can be mul" +
             "tiple comments.")]
         public cs_datedComment[] comment {
@@ -21318,7 +21881,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -21331,7 +21894,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -21366,6 +21929,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the installation which performed the processing.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the installation which performed the processing.  The name can be qua" +
             "lified by a naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -21379,6 +21943,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The estimated amount of oil lost. This volume has been corrected to standard conditions of temperature and pressure</summary>
         [System.ComponentModel.DescriptionAttribute("The estimated amount of oil lost. This volume has been corrected to standard cond" +
             "itions of temperature and pressure")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure oilStdTempPres {
             get {
                 return this.oilStdTempPresField;
@@ -21392,6 +21957,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The estimated amount of gas lost. This volume has been corrected to standard conditions of temperature and pressure</summary>
         [System.ComponentModel.DescriptionAttribute("The estimated amount of gas lost. This volume has been corrected to standard cond" +
             "itions of temperature and pressure")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure gasStdTempPres {
             get {
                 return this.gasStdTempPresField;
@@ -21403,7 +21969,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -21416,7 +21982,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -21443,7 +22009,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A estimated lost volume and the reason for the loss.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("volumeAndReason")]
+        [System.Xml.Serialization.XmlElementAttribute("volumeAndReason", DataType="lostVolumeAndReason")]
         [System.ComponentModel.DescriptionAttribute("A estimated lost volume and the reason for the loss.")]
         public lostVolumeAndReason[] volumeAndReason {
             get {
@@ -21456,7 +22022,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The estimated amount of oil and gas lost due to  third party processing at an installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("thirdPartyProcessing")]
+        [System.Xml.Serialization.XmlElementAttribute("thirdPartyProcessing", DataType="cs_productionOperationThirdPartyProcessing")]
         [System.ComponentModel.DescriptionAttribute("The estimated amount of oil and gas lost due to  third party processing at an ins" +
             "tallation.")]
         public cs_productionOperationThirdPartyProcessing[] thirdPartyProcessing {
@@ -21495,6 +22061,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Infomation about a lost production.</summary>
         [System.ComponentModel.DescriptionAttribute("Infomation about a lost production.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productionOperationLostProduction")]
         public cs_productionOperationLostProduction lostProduction {
             get {
                 return this.lostProductionField;
@@ -21507,6 +22074,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Infomation about a lost injection.</summary>
         [System.ComponentModel.DescriptionAttribute("Infomation about a lost injection.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productionOperationLostProduction")]
         public cs_productionOperationLostProduction lostInjection {
             get {
                 return this.lostInjectionField;
@@ -21518,7 +22086,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about the contaminants in water, and the general water quality.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("waterCleaningQuality")]
+        [System.Xml.Serialization.XmlElementAttribute("waterCleaningQuality", DataType="cs_productionOperationWaterCleaningQuality")]
         [System.ComponentModel.DescriptionAttribute("Information about the contaminants in water, and the general water quality.")]
         public cs_productionOperationWaterCleaningQuality[] waterCleaningQuality {
             get {
@@ -21531,7 +22099,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Infomation about a shutdown event.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("shutdown")]
+        [System.Xml.Serialization.XmlElementAttribute("shutdown", DataType="cs_productionOperationShutdown")]
         [System.ComponentModel.DescriptionAttribute("Infomation about a shutdown event.")]
         public cs_productionOperationShutdown[] shutdown {
             get {
@@ -21544,7 +22112,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Infomation about an alarm.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("alarm")]
+        [System.Xml.Serialization.XmlElementAttribute("alarm", DataType="cs_productionOperationAlarm")]
         [System.ComponentModel.DescriptionAttribute("Infomation about an alarm.")]
         public cs_productionOperationAlarm[] alarm {
             get {
@@ -21557,7 +22125,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a marine operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("marineOperation")]
+        [System.Xml.Serialization.XmlElementAttribute("marineOperation", DataType="cs_productionOperationMarineOperation")]
         [System.ComponentModel.DescriptionAttribute("Information about a marine operation.")]
         public cs_productionOperationMarineOperation[] marineOperation {
             get {
@@ -21570,7 +22138,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a cargo operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("cargoShipOperation")]
+        [System.Xml.Serialization.XmlElementAttribute("cargoShipOperation", DataType="cs_productionOperationCargoShipOperation")]
         [System.ComponentModel.DescriptionAttribute("Information about a cargo operation.")]
         public cs_productionOperationCargoShipOperation[] cargoShipOperation {
             get {
@@ -21583,7 +22151,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A comment about a kind of operation. The time of the operation can be specified.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("operationalComment")]
+        [System.Xml.Serialization.XmlElementAttribute("operationalComment", DataType="cs_productionOperationOperationalComment")]
         [System.ComponentModel.DescriptionAttribute("A comment about a kind of operation. The time of the operation can be specified.")]
         public cs_productionOperationOperationalComment[] operationalComment {
             get {
@@ -21660,6 +22228,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -21673,6 +22242,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Name of company that supplied the data.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Name of company that supplied the data.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string agency {
             get {
                 return this.agencyField;
@@ -21685,6 +22255,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Atmospheric pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("Atmospheric pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure barometricPressure {
             get {
                 return this.barometricPressureField;
@@ -21698,6 +22269,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The Beaufort wind scale is a system used to estimate and report wind speeds  when no measuring apparatus is available. It was invented in the early 19th Century by Admiral  Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions.</summary>
         [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 12D)]
         [System.ComponentModel.DescriptionAttribute(@"The Beaufort wind scale is a system used to estimate and report wind speeds  when no measuring apparatus is available. It was invented in the early 19th Century by Admiral  Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="beaufortScaleIntegerCode")]
         public short beaufortScaleNumber {
             get {
                 return this.beaufortScaleNumberField;
@@ -21721,6 +22293,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Average temperature above ground for the period. Temperature of the atmosphere.</summary>
         [System.ComponentModel.DescriptionAttribute("Average temperature above ground for the period. Temperature of the atmosphere.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure tempSurface {
             get {
                 return this.tempSurfaceField;
@@ -21733,6 +22306,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Minimum temperature above ground. Temperature of the atmosphere.</summary>
         [System.ComponentModel.DescriptionAttribute("Minimum temperature above ground. Temperature of the atmosphere.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure tempSurfaceMn {
             get {
                 return this.tempSurfaceMnField;
@@ -21745,6 +22319,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Maximum temperature above ground.</summary>
         [System.ComponentModel.DescriptionAttribute("Maximum temperature above ground.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure tempSurfaceMx {
             get {
                 return this.tempSurfaceMxField;
@@ -21760,6 +22335,7 @@ namespace Energistics.Generator.PRODML122 {
             "things, also named chill factor, e.g., according to US weather service table, an" +
             " air  temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 deg" +
             "F.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure tempWindChill {
             get {
                 return this.tempWindChillField;
@@ -21772,6 +22348,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Sea temperature.</summary>
         [System.ComponentModel.DescriptionAttribute("Sea temperature.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure tempsea {
             get {
                 return this.tempseaField;
@@ -21784,6 +22361,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Horizontal visibility.</summary>
         [System.ComponentModel.DescriptionAttribute("Horizontal visibility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure visibility {
             get {
                 return this.visibilityField;
@@ -21796,6 +22374,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The direction from which the waves are coming, measured from true north.</summary>
         [System.ComponentModel.DescriptionAttribute("The direction from which the waves are coming, measured from true north.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="planeAngleMeasure")]
         public planeAngleMeasure aziWave {
             get {
                 return this.aziWaveField;
@@ -21808,6 +22387,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Average height of the waves.</summary>
         [System.ComponentModel.DescriptionAttribute("Average height of the waves.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure htWave {
             get {
                 return this.htWaveField;
@@ -21821,6 +22401,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An average of the higher 1/3 of the wave heights passing during a   sample period (typically 20 to 30 minutes).</summary>
         [System.ComponentModel.DescriptionAttribute("An average of the higher 1/3 of the wave heights passing during a   sample period" +
             " (typically 20 to 30 minutes).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure significantWave {
             get {
                 return this.significantWaveField;
@@ -21833,6 +22414,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum wave height.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum wave height.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure maxWave {
             get {
                 return this.maxWaveField;
@@ -21845,6 +22427,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The elapsed time between the passing of two wave tops.</summary>
         [System.ComponentModel.DescriptionAttribute("The elapsed time between the passing of two wave tops.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure periodWave {
             get {
                 return this.periodWaveField;
@@ -21857,6 +22440,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The direction from which the wind is blowing, measured from true north.</summary>
         [System.ComponentModel.DescriptionAttribute("The direction from which the wind is blowing, measured from true north.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="planeAngleMeasure")]
         public planeAngleMeasure aziWind {
             get {
                 return this.aziWindField;
@@ -21869,6 +22453,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Wind speed.</summary>
         [System.ComponentModel.DescriptionAttribute("Wind speed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="velocityMeasure")]
         public velocityMeasure velWind {
             get {
                 return this.velWindField;
@@ -21882,6 +22467,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Type of precipitation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Type of precipitation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string typePrecip {
             get {
                 return this.typePrecipField;
@@ -21894,6 +22480,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Amount of precipitation.</summary>
         [System.ComponentModel.DescriptionAttribute("Amount of precipitation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure amtPrecip {
             get {
                 return this.amtPrecipField;
@@ -21907,6 +22494,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Description of cloud cover.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("Description of cloud cover.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="str32")]
         public string coverCloud {
             get {
                 return this.coverCloudField;
@@ -21919,6 +22507,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Height of cloud cover.</summary>
         [System.ComponentModel.DescriptionAttribute("Height of cloud cover.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure ceilingCloud {
             get {
                 return this.ceilingCloudField;
@@ -21931,6 +22520,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Current speed.</summary>
         [System.ComponentModel.DescriptionAttribute("Current speed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="velocityMeasure")]
         public velocityMeasure currentSea {
             get {
                 return this.currentSeaField;
@@ -21943,6 +22533,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Azimuth of current.</summary>
         [System.ComponentModel.DescriptionAttribute("Azimuth of current.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="planeAngleMeasure")]
         public planeAngleMeasure aziCurrentSea {
             get {
                 return this.aziCurrentSeaField;
@@ -21956,6 +22547,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Comments and remarks.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Comments and remarks.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comments {
             get {
                 return this.commentsField;
@@ -21967,7 +22559,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -21980,7 +22572,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -22013,7 +22605,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of safety issue for which a count is being defined.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="SafetyType")]
         [System.ComponentModel.DescriptionAttribute("The type of safety issue for which a count is being defined.")]
         public SafetyType type {
             get {
@@ -22037,7 +22629,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of period being reported by this count.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ReportingPeriod")]
         [System.ComponentModel.DescriptionAttribute("The type of period being reported by this count.")]
         public ReportingPeriod period {
             get {
@@ -22182,6 +22774,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The mean time between safety incidents.</summary>
         [System.ComponentModel.DescriptionAttribute("The mean time between safety incidents.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure meantimeIncident {
             get {
                 return this.meantimeIncidentField;
@@ -22193,7 +22786,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The count of a type of safety issue.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("safetyCount")]
+        [System.Xml.Serialization.XmlElementAttribute("safetyCount", DataType="safetyCount")]
         [System.ComponentModel.DescriptionAttribute("The count of a type of safety issue.")]
         public safetyCount[] safetyCount {
             get {
@@ -22206,7 +22799,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Safety related comment.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("comment")]
+        [System.Xml.Serialization.XmlElementAttribute("comment", DataType="cs_datedComment")]
         [System.ComponentModel.DescriptionAttribute("Safety related comment.")]
         public cs_datedComment[] comment {
             get {
@@ -22219,7 +22812,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -22232,7 +22825,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -22288,6 +22881,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>the number of incidents of accidents and injuries that were reported.</summary>
         [System.ComponentModel.DescriptionAttribute("the number of incidents of accidents and injuries that were reported.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short IncidentCount {
             get {
                 return this.incidentCountField;
@@ -22311,6 +22905,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The amount of time since the most recent Lost Time Accident.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of time since the most recent Lost Time Accident.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure sinceLostTime {
             get {
                 return this.sinceLostTimeField;
@@ -22323,6 +22918,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The amount of time since the most recent accident prevention exercise.</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of time since the most recent accident prevention exercise.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure sincePreventionExercise {
             get {
                 return this.sincePreventionExerciseField;
@@ -22336,6 +22932,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The amount of time since the most recent defined hazard and accident situation (Norwegian DFU).</summary>
         [System.ComponentModel.DescriptionAttribute("The amount of time since the most recent defined hazard and accident situation (N" +
             "orwegian DFU).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure sinceDefinedSituation {
             get {
                 return this.sinceDefinedSituationField;
@@ -22348,6 +22945,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The number of medical treatments that have occurred.</summary>
         [System.ComponentModel.DescriptionAttribute("The number of medical treatments that have occurred.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short medicalTreatmentCount {
             get {
                 return this.medicalTreatmentCountField;
@@ -22371,6 +22969,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The number of system alarms that have occurred.</summary>
         [System.ComponentModel.DescriptionAttribute("The number of system alarms that have occurred.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short alarmCount {
             get {
                 return this.alarmCountField;
@@ -22394,6 +22993,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The number of personnel safety introductions that have occurred.</summary>
         [System.ComponentModel.DescriptionAttribute("The number of personnel safety introductions that have occurred.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short safetyIntroCount {
             get {
                 return this.safetyIntroCountField;
@@ -22418,6 +23018,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual description of safety considerations.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of safety considerations.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string safetyDescription {
             get {
                 return this.safetyDescriptionField;
@@ -22429,7 +23030,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Safety information at a specific installatino.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("safety")]
+        [System.Xml.Serialization.XmlElementAttribute("safety", DataType="cs_productionOperationSafety")]
         [System.ComponentModel.DescriptionAttribute("Safety information at a specific installatino.")]
         public cs_productionOperationSafety[] safety {
             get {
@@ -22442,7 +23043,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about the weather at a point in time.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("weather")]
+        [System.Xml.Serialization.XmlElementAttribute("weather", DataType="cs_productionOperationWeather")]
         [System.ComponentModel.DescriptionAttribute("Information about the weather at a point in time.")]
         public cs_productionOperationWeather[] weather {
             get {
@@ -22455,7 +23056,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -22468,7 +23069,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -22497,7 +23098,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The type of crew for which a count is being defined.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="CrewType")]
         [System.ComponentModel.DescriptionAttribute("The type of crew for which a count is being defined.")]
         public CrewType type {
             get {
@@ -22604,6 +23205,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The installation represented by this report.</summary>
         [System.ComponentModel.DescriptionAttribute("The installation represented by this report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -22616,6 +23218,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Total count of beds available on the installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Total count of beds available on the installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeCount")]
         public short bedsAvailable {
             get {
                 return this.bedsAvailableField;
@@ -22638,7 +23241,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The count of personnel on a type of crew. One of the types is all personnel on board.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("crewCount")]
+        [System.Xml.Serialization.XmlElementAttribute("crewCount", DataType="crewCount")]
         [System.ComponentModel.DescriptionAttribute("The count of personnel on a type of crew. One of the types is all personnel on bo" +
             "ard.")]
         public crewCount[] crewCount {
@@ -22655,6 +23258,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The total cumulative amount of time worked during the  reporting period.  Commonl" +
             "y specified in units of hours.  Note that a day unit translates to 24 hours work" +
             "ed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure work {
             get {
                 return this.workField;
@@ -22669,6 +23273,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The total cumulative amount of time worked from the beginning of  the month to th" +
             "e end of reporting period.  Commonly specified in units of hours.  Note that a d" +
             "ay unit translates to 24 hours worked.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure workMonthToDate {
             get {
                 return this.workMonthToDateField;
@@ -22683,6 +23288,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The total cumulative amount of time worked from the beginning of  the year to the" +
             " end of reporting period.  Commonly specified in units of hours.  Note that a da" +
             "y unit translates to 24 hours worked.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure workYearToDate {
             get {
                 return this.workYearToDateField;
@@ -22694,7 +23300,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Health, Safety and Environmenal information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("operationalHSE")]
+        [System.Xml.Serialization.XmlElementAttribute("operationalHSE", DataType="cs_productionOperationHSE")]
         [System.ComponentModel.DescriptionAttribute("Health, Safety and Environmenal information.")]
         public cs_productionOperationHSE[] operationalHSE {
             get {
@@ -22708,6 +23314,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Production activities.</summary>
         [System.ComponentModel.DescriptionAttribute("Production activities.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_productionOperationActivity")]
         public cs_productionOperationActivity productionActivity {
             get {
                 return this.productionActivityField;
@@ -22719,7 +23326,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -22732,7 +23339,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -22800,6 +23407,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Human recognizable context for the Production Operation Report.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the Production Operation Report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct name {
             get {
                 return this.nameField;
@@ -22813,6 +23421,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this report.  The name can be qu" +
             "alified by a naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -22824,7 +23433,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.Xml.Serialization.XmlElementAttribute("contextFacility", DataType="facilityIdentifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         public facilityIdentifierStruct[] contextFacility {
@@ -22840,6 +23449,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of report.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string kind {
             get {
                 return this.kindField;
@@ -22853,6 +23463,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of period that is being reported. This value must be consistent with the reporting start and end values.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of period that is being reported. This value must be consistent with the" +
             " reporting start and end values.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingPeriod")]
         public ReportingPeriod periodKind {
             get {
                 return this.periodKindField;
@@ -22903,6 +23514,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The operator of the facilities in the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The operator of the facilities in the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate @operator {
             get {
                 return this.operatorField;
@@ -22915,6 +23527,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The tile of the report if different from the name of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The tile of the report if different from the name of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct title {
             get {
                 return this.titleField;
@@ -22927,6 +23540,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The geographic context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The geographic context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_geographicContext")]
         public cs_geographicContext geographicContext {
             get {
                 return this.geographicContextField;
@@ -22964,6 +23578,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or company that issued the report. This may contain the role of the person or company within the context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The person or company that issued the report. This may contain the role of the pe" +
             "rson or company within the context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate issuedBy {
             get {
                 return this.issuedByField;
@@ -23001,6 +23616,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or company that approved the report. This may contain the role of the person or company within the context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The person or company that approved the report. This may contain the role of the " +
             "person or company within the context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate approver {
             get {
                 return this.approverField;
@@ -23012,7 +23628,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A report for each installation</summary>
-        [System.Xml.Serialization.XmlElementAttribute("installationReport")]
+        [System.Xml.Serialization.XmlElementAttribute("installationReport", DataType="cs_productionOperationInstallationReport")]
         [System.ComponentModel.DescriptionAttribute("A report for each installation")]
         public cs_productionOperationInstallationReport[] installationReport {
             get {
@@ -23026,6 +23642,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -23038,6 +23655,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -23049,7 +23667,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -23105,6 +23723,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name assigned to the plan.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -23118,6 +23737,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -23131,6 +23751,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual description of the purpose of the plan.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the purpose of the plan.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string purpose {
             get {
                 return this.purposeField;
@@ -23142,7 +23763,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Documents that a change occurred at a particular time.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("changeLog")]
+        [System.Xml.Serialization.XmlElementAttribute("changeLog", DataType="cs_productFlowChangeLog")]
         [System.ComponentModel.DescriptionAttribute("Documents that a change occurred at a particular time.")]
         public cs_productFlowChangeLog[] changeLog {
             get {
@@ -23155,7 +23776,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -23168,7 +23789,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -23204,6 +23825,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name assigned to the change.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -23217,6 +23839,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The timestamp associated with the change. All changes must use this timestamp.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The timestamp associated with the change. All changes must use this timestamp.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -23230,6 +23853,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual reason for the change.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual reason for the change.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string reason {
             get {
                 return this.reasonField;
@@ -23241,7 +23865,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -23254,7 +23878,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -23303,6 +23927,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The expected kind of property.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The expected kind of property.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProperty")]
         public ReportingProperty property {
             get {
                 return this.propertyField;
@@ -23315,6 +23940,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the sensor was activated on the port.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the sensor was activated on the port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -23338,6 +23964,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the sensor was deactivated on the port.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the sensor was deactivated on the port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -23360,7 +23987,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternative name for the sensor that will measure the property.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("tagAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("tagAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternative name for the sensor that will measure the property.")]
         public nameStruct[] tagAlias {
             get {
@@ -23375,6 +24002,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Difference between two consecutive readings must exceeds deadband value to be accepted</summary>
         [System.ComponentModel.DescriptionAttribute("Difference between two consecutive readings must exceeds deadband value to be acc" +
             "epted")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="generalMeasureType")]
         public generalMeasureType deadband {
             get {
                 return this.deadbandField;
@@ -23388,6 +24016,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The maximum time difference from the last sent event before the next event is sent.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum time difference from the last sent event before the next event is sen" +
             "t.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure maximumFrequency {
             get {
                 return this.maximumFrequencyField;
@@ -23399,7 +24028,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair. The aggregate of expectations on all properties should be a subset of  the aggregate of expectations on the port.  If no expectations are defined on the port then the port aggregate will be defined by the properties.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProduct")]
+        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProduct", DataType="cs_productFlowQualifierExpected")]
         [System.ComponentModel.DescriptionAttribute(@"Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair. The aggregate of expectations on all properties should be a subset of  the aggregate of expectations on the port.  If no expectations are defined on the port then the port aggregate will be defined by the properties.")]
         public cs_productFlowQualifierExpected[] expectedFlowProduct {
             get {
@@ -23414,6 +24043,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark associated with this property.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this property.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -23425,7 +24055,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -23438,7 +24068,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -23597,6 +24227,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The expected kind of flow.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The expected kind of flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingFlow")]
         public ReportingFlow flow {
             get {
                 return this.flowField;
@@ -23609,6 +24240,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The expected kind of product within the flow.</summary>
         [System.ComponentModel.DescriptionAttribute("The expected kind of product within the flow.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportingProduct")]
         public ReportingProduct product {
             get {
                 return this.productField;
@@ -23631,7 +24263,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The expected kind of qualifier of the flow.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("qualifier")]
+        [System.Xml.Serialization.XmlElementAttribute("qualifier", DataType="FlowQualifier")]
         [System.ComponentModel.DescriptionAttribute("The expected kind of qualifier of the flow.")]
         public FlowQualifier[] qualifier {
             get {
@@ -23644,7 +24276,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -23657,7 +24289,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -23701,6 +24333,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one node is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string node {
             get {
                 return this.nodeField;
@@ -23716,6 +24349,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The name of a network plan. This indicates a planned connection. The connected po" +
             "rt must be part of the same plan or be an actual. Not specified indicates an act" +
             "ual connection.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string planName {
             get {
                 return this.planNameField;
@@ -23728,6 +24362,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the connection was activated.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the connection was activated.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -23751,6 +24386,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the connection was terminated.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the connection was terminated.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -23776,6 +24412,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this connection, possibly including a reason" +
             " for termination.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -23787,7 +24424,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -23800,7 +24437,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -23852,6 +24489,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the port within the context of the Product Flow Unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -23867,6 +24505,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The name of a network plan. This indicates a planned port. All child network comp" +
             "onents must all be planned and be part of the same plan. The parent unit must be" +
             " part of the same plan or be an actual. Not specified indicates an actual port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string planName {
             get {
                 return this.planNameField;
@@ -23881,6 +24520,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines whether this port is an inlet or outlet. This is a nominal intended direc" +
             "tion.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ProductFlowPortType")]
         public ProductFlowPortType direction {
             get {
                 return this.directionField;
@@ -23896,6 +24536,7 @@ namespace Energistics.Generator.PRODML122 {
             "alified by a naming system. The facility name is assumed to be unique within the" +
             " context of the facility  represented by the unit.  This also defines the kind o" +
             "f facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facility {
             get {
                 return this.facilityField;
@@ -23907,7 +24548,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name  should also be listed as an alias.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("facilityAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("facilityAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternatative name of a facility. This is generally unique within a naming sys" +
             "tem. The above contextually unique name  should also be listed as an alias.")]
         public nameStruct[] facilityAlias {
@@ -23924,6 +24565,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the port is an exposed internal port and cann" +
             "ot be used in a connection external to the unit. False (\"false\" or \"0\") or not g" +
             "iven indicates a normal port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool exposed {
             get {
                 return this.exposedField;
@@ -23946,7 +24588,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the node to which this port is connected. A timestamp activates and deactivates the connection.  Only one connectedNode should be active at any one point in time. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one port is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port(s) if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("connectedNode")]
+        [System.Xml.Serialization.XmlElementAttribute("connectedNode", DataType="cs_connectedNode")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"Defines the node to which this port is connected. A timestamp activates and deactivates the connection.  Only one connectedNode should be active at any one point in time. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one port is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port(s) if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
         public cs_connectedNode[] connectedNode {
@@ -23960,7 +24602,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProduct")]
+        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProduct", DataType="cs_productFlowQualifierExpected")]
         [System.ComponentModel.DescriptionAttribute("Defines the expected flow and product pairs to be  assigned to this port by a Pro" +
             "duct Volume report. A set of expected qualifiers can be defined for each pair.")]
         public cs_productFlowQualifierExpected[] expectedFlowProduct {
@@ -23974,7 +24616,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the properties that are expected to be measured at this port. This can also specify the equipment tag(s) of the sensor that will read the value. Only one of each property kind should be active at any point in time.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProperty")]
+        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProperty", DataType="cs_productFlowExpectedPortProperty")]
         [System.ComponentModel.DescriptionAttribute("Defines the properties that are expected to be measured at this port. This can al" +
             "so specify the equipment tag(s) of the sensor that will read the value. Only one" +
             " of each property kind should be active at any point in time.")]
@@ -23991,6 +24633,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark associated with this port.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -24002,7 +24645,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -24015,7 +24658,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -24047,6 +24690,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the relative from-left-to-right location on a display screen. The display" +
             " origin (0,0) is the upper left-hand corner of the display as viewed by the user" +
             ".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthPerLengthMeasure")]
         public lengthPerLengthMeasure x {
             get {
                 return this.xField;
@@ -24061,6 +24705,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the relative from-top-to-bottom location on a display screen. The display" +
             " origin (0,0) is the upper left-hand corner of the display as viewed by the user" +
             ".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthPerLengthMeasure")]
         public lengthPerLengthMeasure y {
             get {
                 return this.yField;
@@ -24075,6 +24720,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the relative from-front-to-back location in a 3D system. The unrotated di" +
             "splay origin (0,0) is the upper left-hand corner of the display as viewed by the" +
             " user. The \"3D picture\" may be rotated on the 2d display.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthPerLengthMeasure")]
         public lengthPerLengthMeasure z {
             get {
                 return this.zField;
@@ -24115,6 +24761,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The expected kind of facility property. Each property is documented to have value" +
             "s of a particular type.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FacilityParameter")]
         public FacilityParameter property {
             get {
                 return this.propertyField;
@@ -24138,8 +24785,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProduct", typeof(cs_productFlowQualifierExpected))]
-        [System.Xml.Serialization.XmlElementAttribute("qualifier", typeof(FlowQualifier))]
+        [System.Xml.Serialization.XmlElementAttribute("expectedFlowProduct", typeof(cs_productFlowQualifierExpected), DataType="cs_productFlowQualifierExpected")]
+        [System.Xml.Serialization.XmlElementAttribute("qualifier", typeof(FlowQualifier), DataType="FlowQualifier")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -24151,7 +24798,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternative name for the sensor that will measure the property.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("tagAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("tagAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternative name for the sensor that will measure the property.")]
         public nameStruct[] tagAlias {
             get {
@@ -24166,6 +24813,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Difference between two consecutive readings must exceeds deadband value to be accepted</summary>
         [System.ComponentModel.DescriptionAttribute("Difference between two consecutive readings must exceeds deadband value to be acc" +
             "epted")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="generalMeasureType")]
         public generalMeasureType deadband {
             get {
                 return this.deadbandField;
@@ -24179,6 +24827,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The maximum time difference from the last sent event before the next event is sent.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum time difference from the last sent event before the next event is sen" +
             "t.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure maximumFrequency {
             get {
                 return this.maximumFrequencyField;
@@ -24192,6 +24841,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark associated with this property.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this property.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -24203,7 +24853,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -24216,7 +24866,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -24270,6 +24920,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Product Flow Unit within the  context of the Product Flow Network" +
             ".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -24283,6 +24934,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string planName {
             get {
                 return this.planNameField;
@@ -24297,6 +24949,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A pointer to the network representing the internal behavior of this unit. The nam" +
             "es of the external ports on the internal network must match the names of  the po" +
             "rts on this unit. That is they are logically the same ports.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString internalNetwork {
             get {
                 return this.internalNetworkField;
@@ -24311,6 +24964,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The name of the facility for which this Product Flow Unit describes fluid flow co" +
             "nnecton behavior. The name can be qualified by a naming system.  This also defin" +
             "es the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facility {
             get {
                 return this.facilityField;
@@ -24325,6 +24979,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("For facilities whose name is unique within the context of another  facility, the " +
             "name of the parent facility this named facility.  The name can be qualified by a" +
             " naming system. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent1 {
             get {
                 return this.facilityParent1Field;
@@ -24339,6 +24994,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("For facilities whose name is unique within the context of another  facility, the " +
             "name of the parent facility of facilityParent1.  The name can be qualified by a " +
             "naming system. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent2 {
             get {
                 return this.facilityParent2Field;
@@ -24350,7 +25006,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("facilityAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("facilityAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternatative name of a facility. This is generally unique within a naming sys" +
             "tem. The above contextually unique name (that is, within  the context of a paren" +
             "t) should also be listed as an alias.")]
@@ -24365,7 +25021,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.Xml.Serialization.XmlElementAttribute("contextFacility", DataType="facilityIdentifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented faci" +
             "lity.")]
         public facilityIdentifierStruct[] contextFacility {
@@ -24379,7 +25035,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines an expected property of the facility represented by this unit.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("expectedProperty")]
+        [System.Xml.Serialization.XmlElementAttribute("expectedProperty", DataType="cs_productFlowExpectedUnitProperty")]
         [System.ComponentModel.DescriptionAttribute("Defines an expected property of the facility represented by this unit.")]
         public cs_productFlowExpectedUnitProperty[] expectedProperty {
             get {
@@ -24395,6 +25051,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Defines the relative coordinate of the unit on a display screen. This is not inte" +
             "nded for detailed diagrams. Rather it is intended to allow different application" +
             "s to present a user view which has a consistent layout.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_relativeCoordinate")]
         public cs_relativeCoordinate relativeCoordinate {
             get {
                 return this.relativeCoordinateField;
@@ -24406,7 +25063,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An inlet or outlet port associated with this unit. If there is an internal network then the name of this port must match the name of  an external port for that network. Any properties (e.g., volume, pressure, temperature) that are assigned to this port  are inherently assigned to the corresponding external port on the internal network.  That is, the ports are logically the same port. Similar to a node, there is no pressure drop across a port.   Also similar to a node, conservation of mass exists across the port and the flow direction across the port can change over time if the relative pressures across connected units change.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("port")]
+        [System.Xml.Serialization.XmlElementAttribute("port", DataType="cs_productFlowPort")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"An inlet or outlet port associated with this unit. If there is an internal network then the name of this port must match the name of  an external port for that network. Any properties (e.g., volume, pressure, temperature) that are assigned to this port  are inherently assigned to the corresponding external port on the internal network.  That is, the ports are logically the same port. Similar to a node, there is no pressure drop across a port.   Also similar to a node, conservation of mass exists across the port and the flow direction across the port can change over time if the relative pressures across connected units change.")]
         public cs_productFlowPort[] port {
@@ -24422,6 +25079,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark associated with this unit.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark associated with this unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -24433,7 +25091,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -24446,7 +25104,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -24489,6 +25147,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the external port within the context of  the current Product Flow Net" +
             "work.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -24503,6 +25162,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines whether this port is an inlet or outlet. Note that this is a nominal inte" +
             "nded direction.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ProductFlowPortType")]
         public ProductFlowPortType direction {
             get {
                 return this.directionField;
@@ -24517,6 +25177,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the port is an exposed internal port and cann" +
             "ot be used in a connection external to the network. False (\"false\" or \"0\") or no" +
             "t given indicates a normal port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool exposed {
             get {
                 return this.exposedField;
@@ -24542,6 +25203,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the  same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an ""exposed"" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string connectedNode {
             get {
                 return this.connectedNodeField;
@@ -24555,6 +25217,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark about the port.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -24566,7 +25229,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -24579,7 +25242,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -24628,6 +25291,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Product Flow Network. This must be unique within the context of t" +
             "he overall Product Flow Model.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -24641,6 +25305,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string planName {
             get {
                 return this.planNameField;
@@ -24653,6 +25318,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside the model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence).</summary>
         [System.ComponentModel.DescriptionAttribute(@"A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside the model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString parentNetwork {
             get {
                 return this.parentNetworkField;
@@ -24665,6 +25331,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside this model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow Unit.</summary>
         [System.ComponentModel.DescriptionAttribute(@"DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside this model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow Unit.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString representedUnit {
             get {
                 return this.representedUnitField;
@@ -24678,6 +25345,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark about the network.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the network.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -24689,7 +25357,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the Unit (i.e., they are logically the same port).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("port")]
+        [System.Xml.Serialization.XmlElementAttribute("port", DataType="cs_productFlowlExternalPort")]
         [System.ComponentModel.DescriptionAttribute(@"An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the Unit (i.e., they are logically the same port).")]
         public cs_productFlowlExternalPort[] port {
             get {
@@ -24702,7 +25370,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A flow behavior for one unit. Within this context, a unit represents a usage of equipment for some purpose. The unit is generally identified by its function rather than the actual equipment used to realize the function. A unit might represent something complex like a field or separator or something simple  like a valve or pump.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("unit")]
+        [System.Xml.Serialization.XmlElementAttribute("unit", DataType="cs_productFlowUnit")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"A flow behavior for one unit. Within this context, a unit represents a usage of equipment for some purpose. The unit is generally identified by its function rather than the actual equipment used to realize the function. A unit might represent something complex like a field or separator or something simple  like a valve or pump.")]
         public cs_productFlowUnit[] unit {
@@ -24716,7 +25384,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Documents that a change occurred at a particular time.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("changeLog")]
+        [System.Xml.Serialization.XmlElementAttribute("changeLog", DataType="cs_productFlowChangeLog")]
         [System.ComponentModel.DescriptionAttribute("Documents that a change occurred at a particular time.")]
         public cs_productFlowChangeLog[] changeLog {
             get {
@@ -24729,7 +25397,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the existance of a planned network which is a variant of this network beginning at a specified point in time. Any changes to the actual network after that time do not affect the plan.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("plan")]
+        [System.Xml.Serialization.XmlElementAttribute("plan", DataType="cs_productFlowNetworkPlan")]
         [System.ComponentModel.DescriptionAttribute("Defines the existance of a planned network which is a variant of this network beg" +
             "inning at a specified point in time. Any changes to the actual network after tha" +
             "t time do not affect the plan.")]
@@ -24744,7 +25412,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -24757,7 +25425,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -24795,6 +25463,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the external port in the network  that represents the current Model." +
             "  This is the port to which a different model is being connected.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString port {
             get {
                 return this.portField;
@@ -24809,6 +25478,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the external port within the connected Model. This is the port on a " +
             "different model to which the port on this model is connected.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString connectedPort {
             get {
                 return this.connectedPortField;
@@ -24822,6 +25492,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A pointer to the Product Flow Model that contains the connected port.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A pointer to the Product Flow Model that contains the connected port.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString connectedModel {
             get {
                 return this.connectedModelField;
@@ -24835,6 +25506,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the facility that is represented by the connected model.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the facility that is represented by the connected model.  The name ca" +
             "n be qualified by a naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct connectedInstallation {
             get {
                 return this.connectedInstallationField;
@@ -24846,7 +25518,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -24859,7 +25531,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -24918,6 +25590,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Product Flow Model.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -24931,6 +25604,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the facility which is represented by this model.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this model.  The name can be qua" +
             "lified by a naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -24942,7 +25616,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.Xml.Serialization.XmlElementAttribute("contextFacility", DataType="facilityIdentifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         public facilityIdentifierStruct[] contextFacility {
@@ -24957,6 +25631,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time of the start of validity for this model.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the start of validity for this model.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
@@ -24980,6 +25655,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time of the termination of validity for this model.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the termination of validity for this model.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
@@ -25003,6 +25679,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The time for which ""currently existing"" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime existenceTime {
             get {
                 return this.existenceTimeField;
@@ -25015,6 +25692,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -25027,6 +25705,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -25038,7 +25717,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("externalConnect")]
+        [System.Xml.Serialization.XmlElementAttribute("externalConnect", DataType="cs_productFlowExternalReference")]
         [System.ComponentModel.DescriptionAttribute(@"Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.")]
         public cs_productFlowExternalReference[] externalConnect {
             get {
@@ -25051,7 +25730,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail. One of the networks must represent this model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("network")]
+        [System.Xml.Serialization.XmlElementAttribute("network", DataType="cs_productFlowNetwork")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The description of one named network within this model. Each model is self contai" +
             "ned but may reference other newtorks for defining internal detail. One of the ne" +
@@ -25069,6 +25748,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A descriptive remark about the model.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the model.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -25081,6 +25761,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -25093,6 +25774,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -25104,7 +25786,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -25189,6 +25871,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Fluid Sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -25202,6 +25885,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string sampleBottle {
             get {
                 return this.sampleBottleField;
@@ -25214,6 +25898,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FluidSampleKind")]
         public FluidSampleKind sampleType {
             get {
                 return this.sampleTypeField;
@@ -25239,6 +25924,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The name of the facility from which the sample was acquired.  The name can be qua" +
             "lified by a naming system.  This also defines the kind of facility. Common facil" +
             "ities are wells, wellbores within a well, completions within a well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facility {
             get {
                 return this.facilityField;
@@ -25251,6 +25937,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute(@"For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent1 {
             get {
                 return this.facilityParent1Field;
@@ -25265,6 +25952,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("For facilities whose name is unique within the context of another  facility, the " +
             "name of the parent facility of parent1.  The name can be qualified by a naming s" +
             "ystem. This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct facilityParent2 {
             get {
                 return this.facilityParent2Field;
@@ -25276,7 +25964,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("facilityAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("facilityAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("An alternatative name of a facility. This is generally unique within a naming sys" +
             "tem. The above contextually unique name (that is, within  the context of a paren" +
             "t) should also be listed as an alias.")]
@@ -25292,6 +25980,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The kind of test which acquired the sample.</summary>
         [System.ComponentModel.DescriptionAttribute("The kind of test which acquired the sample.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FluidSampleTestAcquisition")]
         public FluidSampleTestAcquisition testKind {
             get {
                 return this.testKindField;
@@ -25315,6 +26004,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The measured depth of the test in a wellbore.</summary>
         [System.ComponentModel.DescriptionAttribute("The measured depth of the test in a wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord testMD {
             get {
                 return this.testMDField;
@@ -25328,6 +26018,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The test identifier.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The test identifier.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string testId {
             get {
                 return this.testIdField;
@@ -25341,6 +26032,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The test run number (e.g., for an RFT)</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The test run number (e.g., for an RFT)")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string testRun {
             get {
                 return this.testRunField;
@@ -25354,6 +26046,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the company which ran the test.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the company which ran the test.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string testProvider {
             get {
                 return this.testProviderField;
@@ -25366,6 +26059,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReservoirFluidKind")]
         public ReservoirFluidKind reservoirFluidType {
             get {
                 return this.reservoirFluidTypeField;
@@ -25413,6 +26107,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord acquisitionMD {
             get {
                 return this.acquisitionMDField;
@@ -25425,6 +26120,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure acquisitionPressure {
             get {
                 return this.acquisitionPressureField;
@@ -25437,6 +26133,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure acquisitionTemperature {
             get {
                 return this.acquisitionTemperatureField;
@@ -25449,6 +26146,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure acquisitionGORStd {
             get {
                 return this.acquisitionGORStdField;
@@ -25462,6 +26160,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string sampleDisposition {
             get {
                 return this.sampleDispositionField;
@@ -25474,6 +26173,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool representative {
             get {
                 return this.representativeField;
@@ -25498,6 +26198,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -25510,6 +26211,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -25522,6 +26224,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -25533,7 +26236,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -25660,6 +26363,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FluidContaminant")]
         public FluidContaminant contaminantKind {
             get {
                 return this.contaminantKindField;
@@ -25672,6 +26376,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -25684,6 +26389,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasurePercent")]
         public volumePerVolumeMeasurePercent volumePercent {
             get {
                 return this.volumePercentField;
@@ -25697,6 +26403,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -25708,7 +26415,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -25833,6 +26540,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -25855,6 +26563,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure stepTemperature {
             get {
                 return this.stepTemperatureField;
@@ -25866,6 +26575,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -25876,8 +26586,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -25900,8 +26610,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("oilAPIGravity", typeof(densityMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("oilSpecificGravity", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("oilAPIGravity", typeof(densityMeasure), DataType="densityMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("oilSpecificGravity", typeof(double), DataType="unitlessQuantity")]
         public object Item1 {
             get {
                 return this.item1Field;
@@ -25912,6 +26622,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure oilMassDensity {
             get {
                 return this.oilMassDensityField;
@@ -25922,6 +26633,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure oilFormationVolumeFactorStd {
             get {
                 return this.oilFormationVolumeFactorStdField;
@@ -25932,6 +26644,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure oilViscosity {
             get {
                 return this.oilViscosityField;
@@ -25942,10 +26655,10 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("gasVolume", typeof(standardVolumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("oilShrinkageFactor", typeof(volumePerVolumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("oilVolume", typeof(volumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("stageSeparatorGORStd", typeof(standardVolumePerVolumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("gasVolume", typeof(standardVolumeMeasure), DataType="standardVolumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("oilShrinkageFactor", typeof(volumePerVolumeMeasure), DataType="volumePerVolumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("oilVolume", typeof(volumeMeasure), DataType="volumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("stageSeparatorGORStd", typeof(standardVolumePerVolumeMeasure), DataType="standardVolumePerVolumeMeasure")]
         public abstractMeasure[] Items {
             get {
                 return this.itemsField;
@@ -25956,6 +26669,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure correctedStageSeparatorGORStd {
             get {
                 return this.correctedStageSeparatorGORStdField;
@@ -25966,6 +26680,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure cumulativeStockTankGORStd {
             get {
                 return this.cumulativeStockTankGORStdField;
@@ -25976,6 +26691,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure solutionGORStd {
             get {
                 return this.solutionGORStdField;
@@ -25986,6 +26702,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasMolecularWeight {
             get {
                 return this.gasMolecularWeightField;
@@ -26007,6 +26724,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravity {
             get {
                 return this.gasGravityField;
@@ -26028,6 +26746,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure gasMassDensity {
             get {
                 return this.gasMassDensityField;
@@ -26038,6 +26757,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasZFactor {
             get {
                 return this.gasZFactorField;
@@ -26059,6 +26779,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure gasViscosity {
             get {
                 return this.gasViscosityField;
@@ -26069,6 +26790,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure residualAPIGravity {
             get {
                 return this.residualAPIGravityField;
@@ -26080,6 +26802,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -26090,9 +26813,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank))]
+        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank), DataType="cs_fluidResultStockTank")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("Items1ElementName")]
         public object[] Items1 {
             get {
@@ -26116,7 +26839,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("vaporComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] vaporComposition {
             get {
                 return this.vaporCompositionField;
@@ -26127,7 +26850,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] liquidComposition {
             get {
                 return this.liquidCompositionField;
@@ -26138,7 +26861,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("compositeComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
         public cs_fluidResultCompositeComposition[] compositeComposition {
             get {
                 return this.compositeCompositionField;
@@ -26150,7 +26873,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -26186,6 +26909,7 @@ namespace Energistics.Generator.PRODML122 {
         private thermodynamicTemperatureMeasure temperatureField;
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temperature {
             get {
                 return this.temperatureField;
@@ -26231,6 +26955,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string componentName {
             get {
                 return this.componentNameField;
@@ -26241,6 +26966,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -26251,6 +26977,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -26262,7 +26989,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -26298,6 +27025,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string componentName {
             get {
                 return this.componentNameField;
@@ -26308,6 +27036,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -26318,6 +27047,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -26328,6 +27058,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double kValue {
             get {
                 return this.kValueField;
@@ -26350,7 +27081,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -26384,6 +27115,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -26405,6 +27137,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultVolumeReference")]
         public cs_fluidResultVolumeReference shrinkageReference {
             get {
                 return this.shrinkageReferenceField;
@@ -26415,7 +27148,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("separatorTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("separatorTestStep", DataType="cs_fluidResultSeparatorTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultSeparatorTestStep[] separatorTestStep {
             get {
@@ -26428,7 +27161,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -26457,6 +27190,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="VolumeReferenceKind")]
         public VolumeReferenceKind kind {
             get {
                 return this.kindField;
@@ -26467,6 +27201,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure referenceVolume {
             get {
                 return this.referenceVolumeField;
@@ -26478,6 +27213,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -26715,6 +27451,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -26737,6 +27474,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure stepTemperature {
             get {
                 return this.stepTemperatureField;
@@ -26748,6 +27486,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -26758,8 +27497,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -26782,6 +27521,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure dewPointPressure {
             get {
                 return this.dewPointPressureField;
@@ -26792,6 +27532,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure cloudPoint {
             get {
                 return this.cloudPointField;
@@ -26802,6 +27543,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure pourPoint {
             get {
                 return this.pourPointField;
@@ -26812,6 +27554,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double oilMolecularWeight {
             get {
                 return this.oilMolecularWeightField;
@@ -26833,8 +27576,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("oilAPIGravity", typeof(densityMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("oilSpecificGravity", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("oilAPIGravity", typeof(densityMeasure), DataType="densityMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("oilSpecificGravity", typeof(double), DataType="unitlessQuantity")]
         public object Item1 {
             get {
                 return this.item1Field;
@@ -26845,6 +27588,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure oilMassDensity {
             get {
                 return this.oilMassDensityField;
@@ -26855,6 +27599,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="compressibilityMeasure")]
         public compressibilityMeasure oilCompressibility {
             get {
                 return this.oilCompressibilityField;
@@ -26865,6 +27610,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure oilViscosity {
             get {
                 return this.oilViscosityField;
@@ -26875,6 +27621,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermalConductivityMeasure")]
         public thermalConductivityMeasure oilThermalConductivity {
             get {
                 return this.oilThermalConductivityField;
@@ -26885,6 +27632,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasMolecularWeight {
             get {
                 return this.gasMolecularWeightField;
@@ -26906,6 +27654,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravity {
             get {
                 return this.gasGravityField;
@@ -26927,6 +27676,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure gasMassDensity {
             get {
                 return this.gasMassDensityField;
@@ -26937,6 +27687,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasZFactor {
             get {
                 return this.gasZFactorField;
@@ -26958,6 +27709,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="compressibilityMeasure")]
         public compressibilityMeasure gasCompressibility {
             get {
                 return this.gasCompressibilityField;
@@ -26968,6 +27720,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure gasViscosity {
             get {
                 return this.gasViscosityField;
@@ -26978,6 +27731,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermalConductivityMeasure")]
         public thermalConductivityMeasure gasThermalConductivity {
             get {
                 return this.gasThermalConductivityField;
@@ -26988,6 +27742,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="modulusOfCompressionMeasure")]
         public modulusOfCompressionMeasure gasHeatingValue {
             get {
                 return this.gasHeatingValueField;
@@ -26999,6 +27754,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -27009,9 +27765,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank))]
+        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank), DataType="cs_fluidResultStockTank")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items {
             get {
@@ -27035,7 +27791,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("vaporComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] vaporComposition {
             get {
                 return this.vaporCompositionField;
@@ -27046,7 +27802,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] liquidComposition {
             get {
                 return this.liquidCompositionField;
@@ -27057,7 +27813,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("compositeComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
         public cs_fluidResultCompositeComposition[] compositeComposition {
             get {
                 return this.compositeCompositionField;
@@ -27069,7 +27825,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -27128,6 +27884,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -27149,7 +27906,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("transportTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("transportTestStep", DataType="cs_fluidResultTransportTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultTransportTestStep[] transportTestStep {
             get {
@@ -27162,7 +27919,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -27232,6 +27989,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -27254,6 +28012,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -27264,6 +28023,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure oilViscosity {
             get {
                 return this.oilViscosityField;
@@ -27274,8 +28034,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidDropoutPercent", typeof(volumePerVolumeMeasurePercent))]
-        [System.Xml.Serialization.XmlElementAttribute("liquidVolume", typeof(volumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("liquidDropoutPercent", typeof(volumePerVolumeMeasurePercent), DataType="volumePerVolumeMeasurePercent")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidVolume", typeof(volumeMeasure), DataType="volumeMeasure")]
         public abstractMeasure Item {
             get {
                 return this.itemField;
@@ -27286,6 +28046,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasMolecularWeight {
             get {
                 return this.gasMolecularWeightField;
@@ -27307,6 +28068,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravity {
             get {
                 return this.gasGravityField;
@@ -27328,6 +28090,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure gasFormationVolumeFactorStd {
             get {
                 return this.gasFormationVolumeFactorStdField;
@@ -27338,6 +28101,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasZFactor {
             get {
                 return this.gasZFactorField;
@@ -27359,6 +28123,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure gasViscosity {
             get {
                 return this.gasViscosityField;
@@ -27369,8 +28134,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedRatioStd", typeof(standardVolumePerStandardVolumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedVolume", typeof(standardVolumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedRatioStd", typeof(standardVolumePerStandardVolumeMeasure), DataType="standardVolumePerStandardVolumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedVolume", typeof(standardVolumeMeasure), DataType="standardVolumeMeasure")]
         public abstractMeasure Item1 {
             get {
                 return this.item1Field;
@@ -27381,6 +28146,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure condensateYieldVolumeRatio1Std {
             get {
                 return this.condensateYieldVolumeRatio1StdField;
@@ -27391,6 +28157,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure condensateYieldVolumeRatio2Std {
             get {
                 return this.condensateYieldVolumeRatio2StdField;
@@ -27402,6 +28169,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -27412,9 +28180,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank))]
+        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank), DataType="cs_fluidResultStockTank")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items {
             get {
@@ -27438,7 +28206,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("vaporComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] vaporComposition {
             get {
                 return this.vaporCompositionField;
@@ -27449,7 +28217,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] liquidComposition {
             get {
                 return this.liquidCompositionField;
@@ -27460,7 +28228,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("compositeComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
         public cs_fluidResultCompositeComposition[] compositeComposition {
             get {
                 return this.compositeCompositionField;
@@ -27472,7 +28240,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -27537,6 +28305,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -27559,6 +28328,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -27569,8 +28339,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -27593,6 +28363,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultVolumeReference")]
         public cs_fluidResultVolumeReference liquidDropoutReference {
             get {
                 return this.liquidDropoutReferenceField;
@@ -27603,6 +28374,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumeMeasure")]
         public standardVolumeMeasure cumulativeGasProducedReference {
             get {
                 return this.cumulativeGasProducedReferenceField;
@@ -27613,6 +28385,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure condensateYieldPressure1 {
             get {
                 return this.condensateYieldPressure1Field;
@@ -27623,6 +28396,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure condensateYieldTemperature1 {
             get {
                 return this.condensateYieldTemperature1Field;
@@ -27633,6 +28407,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure condensateYieldPressure2 {
             get {
                 return this.condensateYieldPressure2Field;
@@ -27643,6 +28418,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure condensateYieldTemperature2 {
             get {
                 return this.condensateYieldTemperature2Field;
@@ -27653,7 +28429,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("jcrvTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("jcrvTestStep", DataType="cs_fluidResultJCurveTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultJCurveTestStep[] jcrvTestStep {
             get {
@@ -27666,7 +28442,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -27760,6 +28536,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -27782,6 +28559,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -27792,6 +28570,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure oilMassDensity {
             get {
                 return this.oilMassDensityField;
@@ -27802,6 +28581,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure oilFormationVolumeFactorStd {
             get {
                 return this.oilFormationVolumeFactorStdField;
@@ -27812,6 +28592,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="compressibilityMeasure")]
         public compressibilityMeasure oilCompressibility {
             get {
                 return this.oilCompressibilityField;
@@ -27822,6 +28603,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure oilViscosity {
             get {
                 return this.oilViscosityField;
@@ -27832,8 +28614,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("oilShrinkageFactor", typeof(volumePerVolumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("oilVolume", typeof(volumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("oilShrinkageFactor", typeof(volumePerVolumeMeasure), DataType="volumePerVolumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("oilVolume", typeof(volumeMeasure), DataType="volumeMeasure")]
         public abstractMeasure Item {
             get {
                 return this.itemField;
@@ -27844,6 +28626,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasMolecularWeight {
             get {
                 return this.gasMolecularWeightField;
@@ -27865,6 +28648,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravity {
             get {
                 return this.gasGravityField;
@@ -27886,6 +28670,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure gasMassDensity {
             get {
                 return this.gasMassDensityField;
@@ -27896,6 +28681,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure gasFormationVolumeFactorStd {
             get {
                 return this.gasFormationVolumeFactorStdField;
@@ -27906,6 +28692,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasZFactor {
             get {
                 return this.gasZFactorField;
@@ -27927,6 +28714,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure gasViscosity {
             get {
                 return this.gasViscosityField;
@@ -27937,6 +28725,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure totalFormationVolumeFactorStd {
             get {
                 return this.totalFormationVolumeFactorStdField;
@@ -27947,6 +28736,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure solutionGORStd {
             get {
                 return this.solutionGORStdField;
@@ -27957,6 +28747,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure cumulativeStockTankGORStd {
             get {
                 return this.cumulativeStockTankGORStdField;
@@ -27967,6 +28758,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerVolumeMeasure")]
         public standardVolumePerVolumeMeasure cumulativeSaturatedGORStd {
             get {
                 return this.cumulativeSaturatedGORStdField;
@@ -27977,6 +28769,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure residualAPIGravity {
             get {
                 return this.residualAPIGravityField;
@@ -27988,6 +28781,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -27998,9 +28792,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank))]
+        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank), DataType="cs_fluidResultStockTank")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items {
             get {
@@ -28024,7 +28818,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("vaporComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] vaporComposition {
             get {
                 return this.vaporCompositionField;
@@ -28035,7 +28829,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] liquidComposition {
             get {
                 return this.liquidCompositionField;
@@ -28046,7 +28840,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("compositeComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
         public cs_fluidResultCompositeComposition[] compositeComposition {
             get {
                 return this.compositeCompositionField;
@@ -28058,7 +28852,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -28113,6 +28907,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -28135,6 +28930,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -28145,8 +28941,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -28169,6 +28965,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultVolumeReference")]
         public cs_fluidResultVolumeReference shrinkageReference {
             get {
                 return this.shrinkageReferenceField;
@@ -28179,7 +28976,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("dlTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("dlTestStep", DataType="cs_fluidResultDifferentialLiberationTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultDifferentialLiberationTestStep[] dlTestStep {
             get {
@@ -28192,7 +28989,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -28270,6 +29067,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -28292,6 +29090,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -28302,6 +29101,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure oilViscosity {
             get {
                 return this.oilViscosityField;
@@ -28312,8 +29112,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidDropoutPercent", typeof(volumePerVolumeMeasurePercent))]
-        [System.Xml.Serialization.XmlElementAttribute("liquidVolume", typeof(volumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("liquidDropoutPercent", typeof(volumePerVolumeMeasurePercent), DataType="volumePerVolumeMeasurePercent")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidVolume", typeof(volumeMeasure), DataType="volumeMeasure")]
         public abstractMeasure Item {
             get {
                 return this.itemField;
@@ -28324,6 +29124,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasMolecularWeight {
             get {
                 return this.gasMolecularWeightField;
@@ -28345,6 +29146,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravity {
             get {
                 return this.gasGravityField;
@@ -28366,6 +29168,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerStandardVolumeMeasure")]
         public volumePerStandardVolumeMeasure gasFormationVolumeFactorStd {
             get {
                 return this.gasFormationVolumeFactorStdField;
@@ -28376,6 +29179,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasZFactor {
             get {
                 return this.gasZFactorField;
@@ -28397,6 +29201,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure gasViscosity {
             get {
                 return this.gasViscosityField;
@@ -28407,8 +29212,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedRatioStd", typeof(standardVolumePerStandardVolumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedVolume", typeof(standardVolumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedRatioStd", typeof(standardVolumePerStandardVolumeMeasure), DataType="standardVolumePerStandardVolumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("cumulativeGasProducedVolume", typeof(standardVolumeMeasure), DataType="standardVolumeMeasure")]
         public abstractMeasure Item1 {
             get {
                 return this.item1Field;
@@ -28420,6 +29225,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -28430,9 +29236,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank))]
+        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank), DataType="cs_fluidResultStockTank")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items {
             get {
@@ -28456,7 +29262,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("vaporComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] vaporComposition {
             get {
                 return this.vaporCompositionField;
@@ -28467,7 +29273,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] liquidComposition {
             get {
                 return this.liquidCompositionField;
@@ -28478,7 +29284,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("compositeComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
         public cs_fluidResultCompositeComposition[] compositeComposition {
             get {
                 return this.compositeCompositionField;
@@ -28490,7 +29296,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -28547,6 +29353,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -28569,6 +29376,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -28579,8 +29387,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -28603,6 +29411,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultVolumeReference")]
         public cs_fluidResultVolumeReference liquidDropoutReference {
             get {
                 return this.liquidDropoutReferenceField;
@@ -28615,6 +29424,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The volume is corrected to standard conditions of temperature and pressure.</summary>
         [System.ComponentModel.DescriptionAttribute("The volume is corrected to standard conditions of temperature and pressure.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumeMeasure")]
         public standardVolumeMeasure cumulativeGasProducedReferenceStd {
             get {
                 return this.cumulativeGasProducedReferenceStdField;
@@ -28625,7 +29435,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cvdTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("cvdTestStep", DataType="cs_fluidResultCvdTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultCvdTestStep[] cvdTestStep {
             get {
@@ -28638,7 +29448,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -28720,6 +29530,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -28742,6 +29553,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -28752,6 +29564,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure oilMassDensity {
             get {
                 return this.oilMassDensityField;
@@ -28762,6 +29575,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="compressibilityMeasure")]
         public compressibilityMeasure oilCompressibility {
             get {
                 return this.oilCompressibilityField;
@@ -28772,6 +29586,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure oilViscosity {
             get {
                 return this.oilViscosityField;
@@ -28782,9 +29597,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidDropoutPercent", typeof(volumePerVolumeMeasurePercent))]
-        [System.Xml.Serialization.XmlElementAttribute("liquidVolume", typeof(volumeMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("totalVolume", typeof(volumeMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("liquidDropoutPercent", typeof(volumePerVolumeMeasurePercent), DataType="volumePerVolumeMeasurePercent")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidVolume", typeof(volumeMeasure), DataType="volumeMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("totalVolume", typeof(volumeMeasure), DataType="volumeMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public abstractMeasure[] Items {
             get {
@@ -28808,6 +29623,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumePerVolumeMeasure")]
         public volumePerVolumeMeasure relativeVolumeRatio {
             get {
                 return this.relativeVolumeRatioField;
@@ -28818,6 +29634,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure gasMassDensity {
             get {
                 return this.gasMassDensityField;
@@ -28828,6 +29645,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasZFactor {
             get {
                 return this.gasZFactorField;
@@ -28849,6 +29667,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="compressibilityMeasure")]
         public compressibilityMeasure gasCompressibility {
             get {
                 return this.gasCompressibilityField;
@@ -28859,6 +29678,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="dynamicViscosityMeasure")]
         public dynamicViscosityMeasure gasViscosity {
             get {
                 return this.gasViscosityField;
@@ -28869,6 +29689,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double yFactor {
             get {
                 return this.yFactorField;
@@ -28891,6 +29712,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -28901,9 +29723,9 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool))]
-        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank))]
+        [System.Xml.Serialization.XmlElementAttribute("reservoir", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("saturated", typeof(bool), DataType="logicalBoolean")]
+        [System.Xml.Serialization.XmlElementAttribute("stockTank", typeof(cs_fluidResultStockTank), DataType="cs_fluidResultStockTank")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("Items1ElementName")]
         public object[] Items1 {
             get {
@@ -28927,7 +29749,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("vaporComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] vaporComposition {
             get {
                 return this.vaporCompositionField;
@@ -28938,7 +29760,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("liquidComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
         public cs_fluidResultPhaseComposition[] liquidComposition {
             get {
                 return this.liquidCompositionField;
@@ -28949,7 +29771,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("compositeComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
         public cs_fluidResultCompositeComposition[] compositeComposition {
             get {
                 return this.compositeCompositionField;
@@ -28961,7 +29783,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -29033,6 +29855,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -29055,6 +29878,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -29065,8 +29889,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -29089,6 +29913,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultVolumeReference")]
         public cs_fluidResultVolumeReference liquidDropoutReference {
             get {
                 return this.liquidDropoutReferenceField;
@@ -29099,6 +29924,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultVolumeReference")]
         public cs_fluidResultVolumeReference relativeVolumeReference {
             get {
                 return this.relativeVolumeReferenceField;
@@ -29109,7 +29935,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cceTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("cceTestStep", DataType="cs_fluidResultCceTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultCceTestStep[] cceTestStep {
             get {
@@ -29122,7 +29948,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -29174,6 +30000,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The stepNumber represents a row in the table.</summary>
         [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -29196,6 +30023,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure stepTemperature {
             get {
                 return this.stepTemperatureField;
@@ -29206,8 +30034,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure))]
-        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure))]
+        [System.Xml.Serialization.XmlElementAttribute("bubblePointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
+        [System.Xml.Serialization.XmlElementAttribute("retrogradeDewPointPressure", typeof(pressureMeasure), DataType="pressureMeasure")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public pressureMeasure Item {
             get {
@@ -29230,6 +30058,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure dewPointPressure {
             get {
                 return this.dewPointPressureField;
@@ -29241,6 +30070,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -29252,7 +30082,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -29296,6 +30126,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -29317,7 +30148,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("saturationTestStep")]
+        [System.Xml.Serialization.XmlElementAttribute("saturationTestStep", DataType="cs_fluidResultSaturationTestStep")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultSaturationTestStep[] saturationTestStep {
             get {
@@ -29330,7 +30161,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -29356,7 +30187,7 @@ namespace Energistics.Generator.PRODML122 {
         private double valueField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="kindString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string referenceComponent {
@@ -29463,6 +30294,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the component is the  primary component in th" +
             "e composition.  False (\"false\" or \"0\") or not given indicates that this is not a" +
             " primary component.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool isPrimary {
             get {
                 return this.isPrimaryField;
@@ -29475,6 +30307,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string componentName {
             get {
                 return this.componentNameField;
@@ -29485,6 +30318,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FluidComponent")]
         public FluidComponent componentBaseKind {
             get {
                 return this.componentBaseKindField;
@@ -29506,6 +30340,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FluidComponentKind")]
         public FluidComponentKind componentKind {
             get {
                 return this.componentKindField;
@@ -29527,6 +30362,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double molecularWeight {
             get {
                 return this.molecularWeightField;
@@ -29548,6 +30384,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent weightPercent {
             get {
                 return this.weightPercentField;
@@ -29558,6 +30395,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarFractionMeasurePercent")]
         public molarFractionMeasurePercent molePercent {
             get {
                 return this.molePercentField;
@@ -29568,6 +30406,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double specificGravity {
             get {
                 return this.specificGravityField;
@@ -29589,6 +30428,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure boilingPoint {
             get {
                 return this.boilingPointField;
@@ -29599,6 +30439,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure criticalPressure {
             get {
                 return this.criticalPressureField;
@@ -29609,6 +30450,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure criticalTemperature {
             get {
                 return this.criticalTemperatureField;
@@ -29619,6 +30461,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="volumeMeasure")]
         public volumeMeasure criticalVolume {
             get {
                 return this.criticalVolumeField;
@@ -29629,6 +30472,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double acentricFactor {
             get {
                 return this.acentricFactorField;
@@ -29650,6 +30494,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="molarVolumeMeasure")]
         public molarVolumeMeasure volumeTranslationFactor {
             get {
                 return this.volumeTranslationFactorField;
@@ -29660,6 +30505,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double alphaShapeFactor {
             get {
                 return this.alphaShapeFactorField;
@@ -29681,6 +30527,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double watsonKExponent {
             get {
                 return this.watsonKExponentField;
@@ -29702,6 +30549,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveCount")]
         public short splitCount {
             get {
                 return this.splitCountField;
@@ -29723,6 +30571,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double plusMinimumMolecularWeight {
             get {
                 return this.plusMinimumMolecularWeightField;
@@ -29744,6 +30593,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double plusMaximumMolecularWeight {
             get {
                 return this.plusMaximumMolecularWeightField;
@@ -29767,6 +30617,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure rvp {
             get {
                 return this.rvpField;
@@ -29780,6 +30631,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.</summary>
         [System.ComponentModel.DescriptionAttribute("True vapor pressure of the product. The equilibrium partial pressure exerted by a" +
             " petroleum liquid  as determined in accordance with standard methods.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure tvp {
             get {
                 return this.tvpField;
@@ -29790,7 +30642,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("binaryInteractionCoefficient")]
+        [System.Xml.Serialization.XmlElementAttribute("binaryInteractionCoefficient", DataType="binaryInteractionCoefficient")]
         public binaryInteractionCoefficient[] binaryInteractionCoefficient {
             get {
                 return this.binaryInteractionCoefficientField;
@@ -29801,6 +30653,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool calculated {
             get {
                 return this.calculatedField;
@@ -29823,7 +30676,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -30227,6 +31080,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="DataQuality")]
         public DataQuality quality {
             get {
                 return this.qualityField;
@@ -30238,6 +31092,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string source {
             get {
                 return this.sourceField;
@@ -30249,6 +31104,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string purpose {
             get {
                 return this.purposeField;
@@ -30373,6 +31229,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Human recognizable context for the fluid sample that was analyzed.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the fluid sample that was analyzed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameFluidSample {
             get {
                 return this.nameFluidSampleField;
@@ -30386,6 +31243,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Human recognizable context for the fluid analysis that produced this result.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the fluid analysis that produced this result.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameFluidAnalysis {
             get {
                 return this.nameFluidAnalysisField;
@@ -30400,6 +31258,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Fluid Analysis Result.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -30412,6 +31271,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure transferPressure {
             get {
                 return this.transferPressureField;
@@ -30424,6 +31284,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure transferTemperature {
             get {
                 return this.transferTemperatureField;
@@ -30436,6 +31297,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure reservoirPressure {
             get {
                 return this.reservoirPressureField;
@@ -30448,6 +31310,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure reservoirTemperature {
             get {
                 return this.reservoirTemperatureField;
@@ -30460,6 +31323,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure saturationPressure {
             get {
                 return this.saturationPressureField;
@@ -30472,6 +31336,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="standardVolumePerStandardVolumeMeasure")]
         public standardVolumePerStandardVolumeMeasure producingGORStd {
             get {
                 return this.producingGORStdField;
@@ -30484,6 +31349,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure oilAPIGravityMeasured {
             get {
                 return this.oilAPIGravityMeasuredField;
@@ -30496,6 +31362,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="densityMeasure")]
         public densityMeasure oilAPIGravityCorrected {
             get {
                 return this.oilAPIGravityCorrectedField;
@@ -30508,6 +31375,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravityMeasured {
             get {
                 return this.gasGravityMeasuredField;
@@ -30531,6 +31399,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double gasGravityCorrected {
             get {
                 return this.gasGravityCorrectedField;
@@ -30554,6 +31423,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double h2oGravityMeasured {
             get {
                 return this.h2oGravityMeasuredField;
@@ -30577,6 +31447,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double h2oGravityCorrected {
             get {
                 return this.h2oGravityCorrectedField;
@@ -30600,6 +31471,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasure")]
         public massConcentrationMeasure h2oSalinity {
             get {
                 return this.h2oSalinityField;
@@ -30612,6 +31484,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent aromaticsWeightPercent {
             get {
                 return this.aromaticsWeightPercentField;
@@ -30624,6 +31497,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent asphaltenesWeightPercent {
             get {
                 return this.asphaltenesWeightPercentField;
@@ -30636,6 +31510,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent napthenesWeightPercent {
             get {
                 return this.napthenesWeightPercentField;
@@ -30648,6 +31523,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="massConcentrationMeasurePercent")]
         public massConcentrationMeasurePercent parafinsWeightPercent {
             get {
                 return this.parafinsWeightPercentField;
@@ -30660,6 +31536,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of standard pressure for all elements which end in "Std".</summary>
         [System.ComponentModel.DescriptionAttribute("The definition of standard pressure for all elements which end in \"Std\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure standardPressure {
             get {
                 return this.standardPressureField;
@@ -30672,6 +31549,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of standard temperature for all elements which end in "Std".</summary>
         [System.ComponentModel.DescriptionAttribute("The definition of standard temperature for all elements which end in \"Std\".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure standardTemperature {
             get {
                 return this.standardTemperatureField;
@@ -30684,6 +31562,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="EosModelKind")]
         public EosModelKind eosMOdel {
             get {
                 return this.eosMOdelField;
@@ -30708,6 +31587,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string analysisDescription {
             get {
                 return this.analysisDescriptionField;
@@ -30721,6 +31601,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string analysisPurpose {
             get {
                 return this.analysisPurposeField;
@@ -30733,6 +31614,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_fluidResultDataQuality")]
         public cs_fluidResultDataQuality fluidDataQuality {
             get {
                 return this.fluidDataQualityField;
@@ -30744,7 +31626,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fluidSampleComposition")]
+        [System.Xml.Serialization.XmlElementAttribute("fluidSampleComposition", DataType="cs_fluidResultComposition")]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public cs_fluidResultComposition[] fluidSampleComposition {
             get {
@@ -30774,7 +31656,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>xxxxxxxxxxxxxxxx</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fluidSampleContaminant")]
+        [System.Xml.Serialization.XmlElementAttribute("fluidSampleContaminant", DataType="cs_fluidResultContaminant")]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
         public cs_fluidResultContaminant[] fluidSampleContaminant {
             get {
@@ -30788,6 +31670,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -30800,6 +31683,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -30811,7 +31695,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the Fluid Sample that was analyzed.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="refString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the Fluid Sample that was analyzed.")]
@@ -30826,7 +31710,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the Fluid Analysis that produced this result.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="refString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the Fluid Analysis that produced this result.")]
@@ -30841,7 +31725,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -30925,6 +31809,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the Fluid Analysis.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -30974,6 +31859,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the application that was run by the user.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the application that was run by the user.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string applicationName {
             get {
                 return this.applicationNameField;
@@ -30987,6 +31873,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The version of the application that was run by the user.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The version of the application that was run by the user.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string applicationVersion {
             get {
                 return this.applicationVersionField;
@@ -31000,6 +31887,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string analysisCompany {
             get {
                 return this.analysisCompanyField;
@@ -31013,6 +31901,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the analyst or user who is responsible for the results.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the analyst or user who is responsible for the results.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string personName {
             get {
                 return this.personNameField;
@@ -31026,6 +31915,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string reportIdentifier {
             get {
                 return this.reportIdentifierField;
@@ -31063,6 +31953,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>xxxxxxxxxxxxxxxx</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxx")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="descriptionString")]
         public string reportLocation {
             get {
                 return this.reportLocationField;
@@ -31075,6 +31966,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -31087,6 +31979,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -31098,7 +31991,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -31152,7 +32045,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The kind of processing used to create the new log.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("processing")]
+        [System.Xml.Serialization.XmlElementAttribute("processing", DataType="kindString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of processing used to create the new log.")]
         public string[] processing {
@@ -31168,6 +32061,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The resultant wellLog.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The resultant wellLog.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString derivedWellLog {
             get {
                 return this.derivedWellLogField;
@@ -31180,6 +32074,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The wellLog which was the primary source for creating the derived log.</summary>
         [System.ComponentModel.DescriptionAttribute("The wellLog which was the primary source for creating the derived log.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString sourceWellLog {
             get {
                 return this.sourceWellLogField;
@@ -31193,6 +32088,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual comment about the processing.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual comment about the processing.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -31204,7 +32100,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -31217,7 +32113,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -31252,6 +32148,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A name of the error.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name of the error.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -31265,6 +32162,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A code, or other id, for the error.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("A code, or other id, for the error.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string id {
             get {
                 return this.idField;
@@ -31278,6 +32176,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A description of the error.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A description of the error.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -31289,7 +32188,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -31302,7 +32201,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -31375,6 +32274,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWell {
             get {
                 return this.nameWellField;
@@ -31389,6 +32289,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the dts.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWellbore {
             get {
                 return this.nameWellboreField;
@@ -31403,6 +32304,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the dts.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -31415,6 +32317,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -31427,6 +32330,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -31439,6 +32343,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) measurement for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the ""most recent"" (at or before the specified time) measurement for a well. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimCurrent {
             get {
                 return this.dTimCurrentField;
@@ -31462,6 +32367,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Contextual data about the well that was tested.</summary>
         [System.ComponentModel.DescriptionAttribute("Contextual data about the well that was tested.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellContext")]
         public cs_wellContext wellContext {
             get {
                 return this.wellContextField;
@@ -31475,6 +32381,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time associated with the measurement.  This will normally be the start of the run.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time associated with the measurement.  This will normally be the sta" +
             "rt of the run.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTim {
             get {
                 return this.dTimField;
@@ -31499,6 +32406,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The length of time that the instrument box was operating  while collecting DTS data.</summary>
         [System.ComponentModel.DescriptionAttribute("The length of time that the instrument box was operating  while collecting DTS da" +
             "ta.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timeMeasure")]
         public timeMeasure runDuration {
             get {
                 return this.runDurationField;
@@ -31512,6 +32420,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A reference to the installed system that was used to make the measurements.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A reference to the installed system that was used to make the measurements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString installedSystemUsed {
             get {
                 return this.installedSystemUsedField;
@@ -31525,6 +32434,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A reference to the well log used to record the table of data.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A reference to the well log used to record the table of data.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString dataInWellLog {
             get {
                 return this.dataInWellLogField;
@@ -31539,6 +32449,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A reference to the fiber used to record the table of data.  This is necessary onl" +
             "y in the cases in which a dtsInstalledSystem has a multi-fiber  installation. If" +
             " there is only a single installed fiber, this element is unnecessary.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString connectedToFiber {
             get {
                 return this.connectedToFiberField;
@@ -31551,6 +32462,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A pointer to the fiber connection node. If more than one node  is available for a well/wellbore, this element is used to specify which node  is connected to the instrument box. This name should correspond to the  fiberEndPoint/name that is recorded in the installed system object.</summary>
         [System.ComponentModel.DescriptionAttribute(@"A pointer to the fiber connection node. If more than one node  is available for a well/wellbore, this element is used to specify which node  is connected to the instrument box. This name should correspond to the  fiberEndPoint/name that is recorded in the installed system object.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString fiberEndConnected {
             get {
                 return this.fiberEndConnectedField;
@@ -31563,6 +32475,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A known point of the fiber. This point should correspond  to one that is given in the wellboreFiberSchematic, so that the relationship  between the length of fiber values in the wellboreFiberSchematic can be related  to the values in the measurement table.</summary>
         [System.ComponentModel.DescriptionAttribute(@"A known point of the fiber. This point should correspond  to one that is given in the wellboreFiberSchematic, so that the relationship  between the length of fiber values in the wellboreFiberSchematic can be related  to the values in the measurement table.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsSingleInstalledPoint")]
         public cs_dtsSingleInstalledPoint fiberDefinedPoint {
             get {
                 return this.fiberDefinedPointField;
@@ -31574,7 +32487,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An error that occurred during the measurement.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("errorReport")]
+        [System.Xml.Serialization.XmlElementAttribute("errorReport", DataType="cs_dtsErrorReport")]
         [System.ComponentModel.DescriptionAttribute("An error that occurred during the measurement.")]
         public cs_dtsErrorReport[] errorReport {
             get {
@@ -31587,7 +32500,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to a processed wellLog that represents this measurement.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("processedLog")]
+        [System.Xml.Serialization.XmlElementAttribute("processedLog", DataType="cs_dtsProcessedWellLog")]
         [System.ComponentModel.DescriptionAttribute("A reference to a processed wellLog that represents this measurement.")]
         public cs_dtsProcessedWellLog[] processedLog {
             get {
@@ -31601,6 +32514,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -31613,6 +32527,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -31624,7 +32539,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
@@ -31640,7 +32555,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
@@ -31656,7 +32571,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -31693,6 +32608,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The measured depth of the installed point of the fiber.  This is optional, because the sender may want to record points that are  outside the well.</summary>
         [System.ComponentModel.DescriptionAttribute("The measured depth of the installed point of the fiber.  This is optional, becaus" +
             "e the sender may want to record points that are  outside the well.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="measuredDepthCoord")]
         public measuredDepthCoord md {
             get {
                 return this.mdField;
@@ -31706,6 +32622,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The length along the fiber, from the zero point, for  this particular point.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The length along the fiber, from the zero point, for  this particular point.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure lengthAlongFiber {
             get {
                 return this.lengthAlongFiberField;
@@ -31718,6 +32635,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The type of point that is being recorded.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of point that is being recorded.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="InstalledFiberPoint")]
         public InstalledFiberPoint type {
             get {
                 return this.typeField;
@@ -31740,7 +32658,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -31753,7 +32671,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -31881,6 +32799,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The reason the OTDR test was run. The three main reasons are  'pre-installation', which is before the installation of the fiber; 'post-installation',  which is used to validate a successful fiber installation; and 'DTS run', which is  a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The reason the OTDR test was run. The three main reasons are  'pre-installation', which is before the installation of the fiber; 'post-installation',  which is used to validate a successful fiber installation; and 'DTS run', which is  a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="OTDRReason")]
         public OTDRReason reasonForRun {
             get {
                 return this.reasonForRunField;
@@ -31893,6 +32812,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The dateTime of the run.</summary>
         [System.ComponentModel.DescriptionAttribute("The dateTime of the run.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp dTimRun {
             get {
                 return this.dTimRunField;
@@ -31917,6 +32837,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A reference to the well log used to record the table of data.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A reference to the well log used to record the table of data.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString dataInWellLog {
             get {
                 return this.dataInWellLogField;
@@ -31929,6 +32850,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A pointer to the fiber connection node. If more than one node  is available for a well/wellbore, this element is used to specify which node is  connected to the instrument box. This name should correspond to the fiberEndPoint/name  that is recorded in the installed system object.</summary>
         [System.ComponentModel.DescriptionAttribute(@"A pointer to the fiber connection node. If more than one node  is available for a well/wellbore, this element is used to specify which node is  connected to the instrument box. This name should correspond to the fiberEndPoint/name  that is recorded in the installed system object.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString fiberEndConncected {
             get {
                 return this.fiberEndConncectedField;
@@ -31942,6 +32864,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A general comment about the OTDR run.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment about the OTDR run.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -31953,7 +32876,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -31966,7 +32889,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -32032,6 +32955,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The speed of the cable.</summary>
         [System.ComponentModel.DescriptionAttribute("The speed of the cable.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="velocityMeasure")]
         public velocityMeasure cableSpeed {
             get {
                 return this.cableSpeedField;
@@ -32044,6 +32968,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The length of fiber pumped into the wellbore.</summary>
         [System.ComponentModel.DescriptionAttribute("The length of fiber pumped into the wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure fiberPumpedLength {
             get {
                 return this.fiberPumpedLengthField;
@@ -32056,6 +32981,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The operating pressure of the pump.</summary>
         [System.ComponentModel.DescriptionAttribute("The operating pressure of the pump.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="pressureMeasure")]
         public pressureMeasure pumpPressure {
             get {
                 return this.pumpPressureField;
@@ -32069,6 +32995,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The fluid used in the pumping operation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The fluid used in the pumping operation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string pumpFluid {
             get {
                 return this.pumpFluidField;
@@ -32081,6 +33008,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature going into the wellbore.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature going into the wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temperatureIn {
             get {
                 return this.temperatureInField;
@@ -32093,6 +33021,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature at the end of the operation</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature at the end of the operation")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure temperatureOut {
             get {
                 return this.temperatureOutField;
@@ -32106,6 +33035,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Any general remarks about the pumping operation.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any general remarks about the pumping operation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string remarks {
             get {
                 return this.remarksField;
@@ -32117,7 +33047,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -32130,7 +33060,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -32193,6 +33123,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("A name which can be used to reference the pumping activity.  In general, a pumpin" +
             "g activity does not have a natural name, so that this element  will not be often" +
             " used.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -32205,6 +33136,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The name of the InstalledFiberInstance that this activity relates to.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the InstalledFiberInstance that this activity relates to.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString installedFiber {
             get {
                 return this.installedFiberField;
@@ -32242,6 +33174,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person in charge of the pumping activity.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person in charge of the pumping activity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string engineerName {
             get {
                 return this.engineerNameField;
@@ -32255,6 +33188,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The company that performed the pumping activity.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The company that performed the pumping activity.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string serviceCompany {
             get {
                 return this.serviceCompanyField;
@@ -32268,6 +33202,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of fluid used in the pump.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of fluid used in the pump.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string pumpFluidType {
             get {
                 return this.pumpFluidTypeField;
@@ -32281,6 +33216,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of fluid used in the control line.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of fluid used in the control line.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string controlLineFluid {
             get {
                 return this.controlLineFluidField;
@@ -32294,6 +33230,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The direction of the pumping.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The direction of the pumping.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string pumpDirection {
             get {
                 return this.pumpDirectionField;
@@ -32307,6 +33244,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of end seal on the fiber.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of end seal on the fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string fiberEndSeal {
             get {
                 return this.fiberEndSealField;
@@ -32320,6 +33258,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of cable meter.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of cable meter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string cableMeterType {
             get {
                 return this.cableMeterTypeField;
@@ -32333,6 +33272,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The serial number of the cable meter.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The serial number of the cable meter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string cableMeterSerialNumber {
             get {
                 return this.cableMeterSerialNumberField;
@@ -32367,8 +33307,8 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("OTDRPerformed", typeof(refNameString))]
-        [System.Xml.Serialization.XmlElementAttribute("wasDriftRunPerformed", typeof(bool))]
+        [System.Xml.Serialization.XmlElementAttribute("OTDRPerformed", typeof(refNameString), DataType="refNameString")]
+        [System.Xml.Serialization.XmlElementAttribute("wasDriftRunPerformed", typeof(bool), DataType="logicalBoolean")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -32381,6 +33321,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The length of the excess fiber that was removed.</summary>
         [System.ComponentModel.DescriptionAttribute("The length of the excess fiber that was removed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure excessFiberRecovered {
             get {
                 return this.excessFiberRecoveredField;
@@ -32394,6 +33335,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Information about the pumping activity, that is captured in the pump log.</summary>
         [System.Xml.Serialization.XmlArrayItemAttribute("tableRow", IsNullable=false)]
         [System.ComponentModel.DescriptionAttribute("Information about the pumping activity, that is captured in the pump log.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsPumpLogTable")]
         public cs_dtsPumpLogRow[] pumpLog {
             get {
                 return this.pumpLogField;
@@ -32405,7 +33347,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -32438,6 +33380,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name, unique within the context of the well, for an  instrument box cable to ho" +
             "ok to.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -32451,6 +33394,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Any description of the node that may be useful in  identifying the hookup.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any description of the node that may be useful in  identifying the hookup.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string description {
             get {
                 return this.descriptionField;
@@ -32462,7 +33406,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -32475,7 +33419,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -32544,6 +33488,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The business associate that performed the calibration.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The business associate that performed the calibration.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string calibratedBy {
             get {
                 return this.calibratedByField;
@@ -32557,6 +33502,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>This may be a standard protocol, or a software application.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("This may be a standard protocol, or a software application.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string calibrationProtocol {
             get {
                 return this.calibrationProtocolField;
@@ -32568,7 +33514,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Attribute name is the name of the parameter. Optional attribute  uom is the unit of measure of the parameter. The value of the element is the value  of the parameter. Note that a string value may appear as a parameter.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.Xml.Serialization.XmlElementAttribute("parameter", DataType="calibrationParameter")]
         [System.ComponentModel.DescriptionAttribute("Attribute name is the name of the parameter. Optional attribute  uom is the unit " +
             "of measure of the parameter. The value of the element is the value  of the param" +
             "eter. Note that a string value may appear as a parameter.")]
@@ -32585,6 +33531,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Any remarks that may be useful, regarding the calibration information.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any remarks that may be useful, regarding the calibration information.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string remarks {
             get {
                 return this.remarksField;
@@ -32597,6 +33544,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature offset correction that is applied to the  dts instrument box.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature offset correction that is applied to the  dts instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure offsetTemperatureCalibration {
             get {
                 return this.offsetTemperatureCalibrationField;
@@ -32609,6 +33557,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The temperature slope correction that is applied to the  dts instrument box.</summary>
         [System.ComponentModel.DescriptionAttribute("The temperature slope correction that is applied to the  dts instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="temperatureSlopeMeasure")]
         public temperatureSlopeMeasure slopeCalibration {
             get {
                 return this.slopeCalibrationField;
@@ -32620,7 +33569,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -32633,7 +33582,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -32662,7 +33611,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unit of measure of the parameter value.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the parameter value.")]
         public string uom {
@@ -32676,7 +33625,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the parameter.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="nameString")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the parameter.")]
@@ -32740,6 +33689,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The physical identification string of the equipment tag.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string name {
             get {
                 return this.nameField;
@@ -32753,6 +33703,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The format or encoding specification of the equipment tag.  The tag may contain may different pieces of information and knowledge of that  information is inherent in the specification.  The "identification string" is a mandatory part of the information in a tag.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The format or encoding specification of the equipment tag.  The tag may contain may different pieces of information and knowledge of that  information is inherent in the specification.  The ""identification string"" is a mandatory part of the information in a tag.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="NameTagNumberingScheme")]
         public NameTagNumberingScheme numberingScheme {
             get {
                 return this.numberingSchemeField;
@@ -32765,6 +33716,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Identifies the general type of identifier on an item.  If multiple identifiers exist on an item, a separate description set for each identifier should be created.   For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling.  The barcode label may in turn be an RFID equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label'  - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label'  - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.</summary>
         [System.ComponentModel.DescriptionAttribute(@"Identifies the general type of identifier on an item.  If multiple identifiers exist on an item, a separate description set for each identifier should be created.   For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling.  The barcode label may in turn be an RFID equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label'  - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label'  - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="NameTagTechnology")]
         public NameTagTechnology technology {
             get {
                 return this.technologyField;
@@ -32788,6 +33740,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item.  This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener.  'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item.  Most non-downhole tools will use either 'body', 'other' or not specified as the location tends to lose value with smaller or non threaded items.</summary>
         [System.ComponentModel.DescriptionAttribute(@"An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item.  This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener.  'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item.  Most non-downhole tools will use either 'body', 'other' or not specified as the location tends to lose value with smaller or non threaded items.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="NameTagLocation")]
         public NameTagLocation location {
             get {
                 return this.locationField;
@@ -32811,6 +33764,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>When the tag was installed in or on the item.</summary>
         [System.ComponentModel.DescriptionAttribute("When the tag was installed in or on the item.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp installationDate {
             get {
                 return this.installationDateField;
@@ -32835,6 +33789,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the company that installed the tag.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the company that installed the tag.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string installationCompany {
             get {
                 return this.installationCompanyField;
@@ -32849,6 +33804,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("Reference to a manufacturers or installers installation  description, code, or me" +
             "thod.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string mountingCode {
             get {
                 return this.mountingCodeField;
@@ -32862,6 +33818,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A comment or remark about the tag.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A comment or remark about the tag.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -32873,7 +33830,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -32886,7 +33843,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -33035,6 +33992,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A name for the instrument box. This can be used to access  the instrument box.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A name for the instrument box. This can be used to access  the instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -33048,6 +34006,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The ultimate manufacturer of the instrument box.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The ultimate manufacturer of the instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string manufacturer {
             get {
                 return this.manufacturerField;
@@ -33085,6 +34044,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of instrument box used.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of instrument box used.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string type {
             get {
                 return this.typeField;
@@ -33096,7 +34056,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("nameTag")]
+        [System.Xml.Serialization.XmlElementAttribute("nameTag", DataType="cs_nameTag")]
         [System.ComponentModel.DescriptionAttribute("An identification tag for the instrument box. A serial number is a type of identi" +
             "fication tag however some tags contain many pieces of information. This structur" +
             "e just identifies the tag and does not describe the contents.")]
@@ -33113,6 +34073,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The version of the software installed in the instrument box.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The version of the software installed in the instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string softwareVersion {
             get {
                 return this.softwareVersionField;
@@ -33124,7 +34085,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about the calibration of the instrument box that  was performed. This includes factory calibrations before shipping, and bench  calibrations. This does not include calibrations made in preparation for  taking measurements.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("factoryCalibration")]
+        [System.Xml.Serialization.XmlElementAttribute("factoryCalibration", DataType="cs_dtsInstrumentBoxCalibration")]
         [System.ComponentModel.DescriptionAttribute("Information about the calibration of the instrument box that  was performed. This" +
             " includes factory calibrations before shipping, and bench  calibrations. This do" +
             "es not include calibrations made in preparation for  taking measurements.")]
@@ -33141,6 +34102,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Near distance of the oven from the beginning of the fiber.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Near distance of the oven from the beginning of the fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure internalOvenLocationNear {
             get {
                 return this.internalOvenLocationNearField;
@@ -33153,6 +34115,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Far distance of the oven from the beginning of the fiber.</summary>
         [System.ComponentModel.DescriptionAttribute("Far distance of the oven from the beginning of the fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure internalOvenLocationFar {
             get {
                 return this.internalOvenLocationFarField;
@@ -33166,6 +34129,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The temperature of the oven.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The temperature of the oven.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="thermodynamicTemperatureMeasure")]
         public thermodynamicTemperatureMeasure ovenSetPoint {
             get {
                 return this.ovenSetPointField;
@@ -33179,6 +34143,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The cable used to test the instrument box.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The cable used to test the instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string testCable {
             get {
                 return this.testCableField;
@@ -33193,6 +34158,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The offset setting applied to the instrument box based on  the factory or bench c" +
             "alibration.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string offset {
             get {
                 return this.offsetField;
@@ -33205,6 +34171,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The power loss over the length of the cable.</summary>
         [System.ComponentModel.DescriptionAttribute("The power loss over the length of the cable.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="generalMeasureType")]
         public generalMeasureType differentialLossSetting {
             get {
                 return this.differentialLossSettingField;
@@ -33216,7 +34183,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Additional parameters to define the instrument box as a  piece of equipment. These should not be parameters to define the installation  or use of the box in the wellbore, or other system. This element should be used  only if an appropriate parameter is not available as an element, or in the  calibration operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.Xml.Serialization.XmlElementAttribute("parameter", DataType="indexedObject")]
         [System.ComponentModel.DescriptionAttribute(@"Additional parameters to define the instrument box as a  piece of equipment. These should not be parameters to define the installation  or use of the box in the wellbore, or other system. This element should be used  only if an appropriate parameter is not available as an element, or in the  calibration operation.")]
         public indexedObject[] parameter {
             get {
@@ -33229,7 +34196,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -33260,7 +34227,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Indexes things with the same name.  That is the first one, the second one, etc.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveCount")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is the first one, the second one, etc.")]
         public short index {
@@ -33273,7 +34240,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="kindString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string name {
             get {
@@ -33285,7 +34252,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uomString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
@@ -33297,7 +34264,7 @@ namespace Energistics.Generator.PRODML122 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="descriptionString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         public string description {
             get {
@@ -33371,6 +34338,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The company that installed the instrument box in the wellbore  measurement system" +
             ".")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string installationCompany {
             get {
                 return this.installationCompanyField;
@@ -33407,6 +34375,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The properties of the instrument box.</summary>
         [System.ComponentModel.DescriptionAttribute("The properties of the instrument box.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsInstrumentBox")]
         public cs_dtsInstrumentBox instrumentBox {
             get {
                 return this.instrumentBoxField;
@@ -33418,7 +34387,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -33481,6 +34450,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The business associate that performed the calibration.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The business associate that performed the calibration.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string calibratedBy {
             get {
                 return this.calibratedByField;
@@ -33494,6 +34464,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>This may be a standard protocol, or a software application.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("This may be a standard protocol, or a software application.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string calibrationProtocol {
             get {
                 return this.calibrationProtocolField;
@@ -33505,7 +34476,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Attribute name is the name of the parameter. Optional attribute  uom is the unit of measure of the parameter. The value of the element is the value  of the parameter. Note that a string value may appear as a parameter.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.Xml.Serialization.XmlElementAttribute("parameter", DataType="calibrationParameter")]
         [System.ComponentModel.DescriptionAttribute("Attribute name is the name of the parameter. Optional attribute  uom is the unit " +
             "of measure of the parameter. The value of the element is the value  of the param" +
             "eter. Note that a string value may appear as a parameter.")]
@@ -33522,6 +34493,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Any remarks that may be useful, regarding the calibration information.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any remarks that may be useful, regarding the calibration information.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string remarks {
             get {
                 return this.remarksField;
@@ -33533,7 +34505,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -33546,7 +34518,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -33583,6 +34555,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The value of the one way loss per unit of length.  The usual uom is decibels per " +
             "kilometre (dB/km), although this might vary depending on the  calibration method" +
             " used.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="generalMeasureType")]
         public generalMeasureType value {
             get {
                 return this.valueField;
@@ -33595,6 +34568,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The frequency (and uom) for which the one-way loss is measured.</summary>
         [System.ComponentModel.DescriptionAttribute("The frequency (and uom) for which the one-way loss is measured.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="frequencyMeasure")]
         public frequencyMeasure frequency {
             get {
                 return this.frequencyField;
@@ -33608,6 +34582,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The wavelength (and uom) for which the one-way loss is  measured. The reported wavelength should be the wavelength of the light in a vacuum.</summary>
         [System.ComponentModel.DescriptionAttribute("The wavelength (and uom) for which the one-way loss is  measured. The reported wa" +
             "velength should be the wavelength of the light in a vacuum.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure wavelength {
             get {
                 return this.wavelengthField;
@@ -33619,7 +34594,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -33632,7 +34607,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -33667,6 +34642,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The value of the refractive index.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The value of the refractive index.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="unitlessQuantity")]
         public double value {
             get {
                 return this.valueField;
@@ -33679,6 +34655,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The frequency (and uom) for which the refractive index is measured.</summary>
         [System.ComponentModel.DescriptionAttribute("The frequency (and uom) for which the refractive index is measured.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="frequencyMeasure")]
         public frequencyMeasure frequency {
             get {
                 return this.frequencyField;
@@ -33692,6 +34669,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The wavelength (and uom) for which the refractive index is  measured. The reported wavelength should be the wavelength of the light in a vacuum.</summary>
         [System.ComponentModel.DescriptionAttribute("The wavelength (and uom) for which the refractive index is  measured. The reporte" +
             "d wavelength should be the wavelength of the light in a vacuum.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure wavelength {
             get {
                 return this.wavelengthField;
@@ -33703,7 +34681,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -33716,7 +34694,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -33743,7 +34721,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>This identifies the classification system to  which the class belongs.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="kindString")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("This identifies the classification system to  which the class belongs.")]
         public string classType {
@@ -33822,6 +34800,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A human understandable name for the fiber. This is used for  identification of th" +
             "e instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -33835,6 +34814,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The mode of fiber.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The mode of fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="FiberMode")]
         public FiberMode mode {
             get {
                 return this.modeField;
@@ -33846,7 +34826,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Zero or more instances that allow other classifications  to be assigned to the fiber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("type")]
+        [System.Xml.Serialization.XmlElementAttribute("type", DataType="typeOptionalClassString")]
         [System.ComponentModel.DescriptionAttribute("Zero or more instances that allow other classifications  to be assigned to the fi" +
             "ber.")]
         public typeOptionalClassString[] type {
@@ -33862,6 +34842,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of coating on the fiber.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of coating on the fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string coating {
             get {
                 return this.coatingField;
@@ -33875,6 +34856,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The type of jacket covering the fiber.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of jacket covering the fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string jacket {
             get {
                 return this.jacketField;
@@ -33887,6 +34869,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The inner diameter of the core, generally measured in microns (um).</summary>
         [System.ComponentModel.DescriptionAttribute("The inner diameter of the core, generally measured in microns (um).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure coreDiameter {
             get {
                 return this.coreDiameterField;
@@ -33899,6 +34882,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The diameter of the core plus the cladding, generally measured in microns (um).</summary>
         [System.ComponentModel.DescriptionAttribute("The diameter of the core plus the cladding, generally measured in microns (um).")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure claddedDiameter {
             get {
                 return this.claddedDiameterField;
@@ -33912,6 +34896,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The diameter of the cable and all its sheathing, generally  measured in microns (um). This is intended to be the diameter of the cable on the spool.</summary>
         [System.ComponentModel.DescriptionAttribute("The diameter of the cable and all its sheathing, generally  measured in microns (" +
             "um). This is intended to be the diameter of the cable on the spool.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure outsideDiameter {
             get {
                 return this.outsideDiameterField;
@@ -33923,7 +34908,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The refractive index of the fiber. Also included is the frequency  in Hz for which this refractive index is valid. There may be multiple instances of this element.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("refractiveIndex")]
+        [System.Xml.Serialization.XmlElementAttribute("refractiveIndex", DataType="cs_dtsRefractiveIndex")]
         [System.ComponentModel.DescriptionAttribute("The refractive index of the fiber. Also included is the frequency  in Hz for whic" +
             "h this refractive index is valid. There may be multiple instances of this elemen" +
             "t.")]
@@ -33938,7 +34923,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The power loss (usually in decibels) per unit of length of  the fiber. Also included is the frequency for which this loss is measured.  There ay be multiple instances of this element.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("oneWayLoss")]
+        [System.Xml.Serialization.XmlElementAttribute("oneWayLoss", DataType="cs_dtsOneWayLoss")]
         [System.ComponentModel.DescriptionAttribute("The power loss (usually in decibels) per unit of length of  the fiber. Also inclu" +
             "ded is the frequency for which this loss is measured.  There ay be multiple inst" +
             "ances of this element.")]
@@ -33953,7 +34938,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Additional parameters to define the fiber as a material.  These should not be parameters to define the installation of the fiber in a  well, or other system. This element should be used only if an appropriate  parameter is not available as an element, or in the calibration operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.Xml.Serialization.XmlElementAttribute("parameter", DataType="indexedObject")]
         [System.ComponentModel.DescriptionAttribute(@"Additional parameters to define the fiber as a material.  These should not be parameters to define the installation of the fiber in a  well, or other system. This element should be used only if an appropriate  parameter is not available as an element, or in the calibration operation.")]
         public indexedObject[] parameter {
             get {
@@ -33969,6 +34954,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The spool number located on the particular spool.  The spool number may contain a" +
             "lphanumeric characters.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string spoolNumberTag {
             get {
                 return this.spoolNumberTagField;
@@ -33981,6 +34967,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The length of the fiber on the spool when purchased.</summary>
         [System.ComponentModel.DescriptionAttribute("The length of the fiber on the spool when purchased.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure spoolLength {
             get {
                 return this.spoolLengthField;
@@ -34020,6 +35007,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A fiber may go through several manufacturers for its various  parts. The supplier" +
             " is the final company in the chain that supplies the fiber  to the end user.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string supplier {
             get {
                 return this.supplierField;
@@ -34034,6 +35022,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The model number (alphanumeric) that is used by the supplier  to reference the ty" +
             "pe of fiber that is supplied to the user.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string supplierModelNumber {
             get {
                 return this.supplierModelNumberField;
@@ -34045,7 +35034,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about calibrations and quality checks that were  performed on the cable at the factory. This is not to include calibrations that  are run at installation time and at measurement time.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("factoryCalibration")]
+        [System.Xml.Serialization.XmlElementAttribute("factoryCalibration", DataType="cs_dtsCalibration")]
         [System.ComponentModel.DescriptionAttribute("Information about calibrations and quality checks that were  performed on the cab" +
             "le at the factory. This is not to include calibrations that  are run at installa" +
             "tion time and at measurement time.")]
@@ -34060,7 +35049,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A reference to a dtsInstalledSytem object that previously  used the fiber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("installationHistory")]
+        [System.Xml.Serialization.XmlElementAttribute("installationHistory", DataType="refNameString")]
         [System.ComponentModel.DescriptionAttribute("A reference to a dtsInstalledSytem object that previously  used the fiber.")]
         public refNameString[] installationHistory {
             get {
@@ -34073,7 +35062,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -34086,7 +35075,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -34167,6 +35156,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The company that installed the fiber in the wellbore.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The company that installed the fiber in the wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string installationCompany {
             get {
                 return this.installationCompanyField;
@@ -34205,6 +35195,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The diameter of the capillary tube into which one or more fibers  will be install" +
             "ed. If the installation has fibers that go to different wellbores,  only those f" +
             "ibers installed in the parent wellbore should be included in this instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure capillaryTubeDiameter {
             get {
                 return this.capillaryTubeDiameterField;
@@ -34216,7 +35207,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The properties of the fiber or fibers installed in the wellbore.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fiber")]
+        [System.Xml.Serialization.XmlElementAttribute("fiber", DataType="cs_dtsFiber")]
         [System.ComponentModel.DescriptionAttribute("The properties of the fiber or fibers installed in the wellbore.")]
         public cs_dtsFiber[] fiber {
             get {
@@ -34243,7 +35234,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The default is "inclusive".</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="EndpointQualifier")]
         [System.ComponentModel.DescriptionAttribute("The default is \"inclusive\".")]
         public EndpointQualifier endpoint {
             get {
@@ -34342,6 +35333,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWell {
             get {
                 return this.nameWellField;
@@ -34356,6 +35348,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the installed system.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string nameWellbore {
             get {
                 return this.nameWellboreField;
@@ -34370,6 +35363,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Human recognizable context for the dts.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string name {
             get {
                 return this.nameField;
@@ -34382,6 +35376,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDate")]
         public endpointQualifiedDate dateMin {
             get {
                 return this.dateMinField;
@@ -34394,6 +35389,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDate")]
         public endpointQualifiedDate dateMax {
             get {
                 return this.dateMaxField;
@@ -34430,6 +35426,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Contextual data about the well in which the system was installed.</summary>
         [System.ComponentModel.DescriptionAttribute("Contextual data about the well in which the system was installed.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_wellContext")]
         public cs_wellContext wellContext {
             get {
                 return this.wellContextField;
@@ -34444,6 +35441,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Is this a planned installation in a well, or has the  installation already occurr" +
             "ed. Note that the default value is \'false\',  which states that this is an actual" +
             " installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="logicalBoolean")]
         public bool isPlanned {
             get {
                 return this.isPlannedField;
@@ -34467,6 +35465,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the fiber used, and its installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the fiber used, and its installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsFiberInformation")]
         public cs_dtsFiberInformation fiberInformation {
             get {
                 return this.fiberInformationField;
@@ -34479,6 +35478,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the instrument box used, and its installation.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the instrument box used, and its installation.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsBoxInformation")]
         public cs_dtsBoxInformation instrumentBoxInformation {
             get {
                 return this.instrumentBoxInformationField;
@@ -34493,6 +35493,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The configuration of the fiber installation. Example values  would be linear, lin" +
             "ear with gauge, J, U.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string fiberConfiguration {
             get {
                 return this.fiberConfigurationField;
@@ -34504,7 +35505,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A fiber installed with a "U" configuration will have two ends  available for hookup to an instrument box. In order to record which end is  cabled to the instrument box on a particular measurement run, it is necessary  to identify the two ends. This complex type allows a name and description for  each end, so that it may be identified in a later use. This may also be useful  when multiple fibers in multiple wellbores converge at the same wellhead.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fiberEndPoint")]
+        [System.Xml.Serialization.XmlElementAttribute("fiberEndPoint", DataType="cs_dtsFiberEndPoint")]
         [System.ComponentModel.DescriptionAttribute(@"A fiber installed with a ""U"" configuration will have two ends  available for hookup to an instrument box. In order to record which end is  cabled to the instrument box on a particular measurement run, it is necessary  to identify the two ends. This complex type allows a name and description for  each end, so that it may be identified in a later use. This may also be useful  when multiple fibers in multiple wellbores converge at the same wellhead.")]
         public cs_dtsFiberEndPoint[] fiberEndPoint {
             get {
@@ -34518,6 +35519,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The length of the fiber installed in the wellbore.</summary>
         [System.ComponentModel.DescriptionAttribute("The length of the fiber installed in the wellbore.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="lengthMeasure")]
         public lengthMeasure fiberLength {
             get {
                 return this.fiberLengthField;
@@ -34531,6 +35533,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A table of values along the length along the fiber.</summary>
         [System.Xml.Serialization.XmlArrayItemAttribute("installedPoint", IsNullable=false)]
         [System.ComponentModel.DescriptionAttribute("A table of values along the length along the fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsFiberInstalledPoints")]
         public cs_dtsSingleInstalledPoint[] wellboreFiberSchematic {
             get {
                 return this.wellboreFiberSchematicField;
@@ -34545,6 +35548,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("Total light budget available for the installation. This is  generally measured in" +
             " decibels, and indicates the total power loss for two-way  travel of the light i" +
             "n the installed fiber.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="generalMeasureType")]
         public generalMeasureType opticalBudget {
             get {
                 return this.opticalBudgetField;
@@ -34557,6 +35561,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The activity of pumping the fiber downhole</summary>
         [System.ComponentModel.DescriptionAttribute("The activity of pumping the fiber downhole")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_dtsPumpActivity")]
         public cs_dtsPumpActivity pumpActivity {
             get {
                 return this.pumpActivityField;
@@ -34568,7 +35573,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>This captures the data from the pre-installation and post-installation  OTDR tests run on the fiber. A standard quality control program would include these  two, but the schema allows for more than two if additional runs associated with the  installation of the fiber are performed. OTDR runs associated with a measurement are  given as a child of the measurementInformation element.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("otdrInstallationTest")]
+        [System.Xml.Serialization.XmlElementAttribute("otdrInstallationTest", DataType="cs_dtsOtdr")]
         [System.ComponentModel.DescriptionAttribute(@"This captures the data from the pre-installation and post-installation  OTDR tests run on the fiber. A standard quality control program would include these  two, but the schema allows for more than two if additional runs associated with the  installation of the fiber are performed. OTDR runs associated with a measurement are  given as a child of the measurementInformation element.")]
         public cs_dtsOtdr[] otdrInstallationTest {
             get {
@@ -34581,7 +35586,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Any calibration other than the ones explicitly given may be  recorded here. This is a general calibration type, which is populated with name/value pairs.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("installationCalibration")]
+        [System.Xml.Serialization.XmlElementAttribute("installationCalibration", DataType="cs_dtsCalibration")]
         [System.ComponentModel.DescriptionAttribute("Any calibration other than the ones explicitly given may be  recorded here. This " +
             "is a general calibration type, which is populated with name/value pairs.")]
         public cs_dtsCalibration[] installationCalibration {
@@ -34596,6 +35601,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>If an instrument box is changed, for example, but the  fiber remains the same, this instance of installed fiber is given to record  that change. This element refers to a previous installed fiber, on which  this one is based. For example, the wellboreFiberSchematic is unchanged, and  may be obtained from the previous instance of installed fiber that is  referenced here.</summary>
         [System.ComponentModel.DescriptionAttribute(@"If an instrument box is changed, for example, but the  fiber remains the same, this instance of installed fiber is given to record  that change. This element refers to a previous installed fiber, on which  this one is based. For example, the wellboreFiberSchematic is unchanged, and  may be obtained from the previous instance of installed fiber that is  referenced here.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="refNameString")]
         public refNameString basedOnInstalledFiber {
             get {
                 return this.basedOnInstalledFiberField;
@@ -34608,6 +35614,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that contains elements that are common to all data  objects.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_commonData")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -34620,6 +35627,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -34631,7 +35639,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents  the well referenced by " +
@@ -34647,7 +35655,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidParentString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents  the wellbore refere" +
@@ -34663,7 +35671,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
@@ -34693,6 +35701,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The minimum start time for an object. This only applies to objects with a root le" +
             "vel date and/or dateTime element(s). The objects may or not be growing objects b" +
             "ut the See the API specification for behavior related to this query parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -34707,6 +35716,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The maximum start time for an object. This only applies to objects with a root le" +
             "vel date and/or dateTime element(s). See the API specification for behavior rela" +
             "ted to this query parameter.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="endpointQualifiedDateTime")]
         public endpointQualifiedDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -34740,6 +35750,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date on which the event took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp eventDate {
             get {
                 return this.eventDateField;
@@ -34753,6 +35764,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The kind of event event.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The kind of event event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string eventType {
             get {
                 return this.eventTypeField;
@@ -34766,6 +35778,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The party responsible for the event.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The party responsible for the event.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string responsibleParty {
             get {
                 return this.responsiblePartyField;
@@ -34779,6 +35792,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A free form comment that can further  define the event that occurred.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A free form comment that can further  define the event that occurred.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -34790,7 +35804,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -34803,7 +35817,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -34844,6 +35858,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The security class in which this document is  classified. Examples would be confi" +
             "dential, partner confidential,  tight. The meaning of the class is determined by" +
             " the System in which  it is defined.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string @class {
             get {
                 return this.classField;
@@ -34858,6 +35873,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The security classification system.  This gives context to the meaning of the Cla" +
             "ss value.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string securitySystem {
             get {
                 return this.securitySystemField;
@@ -34870,6 +35886,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date on which this security class is no  longer applicable.</summary>
         [System.ComponentModel.DescriptionAttribute("The date on which this security class is no  longer applicable.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp endDate {
             get {
                 return this.endDateField;
@@ -34894,6 +35911,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A general comment to further define the security  class.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A general comment to further define the security  class.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -34905,7 +35923,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("extensionNameValue", DataType="cs_extensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
@@ -34918,7 +35936,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="uidString")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
@@ -34951,6 +35969,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time that the file was created.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time that the file was created.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp fileCreationDate {
             get {
                 return this.fileCreationDateField;
@@ -34965,6 +35984,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If appropriate, the software that created the file.  This is a free form string, " +
             "and may include whatever information  is deemed relevant.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string softwareName {
             get {
                 return this.softwareNameField;
@@ -34978,6 +35998,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or business associate that created  the file.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The person or business associate that created  the file.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string fileCreator {
             get {
                 return this.fileCreatorField;
@@ -34992,6 +36013,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("Any comment that would be useful to further  explain the creation of this instanc" +
             "e document.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -35038,6 +36060,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("An identifier for the document. This is  intended to be unique within the context" +
             " of the NamingSystem.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct documentName {
             get {
                 return this.documentNameField;
@@ -35049,7 +36072,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Zero or more alternate names for the document.  These names do not need to be unique within the naming system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("documentAlias")]
+        [System.Xml.Serialization.XmlElementAttribute("documentAlias", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("Zero or more alternate names for the document.  These names do not need to be uni" +
             "que within the naming system.")]
         public nameStruct[] documentAlias {
@@ -35064,6 +36087,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="timestamp")]
         public Energistics.DataAccess.Timestamp documentDate {
             get {
                 return this.documentDateField;
@@ -35086,7 +36110,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>A document class. Examples of classes would be a  metadata classification or a set of keywords.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("documentClass")]
+        [System.Xml.Serialization.XmlElementAttribute("documentClass", DataType="nameStruct")]
         [System.ComponentModel.DescriptionAttribute("A document class. Examples of classes would be a  metadata classification or a se" +
             "t of keywords.")]
         public nameStruct[] documentClass {
@@ -35102,6 +36126,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.</summary>
         [System.ComponentModel.DescriptionAttribute("The information about the creation of the  exchange file. This is not about the c" +
             "reation of the data within  the file, but the creation of the file itself.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentFileCreation")]
         public cs_documentFileCreation fileCreationInformation {
             get {
                 return this.fileCreationInformationField;
@@ -35113,7 +36138,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about the security to be applied to  this file. More than one classification can be given.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("securityInformation")]
+        [System.Xml.Serialization.XmlElementAttribute("securityInformation", DataType="cs_documentSecurityInfo")]
         [System.ComponentModel.DescriptionAttribute("Information about the security to be applied to  this file. More than one classif" +
             "ication can be given.")]
         public cs_documentSecurityInfo[] securityInformation {
@@ -35129,6 +36154,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A free-form string that allows a disclaimer to  accompany the information.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A free-form string that allows a disclaimer to  accompany the information.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string disclaimer {
             get {
                 return this.disclaimerField;
@@ -35142,6 +36168,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A collection of events that can document the  history of the data.</summary>
         [System.Xml.Serialization.XmlArrayItemAttribute("event", IsNullable=false)]
         [System.ComponentModel.DescriptionAttribute("A collection of events that can document the  history of the data.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentAudit")]
         public cs_documentEvent[] auditTrail {
             get {
                 return this.auditTrailField;
@@ -35155,6 +36182,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The owner of the data.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The owner of the data.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameString")]
         public string owner {
             get {
                 return this.ownerField;
@@ -35167,6 +36195,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>WITSML query parameters.</summary>
         [System.ComponentModel.DescriptionAttribute("WITSML query parameters.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfoQueryParam")]
         public cs_documentInfoQueryParam queryParam {
             get {
                 return this.queryParamField;
@@ -35180,6 +36209,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>An optional comment about the document.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("An optional comment about the document.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -35207,6 +36237,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35218,7 +36249,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single Wireline Formation Test (WFT).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("wftRun")]
+        [System.Xml.Serialization.XmlElementAttribute("wftRun", DataType="obj_wftRun")]
         [System.ComponentModel.DescriptionAttribute("Information about a single Wireline Formation Test (WFT).")]
         public obj_wftRun[] wftRun {
             get {
@@ -35231,7 +36262,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35265,6 +36296,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35276,7 +36308,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single well test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("wellTest")]
+        [System.Xml.Serialization.XmlElementAttribute("wellTest", DataType="obj_wellTest")]
         [System.ComponentModel.DescriptionAttribute("Information about a single well test.")]
         public obj_wellTest[] wellTest {
             get {
@@ -35289,7 +36321,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35323,6 +36355,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35334,7 +36367,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Statistics about a single range of time. This is a VIEW of the time series data and represents derived information about that series. As such, it is not persisted and cannot be added, updated or deleted from a persistent server. The statistics view uses the same identity (including uid) as the time series data object.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("timeSeriesStatistic")]
+        [System.Xml.Serialization.XmlElementAttribute("timeSeriesStatistic", DataType="obj_timeSeriesStatistic")]
         [System.ComponentModel.DescriptionAttribute(@"Statistics about a single range of time. This is a VIEW of the time series data and represents derived information about that series. As such, it is not persisted and cannot be added, updated or deleted from a persistent server. The statistics view uses the same identity (including uid) as the time series data object.")]
         public obj_timeSeriesStatistic[] timeSeriesStatistic {
             get {
@@ -35347,7 +36380,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35376,7 +36409,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single time series.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("timeSeriesData")]
+        [System.Xml.Serialization.XmlElementAttribute("timeSeriesData", DataType="obj_timeSeriesData")]
         [System.ComponentModel.DescriptionAttribute("Information about a single time series.")]
         public obj_timeSeriesData[] timeSeriesData {
             get {
@@ -35389,7 +36422,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35468,6 +36501,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The type of report.  This should define and constrain the expected content of the" +
             " report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string kind {
             get {
                 return this.kindField;
@@ -35480,6 +36514,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The tile of the report if different from the name of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The tile of the report if different from the name of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nameStruct")]
         public nameStruct title {
             get {
                 return this.titleField;
@@ -35543,6 +36578,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([1-9][0-9][0-9][0-9])-(([0][0-9])|([1][0-2]))")]
         [System.ComponentModel.DescriptionAttribute("The month that the report represents (i.e., not a year, date or date range). Only" +
             " one of date, month or year should be specified.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="calendarMonth")]
         public string month {
             get {
                 return this.monthField;
@@ -35557,6 +36593,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DataAnnotations.RangeAttribute(1000D, 9999D)]
         [System.ComponentModel.DescriptionAttribute("The year that the report represents (i.e., not a month, date or date range). Only" +
             " one of date, month or year should be specified.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="calendarYear")]
         public int year {
             get {
                 return this.yearField;
@@ -35581,6 +36618,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A textual comment about the report.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual comment about the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="commentString")]
         public string comment {
             get {
                 return this.commentField;
@@ -35594,6 +36632,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The current report version.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.ComponentModel.DescriptionAttribute("The current report version.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="kindString")]
         public string reportVersion {
             get {
                 return this.reportVersionField;
@@ -35606,6 +36645,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The current document version status.</summary>
         [System.ComponentModel.DescriptionAttribute("The current document version status.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="ReportVersionStatus")]
         public ReportVersionStatus reportStatus {
             get {
                 return this.reportStatusField;
@@ -35630,6 +36670,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this report.  The name can be qu" +
             "alified by a naming system.  This also defines the kind of facility.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="facilityIdentifierStruct")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -35641,7 +36682,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to  the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.Xml.Serialization.XmlElementAttribute("contextFacility", DataType="facilityIdentifierStruct")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to  the represented ins" +
             "tallation.")]
         public facilityIdentifierStruct[] contextFacility {
@@ -35656,6 +36697,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The operator of the facilities in the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The operator of the facilities in the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate @operator {
             get {
                 return this.operatorField;
@@ -35668,6 +36710,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The geographic context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The geographic context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_geographicContext")]
         public cs_geographicContext geographicContext {
             get {
                 return this.geographicContextField;
@@ -35705,6 +36748,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or company that issued the report. This may contain the role of the person or company within the context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The person or company that issued the report. This may contain the role of the pe" +
             "rson or company within the context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate issuedBy {
             get {
                 return this.issuedByField;
@@ -35742,6 +36786,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The person or company that approved the report. This may contain the role of the person or company within the context of the report.</summary>
         [System.ComponentModel.DescriptionAttribute("The person or company that approved the report. This may contain the role of the " +
             "person or company within the context of the report.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_businessAssociate")]
         public cs_businessAssociate approver {
             get {
                 return this.approverField;
@@ -35754,6 +36799,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>A container element that can contain custom or user defined  data elements.</summary>
         [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_customData")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -35796,6 +36842,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35807,7 +36854,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single productVolume.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("productVolume")]
+        [System.Xml.Serialization.XmlElementAttribute("productVolume", DataType="obj_productVolume")]
         [System.ComponentModel.DescriptionAttribute("Information about a single productVolume.")]
         public obj_productVolume[] productVolume {
             get {
@@ -35820,7 +36867,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35854,6 +36901,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35865,7 +36913,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single productionOperation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("productionOperation")]
+        [System.Xml.Serialization.XmlElementAttribute("productionOperation", DataType="obj_productionOperation")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Information about a single productionOperation.")]
         public obj_productionOperation[] productionOperation {
@@ -35879,7 +36927,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35913,6 +36961,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35924,7 +36973,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single Product Flow Model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("productFlowModel")]
+        [System.Xml.Serialization.XmlElementAttribute("productFlowModel", DataType="obj_productFlowModel")]
         [System.ComponentModel.DescriptionAttribute("Information about a single Product Flow Model.")]
         public obj_productFlowModel[] productFlowModel {
             get {
@@ -35937,7 +36986,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -35971,6 +37020,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -35982,7 +37032,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single Fluid Sample.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fluidSample")]
+        [System.Xml.Serialization.XmlElementAttribute("fluidSample", DataType="obj_fluidSample")]
         [System.ComponentModel.DescriptionAttribute("Information about a single Fluid Sample.")]
         public obj_fluidSample[] fluidSample {
             get {
@@ -35995,7 +37045,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -36029,6 +37079,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -36040,7 +37091,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single Fluid Analysis Result.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fluidAnalysisResult")]
+        [System.Xml.Serialization.XmlElementAttribute("fluidAnalysisResult", DataType="obj_fluidAnalysisResult")]
         [System.ComponentModel.DescriptionAttribute("Information about a single Fluid Analysis Result.")]
         public obj_fluidAnalysisResult[] fluidAnalysisResult {
             get {
@@ -36053,7 +37104,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -36087,6 +37138,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -36098,7 +37150,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Information about a single Fluid Analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("fluidAnalysis")]
+        [System.Xml.Serialization.XmlElementAttribute("fluidAnalysis", DataType="obj_fluidAnalysis")]
         [System.ComponentModel.DescriptionAttribute("Information about a single Fluid Analysis.")]
         public obj_fluidAnalysis[] fluidAnalysis {
             get {
@@ -36111,7 +37163,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -36145,6 +37197,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -36156,7 +37209,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Main wrapper for all the distributed temperature survey information about the measurement. Note that this object must be accompanied by a wellLog object in order to be complete.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("dtsMeasurement")]
+        [System.Xml.Serialization.XmlElementAttribute("dtsMeasurement", DataType="obj_dtsMeasurement")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Main wrapper for all the distributed temperature survey information about the mea" +
             "surement. Note that this object must be accompanied by a wellLog object in order" +
@@ -36172,7 +37225,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
@@ -36206,6 +37259,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Information about the XML message instance.</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="cs_documentInfo")]
         public cs_documentInfo documentInfo {
             get {
                 return this.documentInfoField;
@@ -36217,7 +37271,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Main wrapper for all the distributed temperature survey  information about the installed system. Note that this can serve as a standalone  object for messages that are not part of the WITSML server architecture.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("dtsInstalledSystem")]
+        [System.Xml.Serialization.XmlElementAttribute("dtsInstalledSystem", DataType="obj_dtsInstalledSystem")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Main wrapper for all the distributed temperature survey  information about the in" +
             "stalled system. Note that this can serve as a standalone  object for messages th" +
@@ -36233,7 +37287,7 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="schemaVersionStringProdml")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]

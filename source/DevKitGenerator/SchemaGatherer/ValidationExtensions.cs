@@ -449,9 +449,8 @@ namespace Energistics.SchemaGatherer
         {
             var memberProperty = GetMemberProperty(typeDeclaration, attribute.Name);
             var restrictions = GetAttributeRestrictions(attribute).ToList();
-
             if (memberProperty == null) return;
-
+            
             if (attribute.Use == XmlSchemaUse.Required)
             {
                 AddRequiredAttribute(memberProperty);
@@ -459,6 +458,8 @@ namespace Energistics.SchemaGatherer
 
             AddRestrictionAttributes(codeNamespace, typeDeclaration, memberProperty, restrictions);
             AddDescriptionAttribute(memberProperty, GetAnnotation(attribute));
+
+            AddAttributeDataType(attribute, memberProperty);
         }
 
         private static void AddElementValidation(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, XmlSchemaElement element)
@@ -487,6 +488,82 @@ namespace Energistics.SchemaGatherer
 
             AddRestrictionAttributes(codeNamespace, typeDeclaration, memberProperty, restrictions);
             AddDescriptionAttribute(memberProperty, GetAnnotation(element));
+
+            AddElementDataType(element, memberProperty);
+        }
+
+        private static void AddAttributeDataType(XmlSchemaAttribute attribute, CodeMemberProperty memberProperty)
+        {
+            if (string.IsNullOrEmpty(attribute?.SchemaTypeName?.Name))
+                return;
+
+            var attributeAttribute = Get<XmlAttributeAttribute>(memberProperty);
+            if (attributeAttribute != null)
+            {
+                foreach (var arg in attributeAttribute.Arguments.Cast<CodeAttributeArgument>())
+                {
+                    if (arg.Name == "DataType")
+                        return;
+                }
+            }
+
+            var argument = new CodeAttributeArgument("DataType", new CodePrimitiveExpression(attribute.SchemaTypeName.Name));
+            if (attributeAttribute == null)
+            {
+                attributeAttribute = new CodeAttributeDeclaration(new CodeTypeReference(typeof(XmlAttributeAttribute)));
+                memberProperty.CustomAttributes.Add(attributeAttribute);
+            }
+            attributeAttribute.Arguments.Add(argument);
+        }
+
+        private static void AddElementDataType(XmlSchemaElement element, CodeMemberProperty memberProperty)
+        {
+            if (string.IsNullOrEmpty(element?.SchemaTypeName?.Name))
+                return;
+
+            var elementAttributes = GetAll<XmlElementAttribute>(memberProperty);
+            CodeAttributeDeclaration elementAttribute = null;
+            if (elementAttributes != null)
+            {
+                foreach (var attribute in elementAttributes)
+                {
+                    bool hasElementName = false;
+                    bool nameMatches = false;
+
+                    if (attribute.Arguments.Count > 0 &&
+                        string.IsNullOrEmpty(attribute.Arguments[0].Name) &&
+                        attribute.Arguments[0].Value is CodePrimitiveExpression)
+                    {
+                        var expression = attribute.Arguments[0].Value as CodePrimitiveExpression;
+                        if (expression.Value is string)
+                        {
+                            hasElementName = true;
+                            if ((string)expression.Value == element.Name)
+                                nameMatches = true;
+                        }
+                    }
+
+                    if (hasElementName && !nameMatches)
+                        continue;
+
+                    foreach (var arg in attribute.Arguments.Cast<CodeAttributeArgument>())
+                    {
+                        if ((!hasElementName || nameMatches) && arg.Name == "DataType")
+                            return;
+                    }
+
+                    if (!hasElementName || nameMatches)
+                        elementAttribute = attribute;
+                }
+            }
+            if (elementAttribute == null)
+            {
+                elementAttribute = new CodeAttributeDeclaration(new CodeTypeReference(typeof(XmlElementAttribute)));
+                memberProperty.CustomAttributes.Add(elementAttribute);
+            }
+
+            var argument = new CodeAttributeArgument("DataType", new CodePrimitiveExpression(element.SchemaTypeName.Name));
+            elementAttribute.Arguments.Add(argument);
         }
 
         private static void AddRestrictionAttributes(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, IList<XmlSchemaFacet> restrictions)
@@ -573,6 +650,23 @@ namespace Energistics.SchemaGatherer
         {
             if (choice.MinOccurs == 1 && choice.MaxOccurs == 1)
                 UpdateSingleChoiceAttributes(codeNamespace, typeDeclaration, choice);
+
+            foreach (var element in choice.Items.OfType<XmlSchemaElement>())
+            {
+                var memberProperty = GetChoiceMemberProperty(typeDeclaration, element.Name);
+                if (memberProperty != null)
+                    AddElementDataType(element, memberProperty);
+            }
+            foreach (var sequence in choice.Items.OfType<XmlSchemaSequence>())
+            {
+
+                foreach (var element in sequence.Items.OfType<XmlSchemaElement>())
+                {
+                    var memberProperty = GetChoiceMemberProperty(typeDeclaration, element.Name);
+                    if (memberProperty != null)
+                        AddElementDataType(element, memberProperty);
+                }
+            }
         }
 
         private static void UpdateSingleChoiceAttributes(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, XmlSchemaChoice choice)
@@ -676,6 +770,25 @@ namespace Energistics.SchemaGatherer
         {
             return typeDeclaration.Members.OfType<CodeMemberProperty>()
                 .FirstOrDefault(x => string.Equals(x.Name, propertyName, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        private static CodeMemberProperty GetChoiceMemberProperty(CodeTypeDeclaration typeDeclaration, string propertyName)
+        {
+            return typeDeclaration.Members.OfType<CodeMemberProperty>()
+                .FirstOrDefault(x => GetAll<XmlElementAttribute>(x).Any(y =>
+                    {
+                        if (y.Arguments.Count == 0 ||
+                            !string.IsNullOrEmpty(y.Arguments[0].Name) ||
+                            !(y.Arguments[0].Value is CodePrimitiveExpression))
+                        {
+                            return false;
+                        }
+
+                        var expression = y.Arguments[0].Value as CodePrimitiveExpression;
+
+                        return expression.Value is string && (string)expression.Value == propertyName;
+                    })
+                );
         }
 
         private static CodeMemberField GetMemberField(CodeTypeDeclaration typeDeclaration, string propertyName)

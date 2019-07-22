@@ -132,7 +132,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 #>
 		<#=generator.GetDescription(type, property.Name)#>
 		<#=generator.GetValidationAttributes(type, property)#>
-        [XmlAttribute("<#=string.IsNullOrEmpty(attribute.AttributeName) ? property.Name : attribute.AttributeName#>"<#=attribute.Form.HasFlag(XmlSchemaForm.Qualified) ? ", Form = System.Xml.Schema.XmlSchemaForm.Qualified" : String.Empty#><#=string.IsNullOrEmpty(attribute.Namespace) ? String.Empty : String.Format(", Namespace = \"{0}\"", attribute.Namespace)#>)]
+        [XmlAttribute("<#=string.IsNullOrEmpty(attribute.AttributeName) ? property.Name : attribute.AttributeName#>"<#=attribute.Form.HasFlag(XmlSchemaForm.Qualified) ? ", Form = System.Xml.Schema.XmlSchemaForm.Qualified" : String.Empty#><#=string.IsNullOrEmpty(attribute.Namespace) ? String.Empty : String.Format(", Namespace = \"{0}\"", attribute.Namespace)#><#=string.IsNullOrEmpty(attribute.DataType) ? String.Empty : String.Format(", DataType = \"{0}\"", attribute.DataType)#>)]
 		<#=generator.GetSurrogate(type, property)#>
 <#                      
                         }
