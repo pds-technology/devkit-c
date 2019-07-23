@@ -129,7 +129,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Citation property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Citation", DataType="Citation")]
+        [EnergisticsDataTypeAttribute(DataType = "Citation")]
+		[XmlElement("Citation")]
         public Citation Citation {
             get {
                 return CitationField;
@@ -146,7 +147,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Aliases property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Aliases", DataType="ObjectAlias")]
+        [EnergisticsDataTypeAttribute(DataType = "ObjectAlias")]
+		[XmlElement("Aliases")]
         public List<ObjectAlias> Aliases {
             get {
                 return AliasesField;
@@ -174,8 +176,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// CustomData property
         /// </summary>
-		
-		[XmlElement("CustomData", DataType="CustomData")]
+		[EnergisticsDataTypeAttribute(DataType = "CustomData")]
+		[XmlElement("CustomData")]
         public CustomData CustomData {
             get {
                 return CustomDataField;
@@ -193,7 +195,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The specific version of a schema from which this object is derived. This string should be exactly equivalent to the version attribute of the root element of the associated XSD schema file. In the UML model is the same as the version tagged value of the <<XSDschema>> package.")]
-        [XmlAttribute("schemaVersion", DataType = "string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("schemaVersion")]
 		
         public string SchemaVersion {
             get {
@@ -212,7 +215,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
-        [XmlAttribute("uuid", DataType = "UuidString")]
+        [EnergisticsDataTypeAttribute(DataType = "UuidString")]
+        [XmlAttribute("uuid")]
 		
         public string Uuid {
             get {
@@ -230,7 +234,8 @@ namespace Energistics.DataAccess.RESQML200
         /// objectVersion property
         /// </summary>
 		[StringLength(64)]
-        [XmlAttribute("objectVersion", DataType = "NameString")]
+        [EnergisticsDataTypeAttribute(DataType = "NameString")]
+        [XmlAttribute("objectVersion")]
 		
         public string ObjectVersion {
             get {
@@ -285,7 +290,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [StringLength(256)]
         [Description("One line description/name of the RESQML object.  This is the equivalent in ISO 19115 of CI_Citation.title  Legacy DCGroup - title")]
-		[XmlElement("Title", DataType="DescriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "DescriptionString")]
+		[XmlElement("Title")]
         public string Title {
             get {
                 return TitleField;
@@ -304,7 +310,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [StringLength(64)]
         [Description("Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"originator\".  Legacy DCGroup - author")]
-		[XmlElement("Originator", DataType="NameString")]
+        [EnergisticsDataTypeAttribute(DataType = "NameString")]
+		[XmlElement("Originator")]
         public string Originator {
             get {
                 return OriginatorField;
@@ -322,7 +329,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation\"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created")]
-		[XmlElement("Creation", DataType="dateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "dateTime")]
+		[XmlElement("Creation")]
         public DateTime? Creation {
             get {
                 return CreationField;
@@ -341,7 +349,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [StringLength(256)]
         [Description("Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML  - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.")]
-		[XmlElement("Format", DataType="DescriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "DescriptionString")]
+		[XmlElement("Format")]
         public string Format {
             get {
                 return FormatField;
@@ -359,7 +368,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[StringLength(64)]
         [Description("Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"editor\".  Legacy DCGroup - contributor")]
-		[XmlElement("Editor", DataType="NameString")]
+        [EnergisticsDataTypeAttribute(DataType = "NameString")]
+		[XmlElement("Editor")]
         public string Editor {
             get {
                 return EditorField;
@@ -376,7 +386,8 @@ namespace Energistics.DataAccess.RESQML200
         /// LastUpdate property
         /// </summary>
 		[Description("Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate\"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified")]
-		[XmlElement("LastUpdate", DataType="dateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "dateTime")]
+		[XmlElement("LastUpdate")]
         public DateTime? LastUpdate {
             get {
                 return LastUpdateField;
@@ -410,8 +421,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// VersionString property
         /// </summary>
-		
-		[XmlElement("VersionString", DataType="string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("VersionString")]
         public string VersionString {
             get {
                 return VersionStringField;
@@ -429,7 +440,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[StringLength(4000)]
         [Description("User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
-		[XmlElement("Description", DataType="CommentString")]
+        [EnergisticsDataTypeAttribute(DataType = "CommentString")]
+		[XmlElement("Description")]
         public string Description {
             get {
                 return DescriptionField;
@@ -447,7 +459,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[StringLength(4000)]
         [Description("Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
-		[XmlElement("DescriptiveKeywords", DataType="CommentString")]
+        [EnergisticsDataTypeAttribute(DataType = "CommentString")]
+		[XmlElement("DescriptiveKeywords")]
         public string DescriptiveKeywords {
             get {
                 return DescriptiveKeywordsField;
@@ -502,7 +515,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [StringLength(64)]
         [Description("Name of the chrono rank such as \"epoch, era, ...\"")]
-		[XmlElement("Name", DataType="NameString")]
+        [EnergisticsDataTypeAttribute(DataType = "NameString")]
+		[XmlElement("Name")]
         public string Name {
             get {
                 return NameField;
@@ -520,7 +534,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Contains", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Contains")]
         public List<DataObjectReference> Contains {
             get {
                 return ContainsField;
@@ -587,7 +602,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The content type of the referenced element.")]
-		[XmlElement("ContentType", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("ContentType")]
         public string ContentType {
             get {
                 return ContentTypeField;
@@ -605,7 +621,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [StringLength(256)]
-		[XmlElement("Title", DataType="DescriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "DescriptionString")]
+		[XmlElement("Title")]
         public string Title {
             get {
                 return TitleField;
@@ -624,7 +641,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("Reference to an object using its global UID.")]
-		[XmlElement("UUID", DataType="UuidString")]
+        [EnergisticsDataTypeAttribute(DataType = "UuidString")]
+		[XmlElement("UUID")]
         public string UUID {
             get {
                 return UUIDField;
@@ -641,7 +659,8 @@ namespace Energistics.DataAccess.RESQML200
         /// UuidAuthority property
         /// </summary>
 		[Description("The authority that issued and maintains the uuid of the referenced object. Used mainly in alias context.")]
-		[XmlElement("UuidAuthority", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("UuidAuthority")]
         public string UuidAuthority {
             get {
                 return UuidAuthorityField;
@@ -659,7 +678,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[StringLength(64)]
         [Description("Indicates the version of the object which is referenced.")]
-		[XmlElement("VersionString", DataType="NameString")]
+        [EnergisticsDataTypeAttribute(DataType = "NameString")]
+		[XmlElement("VersionString")]
         public string VersionString {
             get {
                 return VersionStringField;
@@ -711,8 +731,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Qualifier property
         /// </summary>
-		
-		[XmlElement("Qualifier", DataType="ContactSide")]
+		[EnergisticsDataTypeAttribute(DataType = "ContactSide")]
+		[XmlElement("Qualifier")]
         public ContactSide? Qualifier {
             get {
                 return QualifierField;
@@ -746,8 +766,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SecondaryQualifier property
         /// </summary>
-		
-		[XmlElement("SecondaryQualifier", DataType="ContactMode")]
+		[EnergisticsDataTypeAttribute(DataType = "ContactMode")]
+		[XmlElement("SecondaryQualifier")]
         public ContactMode? SecondaryQualifier {
             get {
                 return SecondaryQualifierField;
@@ -800,7 +820,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("WitsmlWell", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("WitsmlWell")]
         public DataObjectReference WitsmlWell {
             get {
                 return WitsmlWellField;
@@ -818,7 +839,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("WitsmlWellbore", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("WitsmlWellbore")]
         public DataObjectReference WitsmlWellbore {
             get {
                 return WitsmlWellboreField;
@@ -872,7 +894,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Used to indicate that a time series overlaps with its parent time series, e.g., as may be done for simulation studies, where the end state of one calculation is the initial state of the next.")]
-		[XmlElement("HasOverlap", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("HasOverlap")]
         public bool? HasOverlap {
             get {
                 return HasOverlapField;
@@ -890,7 +913,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ParentTimeIndex", DataType="TimeIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeIndex")]
+		[XmlElement("ParentTimeIndex")]
         public TimeIndex ParentTimeIndex {
             get {
                 return ParentTimeIndexField;
@@ -944,6 +968,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The index of the time in the time series.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -962,7 +987,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("TimeSeries", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("TimeSeries")]
         public DataObjectReference TimeSeries {
             get {
                 return TimeSeriesField;
@@ -1016,7 +1042,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("A date which can be represented according to the W3CDTF format.")]
-		[XmlElement("DateTime", DataType="dateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "dateTime")]
+		[XmlElement("DateTime")]
         public DateTime? DateTime {
             get {
                 return DateTimeField;
@@ -1033,7 +1060,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Indicates that the dateTime attribute must be translated according to this value.
         /// </summary>
 		[Description("Indicates that the dateTime attribute must be translated according to this value.")]
-		[XmlElement("YearOffset", DataType="long")]
+        [EnergisticsDataTypeAttribute(DataType = "long")]
+		[XmlElement("YearOffset")]
         public long? YearOffset {
             get {
                 return YearOffsetField;
@@ -1126,7 +1154,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Facet of the property kind (see the enumeration)")]
-		[XmlElement("Facet", DataType="Facet")]
+        [EnergisticsDataTypeAttribute(DataType = "Facet")]
+		[XmlElement("Facet")]
         public Facet? Facet {
             get {
                 return FacetField;
@@ -1144,7 +1173,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Property facet value.")]
-		[XmlElement("Value", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("Value")]
         public string Value {
             get {
                 return ValueField;
@@ -1197,6 +1227,7 @@ namespace Energistics.DataAccess.RESQML200
         /// Patch index used to attach properties to a specific patch of the indexable elements.
         /// </summary>
 		[Description("Patch index used to attach properties to a specific patch of the indexable elements.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RepresentationPatchIndex", DataType="nonNegativeInteger")]
         public string RepresentationPatchIndex {
             get {
@@ -1215,7 +1246,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Values to be attached to the indexable elements.")]
-		[XmlElement("Values", DataType="AbstractValueArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractValueArray")]
+		[XmlElement("Values")]
         public AbstractValueArray Values {
             get {
                 return ValuesField;
@@ -1363,6 +1395,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Integer to match for the value to be considered true")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("Value", DataType="integer")]
         public string Value {
             get {
@@ -1381,7 +1414,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Property", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Property")]
         public DataObjectReference Property {
             get {
                 return PropertyField;
@@ -1417,7 +1451,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Reference to an HDF5 array of values.")]
         [ComponentElement]
-		[XmlElement("Values", DataType="Hdf5Dataset")]
+        [EnergisticsDataTypeAttribute(DataType = "Hdf5Dataset")]
+		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
                 return ValuesField;
@@ -1452,7 +1487,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The path of the referenced dataset in the HDF file.  The separator between groups and final dataset is a slash '/'")]
-		[XmlElement("PathInHdfFile", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("PathInHdfFile")]
         public string PathInHdfFile {
             get {
                 return PathInHdfFileField;
@@ -1470,7 +1506,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("HdfProxy", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("HdfProxy")]
         public DataObjectReference HdfProxy {
             get {
                 return HdfProxyField;
@@ -1545,7 +1582,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Value inside all the elements of the array.")]
-		[XmlElement("Value", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("Value")]
         public bool? Value {
             get {
                 return ValueField;
@@ -1563,6 +1601,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Size of the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -1598,6 +1637,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Total number of Boolean elements in the array. This number is different from the number of indices used to represent the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -1616,7 +1656,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Array of integer indices.  BUSINESS RULE: Must be non-negative.")]
-		[XmlElement("Indices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("Indices")]
         public AbstractIntegerArray Indices {
             get {
                 return IndicesField;
@@ -1634,7 +1675,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Indicates whether the specified elements are true or false.")]
-		[XmlElement("IndexIsTrue", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IndexIsTrue")]
         public bool? IndexIsTrue {
             get {
                 return IndexIsTrueField;
@@ -1712,6 +1754,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Size of the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -1730,6 +1773,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Start value for the range. End value is start+count-1.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("Value", DataType="integer")]
         public string Value {
             get {
@@ -1765,6 +1809,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Value representing the global start for the lattice: i.e., iStart + jStart*ni + kStart*ni*nj")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("StartValue", DataType="integer")]
         public string StartValue {
             get {
@@ -1783,7 +1828,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Offset", DataType="IntegerConstantArray")]
+        [EnergisticsDataTypeAttribute(DataType = "IntegerConstantArray")]
+		[XmlElement("Offset")]
         public List<IntegerConstantArray> Offset {
             get {
                 return OffsetField;
@@ -1851,6 +1897,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Values inside all the elements of the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("Value", DataType="integer")]
         public string Value {
             get {
@@ -1869,6 +1916,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Size of the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -1903,6 +1951,7 @@ namespace Energistics.DataAccess.RESQML200
         /// NullValue property
         /// </summary>
 		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("NullValue", DataType="integer")]
         public string NullValue {
             get {
@@ -1922,7 +1971,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Reference to an HDF5 array of integers or doubles.")]
         [ComponentElement]
-		[XmlElement("Values", DataType="Hdf5Dataset")]
+        [EnergisticsDataTypeAttribute(DataType = "Hdf5Dataset")]
+		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
                 return ValuesField;
@@ -1957,6 +2007,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Total number of integer elements in the array. This number is different from the number of Boolean mask values used to represent the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("TotalIndexCount", DataType="positiveInteger")]
         public string TotalIndexCount {
             get {
@@ -1975,7 +2026,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Boolean mask. A true element indicates that the index is included on the list of integer values.")]
-		[XmlElement("Mask", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("Mask")]
         public AbstractBooleanArray Mask {
             get {
                 return MaskField;
@@ -2011,7 +2063,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Reference to HDF5 array of integer or double")]
         [ComponentElement]
-		[XmlElement("Values", DataType="Hdf5Dataset")]
+        [EnergisticsDataTypeAttribute(DataType = "Hdf5Dataset")]
+		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
                 return ValuesField;
@@ -2067,7 +2120,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Reference to an HDF5 array of doubles.")]
         [ComponentElement]
-		[XmlElement("Values", DataType="Hdf5Dataset")]
+        [EnergisticsDataTypeAttribute(DataType = "Hdf5Dataset")]
+		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
                 return ValuesField;
@@ -2123,7 +2177,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Values inside all the elements of the array.")]
-		[XmlElement("Value", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Value")]
         public double? Value {
             get {
                 return ValueField;
@@ -2141,6 +2196,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Size of the array.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -2176,7 +2232,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Value representing the global start for the lattice.")]
-		[XmlElement("StartValue", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("StartValue")]
         public double? StartValue {
             get {
                 return StartValueField;
@@ -2194,7 +2251,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Offset", DataType="DoubleConstantArray")]
+        [EnergisticsDataTypeAttribute(DataType = "DoubleConstantArray")]
+		[XmlElement("Offset")]
         public List<DoubleConstantArray> Offset {
             get {
                 return OffsetField;
@@ -2240,6 +2298,7 @@ namespace Energistics.DataAccess.RESQML200
         /// Optional patch index used to attach properties to a specific patch of the indexable elements.
         /// </summary>
 		[Description("Optional patch index used to attach properties to a specific patch of the indexable elements.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RepresentationPatchIndex", DataType="nonNegativeInteger")]
         public string RepresentationPatchIndex {
             get {
@@ -2258,7 +2317,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Geometric points (or vectors) to be attached to the specified indexable elements.")]
-		[XmlElement("Points", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("Points")]
         public AbstractPoint3dArray Points {
             get {
                 return PointsField;
@@ -2355,7 +2415,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("The node indices of the selected nodes in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The node indices must be consistent with the size of supporting representation.")]
         [ComponentElement]
-		[XmlElement("NodeIndicesOnSupportingRepresentation", DataType="IntegerLatticeArray")]
+        [EnergisticsDataTypeAttribute(DataType = "IntegerLatticeArray")]
+		[XmlElement("NodeIndicesOnSupportingRepresentation")]
         public IntegerLatticeArray NodeIndicesOnSupportingRepresentation {
             get {
                 return NodeIndicesOnSupportingRepresentationField;
@@ -2373,7 +2434,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SupportingRepresentation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
                 return SupportingRepresentationField;
@@ -2408,7 +2470,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("A multi-dimensional array of parametric values that implicitly specifies an array of XYZ points.  The parametric values provided in this data-object must be consistent with the parametric values specified in the referenced parametric line array.  When constructing a column-layer grid geometry using parametric points, the array indexing follows the dimensionality of the coordinate lines x NKL, which is either a 2D or 3D array.")]
-		[XmlElement("Parameters", DataType="AbstractValueArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractValueArray")]
+		[XmlElement("Parameters")]
         public AbstractValueArray Parameters {
             get {
                 return ParametersField;
@@ -2425,7 +2488,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParametricLineIndices property
         /// </summary>
 		[Description("An optional array of indices that map from the array index to the index of the corresponding parametric line.  If this information is known from context, then this array is not needed. For example, in either of these cases: (1) If the mapping from array index to parametric line is 1:1. (2) If the mapping has already been specified, as with the pillar Index from the column-layer geometry of a grid.  For example, when constructing a column-layer grid geometry using parametric lines, the array indexing follows the dimensionality of the coordinate lines.")]
-		[XmlElement("ParametricLineIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParametricLineIndices")]
         public AbstractIntegerArray ParametricLineIndices {
             get {
                 return ParametricLineIndicesField;
@@ -2442,7 +2506,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TruncatedLineIndices property
         /// </summary>
 		[Description("A 2D array of line indices for use with intersecting parametric lines. Each record consists of a single line index, which indicates the array line that uses this truncation information, followed by the parametric line indices for each of the points on that line.  For a non-truncated line, the equivalent record repeats the array line index NKL+1 times.   Size = (NKL+1) x truncatedLineCount")]
-		[XmlElement("TruncatedLineIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("TruncatedLineIndices")]
         public AbstractIntegerArray TruncatedLineIndices {
             get {
                 return TruncatedLineIndicesField;
@@ -2459,7 +2524,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParametricLines property
         /// </summary>
 		[Required]
-		[XmlElement("ParametricLines", DataType="AbstractParametricLineArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractParametricLineArray")]
+		[XmlElement("ParametricLines")]
         public AbstractParametricLineArray ParametricLines {
             get {
                 return ParametricLinesField;
@@ -2531,7 +2597,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ControlPointParameters property
         /// </summary>
 		[Description("An optional array of explicit control point parameters for all of the control points on each of the parametric lines. Used only if control point parameters are present.  The number of explicit control point parameters per line is given by the count of non-null parameters on each line.   Described as a 1D array, the control point parameter array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds, there should be one control point parameter for each control point.  NOTES: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.")]
-		[XmlElement("ControlPointParameters", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("ControlPointParameters")]
         public AbstractDoubleArray ControlPointParameters {
             get {
                 return ControlPointParametersField;
@@ -2549,7 +2616,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An array of 3D points for all of the control points on each of the parametric lines. The number of control points per line is given by the count of non-null 3D points on each line.  Described as a 1D array, the control point array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D")]
-		[XmlElement("ControlPoints", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("ControlPoints")]
         public AbstractPoint3dArray ControlPoints {
             get {
                 return ControlPointsField;
@@ -2567,6 +2635,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The first dimension of the control point, control point parameter, and tangent vector arrays for the parametric splines. The Knot Count is typically chosen to be the maximum number of control points, parameters or tangent vectors on any parametric line in the array of parametric lines.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("KnotCount", DataType="positiveInteger")]
         public string KnotCount {
             get {
@@ -2585,7 +2654,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An array of integers indicating the parametric line kind.  0 = vertical 1 = linear spline 2 = natural cubic spline 3 = cubic spline 4 = Z linear cubic spline 5 = minimum-curvature spline (-1) = null: no line   Size = #Lines, e.g., (1D or 2D)")]
-		[XmlElement("LineKindIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("LineKindIndices")]
         public AbstractIntegerArray LineKindIndices {
             get {
                 return LineKindIndicesField;
@@ -2602,7 +2672,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TangentVectors property
         /// </summary>
 		[Description("An optional array that is of tangent vectors for all of the control points on each of the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present. The number of tangent vectors per line is given by the count of non-null tangent vectors on each of these line kinds.  Described as a 1D array, the tangent vector array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: For all lines other than the cubic and minimum-curvature parametric lines, this count is zero. For these line kinds, there is one tangent vector for each control point.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.")]
-		[XmlElement("TangentVectors", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("TangentVectors")]
         public AbstractPoint3dArray TangentVectors {
             get {
                 return TangentVectorsField;
@@ -2619,7 +2690,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParametricLineIntersections property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ParametricLineIntersections", DataType="ParametricLineIntersections")]
+        [EnergisticsDataTypeAttribute(DataType = "ParametricLineIntersections")]
+		[XmlElement("ParametricLineIntersections")]
         public ParametricLineIntersections ParametricLineIntersections {
             get {
                 return ParametricLineIntersectionsField;
@@ -2654,6 +2726,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of parametric line intersections. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -2672,7 +2745,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Intersected line index pair for (line 1, line 2).  Size = 2 x count")]
-		[XmlElement("IntersectionLinePairs", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("IntersectionLinePairs")]
         public AbstractIntegerArray IntersectionLinePairs {
             get {
                 return IntersectionLinePairsField;
@@ -2690,7 +2764,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Intersected line parameter value pairs for (line 1, line 2).  Size = 2 x count")]
-		[XmlElement("ParameterValuePairs", DataType="AbstractValueArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractValueArray")]
+		[XmlElement("ParameterValuePairs")]
         public AbstractValueArray ParameterValuePairs {
             get {
                 return ParameterValuePairsField;
@@ -2745,7 +2820,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("The line indices of the selected lines in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The dimensions of the integer lattice array must be consistent with the dimensions of the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.  BUSINESS RULE: The start value of the integer lattice array must be the linearized index of the starting line. Example: iStart + ni * jStart in case of a supporting 2D grid.")]
         [ComponentElement]
-		[XmlElement("LineIndicesOnSupportingRepresentation", DataType="IntegerLatticeArray")]
+        [EnergisticsDataTypeAttribute(DataType = "IntegerLatticeArray")]
+		[XmlElement("LineIndicesOnSupportingRepresentation")]
         public IntegerLatticeArray LineIndicesOnSupportingRepresentation {
             get {
                 return LineIndicesOnSupportingRepresentationField;
@@ -2763,7 +2839,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SupportingRepresentation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
                 return SupportingRepresentationField;
@@ -2799,7 +2876,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Reference to an HDF5 3D dataset of XYZ points. The 3 coordinates are stored sequentially in HDF5, i.e., a multi-dimensional array of points is stored as a 3 x ... HDF5 array.")]
         [ComponentElement]
-		[XmlElement("Coordinates", DataType="Hdf5Dataset")]
+        [EnergisticsDataTypeAttribute(DataType = "Hdf5Dataset")]
+		[XmlElement("Coordinates")]
         public Hdf5Dataset Coordinates {
             get {
                 return CoordinatesField;
@@ -2834,7 +2912,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Geometry defining the X and Y coordinates.")]
-		[XmlElement("SupportingGeometry", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("SupportingGeometry")]
         public AbstractPoint3dArray SupportingGeometry {
             get {
                 return SupportingGeometryField;
@@ -2852,7 +2931,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The values for Z coordinates")]
-		[XmlElement("ZValues", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("ZValues")]
         public AbstractDoubleArray ZValues {
             get {
                 return ZValuesField;
@@ -2886,7 +2966,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AllDimensionsAreOrthogonal property
         /// </summary>
 		[Description("The optional element that indicates that the offset vectors for each direction are mutually orthogonal to each other. This meta-information is useful to remove any doubt of orthogonality in case of numerical precision issues.  BUSINESS RULE: If you don't know it or if only one lattice dimension is given, do not provide this element.")]
-		[XmlElement("AllDimensionsAreOrthogonal", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("AllDimensionsAreOrthogonal")]
         public bool? AllDimensionsAreOrthogonal {
             get {
                 return AllDimensionsAreOrthogonalField;
@@ -2923,7 +3004,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("The origin location of the lattice given as XYZ coordinates.")]
         [ComponentElement]
-		[XmlElement("Origin", DataType="Point3d")]
+        [EnergisticsDataTypeAttribute(DataType = "Point3d")]
+		[XmlElement("Origin")]
         public Point3d Origin {
             get {
                 return OriginField;
@@ -2941,7 +3023,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Offset", DataType="Point3dOffset")]
+        [EnergisticsDataTypeAttribute(DataType = "Point3dOffset")]
+		[XmlElement("Offset")]
         public List<Point3dOffset> Offset {
             get {
                 return OffsetField;
@@ -2988,7 +3071,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("X Coordinate")]
-		[XmlElement("Coordinate1", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Coordinate1")]
         public double? Coordinate1 {
             get {
                 return Coordinate1Field;
@@ -3006,7 +3090,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Y Coordinate")]
-		[XmlElement("Coordinate2", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Coordinate2")]
         public double? Coordinate2 {
             get {
                 return Coordinate2Field;
@@ -3024,7 +3109,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Either Z or T Coordinate")]
-		[XmlElement("Coordinate3", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Coordinate3")]
         public double? Coordinate3 {
             get {
                 return Coordinate3Field;
@@ -3079,7 +3165,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("The direction of the axis of this lattice dimension. This is a relative offset vector instead of an absolute 3D point.")]
         [ComponentElement]
-		[XmlElement("Offset", DataType="Point3d")]
+        [EnergisticsDataTypeAttribute(DataType = "Point3d")]
+		[XmlElement("Offset")]
         public Point3d Offset {
             get {
                 return OffsetField;
@@ -3097,7 +3184,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("A lattice of N offset points is described by a spacing array of size N-1. The offset between points is given by the spacing value multiplied by the offset vector. For example, the first offset is 0. The second offset is the first spacing * offset. The second offset is (first spacing + second spacing) * offset, etc.")]
-		[XmlElement("Spacing", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("Spacing")]
         public AbstractDoubleArray Spacing {
             get {
                 return SpacingField;
@@ -3152,7 +3240,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Reference to an HDF5 2D dataset of XY points. The 2 coordinates are stored sequentially in HDF5, i.e., a multi-dimensional array of points is stored as a 2 x ... HDF5 array.")]
         [ComponentElement]
-		[XmlElement("Coordinates", DataType="Hdf5Dataset")]
+        [EnergisticsDataTypeAttribute(DataType = "Hdf5Dataset")]
+		[XmlElement("Coordinates")]
         public Hdf5Dataset Coordinates {
             get {
                 return CoordinatesField;
@@ -3208,6 +3297,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The corresponding integer value. This value is used in HDF5 instead of the string value. The value of null integer value must be reserved for NULL. The size of this value is constrained by the size of the format used in HDF5,")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("Key", DataType="integer")]
         public string Key {
             get {
@@ -3226,7 +3316,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("A string value. Output from the lookup table.")]
-		[XmlElement("Value", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("Value")]
         public string Value {
             get {
                 return ValueField;
@@ -3301,7 +3392,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Input to a table lookup.")]
-		[XmlElement("Key", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Key")]
         public double? Key {
             get {
                 return KeyField;
@@ -3319,7 +3411,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Output from a table lookup.")]
-		[XmlElement("Value", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Value")]
         public double? Value {
             get {
                 return ValueField;
@@ -3444,7 +3537,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Kind property
         /// </summary>
 		[Required]
-		[XmlElement("Kind", DataType="ResqmlPropertyKind")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlPropertyKind")]
+		[XmlElement("Kind")]
         public ResqmlPropertyKind? Kind {
             get {
                 return KindField;
@@ -3479,7 +3573,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("A hole inside a representation patch. Inside the ring, the representation patch is not defined, outside it is.  In case of contact, inner ring polyline representations should be typed as an erosion line, deposition line, or contact.  BUSINESS RULE: Must be a polyline reference to a polyline representation, either a single polyline representation or a subrepresentation. Must be closed.")]
         [RecurringElement]
-		[XmlElement("InnerRing", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("InnerRing")]
         public List<DataObjectReference> InnerRing {
             get {
                 return InnerRingField;
@@ -3509,7 +3604,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("The extension of a representation patch. Inside the ring, the representation patch is defined, outside it is not.  BUSINESS RULE: Must be a reference to a polyline, either a single polyline representation or a subrepresentation. Must be closed.")]
         [ComponentElement]
-		[XmlElement("OuterRing", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("OuterRing")]
         public DataObjectReference OuterRing {
             get {
                 return OuterRingField;
@@ -3527,6 +3623,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("UUID of the referenced topological patch.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("ReferencedPatch", DataType="nonNegativeInteger")]
         public string ReferencedPatch {
             get {
@@ -3580,7 +3677,8 @@ namespace Energistics.DataAccess.RESQML200
         /// KickoffMd property
         /// </summary>
 		[Required]
-		[XmlElement("KickoffMd", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("KickoffMd")]
         public double? KickoffMD {
             get {
                 return KickoffMdField;
@@ -3597,7 +3695,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParentMd property
         /// </summary>
 		[Required]
-		[XmlElement("ParentMd", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("ParentMd")]
         public double? ParentMD {
             get {
                 return ParentMdField;
@@ -3615,7 +3714,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ParentTrajectory", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ParentTrajectory")]
         public DataObjectReference ParentTrajectory {
             get {
                 return ParentTrajectoryField;
@@ -3668,6 +3768,7 @@ namespace Energistics.DataAccess.RESQML200
         /// RepresentationPatchIndex property
         /// </summary>
 		[Description("Patch index for the geometry attachment, if required")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RepresentationPatchIndex", DataType="nonNegativeInteger")]
         public string RepresentationPatchIndex {
             get {
@@ -3686,7 +3787,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="AbstractGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractGeometry")]
+		[XmlElement("Geometry")]
         public AbstractGeometry Geometry {
             get {
                 return GeometryField;
@@ -3751,7 +3853,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TimeIndex property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("TimeIndex", DataType="TimeIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeIndex")]
+		[XmlElement("TimeIndex")]
         public TimeIndex TimeIndex {
             get {
                 return TimeIndexField;
@@ -3769,7 +3872,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("LocalCrs", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("LocalCrs")]
         public DataObjectReference LocalCrs {
             get {
                 return LocalCrsField;
@@ -3842,6 +3946,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The line index of the selected line in the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("LineIndiexOnSupportingRepresentation", DataType="nonNegativeInteger")]
         public string LineIndiexOnSupportingRepresentation {
             get {
@@ -3860,7 +3965,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SupportingRepresentation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
                 return SupportingRepresentationField;
@@ -3894,7 +4000,8 @@ namespace Energistics.DataAccess.RESQML200
         /// An optional array of explicit control point parameters for the control points on the parametric line. Used only if control point parameters are present. NOTES: (1) Vertical parametric lines do not require control point parameters. (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N. BUSINESS RULE: If present, the size must match the number of control points. BUSINESS RULE: For vertical and Z linear cubic parametric lines, this count must be zero. For all other parametric line kinds, each control point must have one control point parameter. BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line. This is an optional array which should only be used if control point parameters are present. BUSINESS RILE: If present, the size must match the number of control points. BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds there should be one control point parameter for each control point. Notes: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N. BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.
         /// </summary>
 		[Description("An optional array of explicit control point parameters for the control points on the parametric line. Used only if control point parameters are present.  NOTES: (1) Vertical parametric lines do not require control point parameters. (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: If present, the size must match the number of control points.  BUSINESS RULE: For vertical and Z linear cubic parametric lines, this count must be zero. For all other parametric line kinds, each control point must have one control point parameter.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line. This is an optional array which should only be used if control point parameters are present.  BUSINESS RILE: If present, the size must match the number of control points.  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds there should be one control point parameter for each control point.  Notes: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.")]
-		[XmlElement("ControlPointParameters", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("ControlPointParameters")]
         public AbstractDoubleArray ControlPointParameters {
             get {
                 return ControlPointParametersField;
@@ -3912,7 +4019,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An array of 3D points for the control points on the parametric line.")]
-		[XmlElement("ControlPoints", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("ControlPoints")]
         public AbstractPoint3dArray ControlPoints {
             get {
                 return ControlPointsField;
@@ -3930,6 +4038,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of spline knots in the parametric line.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("KnotCount", DataType="positiveInteger")]
         public string KnotCount {
             get {
@@ -3948,6 +4057,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Integer indicating the parametric line kind  0 for vertical 1 for linear spline 2 for natural cubic spline 3 for cubic spline 4 for z linear cubic spline 5 for minimum-curvature spline (-1) for null: no line")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("LineKindIndex", DataType="integer")]
         public string LineKindIndex {
             get {
@@ -3965,7 +4075,8 @@ namespace Energistics.DataAccess.RESQML200
         /// An optional array of tangent vectors for each control point on the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present. If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.
         /// </summary>
 		[Description("An optional array of tangent vectors for each control point on the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.")]
-		[XmlElement("TangentVectors", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("TangentVectors")]
         public AbstractPoint3dArray TangentVectors {
             get {
                 return TangentVectorsField;
@@ -4019,7 +4130,9 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Plane", DataType="ThreePoint3d")]
+        [EnergisticsDataTypeAttribute(DataType = "ThreePoint3d")]
+		[XmlArrayItem("")]
+        [XmlArray("Plane")]
         public List<List<Point3d>> Plane {
             get {
                 return PlaneField;
@@ -4065,7 +4178,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Coordinate property
         /// </summary>
 		[Required]
-		[XmlElement("Coordinate", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("Coordinate")]
         public double? Coordinate {
             get {
                 return CoordinateField;
@@ -4104,7 +4218,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Points property
         /// </summary>
 		[Required]
-		[XmlElement("Points", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("Points")]
         public AbstractPoint3dArray Points {
             get {
                 return PointsField;
@@ -4121,7 +4236,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SeismicCoordinates property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SeismicCoordinates", DataType="AbstractSeismicCoordinates")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractSeismicCoordinates")]
+		[XmlElement("SeismicCoordinates")]
         public AbstractSeismicCoordinates SeismicCoordinates {
             get {
                 return SeismicCoordinatesField;
@@ -4158,7 +4274,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SeismicSupport", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SeismicSupport")]
         public DataObjectReference SeismicSupport {
             get {
                 return SeismicSupportField;
@@ -4212,7 +4329,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The sequence of trace or inter-trace positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
-		[XmlElement("LineAbscissa", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("LineAbscissa")]
         public AbstractDoubleArray LineAbscissa {
             get {
                 return LineAbscissaField;
@@ -4229,7 +4347,8 @@ namespace Energistics.DataAccess.RESQML200
         /// The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than previous one.
         /// </summary>
 		[Description("The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than previous one.")]
-		[XmlElement("VerticalCoordinates", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("VerticalCoordinates")]
         public AbstractDoubleArray VerticalCoordinates {
             get {
                 return VerticalCoordinatesField;
@@ -4264,7 +4383,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The sequence of trace or inter-trace crossline positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
-		[XmlElement("CrosslineCoordinates", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("CrosslineCoordinates")]
         public AbstractDoubleArray CrosslineCoordinates {
             get {
                 return CrosslineCoordinatesField;
@@ -4282,7 +4402,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The sequence of trace or inter-trace inline positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
-		[XmlElement("InlineCoordinates", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("InlineCoordinates")]
         public AbstractDoubleArray InlineCoordinates {
             get {
                 return InlineCoordinatesField;
@@ -4299,7 +4420,8 @@ namespace Energistics.DataAccess.RESQML200
         /// The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than two previous ones.
         /// </summary>
 		[Description("The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than two previous ones.")]
-		[XmlElement("VerticalCoordinates", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("VerticalCoordinates")]
         public AbstractDoubleArray VerticalCoordinates {
             get {
                 return VerticalCoordinatesField;
@@ -4337,7 +4459,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AdditionalGridPoints property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("AdditionalGridPoints", DataType="AdditionalGridPoints")]
+        [EnergisticsDataTypeAttribute(DataType = "AdditionalGridPoints")]
+		[XmlElement("AdditionalGridPoints")]
         public List<AdditionalGridPoints> AdditionalGridPoints {
             get {
                 return AdditionalGridPointsField;
@@ -4383,6 +4506,7 @@ namespace Energistics.DataAccess.RESQML200
         /// RepresentationPatchIndex property
         /// </summary>
 		[Description("Used to remove ambiguity in geometry attachment, if the attachment element is not sufficient. Usually required for subnodes and for the general purpose grid, but not otherwise.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RepresentationPatchIndex", DataType="nonNegativeInteger")]
         public string RepresentationPatchIndex {
             get {
@@ -4400,7 +4524,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Attachment property
         /// </summary>
 		[Required]
-		[XmlElement("Attachment", DataType="GridGeometryAttachment")]
+        [EnergisticsDataTypeAttribute(DataType = "GridGeometryAttachment")]
+		[XmlElement("Attachment")]
         public GridGeometryAttachment? Attachment {
             get {
                 return AttachmentField;
@@ -4417,7 +4542,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Points property
         /// </summary>
 		[Required]
-		[XmlElement("Points", DataType="AbstractPoint3dArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPoint3dArray")]
+		[XmlElement("Points")]
         public AbstractPoint3dArray Points {
             get {
                 return PointsField;
@@ -4472,7 +4598,8 @@ namespace Energistics.DataAccess.RESQML200
         /// KDirection property
         /// </summary>
 		[Required]
-		[XmlElement("KDirection", DataType="KDirection")]
+        [EnergisticsDataTypeAttribute(DataType = "KDirection")]
+		[XmlElement("KDirection")]
         public KDirection? KDirection {
             get {
                 return KDirectionField;
@@ -4490,7 +4617,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Indicator that a pillar has at least one node with a defined cell geometry. This is considered grid meta-data. If the indicator does not indicate that the pillar geometry is defined, then this over-rides any other node geometry specification.  Array index follows #Pillars and so may be either 2d or 1d.")]
-		[XmlElement("PillarGeometryIsDefined", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("PillarGeometryIsDefined")]
         public AbstractBooleanArray PillarGeometryIsDefined {
             get {
                 return PillarGeometryIsDefinedField;
@@ -4507,7 +4635,8 @@ namespace Energistics.DataAccess.RESQML200
         /// PillarShape property
         /// </summary>
 		[Required]
-		[XmlElement("PillarShape", DataType="PillarShape")]
+        [EnergisticsDataTypeAttribute(DataType = "PillarShape")]
+		[XmlElement("PillarShape")]
         public PillarShape? PillarShape {
             get {
                 return PillarShapeField;
@@ -4524,7 +4653,8 @@ namespace Energistics.DataAccess.RESQML200
         /// CellGeometryIsDefined property
         /// </summary>
 		[Description("Indicator that a cell has a defined geometry. This attribute is grid metadata. If the indicator shows that the cell geometry is NOT defined, then this attribute overrides any other node geometry specification.  Array index is 2D/3D.")]
-		[XmlElement("CellGeometryIsDefined", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("CellGeometryIsDefined")]
         public AbstractBooleanArray CellGeometryIsDefined {
             get {
                 return CellGeometryIsDefinedField;
@@ -4541,7 +4671,8 @@ namespace Energistics.DataAccess.RESQML200
         /// NodeIsColocatedInKDirection property
         /// </summary>
 		[Description("Optional indicator that two adjacent nodes on a coordinate line are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #CoordinateLines x (NKL-1).")]
-		[XmlElement("NodeIsColocatedInKDirection", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("NodeIsColocatedInKDirection")]
         public AbstractBooleanArray NodeIsColocatedInKDirection {
             get {
                 return NodeIsColocatedInKDirectionField;
@@ -4558,7 +4689,8 @@ namespace Energistics.DataAccess.RESQML200
         /// NodeIsColocatedOnKEdge property
         /// </summary>
 		[Description("Optional indicator that two adjacent nodes on the KEDGE of a cell are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #EdgesPerColumn x NKL for unstructured column layer grids and 4 x NI x NJ x NKL for IJK grids.")]
-		[XmlElement("NodeIsColocatedOnKEdge", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("NodeIsColocatedOnKEdge")]
         public AbstractBooleanArray NodeIsColocatedOnKEdge {
             get {
                 return NodeIsColocatedOnKEdgeField;
@@ -4575,7 +4707,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SubnodeTopology property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SubnodeTopology", DataType="ColumnLayerSubnodeTopology")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnLayerSubnodeTopology")]
+		[XmlElement("SubnodeTopology")]
         public ColumnLayerSubnodeTopology SubnodeTopology {
             get {
                 return SubnodeTopologyField;
@@ -4592,7 +4725,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitCoordinateLines property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitCoordinateLines", DataType="ColumnLayerSplitCoordinateLines")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnLayerSplitCoordinateLines")]
+		[XmlElement("SplitCoordinateLines")]
         public ColumnLayerSplitCoordinateLines SplitCoordinateLines {
             get {
                 return SplitCoordinateLinesField;
@@ -4609,7 +4743,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitNodes property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitNodes", DataType="SplitNodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "SplitNodePatch")]
+		[XmlElement("SplitNodes")]
         public SplitNodePatch SplitNodes {
             get {
                 return SplitNodesField;
@@ -4643,7 +4778,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ColumnSubnodes property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("ColumnSubnodes", DataType="ColumnSubnodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnSubnodePatch")]
+		[XmlElement("ColumnSubnodes")]
         public List<ColumnSubnodePatch> ColumnSubnodes {
             get {
                 return ColumnSubnodesField;
@@ -4690,7 +4826,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of subnodes per object, with a different number in each column of the grid.")]
-		[XmlElement("SubnodeCountPerObject", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("SubnodeCountPerObject")]
         public AbstractIntegerArray SubnodeCountPerObject {
             get {
                 return SubnodeCountPerObjectField;
@@ -4727,7 +4864,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SubnodeNodeObject property
         /// </summary>
 		[Required]
-		[XmlElement("SubnodeNodeObject", DataType="SubnodeNodeObject")]
+        [EnergisticsDataTypeAttribute(DataType = "SubnodeNodeObject")]
+		[XmlElement("SubnodeNodeObject")]
         public SubnodeNodeObject? SubnodeNodeObject {
             get {
                 return SubnodeNodeObjectField;
@@ -4745,7 +4883,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Node weights for each subnode. Count of nodes per subnode is known for each specific subnode construction.  Data order consists of all the nodes for each subnode in turn. For example, if uniform and stored as a multi-dimensional array, the node index cycles first.  BUSINESS RULE: Weights must be non-negative.  BUSINESS RULE: Length of array must be consistent with the sum of nodeCount x subnodeCount per object, e.g., for 3 subnodes per edge (uniform), there are 6 weights.")]
-		[XmlElement("NodeWeightsPerSubnode", DataType="AbstractValueArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractValueArray")]
+		[XmlElement("NodeWeightsPerSubnode")]
         public AbstractValueArray NodeWeightsPerSubnode {
             get {
                 return NodeWeightsPerSubnodeField;
@@ -4797,6 +4936,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Local index of the patch, making it unique within the representation.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("PatchIndex", DataType="nonNegativeInteger")]
         public string PatchIndex {
             get {
@@ -4850,7 +4990,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ClosedPolylines property
         /// </summary>
 		[Required]
-		[XmlElement("ClosedPolylines", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("ClosedPolylines")]
         public AbstractBooleanArray ClosedPolylines {
             get {
                 return ClosedPolylinesField;
@@ -4868,7 +5009,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The first number in the list defines the node count for the first polyline in the polyline set patch. The second number in the list defines the node count for the second polyline in the polyline set patch. etc.")]
-		[XmlElement("NodeCountPerPolyline", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("NodeCountPerPolyline")]
         public AbstractIntegerArray NodeCountPerPolyline {
             get {
                 return NodeCountPerPolylineField;
@@ -4886,7 +5028,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="PointGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "PointGeometry")]
+		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
                 return GeometryField;
@@ -4921,6 +5064,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The number of nodes in the fastest direction.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("FastestAxisCount", DataType="positiveInteger")]
         public string FastestAxisCount {
             get {
@@ -4939,6 +5083,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The number of nodes in the slowest direction.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("SlowestAxisCount", DataType="positiveInteger")]
         public string SlowestAxisCount {
             get {
@@ -4957,7 +5102,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="PointGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "PointGeometry")]
+		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
                 return GeometryField;
@@ -4997,6 +5143,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of items in the patch.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -5031,6 +5178,7 @@ namespace Energistics.DataAccess.RESQML200
         /// NodeCount property
         /// </summary>
 		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("NodeCount", DataType="nonNegativeInteger")]
         public string NodeCount {
             get {
@@ -5049,7 +5197,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The triangles are a 2D array of non-negative integers with the   dimensions 3 x numTriangles.")]
-		[XmlElement("Triangles", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("Triangles")]
         public AbstractIntegerArray Triangles {
             get {
                 return TrianglesField;
@@ -5067,7 +5216,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="PointGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "PointGeometry")]
+		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
                 return GeometryField;
@@ -5084,7 +5234,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitEdgePatch property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("SplitEdgePatch", DataType="EdgePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "EdgePatch")]
+		[XmlElement("SplitEdgePatch")]
         public List<EdgePatch> SplitEdgePatch {
             get {
                 return SplitEdgePatchField;
@@ -5130,7 +5281,8 @@ namespace Energistics.DataAccess.RESQML200
         /// An array of split edges to define patches. It points to an HDF5 dataset, which must be a 2D array of non-negative integers with dimensions 2 x numSplitEdges. integers with dimensions {2, numSplitEdges}
         /// </summary>
 		[Description("An array of split edges to define patches. It points to an HDF5 dataset, which must be a 2D array of non-negative integers with dimensions 2 x numSplitEdges. integers with dimensions {2, numSplitEdges}")]
-		[XmlElement("SplitEdges", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("SplitEdges")]
         public AbstractIntegerArray SplitEdges {
             get {
                 return SplitEdgesField;
@@ -5165,7 +5317,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="PointGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "PointGeometry")]
+		[XmlElement("Geometry")]
         public PointGeometry Geometry {
             get {
                 return GeometryField;
@@ -5200,6 +5353,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Identifies a representation by its index, in the list of representations contained in the organization.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RepresentationIndex", DataType="nonNegativeInteger")]
         public string RepresentationIndex {
             get {
@@ -5218,7 +5372,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The ordered list of nodes (identified by their global index) in the supporting representation, which constitutes the contact patch.")]
-		[XmlElement("SupportingRepresentationNodes", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("SupportingRepresentationNodes")]
         public AbstractIntegerArray SupportingRepresentationNodes {
             get {
                 return SupportingRepresentationNodesField;
@@ -5253,7 +5408,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("ElementIndices", DataType="ElementIndices")]
+        [EnergisticsDataTypeAttribute(DataType = "ElementIndices")]
+		[XmlElement("ElementIndices")]
         public List<ElementIndices> ElementIndices {
             get {
                 return ElementIndicesField;
@@ -5299,7 +5455,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IndexableElement property
         /// </summary>
 		[Required]
-		[XmlElement("IndexableElement", DataType="IndexableElements")]
+        [EnergisticsDataTypeAttribute(DataType = "IndexableElements")]
+		[XmlElement("IndexableElement")]
         public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
@@ -5316,7 +5473,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Indices property
         /// </summary>
 		[Required]
-		[XmlElement("Indices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("Indices")]
         public AbstractIntegerArray Indices {
             get {
                 return IndicesField;
@@ -5370,6 +5528,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Count of I indices. Degenerate case (ni=0) is allowed for GPGrid representations.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Ni", DataType="nonNegativeInteger")]
         public string Ni {
             get {
@@ -5388,6 +5547,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Count of J indices. Degenerate case (nj=0) is allowed for GPGrid representations.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Nj", DataType="nonNegativeInteger")]
         public string Nj {
             get {
@@ -5405,7 +5565,8 @@ namespace Energistics.DataAccess.RESQML200
         /// RadialGridIsComplete property
         /// </summary>
 		[Description("TRUE if the grid is periodic in J, i.e., has the topology of a complete 360 degree circle.  If TRUE, then NJL=NJ. Otherwise, NJL=NJ+1")]
-		[XmlElement("RadialGridIsComplete", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("RadialGridIsComplete")]
         public bool? RadialGridIsComplete {
             get {
                 return RadialGridIsCompleteField;
@@ -5440,7 +5601,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Geometry property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Geometry", DataType="IjkGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "IjkGridGeometry")]
+		[XmlElement("Geometry")]
         public IjkGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -5457,7 +5619,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TruncationCells property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("TruncationCells", DataType="TruncationCellPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "TruncationCellPatch")]
+		[XmlElement("TruncationCells")]
         public TruncationCellPatch TruncationCells {
             get {
                 return TruncationCellsField;
@@ -5492,7 +5655,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Indicates that the IJK grid is right handed, as determined by the triple product of tangent vectors in the I, J, and K directions.")]
-		[XmlElement("GridIsRighthanded", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("GridIsRighthanded")]
         public bool? GridIsRighthanded {
             get {
                 return GridIsRighthandedField;
@@ -5509,7 +5673,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IjGaps property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IjGaps", DataType="IjGaps")]
+        [EnergisticsDataTypeAttribute(DataType = "IjGaps")]
+		[XmlElement("IjGaps")]
         public IjGaps IjGaps {
             get {
                 return IjGapsField;
@@ -5543,6 +5708,7 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitPillarCount property
         /// </summary>
 		[Description("Number of split pillars in the model. Count must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("SplitPillarCount", DataType="positiveInteger")]
         public string SplitPillarCount {
             get {
@@ -5560,7 +5726,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParentPillarIndices property
         /// </summary>
 		[Description("Parent pillar index for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: Array length must match splitPillarCount.")]
-		[XmlElement("ParentPillarIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentPillarIndices")]
         public AbstractIntegerArray ParentPillarIndices {
             get {
                 return ParentPillarIndicesField;
@@ -5578,7 +5745,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("List of columns for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: The length of the first list-of-lists array must match the splitPillarCount.")]
         [ComponentElement]
-		[XmlElement("ColumnsPerSplitPillar", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("ColumnsPerSplitPillar")]
         public ResqmlJaggedArray ColumnsPerSplitPillar {
             get {
                 return ColumnsPerSplitPillarField;
@@ -5595,7 +5763,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IjSplitColumnEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IjSplitColumnEdges", DataType="IjSplitColumnEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "IjSplitColumnEdges")]
+		[XmlElement("IjSplitColumnEdges")]
         public IjSplitColumnEdges IjSplitColumnEdges {
             get {
                 return IjSplitColumnEdgesField;
@@ -5649,7 +5818,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("1D array of elements containing the aggregation of individual array data.")]
-		[XmlElement("Elements", DataType="AbstractValueArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractValueArray")]
+		[XmlElement("Elements")]
         public AbstractValueArray Elements {
             get {
                 return ElementsField;
@@ -5667,7 +5837,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("1D array of cumulative lengths to the end of the current array. This is also equal to the index of the next element, i.e., the index in the elements array, for which the current variable length array begins.")]
-		[XmlElement("CumulativeLength", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("CumulativeLength")]
         public AbstractIntegerArray CumulativeLength {
             get {
                 return CumulativeLengthField;
@@ -5721,6 +5892,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of IJ split column edges in this grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -5740,7 +5912,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Definition of the split column edges in terms of the pillars per split column edge. Pillar count per edge is usually 2, but the list-of-lists construction is used to allow split column edges to be defined by more than 2 pillars.")]
         [ComponentElement]
-		[XmlElement("PillarsPerSplitColumnEdge", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("PillarsPerSplitColumnEdge")]
         public ResqmlJaggedArray PillarsPerSplitColumnEdge {
             get {
                 return PillarsPerSplitColumnEdgeField;
@@ -5794,6 +5967,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of additional nodes required for the truncation construction. Must be positive. Uses a separate enumeration and does not increase the number of nodes, except as noted below.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("TruncationNodeCount", DataType="positiveInteger")]
         public string TruncationNodeCount {
             get {
@@ -5812,6 +5986,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of additional faces required for the split and truncation construction. The construction does not modify existing face definitions, but instead uses these new faces to redefine the truncated cell geometry. Must be positive.  These faces are added to the enumeration of faces for the grid")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("TruncationFaceCount", DataType="positiveInteger")]
         public string TruncationFaceCount {
             get {
@@ -5830,6 +6005,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of polyhedral cells created by truncation. Must be positive. Note: Parent cells are replace")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("TruncationCellCount", DataType="positiveInteger")]
         public string TruncationCellCount {
             get {
@@ -5849,7 +6025,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Definition of the truncation faces is in terms of an ordered list of nodes. Node indexing is EXTENDED, i.e., is based on the list of untruncated grid nodes (always first) plus the split nodes (if any) and the truncation face nodes. Relative order of split nodes and truncation face nodes is set by the pillar indices.")]
         [ComponentElement]
-		[XmlElement("NodesPerTruncationFace", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("NodesPerTruncationFace")]
         public ResqmlJaggedArray NodesPerTruncationFace {
             get {
                 return NodesPerTruncationFaceField;
@@ -5867,7 +6044,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Parent cell index for each of the truncation cells.  BUSINESS RULE: Size must match truncationCellCount")]
-		[XmlElement("ParentCellIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentCellIndices")]
         public AbstractIntegerArray ParentCellIndices {
             get {
                 return ParentCellIndicesField;
@@ -5886,7 +6064,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Local cell face index for those faces which are retained from the parent cell in the definition of the truncation cell.  The use of a local cell face index, e.g., 0...5 for an IJK cell, can be used even if the face indices have not been defined.")]
         [ComponentElement]
-		[XmlElement("LocalFacesPerCell", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("LocalFacesPerCell")]
         public ResqmlJaggedArray LocalFacesPerCell {
             get {
                 return LocalFacesPerCellField;
@@ -5905,7 +6084,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Truncation face index for the additional cell faces which are required to complete the definition of the truncation cell.  The resulting local cell face index follows the local faces per cell list, followed by the truncation faces in the order within the list-of-lists constructions.")]
         [ComponentElement]
-		[XmlElement("TruncationFacesPerCell", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("TruncationFacesPerCell")]
         public ResqmlJaggedArray TruncationFacesPerCell {
             get {
                 return TruncationFacesPerCellField;
@@ -5923,7 +6103,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Boolean mask used to indicate which truncation cell faces have an outwardly directed normal, following a right hand rule. Data size and order follows the truncationFacesPerCell list-of-lists.")]
-		[XmlElement("TruncationCellFaceIsRightHanded", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("TruncationCellFaceIsRightHanded")]
         public AbstractBooleanArray TruncationCellFaceIsRightHanded {
             get {
                 return TruncationCellFaceIsRightHandedField;
@@ -5958,6 +6139,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of unstructured cells. Degenerate case (count=0) is allowed for GPGrid.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("UnstructuredCellCount", DataType="nonNegativeInteger")]
         public string UnstructuredCellCount {
             get {
@@ -5975,7 +6157,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Geometry property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Geometry", DataType="UnstructuredGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredGridGeometry")]
+		[XmlElement("Geometry")]
         public UnstructuredGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -6009,7 +6192,8 @@ namespace Energistics.DataAccess.RESQML200
         /// CellShape property
         /// </summary>
 		[Required]
-		[XmlElement("CellShape", DataType="CellShape")]
+        [EnergisticsDataTypeAttribute(DataType = "CellShape")]
+		[XmlElement("CellShape")]
         public CellShape? CellShape {
             get {
                 return CellShapeField;
@@ -6027,6 +6211,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Total number of nodes in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("NodeCount", DataType="positiveInteger")]
         public string NodeCount {
             get {
@@ -6045,6 +6230,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Total number of faces in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("FaceCount", DataType="positiveInteger")]
         public string FaceCount {
             get {
@@ -6064,7 +6250,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("List of nodes per face. node count per face can be obtained from the offsets in the first list of list array.  BUSINESS RULE: faceCount must match the length of the first list of list array.")]
         [ComponentElement]
-		[XmlElement("NodesPerFace", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("NodesPerFace")]
         public ResqmlJaggedArray NodesPerFace {
             get {
                 return NodesPerFaceField;
@@ -6083,7 +6270,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("List of faces per cell. face count per cell can be obtained from the offsets in the first list of list array.  BUSINESS RULE: cellCount must match the length of the first list of list array.")]
         [ComponentElement]
-		[XmlElement("FacesPerCell", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("FacesPerCell")]
         public ResqmlJaggedArray FacesPerCell {
             get {
                 return FacesPerCellField;
@@ -6101,7 +6289,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Boolean mask used to indicate which cell faces have an outwardly directed normal following a right hand rule. Array length is the sum of the cell face count per cell, and the data follows the order of the faces per cell resqml list-of-lists.")]
-		[XmlElement("CellFaceIsRightHanded", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("CellFaceIsRightHanded")]
         public AbstractBooleanArray CellFaceIsRightHanded {
             get {
                 return CellFaceIsRightHandedField;
@@ -6118,7 +6307,8 @@ namespace Energistics.DataAccess.RESQML200
         /// HingeNodeFaces property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("HingeNodeFaces", DataType="UnstructuredGridHingeNodeFaces")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredGridHingeNodeFaces")]
+		[XmlElement("HingeNodeFaces")]
         public UnstructuredGridHingeNodeFaces HingeNodeFaces {
             get {
                 return HingeNodeFacesField;
@@ -6135,7 +6325,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SubnodeTopology property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SubnodeTopology", DataType="UnstructuredSubnodeTopology")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredSubnodeTopology")]
+		[XmlElement("SubnodeTopology")]
         public UnstructuredSubnodeTopology SubnodeTopology {
             get {
                 return SubnodeTopologyField;
@@ -6170,6 +6361,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of K faces. This count must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -6188,7 +6380,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("List of faces to be identified as K faces for hinge node geometry attachment.  BUSINESS RULE: Array length equals K face count.")]
-		[XmlElement("FaceIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("FaceIndices")]
         public AbstractIntegerArray FaceIndices {
             get {
                 return FaceIndicesField;
@@ -6241,7 +6434,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Edges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Edges", DataType="Edges")]
+        [EnergisticsDataTypeAttribute(DataType = "Edges")]
+		[XmlElement("Edges")]
         public Edges Edges {
             get {
                 return EdgesField;
@@ -6258,7 +6452,8 @@ namespace Energistics.DataAccess.RESQML200
         /// NodesPerCell property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("NodesPerCell", DataType="NodesPerCell")]
+        [EnergisticsDataTypeAttribute(DataType = "NodesPerCell")]
+		[XmlElement("NodesPerCell")]
         public NodesPerCell NodesPerCell {
             get {
                 return NodesPerCellField;
@@ -6293,6 +6488,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of edges. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -6311,7 +6507,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Defines a list of 2 nodes per edge.  Count = 2 x EdgeCount")]
-		[XmlElement("NodesPerEdge", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("NodesPerEdge")]
         public AbstractIntegerArray NodesPerEdge {
             get {
                 return NodesPerEdgeField;
@@ -6419,7 +6616,8 @@ namespace Energistics.DataAccess.RESQML200
         /// VariableSubnodes property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("VariableSubnodes", DataType="VariableSubnodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "VariableSubnodePatch")]
+		[XmlElement("VariableSubnodes")]
         public List<VariableSubnodePatch> VariableSubnodes {
             get {
                 return VariableSubnodesField;
@@ -6448,7 +6646,8 @@ namespace Energistics.DataAccess.RESQML200
         /// UniformSubnodes property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("UniformSubnodes", DataType="UniformSubnodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "UniformSubnodePatch")]
+		[XmlElement("UniformSubnodes")]
         public List<UniformSubnodePatch> UniformSubnodes {
             get {
                 return UniformSubnodesField;
@@ -6514,7 +6713,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Indices of the selected objects")]
-		[XmlElement("ObjectIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ObjectIndices")]
         public AbstractIntegerArray ObjectIndices {
             get {
                 return ObjectIndicesField;
@@ -6532,7 +6732,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of subnodes per selected object.")]
-		[XmlElement("SubnodeCountPerSelectedObject", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("SubnodeCountPerSelectedObject")]
         public AbstractIntegerArray SubnodeCountPerSelectedObject {
             get {
                 return SubnodeCountPerSelectedObjectField;
@@ -6567,6 +6768,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of subnodes per object, with the same number for each of this object kind in the grid.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("SubnodeCountPerObject", DataType="positiveInteger")]
         public string SubnodeCountPerObject {
             get {
@@ -6602,6 +6804,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of unstructured columns. Degenerate case (count=0) is allowed for GPGrid.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("UnstructuredColumnCount", DataType="nonNegativeInteger")]
         public string UnstructuredColumnCount {
             get {
@@ -6619,7 +6822,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Geometry property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Geometry", DataType="UnstructuredColumnLayerGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredColumnLayerGridGeometry")]
+		[XmlElement("Geometry")]
         public UnstructuredColumnLayerGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -6636,7 +6840,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TruncationCells property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("TruncationCells", DataType="TruncationCellPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "TruncationCellPatch")]
+		[XmlElement("TruncationCells")]
         public TruncationCellPatch TruncationCells {
             get {
                 return TruncationCellsField;
@@ -6670,7 +6875,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ColumnShape property
         /// </summary>
 		[Required]
-		[XmlElement("ColumnShape", DataType="ColumnShape")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnShape")]
+		[XmlElement("ColumnShape")]
         public ColumnShape? ColumnShape {
             get {
                 return ColumnShapeField;
@@ -6688,6 +6894,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of pillars in the grid. Must be positive. Pillars are used to describe the shape of the columns in the grid.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("PillarCount", DataType="positiveInteger")]
         public string PillarCount {
             get {
@@ -6707,7 +6914,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("List of pillars for each column. The pillars define the corners of each column.  The number of pillars per column can be obtained from the offsets in the first list of list array.  BUSINESS RULE: The length of the first array in the list of list construction should equal the columnCount.")]
         [ComponentElement]
-		[XmlElement("PillarsPerColumn", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("PillarsPerColumn")]
         public ResqmlJaggedArray PillarsPerColumn {
             get {
                 return PillarsPerColumnField;
@@ -6725,7 +6933,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("List of columns which are right handed. Right handedness is evaluated following the pillar order and the K-direction tangent vector for each column.")]
-		[XmlElement("ColumnIsRightHanded", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("ColumnIsRightHanded")]
         public AbstractBooleanArray ColumnIsRightHanded {
             get {
                 return ColumnIsRightHandedField;
@@ -6742,7 +6951,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ColumnEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ColumnEdges", DataType="UnstructuredColumnEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredColumnEdges")]
+		[XmlElement("ColumnEdges")]
         public UnstructuredColumnEdges ColumnEdges {
             get {
                 return ColumnEdgesField;
@@ -6777,6 +6987,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of unstructured column edges in this grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -6796,7 +7007,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Definition of the column edges in terms of the pillars per column edge. Pillar count per edge is usually 2, but the list-of-lists construction is used to allow column edges to be defined by more than 2 pillars.")]
         [ComponentElement]
-		[XmlElement("PillarsPerColumnEdge", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("PillarsPerColumnEdge")]
         public ResqmlJaggedArray PillarsPerColumnEdge {
             get {
                 return PillarsPerColumnEdgeField;
@@ -6850,6 +7062,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of additional split nodes. Count must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -6868,7 +7081,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Parent coordinate line node index for each of the split nodes. Used to implicitly define cell geometry.")]
-		[XmlElement("ParentNodeIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentNodeIndices")]
         public AbstractIntegerArray ParentNodeIndices {
             get {
                 return ParentNodeIndicesField;
@@ -6887,7 +7101,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Cell indices for each of the split nodes. Used to implicitly define cell geometry. List-of-lists construction used to support split nodes shared between multiple cells.")]
         [ComponentElement]
-		[XmlElement("CellsPerSplitNode", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("CellsPerSplitNode")]
         public ResqmlJaggedArray CellsPerSplitNode {
             get {
                 return CellsPerSplitNodeField;
@@ -6904,7 +7119,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitFaces property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitFaces", DataType="SplitFaces")]
+        [EnergisticsDataTypeAttribute(DataType = "SplitFaces")]
+		[XmlElement("SplitFaces")]
         public SplitFaces SplitFaces {
             get {
                 return SplitFacesField;
@@ -6939,6 +7155,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of additional split faces. Count must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -6957,7 +7174,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Parent unsplit face index for each of the additional split faces.")]
-		[XmlElement("ParentFaceIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentFaceIndices")]
         public AbstractIntegerArray ParentFaceIndices {
             get {
                 return ParentFaceIndicesField;
@@ -6975,7 +7193,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Cell index for each split face. Used to implicitly define cell geometry.")]
-		[XmlElement("CellIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("CellIndices")]
         public AbstractIntegerArray CellIndices {
             get {
                 return CellIndicesField;
@@ -6992,7 +7211,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitEdges", DataType="SplitEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "SplitEdges")]
+		[XmlElement("SplitEdges")]
         public SplitEdges SplitEdges {
             get {
                 return SplitEdgesField;
@@ -7046,6 +7266,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of edges. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -7064,7 +7285,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Parent unsplit edge index for each of the additional split edges.")]
-		[XmlElement("ParentEdgeIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentEdgeIndices")]
         public AbstractIntegerArray ParentEdgeIndices {
             get {
                 return ParentEdgeIndicesField;
@@ -7083,7 +7305,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Association of faces with the split edges, used to infer continuity of property, geometry, or interpretation with an attachment kind of edges.")]
         [ComponentElement]
-		[XmlElement("FacesPerSplitEdge", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("FacesPerSplitEdge")]
         public ResqmlJaggedArray FacesPerSplitEdge {
             get {
                 return FacesPerSplitEdgeField;
@@ -7137,6 +7360,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of split coordinate lines. The count must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -7155,7 +7379,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Pillar index for each split coordinate line. Length of this array is equal to the number of split coordinate lines.  For the first pillarCount lines, the index of the coordinate line equals the index of the corresponding pillar.  This array provides the pillar indices for the additional (split) coordinate lines.  Used to implicitly define column and cell geometry.")]
-		[XmlElement("PillarIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("PillarIndices")]
         public AbstractIntegerArray PillarIndices {
             get {
                 return PillarIndicesField;
@@ -7174,7 +7399,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Column indices for each of the split coordinate lines. Used to implicitly define column and cell geometry. List-of-lists construction used to support shared coordinate lines.")]
         [ComponentElement]
-		[XmlElement("ColumnsPerSplitCoordinateLine", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("ColumnsPerSplitCoordinateLine")]
         public ResqmlJaggedArray ColumnsPerSplitCoordinateLine {
             get {
                 return ColumnsPerSplitCoordinateLineField;
@@ -7191,7 +7417,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitColumnEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitColumnEdges", DataType="ColumnLayerSplitColumnEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnLayerSplitColumnEdges")]
+		[XmlElement("SplitColumnEdges")]
         public ColumnLayerSplitColumnEdges SplitColumnEdges {
             get {
                 return SplitColumnEdgesField;
@@ -7245,6 +7472,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of split column edges in this grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -7263,7 +7491,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Parent unsplit column edge index for each of the split column edges. Used to implicitly define split face indexing.")]
-		[XmlElement("ParentColumnEdgeIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentColumnEdgeIndices")]
         public AbstractIntegerArray ParentColumnEdgeIndices {
             get {
                 return ParentColumnEdgeIndicesField;
@@ -7281,7 +7510,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Column index for each of the split column edges. Used to implicitly define column and cell faces. List-of-lists construction not required since each split column edge must be in a single column.")]
-		[XmlElement("ColumnPerSplitColumnEdge", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ColumnPerSplitColumnEdge")]
         public AbstractIntegerArray ColumnPerSplitColumnEdge {
             get {
                 return ColumnPerSplitColumnEdgeField;
@@ -7334,6 +7564,7 @@ namespace Energistics.DataAccess.RESQML200
         /// PatchIndex property
         /// </summary>
 		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("PatchIndex", DataType="nonNegativeInteger")]
         public string PatchIndex {
             get {
@@ -7351,7 +7582,8 @@ namespace Energistics.DataAccess.RESQML200
         /// InternalShells property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("InternalShells", DataType="VolumeShell")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeShell")]
+		[XmlElement("InternalShells")]
         public List<VolumeShell> InternalShells {
             get {
                 return InternalShellsField;
@@ -7381,7 +7613,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Represents", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Represents")]
         public DataObjectReference Represents {
             get {
                 return RepresentsField;
@@ -7399,7 +7632,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ExternalShell", DataType="VolumeShell")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeShell")]
+		[XmlElement("ExternalShell")]
         public VolumeShell ExternalShell {
             get {
                 return ExternalShellField;
@@ -7452,7 +7686,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ShellUid property
         /// </summary>
 		[Required]
-		[XmlElement("ShellUid", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("ShellUid")]
         public string ShellUid {
             get {
                 return ShellUidField;
@@ -7470,7 +7705,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("MacroFaces", DataType="OrientedMacroFace")]
+        [EnergisticsDataTypeAttribute(DataType = "OrientedMacroFace")]
+		[XmlElement("MacroFaces")]
         public List<OrientedMacroFace> MacroFaces {
             get {
                 return MacroFacesField;
@@ -7536,6 +7772,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Create the triangulation and 2D grid representation for which the patches match the macro faces.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("PatchIndexOfRepresentation", DataType="nonNegativeInteger")]
         public string PatchIndexOfRepresentation {
             get {
@@ -7554,6 +7791,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Identifies the representation by its index, in the list of representations contained in the organization.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RepresentationIndex", DataType="nonNegativeInteger")]
         public string RepresentationIndex {
             get {
@@ -7571,7 +7809,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SideIsPlus property
         /// </summary>
 		[Required]
-		[XmlElement("SideIsPlus", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("SideIsPlus")]
         public bool? SideIsPlus {
             get {
                 return SideIsPlusField;
@@ -7628,6 +7867,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The index of the contact. Indicates identity of the contact in the surface framework context. It is used for contact identities and to find the interpretation of this particular contact.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -7682,7 +7922,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Representation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Representation")]
         public DataObjectReference Representation {
             get {
                 return RepresentationField;
@@ -7716,7 +7957,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IdenticalNodeIndices property
         /// </summary>
 		[Description("Indicate which nodes (identified by their common index in all contact patches) of the contact patches are identical.  If this list is not present, then it indicates that all nodes in each representation are identical, on an element-by-element level.")]
-		[XmlElement("IdenticalNodeIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("IdenticalNodeIndices")]
         public AbstractIntegerArray IdenticalNodeIndices {
             get {
                 return IdenticalNodeIndicesField;
@@ -7733,7 +7975,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IdentityKind property
         /// </summary>
 		[Required]
-		[XmlElement("IdentityKind", DataType="IdentityKind")]
+        [EnergisticsDataTypeAttribute(DataType = "IdentityKind")]
+		[XmlElement("IdentityKind")]
         public IdentityKind? IdentityKind {
             get {
                 return IdentityKindField;
@@ -7751,7 +7994,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Contact", DataType="ContactPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactPatch")]
+		[XmlElement("Contact")]
         public List<ContactPatch> Contact {
             get {
                 return ContactField;
@@ -7797,7 +8041,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Contact property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Contact", DataType="ContactPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactPatch")]
+		[XmlElement("Contact")]
         public List<ContactPatch> Contact {
             get {
                 return ContactField;
@@ -7827,7 +8072,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="AbstractGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractGeometry")]
+		[XmlElement("Geometry")]
         public AbstractGeometry Geometry {
             get {
                 return GeometryField;
@@ -7861,7 +8107,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IdentityKind property
         /// </summary>
 		[Required]
-		[XmlElement("IdentityKind", DataType="IdentityKind")]
+        [EnergisticsDataTypeAttribute(DataType = "IdentityKind")]
+		[XmlElement("IdentityKind")]
         public IdentityKind? IdentityKind {
             get {
                 return IdentityKindField;
@@ -7879,7 +8126,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The contact representations that share common identity as specified by their indices")]
-		[XmlElement("ListOfContactRepresentations", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ListOfContactRepresentations")]
         public AbstractIntegerArray ListOfContactRepresentations {
             get {
                 return ListOfContactRepresentationsField;
@@ -7896,7 +8144,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Indicates which nodes (identified by their common index in all contact representations) of the contact representations are identical. If this list is not present, then it indicates that all nodes in each representation are identical, on an element by element level.
         /// </summary>
 		[Description("Indicates which nodes (identified by their common index in all contact representations) of the contact representations are identical.  If this list is not present, then it indicates that all nodes in each representation are identical, on an element by element level.")]
-		[XmlElement("ListOfIdenticalNodes", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ListOfIdenticalNodes")]
         public AbstractIntegerArray ListOfIdenticalNodes {
             get {
                 return ListOfIdenticalNodesField;
@@ -7951,7 +8200,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Indices for the interpretations for each connection, if any. The use of a Resqml jagged array allows zero or more than one interpretation to be associated with a single connection.")]
         [ComponentElement]
-		[XmlElement("InterpretationIndices", DataType="ResqmlJaggedArray")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlJaggedArray")]
+		[XmlElement("InterpretationIndices")]
         public ResqmlJaggedArray InterpretationIndices {
             get {
                 return InterpretationIndicesField;
@@ -7969,7 +8219,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("FeatureInterpretation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("FeatureInterpretation")]
         public List<DataObjectReference> FeatureInterpretation {
             get {
                 return FeatureInterpretationField;
@@ -8035,7 +8286,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Index of the stratigraphic unit per interval, of a given stratigraphic column.  Notes: 1.) For grids, intervals = layers + K gaps. 2.) If there is no stratigraphic column, e.g., within salt, use null (-1)  BUSINESS RULE: Array length must equal the number of INTERVALS.")]
-		[XmlElement("UnitIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("UnitIndices")]
         public AbstractIntegerArray UnitIndices {
             get {
                 return UnitIndicesField;
@@ -8053,7 +8305,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("StratigraphicOrganization", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("StratigraphicOrganization")]
         public DataObjectReference StratigraphicOrganization {
             get {
                 return StratigraphicOrganizationField;
@@ -8106,6 +8359,7 @@ namespace Energistics.DataAccess.RESQML200
         /// Number of gaps between layers. Must be positive. Number of INTERVALS = gapCount + NK.
         /// </summary>
 		[Description("Number of gaps between layers. Must be positive.  Number of INTERVALS = gapCount + NK.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -8123,7 +8377,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Boolean array of length NK-1. TRUE if there is a gap after the corresponding layer. NKL = NK + gapCount + 1 BUSINESS RULE: gapCount must be consistent with the number of gaps specified by the gapAfterLayer array.
         /// </summary>
 		[Description("Boolean array of length NK-1. TRUE if there is a gap after the corresponding layer.  NKL = NK + gapCount + 1  BUSINESS RULE: gapCount must be consistent with the number of gaps specified by the gapAfterLayer array.")]
-		[XmlElement("GapAfterLayer", DataType="AbstractBooleanArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractBooleanArray")]
+		[XmlElement("GapAfterLayer")]
         public AbstractBooleanArray GapAfterLayer {
             get {
                 return GapAfterLayerField;
@@ -8177,6 +8432,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of layers. Degenerate case (nk=0) is allowed for GPGrid.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Nk", DataType="nonNegativeInteger")]
         public string Nk {
             get {
@@ -8194,7 +8450,8 @@ namespace Energistics.DataAccess.RESQML200
         /// KGaps property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("KGaps", DataType="KGaps")]
+        [EnergisticsDataTypeAttribute(DataType = "KGaps")]
+		[XmlElement("KGaps")]
         public KGaps KGaps {
             get {
                 return KGapsField;
@@ -8211,7 +8468,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IjkGridPatch property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("IjkGridPatch", DataType="GpGridIjkGridPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "GpGridIjkGridPatch")]
+		[XmlElement("IjkGridPatch")]
         public List<GpGridIjkGridPatch> IjkGridPatch {
             get {
                 return IjkGridPatchField;
@@ -8240,7 +8498,8 @@ namespace Energistics.DataAccess.RESQML200
         /// UnstructuredColumnLayerGridPatch property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("UnstructuredColumnLayerGridPatch", DataType="GpGridUnstructuredColumnLayerGridPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "GpGridUnstructuredColumnLayerGridPatch")]
+		[XmlElement("UnstructuredColumnLayerGridPatch")]
         public List<GpGridUnstructuredColumnLayerGridPatch> UnstructuredColumnLayerGridPatch {
             get {
                 return UnstructuredColumnLayerGridPatchField;
@@ -8306,7 +8565,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Index of the stratigraphic unit of a given stratigraphic column for each cell.  Use null (-1) if no stratigraphic column, e.g., within salt  BUSINESS RULE: Array length is the number of cells in the grid or the blocked well")]
-		[XmlElement("UnitIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("UnitIndices")]
         public AbstractIntegerArray UnitIndices {
             get {
                 return UnitIndicesField;
@@ -8324,7 +8584,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("StratigraphicOrganization", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("StratigraphicOrganization")]
         public DataObjectReference StratigraphicOrganization {
             get {
                 return StratigraphicOrganizationField;
@@ -8378,6 +8639,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The number of intervals in the regrid description. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("IntervalCount", DataType="positiveInteger")]
         public string IntervalCount {
             get {
@@ -8396,7 +8658,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The number of parent cells in each interval.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) For the given parentIndex, the total count of parent cells should not extend beyond the boundary of the parent grid.")]
-		[XmlElement("ParentCountPerInterval", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentCountPerInterval")]
         public AbstractIntegerArray ParentCountPerInterval {
             get {
                 return ParentCountPerIntervalField;
@@ -8414,7 +8677,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The number of child cells in each interval.  If the child grid type is not commensurate with the parent type, then this attribute is ignored by a reader, and its value should be set to null (-1). For example, for a parent IJK grid with a child unstructured column layer grid, then the child count is non-null for a K regrid, but null for an I or J regrid.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) If the child grid type is commensurate with the parent grid, then the sum of values over all intervals must be equal to the corresponding child grid dimension.")]
-		[XmlElement("ChildCountPerInterval", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ChildCountPerInterval")]
         public AbstractIntegerArray ChildCountPerInterval {
             get {
                 return ChildCountPerIntervalField;
@@ -8431,7 +8695,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Weights that are proportional to the relative sizes of child cells within each interval. The weights need not be normalized.
         /// </summary>
 		[Description("Weights that are proportional to the relative sizes of child cells within each interval. The weights need not be normalized.")]
-		[XmlElement("ChildCellWeights", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("ChildCellWeights")]
         public AbstractDoubleArray ChildCellWeights {
             get {
                 return ChildCellWeightsField;
@@ -8485,6 +8750,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("0-based index for the placement of the window on the parent grid.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("InitialIndexOnParentGrid", DataType="nonNegativeInteger")]
         public string InitialIndexOnParentGrid {
             get {
@@ -8502,7 +8768,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Intervals property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Intervals", DataType="Intervals")]
+        [EnergisticsDataTypeAttribute(DataType = "Intervals")]
+		[XmlElement("Intervals")]
         public Intervals Intervals {
             get {
                 return IntervalsField;
@@ -8555,7 +8822,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Units of measure for the overlapVolume.
         /// </summary>
 		[Description("Units of measure for the overlapVolume.")]
-		[XmlElement("VolumeUom", DataType="VolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeUom")]
+		[XmlElement("VolumeUom")]
         public VolumeUom? VolumeUom {
             get {
                 return VolumeUomField;
@@ -8572,7 +8840,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Parent-child cell volume overlap. BUSINESS RULE: Length of array must equal the cell overlap count.
         /// </summary>
 		[Description("Parent-child cell volume overlap.  BUSINESS RULE: Length of array must equal the cell overlap count.")]
-		[XmlElement("OverlapVolumes", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("OverlapVolumes")]
         public AbstractDoubleArray OverlapVolumes {
             get {
                 return OverlapVolumesField;
@@ -8625,6 +8894,7 @@ namespace Energistics.DataAccess.RESQML200
         /// Count property
         /// </summary>
 		[Description("Number of parent-child cell overlaps. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -8642,7 +8912,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParentChildCellPairs property
         /// </summary>
 		[Description("(Parent cell index, Child cell index) pair for each overlap.  BUSINESS RULE: Length of array must equal 2 x overlapCount.")]
-		[XmlElement("ParentChildCellPairs", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ParentChildCellPairs")]
         public AbstractIntegerArray ParentChildCellPairs {
             get {
                 return ParentChildCellPairsField;
@@ -8658,8 +8929,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// OverlapVolume property
         /// </summary>
-		[ComponentElement]
-		[XmlElement("OverlapVolume", DataType="OverlapVolume")]
+		[EnergisticsDataTypeAttribute(DataType = "OverlapVolume")]
+		[XmlElement("OverlapVolume")]
         public OverlapVolume OverlapVolume {
             get {
                 return OverlapVolumeField;
@@ -8715,7 +8986,8 @@ namespace Energistics.DataAccess.RESQML200
         /// CellOverlap property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("CellOverlap", DataType="CellOverlap")]
+        [EnergisticsDataTypeAttribute(DataType = "CellOverlap")]
+		[XmlElement("CellOverlap")]
         public CellOverlap CellOverlap {
             get {
                 return CellOverlapField;
@@ -8769,7 +9041,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Cell indices which list the cells in the parent window.  BUSINESS RULE: Number of cells must be consistent with the child grid cell count.")]
-		[XmlElement("CellIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("CellIndices")]
         public AbstractIntegerArray CellIndices {
             get {
                 return CellIndicesField;
@@ -8787,7 +9060,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ParentGrid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
                 return ParentGridField;
@@ -8822,7 +9096,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Column indices that list the columns in the parent window.  BUSINESS RULE: Number of columns must be consistent with the child grid column count.")]
-		[XmlElement("ColumnIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ColumnIndices")]
         public AbstractIntegerArray ColumnIndices {
             get {
                 return ColumnIndicesField;
@@ -8839,7 +9114,8 @@ namespace Energistics.DataAccess.RESQML200
         /// OmitParentCells property
         /// </summary>
 		[Description("List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The omit allows non-rectangular local grids to be specified.  0-based indexing follows #Columns x #Layers relative to the parent window cell count, not to the parent grid.")]
-		[XmlElement("OmitParentCells", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("OmitParentCells")]
         public AbstractIntegerArray OmitParentCells {
             get {
                 return OmitParentCellsField;
@@ -8857,7 +9133,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("KRegrid", DataType="Regrid")]
+        [EnergisticsDataTypeAttribute(DataType = "Regrid")]
+		[XmlElement("KRegrid")]
         public Regrid KRegrid {
             get {
                 return KRegridField;
@@ -8875,7 +9152,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ParentGrid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
                 return ParentGridField;
@@ -8909,7 +9187,8 @@ namespace Energistics.DataAccess.RESQML200
         /// OmitParentCells property
         /// </summary>
 		[Description("List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The \"omit\" allows non-rectangular local grids to be specified.  0-based indexing follows NI x NJ x NK relative to the parent window cell count—not to the parent grid.")]
-		[XmlElement("OmitParentCells", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("OmitParentCells")]
         public AbstractIntegerArray OmitParentCells {
             get {
                 return OmitParentCellsField;
@@ -8927,7 +9206,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("JRegrid", DataType="Regrid")]
+        [EnergisticsDataTypeAttribute(DataType = "Regrid")]
+		[XmlElement("JRegrid")]
         public Regrid JRegrid {
             get {
                 return JRegridField;
@@ -8945,7 +9225,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ParentGrid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
                 return ParentGridField;
@@ -8963,7 +9244,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("KRegrid", DataType="Regrid")]
+        [EnergisticsDataTypeAttribute(DataType = "Regrid")]
+		[XmlElement("KRegrid")]
         public Regrid KRegrid {
             get {
                 return KRegridField;
@@ -8981,7 +9263,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("IRegrid", DataType="Regrid")]
+        [EnergisticsDataTypeAttribute(DataType = "Regrid")]
+		[XmlElement("IRegrid")]
         public Regrid IRegrid {
             get {
                 return IRegridField;
@@ -9016,7 +9299,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Index of the phase unit kind within a given fluid phase organization for each cell. Follows the indexing defined by the PhaseUnit enumeration. When applied to the wellbore frame representation, the indexing is identical to the number of intervals.  Use null (-1) if no fluid phase is present, e.g., within the seal.  BUSINESS RULE: Array length is equal to the number of cells in the representation (grid, wellbore frame or blocked well).")]
-		[XmlElement("PhaseUnitIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("PhaseUnitIndices")]
         public AbstractIntegerArray PhaseUnitIndices {
             get {
                 return PhaseUnitIndicesField;
@@ -9034,7 +9318,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("FluidOrganization", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("FluidOrganization")]
         public DataObjectReference FluidOrganization {
             get {
                 return FluidOrganizationField;
@@ -9087,7 +9372,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitEdges", DataType="SplitEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "SplitEdges")]
+		[XmlElement("SplitEdges")]
         public SplitEdges SplitEdges {
             get {
                 return SplitEdgesField;
@@ -9104,7 +9390,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitNodes property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitNodes", DataType="SplitNodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "SplitNodePatch")]
+		[XmlElement("SplitNodes")]
         public SplitNodePatch SplitNodes {
             get {
                 return SplitNodesField;
@@ -9121,7 +9408,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitColumnEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitColumnEdges", DataType="ColumnLayerSplitColumnEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnLayerSplitColumnEdges")]
+		[XmlElement("SplitColumnEdges")]
         public ColumnLayerSplitColumnEdges SplitColumnEdges {
             get {
                 return SplitColumnEdgesField;
@@ -9138,7 +9426,8 @@ namespace Energistics.DataAccess.RESQML200
         /// UnstructuredColumnEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("UnstructuredColumnEdges", DataType="UnstructuredColumnEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredColumnEdges")]
+		[XmlElement("UnstructuredColumnEdges")]
         public UnstructuredColumnEdges UnstructuredColumnEdges {
             get {
                 return UnstructuredColumnEdgesField;
@@ -9155,7 +9444,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SplitFaces property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("SplitFaces", DataType="SplitFaces")]
+        [EnergisticsDataTypeAttribute(DataType = "SplitFaces")]
+		[XmlElement("SplitFaces")]
         public SplitFaces SplitFaces {
             get {
                 return SplitFacesField;
@@ -9172,7 +9462,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IjSplitColumnEdges property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IjSplitColumnEdges", DataType="IjSplitColumnEdges")]
+        [EnergisticsDataTypeAttribute(DataType = "IjSplitColumnEdges")]
+		[XmlElement("IjSplitColumnEdges")]
         public IjSplitColumnEdges IjSplitColumnEdges {
             get {
                 return IjSplitColumnEdgesField;
@@ -9189,7 +9480,8 @@ namespace Energistics.DataAccess.RESQML200
         /// UnstructuredSubnodeTopology property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("UnstructuredSubnodeTopology", DataType="UnstructuredSubnodeTopology")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredSubnodeTopology")]
+		[XmlElement("UnstructuredSubnodeTopology")]
         public UnstructuredSubnodeTopology UnstructuredSubnodeTopology {
             get {
                 return UnstructuredSubnodeTopologyField;
@@ -9206,7 +9498,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ColumnLayerSubnodeTopology property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ColumnLayerSubnodeTopology", DataType="ColumnLayerSubnodeTopology")]
+        [EnergisticsDataTypeAttribute(DataType = "ColumnLayerSubnodeTopology")]
+		[XmlElement("ColumnLayerSubnodeTopology")]
         public ColumnLayerSubnodeTopology ColumnLayerSubnodeTopology {
             get {
                 return ColumnLayerSubnodeTopologyField;
@@ -9259,7 +9552,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ElementIndices property
         /// </summary>
 		[Description("Indicates which elements are identical based on their indices in the (sub)representation. If not given, then the selected indexable elements of each of the selected representations are identical at the element by element level.   If not given, then all elements are specified to be identical.  BUSINESS RULE: Number of identical elements must equal identicalElementCount for each representation.")]
-		[XmlElement("ElementIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ElementIndices")]
         public AbstractIntegerArray ElementIndices {
             get {
                 return ElementIndicesField;
@@ -9276,7 +9570,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IdentityKind property
         /// </summary>
 		[Required]
-		[XmlElement("IdentityKind", DataType="IdentityKind")]
+        [EnergisticsDataTypeAttribute(DataType = "IdentityKind")]
+		[XmlElement("IdentityKind")]
         public IdentityKind? IdentityKind {
             get {
                 return IdentityKindField;
@@ -9293,7 +9588,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IndexableElement property
         /// </summary>
 		[Required]
-		[XmlElement("IndexableElement", DataType="IndexableElements")]
+        [EnergisticsDataTypeAttribute(DataType = "IndexableElements")]
+		[XmlElement("IndexableElement")]
         public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
@@ -9311,7 +9607,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Representation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Representation")]
         public DataObjectReference Representation {
             get {
                 return RepresentationField;
@@ -9328,7 +9625,8 @@ namespace Energistics.DataAccess.RESQML200
         /// FromTimeIndex property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("FromTimeIndex", DataType="TimeIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeIndex")]
+		[XmlElement("FromTimeIndex")]
         public TimeIndex FromTimeIndex {
             get {
                 return FromTimeIndexField;
@@ -9345,7 +9643,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ToTimeIndex property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ToTimeIndex", DataType="TimeIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeIndex")]
+		[XmlElement("ToTimeIndex")]
         public TimeIndex ToTimeIndex {
             get {
                 return ToTimeIndexField;
@@ -9399,6 +9698,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of elements within each representation for which a representation identity is specified.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("IdenticalElementCount", DataType="positiveInteger")]
         public string IdenticalElementCount {
             get {
@@ -9417,7 +9717,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("ElementIdentity", DataType="ElementIdentity")]
+        [EnergisticsDataTypeAttribute(DataType = "ElementIdentity")]
+		[XmlElement("ElementIdentity")]
         public List<ElementIdentity> ElementIdentity {
             get {
                 return ElementIdentityField;
@@ -9446,7 +9747,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AdditionalGridTopology property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("AdditionalGridTopology", DataType="AdditionalGridTopology")]
+        [EnergisticsDataTypeAttribute(DataType = "AdditionalGridTopology")]
+		[XmlElement("AdditionalGridTopology")]
         public AdditionalGridTopology AdditionalGridTopology {
             get {
                 return AdditionalGridTopologyField;
@@ -9500,7 +9802,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The index in the time series at which the state of the referencing object is changed. Toggle will change state from inactive to active, or toggle will change state from active to inactive.")]
-		[XmlElement("ActivationToggleIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("ActivationToggleIndices")]
         public AbstractIntegerArray ActivationToggleIndices {
             get {
                 return ActivationToggleIndicesField;
@@ -9518,7 +9821,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("TimeSeries", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("TimeSeries")]
         public DataObjectReference TimeSeries {
             get {
                 return TimeSeriesField;
@@ -9572,7 +9876,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Throw", DataType="ThrowKind")]
+        [EnergisticsDataTypeAttribute(DataType = "ThrowKind")]
+		[XmlElement("Throw")]
         public List<ThrowKind> Throw {
             get {
                 return ThrowField;
@@ -9601,7 +9906,8 @@ namespace Energistics.DataAccess.RESQML200
         /// HasOccuredDuring property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("HasOccuredDuring", DataType="TimeInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeInterval")]
+		[XmlElement("HasOccuredDuring")]
         public TimeInterval HasOccuredDuring {
             get {
                 return HasOccuredDuringField;
@@ -9655,7 +9961,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ChronoBottom", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ChronoBottom")]
         public DataObjectReference ChronoBottom {
             get {
                 return ChronoBottomField;
@@ -9673,7 +9980,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("ChronoTop", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ChronoTop")]
         public DataObjectReference ChronoTop {
             get {
                 return ChronoTopField;
@@ -9749,7 +10057,8 @@ namespace Energistics.DataAccess.RESQML200
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "PlaneAngleUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleUom")]
+        [XmlAttribute("uom")]
 		
         public PlaneAngleUom Uom {
             get {
@@ -9843,7 +10152,8 @@ namespace Energistics.DataAccess.RESQML200
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+        [XmlAttribute("uom")]
 		
         public LengthUom Uom {
             get {
@@ -9915,6 +10225,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An index value associated to an instance of this type interpretation, given a specific ordering criteria.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -9933,7 +10244,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Unit", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Unit")]
         public DataObjectReference Unit {
             get {
                 return UnitField;
@@ -9987,6 +10299,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An index value associated to an instance of this type of interpretation, given a specific ordering criteria.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -10005,7 +10318,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Unit", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Unit")]
         public DataObjectReference Unit {
             get {
                 return UnitField;
@@ -10059,6 +10373,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An index value associated to an instance of this type of interpretation, given a specific ordering criteria")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -10076,6 +10391,7 @@ namespace Energistics.DataAccess.RESQML200
         /// StratigraphicRank property
         /// </summary>
 		[Description("Number of the stratigraphic rank on which the previous indices have been defined.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("StratigraphicRank", DataType="nonNegativeInteger")]
         public string StratigraphicRank {
             get {
@@ -10094,7 +10410,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Horizon", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Horizon")]
         public DataObjectReference Horizon {
             get {
                 return HorizonField;
@@ -10148,6 +10465,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Index of the fluid feature interpretation.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -10166,7 +10484,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("RockFluidUnit", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("RockFluidUnit")]
         public DataObjectReference RockFluidUnit {
             get {
                 return RockFluidUnitField;
@@ -10221,7 +10540,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ContactRelationship property
         /// </summary>
 		[Required]
-		[XmlElement("ContactRelationship", DataType="ContactRelationship")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactRelationship")]
+		[XmlElement("ContactRelationship")]
         public ContactRelationship? ContactRelationship {
             get {
                 return ContactRelationshipField;
@@ -10239,6 +10559,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("contact index")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -10256,7 +10577,8 @@ namespace Energistics.DataAccess.RESQML200
         /// PartOf property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("PartOf", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("PartOf")]
         public DataObjectReference PartOf {
             get {
                 return PartOfField;
@@ -10311,6 +10633,7 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Indicates a list of binary contacts (by their UUIDs) that participate in this multiple contact.")]
         [RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("With", DataType="nonNegativeInteger")]
         public List<string> With {
             get {
@@ -10359,7 +10682,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Data-object reference (by UUID link) to a geologic feature interpretation, which is the direct object of the sentence that defines how the contact was constructed.")]
         [ComponentElement]
-		[XmlElement("DirectObject", DataType="ContactElementReference")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactElementReference")]
+		[XmlElement("DirectObject")]
         public ContactElementReference DirectObject {
             get {
                 return DirectObjectField;
@@ -10376,7 +10700,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Verb property
         /// </summary>
 		[Required]
-		[XmlElement("Verb", DataType="ContactVerb")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactVerb")]
+		[XmlElement("Verb")]
         public ContactVerb? Verb {
             get {
                 return VerbField;
@@ -10395,7 +10720,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Data-object reference (by UUID link) to a geologic feature interpretation, which is the subject of the sentence that defines how the contact was constructed.")]
         [ComponentElement]
-		[XmlElement("Subject", DataType="ContactElementReference")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactElementReference")]
+		[XmlElement("Subject")]
         public ContactElementReference Subject {
             get {
                 return SubjectField;
@@ -10451,7 +10777,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Name of the metadata information.")]
-		[XmlElement("Name", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("Name")]
         public string Name {
             get {
                 return NameField;
@@ -10469,7 +10796,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Value of the metadata information.")]
-		[XmlElement("Value", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("Value")]
         public string Value {
             get {
                 return ValueField;
@@ -10562,7 +10890,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [StringLength(256)]
-		[XmlElement("Unknown", DataType="DescriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "DescriptionString")]
+		[XmlElement("Unknown")]
         public string Unknown {
             get {
                 return UnknownField;
@@ -10694,8 +11023,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -10794,8 +11123,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// aggregationType property
         /// </summary>
-		
-        [XmlAttribute("aggregationType", DataType = "AggregationType")]
+		[EnergisticsDataTypeAttribute(DataType = "AggregationType")]
+        [XmlAttribute("aggregationType")]
 		
         public AggregationType AggregationType {
             get {
@@ -10862,8 +11191,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -11072,8 +11401,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// codeSpace property
         /// </summary>
-		
-        [XmlAttribute("codeSpace", DataType = "anyURI")]
+		[EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeSpace")]
 		
         public string CodeSpace {
             get {
@@ -11404,7 +11733,7 @@ namespace Energistics.DataAccess.RESQML200
         /// id property
         /// </summary>
 		
-        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified, DataType = "ID")]
+        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
         public string Id {
             get {
@@ -11476,8 +11805,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -11545,8 +11874,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// owns property
         /// </summary>
-		
-        [XmlAttribute("owns", DataType = "boolean")]
+		[EnergisticsDataTypeAttribute(DataType = "boolean")]
+        [XmlAttribute("owns")]
 		
         public bool Owns {
             get {
@@ -11563,8 +11892,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -11632,7 +11961,8 @@ namespace Energistics.DataAccess.RESQML200
         /// relatedTime property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("relatedTime", DataType="RelatedTimeType")]
+        [EnergisticsDataTypeAttribute(DataType = "RelatedTimeType")]
+		[XmlElement("relatedTime")]
         public List<RelatedTimeType> RelatedTime {
             get {
                 return relatedTimeField;
@@ -11747,8 +12077,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -11765,8 +12095,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// owns property
         /// </summary>
-		
-        [XmlAttribute("owns", DataType = "boolean")]
+		[EnergisticsDataTypeAttribute(DataType = "boolean")]
+        [XmlAttribute("owns")]
 		
         public bool Owns {
             get {
@@ -12030,7 +12360,8 @@ namespace Energistics.DataAccess.RESQML200
         /// description property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("description", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("description")]
         public CharacterString_PropertyType Description {
             get {
                 return descriptionField;
@@ -12047,7 +12378,8 @@ namespace Energistics.DataAccess.RESQML200
         /// geographicElement property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("geographicElement", DataType="EX_GeographicExtent_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "EX_GeographicExtent_PropertyType")]
+		[XmlElement("geographicElement")]
         public List<EX_GeographicExtent_PropertyType> GeographicElement {
             get {
                 return geographicElementField;
@@ -12076,7 +12408,8 @@ namespace Energistics.DataAccess.RESQML200
         /// temporalElement property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("temporalElement", DataType="EX_TemporalExtent_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "EX_TemporalExtent_PropertyType")]
+		[XmlElement("temporalElement")]
         public List<EX_TemporalExtent_PropertyType> TemporalElement {
             get {
                 return temporalElementField;
@@ -12105,7 +12438,8 @@ namespace Energistics.DataAccess.RESQML200
         /// verticalElement property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("verticalElement", DataType="EX_VerticalExtent_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "EX_VerticalExtent_PropertyType")]
+		[XmlElement("verticalElement")]
         public List<EX_VerticalExtent_PropertyType> VerticalElement {
             get {
                 return verticalElementField;
@@ -12237,8 +12571,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -12309,7 +12643,8 @@ namespace Energistics.DataAccess.RESQML200
         /// extentTypeCode property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("extentTypeCode", DataType="Boolean_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "Boolean_PropertyType")]
+		[XmlElement("extentTypeCode")]
         public Boolean_PropertyType ExtentTypeCode {
             get {
                 return extentTypeCodeField;
@@ -12428,8 +12763,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// id property
         /// </summary>
-		
-        [XmlAttribute("id", DataType = "ID")]
+		[EnergisticsDataTypeAttribute(DataType = "ID")]
+        [XmlAttribute("id")]
 		
         public string Id {
             get {
@@ -12446,8 +12781,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuid property
         /// </summary>
-		
-        [XmlAttribute("uuid", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuid")]
 		
         public string Uuid {
             get {
@@ -12515,7 +12850,8 @@ namespace Energistics.DataAccess.RESQML200
         /// name property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("name", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("name")]
         public CharacterString_PropertyType Name {
             get {
                 return nameField;
@@ -12532,7 +12868,8 @@ namespace Energistics.DataAccess.RESQML200
         /// issueIdentification property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("issueIdentification", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("issueIdentification")]
         public CharacterString_PropertyType IssueIdentification {
             get {
                 return issueIdentificationField;
@@ -12549,7 +12886,8 @@ namespace Energistics.DataAccess.RESQML200
         /// page property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("page", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("page")]
         public CharacterString_PropertyType Page {
             get {
                 return pageField;
@@ -12582,7 +12920,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("linkage", DataType="URL_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "URL_PropertyType")]
+		[XmlElement("linkage")]
         public URL_PropertyType Linkage {
             get {
                 return linkageField;
@@ -12599,7 +12938,8 @@ namespace Energistics.DataAccess.RESQML200
         /// protocol property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("protocol", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("protocol")]
         public CharacterString_PropertyType Protocol {
             get {
                 return protocolField;
@@ -12616,7 +12956,8 @@ namespace Energistics.DataAccess.RESQML200
         /// applicationProfile property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("applicationProfile", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("applicationProfile")]
         public CharacterString_PropertyType ApplicationProfile {
             get {
                 return applicationProfileField;
@@ -12633,7 +12974,8 @@ namespace Energistics.DataAccess.RESQML200
         /// name property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("name", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("name")]
         public CharacterString_PropertyType Name {
             get {
                 return nameField;
@@ -12650,7 +12992,8 @@ namespace Energistics.DataAccess.RESQML200
         /// description property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("description", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("description")]
         public CharacterString_PropertyType Description {
             get {
                 return descriptionField;
@@ -12667,7 +13010,8 @@ namespace Energistics.DataAccess.RESQML200
         /// function property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("function", DataType="CI_OnLineFunctionCode_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_OnLineFunctionCode_PropertyType")]
+		[XmlElement("function")]
         public CI_OnLineFunctionCode_PropertyType Function {
             get {
                 return functionField;
@@ -12862,7 +13206,8 @@ namespace Energistics.DataAccess.RESQML200
         /// codeList property
         /// </summary>
 		[Required]
-        [XmlAttribute("codeList", DataType = "anyURI")]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeList")]
 		
         public string CodeList {
             get {
@@ -12880,7 +13225,8 @@ namespace Energistics.DataAccess.RESQML200
         /// codeListValue property
         /// </summary>
 		[Required]
-        [XmlAttribute("codeListValue", DataType = "anyURI")]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeListValue")]
 		
         public string CodeListValue {
             get {
@@ -12897,8 +13243,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// codeSpace property
         /// </summary>
-		
-        [XmlAttribute("codeSpace", DataType = "anyURI")]
+		[EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeSpace")]
 		
         public string CodeSpace {
             get {
@@ -12967,7 +13313,8 @@ namespace Energistics.DataAccess.RESQML200
         /// deliveryPoint property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("deliveryPoint", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("deliveryPoint")]
         public List<CharacterString_PropertyType> DeliveryPoint {
             get {
                 return deliveryPointField;
@@ -12996,7 +13343,8 @@ namespace Energistics.DataAccess.RESQML200
         /// city property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("city", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("city")]
         public CharacterString_PropertyType City {
             get {
                 return cityField;
@@ -13013,7 +13361,8 @@ namespace Energistics.DataAccess.RESQML200
         /// administrativeArea property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("administrativeArea", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("administrativeArea")]
         public CharacterString_PropertyType AdministrativeArea {
             get {
                 return administrativeAreaField;
@@ -13030,7 +13379,8 @@ namespace Energistics.DataAccess.RESQML200
         /// postalCode property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("postalCode", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("postalCode")]
         public CharacterString_PropertyType PostalCode {
             get {
                 return postalCodeField;
@@ -13047,7 +13397,8 @@ namespace Energistics.DataAccess.RESQML200
         /// country property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("country", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("country")]
         public CharacterString_PropertyType Country {
             get {
                 return countryField;
@@ -13064,7 +13415,8 @@ namespace Energistics.DataAccess.RESQML200
         /// electronicMailAddress property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("electronicMailAddress", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("electronicMailAddress")]
         public List<CharacterString_PropertyType> ElectronicMailAddress {
             get {
                 return electronicMailAddressField;
@@ -13108,7 +13460,8 @@ namespace Energistics.DataAccess.RESQML200
         /// voice property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("voice", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("voice")]
         public List<CharacterString_PropertyType> Voice {
             get {
                 return voiceField;
@@ -13137,7 +13490,8 @@ namespace Energistics.DataAccess.RESQML200
         /// facsimile property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("facsimile", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("facsimile")]
         public List<CharacterString_PropertyType> Facsimile {
             get {
                 return facsimileField;
@@ -13181,7 +13535,8 @@ namespace Energistics.DataAccess.RESQML200
         /// phone property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("phone", DataType="CI_Telephone_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Telephone_PropertyType")]
+		[XmlElement("phone")]
         public CI_Telephone_PropertyType Phone {
             get {
                 return phoneField;
@@ -13198,7 +13553,8 @@ namespace Energistics.DataAccess.RESQML200
         /// address property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("address", DataType="CI_Address_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Address_PropertyType")]
+		[XmlElement("address")]
         public CI_Address_PropertyType Address {
             get {
                 return addressField;
@@ -13215,7 +13571,8 @@ namespace Energistics.DataAccess.RESQML200
         /// onlineResource property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("onlineResource", DataType="CI_OnlineResource_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_OnlineResource_PropertyType")]
+		[XmlElement("onlineResource")]
         public CI_OnlineResource_PropertyType OnlineResource {
             get {
                 return onlineResourceField;
@@ -13232,7 +13589,8 @@ namespace Energistics.DataAccess.RESQML200
         /// hoursOfService property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("hoursOfService", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("hoursOfService")]
         public CharacterString_PropertyType HoursOfService {
             get {
                 return hoursOfServiceField;
@@ -13249,7 +13607,8 @@ namespace Energistics.DataAccess.RESQML200
         /// contactInstructions property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("contactInstructions", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("contactInstructions")]
         public CharacterString_PropertyType ContactInstructions {
             get {
                 return contactInstructionsField;
@@ -13298,8 +13657,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -13387,8 +13746,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -13476,8 +13835,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -13548,7 +13907,8 @@ namespace Energistics.DataAccess.RESQML200
         /// individualName property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("individualName", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("individualName")]
         public CharacterString_PropertyType IndividualName {
             get {
                 return individualNameField;
@@ -13565,7 +13925,8 @@ namespace Energistics.DataAccess.RESQML200
         /// organisationName property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("organisationName", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("organisationName")]
         public CharacterString_PropertyType OrganisationName {
             get {
                 return organisationNameField;
@@ -13582,7 +13943,8 @@ namespace Energistics.DataAccess.RESQML200
         /// positionName property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("positionName", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("positionName")]
         public CharacterString_PropertyType PositionName {
             get {
                 return positionNameField;
@@ -13599,7 +13961,8 @@ namespace Energistics.DataAccess.RESQML200
         /// contactInfo property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("contactInfo", DataType="CI_Contact_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Contact_PropertyType")]
+		[XmlElement("contactInfo")]
         public CI_Contact_PropertyType ContactInfo {
             get {
                 return contactInfoField;
@@ -13617,7 +13980,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("role", DataType="CI_RoleCode_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_RoleCode_PropertyType")]
+		[XmlElement("role")]
         public CI_RoleCode_PropertyType Role {
             get {
                 return roleField;
@@ -13666,8 +14030,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -13810,7 +14174,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("date", DataType="Date_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "Date_PropertyType")]
+		[XmlElement("date")]
         public Date_PropertyType Date {
             get {
                 return dateField;
@@ -13828,7 +14193,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("dateType", DataType="CI_DateTypeCode_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_DateTypeCode_PropertyType")]
+		[XmlElement("dateType")]
         public CI_DateTypeCode_PropertyType DateType {
             get {
                 return dateTypeField;
@@ -14051,7 +14417,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("title", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("title")]
         public CharacterString_PropertyType Title {
             get {
                 return titleField;
@@ -14068,7 +14435,8 @@ namespace Energistics.DataAccess.RESQML200
         /// alternateTitle property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("alternateTitle", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("alternateTitle")]
         public List<CharacterString_PropertyType> AlternateTitle {
             get {
                 return alternateTitleField;
@@ -14098,7 +14466,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("date", DataType="CI_Date_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Date_PropertyType")]
+		[XmlElement("date")]
         public List<CI_Date_PropertyType> Date {
             get {
                 return dateField;
@@ -14127,7 +14496,8 @@ namespace Energistics.DataAccess.RESQML200
         /// edition property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("edition", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("edition")]
         public CharacterString_PropertyType Edition {
             get {
                 return editionField;
@@ -14144,7 +14514,8 @@ namespace Energistics.DataAccess.RESQML200
         /// editionDate property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("editionDate", DataType="Date_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "Date_PropertyType")]
+		[XmlElement("editionDate")]
         public Date_PropertyType EditionDate {
             get {
                 return editionDateField;
@@ -14161,7 +14532,8 @@ namespace Energistics.DataAccess.RESQML200
         /// identifier property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("identifier", DataType="MD_Identifier_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "MD_Identifier_PropertyType")]
+		[XmlElement("identifier")]
         public List<MD_Identifier_PropertyType> Identifier {
             get {
                 return identifierField;
@@ -14190,7 +14562,8 @@ namespace Energistics.DataAccess.RESQML200
         /// citedResponsibleParty property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("citedResponsibleParty", DataType="CI_ResponsibleParty_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_ResponsibleParty_PropertyType")]
+		[XmlElement("citedResponsibleParty")]
         public List<CI_ResponsibleParty_PropertyType> CitedResponsibleParty {
             get {
                 return citedResponsiblePartyField;
@@ -14219,7 +14592,8 @@ namespace Energistics.DataAccess.RESQML200
         /// presentationForm property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("presentationForm", DataType="CI_PresentationFormCode_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_PresentationFormCode_PropertyType")]
+		[XmlElement("presentationForm")]
         public List<CI_PresentationFormCode_PropertyType> PresentationForm {
             get {
                 return presentationFormField;
@@ -14248,7 +14622,8 @@ namespace Energistics.DataAccess.RESQML200
         /// series property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("series", DataType="CI_Series_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Series_PropertyType")]
+		[XmlElement("series")]
         public CI_Series_PropertyType Series {
             get {
                 return seriesField;
@@ -14265,7 +14640,8 @@ namespace Energistics.DataAccess.RESQML200
         /// otherCitationDetails property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("otherCitationDetails", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("otherCitationDetails")]
         public CharacterString_PropertyType OtherCitationDetails {
             get {
                 return otherCitationDetailsField;
@@ -14282,7 +14658,8 @@ namespace Energistics.DataAccess.RESQML200
         /// collectiveTitle property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("collectiveTitle", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("collectiveTitle")]
         public CharacterString_PropertyType CollectiveTitle {
             get {
                 return collectiveTitleField;
@@ -14299,7 +14676,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ISBN property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ISBN", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("ISBN")]
         public CharacterString_PropertyType ISBN {
             get {
                 return ISBNField;
@@ -14316,7 +14694,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ISSN property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ISSN", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("ISSN")]
         public CharacterString_PropertyType ISSN {
             get {
                 return ISSNField;
@@ -14365,8 +14744,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -14454,8 +14833,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -14526,7 +14905,8 @@ namespace Energistics.DataAccess.RESQML200
         /// authority property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("authority", DataType="CI_Citation_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Citation_PropertyType")]
+		[XmlElement("authority")]
         public CI_Citation_PropertyType Authority {
             get {
                 return authorityField;
@@ -14544,7 +14924,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("code", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("code")]
         public CharacterString_PropertyType Code {
             get {
                 return codeField;
@@ -14593,8 +14974,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -14682,8 +15063,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -14842,8 +15223,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -14915,7 +15296,8 @@ namespace Energistics.DataAccess.RESQML200
         /// nameOfMeasure property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("nameOfMeasure", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("nameOfMeasure")]
         public List<CharacterString_PropertyType> NameOfMeasure {
             get {
                 return nameOfMeasureField;
@@ -14944,7 +15326,8 @@ namespace Energistics.DataAccess.RESQML200
         /// measureIdentification property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("measureIdentification", DataType="MD_Identifier_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "MD_Identifier_PropertyType")]
+		[XmlElement("measureIdentification")]
         public MD_Identifier_PropertyType MeasureIdentification {
             get {
                 return measureIdentificationField;
@@ -14961,7 +15344,8 @@ namespace Energistics.DataAccess.RESQML200
         /// measureDescription property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("measureDescription", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("measureDescription")]
         public CharacterString_PropertyType MeasureDescription {
             get {
                 return measureDescriptionField;
@@ -14978,7 +15362,8 @@ namespace Energistics.DataAccess.RESQML200
         /// evaluationMethodType property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("evaluationMethodType", DataType="DQ_EvaluationMethodTypeCode_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "DQ_EvaluationMethodTypeCode_PropertyType")]
+		[XmlElement("evaluationMethodType")]
         public DQ_EvaluationMethodTypeCode_PropertyType EvaluationMethodType {
             get {
                 return evaluationMethodTypeField;
@@ -14995,7 +15380,8 @@ namespace Energistics.DataAccess.RESQML200
         /// evaluationMethodDescription property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("evaluationMethodDescription", DataType="CharacterString_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("evaluationMethodDescription")]
         public CharacterString_PropertyType EvaluationMethodDescription {
             get {
                 return evaluationMethodDescriptionField;
@@ -15012,7 +15398,8 @@ namespace Energistics.DataAccess.RESQML200
         /// evaluationProcedure property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("evaluationProcedure", DataType="CI_Citation_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Citation_PropertyType")]
+		[XmlElement("evaluationProcedure")]
         public CI_Citation_PropertyType EvaluationProcedure {
             get {
                 return evaluationProcedureField;
@@ -15029,7 +15416,8 @@ namespace Energistics.DataAccess.RESQML200
         /// dateTime property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("dateTime", DataType="DateTime_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "DateTime_PropertyType")]
+		[XmlElement("dateTime")]
         public List<DateTime_PropertyType> DateTime {
             get {
                 return dateTimeField;
@@ -15059,7 +15447,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("result", DataType="DQ_Result_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "DQ_Result_PropertyType")]
+		[XmlElement("result")]
         public List<DQ_Result_PropertyType> Result {
             get {
                 return resultField;
@@ -15262,8 +15651,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -15350,7 +15739,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("minimumValue", DataType="Real_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "Real_PropertyType")]
+		[XmlElement("minimumValue")]
         public Real_PropertyType MinimumValue {
             get {
                 return minimumValueField;
@@ -15368,7 +15758,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("maximumValue", DataType="Real_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "Real_PropertyType")]
+		[XmlElement("maximumValue")]
         public Real_PropertyType MaximumValue {
             get {
                 return maximumValueField;
@@ -15386,7 +15777,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("verticalCRS", DataType="SC_CRS_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "SC_CRS_PropertyType")]
+		[XmlElement("verticalCRS")]
         public SC_CRS_PropertyType VerticalCRS {
             get {
                 return verticalCRSField;
@@ -15506,8 +15898,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -15704,8 +16096,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -15837,8 +16229,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -16038,8 +16430,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -16122,8 +16514,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -16206,8 +16598,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -16290,8 +16682,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -16408,8 +16800,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -16657,8 +17049,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -17072,7 +17464,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("extent", DataType="TM_Primitive_PropertyType")]
+        [EnergisticsDataTypeAttribute(DataType = "TM_Primitive_PropertyType")]
+		[XmlElement("extent")]
         public TM_Primitive_PropertyType Extent {
             get {
                 return extentField;
@@ -17121,8 +17514,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -17210,8 +17603,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -17299,8 +17692,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uuidref property
         /// </summary>
-		
-        [XmlAttribute("uuidref", DataType = "string")]
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
 		
         public string Uuidref {
             get {
@@ -17456,8 +17849,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -17525,8 +17918,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// nilReason property
         /// </summary>
-		
-        [XmlAttribute("nilReason", DataType = "NilReasonType")]
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
 		
         public string NilReason {
             get {
@@ -17579,6 +17972,7 @@ namespace Energistics.DataAccess.RESQML200
         /// EpsgCode property
         /// </summary>
 		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("EpsgCode", DataType="positiveInteger")]
         public string EpsgCode {
             get {
@@ -17653,7 +18047,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [StringLength(256)]
-		[XmlElement("Unknown", DataType="DescriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "DescriptionString")]
+		[XmlElement("Unknown")]
         public string Unknown {
             get {
                 return UnknownField;
@@ -17721,6 +18116,7 @@ namespace Energistics.DataAccess.RESQML200
         /// EpsgCode property
         /// </summary>
 		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("EpsgCode", DataType="positiveInteger")]
         public string EpsgCode {
             get {
@@ -17820,7 +18216,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Identifier property
         /// </summary>
 		[Required]
-		[XmlElement("Identifier", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("Identifier")]
         public string Identifier {
             get {
                 return IdentifierField;
@@ -17837,7 +18234,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Description property
         /// </summary>
 		[StringLength(256)]
-		[XmlElement("Description", DataType="DescriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "DescriptionString")]
+		[XmlElement("Description")]
         public string Description {
             get {
                 return DescriptionField;
@@ -17854,7 +18252,8 @@ namespace Energistics.DataAccess.RESQML200
         /// authority property
         /// </summary>
 		[StringLength(64)]
-        [XmlAttribute("authority", DataType = "NameString")]
+        [EnergisticsDataTypeAttribute(DataType = "NameString")]
+        [XmlAttribute("authority")]
 		
         public string Authority {
             get {
@@ -18110,7 +18509,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ExtraMetadata property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("ExtraMetadata", DataType="NameValuePair")]
+        [EnergisticsDataTypeAttribute(DataType = "NameValuePair")]
+		[XmlElement("ExtraMetadata")]
         public List<NameValuePair> ExtraMetadata {
             get {
                 return ExtraMetadataField;
@@ -18158,7 +18558,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("The location of the md reference point relative to a local CRS.")]
         [ComponentElement]
-		[XmlElement("Location", DataType="Point3d")]
+        [EnergisticsDataTypeAttribute(DataType = "Point3d")]
+		[XmlElement("Location")]
         public Point3d Location {
             get {
                 return LocationField;
@@ -18175,7 +18576,8 @@ namespace Energistics.DataAccess.RESQML200
         /// MdReference property
         /// </summary>
 		[Required]
-		[XmlElement("MdReference", DataType="MdReference")]
+        [EnergisticsDataTypeAttribute(DataType = "MdReference")]
+		[XmlElement("MdReference")]
         public MdReference? MDReference {
             get {
                 return MdReferenceField;
@@ -18193,7 +18595,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("LocalCrs", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("LocalCrs")]
         public DataObjectReference LocalCrs {
             get {
                 return LocalCrsField;
@@ -18227,7 +18630,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("ChronostratigraphicColumnComponent", DataType="ChronostratigraphicRank")]
+        [EnergisticsDataTypeAttribute(DataType = "ChronostratigraphicRank")]
+		[XmlElement("ChronostratigraphicColumnComponent")]
         public List<ChronostratigraphicRank> ChronostratigraphicColumnComponent {
             get {
                 return ChronostratigraphicColumnComponentField;
@@ -18353,6 +18757,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The count of crosslines in the 3D seismic survey.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("CrosslineCount", DataType="positiveInteger")]
         public string CrosslineCount {
             get {
@@ -18371,6 +18776,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The constant index increment between two consecutive crosslines of the 3D seismic survey.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("CrosslineIndexIncrement", DataType="integer")]
         public string CrosslineIndexIncrement {
             get {
@@ -18389,6 +18795,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The index of the first crossline of the 3D seismic survey.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("FirstCrosslineIndex", DataType="integer")]
         public string FirstCrosslineIndex {
             get {
@@ -18407,6 +18814,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The index of the first inline of the 3D seismic survey.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("FirstInlineIndex", DataType="integer")]
         public string FirstInlineIndex {
             get {
@@ -18425,6 +18833,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The count of inlines in the 3D seismic survey.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("InlineCount", DataType="positiveInteger")]
         public string InlineCount {
             get {
@@ -18443,6 +18852,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The constant index increment between two consecutive inlines of the 3D seismic survey.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("InlineIndexIncrement", DataType="integer")]
         public string InlineIndexIncrement {
             get {
@@ -18460,7 +18870,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IsPartOf property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IsPartOf", DataType="SeismicLatticeSetFeature")]
+        [EnergisticsDataTypeAttribute(DataType = "SeismicLatticeSetFeature")]
+		[XmlElement("IsPartOf")]
         public SeismicLatticeSetFeature IsPartOf {
             get {
                 return IsPartOfField;
@@ -18511,6 +18922,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The index of the first trace of the seismic line.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("FirstTraceIndex", DataType="integer")]
         public string FirstTraceIndex {
             get {
@@ -18529,6 +18941,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The count of traces in the seismic line.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("TraceCount", DataType="positiveInteger")]
         public string TraceCount {
             get {
@@ -18547,6 +18960,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The constant index increment between two consecutive traces.")]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("TraceIndexIncrement", DataType="integer")]
         public string TraceIndexIncrement {
             get {
@@ -18564,7 +18978,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IsPartOf property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IsPartOf", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("IsPartOf")]
         public DataObjectReference IsPartOf {
             get {
                 return IsPartOfField;
@@ -18613,7 +19028,8 @@ namespace Energistics.DataAccess.RESQML200
         /// WitsmlWellbore property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("WitsmlWellbore", DataType="WitsmlWellboreReference")]
+        [EnergisticsDataTypeAttribute(DataType = "WitsmlWellboreReference")]
+		[XmlElement("WitsmlWellbore")]
         public WitsmlWellboreReference WitsmlWellbore {
             get {
                 return WitsmlWellboreField;
@@ -18688,7 +19104,8 @@ namespace Energistics.DataAccess.RESQML200
         /// OrganizationKind property
         /// </summary>
 		[Required]
-		[XmlElement("OrganizationKind", DataType="OrganizationKind")]
+        [EnergisticsDataTypeAttribute(DataType = "OrganizationKind")]
+		[XmlElement("OrganizationKind")]
         public OrganizationKind? OrganizationKind {
             get {
                 return OrganizationKindField;
@@ -18740,7 +19157,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TectonicBoundaryKind property
         /// </summary>
 		[Required]
-		[XmlElement("TectonicBoundaryKind", DataType="TectonicBoundaryKind")]
+        [EnergisticsDataTypeAttribute(DataType = "TectonicBoundaryKind")]
+		[XmlElement("TectonicBoundaryKind")]
         public TectonicBoundaryKind? TectonicBoundaryKind {
             get {
                 return TectonicBoundaryKindField;
@@ -18773,7 +19191,8 @@ namespace Energistics.DataAccess.RESQML200
         /// GeneticBoundaryKind property
         /// </summary>
 		[Required]
-		[XmlElement("GeneticBoundaryKind", DataType="GeneticBoundaryKind")]
+        [EnergisticsDataTypeAttribute(DataType = "GeneticBoundaryKind")]
+		[XmlElement("GeneticBoundaryKind")]
         public GeneticBoundaryKind? GeneticBoundaryKind {
             get {
                 return GeneticBoundaryKindField;
@@ -18790,7 +19209,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AbsoluteAge property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("AbsoluteAge", DataType="Timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "Timestamp")]
+		[XmlElement("AbsoluteAge")]
         public Timestamp AbsoluteAge {
             get {
                 return AbsoluteAgeField;
@@ -18823,7 +19243,8 @@ namespace Energistics.DataAccess.RESQML200
         /// FluidContact property
         /// </summary>
 		[Required]
-		[XmlElement("FluidContact", DataType="FluidContact")]
+        [EnergisticsDataTypeAttribute(DataType = "FluidContact")]
+		[XmlElement("FluidContact")]
         public FluidContact? FluidContact {
             get {
                 return FluidContactField;
@@ -18891,7 +19312,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ChronostratigraphicBottom property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ChronostratigraphicBottom", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ChronostratigraphicBottom")]
         public DataObjectReference ChronostratigraphicBottom {
             get {
                 return ChronostratigraphicBottomField;
@@ -18908,7 +19330,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ChronostratigraphicTop property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ChronostratigraphicTop", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ChronostratigraphicTop")]
         public DataObjectReference ChronostratigraphicTop {
             get {
                 return ChronostratigraphicTopField;
@@ -18941,7 +19364,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Phase property
         /// </summary>
 		[Required]
-		[XmlElement("Phase", DataType="Phase")]
+        [EnergisticsDataTypeAttribute(DataType = "Phase")]
+		[XmlElement("Phase")]
         public Phase? Phase {
             get {
                 return PhaseField;
@@ -18959,7 +19383,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("FluidBoundaryBottom", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("FluidBoundaryBottom")]
         public DataObjectReference FluidBoundaryBottom {
             get {
                 return FluidBoundaryBottomField;
@@ -18977,7 +19402,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("FluidBoundaryTop", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("FluidBoundaryTop")]
         public DataObjectReference FluidBoundaryTop {
             get {
                 return FluidBoundaryTopField;
@@ -19012,7 +19438,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("Individual times composing the series. The list ordering is used by the time index.")]
         [RecurringElement]
-		[XmlElement("Time", DataType="Timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "Timestamp")]
+		[XmlElement("Time")]
         public List<Timestamp> Time {
             get {
                 return TimeField;
@@ -19041,7 +19468,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TimeSeriesParentage property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("TimeSeriesParentage", DataType="TimeSeriesParentage")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeSeriesParentage")]
+		[XmlElement("TimeSeriesParentage")]
         public TimeSeriesParentage TimeSeriesParentage {
             get {
                 return TimeSeriesParentageField;
@@ -19077,7 +19505,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The Y offset of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the second axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.")]
-		[XmlElement("YOffset", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("YOffset")]
         public double? YOffset {
             get {
                 return YOffsetField;
@@ -19095,7 +19524,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.")]
-		[XmlElement("ZOffset", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("ZOffset")]
         public double? ZOffset {
             get {
                 return ZOffsetField;
@@ -19114,7 +19544,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("The rotation of the local Y axis relative to the projected Y axis.   - A positive value indicates a clockwise rotation from the projected Y axis.   - A negative value indicates a counter-clockwise rotation form the projected Y axis.")]
         [ComponentElement]
-		[XmlElement("ArealRotation", DataType="PlaneAngleMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleMeasure")]
+		[XmlElement("ArealRotation")]
         public PlaneAngleMeasure ArealRotation {
             get {
                 return ArealRotationField;
@@ -19132,7 +19563,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Defines the coordinate system axis order of the global projected CRS when the projected CRS is an unknown CRS, else it must be correspond to the axis order of the projected  CRS.")]
-		[XmlElement("ProjectedAxisOrder", DataType="AxisOrder2d")]
+        [EnergisticsDataTypeAttribute(DataType = "AxisOrder2d")]
+		[XmlElement("ProjectedAxisOrder")]
         public AxisOrder2d? ProjectedAxisOrder {
             get {
                 return ProjectedAxisOrderField;
@@ -19150,7 +19582,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Unit of measure of the associated Projected CRS. When the projected CRS is not unknown, it must be the same than the unit defined by the Projected CRS.")]
-		[XmlElement("ProjectedUom", DataType="LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+		[XmlElement("ProjectedUom")]
         public LengthUom? ProjectedUom {
             get {
                 return ProjectedUomField;
@@ -19168,7 +19601,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Unit of measure of the associated Vertical CRS. When the vertical CRS is not unknown, it must be the same than the unit defined by the Vertical CRS.")]
-		[XmlElement("VerticalUom", DataType="LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+		[XmlElement("VerticalUom")]
         public LengthUom? VerticalUom {
             get {
                 return VerticalUomField;
@@ -19186,7 +19620,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The X location of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the first axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.")]
-		[XmlElement("XOffset", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("XOffset")]
         public double? XOffset {
             get {
                 return XOffsetField;
@@ -19204,7 +19639,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Indicates that Z values correspond to depth values and are increasing downward, as opposite to elevation values increasing upward. When the vertical CRS is not an unknown, it must correspond to the axis orientation of the vertical CRS.")]
-		[XmlElement("ZIncreasingDownward", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("ZIncreasingDownward")]
         public bool? ZIncreasingDownward {
             get {
                 return ZIncreasingDownwardField;
@@ -19221,7 +19657,8 @@ namespace Energistics.DataAccess.RESQML200
         /// VerticalCrs property
         /// </summary>
 		[Required]
-		[XmlElement("VerticalCrs", DataType="AbstractVerticalCrs")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractVerticalCrs")]
+		[XmlElement("VerticalCrs")]
         public AbstractVerticalCrs VerticalCrs {
             get {
                 return VerticalCrsField;
@@ -19238,7 +19675,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ProjectedCrs property
         /// </summary>
 		[Required]
-		[XmlElement("ProjectedCrs", DataType="AbstractProjectedCrs")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractProjectedCrs")]
+		[XmlElement("ProjectedCrs")]
         public AbstractProjectedCrs ProjectedCrs {
             get {
                 return ProjectedCrsField;
@@ -19289,7 +19727,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Defines the unit of measure of the third (time) coordinates, for the geometries that refers to it.")]
-		[XmlElement("TimeUom", DataType="TimeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeUom")]
+		[XmlElement("TimeUom")]
         public TimeUom? TimeUom {
             get {
                 return TimeUomField;
@@ -19329,6 +19768,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of elements in a 1D list of properties. When used in a multi-dimensional array, count is always the fastest.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -19346,7 +19786,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IndexableElement property
         /// </summary>
 		[Required]
-		[XmlElement("IndexableElement", DataType="IndexableElements")]
+        [EnergisticsDataTypeAttribute(DataType = "IndexableElements")]
+		[XmlElement("IndexableElement")]
         public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
@@ -19363,6 +19804,7 @@ namespace Energistics.DataAccess.RESQML200
         /// RealizationIndex property
         /// </summary>
 		[Description("Optional element indicating the realization index (metadata). Used if the property is the result of a multi-realization process.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("RealizationIndex", DataType="nonNegativeInteger")]
         public string RealizationIndex {
             get {
@@ -19380,6 +19822,7 @@ namespace Energistics.DataAccess.RESQML200
         /// TimeStep property
         /// </summary>
 		[Description("Indicates that the property is the output of a specific time step from a flow simulator. Time step is metadata that makes sense in the context of a specific simulation run, and should not be confused with the time index.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("TimeStep", DataType="nonNegativeInteger")]
         public string TimeStep {
             get {
@@ -19397,7 +19840,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TimeIndex property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("TimeIndex", DataType="TimeIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeIndex")]
+		[XmlElement("TimeIndex")]
         public TimeIndex TimeIndex {
             get {
                 return TimeIndexField;
@@ -19415,7 +19859,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SupportingRepresentation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
                 return SupportingRepresentationField;
@@ -19432,7 +19877,8 @@ namespace Energistics.DataAccess.RESQML200
         /// LocalCrs property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("LocalCrs", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("LocalCrs")]
         public DataObjectReference LocalCrs {
             get {
                 return LocalCrsField;
@@ -19449,7 +19895,8 @@ namespace Energistics.DataAccess.RESQML200
         /// PropertyKind property
         /// </summary>
 		[Required]
-		[XmlElement("PropertyKind", DataType="AbstractPropertyKind")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPropertyKind")]
+		[XmlElement("PropertyKind")]
         public AbstractPropertyKind PropertyKind {
             get {
                 return PropertyKindField;
@@ -19488,7 +19935,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("PatchOfValues", DataType="PatchOfValues")]
+        [EnergisticsDataTypeAttribute(DataType = "PatchOfValues")]
+		[XmlElement("PatchOfValues")]
         public List<PatchOfValues> PatchOfValues {
             get {
                 return PatchOfValuesField;
@@ -19517,7 +19965,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Facet property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Facet", DataType="PropertyKindFacet")]
+        [EnergisticsDataTypeAttribute(DataType = "PropertyKindFacet")]
+		[XmlElement("Facet")]
         public List<PropertyKindFacet> Facet {
             get {
                 return FacetField;
@@ -19564,7 +20013,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Lookup", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Lookup")]
         public DataObjectReference Lookup {
             get {
                 return LookupField;
@@ -19598,6 +20048,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("The minimum of the associated property values.  BUSINESS RULE: There can only be one value per number of elements.")]
         [RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("MinimumValue", DataType="integer")]
         public List<string> MinimumValue {
             get {
@@ -19628,6 +20079,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("The maximum of the associated property values.  BUSINESS RULE: There can only be one value per number of elements.")]
         [RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "integer")]
 		[XmlElement("MaximumValue", DataType="integer")]
         public List<string> MaximumValue {
             get {
@@ -19673,7 +20125,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Identify the language (e.g., US English or French) of the string. It is recommended that language names conform to ISO 639.
         /// </summary>
 		[Description("Identify the language (e.g., US English or French) of the string. It is recommended that language names conform to ISO 639.")]
-		[XmlElement("Language", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("Language")]
         public string Language {
             get {
                 return LanguageField;
@@ -19707,7 +20160,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("The minimum of the associated property values.  BUSINESS RULE: There can be only one value per number of elements.")]
         [RecurringElement]
-		[XmlElement("MinimumValue", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("MinimumValue")]
         public List<double> MinimumValue {
             get {
                 return MinimumValueField;
@@ -19737,7 +20191,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("The maximum of the associated property values.  BUSINESS RULE: There can be only one value per number of elements.")]
         [RecurringElement]
-		[XmlElement("MaximumValue", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("MaximumValue")]
         public List<double> MaximumValue {
             get {
                 return MaximumValueField;
@@ -19767,7 +20222,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Unit of measure for the property.")]
-		[XmlElement("UOM", DataType="ResqmlUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlUom")]
+		[XmlElement("UOM")]
         public ResqmlUom? UOM {
             get {
                 return UOMField;
@@ -19801,7 +20257,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("PatchOfPoints", DataType="PatchOfPoints")]
+        [EnergisticsDataTypeAttribute(DataType = "PatchOfPoints")]
+		[XmlElement("PatchOfPoints")]
         public List<PatchOfPoints> PatchOfPoints {
             get {
                 return PatchOfPointsField;
@@ -19846,7 +20303,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TimeSetKind property
         /// </summary>
 		[Required]
-		[XmlElement("TimeSetKind", DataType="TimeSetKind")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeSetKind")]
+		[XmlElement("TimeSetKind")]
         public TimeSetKind? TimeSetKind {
             get {
                 return TimeSetKindField;
@@ -19864,7 +20322,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("If true, indicates that the collection contains only property values associated with a single property kind.")]
-		[XmlElement("HasSinglePropertyKind", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("HasSinglePropertyKind")]
         public bool? HasSinglePropertyKind {
             get {
                 return HasSinglePropertyKindField;
@@ -19882,7 +20341,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("If true, indicates that the collection contains properties with defined realization indices.")]
-		[XmlElement("HasMultipleRealizations", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("HasMultipleRealizations")]
         public bool? HasMultipleRealizations {
             get {
                 return HasMultipleRealizationsField;
@@ -19900,7 +20360,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("A pointer to the parent property group of this property group.")]
         [RecurringElement]
-		[XmlElement("ParentSet", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ParentSet")]
         public List<DataObjectReference> ParentSet {
             get {
                 return ParentSetField;
@@ -19930,7 +20391,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Properties", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Properties")]
         public List<DataObjectReference> Properties {
             get {
                 return PropertiesField;
@@ -20016,7 +20478,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Value", DataType="StringLookup")]
+        [EnergisticsDataTypeAttribute(DataType = "StringLookup")]
+		[XmlElement("Value")]
         public List<StringLookup> Value {
             get {
                 return ValueField;
@@ -20083,7 +20546,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Value", DataType="DoubleLookup")]
+        [EnergisticsDataTypeAttribute(DataType = "DoubleLookup")]
+		[XmlElement("Value")]
         public List<DoubleLookup> Value {
             get {
                 return ValueField;
@@ -20129,6 +20593,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The name of the dictionary within which the property is unique. This also defines the name of the controlling authority.  Use a URN of the form \"urn:x-resqml:domainOrEmail:dictionaryName\".  An example public dictionary: \"urn:resqml:energistics.org:RESQML\" assigned to values defined by ResqmlPropertyKind.  An example corporate dictionary: \"urn:resqml:slb.com:product-x\".  An example personal dictionary: \"urn:resqml:first.last@mycompany.com:my.first.dictionary\". The purpose of this scheme is to generate a unique name. Parsing for semantics is not intended.")]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
 		[XmlElement("NamingSystem", DataType="anyURI")]
         public string NamingSystem {
             get {
@@ -20147,7 +20612,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("A value of true indicates that the property kind is abstract and an instance of property values must not represent this kind.  A value of false indicates otherwise (i.e., that an instance of property values may represent this kind).")]
-		[XmlElement("IsAbstract", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IsAbstract")]
         public bool? IsAbstract {
             get {
                 return IsAbstractField;
@@ -20165,7 +20631,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Generally matches the base for conversion, except where multiple classes have the same underlying dimensional analysis. In this case, the representative unit may provide additional information about the underlying concept of the class. For example, “area per volume” has the same dimensional analysis as “per length”, but it specifies a representative unit of “m2/m3” instead of “1/m”.")]
-		[XmlElement("RepresentativeUom", DataType="ResqmlUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlUom")]
+		[XmlElement("RepresentativeUom")]
         public ResqmlUom? RepresentativeUom {
             get {
                 return RepresentativeUomField;
@@ -20182,7 +20649,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParentPropertyKind property
         /// </summary>
 		[Required]
-		[XmlElement("ParentPropertyKind", DataType="AbstractPropertyKind")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPropertyKind")]
+		[XmlElement("ParentPropertyKind")]
         public AbstractPropertyKind ParentPropertyKind {
             get {
                 return ParentPropertyKindField;
@@ -20214,8 +20682,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// FluidContact property
         /// </summary>
-		
-		[XmlElement("FluidContact", DataType="FluidContact")]
+		[EnergisticsDataTypeAttribute(DataType = "FluidContact")]
+		[XmlElement("FluidContact")]
         public FluidContact? FluidContact {
             get {
                 return FluidContactField;
@@ -20249,8 +20717,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// FluidMarker property
         /// </summary>
-		
-		[XmlElement("FluidMarker", DataType="FluidMarker")]
+		[EnergisticsDataTypeAttribute(DataType = "FluidMarker")]
+		[XmlElement("FluidMarker")]
         public FluidMarker? FluidMarker {
             get {
                 return FluidMarkerField;
@@ -20284,8 +20752,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// GeologicBoundaryKind property
         /// </summary>
-		
-		[XmlElement("GeologicBoundaryKind", DataType="GeologicBoundaryKind")]
+		[EnergisticsDataTypeAttribute(DataType = "GeologicBoundaryKind")]
+		[XmlElement("GeologicBoundaryKind")]
         public GeologicBoundaryKind? GeologicBoundaryKind {
             get {
                 return GeologicBoundaryKindField;
@@ -20321,7 +20789,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("Optional WITSML wellbore reference of the well marker frame.")]
         [ComponentElement]
-		[XmlElement("WitsmlFormationMarker", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("WitsmlFormationMarker")]
         public DataObjectReference WitsmlFormationMarker {
             get {
                 return WitsmlFormationMarkerField;
@@ -20338,7 +20807,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Interpretation property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Interpretation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Interpretation")]
         public DataObjectReference Interpretation {
             get {
                 return InterpretationField;
@@ -20402,7 +20872,8 @@ namespace Energistics.DataAccess.RESQML200
         /// RepresentedInterpretation property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("RepresentedInterpretation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("RepresentedInterpretation")]
         public DataObjectReference RepresentedInterpretation {
             get {
                 return RepresentedInterpretationField;
@@ -20440,7 +20911,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SurfaceRole property
         /// </summary>
 		[Required]
-		[XmlElement("SurfaceRole", DataType="SurfaceRole")]
+        [EnergisticsDataTypeAttribute(DataType = "SurfaceRole")]
+		[XmlElement("SurfaceRole")]
         public SurfaceRole? SurfaceRole {
             get {
                 return SurfaceRoleField;
@@ -20457,7 +20929,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Boundaries property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Boundaries", DataType="PatchBoundaries")]
+        [EnergisticsDataTypeAttribute(DataType = "PatchBoundaries")]
+		[XmlElement("Boundaries")]
         public List<PatchBoundaries> Boundaries {
             get {
                 return BoundariesField;
@@ -20504,7 +20977,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Grid2dPatch", DataType="Grid2dPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "Grid2dPatch")]
+		[XmlElement("Grid2dPatch")]
         public List<Grid2dPatch> Grid2dPatch {
             get {
                 return Grid2dPatchField;
@@ -20550,7 +21024,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Grid2dPatch", DataType="Grid2dPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "Grid2dPatch")]
+		[XmlElement("Grid2dPatch")]
         public Grid2dPatch Grid2dPatch {
             get {
                 return Grid2dPatchField;
@@ -20584,7 +21059,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Planes", DataType="AbstractPlaneGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractPlaneGeometry")]
+		[XmlElement("Planes")]
         public List<AbstractPlaneGeometry> Planes {
             get {
                 return PlanesField;
@@ -20630,7 +21106,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("TrianglePatch", DataType="TrianglePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "TrianglePatch")]
+		[XmlElement("TrianglePatch")]
         public List<TrianglePatch> TrianglePatch {
             get {
                 return TrianglePatchField;
@@ -20674,8 +21151,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineRole property
         /// </summary>
-		
-		[XmlElement("LineRole", DataType="LineRole")]
+		[EnergisticsDataTypeAttribute(DataType = "LineRole")]
+		[XmlElement("LineRole")]
         public LineRole? LineRole {
             get {
                 return LineRoleField;
@@ -20710,7 +21187,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IsClosed property
         /// </summary>
 		[Required]
-		[XmlElement("IsClosed", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IsClosed")]
         public bool? IsClosed {
             get {
                 return IsClosedField;
@@ -20728,7 +21206,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("NodePatch", DataType="NodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "NodePatch")]
+		[XmlElement("NodePatch")]
         public NodePatch NodePatch {
             get {
                 return NodePatchField;
@@ -20760,8 +21239,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineRole property
         /// </summary>
-		
-		[XmlElement("LineRole", DataType="LineRole")]
+		[EnergisticsDataTypeAttribute(DataType = "LineRole")]
+		[XmlElement("LineRole")]
         public LineRole? LineRole {
             get {
                 return LineRoleField;
@@ -20797,7 +21276,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("LinePatch", DataType="PolylineSetPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "PolylineSetPatch")]
+		[XmlElement("LinePatch")]
         public List<PolylineSetPatch> LinePatch {
             get {
                 return LinePatchField;
@@ -20843,7 +21323,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("NodePatch", DataType="NodePatch")]
+        [EnergisticsDataTypeAttribute(DataType = "NodePatch")]
+		[XmlElement("NodePatch")]
         public List<NodePatch> NodePatch {
             get {
                 return NodePatchField;
@@ -20889,7 +21370,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Specifies the measured depth  for the start of the wellbore trajectory.  Range may often be from kickoff to TD, but this is not necessary.   BUSINESS RULE: Start MD is always less than the Finish MD.")]
-		[XmlElement("StartMd", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("StartMd")]
         public double? StartMD {
             get {
                 return StartMdField;
@@ -20907,7 +21389,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Specifies the ending measured depth of the range for the wellbore trajectory.  Range may often be from kickoff to TD, but this is not necessary.   BUSINESS RULE: Start MD is always less than the Finish MD.")]
-		[XmlElement("FinishMd", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("FinishMd")]
         public double? FinishMD {
             get {
                 return FinishMdField;
@@ -20925,7 +21408,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The unit of measure of the reference MD.")]
-		[XmlElement("MdUom", DataType="LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+		[XmlElement("MdUom")]
         public LengthUom? MDUom {
             get {
                 return MdUomField;
@@ -20941,8 +21425,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// MdDomain property
         /// </summary>
-		
-		[XmlElement("MdDomain", DataType="MdDomain")]
+		[EnergisticsDataTypeAttribute(DataType = "MdDomain")]
+		[XmlElement("MdDomain")]
         public MdDomain? MDDomain {
             get {
                 return MdDomainField;
@@ -20978,7 +21462,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("Pointer to the WITSML trajectory that is contained in the referenced wellbore. (For information about WITSML well and wellbore references, see the definition for RESQML technical feature, WellboreFeature).")]
         [ComponentElement]
-		[XmlElement("WitsmlTrajectory", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("WitsmlTrajectory")]
         public DataObjectReference WitsmlTrajectory {
             get {
                 return WitsmlTrajectoryField;
@@ -20996,7 +21481,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("Explicit geometry is not required for vertical wells")]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="AbstractParametricLineGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractParametricLineGeometry")]
+		[XmlElement("Geometry")]
         public AbstractParametricLineGeometry Geometry {
             get {
                 return GeometryField;
@@ -21014,7 +21500,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("MdDatum", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("MdDatum")]
         public DataObjectReference MDDatum {
             get {
                 return MdDatumField;
@@ -21031,7 +21518,8 @@ namespace Energistics.DataAccess.RESQML200
         /// DeviationSurvey property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("DeviationSurvey", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("DeviationSurvey")]
         public DataObjectReference DeviationSurvey {
             get {
                 return DeviationSurveyField;
@@ -21048,7 +21536,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParentIntersection property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ParentIntersection", DataType="WellboreTrajectoryParentIntersection")]
+        [EnergisticsDataTypeAttribute(DataType = "WellboreTrajectoryParentIntersection")]
+		[XmlElement("ParentIntersection")]
         public WellboreTrajectoryParentIntersection ParentIntersection {
             get {
                 return ParentIntersectionField;
@@ -21084,6 +21573,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of nodes. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("NodeCount", DataType="positiveInteger")]
         public string NodeCount {
             get {
@@ -21102,7 +21592,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("MD values for each node. BUSINESS RULE: MD values and UOM must be consistent with the trajectory representation.")]
-		[XmlElement("NodeMd", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("NodeMd")]
         public AbstractDoubleArray NodeMD {
             get {
                 return NodeMdField;
@@ -21120,7 +21611,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Description("The reference to the equivalent WITSML well log.")]
         [ComponentElement]
-		[XmlElement("WitsmlLogReference", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("WitsmlLogReference")]
         public DataObjectReference WitsmlLogReference {
             get {
                 return WitsmlLogReferenceField;
@@ -21137,7 +21629,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IntervalStratigraphiUnits property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IntervalStratigraphiUnits", DataType="IntervalStratigraphicUnits")]
+        [EnergisticsDataTypeAttribute(DataType = "IntervalStratigraphicUnits")]
+		[XmlElement("IntervalStratigraphiUnits")]
         public IntervalStratigraphicUnits IntervalStratigraphiUnits {
             get {
                 return IntervalStratigraphiUnitsField;
@@ -21154,7 +21647,8 @@ namespace Energistics.DataAccess.RESQML200
         /// CellFluidPhaseUnits property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("CellFluidPhaseUnits", DataType="CellFluidPhaseUnits")]
+        [EnergisticsDataTypeAttribute(DataType = "CellFluidPhaseUnits")]
+		[XmlElement("CellFluidPhaseUnits")]
         public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
                 return CellFluidPhaseUnitsField;
@@ -21172,7 +21666,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Trajectory", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Trajectory")]
         public DataObjectReference Trajectory {
             get {
                 return TrajectoryField;
@@ -21206,7 +21701,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("WellboreMarker", DataType="WellboreMarker")]
+        [EnergisticsDataTypeAttribute(DataType = "WellboreMarker")]
+		[XmlElement("WellboreMarker")]
         public List<WellboreMarker> WellboreMarker {
             get {
                 return WellboreMarkerField;
@@ -21252,6 +21748,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The number of non-null entries in the grid indices array.")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("CellCount", DataType="nonNegativeInteger")]
         public string CellCount {
             get {
@@ -21270,7 +21767,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("The grid cell index for each blocked well cell. BUSINESS RULE: Array length must equal cell count.")]
-		[XmlElement("CellIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("CellIndices")]
         public AbstractIntegerArray CellIndices {
             get {
                 return CellIndicesField;
@@ -21288,7 +21786,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Size of array = IntervalCount.  Null values of -1 signify that that interval is not within a grid.  BUSINESS RULE: The cell count must equal the number of non-null entries in this array.")]
-		[XmlElement("GridIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("GridIndices")]
         public AbstractIntegerArray GridIndices {
             get {
                 return GridIndicesField;
@@ -21306,7 +21805,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("For each cell, these are the entry and exit faces of the trajectory. Use null (-1), for instance, at TD when there only one intersection. The local face-per-cell index is used because a global face index need not have been defined on the grid.  BUSINESS RULE: The array dimensions must equal 2 x CellCount.")]
-		[XmlElement("LocalFacePairPerCellIndices", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("LocalFacePairPerCellIndices")]
         public AbstractIntegerArray LocalFacePairPerCellIndices {
             get {
                 return LocalFacePairPerCellIndicesField;
@@ -21324,7 +21824,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Grid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Grid")]
         public List<DataObjectReference> Grid {
             get {
                 return GridField;
@@ -21369,7 +21870,8 @@ namespace Energistics.DataAccess.RESQML200
         /// WitsmlDeviationSurvey property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("WitsmlDeviationSurvey", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("WitsmlDeviationSurvey")]
         public DataObjectReference WitsmlDeviationSurvey {
             get {
                 return WitsmlDeviationSurveyField;
@@ -21387,7 +21889,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Used to indicate that this is a final version of the deviation survey, as distinct from the interim interpretations.")]
-		[XmlElement("IsFinal", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IsFinal")]
         public bool? IsFinal {
             get {
                 return IsFinalField;
@@ -21405,6 +21908,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of Stations")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("StationCount", DataType="positiveInteger")]
         public string StationCount {
             get {
@@ -21423,7 +21927,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Units of Measure of the measured depths along this deviation survey.")]
-		[XmlElement("MdUom", DataType="LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+		[XmlElement("MdUom")]
         public LengthUom? MDUom {
             get {
                 return MdUomField;
@@ -21441,7 +21946,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("MD values for the position of the stations  BUSINESS RULE: Array length equals station count")]
-		[XmlElement("Mds", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("Mds")]
         public AbstractDoubleArray Mds {
             get {
                 return MdsField;
@@ -21460,7 +21966,8 @@ namespace Energistics.DataAccess.RESQML200
 		[Required]
         [Description("XYZ location of the first station of the deviation survey.")]
         [ComponentElement]
-		[XmlElement("FirstStationLocation", DataType="Point3d")]
+        [EnergisticsDataTypeAttribute(DataType = "Point3d")]
+		[XmlElement("FirstStationLocation")]
         public Point3d FirstStationLocation {
             get {
                 return FirstStationLocationField;
@@ -21478,7 +21985,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Defines the units of measure for the azimuth and inclination")]
-		[XmlElement("AngleUom", DataType="PlaneAngleUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleUom")]
+		[XmlElement("AngleUom")]
         public PlaneAngleUom? AngleUom {
             get {
                 return AngleUomField;
@@ -21496,7 +22004,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("An array of azimuth angles, one for each survey station. The rotation is relative to the ProjectedCrs north with a positive value indication a clockwise rotation as seen from above.   If the local CRS - whether a LocalTime3dCrs or a LocalDepth3dCrs - is rotated relative to the ProjectedCrs, the azimuths remain relative to the ProjectedCrs not the local CRS.   Note that the projection’s north is not the same as true north or magnetic north. A good definition of the different kinds of “north” can be found in the OGP Surveying & Positioning Guidance Note 1 http://www.ogp.org.uk/pubs/373-01.pdf (the \"True, Grid and Magnetic North bearings\" paragraph).   BUSINESS RULE: Array length equals station count")]
-		[XmlElement("Azimuths", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("Azimuths")]
         public AbstractDoubleArray Azimuths {
             get {
                 return AzimuthsField;
@@ -21514,7 +22023,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Dip (or inclination) angle for each station.  BUSINESS RULE: Array length equals station count")]
-		[XmlElement("Inclinations", DataType="AbstractDoubleArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractDoubleArray")]
+		[XmlElement("Inclinations")]
         public AbstractDoubleArray Inclinations {
             get {
                 return InclinationsField;
@@ -21532,7 +22042,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("MdDatum", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("MdDatum")]
         public DataObjectReference MDDatum {
             get {
                 return MdDatumField;
@@ -21549,7 +22060,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TimeIndex property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("TimeIndex", DataType="TimeIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeIndex")]
+		[XmlElement("TimeIndex")]
         public TimeIndex TimeIndex {
             get {
                 return TimeIndexField;
@@ -21582,7 +22094,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AdditionalGridTopology property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("AdditionalGridTopology", DataType="AdditionalGridTopology")]
+        [EnergisticsDataTypeAttribute(DataType = "AdditionalGridTopology")]
+		[XmlElement("AdditionalGridTopology")]
         public AdditionalGridTopology AdditionalGridTopology {
             get {
                 return AdditionalGridTopologyField;
@@ -21600,7 +22113,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SupportingRepresentation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
                 return SupportingRepresentationField;
@@ -21618,7 +22132,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("SubRepresentationPatch", DataType="SubRepresentationPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "SubRepresentationPatch")]
+		[XmlElement("SubRepresentationPatch")]
         public List<SubRepresentationPatch> SubRepresentationPatch {
             get {
                 return SubRepresentationPatchField;
@@ -21664,7 +22179,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("PatchOfGeometry", DataType="PatchOfGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "PatchOfGeometry")]
+		[XmlElement("PatchOfGeometry")]
         public List<PatchOfGeometry> PatchOfGeometry {
             get {
                 return PatchOfGeometryField;
@@ -21694,7 +22210,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("SupportingRepresentation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
                 return SupportingRepresentationField;
@@ -21732,7 +22249,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Indicates that all of the selected representations are of a single kind.")]
-		[XmlElement("IsHomogeneous", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IsHomogeneous")]
         public bool? IsHomogeneous {
             get {
                 return IsHomogeneousField;
@@ -21750,7 +22268,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Representation", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Representation")]
         public List<DataObjectReference> Representation {
             get {
                 return RepresentationField;
@@ -21796,7 +22315,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("BasedOn", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("BasedOn")]
         public DataObjectReference BasedOn {
             get {
                 return BasedOnField;
@@ -21814,7 +22334,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Shells", DataType="VolumeShell")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeShell")]
+		[XmlElement("Shells")]
         public List<VolumeShell> Shells {
             get {
                 return ShellsField;
@@ -21844,7 +22365,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Regions", DataType="VolumeRegion")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeRegion")]
+		[XmlElement("Regions")]
         public List<VolumeRegion> Regions {
             get {
                 return RegionsField;
@@ -21891,7 +22413,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ContactIdentity property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("ContactIdentity", DataType="ContactIdentity")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactIdentity")]
+		[XmlElement("ContactIdentity")]
         public List<ContactIdentity> ContactIdentity {
             get {
                 return ContactIdentityField;
@@ -21937,7 +22460,8 @@ namespace Energistics.DataAccess.RESQML200
         /// SealedContactRepresentation property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("SealedContactRepresentation", DataType="SealedContactRepresentationPart")]
+        [EnergisticsDataTypeAttribute(DataType = "SealedContactRepresentationPart")]
+		[XmlElement("SealedContactRepresentation")]
         public List<SealedContactRepresentationPart> SealedContactRepresentation {
             get {
                 return SealedContactRepresentationField;
@@ -21982,7 +22506,8 @@ namespace Energistics.DataAccess.RESQML200
         /// NonSealedContactRepresentation property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("NonSealedContactRepresentation", DataType="AbstractContactRepresentationPart")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractContactRepresentationPart")]
+		[XmlElement("NonSealedContactRepresentation")]
         public List<AbstractContactRepresentationPart> NonSealedContactRepresentation {
             get {
                 return NonSealedContactRepresentationField;
@@ -22028,6 +22553,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("count of connections. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public string Count {
             get {
@@ -22046,7 +22572,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("2 x #Connections array of cell indices for (Cell1,Cell2) for each connection.")]
-		[XmlElement("CellIndexPairs", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("CellIndexPairs")]
         public AbstractIntegerArray CellIndexPairs {
             get {
                 return CellIndexPairsField;
@@ -22063,7 +22590,8 @@ namespace Energistics.DataAccess.RESQML200
         /// GridIndexPairs property
         /// </summary>
 		[Description("2 x #Connections array of grid indices for (Cell1,Cell2) for each connection. The grid indices are obtained from the grid index pairs.  If only a single grid is referenced from the grid index, then this array need not be used.  BUSINESS RULE: This array should appear if more than one grid index pair is referenced.")]
-		[XmlElement("GridIndexPairs", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("GridIndexPairs")]
         public AbstractIntegerArray GridIndexPairs {
             get {
                 return GridIndexPairsField;
@@ -22080,7 +22608,8 @@ namespace Energistics.DataAccess.RESQML200
         /// LocalFacePerCellIndexPairs property
         /// </summary>
 		[Description("Optional 2 x #Connections array of local face per cell indices for (Cell1,Cell2) for each connection. Local face per cell indices are used because global face indices need not have been defined. Null value = -1.  If no face per cell definition occur as part of the grid representation, e.g., for a block centered grid, then this array need not appear.")]
-		[XmlElement("LocalFacePerCellIndexPairs", DataType="AbstractIntegerArray")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractIntegerArray")]
+		[XmlElement("LocalFacePerCellIndexPairs")]
         public AbstractIntegerArray LocalFacePerCellIndexPairs {
             get {
                 return LocalFacePerCellIndexPairsField;
@@ -22097,7 +22626,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ConnectionInterpretations property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ConnectionInterpretations", DataType="ConnectionInterpretations")]
+        [EnergisticsDataTypeAttribute(DataType = "ConnectionInterpretations")]
+		[XmlElement("ConnectionInterpretations")]
         public ConnectionInterpretations ConnectionInterpretations {
             get {
                 return ConnectionInterpretationsField;
@@ -22115,7 +22645,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Grid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Grid")]
         public List<DataObjectReference> Grid {
             get {
                 return GridField;
@@ -22168,7 +22699,8 @@ namespace Energistics.DataAccess.RESQML200
         /// CellFluidPhaseUnits property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("CellFluidPhaseUnits", DataType="CellFluidPhaseUnits")]
+        [EnergisticsDataTypeAttribute(DataType = "CellFluidPhaseUnits")]
+		[XmlElement("CellFluidPhaseUnits")]
         public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
                 return CellFluidPhaseUnitsField;
@@ -22185,7 +22717,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ParentWindow property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("ParentWindow", DataType="AbstractParentWindow")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractParentWindow")]
+		[XmlElement("ParentWindow")]
         public AbstractParentWindow ParentWindow {
             get {
                 return ParentWindowField;
@@ -22202,7 +22735,8 @@ namespace Energistics.DataAccess.RESQML200
         /// CellStratigraphicUnits property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("CellStratigraphicUnits", DataType="CellStratigraphicUnits")]
+        [EnergisticsDataTypeAttribute(DataType = "CellStratigraphicUnits")]
+		[XmlElement("CellStratigraphicUnits")]
         public CellStratigraphicUnits CellStratigraphicUnits {
             get {
                 return CellStratigraphicUnitsField;
@@ -22239,6 +22773,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of layers in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Nk", DataType="positiveInteger")]
         public string Nk {
             get {
@@ -22256,7 +22791,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IntervalStratigraphicUnits property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IntervalStratigraphicUnits", DataType="IntervalStratigraphicUnits")]
+        [EnergisticsDataTypeAttribute(DataType = "IntervalStratigraphicUnits")]
+		[XmlElement("IntervalStratigraphicUnits")]
         public IntervalStratigraphicUnits IntervalStratigraphicUnits {
             get {
                 return IntervalStratigraphicUnitsField;
@@ -22291,6 +22827,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Count of cells in the I-direction in the grid. Must be positive. I=1,...,NI, I0=0,...,NI-1.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Ni", DataType="positiveInteger")]
         public string Ni {
             get {
@@ -22309,6 +22846,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Count of cells in the J-direction in the grid. Must be positive. J=1,...,NJ, J0=0,...,NJ-1.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Nj", DataType="positiveInteger")]
         public string Nj {
             get {
@@ -22326,7 +22864,8 @@ namespace Energistics.DataAccess.RESQML200
         /// RadialGridIsComplete property
         /// </summary>
 		[Description("TRUE if the grid is periodic in J, i.e., has the topology of a complete 360 degree circle.  If TRUE, then NJL=NJ. Otherwise, NJL=NJ+1  May be used to change the grid topology for either a cartesian or a radial grid, although radial grid usage is by far the more common.")]
-		[XmlElement("RadialGridIsComplete", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("RadialGridIsComplete")]
         public bool? RadialGridIsComplete {
             get {
                 return RadialGridIsCompleteField;
@@ -22361,7 +22900,8 @@ namespace Energistics.DataAccess.RESQML200
         /// KGaps property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("KGaps", DataType="KGaps")]
+        [EnergisticsDataTypeAttribute(DataType = "KGaps")]
+		[XmlElement("KGaps")]
         public KGaps KGaps {
             get {
                 return KGapsField;
@@ -22378,7 +22918,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Geometry property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Geometry", DataType="IjkGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "IjkGridGeometry")]
+		[XmlElement("Geometry")]
         public IjkGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -22412,6 +22953,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of unstructured columns in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("ColumnCount", DataType="positiveInteger")]
         public string ColumnCount {
             get {
@@ -22429,7 +22971,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Geometry property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Geometry", DataType="UnstructuredColumnLayerGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredColumnLayerGridGeometry")]
+		[XmlElement("Geometry")]
         public UnstructuredColumnLayerGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -22465,6 +23008,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of layers in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Nk", DataType="positiveInteger")]
         public string Nk {
             get {
@@ -22483,7 +23027,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("TruncationCells", DataType="TruncationCellPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "TruncationCellPatch")]
+		[XmlElement("TruncationCells")]
         public TruncationCellPatch TruncationCells {
             get {
                 return TruncationCellsField;
@@ -22518,6 +23063,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Count of I-indices in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Ni", DataType="positiveInteger")]
         public string Ni {
             get {
@@ -22536,6 +23082,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Count of J-indices in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("Nj", DataType="positiveInteger")]
         public string Nj {
             get {
@@ -22554,7 +23101,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="IjkGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "IjkGridGeometry")]
+		[XmlElement("Geometry")]
         public IjkGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -22588,6 +23136,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of unstructured columns in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("ColumnCount", DataType="positiveInteger")]
         public string ColumnCount {
             get {
@@ -22606,7 +23155,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("Geometry", DataType="UnstructuredColumnLayerGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredColumnLayerGridGeometry")]
+		[XmlElement("Geometry")]
         public UnstructuredColumnLayerGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -22639,7 +23189,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ColumnLayerGrid property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("ColumnLayerGrid", DataType="GpGridColumnLayerGrid")]
+        [EnergisticsDataTypeAttribute(DataType = "GpGridColumnLayerGrid")]
+		[XmlElement("ColumnLayerGrid")]
         public List<GpGridColumnLayerGrid> ColumnLayerGrid {
             get {
                 return ColumnLayerGridField;
@@ -22668,7 +23219,8 @@ namespace Energistics.DataAccess.RESQML200
         /// UnstructuredGridPatch property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("UnstructuredGridPatch", DataType="GpGridUnstructuredGridPatch")]
+        [EnergisticsDataTypeAttribute(DataType = "GpGridUnstructuredGridPatch")]
+		[XmlElement("UnstructuredGridPatch")]
         public List<GpGridUnstructuredGridPatch> UnstructuredGridPatch {
             get {
                 return UnstructuredGridPatchField;
@@ -22714,6 +23266,7 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Number of cells in the grid. Must be positive.")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveInteger")]
 		[XmlElement("CellCount", DataType="positiveInteger")]
         public string CellCount {
             get {
@@ -22731,7 +23284,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Geometry property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Geometry", DataType="UnstructuredGridGeometry")]
+        [EnergisticsDataTypeAttribute(DataType = "UnstructuredGridGeometry")]
+		[XmlElement("Geometry")]
         public UnstructuredGridGeometry Geometry {
             get {
                 return GeometryField;
@@ -22765,7 +23319,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("RepresentationIdentity", DataType="RepresentationIdentity")]
+        [EnergisticsDataTypeAttribute(DataType = "RepresentationIdentity")]
+		[XmlElement("RepresentationIdentity")]
         public List<RepresentationIdentity> RepresentationIdentity {
             get {
                 return RepresentationIdentityField;
@@ -22810,7 +23365,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Activation property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Activation", DataType="Activation")]
+        [EnergisticsDataTypeAttribute(DataType = "Activation")]
+		[XmlElement("Activation")]
         public Activation Activation {
             get {
                 return ActivationField;
@@ -22828,7 +23384,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("ChildGrid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("ChildGrid")]
         public List<DataObjectReference> ChildGrid {
             get {
                 return ChildGridField;
@@ -22874,7 +23431,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("Ranks", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Ranks")]
         public List<DataObjectReference> Ranks {
             get {
                 return RanksField;
@@ -22936,7 +23494,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Domain property
         /// </summary>
 		[Required]
-		[XmlElement("Domain", DataType="Domain")]
+        [EnergisticsDataTypeAttribute(DataType = "Domain")]
+		[XmlElement("Domain")]
         public Domain? Domain {
             get {
                 return DomainField;
@@ -22954,7 +23513,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("InterpretedFeature", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("InterpretedFeature")]
         public DataObjectReference InterpretedFeature {
             get {
                 return InterpretedFeatureField;
@@ -22971,7 +23531,8 @@ namespace Energistics.DataAccess.RESQML200
         /// HasOccuredDuring property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("HasOccuredDuring", DataType="TimeInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeInterval")]
+		[XmlElement("HasOccuredDuring")]
         public TimeInterval HasOccuredDuring {
             get {
                 return HasOccuredDuringField;
@@ -23007,8 +23568,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// GeologicUnitComposition property
         /// </summary>
-		
-		[XmlElement("GeologicUnitComposition", DataType="GeologicUnitComposition")]
+		[EnergisticsDataTypeAttribute(DataType = "GeologicUnitComposition")]
+		[XmlElement("GeologicUnitComposition")]
         public GeologicUnitComposition? GeologicUnitComposition {
             get {
                 return GeologicUnitCompositionField;
@@ -23042,8 +23603,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// GeologicUnitMaterialImplacement property
         /// </summary>
-		
-		[XmlElement("GeologicUnitMaterialImplacement", DataType="GeologicUnitMaterialImplacement")]
+		[EnergisticsDataTypeAttribute(DataType = "GeologicUnitMaterialImplacement")]
+		[XmlElement("GeologicUnitMaterialImplacement")]
         public GeologicUnitMaterialImplacement? GeologicUnitMaterialImplacement {
             get {
                 return GeologicUnitMaterialImplacementField;
@@ -23094,7 +23655,8 @@ namespace Energistics.DataAccess.RESQML200
         /// DepositionMode property
         /// </summary>
 		[Description("BUSINESS RULE / The Deposition mode for a Geological Unit MUST be conssitent with the Boundary Relations of A Genetic Boundary. If it is not the case the Boundary Relation declaration is retained.")]
-		[XmlElement("DepositionMode", DataType="DepositionMode")]
+        [EnergisticsDataTypeAttribute(DataType = "DepositionMode")]
+		[XmlElement("DepositionMode")]
         public DepositionMode? DepositionMode {
             get {
                 return DepositionModeField;
@@ -23129,7 +23691,8 @@ namespace Energistics.DataAccess.RESQML200
         /// MaxThickness property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("MaxThickness", DataType="LengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthMeasure")]
+		[XmlElement("MaxThickness")]
         public LengthMeasure MaxThickness {
             get {
                 return MaxThicknessField;
@@ -23146,7 +23709,8 @@ namespace Energistics.DataAccess.RESQML200
         /// MinThickness property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("MinThickness", DataType="LengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthMeasure")]
+		[XmlElement("MinThickness")]
         public LengthMeasure MinThickness {
             get {
                 return MinThicknessField;
@@ -23178,8 +23742,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Geobody3dShape property
         /// </summary>
-		
-		[XmlElement("Geobody3dShape", DataType="Geobody3dShape")]
+		[EnergisticsDataTypeAttribute(DataType = "Geobody3dShape")]
+		[XmlElement("Geobody3dShape")]
         public Geobody3dShape? Geobody3dShape {
             get {
                 return Geobody3dShapeField;
@@ -23229,8 +23793,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Phase property
         /// </summary>
-		
-		[XmlElement("Phase", DataType="Phase")]
+		[EnergisticsDataTypeAttribute(DataType = "Phase")]
+		[XmlElement("Phase")]
         public Phase? Phase {
             get {
                 return PhaseField;
@@ -23281,7 +23845,8 @@ namespace Energistics.DataAccess.RESQML200
         /// StratigraphicOccurrences property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("StratigraphicOccurrences", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("StratigraphicOccurrences")]
         public List<DataObjectReference> StratigraphicOccurrences {
             get {
                 return StratigraphicOccurrencesField;
@@ -23310,7 +23875,8 @@ namespace Energistics.DataAccess.RESQML200
         /// StratigraphicColumn property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("StratigraphicColumn", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("StratigraphicColumn")]
         public DataObjectReference StratigraphicColumn {
             get {
                 return StratigraphicColumnField;
@@ -23327,7 +23893,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Structure property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Structure", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Structure")]
         public DataObjectReference Structure {
             get {
                 return StructureField;
@@ -23344,7 +23911,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Fluid property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("Fluid", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Fluid")]
         public DataObjectReference Fluid {
             get {
                 return FluidField;
@@ -23396,7 +23964,8 @@ namespace Energistics.DataAccess.RESQML200
         /// BoundaryRelation property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("BoundaryRelation", DataType="BoundaryRelation")]
+        [EnergisticsDataTypeAttribute(DataType = "BoundaryRelation")]
+		[XmlElement("BoundaryRelation")]
         public List<BoundaryRelation> BoundaryRelation {
             get {
                 return BoundaryRelationField;
@@ -23424,8 +23993,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SequenceStratigraphySurface property
         /// </summary>
-		
-		[XmlElement("SequenceStratigraphySurface", DataType="SequenceStratigraphySurface")]
+		[EnergisticsDataTypeAttribute(DataType = "SequenceStratigraphySurface")]
+		[XmlElement("SequenceStratigraphySurface")]
         public SequenceStratigraphySurface? SequenceStratigraphySurface {
             get {
                 return SequenceStratigraphySurfaceField;
@@ -23476,7 +24045,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IsListric property
         /// </summary>
 		[Description("Indicates if the normal fault is listric or not.  BUSINESS RULE: Must be present if the fault is normal. Must not be present if the fault is not normal.")]
-		[XmlElement("IsListric", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IsListric")]
         public bool? IsListric {
             get {
                 return IsListricField;
@@ -23511,7 +24081,8 @@ namespace Energistics.DataAccess.RESQML200
         /// MaximumThrow property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("MaximumThrow", DataType="LengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthMeasure")]
+		[XmlElement("MaximumThrow")]
         public LengthMeasure MaximumThrow {
             get {
                 return MaximumThrowField;
@@ -23528,7 +24099,8 @@ namespace Energistics.DataAccess.RESQML200
         /// MeanAzimuth property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("MeanAzimuth", DataType="PlaneAngleMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleMeasure")]
+		[XmlElement("MeanAzimuth")]
         public PlaneAngleMeasure MeanAzimuth {
             get {
                 return MeanAzimuthField;
@@ -23545,7 +24117,8 @@ namespace Energistics.DataAccess.RESQML200
         /// MeanDip property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("MeanDip", DataType="PlaneAngleMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleMeasure")]
+		[XmlElement("MeanDip")]
         public PlaneAngleMeasure MeanDip {
             get {
                 return MeanDipField;
@@ -23562,7 +24135,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ThrowInterpretation property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("ThrowInterpretation", DataType="FaultThrow")]
+        [EnergisticsDataTypeAttribute(DataType = "FaultThrow")]
+		[XmlElement("ThrowInterpretation")]
         public List<FaultThrow> ThrowInterpretation {
             get {
                 return ThrowInterpretationField;
@@ -23607,7 +24181,8 @@ namespace Energistics.DataAccess.RESQML200
         /// BoundaryRelation property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("BoundaryRelation", DataType="BoundaryRelation")]
+        [EnergisticsDataTypeAttribute(DataType = "BoundaryRelation")]
+		[XmlElement("BoundaryRelation")]
         public List<BoundaryRelation> BoundaryRelation {
             get {
                 return BoundaryRelationField;
@@ -23653,7 +24228,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("Used to indicate that this wellbore has been, or is being, drilled. This distinguishes from planned wells. For one wellbore feature we may expect to have multiple wellbore interpretations: IsDrilled=TRUE for instance will be used for updated drilled trajectories. IsDrilled=FALSE for planned trajectories.")]
-		[XmlElement("IsDrilled", DataType="boolean")]
+        [EnergisticsDataTypeAttribute(DataType = "boolean")]
+		[XmlElement("IsDrilled")]
         public bool? IsDrilled {
             get {
                 return IsDrilledField;
@@ -23707,7 +24283,8 @@ namespace Energistics.DataAccess.RESQML200
         /// ContactInterpretation property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("ContactInterpretation", DataType="AbstractContactInterpretationPart")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractContactInterpretationPart")]
+		[XmlElement("ContactInterpretation")]
         public List<AbstractContactInterpretationPart> ContactInterpretation {
             get {
                 return ContactInterpretationField;
@@ -23755,7 +24332,8 @@ namespace Energistics.DataAccess.RESQML200
         /// OrderingCriteria property
         /// </summary>
 		[Required]
-		[XmlElement("OrderingCriteria", DataType="OrderingCriteria")]
+        [EnergisticsDataTypeAttribute(DataType = "OrderingCriteria")]
+		[XmlElement("OrderingCriteria")]
         public OrderingCriteria? OrderingCriteria {
             get {
                 return OrderingCriteriaField;
@@ -23789,7 +24367,8 @@ namespace Energistics.DataAccess.RESQML200
         /// IsOccurrenceOf property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("IsOccurrenceOf", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("IsOccurrenceOf")]
         public DataObjectReference IsOccurrenceOf {
             get {
                 return IsOccurrenceOfField;
@@ -23806,7 +24385,8 @@ namespace Energistics.DataAccess.RESQML200
         /// GeologicUnitIndex property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("GeologicUnitIndex", DataType="GeologicUnitInterpretationIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "GeologicUnitInterpretationIndex")]
+		[XmlElement("GeologicUnitIndex")]
         public List<GeologicUnitInterpretationIndex> GeologicUnitIndex {
             get {
                 return GeologicUnitIndexField;
@@ -23851,6 +24431,7 @@ namespace Energistics.DataAccess.RESQML200
         /// Index property
         /// </summary>
 		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeInteger")]
 		[XmlElement("Index", DataType="nonNegativeInteger")]
         public string Index {
             get {
@@ -23869,7 +24450,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("StratigraphicUnits", DataType="StratigraphicUnitInterpretationIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "StratigraphicUnitInterpretationIndex")]
+		[XmlElement("StratigraphicUnits")]
         public List<StratigraphicUnitInterpretationIndex> StratigraphicUnits {
             get {
                 return StratigraphicUnitsField;
@@ -23914,7 +24496,8 @@ namespace Energistics.DataAccess.RESQML200
         /// OrderingCriteria property
         /// </summary>
 		[Required]
-		[XmlElement("OrderingCriteria", DataType="OrderingCriteria")]
+        [EnergisticsDataTypeAttribute(DataType = "OrderingCriteria")]
+		[XmlElement("OrderingCriteria")]
         public OrderingCriteria? OrderingCriteria {
             get {
                 return OrderingCriteriaField;
@@ -23931,7 +24514,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Faults property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Faults", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Faults")]
         public List<DataObjectReference> Faults {
             get {
                 return FaultsField;
@@ -23960,7 +24544,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Horizons property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Horizons", DataType="HorizonInterpretationIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "HorizonInterpretationIndex")]
+		[XmlElement("Horizons")]
         public List<HorizonInterpretationIndex> Horizons {
             get {
                 return HorizonsField;
@@ -23989,7 +24574,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Sides property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Sides", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("Sides")]
         public List<DataObjectReference> Sides {
             get {
                 return SidesField;
@@ -24018,7 +24604,8 @@ namespace Energistics.DataAccess.RESQML200
         /// TopFrontier property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("TopFrontier", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("TopFrontier")]
         public List<DataObjectReference> TopFrontier {
             get {
                 return TopFrontierField;
@@ -24047,7 +24634,8 @@ namespace Energistics.DataAccess.RESQML200
         /// BottomFrontier property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("BottomFrontier", DataType="DataObjectReference")]
+        [EnergisticsDataTypeAttribute(DataType = "DataObjectReference")]
+		[XmlElement("BottomFrontier")]
         public List<DataObjectReference> BottomFrontier {
             get {
                 return BottomFrontierField;
@@ -24093,7 +24681,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("RockFluidUnitIndex", DataType="RockFluidUnitInterpretationIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "RockFluidUnitInterpretationIndex")]
+		[XmlElement("RockFluidUnitIndex")]
         public RockFluidUnitInterpretationIndex RockFluidUnitIndex {
             get {
                 return RockFluidUnitIndexField;
@@ -24126,7 +24715,8 @@ namespace Energistics.DataAccess.RESQML200
         /// </summary>
 		[Required]
         [Description("IAMF registered, if one exists, or a free text field. Needs documentation on seismic especially.  MIME type for HDF proxy is : application/x-hdf5 (by RESQML convention).")]
-		[XmlElement("MimeType", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("MimeType")]
         public string MimeType {
             get {
                 return MimeTypeField;
@@ -24159,7 +24749,8 @@ namespace Energistics.DataAccess.RESQML200
         /// Direction property
         /// </summary>
 		[Required]
-		[XmlElement("Direction", DataType="VerticalDirection")]
+        [EnergisticsDataTypeAttribute(DataType = "VerticalDirection")]
+		[XmlElement("Direction")]
         public VerticalDirection? Direction {
             get {
                 return DirectionField;
@@ -24176,7 +24767,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AbstractVerticalCrs property
         /// </summary>
 		[Required]
-		[XmlElement("AbstractVerticalCrs", DataType="AbstractVerticalCrs")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractVerticalCrs")]
+		[XmlElement("AbstractVerticalCrs")]
         public AbstractVerticalCrs AbstractVerticalCrs {
             get {
                 return AbstractVerticalCrsField;
@@ -24193,7 +24785,8 @@ namespace Energistics.DataAccess.RESQML200
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+        [XmlAttribute("uom")]
 		
         public LengthUom Uom {
             get {
@@ -24228,7 +24821,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AxisOrder property
         /// </summary>
 		[Required]
-		[XmlElement("AxisOrder", DataType="AxisOrder2d")]
+        [EnergisticsDataTypeAttribute(DataType = "AxisOrder2d")]
+		[XmlElement("AxisOrder")]
         public AxisOrder2d? AxisOrder {
             get {
                 return AxisOrderField;
@@ -24245,7 +24839,8 @@ namespace Energistics.DataAccess.RESQML200
         /// AbstractProjectedCrs property
         /// </summary>
 		[Required]
-		[XmlElement("AbstractProjectedCrs", DataType="AbstractProjectedCrs")]
+        [EnergisticsDataTypeAttribute(DataType = "AbstractProjectedCrs")]
+		[XmlElement("AbstractProjectedCrs")]
         public AbstractProjectedCrs AbstractProjectedCrs {
             get {
                 return AbstractProjectedCrsField;
@@ -24261,8 +24856,8 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
-        [XmlAttribute("uom", DataType = "LengthUom")]
+		[EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+        [XmlAttribute("uom")]
 		
         public LengthUom Uom {
             get {

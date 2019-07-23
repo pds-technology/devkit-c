@@ -85,7 +85,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reference to the Sample that was collected at this point.")]
         [ComponentElement]
-		[XmlElement("sampleRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("sampleRef")]
         public RefNameString SampleRef {
             get {
                 return sampleRefField;
@@ -103,7 +104,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The ID of the sample cylinder in which this sample was collected.")]
-		[XmlElement("sampleCylinderId", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("sampleCylinderId")]
         public string SampleCylinderId {
             get {
                 return sampleCylinderIdField;
@@ -121,7 +123,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("A name assigned to the acquisition.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -139,7 +142,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The kind of sample acquisition.")]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public string Kind {
             get {
                 return kindField;
@@ -156,7 +160,8 @@ namespace Energistics.DataAccess.PRODML131
         ///  Sampling start time. 
         /// </summary>
 		[Description("Sampling  start time.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -191,7 +196,8 @@ namespace Energistics.DataAccess.PRODML131
         ///  Sampling end time. 
         /// </summary>
 		[Description("Sampling  end time.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -227,7 +233,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comments created by the field engineers collecting the sample.")]
-		[XmlElement("fieldComment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("fieldComment")]
         public string FieldComment {
             get {
                 return fieldCommentField;
@@ -245,7 +252,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comments created by the engineers analysing the sample.")]
-		[XmlElement("interpretationComment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("interpretationComment")]
         public string InterpretationComment {
             get {
                 return interpretationCommentField;
@@ -263,7 +271,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("An identifier for the fluid collected as part of this acquistion.")]
-		[XmlElement("sampleId", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("sampleId")]
         public string SampleId {
             get {
                 return sampleIdField;
@@ -281,7 +290,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("An identifier for the slot in the sample carrier where the sample was acquired.")]
-		[XmlElement("sampleCarrierSlotId", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("sampleCarrierSlotId")]
         public string SampleCarrierSlotId {
             get {
                 return sampleCarrierSlotIdField;
@@ -299,7 +309,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("An identifier for the formation tester tool section that acquired the sample.")]
-		[XmlElement("toolSectionId", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("toolSectionId")]
         public string ToolSectionId {
             get {
                 return toolSectionIdField;
@@ -317,7 +328,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("An identifier for the sample bottle that was used for this acquisition.")]
-		[XmlElement("bottleId", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("bottleId")]
         public string BottleId {
             get {
                 return bottleIdField;
@@ -335,7 +347,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("A description of the kind of bottle used, for example whether the bottle is pressurized with Nitrogen or not.")]
-		[XmlElement("bottleConfiguration", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("bottleConfiguration")]
         public string BottleConfiguration {
             get {
                 return bottleConfigurationField;
@@ -353,7 +366,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pressure that was used to charge the sample bottle.")]
         [ComponentElement]
-		[XmlElement("cushionPressure", DataType="generalMeasureType")]
+        [EnergisticsDataTypeAttribute(DataType = "generalMeasureType")]
+		[XmlElement("cushionPressure")]
         public GeneralMeasureType CushionPressure {
             get {
                 return cushionPressureField;
@@ -371,7 +385,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("The expected kind of the sample, typically oil, water or gas.")]
-		[XmlElement("grossFluidKind", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("grossFluidKind")]
         public string GrossFluidKind {
             get {
                 return grossFluidKindField;
@@ -389,7 +404,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A result of formation tester analysis that applies to this acquisition.")]
         [RecurringElement]
-		[XmlElement("result", DataType="cs_wftTestResult")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTestResult")]
+		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
                 return resultField;
@@ -419,7 +435,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A refererence to a test (uid) under the current station.")]
         [RecurringElement]
-		[XmlElement("testRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("testRef")]
         public List<RefNameString> TestRef {
             get {
                 return testRefField;
@@ -449,7 +466,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to the associated data acquired during this acquisition.")]
         [RecurringElement]
-		[XmlElement("testData", DataType="cs_wftTestData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTestData")]
+		[XmlElement("testData")]
         public List<WftTestData> TestData {
             get {
                 return testDataField;
@@ -479,7 +497,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -510,7 +529,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -587,7 +607,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
-        [XmlAttribute("uidRef", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("uidRef")]
 		
         public string UidRef {
             get {
@@ -681,7 +702,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[StringLength(24)]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -834,7 +856,8 @@ namespace Energistics.DataAccess.PRODML131
         /// status property
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -886,7 +909,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
             get {
@@ -944,7 +968,8 @@ namespace Energistics.DataAccess.PRODML131
         /// status property
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -996,7 +1021,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumeFlowRateUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeFlowRateUom")]
+        [XmlAttribute("uom")]
 		
         public VolumeFlowRateUom Uom {
             get {
@@ -1054,7 +1080,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[StringLength(24)]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -1113,7 +1140,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(24)]
         [Description("The unit of measure for the quantity. This value must conform to the values allowed by a measure class.  If the value is a measure then the uom must be specified.")]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -1171,7 +1199,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
             get {
@@ -1190,7 +1219,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Defines why the volume was lost.")]
-        [XmlAttribute("reasonLost", DataType = "ReasonLost")]
+        [EnergisticsDataTypeAttribute(DataType = "ReasonLost")]
+        [XmlAttribute("reasonLost")]
 		        public string ReasonLostSurrogate
         {
             get {
@@ -1264,7 +1294,8 @@ namespace Energistics.DataAccess.PRODML131
         /// An indicator of the quality of the value.
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -1317,7 +1348,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The kind of the value component. For example, \"X\" in a tuple of X and Y.")]
-        [XmlAttribute("component", DataType = "kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+        [XmlAttribute("component")]
 		
         public string Component {
             get {
@@ -1337,7 +1369,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(24)]
         [Description("The unit of measure for the value. This value must conform to the values allowed by the measure class.")]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -1396,7 +1429,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.")]
-        [XmlAttribute("uom", DataType = "WellVerticalCoordinateUom")]
+        [EnergisticsDataTypeAttribute(DataType = "WellVerticalCoordinateUom")]
+        [XmlAttribute("uom")]
 		
         public WellVerticalCoordinateUom Uom {
             get {
@@ -1416,7 +1450,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.")]
-        [XmlAttribute("datum", DataType = "refWellDatum")]
+        [EnergisticsDataTypeAttribute(DataType = "refWellDatum")]
+        [XmlAttribute("datum")]
 		
         public string Datum {
             get {
@@ -1475,7 +1510,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The unit of measure of the quantity value.")]
-        [XmlAttribute("uom", DataType = "MeasuredDepthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasuredDepthUom")]
+        [XmlAttribute("uom")]
 		
         public MeasuredDepthUom Uom {
             get {
@@ -1495,7 +1531,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.")]
-        [XmlAttribute("datum", DataType = "refWellDatum")]
+        [EnergisticsDataTypeAttribute(DataType = "refWellDatum")]
+        [XmlAttribute("datum")]
 		
         public string Datum {
             get {
@@ -1553,7 +1590,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "PercentUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PercentUom")]
+        [XmlAttribute("uom")]
 		
         public PercentUom Uom {
             get {
@@ -1611,7 +1649,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumePerVolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumePerVolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
             get {
@@ -1669,7 +1708,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumeFlowRateUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeFlowRateUom")]
+        [XmlAttribute("uom")]
 		
         public VolumeFlowRateUom Uom {
             get {
@@ -1727,7 +1767,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
             get {
@@ -1785,7 +1826,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VelocityUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VelocityUom")]
+        [XmlAttribute("uom")]
 		
         public VelocityUom Uom {
             get {
@@ -1843,7 +1885,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "TimeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeUom")]
+        [XmlAttribute("uom")]
 		
         public TimeUom Uom {
             get {
@@ -1901,7 +1944,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "ThermodynamicTemperatureUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ThermodynamicTemperatureUom")]
+        [XmlAttribute("uom")]
 		
         public ThermodynamicTemperatureUom Uom {
             get {
@@ -1959,7 +2003,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "PressureUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PressureUom")]
+        [XmlAttribute("uom")]
 		
         public PressureUom Uom {
             get {
@@ -2017,7 +2062,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "PlaneAngleUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleUom")]
+        [XmlAttribute("uom")]
 		
         public PlaneAngleUom Uom {
             get {
@@ -2075,7 +2121,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "MassUom")]
+        [EnergisticsDataTypeAttribute(DataType = "MassUom")]
+        [XmlAttribute("uom")]
 		
         public MassUom Uom {
             get {
@@ -2133,7 +2180,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "MassConcentrationUom")]
+        [EnergisticsDataTypeAttribute(DataType = "MassConcentrationUom")]
+        [XmlAttribute("uom")]
 		
         public MassConcentrationUom Uom {
             get {
@@ -2191,7 +2239,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "LengthPerLengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthPerLengthUom")]
+        [XmlAttribute("uom")]
 		
         public LengthPerLengthUom Uom {
             get {
@@ -2249,7 +2298,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "LengthUom")]
+        [EnergisticsDataTypeAttribute(DataType = "LengthUom")]
+        [XmlAttribute("uom")]
 		
         public LengthUom Uom {
             get {
@@ -2307,7 +2357,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "ElectricCurrentUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ElectricCurrentUom")]
+        [XmlAttribute("uom")]
 		
         public ElectricCurrentUom Uom {
             get {
@@ -2365,7 +2416,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "DynamicViscosityUom")]
+        [EnergisticsDataTypeAttribute(DataType = "DynamicViscosityUom")]
+        [XmlAttribute("uom")]
 		
         public DynamicViscosityUom Uom {
             get {
@@ -2423,7 +2475,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "DimensionlessUom")]
+        [EnergisticsDataTypeAttribute(DataType = "DimensionlessUom")]
+        [XmlAttribute("uom")]
 		
         public DimensionlessUom Uom {
             get {
@@ -2481,7 +2534,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "DensityUom")]
+        [EnergisticsDataTypeAttribute(DataType = "DensityUom")]
+        [XmlAttribute("uom")]
 		
         public DensityUom Uom {
             get {
@@ -2539,7 +2593,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "AttenuationUom")]
+        [EnergisticsDataTypeAttribute(DataType = "AttenuationUom")]
+        [XmlAttribute("uom")]
 		
         public AttenuationUom Uom {
             get {
@@ -2597,7 +2652,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "WorkUom")]
+        [EnergisticsDataTypeAttribute(DataType = "WorkUom")]
+        [XmlAttribute("uom")]
 		
         public WorkUom Uom {
             get {
@@ -2655,7 +2711,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumePerVolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumePerVolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
             get {
@@ -2713,7 +2770,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumePerVolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumePerVolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
             get {
@@ -2771,7 +2829,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumePerVolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumePerVolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumePerVolumeUom Uom {
             get {
@@ -2829,7 +2888,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "VolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeUom")]
+        [XmlAttribute("uom")]
 		
         public VolumeUom Uom {
             get {
@@ -2887,7 +2947,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "ThermalConductivityUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ThermalConductivityUom")]
+        [XmlAttribute("uom")]
 		
         public ThermalConductivityUom Uom {
             get {
@@ -2945,7 +3006,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "ProductivityIndexUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ProductivityIndexUom")]
+        [XmlAttribute("uom")]
 		
         public ProductivityIndexUom Uom {
             get {
@@ -3003,7 +3065,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "MolarVolumeUom")]
+        [EnergisticsDataTypeAttribute(DataType = "MolarVolumeUom")]
+        [XmlAttribute("uom")]
 		
         public MolarVolumeUom Uom {
             get {
@@ -3061,7 +3124,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "PercentUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PercentUom")]
+        [XmlAttribute("uom")]
 		
         public PercentUom Uom {
             get {
@@ -3119,7 +3183,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "ModulusOfCompressionUom")]
+        [EnergisticsDataTypeAttribute(DataType = "ModulusOfCompressionUom")]
+        [XmlAttribute("uom")]
 		
         public ModulusOfCompressionUom Uom {
             get {
@@ -3177,7 +3242,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "MassFlowRateUom")]
+        [EnergisticsDataTypeAttribute(DataType = "MassFlowRateUom")]
+        [XmlAttribute("uom")]
 		
         public MassFlowRateUom Uom {
             get {
@@ -3235,7 +3301,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "PercentUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PercentUom")]
+        [XmlAttribute("uom")]
 		
         public PercentUom Uom {
             get {
@@ -3293,7 +3360,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "FrequencyUom")]
+        [EnergisticsDataTypeAttribute(DataType = "FrequencyUom")]
+        [XmlAttribute("uom")]
 		
         public FrequencyUom Uom {
             get {
@@ -3351,7 +3419,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "CompressibilityUom")]
+        [EnergisticsDataTypeAttribute(DataType = "CompressibilityUom")]
+        [XmlAttribute("uom")]
 		
         public CompressibilityUom Uom {
             get {
@@ -3409,7 +3478,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[Required]
-        [XmlAttribute("uom", DataType = "AmountOfSubstanceUom")]
+        [EnergisticsDataTypeAttribute(DataType = "AmountOfSubstanceUom")]
+        [XmlAttribute("uom")]
 		
         public AmountOfSubstanceUom Uom {
             get {
@@ -3445,7 +3515,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The kind of result represents a combination of test kind and  analysis method applied.")]
-		[XmlElement("kind", DataType="WftTestResultKind")]
+        [EnergisticsDataTypeAttribute(DataType = "WftTestResultKind")]
+		[XmlElement("kind")]
         public WftTestResultKind Kind {
             get {
                 return kindField;
@@ -3464,7 +3535,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(40)]
         [Description("The name of a proprietary method which generally  represents a specialization of a result kind.")]
-		[XmlElement("method", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("method")]
         public string Method {
             get {
                 return methodField;
@@ -3483,7 +3555,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The top of the interval to which this result applies.")]
         [ComponentElement]
-		[XmlElement("mdTop", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -3502,7 +3575,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The bottom of the interval to which this result applies.")]
         [ComponentElement]
-		[XmlElement("mdBottom", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -3520,7 +3594,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to the formation tester data used to derive this result.")]
         [RecurringElement]
-		[XmlElement("testData", DataType="cs_wftTestData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTestData")]
+		[XmlElement("testData")]
         public List<WftTestData> TestData {
             get {
                 return testDataField;
@@ -3550,7 +3625,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An input parameter to the analysis method.")]
         [RecurringElement]
-		[XmlElement("inputParameter", DataType="cs_wftInOutParameter")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftInOutParameter")]
+		[XmlElement("inputParameter")]
         public List<WftInOutParameter> InputParameter {
             get {
                 return inputParameterField;
@@ -3580,7 +3656,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An output (result) parameter from the analysis of the test. The aggregate of parameters might represent something like the simulated response  of the test, to compare with actual.")]
         [RecurringElement]
-		[XmlElement("outputParameter", DataType="cs_wftInOutParameter")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftInOutParameter")]
+		[XmlElement("outputParameter")]
         public List<WftInOutParameter> OutputParameter {
             get {
                 return outputParameterField;
@@ -3610,7 +3687,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to an outputParameter of another result which was used as an input to this result. For a test result, the other result will be in the same test (i.e., ../result). For a station result, the other result will be in the same station (i.e., ../result) or  will be a test result in the same station (../test/result) or  will be an sampleAcquisition in the same station (i.e., ../sampleAcquisition/result). For a wftRun result, the other result will be in the same wftRun (i.e., ../result) or will be a result in a station (i.e., ../station/result) or will be a result in a station's test (i.e., ../station/test/result) or  will be a result in a station's sampleAcquisition (i.e., ../station/sampleAcquisition/result). The \"../result\" notation means: starting in the parent node, traverse down to the  appropriate child result using the provided pointers.")]
         [RecurringElement]
-		[XmlElement("inputResultRef", DataType="cs_wftResultRef")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftResultRef")]
+		[XmlElement("inputResultRef")]
         public List<WftResultRef> InputResultRef {
             get {
                 return inputResultRefField;
@@ -3640,7 +3718,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -3671,7 +3750,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -3726,7 +3806,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The role of the test data.  The role applies either to a curve or to a point parameter.")]
-		[XmlElement("role", DataType="WftTestDataRole")]
+        [EnergisticsDataTypeAttribute(DataType = "WftTestDataRole")]
+		[XmlElement("role")]
         public WftTestDataRole Role {
             get {
                 return roleField;
@@ -3744,7 +3825,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to a specific interval of a specific curve in a specific log.")]
         [RecurringElement]
-		[XmlElement("curveSection", DataType="cs_wftCurveSection")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftCurveSection")]
+		[XmlElement("curveSection")]
         public List<WftCurveSection> CurveSection {
             get {
                 return curveSectionField;
@@ -3774,7 +3856,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Test parameters used here are either control parameters used to govern  the test or are single value parameters measured by the test (and not by subsequent analysis).")]
         [RecurringElement]
-		[XmlElement("parameter", DataType="cs_wftInOutParameter")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftInOutParameter")]
+		[XmlElement("parameter")]
         public List<WftInOutParameter> Parameter {
             get {
                 return parameterField;
@@ -3804,7 +3887,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -3835,7 +3919,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -3891,7 +3976,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to a specific log or wellLog that contains the curve.")]
         [ComponentElement]
-		[XmlElement("logRef", DataType="refObjectString")]
+        [EnergisticsDataTypeAttribute(DataType = "refObjectString")]
+		[XmlElement("logRef")]
         public RefObjectString LogRef {
             get {
                 return logRefField;
@@ -3910,7 +3996,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(32)]
         [Description("The mnemonic of the curve in the referenced log or wellLog.")]
-		[XmlElement("mnemonic", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("mnemonic")]
         public string Mnemonic {
             get {
                 return mnemonicField;
@@ -3927,7 +4014,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.
         /// </summary>
 		[Description("The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -3962,7 +4050,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.
         /// </summary>
 		[Description("The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -3998,7 +4087,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -4029,7 +4119,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -4106,7 +4197,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the singular object being referenced.")]
-        [XmlAttribute("object", DataType = "nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+        [XmlAttribute("object")]
 		
         public string Object {
             get {
@@ -4126,7 +4218,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("A reference to the unique identifier (uid attribute) in the object referenced by the name value.  This attribute is required within the context of a WITSML server.")]
-        [XmlAttribute("uidRef", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("uidRef")]
 		
         public string UidRef {
             get {
@@ -4198,7 +4291,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  WITSML SIG Technical Team before use.")]
-		[XmlElement("name", DataType="ExtensionName")]
+        [EnergisticsDataTypeAttribute(DataType = "ExtensionName")]
+		[XmlElement("name")]
         public ExtensionName Name {
             get {
                 return nameField;
@@ -4217,7 +4311,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The value of the extension.  This may also include a uom attribute.  The content should conform to constraints defined by the data type.")]
         [ComponentElement]
-		[XmlElement("value", DataType="extensionvalue")]
+        [EnergisticsDataTypeAttribute(DataType = "extensionvalue")]
+		[XmlElement("value")]
         public Extensionvalue Value {
             get {
                 return valueField;
@@ -4235,7 +4330,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The underlying XML type of the value.")]
-		[XmlElement("dataType", DataType="PrimitiveType")]
+        [EnergisticsDataTypeAttribute(DataType = "PrimitiveType")]
+		[XmlElement("dataType")]
         public PrimitiveType? DataType {
             get {
                 return dataTypeField;
@@ -4252,7 +4348,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date-time associated with the value.
         /// </summary>
 		[Description("The date-time associated with the value.")]
-		[XmlElement("dTim", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTim")]
         public Timestamp? DateTime {
             get {
                 return dTimField;
@@ -4288,7 +4385,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The measured depth associated with the value.")]
         [ComponentElement]
-		[XmlElement("md", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
                 return mdField;
@@ -4305,7 +4403,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Indexes things with the same name. That is, 1 indicates the first one, 2 incidates the second one, etc.
         /// </summary>
 		[Description("Indexes things with the same name.  That is, 1 indicates the first one, 2 incidates the second one, etc.")]
-		[XmlElement("index", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("index")]
         public short? Index {
             get {
                 return indexField;
@@ -4340,7 +4439,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.
         /// </summary>
 		[Description("The kind of the measure. For example, \"length\". This should be specified if the value requires a unit of measure.")]
-		[XmlElement("measureClass", DataType="MeasureClass")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasureClass")]
+		[XmlElement("measureClass")]
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -4376,7 +4476,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("A textual description of the extension.")]
-		[XmlElement("description", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -4395,7 +4496,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -4473,7 +4575,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(24)]
         [Description("The unit of measure for the value. This value must conform to the values allowed by a measure class.")]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -4546,7 +4649,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the parameter.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -4565,7 +4669,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The value of the parameter.  If the value represents a measure, then the uom attribute  and the corresponding measureClass must be specified.")]
         [ComponentElement]
-		[XmlElement("value", DataType="measureOrQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "measureOrQuantity")]
+		[XmlElement("value")]
         public MeasureOrQuantity Value {
             get {
                 return valueField;
@@ -4582,7 +4687,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.
         /// </summary>
 		[Description("The kind of the measure. For example, \"length\". This should be specified if the value requires a unit of measure.")]
-		[XmlElement("measureClass", DataType="MeasureClass")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasureClass")]
+		[XmlElement("measureClass")]
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -4618,7 +4724,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -4649,7 +4756,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -4704,7 +4812,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the station node containing the specified nodes.")]
         [ComponentElement]
-		[XmlElement("stationRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("stationRef")]
         public RefNameString StationRef {
             get {
                 return stationRefField;
@@ -4722,7 +4831,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the test node containing the specified nodes.")]
         [ComponentElement]
-		[XmlElement("testRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("testRef")]
         public RefNameString TestRef {
             get {
                 return testRefField;
@@ -4740,7 +4850,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the sampleAcquisition node containing the specified nodes.")]
         [ComponentElement]
-		[XmlElement("sampleAcquisitionRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("sampleAcquisitionRef")]
         public RefNameString SampleAcquisitionRef {
             get {
                 return sampleAcquisitionRefField;
@@ -4759,7 +4870,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the desired result containing the outputParameter.")]
         [ComponentElement]
-		[XmlElement("resultRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("resultRef")]
         public RefNameString ResultRef {
             get {
                 return resultRefField;
@@ -4778,7 +4890,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the desired outputParameter.")]
         [ComponentElement]
-		[XmlElement("outputParameterRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("outputParameterRef")]
         public RefNameString OutputParameterRef {
             get {
                 return outputParameterRefField;
@@ -4797,7 +4910,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -4852,7 +4966,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Describes whether the test is associated with a pressure buildup or a drawdown.")]
-		[XmlElement("testKind", DataType="WftTestKind")]
+        [EnergisticsDataTypeAttribute(DataType = "WftTestKind")]
+		[XmlElement("testKind")]
         public WftTestKind TestKind {
             get {
                 return testKindField;
@@ -4869,7 +4984,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the data collection started for this test.
         /// </summary>
 		[Description("The date and time when the data collection started for this test.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -4904,7 +5020,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the data collection ended for this test.
         /// </summary>
 		[Description("The date and time when the data collection ended for this test.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -4940,7 +5057,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A result of formation tester analysis that applies to this test.")]
         [RecurringElement]
-		[XmlElement("result", DataType="cs_wftTestResult")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTestResult")]
+		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
                 return resultField;
@@ -4970,7 +5088,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -5001,7 +5120,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -5056,7 +5176,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The kind of event.")]
-		[XmlElement("kind", DataType="WftEventKind")]
+        [EnergisticsDataTypeAttribute(DataType = "WftEventKind")]
+		[XmlElement("kind")]
         public WftEventKind Kind {
             get {
                 return kindField;
@@ -5074,7 +5195,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Date and time of the start of the event.")]
-		[XmlElement("dTim", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTim")]
         public Timestamp? DateTime {
             get {
                 return dTimField;
@@ -5093,7 +5215,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The time duration of the event.")]
         [ComponentElement]
-		[XmlElement("duration", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
                 return durationField;
@@ -5111,7 +5234,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A comment about the event.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -5129,7 +5253,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -5160,7 +5285,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -5215,7 +5341,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The type of the station (such as, conventional, observation).")]
-		[XmlElement("stationKind", DataType="WftStationKind")]
+        [EnergisticsDataTypeAttribute(DataType = "WftStationKind")]
+		[XmlElement("stationKind")]
         public WftStationKind StationKind {
             get {
                 return stationKindField;
@@ -5232,7 +5359,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the data collection started for this station.
         /// </summary>
 		[Description("The date and time when the data collection started for this station.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -5267,7 +5395,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the data collection completed for this station.
         /// </summary>
 		[Description("The date and time when the data collection completed for this station.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -5303,7 +5432,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The type of flowing interval.")]
-		[XmlElement("flowingIntervalKind", DataType="WftFlowingIntervalKind")]
+        [EnergisticsDataTypeAttribute(DataType = "WftFlowingIntervalKind")]
+		[XmlElement("flowingIntervalKind")]
         public WftFlowingIntervalKind FlowingIntervalKind {
             get {
                 return flowingIntervalKindField;
@@ -5322,7 +5452,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Top depth of station if flowingIntervalKind=\"packed interval\". Depth of probe if flowingIntervalKind=\"probe\".")]
         [ComponentElement]
-		[XmlElement("mdTop", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -5341,7 +5472,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Bottom depth of station if flowingIntervalKind=\"packed interval\".  Depth of probe if flowingIntervalKind=\"probe\".")]
         [ComponentElement]
-		[XmlElement("mdBottom", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
             get {
                 return mdBottomField;
@@ -5359,7 +5491,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The diameter of the probe used, only valid if flowingIntervalKind is equal to \"probe\".")]
         [ComponentElement]
-		[XmlElement("diaProbe", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("diaProbe")]
         public LengthMeasure DiaProbe {
             get {
                 return diaProbeField;
@@ -5377,7 +5510,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A description of the station.")]
-		[XmlElement("description", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -5395,7 +5529,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference a log containing WFT time-series data at this station (may be superset of all the test log references at this station).")]
         [RecurringElement]
-		[XmlElement("logRef", DataType="refObjectString")]
+        [EnergisticsDataTypeAttribute(DataType = "refObjectString")]
+		[XmlElement("logRef")]
         public List<RefObjectString> LogRef {
             get {
                 return logRefField;
@@ -5425,7 +5560,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A formation tester event that occurs during this station.")]
         [RecurringElement]
-		[XmlElement("event", DataType="cs_wftEvent")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftEvent")]
+		[XmlElement("event")]
         public List<WftEvent> Event {
             get {
                 return eventField;
@@ -5455,7 +5591,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A formation tester test period that is recorded as part of this station.")]
         [RecurringElement]
-		[XmlElement("test", DataType="cs_wftTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTest")]
+		[XmlElement("test")]
         public List<WftTest> Test {
             get {
                 return testField;
@@ -5485,7 +5622,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A formation tester sample that is collected as part of this station.")]
         [RecurringElement]
-		[XmlElement("sampleAcquisition", DataType="cs_wftSampleAcquisition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftSampleAcquisition")]
+		[XmlElement("sampleAcquisition")]
         public List<WftSampleAcquisition> SampleAcquisition {
             get {
                 return sampleAcquisitionField;
@@ -5515,7 +5653,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A result of formation tester analysis that applies to this station.")]
         [RecurringElement]
-		[XmlElement("result", DataType="cs_wftTestResult")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTestResult")]
+		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
                 return resultField;
@@ -5545,7 +5684,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("References a station containing the flowing flowing Interval in  cases where this station is an observation station.")]
         [ComponentElement]
-		[XmlElement("stationRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("stationRef")]
         public RefNameString StationRef {
             get {
                 return stationRefField;
@@ -5563,7 +5703,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -5594,7 +5735,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -5649,7 +5791,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the well that contains the Wireline Formation Test (WFT).")]
-		[XmlElement("nameWell", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameWell")]
         public string NameWell {
             get {
                 return nameWellField;
@@ -5668,7 +5811,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the wellbore that contains the Wireline Formation Test (WFT).")]
-		[XmlElement("nameWellbore", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameWellbore")]
         public string NameWellbore {
             get {
                 return nameWellboreField;
@@ -5687,7 +5831,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the Wireline Formation Test (WFT).")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -5704,7 +5849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the "Special Handling of Change Information" within a server. See the relevant API specification for the behavior related to this element.
         /// </summary>
 		[Description("The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the behavior related to this element.")]
-		[XmlElement("objectGrowing", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("objectGrowing")]
         public bool? ObjectGrowing {
             get {
                 return objectGrowingField;
@@ -5740,7 +5886,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("References a log containing WFT tie-in (e.g. gamma ray) log vs. depth data.")]
         [ComponentElement]
-		[XmlElement("tieInLogRef", DataType="refObjectString")]
+        [EnergisticsDataTypeAttribute(DataType = "refObjectString")]
+		[XmlElement("tieInLogRef")]
         public RefObjectString TieInLogRef {
             get {
                 return tieInLogRefField;
@@ -5758,7 +5905,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Name of contractor who provided the service.")]
-		[XmlElement("serviceCompany", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("serviceCompany")]
         public string ServiceCompany {
             get {
                 return serviceCompanyField;
@@ -5775,7 +5923,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the data collection started.
         /// </summary>
 		[Description("The date and time when the data collection started.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -5810,7 +5959,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the data collection completed.
         /// </summary>
 		[Description("The date and time when the data collection completed.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -5846,7 +5996,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum station depth within this WFT. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         [ComponentElement]
-		[XmlElement("minIndex", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("minIndex")]
         public MeasuredDepthCoord MinIndex {
             get {
                 return minIndexField;
@@ -5864,7 +6015,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum station depth within this WFT. This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         [ComponentElement]
-		[XmlElement("maxIndex", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("maxIndex")]
         public MeasuredDepthCoord MaxIndex {
             get {
                 return maxIndexField;
@@ -5882,7 +6034,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A description of the run.")]
-		[XmlElement("description", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -5900,7 +6053,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An individual WFT station.")]
         [RecurringElement]
-		[XmlElement("station", DataType="cs_wftStation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftStation")]
+		[XmlElement("station")]
         public List<WftStation> Station {
             get {
                 return stationField;
@@ -5930,7 +6084,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A single result derived from analysis of formation tester data.")]
         [RecurringElement]
-		[XmlElement("result", DataType="cs_wftTestResult")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wftTestResult")]
+		[XmlElement("result")]
         public List<WftTestResult> Result {
             get {
                 return resultField;
@@ -5960,7 +6115,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -5990,7 +6146,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -6007,7 +6164,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -6026,7 +6184,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
-        [XmlAttribute("uidWell", DataType = "uidParentString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidParentString")]
+        [XmlAttribute("uidWell")]
 		
         public string UidWell {
             get {
@@ -6046,7 +6205,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the wellbore. This uniquely represents  the wellbore referenced by the (possibly non-unique) nameWellbore.")]
-        [XmlAttribute("uidWellbore", DataType = "uidParentString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidParentString")]
+        [XmlAttribute("uidWellbore")]
 		
         public string UidWellbore {
             get {
@@ -6066,7 +6226,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -6134,7 +6295,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("An identifier to indicate the data originator. This identifies the server that originally created  the object and thus most of the uids in the object (but not  necessarily the uids of the parents). This is typically a url.")]
-		[XmlElement("sourceName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("sourceName")]
         public string SourceName {
             get {
                 return sourceNameField;
@@ -6151,7 +6313,8 @@ namespace Energistics.DataAccess.PRODML131
         /// When the data was created at the persistent data store. In a query template, a specified value will be interpreted by the server as a request for dTimCreation values that are greater-than the specified value. 
         /// </summary>
 		[Description("When the data was created at the persistent data store.  In a query template, a specified value will be interpreted by the server as a request for dTimCreation values that are greater-than the specified value.")]
-		[XmlElement("dTimCreation", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimCreation")]
         public Timestamp? DateTimeCreation {
             get {
                 return dTimCreationField;
@@ -6186,7 +6349,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user). 
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).")]
-		[XmlElement("dTimLastChange", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimLastChange")]
         public Timestamp? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
@@ -6221,7 +6385,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The item state for the data object. 
         /// </summary>
 		[Description("The item state for the data object.")]
-		[XmlElement("itemState", DataType="ItemState")]
+        [EnergisticsDataTypeAttribute(DataType = "ItemState")]
+		[XmlElement("itemState")]
         public ItemState? ItemState {
             get {
                 return itemStateField;
@@ -6257,7 +6422,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The category of the service related to the creation of the object.  For example, \"mud log service\", \"cement service\", \"LWD service\", \"rig service\", \"drilling service\". REALTIME STORE UNIQUE KEY: When accessed via the Store Interface, for each instance of realtime,  the combination of \"uidWell\", \"uidWellbore\", \"idSub\" and commonData's \"serviceCategory\"  must be unique. That is, the Store Interface will only retain one realtime   for a particular wellbore, subscription and service with the REALTIME STORE UNIQUE KEY  being the object selector.")]
-		[XmlElement("serviceCategory", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("serviceCategory")]
         public string ServiceCategory {
             get {
                 return serviceCategoryField;
@@ -6275,7 +6441,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comments and remarks.")]
-		[XmlElement("comments", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comments")]
         public string Comments {
             get {
                 return commentsField;
@@ -6293,7 +6460,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The local time zone of the original acquisition date-time values.  It is the deviation in hours and minutes from UTC. The first occurrence should be the actual local time zone at the start of acquisition and may represent a seasonally adjusted value such as daylight savings. The dTim attribute must be populated in the second and subsequent occurrences  if the local time zone changes during acquisition. This knowledge is required because the original time zone in a dateTime value may be lost when software converts to a different time zone.")]
         [RecurringElement]
-		[XmlElement("acquisitionTimeZone", DataType="timestampedTimeZone")]
+        [EnergisticsDataTypeAttribute(DataType = "timestampedTimeZone")]
+		[XmlElement("acquisitionTimeZone")]
         public List<TimestampedTimeZone> AcquisitionTimeZone {
             get {
                 return acquisitionTimeZoneField;
@@ -6322,7 +6490,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Extensions to the schema using an xsd:any construct.
         /// </summary>
 		[Description("Extensions to the schema using an xsd:any construct.")]
-		[XmlElement("extensionAny", DataType="cs_extensionAny")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionAny")]
+		[XmlElement("extensionAny")]
         public ExtensionAny ExtensionAny {
             get {
                 return extensionAnyField;
@@ -6340,7 +6509,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -6426,7 +6596,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.
         /// </summary>
 		[Description("The date and time when this local time zone became active. This value must be defined on the second and subsequent occurrences.")]
-        [XmlAttribute("dTim", DataType = "timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+        [XmlAttribute("dTim")]
 		
         public DateTime DateTime {
             get {
@@ -6646,7 +6817,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Oil volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("oilVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("oilVolume")]
         public WellTestTestVolume OilVolume {
             get {
                 return oilVolumeField;
@@ -6664,7 +6836,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Oil rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("oilRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("oilRate")]
         public WellTestFluidRate OilRate {
             get {
                 return oilRateField;
@@ -6682,7 +6855,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("gasVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("gasVolume")]
         public WellTestTestVolume GasVolume {
             get {
                 return gasVolumeField;
@@ -6700,7 +6874,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("gasRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("gasRate")]
         public WellTestFluidRate GasRate {
             get {
                 return gasRateField;
@@ -6718,7 +6893,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("waterVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("waterVolume")]
         public WellTestTestVolume WaterVolume {
             get {
                 return waterVolumeField;
@@ -6736,7 +6912,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("waterRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("waterRate")]
         public WellTestFluidRate WaterRate {
             get {
                 return waterRateField;
@@ -6790,7 +6967,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume is the fluid, corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("volumeStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("volumeStdTempPres")]
         public VolumeMeasure VolumeStdTempPres {
             get {
                 return volumeStdTempPresField;
@@ -6808,7 +6986,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume, uncorrected. This volume is generally reported at reservoir conditions.")]
         [ComponentElement]
-		[XmlElement("volume", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("volume")]
         public VolumeMeasure Volume {
             get {
                 return volumeField;
@@ -6826,7 +7005,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid,  corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("densityStdTempPres", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStdTempPres")]
         public DensityMeasure DensityStdTempPres {
             get {
                 return densityStdTempPresField;
@@ -6844,7 +7024,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid, uncorrected.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -6862,7 +7043,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("Class for Natural Gas. This is not valid for oil or water.")]
-		[XmlElement("gasClass", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("gasClass")]
         public string GasClass {
             get {
                 return gasClassField;
@@ -6916,7 +7098,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The fluid flow rate.")]
         [ComponentElement]
-		[XmlElement("fluidRate", DataType="volumeFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateMeasure")]
+		[XmlElement("fluidRate")]
         public VolumeFlowRateMeasure FluidRate {
             get {
                 return fluidRateField;
@@ -6934,7 +7117,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The fluid flow rate that has been corrected to standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("fluidRateStdTempPres", DataType="volumeFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateMeasure")]
+		[XmlElement("fluidRateStdTempPres")]
         public VolumeFlowRateMeasure FluidRateStdTempPres {
             get {
                 return fluidRateStdTempPresField;
@@ -6952,7 +7136,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("Class for Natural Gas. This is not valid for oil or water.")]
-		[XmlElement("gasClass", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("gasClass")]
         public string GasClass {
             get {
                 return gasClassField;
@@ -7006,7 +7191,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The time length (with uom) of the well test.")]
         [ComponentElement]
-		[XmlElement("testDuration", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("testDuration")]
         public TimeMeasure TestDuration {
             get {
                 return testDurationField;
@@ -7024,7 +7210,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The interval tested. This element includes a top and base  depth, and the formation tested.")]
         [ComponentElement]
-		[XmlElement("testInterval", DataType="cs_wellTestInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestInterval")]
+		[XmlElement("testInterval")]
         public WellTestInterval TestInterval {
             get {
                 return testIntervalField;
@@ -7041,7 +7228,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The fluid that is being injected. 
         /// </summary>
 		[Description("The fluid that is being injected.")]
-		[XmlElement("InjectedFluid", DataType="InjectionFluid")]
+        [EnergisticsDataTypeAttribute(DataType = "InjectionFluid")]
+		[XmlElement("InjectedFluid")]
         public InjectionFluid InjectedFluid {
             get {
                 return InjectedFluidField;
@@ -7077,7 +7265,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The cumulative volumes of fluids at the time of the  well test. The fluids are oil, gas, and water.")]
         [ComponentElement]
-		[XmlElement("wellTestCumulative", DataType="cs_wellTestCumulative")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestCumulative")]
+		[XmlElement("wellTestCumulative")]
         public WellTestCumulative WellTestCumulative {
             get {
                 return wellTestCumulativeField;
@@ -7095,7 +7284,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The size of the opening in the flow choke at the wellhead.")]
         [ComponentElement]
-		[XmlElement("chokeOrificeSize", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
                 return chokeOrificeSizeField;
@@ -7113,7 +7303,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum pressure measured at the annulus.")]
         [ComponentElement]
-		[XmlElement("minimumAnnularPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("minimumAnnularPressure")]
         public PressureMeasure MinimumAnnularPressure {
             get {
                 return minimumAnnularPressureField;
@@ -7131,7 +7322,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum pressure measured at the annulus.")]
         [ComponentElement]
-		[XmlElement("maximumAnnularPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("maximumAnnularPressure")]
         public PressureMeasure MaximumAnnularPressure {
             get {
                 return maximumAnnularPressureField;
@@ -7149,7 +7341,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The flowing pressure measured at the wellhead during the test.")]
         [ComponentElement]
-		[XmlElement("wellheadFlowingPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("wellheadFlowingPressure")]
         public PressureMeasure WellheadFlowingPressure {
             get {
                 return wellheadFlowingPressureField;
@@ -7167,7 +7360,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum pressure measured at the wellhead during the well test.")]
         [ComponentElement]
-		[XmlElement("wellheadMaximumPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("wellheadMaximumPressure")]
         public PressureMeasure WellheadMaximumPressure {
             get {
                 return wellheadMaximumPressureField;
@@ -7185,7 +7379,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The production results of the test.")]
         [ComponentElement]
-		[XmlElement("injectionTestResults", DataType="cs_wellTestInjectionTestResults")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestInjectionTestResults")]
+		[XmlElement("injectionTestResults")]
         public WellTestInjectionTestResults InjectionTestResults {
             get {
                 return injectionTestResultsField;
@@ -7204,7 +7399,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -7260,7 +7456,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The measured depth to the top of the interval.")]
         [ComponentElement]
-		[XmlElement("mdTop", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
             get {
                 return mdTopField;
@@ -7279,7 +7476,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The measured depth to the bottom of the interval.")]
         [ComponentElement]
-		[XmlElement("mdBase", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("mdBase")]
         public MeasuredDepthCoord MDBase {
             get {
                 return mdBaseField;
@@ -7297,7 +7495,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth  value is deeper than the first kickoff point. It is recommended that it always be given.")]
         [ComponentElement]
-		[XmlElement("wellbore", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellbore")]
         public RefNameString Wellbore {
             get {
                 return wellboreField;
@@ -7315,7 +7514,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A formation that was tested.")]
         [RecurringElement]
-		[XmlElement("testedFormation", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("testedFormation")]
         public List<string> TestedFormation {
             get {
                 return testedFormationField;
@@ -7345,7 +7545,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The relative opening of the downhole control valve for the tested zone. This is for surface controllable valves.")]
         [ComponentElement]
-		[XmlElement("valvePosition", DataType="lengthPerLengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthPerLengthMeasure")]
+		[XmlElement("valvePosition")]
         public LengthPerLengthMeasure ValvePosition {
             get {
                 return valvePositionField;
@@ -7364,7 +7565,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -7419,7 +7621,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The cumulative amount of oil.")]
         [ComponentElement]
-		[XmlElement("cumulativeOil", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("cumulativeOil")]
         public VolumeMeasure CumulativeOil {
             get {
                 return cumulativeOilField;
@@ -7437,7 +7640,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The cumulative amount of gas.")]
         [ComponentElement]
-		[XmlElement("cumulativeGas", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("cumulativeGas")]
         public VolumeMeasure CumulativeGas {
             get {
                 return cumulativeGasField;
@@ -7455,7 +7659,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The cumulative amount of water.")]
         [ComponentElement]
-		[XmlElement("cumulativeWater", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("cumulativeWater")]
         public VolumeMeasure CumulativeWater {
             get {
                 return cumulativeWaterField;
@@ -7509,7 +7714,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Oil volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("oilVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("oilVolume")]
         public WellTestTestVolume OilVolume {
             get {
                 return oilVolumeField;
@@ -7527,7 +7733,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Oil rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("oilRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("oilRate")]
         public WellTestFluidRate OilRate {
             get {
                 return oilRateField;
@@ -7545,7 +7752,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("gasVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("gasVolume")]
         public WellTestTestVolume GasVolume {
             get {
                 return gasVolumeField;
@@ -7563,7 +7771,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("gasRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("gasRate")]
         public WellTestFluidRate GasRate {
             get {
                 return gasRateField;
@@ -7581,7 +7790,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("waterVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("waterVolume")]
         public WellTestTestVolume WaterVolume {
             get {
                 return waterVolumeField;
@@ -7599,7 +7809,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("waterRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("waterRate")]
         public WellTestFluidRate WaterRate {
             get {
                 return waterRateField;
@@ -7617,7 +7828,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("condensate volumes measured during the well test.")]
         [ComponentElement]
-		[XmlElement("condensateVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("condensateVolume")]
         public WellTestTestVolume CondensateVolume {
             get {
                 return condensateVolumeField;
@@ -7635,7 +7847,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Condensate rates measured during the well test.")]
         [ComponentElement]
-		[XmlElement("condensateRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("condensateRate")]
         public WellTestFluidRate CondensateRate {
             get {
                 return condensateRateField;
@@ -7653,7 +7866,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The ratio of the volume of gas and the volume of oil that was produced.")]
         [ComponentElement]
-		[XmlElement("gasOilRatio", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gasOilRatio")]
         public VolumePerVolumeMeasure GasOilRatio {
             get {
                 return gasOilRatioField;
@@ -7671,7 +7885,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The ratio of water produced compared to the volume of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterCut", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("waterCut")]
         public VolumePerVolumeMeasure WaterCut {
             get {
                 return waterCutField;
@@ -7689,7 +7904,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid mixture.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -7707,7 +7923,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The velocity of the overall fluid mixture.")]
         [ComponentElement]
-		[XmlElement("fluidVelocity", DataType="velocityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "velocityMeasure")]
+		[XmlElement("fluidVelocity")]
         public VelocityMeasure FluidVelocity {
             get {
                 return fluidVelocityField;
@@ -7725,7 +7942,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This is the condensate yield, which describes the amount  of condensate per unit of natural gas produced")]
         [ComponentElement]
-		[XmlElement("condensateYield", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("condensateYield")]
         public VolumePerVolumeMeasure CondensateYield {
             get {
                 return condensateYieldField;
@@ -7743,7 +7961,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This is the measured of impurities present in crude oil  as it comes from the well. BSandW content is commonly used as a measure for  treating performance of hydrocarbon liquids")]
         [ComponentElement]
-		[XmlElement("basicSedimentAndWater", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("basicSedimentAndWater")]
         public VolumePerVolumeMeasure BasicSedimentAndWater {
             get {
                 return basicSedimentAndWaterField;
@@ -7761,7 +7980,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This is the the potential of the well to produce crude oil.  This represents the flow rate that could be achieved under maximum drawdown.")]
         [ComponentElement]
-		[XmlElement("oilPotential", DataType="volumeFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateMeasure")]
+		[XmlElement("oilPotential")]
         public VolumeFlowRateMeasure OilPotential {
             get {
                 return oilPotentialField;
@@ -7779,7 +7999,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This is the potential of the well to produce natural gas.  This represents the flow rate that could be achieved under maximum drawdown.")]
         [ComponentElement]
-		[XmlElement("gasPotential", DataType="volumeFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateMeasure")]
+		[XmlElement("gasPotential")]
         public VolumeFlowRateMeasure GasPotential {
             get {
                 return gasPotentialField;
@@ -7797,7 +8018,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume of sand that was produced.")]
         [ComponentElement]
-		[XmlElement("sandVolume", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("sandVolume")]
         public VolumeMeasure SandVolume {
             get {
                 return sandVolumeField;
@@ -7814,7 +8036,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True ("true" or "1") indicates that the the split factors are allocated as opposed to measured. False ("false" or "0") or not given indicates otherwise.
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the the split factors  are allocated as opposed to measured.  False (\"false\" or \"0\") or not given indicates otherwise.")]
-		[XmlElement("allocatedSplit", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("allocatedSplit")]
         public bool? AllocatedSplit {
             get {
                 return allocatedSplitField;
@@ -7850,7 +8073,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The split factor for Oil relative to the overall volume of the test.")]
         [ComponentElement]
-		[XmlElement("oilSplitFactor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("oilSplitFactor")]
         public VolumePerVolumeMeasure OilSplitFactor {
             get {
                 return oilSplitFactorField;
@@ -7868,7 +8092,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The split factor for Gas relative to the overall volume of the test.")]
         [ComponentElement]
-		[XmlElement("gasSplitFactor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gasSplitFactor")]
         public VolumePerVolumeMeasure GasSplitFactor {
             get {
                 return gasSplitFactorField;
@@ -7886,7 +8111,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The split factor for Water relative to the overall volume of the test.")]
         [ComponentElement]
-		[XmlElement("waterSplitFactor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("waterSplitFactor")]
         public VolumePerVolumeMeasure WaterSplitFactor {
             get {
                 return waterSplitFactorField;
@@ -7904,7 +8130,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The split factor for Condensate relative to the overall volume of the test.")]
         [ComponentElement]
-		[XmlElement("condensateSplitFactor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("condensateSplitFactor")]
         public VolumePerVolumeMeasure CondensateSplitFactor {
             get {
                 return condensateSplitFactorField;
@@ -7922,7 +8149,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value was defined at ambient temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("productivityIndex", DataType="productivityIndexMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "productivityIndexMeasure")]
+		[XmlElement("productivityIndex")]
         public ProductivityIndexMeasure ProductivityIndex {
             get {
                 return productivityIndexField;
@@ -7940,7 +8168,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("productivityIndexStdTempPres", DataType="productivityIndexMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "productivityIndexMeasure")]
+		[XmlElement("productivityIndexStdTempPres")]
         public ProductivityIndexMeasure ProductivityIndexStdTempPres {
             get {
                 return productivityIndexStdTempPresField;
@@ -7994,7 +8223,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pressure measured at the separator during the well test.")]
         [ComponentElement]
-		[XmlElement("separatorPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("separatorPressure")]
         public PressureMeasure SeparatorPressure {
             get {
                 return separatorPressureField;
@@ -8012,7 +8242,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature measured at the separator during the well test.")]
         [ComponentElement]
-		[XmlElement("separatorTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("separatorTemperature")]
         public ThermodynamicTemperatureMeasure SeparatorTemperature {
             get {
                 return separatorTemperatureField;
@@ -8066,7 +8297,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pressure at the point.")]
         [ComponentElement]
-		[XmlElement("pres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -8084,7 +8316,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at the point.")]
         [ComponentElement]
-		[XmlElement("temp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -8102,7 +8335,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The P/Z value at the point. This is P/Z, pressure  over gas compressibility factor (z).  Note that the uom is units of pressure., since Z is dimensionless.")]
         [ComponentElement]
-		[XmlElement("pOverZ", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("pOverZ")]
         public PressureMeasure POverZ {
             get {
                 return pOverZField;
@@ -8120,7 +8354,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The measured depth of the bottomhole.")]
         [ComponentElement]
-		[XmlElement("md", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("md")]
         public MeasuredDepthCoord MD {
             get {
                 return mdField;
@@ -8138,7 +8373,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth  value is deeper than the first kickoff point. It is recommended that it always be given.")]
         [ComponentElement]
-		[XmlElement("wellbore", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellbore")]
         public RefNameString Wellbore {
             get {
                 return wellboreField;
@@ -8155,7 +8391,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A value of true (1 or "true") indicates that the point is at the bottomhole. A value of false (0 or "false") or not given indicates otherwise.
         /// </summary>
 		[Description("A value of true (1 or \"true\") indicates that the point is at the bottomhole. A value of false (0 or \"false\") or not given indicates otherwise.")]
-		[XmlElement("bottomhole", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("bottomhole")]
         public bool? Bottomhole {
             get {
                 return bottomholeField;
@@ -8190,7 +8427,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A value of true (1 or "true") indicates a static (non-flowing) pressure. A value of false (0 or "false") or not given indicates otherwise. The pressure may be measured (e.g., shut-in well) or calculated.
         /// </summary>
 		[Description("A value of true (1 or \"true\") indicates a static (non-flowing) pressure. A value of false (0 or \"false\") or not given indicates otherwise. The pressure may be measured (e.g., shut-in well) or calculated.")]
-		[XmlElement("static", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("static")]
         public bool? Static {
             get {
                 return staticField;
@@ -8227,7 +8465,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -8282,7 +8521,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The average electric current of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.")]
         [ComponentElement]
-		[XmlElement("electricCurrent", DataType="electricCurrentMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "electricCurrentMeasure")]
+		[XmlElement("electricCurrent")]
         public ElectricCurrentMeasure ElectricCurrent {
             get {
                 return electricCurrentField;
@@ -8300,7 +8540,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The average frequency of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.")]
         [ComponentElement]
-		[XmlElement("frequency", DataType="frequencyMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "frequencyMeasure")]
+		[XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
                 return frequencyField;
@@ -8354,7 +8595,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pressure at the bottomhole of the well.")]
         [ComponentElement]
-		[XmlElement("bottomholePres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("bottomholePres")]
         public PressureMeasure BottomholePres {
             get {
                 return bottomholePresField;
@@ -8372,7 +8614,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at the bottomhole of the well.")]
         [ComponentElement]
-		[XmlElement("bottomholeTemp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("bottomholeTemp")]
         public ThermodynamicTemperatureMeasure BottomholeTemp {
             get {
                 return bottomholeTempField;
@@ -8390,7 +8633,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The P/Z value at the bottomhole. This is P/Z, pressure  over gas compressibility factor (z), at the bottomhole of the well.  Note that the uom is units of pressure., since Z is dimensionless.")]
         [ComponentElement]
-		[XmlElement("bottomholePOverZ", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("bottomholePOverZ")]
         public PressureMeasure BottomholePOverZ {
             get {
                 return bottomholePOverZField;
@@ -8408,7 +8652,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The measured depth of the bottomhole.")]
         [ComponentElement]
-		[XmlElement("bottomholeMD", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("bottomholeMD")]
         public MeasuredDepthCoord BottomholeMD {
             get {
                 return bottomholeMDField;
@@ -8426,7 +8671,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth  value is deeper than the first kickoff point. It is recommended that it always be given.")]
         [ComponentElement]
-		[XmlElement("wellbore", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellbore")]
         public RefNameString Wellbore {
             get {
                 return wellboreField;
@@ -8480,7 +8726,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature measured at the wellhead during the  well test.")]
         [ComponentElement]
-		[XmlElement("temperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temperature")]
         public ThermodynamicTemperatureMeasure Temperature {
             get {
                 return temperatureField;
@@ -8498,7 +8745,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The flowing pressure measured at the wellhead during the  well test.")]
         [ComponentElement]
-		[XmlElement("flowingPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("flowingPressure")]
         public PressureMeasure FlowingPressure {
             get {
                 return flowingPressureField;
@@ -8516,7 +8764,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The shut-in pressure measured at the wellhead during the  well test.")]
         [ComponentElement]
-		[XmlElement("shutInPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("shutInPressure")]
         public PressureMeasure ShutInPressure {
             get {
                 return shutInPressureField;
@@ -8534,7 +8783,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pressure measured at the flow line connected to the  wellhead during this well test.")]
         [ComponentElement]
-		[XmlElement("flowLinePressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("flowLinePressure")]
         public PressureMeasure FlowLinePressure {
             get {
                 return flowLinePressureField;
@@ -8552,7 +8802,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The size of the choke opening at the wellhead.")]
         [ComponentElement]
-		[XmlElement("chokeOrificeSize", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
                 return chokeOrificeSizeField;
@@ -8570,7 +8821,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pressure of the lift gas at the wellhead.")]
         [ComponentElement]
-		[XmlElement("gasLiftPres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("gasLiftPres")]
         public PressureMeasure GasLiftPres {
             get {
                 return gasLiftPresField;
@@ -8588,7 +8840,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature of the lift gas at the wellhead.")]
         [ComponentElement]
-		[XmlElement("gasLiftTemp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("gasLiftTemp")]
         public ThermodynamicTemperatureMeasure GasLiftTemp {
             get {
                 return gasLiftTempField;
@@ -8606,7 +8859,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Lift gas volumes injected during the well test at the wellhead.")]
         [ComponentElement]
-		[XmlElement("gasLiftVolume", DataType="cs_wellTestTestVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestTestVolume")]
+		[XmlElement("gasLiftVolume")]
         public WellTestTestVolume GasLiftVolume {
             get {
                 return gasLiftVolumeField;
@@ -8624,7 +8878,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Lift gas rates injected during the well test at the wellhead.")]
         [ComponentElement]
-		[XmlElement("gasLiftRate", DataType="cs_wellTestFluidRate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidRate")]
+		[XmlElement("gasLiftRate")]
         public WellTestFluidRate GasLiftRate {
             get {
                 return gasLiftRateField;
@@ -8642,7 +8897,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The size of the gas lift choke opening.")]
         [ComponentElement]
-		[XmlElement("gasLiftchokeOrificeSize", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("gasLiftchokeOrificeSize")]
         public LengthMeasure GasLiftchokeOrificeSize {
             get {
                 return gasLiftchokeOrificeSizeField;
@@ -8696,7 +8952,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The time length (with uom) of the well test.")]
         [ComponentElement]
-		[XmlElement("testDuration", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("testDuration")]
         public TimeMeasure TestDuration {
             get {
                 return testDurationField;
@@ -8714,7 +8971,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The interval tested. This element includes a top and base depth,  and the formation(s) tested. It also includes control data for the tested interval.")]
         [RecurringElement]
-		[XmlElement("testInterval", DataType="cs_wellTestInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestInterval")]
+		[XmlElement("testInterval")]
         public List<WellTestInterval> TestInterval {
             get {
                 return testIntervalField;
@@ -8744,7 +9002,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This element records measurements made and settings made at the wellhead.")]
         [ComponentElement]
-		[XmlElement("wellheadData", DataType="cs_wellTestWellheadData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestWellheadData")]
+		[XmlElement("wellheadData")]
         public WellTestWellheadData WellheadData {
             get {
                 return wellheadDataField;
@@ -8762,7 +9021,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.")]
         [ComponentElement]
-		[XmlElement("bottomholeData", DataType="cs_wellTestBottomholeData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestBottomholeData")]
+		[XmlElement("bottomholeData")]
         public WellTestBottomholeData BottomholeData {
             get {
                 return bottomholeDataField;
@@ -8780,7 +9040,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Frequency and electric current measured during the  well test for electric submersible pump (ESP) wells. The presumption is that only one pump per well is operational during each test.")]
         [ComponentElement]
-		[XmlElement("espData", DataType="cs_wellTestElectricSubmersiblePumpData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestElectricSubmersiblePumpData")]
+		[XmlElement("espData")]
         public WellTestElectricSubmersiblePumpData EspData {
             get {
                 return espDataField;
@@ -8798,7 +9059,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This element records temperature and pressure at points in the wellbore.")]
         [RecurringElement]
-		[XmlElement("pointData", DataType="cs_wellTestPointData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestPointData")]
+		[XmlElement("pointData")]
         public List<WellTestPointData> PointData {
             get {
                 return pointDataField;
@@ -8828,7 +9090,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This element records the measurements (pressure and temperature) at the separator.")]
         [ComponentElement]
-		[XmlElement("separatorData", DataType="cs_wellTestSeparatorData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestSeparatorData")]
+		[XmlElement("separatorData")]
         public WellTestSeparatorData SeparatorData {
             get {
                 return separatorDataField;
@@ -8846,7 +9109,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The method being used to operate the well. Examples are 'flowing', 'pumping', 'gas lifted'.")]
-		[XmlElement("operatingMethod", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("operatingMethod")]
         public string OperatingMethod {
             get {
                 return operatingMethodField;
@@ -8864,7 +9128,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.")]
         [ComponentElement]
-		[XmlElement("wellTestCumulative", DataType="cs_wellTestCumulative")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestCumulative")]
+		[XmlElement("wellTestCumulative")]
         public WellTestCumulative WellTestCumulative {
             get {
                 return wellTestCumulativeField;
@@ -8882,7 +9147,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The production results of the test.")]
         [ComponentElement]
-		[XmlElement("productionTestResults", DataType="cs_wellTestProductionTestResults")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestProductionTestResults")]
+		[XmlElement("productionTestResults")]
         public WellTestProductionTestResults ProductionTestResults {
             get {
                 return productionTestResultsField;
@@ -8901,7 +9167,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -8957,7 +9224,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The fluid level achieved in the well.  The value is given as length units from the top of the well.")]
         [ComponentElement]
-		[XmlElement("fluidLevel", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("fluidLevel")]
         public LengthMeasure FluidLevel {
             get {
                 return fluidLevelField;
@@ -8975,7 +9243,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The lowest usable water depth as measured from the  surface. See TxRRC H-15.")]
         [ComponentElement]
-		[XmlElement("baseUsableWater", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("baseUsableWater")]
         public LengthMeasure BaseUsableWater {
             get {
                 return baseUsableWaterField;
@@ -8993,7 +9262,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The business associate that conducted the test. This is generally a person.")]
-		[XmlElement("testedBy", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("testedBy")]
         public string TestedBy {
             get {
                 return testedByField;
@@ -9047,7 +9317,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The kind of validation operation.")]
-		[XmlElement("kind", DataType="ValidationOperation")]
+        [EnergisticsDataTypeAttribute(DataType = "ValidationOperation")]
+		[XmlElement("kind")]
         public ValidationOperation Kind {
             get {
                 return kindField;
@@ -9065,7 +9336,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The result of the validation operation.")]
-		[XmlElement("result", DataType="ValidationResult")]
+        [EnergisticsDataTypeAttribute(DataType = "ValidationResult")]
+		[XmlElement("result")]
         public ValidationResult Result {
             get {
                 return resultField;
@@ -9082,6 +9354,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date of the validation operation.
         /// </summary>
 		[Description("The date of the validation operation.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("date", DataType="date")]
         public DateTime? Date {
             get {
@@ -9118,7 +9391,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The tool used for the validation operation.")]
-		[XmlElement("tool", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("tool")]
         public string Tool {
             get {
                 return toolField;
@@ -9136,7 +9410,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The method used for the validation operation..")]
-		[XmlElement("method", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("method")]
         public string Method {
             get {
                 return methodField;
@@ -9154,7 +9429,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A comment about the operation.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -9173,7 +9449,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -9228,7 +9505,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the wellCRS that defines the CRS for the coordinates.  While optional, it is strongly recommended that this be specified.")]
         [ComponentElement]
-		[XmlElement("wellCRS", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellCRS")]
         public RefNameString WellCRS {
             get {
                 return wellCRSField;
@@ -9685,7 +9963,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Flag indicating (if "true" or "1") that this pair of values was the original data given for the location. If the pair of values was calculated from an original pair of values, this flag should be "false" (or "0"), or not present.
         /// </summary>
 		[Description("Flag indicating (if \"true\" or \"1\") that this pair of values was  the original data given for the location. If the pair of values was  calculated from an original pair of values, this flag should be \"false\" (or \"0\"),  or not present.")]
-		[XmlElement("original", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("original")]
         public bool? Original {
             get {
                 return originalField;
@@ -9721,7 +10000,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("A Comment, generally given to help the reader  interpret the coordinates if the CRS and the chosen pair do not make them clear.")]
-		[XmlElement("description", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -9739,7 +10019,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -9770,7 +10051,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -9826,7 +10108,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the rig with which there is a relationship.")]
         [ComponentElement]
-		[XmlElement("rigReference", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("rigReference")]
         public RefNameString RigReference {
             get {
                 return rigReferenceField;
@@ -9844,7 +10127,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the  context of a common parent wellbore.")]
         [ComponentElement]
-		[XmlElement("wellboreParent", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellboreParent")]
         public RefNameString WellboreParent {
             get {
                 return wellboreParentField;
@@ -9862,7 +10146,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
         [ComponentElement]
-		[XmlElement("wellParent", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellParent")]
         public RefNameString WellParent {
             get {
                 return wellParentField;
@@ -9917,7 +10202,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer the wellbore with which there is a relationship.")]
         [ComponentElement]
-		[XmlElement("wellboreReference", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellboreReference")]
         public RefNameString WellboreReference {
             get {
                 return wellboreReferenceField;
@@ -9935,7 +10221,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
         [ComponentElement]
-		[XmlElement("wellParent", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("wellParent")]
         public RefNameString WellParent {
             get {
                 return wellParentField;
@@ -10011,7 +10298,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The naming system within the name is unique.")]
-        [XmlAttribute("namingSystem", DataType = "nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+        [XmlAttribute("namingSystem")]
 		
         public string NamingSystem {
             get {
@@ -10030,7 +10318,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("A unique (short) code associated with the name.")]
-        [XmlAttribute("code", DataType = "kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+        [XmlAttribute("code")]
 		
         public string Code {
             get {
@@ -10102,7 +10391,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The human understandable contextual name of the reference datum.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -10119,7 +10409,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The code value that represents the type of reference datum. This may represent a point on a device (e.g., kelly bushing) or it may represent a vertical reference datum (e.g., mean sea level).
         /// </summary>
 		[Description("The code value that represents the type of reference datum.  This may represent a point on a device (e.g., kelly bushing) or it may represent  a vertical reference datum (e.g., mean sea level).")]
-		[XmlElement("code", DataType="ElevCodeEnum")]
+        [EnergisticsDataTypeAttribute(DataType = "ElevCodeEnum")]
+		[XmlElement("code")]
         public ElevCodeEnum? Code {
             get {
                 return codeField;
@@ -10154,7 +10445,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The name of the vertical reference datum in a particular naming system. This should only be specified if the above 'code' represents some variation of sea level. An optional short name (code) can also be specified. Specifying a well known datum is highly desired if the above code is a variant of sea level because sea level varies over time and space. An example would be to specify a name of 'Caspian Sea' with a code of '5106' in the 'EPSG' naming system.
         /// </summary>
         [ComponentElement]
-        [XmlElement("datumName", DataType="wellKnownNameStruct")]
+        [XmlElement("datumName")]
         public WellKnownNameStruct DatumName {
             get {
                 return datumNameField;
@@ -10188,7 +10479,7 @@ namespace Energistics.DataAccess.PRODML131
         /// A reference to the coordinateReferenceSystem object representing the vertical reference datum (i.e., this wellDatum). This should only be specified if the above 'code' represents some variation of sea level. 
         /// </summary>
         [ComponentElement]
-        [XmlElement("datumCRS", DataType="refNameString")]
+        [XmlElement("datumCRS")]
         public RefNameString DatumCRS {
             get {
                 return datumCRSField;
@@ -10224,7 +10515,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Since various activities may use different points as  measurement datums, it is useful to characterize the point based on its usage.  A well reference datum may have more than one such characterization.  For example, it may be the datum used by the driller and logger for measuring  their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         [RecurringElement]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public List<string> Kind {
             get {
                 return kindField;
@@ -10254,7 +10546,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the wellbore that contains the reference datum. This should be specified if a measured depth is given.")]
         [ComponentElement]
-		[XmlElement("wellbore", DataType="cs_refWellWellbore")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_refWellWellbore")]
+		[XmlElement("wellbore")]
         public RefWellWellbore Wellbore {
             get {
                 return wellboreField;
@@ -10272,7 +10565,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the rig that contains the device used  as a reference datum. The rig may be associated with a wellbore in another well (e.g., pattern drilling using a rig on a track).")]
         [ComponentElement]
-		[XmlElement("rig", DataType="cs_refWellWellboreRig")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_refWellWellboreRig")]
+		[XmlElement("rig")]
         public RefWellWellboreRig Rig {
             get {
                 return rigField;
@@ -10290,7 +10584,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The gravity based elevation coordinate of this reference datum  as measured from another datum. Positive moving upward from the elevation datum. An elevation should be given unless this is a vertical reference datum (e.g., sea level).")]
         [ComponentElement]
-		[XmlElement("elevation", DataType="wellElevationCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "wellElevationCoord")]
+		[XmlElement("elevation")]
         public WellElevationCoord Elevation {
             get {
                 return elevationField;
@@ -10308,7 +10603,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The measured depth coordinate of this reference datum as measured from another datum. The measured depth datum should either be the same as the elevation datum or it should be relatable to the elevation datum through other datums. Positive moving toward the bottomhole from the measured depth datum. This should be given when a local reference is \"downhole\",  such as a kickoff point or ocean bottom template, and the borehole may not be vertical. If a Depth is given then an Elevation should also be given.")]
         [ComponentElement]
-		[XmlElement("measuredDepth", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("measuredDepth")]
         public MeasuredDepthCoord MeasuredDepth {
             get {
                 return measuredDepthField;
@@ -10326,7 +10622,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The horizontal location of the point being used as a well datum.  This may be used when the point is not directly above or below the well point location.  For example, a well being drilled from a platform may have its location at the entrance  into the sea floor, while the well datum may be located on the drilling rig.  Or the well datum may be a kickoff point, that is not directly under the well surface point.")]
         [ComponentElement]
-		[XmlElement("horizontalLocation", DataType="cs_location")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_location")]
+		[XmlElement("horizontalLocation")]
         public Location HorizontalLocation {
             get {
                 return horizontalLocationField;
@@ -10344,7 +10641,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A contextual description of the well reference datum.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -10362,7 +10660,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -10391,7 +10690,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True indicates that this is the default reference datum for measured depth coordinates. False or not given indicates that this is not the default reference datum. Measured depth coordinates that do not specify a datum reference should be assumed to be measured relative to this default reference datum. Only one reference datum may be designated as the default measured depth datum for each well. Values are "true" (or "1") and "false" ( or "0").
         /// </summary>
 		[Description("True indicates that this is the default reference datum for measured depth coordinates.  False or not given indicates that this is not the default reference datum. Measured depth coordinates that do not specify a datum reference should be  assumed to be measured relative to this default reference datum. Only one reference datum may be designated as the default measured depth datum for each well. Values are \"true\" (or \"1\") and \"false\" ( or \"0\").")]
-        [XmlAttribute("defaultMeasuredDepth", DataType = "logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+        [XmlAttribute("defaultMeasuredDepth")]
 		
         public bool DefaultMeasuredDepth {
             get {
@@ -10427,7 +10727,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True indicates that this is the default reference datum for vertical depth coordinates. False or not given indicates that this is not the default reference datum. Vertical depth coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default vertical depth datum for each well. Values are "true" (or "1") and "false" ( or "0").
         /// </summary>
 		[Description("True indicates that this is the default reference datum for vertical depth coordinates.  False or not given indicates that this is not the default reference datum. Vertical depth coordinates that do not specify a datum reference should be  assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default vertical depth datum for each well. Values are \"true\" (or \"1\") and \"false\" ( or \"0\").")]
-        [XmlAttribute("defaultVerticalDepth", DataType = "logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+        [XmlAttribute("defaultVerticalDepth")]
 		
         public bool DefaultVerticalDepth {
             get {
@@ -10463,7 +10764,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True indicates that this is the default reference datum for elevation coordinates. False or not given indicates that this is not the default reference datum. Elevation coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default elevation datum for each well. Values are "true" (or "1") and "false" ( or "0").
         /// </summary>
 		[Description("True indicates that this is the default reference datum for elevation coordinates.   False or not given indicates that this is not the default reference datum. Elevation coordinates that do not specify a datum reference should be assumed to be measured relative to the default reference datum. Only one reference datum may be designated as the default elevation datum for each well. Values are \"true\" (or \"1\") and \"false\" ( or \"0\").")]
-        [XmlAttribute("defaultElevation", DataType = "logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+        [XmlAttribute("defaultElevation")]
 		
         public bool DefaultElevation {
             get {
@@ -10501,7 +10803,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -10556,7 +10859,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Name of the field in which the well is located.")]
         [ComponentElement]
-		[XmlElement("field", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("field")]
         public NameStruct Field {
             get {
                 return fieldField;
@@ -10574,7 +10878,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alias name associated with the well. If the wellName is associated with a naming system then it should be included in this list.")]
         [RecurringElement]
-		[XmlElement("wellAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("wellAlias")]
         public List<NameStruct> WellAlias {
             get {
                 return wellAliasField;
@@ -10604,7 +10909,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A datum to which elevations and depths are referenced.")]
         [RecurringElement]
-		[XmlElement("wellDatum", DataType="cs_wellDatum")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellDatum")]
+		[XmlElement("wellDatum")]
         public List<WellDatum> WellDatum {
             get {
                 return wellDatumField;
@@ -10633,7 +10939,8 @@ namespace Energistics.DataAccess.PRODML131
         /// POSC well fluid. The type of fluid being produced from or injected into a well facility. 
         /// </summary>
 		[Description("POSC well fluid. The type of fluid being produced from or injected  into a well facility.")]
-		[XmlElement("fluidWell", DataType="WellFluid")]
+        [EnergisticsDataTypeAttribute(DataType = "WellFluid")]
+		[XmlElement("fluidWell")]
         public WellFluid? FluidWell {
             get {
                 return fluidWellField;
@@ -10668,7 +10975,8 @@ namespace Energistics.DataAccess.PRODML131
         /// POSC well direction. The direction of flow of the fluids in a well facility (generally, injected or produced, or some combination). 
         /// </summary>
 		[Description("POSC well direction. The direction of flow of the fluids in a well facility (generally, injected or produced, or some combination).")]
-		[XmlElement("directionWell", DataType="WellDirection")]
+        [EnergisticsDataTypeAttribute(DataType = "WellDirection")]
+		[XmlElement("directionWell")]
         public WellDirection? DirectionWell {
             get {
                 return directionWellField;
@@ -10761,7 +11069,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The naming system within the name is (hopefully) unique.")]
-        [XmlAttribute("namingSystem", DataType = "nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+        [XmlAttribute("namingSystem")]
 		
         public string NamingSystem {
             get {
@@ -10833,7 +11142,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the well that contains the well test.")]
-		[XmlElement("nameWell", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameWell")]
         public string NameWell {
             get {
                 return nameWellField;
@@ -10852,7 +11162,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the well test.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -10870,7 +11181,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. That is, all wellTest for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMin", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
                 return dTimMinField;
@@ -10888,7 +11200,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum time index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMax", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
                 return dTimMaxField;
@@ -10905,7 +11218,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The definition of the "current time" index for this object. The current time index is a server query parameter which requests the selection of a single node from a recurring set (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The definition of the \"current time\" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the \"most recent\" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
-		[XmlElement("dTimCurrent", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimCurrent")]
         public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
@@ -10941,7 +11255,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Contextual data about the well that was tested.")]
         [ComponentElement]
-		[XmlElement("wellContext", DataType="cs_wellContext")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellContext")]
+		[XmlElement("wellContext")]
         public WellContext WellContext {
             get {
                 return wellContextField;
@@ -10958,7 +11273,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date-time of well test.
         /// </summary>
 		[Description("The date-time of well test.")]
-		[XmlElement("testDate", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("testDate")]
         public Timestamp? TestDate {
             get {
                 return testDateField;
@@ -10993,7 +11309,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date-time of the previous well test.
         /// </summary>
 		[Description("The date-time of the previous well test.")]
-		[XmlElement("previousTestDate", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("previousTestDate")]
         public Timestamp? PreviousTestDate {
             get {
                 return previousTestDateField;
@@ -11028,7 +11345,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date-time of the last valid well test.
         /// </summary>
 		[Description("The date-time of the last valid well test.")]
-		[XmlElement("lastValidTest", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("lastValidTest")]
         public Timestamp? LastValidTest {
             get {
                 return lastValidTestField;
@@ -11063,7 +11381,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The reason for the well test: initial, periodic, revision.
         /// </summary>
 		[Description("The reason for the well test: initial, periodic, revision.")]
-		[XmlElement("testReason", DataType="TestReason")]
+        [EnergisticsDataTypeAttribute(DataType = "TestReason")]
+		[XmlElement("testReason")]
         public TestReason TestReason {
             get {
                 return testReasonField;
@@ -11099,7 +11418,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of well production test.")]
-		[XmlElement("testType", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("testType")]
         public string TestType {
             get {
                 return testTypeField;
@@ -11117,7 +11437,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED: use productionTest/wellheadData/chokeOrificeSize or injectionTest/chokeOrificeSize. The size of the opening in the flow choke at the wellhead.")]
         [ComponentElement]
-		[XmlElement("chokeOrificeSize", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("chokeOrificeSize")]
         public LengthMeasure ChokeOrificeSize {
             get {
                 return chokeOrificeSizeField;
@@ -11135,7 +11456,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A port on a Product Flow Unit that is represented by this test.")]
         [ComponentElement]
-		[XmlElement("productFlowPort", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("productFlowPort")]
         public RefNameString ProductFlowPort {
             get {
                 return productFlowPortField;
@@ -11153,7 +11475,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Unit represented by the port. This is defined within the Product Flow Model")]
         [ComponentElement]
-		[XmlElement("productFlowUnit", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("productFlowUnit")]
         public RefNameString ProductFlowUnit {
             get {
                 return productFlowUnitField;
@@ -11171,7 +11494,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Model that represents the above Product Flow Unit.")]
         [ComponentElement]
-		[XmlElement("productFlowModel", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("productFlowModel")]
         public RefNameString ProductFlowModel {
             get {
                 return productFlowModelField;
@@ -11188,7 +11512,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the standard temperature and pressure to which all standard volumes in this report have been corrected. This applies to all elements whose name is suffixed by StdTempPres.
         /// </summary>
 		[Description("Defines the standard temperature and pressure to which all standard volumes in this report have been corrected. This applies to all elements whose name is suffixed by StdTempPres.")]
-		[XmlElement("standardTempPres", DataType="StandardTempPress")]
+        [EnergisticsDataTypeAttribute(DataType = "StandardTempPress")]
+		[XmlElement("standardTempPres")]
         public StandardTempPress StandardTempPres {
             get {
                 return standardTempPresField;
@@ -11223,7 +11548,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The overall state of the test with respect to validation operations.
         /// </summary>
 		[Description("The overall state of the test with respect to validation operations.")]
-		[XmlElement("validationState", DataType="ValidationState")]
+        [EnergisticsDataTypeAttribute(DataType = "ValidationState")]
+		[XmlElement("validationState")]
         public ValidationState ValidationState {
             get {
                 return validationStateField;
@@ -11259,7 +11585,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the results of one validation operation.")]
         [RecurringElement]
-		[XmlElement("validationOperation", DataType="cs_wellTestValidationOperation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestValidationOperation")]
+		[XmlElement("validationOperation")]
         public List<WellTestValidationOperation> ValidationOperation {
             get {
                 return validationOperationField;
@@ -11395,7 +11722,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -11412,7 +11740,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -11431,7 +11760,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the well. This uniquely represents  the well referenced by the (possibly non-unique) nameWell.")]
-        [XmlAttribute("uidWell", DataType = "uidParentString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidParentString")]
+        [XmlAttribute("uidWell")]
 		
         public string UidWell {
             get {
@@ -11451,7 +11781,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -11539,7 +11870,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The default is "inclusive".
         /// </summary>
 		[Description("The default is \"inclusive\".")]
-        [XmlAttribute("endpoint", DataType = "EndpointQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "EndpointQualifier")]
+        [XmlAttribute("endpoint")]
 		        public string EndpointSurrogate
         {
             get {
@@ -11666,7 +11998,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.")]
-        [XmlAttribute("endpoint", DataType = "EndpointQualifierInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "EndpointQualifierInterval")]
+        [XmlAttribute("endpoint")]
 		        public string EndpointSurrogate
         {
             get {
@@ -11754,7 +12087,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The lower bound of the threshold for testing whether values are within a specific range. Element \"unit\" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMinimum must be less than thresholdMaximum. If thresholdMinimum is not specified then the minimum shall be  assumed to be minus infinity.")]
         [ComponentElement]
-		[XmlElement("thresholdMinimum", DataType="endpointQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQuantity")]
+		[XmlElement("thresholdMinimum")]
         public EndpointQuantity ThresholdMinimum {
             get {
                 return thresholdMinimumField;
@@ -11772,7 +12106,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The upper bound of the threshold for testing whether values are within a specific range. Element \"unit\" defines the unit of measure of this value. At least one of minimumValue and maximumValue must be specified. The thresholdMaximum must be greater than thresholdMinimum. If thresholdMaximum is not specified then the maximum shall be  assumed to be plus infinity.")]
         [ComponentElement]
-		[XmlElement("thresholdMaximum", DataType="endpointQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQuantity")]
+		[XmlElement("thresholdMaximum")]
         public EndpointQuantity ThresholdMaximum {
             get {
                 return thresholdMaximumField;
@@ -11791,7 +12126,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The sum of the time intervals over the range of dTimMin to dTimMax  during which the values were within the specified threshold range.")]
         [ComponentElement]
-		[XmlElement("duration", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("duration")]
         public TimeMeasure Duration {
             get {
                 return durationField;
@@ -11866,7 +12202,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Defines the semantics (inclusive or exclusive) of the endpoint  within the context of the interval.")]
-        [XmlAttribute("endpoint", DataType = "EndpointQualifierInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "EndpointQualifierInterval")]
+        [XmlAttribute("endpoint")]
 		        public string EndpointSurrogate
         {
             get {
@@ -11954,7 +12291,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the time series.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -11972,7 +12310,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
         [RecurringElement]
-		[XmlElement("key", DataType="keywordValueStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "keywordValueStruct")]
+		[XmlElement("key")]
         public List<KeywordValueStruct> Key {
             get {
                 return keyField;
@@ -12002,7 +12341,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(24)]
         [Description("If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.")]
-		[XmlElement("unit", DataType="uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+		[XmlElement("unit")]
         public string Unit {
             get {
                 return unitField;
@@ -12019,7 +12359,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.
         /// </summary>
 		[Description("Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.")]
-		[XmlElement("measureClass", DataType="MeasureClass")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasureClass")]
+		[XmlElement("measureClass")]
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -12055,7 +12396,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A comment about the time series.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -12074,7 +12416,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The lower bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the data was inclusive or exclusive of this point.")]
         [ComponentElement]
-		[XmlElement("dTimMin", DataType="endpointDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointDateTime")]
+		[XmlElement("dTimMin")]
         public EndpointDateTime DateTimeMin {
             get {
                 return dTimMinField;
@@ -12093,7 +12436,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The upper bound of the analyzed time range. Only data within the range was included in the analysis. The endpoint attribute specifies whether the data was inclusive or exclusive of this point.")]
         [ComponentElement]
-		[XmlElement("dTimMax", DataType="endpointDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointDateTime")]
+		[XmlElement("dTimMax")]
         public EndpointDateTime DateTimeMax {
             get {
                 return dTimMaxField;
@@ -12110,7 +12454,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The minimum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The minimum value within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
-		[XmlElement("minimum", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("minimum")]
         public double? Minimum {
             get {
                 return minimumField;
@@ -12145,7 +12490,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The maximum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The maximum value within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
-		[XmlElement("maximum", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("maximum")]
         public double? Maximum {
             get {
                 return maximumField;
@@ -12180,7 +12526,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The sum of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The sum of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
-		[XmlElement("sum", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("sum")]
         public double? Sum {
             get {
                 return sumField;
@@ -12215,7 +12562,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
-		[XmlElement("mean", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("mean")]
         public double? Mean {
             get {
                 return meanField;
@@ -12250,7 +12598,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The median value of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The median value of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
-		[XmlElement("median", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("median")]
         public double? Median {
             get {
                 return medianField;
@@ -12285,7 +12634,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The standard deviation of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.
         /// </summary>
 		[Description("The standard deviation of all values within the time range of dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
-		[XmlElement("standardDeviation", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("standardDeviation")]
         public double? StandardDeviation {
             get {
                 return standardDeviationField;
@@ -12321,7 +12671,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines a value threshold window and the time duration where values  (within the time range of dTimMin to dTimMax) were within that window.")]
         [ComponentElement]
-		[XmlElement("timeAtThreshold", DataType="cs_timeSeriesThreshold")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_timeSeriesThreshold")]
+		[XmlElement("timeAtThreshold")]
         public TimeSeriesThreshold TimeAtThreshold {
             get {
                 return timeAtThresholdField;
@@ -12339,7 +12690,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -12356,7 +12708,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -12375,7 +12728,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -12464,7 +12818,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The keyword within which the value is unique. The concept of a keyword is very close to the concept of a classification system.")]
-        [XmlAttribute("keyword", DataType = "TimeSeriesKeyword")]
+        [EnergisticsDataTypeAttribute(DataType = "TimeSeriesKeyword")]
+        [XmlAttribute("keyword")]
 		        public string KeywordSurrogate
         {
             get {
@@ -12572,7 +12927,8 @@ namespace Energistics.DataAccess.PRODML131
         ///  The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. 
         /// </summary>
 		[Description("The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not \"NaN\", the data value can be assumed to be good with no restrictions.")]
-        [XmlAttribute("dTim", DataType = "timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+        [XmlAttribute("dTim")]
 		
         public DateTime DateTime {
             get {
@@ -12608,7 +12964,8 @@ namespace Energistics.DataAccess.PRODML131
         /// An indicator of the quality of the value.
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -12734,7 +13091,8 @@ namespace Energistics.DataAccess.PRODML131
         ///  The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. 
         /// </summary>
 		[Description("The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not \"NaN\", the data value can be assumed to be good with no restrictions.")]
-        [XmlAttribute("dTim", DataType = "timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+        [XmlAttribute("dTim")]
 		
         public DateTime DateTime {
             get {
@@ -12770,7 +13128,8 @@ namespace Energistics.DataAccess.PRODML131
         /// An indicator of the quality of the value.
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -12876,7 +13235,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the time series.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -12894,7 +13254,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A keyword value pair which characterizes the underlying nature of this value.  The key value may provide part of the unique identity of an instance of a concept or  it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
         [RecurringElement]
-		[XmlElement("key", DataType="keywordValueStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "keywordValueStruct")]
+		[XmlElement("key")]
         public List<KeywordValueStruct> Key {
             get {
                 return keyField;
@@ -12924,7 +13285,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(24)]
         [Description("If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.")]
-		[XmlElement("unit", DataType="uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+		[XmlElement("unit")]
         public string Unit {
             get {
                 return unitField;
@@ -12941,7 +13303,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.
         /// </summary>
 		[Description("Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.")]
-		[XmlElement("measureClass", DataType="MeasureClass")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasureClass")]
+		[XmlElement("measureClass")]
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -12977,7 +13340,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A comment about the time series.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -13063,7 +13427,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -13082,7 +13447,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -13136,6 +13502,7 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The date of the event.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("date", DataType="date")]
         public DateTime? Date {
             get {
@@ -13154,7 +13521,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The kind of event.")]
-		[XmlElement("kind", DataType="BalanceEventKind")]
+        [EnergisticsDataTypeAttribute(DataType = "BalanceEventKind")]
+		[XmlElement("kind")]
         public BalanceEventKind Kind {
             get {
                 return kindField;
@@ -13172,7 +13540,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -13203,7 +13572,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -13259,7 +13629,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the business unit which owns the product.")]
         [ComponentElement]
-		[XmlElement("owner", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("owner")]
         public RefNameString Owner {
             get {
                 return ownerField;
@@ -13277,7 +13648,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Points to the business unit from which the product originated.")]
         [ComponentElement]
-		[XmlElement("sourceUnit", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("sourceUnit")]
         public RefNameString SourceUnit {
             get {
                 return sourceUnitField;
@@ -13295,7 +13667,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The owner's share of the product.")]
         [ComponentElement]
-		[XmlElement("share", DataType="volumePerVolumeMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasurePercent")]
+		[XmlElement("share")]
         public VolumePerVolumeMeasurePercent Share {
             get {
                 return shareField;
@@ -13313,7 +13686,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("An account identifier for the balance.")]
-		[XmlElement("accountNumber", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("accountNumber")]
         public string AccountNumber {
             get {
                 return accountNumberField;
@@ -13331,7 +13705,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A dated event related to the balance.")]
         [RecurringElement]
-		[XmlElement("event", DataType="cs_productVolumeBalanceEvent")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBalanceEvent")]
+		[XmlElement("event")]
         public List<ProductVolumeBalanceEvent> Event {
             get {
                 return eventField;
@@ -13361,7 +13736,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. Different volumes may be defined at different conditions but they should all represent the same mass of material.")]
         [RecurringElement]
-		[XmlElement("volumeValue", DataType="cs_volumeValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_volumeValue")]
+		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
                 return volumeValueField;
@@ -13391,7 +13767,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to a fluid sample analysis result object that is relevant to the balance.  This sample may have been acquired previous to or after this period and is  used for determining the allocated characteristics.")]
         [RecurringElement]
-		[XmlElement("sampleAnalysisResult", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("sampleAnalysisResult")]
         public List<RefNameString> SampleAnalysisResult {
             get {
                 return sampleAnalysisResultField;
@@ -13421,7 +13798,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The relative amount of a component product in the product.")]
         [RecurringElement]
-		[XmlElement("componentContent", DataType="cs_productVolumeComponentContent")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeComponentContent")]
+		[XmlElement("componentContent")]
         public List<ProductVolumeComponentContent> ComponentContent {
             get {
                 return componentContentField;
@@ -13451,7 +13829,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -13482,7 +13861,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -13538,7 +13918,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The volume of the product. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volume", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
                 return volumeField;
@@ -13556,7 +13937,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of the above volume of product.  This is considered to be a condition of measurement (i.e., the volume may have been converted to this condition).")]
         [ComponentElement]
-		[XmlElement("grossCalorificValue", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("grossCalorificValue")]
         public ModulusOfCompressionMeasure GrossCalorificValue {
             get {
                 return grossCalorificValueField;
@@ -13572,7 +13954,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines the standard temperature and pressure to which the volume has been corrected. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the procuctVolume root.
         /// </summary>
-        [XmlElement("standardTempPres", DataType="StandardCondition")]
+        [XmlElement("standardTempPres")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -13677,7 +14059,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -13708,7 +14091,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -13763,7 +14147,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The type of product whose relative content is being described. This should be a specific component (e.g., water) rather than a phase (e.g., aqueous).")]
-		[XmlElement("kind", DataType="ReportingProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProduct")]
+		[XmlElement("kind")]
         public ReportingProduct Kind {
             get {
                 return kindField;
@@ -13780,7 +14165,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of product to which the product is being compared. If not given then the product is being compared against the overall flow stream.
         /// </summary>
 		[Description("The type of product to which the product is being compared. If not given then the product is being compared against the overall flow stream.")]
-		[XmlElement("referenceKind", DataType="ReportingProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProduct")]
+		[XmlElement("referenceKind")]
         public ReportingProduct ReferenceKind {
             get {
                 return referenceKindField;
@@ -13816,7 +14202,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
         [ComponentElement]
-		[XmlElement("gor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
                 return gorField;
@@ -13834,7 +14221,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
         [ComponentElement]
-		[XmlElement("gorMTD", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
                 return gorMTDField;
@@ -13852,7 +14240,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
         [ComponentElement]
-		[XmlElement("gasLiquidRatio", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
                 return gasLiquidRatioField;
@@ -13870,7 +14259,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcMass", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
                 return waterConcMassField;
@@ -13888,7 +14278,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcVol", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
                 return waterConcVolField;
@@ -13906,7 +14297,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
         [ComponentElement]
-		[XmlElement("atmosphere", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
                 return atmosphereField;
@@ -13924,7 +14316,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         [RecurringElement]
-		[XmlElement("volumeValue", DataType="cs_volumeValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_volumeValue")]
+		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
                 return volumeValueField;
@@ -13954,7 +14347,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volume", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
                 return volumeField;
@@ -13972,7 +14366,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volumeStd", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
                 return volumeStdField;
@@ -13990,7 +14385,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         [RecurringElement]
-		[XmlElement("flowRateValue", DataType="cs_flowRateValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_flowRateValue")]
+		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
                 return flowRateValueField;
@@ -14020,7 +14416,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("flowRate", DataType="volumeFlowRateQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateQualifiedMeasure")]
+		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
                 return flowRateField;
@@ -14038,7 +14435,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("temp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -14056,7 +14454,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("pres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -14074,7 +14473,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
         [ComponentElement]
-		[XmlElement("absoluteMinPres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
                 return absoluteMinPresField;
@@ -14092,7 +14492,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
         [RecurringElement]
-		[XmlElement("portDiff", DataType="cs_productVolumePortDifference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumePortDifference")]
+		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
                 return portDiffField;
@@ -14122,7 +14523,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass of the product.")]
         [ComponentElement]
-		[XmlElement("mass", DataType="massMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
+		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
                 return massField;
@@ -14140,7 +14542,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
         [ComponentElement]
-		[XmlElement("work", DataType="workMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "workMeasure")]
+		[XmlElement("work")]
         public WorkMeasure Work {
             get {
                 return workField;
@@ -14158,7 +14561,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
         [ComponentElement]
-		[XmlElement("efficiency", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
                 return efficiencyField;
@@ -14176,7 +14580,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
         [ComponentElement]
-		[XmlElement("rvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
                 return rvpField;
@@ -14194,7 +14599,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
         [ComponentElement]
-		[XmlElement("tvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
                 return tvpField;
@@ -14212,7 +14618,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
         [ComponentElement]
-		[XmlElement("bsw", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
                 return bswField;
@@ -14230,7 +14637,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
         [ComponentElement]
-		[XmlElement("bswPrevious", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
                 return bswPreviousField;
@@ -14248,7 +14656,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
         [RecurringElement]
-		[XmlElement("densityValue", DataType="cs_densityValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_densityValue")]
+		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
                 return densityValueField;
@@ -14278,7 +14687,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -14296,7 +14706,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
         [ComponentElement]
-		[XmlElement("densityFlowRate", DataType="massFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massFlowRateMeasure")]
+		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
                 return densityFlowRateField;
@@ -14314,7 +14725,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("densityStd", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
                 return densityStdField;
@@ -14332,7 +14744,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
         [ComponentElement]
-		[XmlElement("concentration", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
                 return concentrationField;
@@ -14349,7 +14762,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molecularWeight property
         /// </summary>
 		[Description("The molecular weight of the product.")]
-		[XmlElement("molecularWeight", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("molecularWeight")]
         public double? MolecularWeight {
             get {
                 return molecularWeightField;
@@ -14385,7 +14799,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The weight fraction of the product.")]
         [ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -14403,7 +14818,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mole fraction of the product.")]
         [ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -14421,7 +14837,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molar amount.")]
         [ComponentElement]
-		[XmlElement("moleAmt", DataType="amountOfSubstanceMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "amountOfSubstanceMeasure")]
+		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
                 return moleAmtField;
@@ -14439,7 +14856,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The specific gravity of the product.")]
         [ComponentElement]
-		[XmlElement("sg", DataType="dimensionlessMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dimensionlessMeasure")]
+		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
                 return sgField;
@@ -14457,7 +14875,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
         [ComponentElement]
-		[XmlElement("hcDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
                 return hcDewpointField;
@@ -14475,7 +14894,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
         [ComponentElement]
-		[XmlElement("waterDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
                 return waterDewpointField;
@@ -14493,7 +14913,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
         [ComponentElement]
-		[XmlElement("wobbeIndex", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
                 return wobbeIndexField;
@@ -14511,7 +14932,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("grossCalorificValueStd", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
                 return grossCalorificValueStdField;
@@ -14529,7 +14951,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("rvpStabilizedCrude", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
                 return rvpStabilizedCrudeField;
@@ -14547,7 +14970,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
         [ComponentElement]
-		[XmlElement("bswStabilizedCrude", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
                 return bswStabilizedCrudeField;
@@ -14565,7 +14989,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("densityStabilizedCrude", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
                 return densityStabilizedCrudeField;
@@ -14583,7 +15008,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -14614,7 +15040,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -14670,7 +15097,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The flow rate of the product. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("flowRate", DataType="volumeFlowRateQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateQualifiedMeasure")]
+		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
                 return flowRateField;
@@ -14686,7 +15114,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines the standard temperature and pressure to which the flowRate has been corrected. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the procuctVolume root.
         /// </summary>
-        [XmlElement("standardTempPres", DataType="StandardCondition")]
+        [XmlElement("standardTempPres")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -14791,7 +15219,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -14822,7 +15251,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -14877,7 +15307,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A port on the other end of an internal connection. This should always be specified if a Product Flow Network is being referenced by this report. If this is not specified then there is an assumption that there is only one other port for the unit. For example, if this end of the connection represents an inlet port then the implied other end is the outlet port for the unit.")]
         [ComponentElement]
-		[XmlElement("port", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("port")]
         public RefNameString Port {
             get {
                 return portField;
@@ -14895,7 +15326,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The differential pressure between the ports.")]
         [ComponentElement]
-		[XmlElement("presDiff", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("presDiff")]
         public PressureMeasure PresDiff {
             get {
                 return presDiffField;
@@ -14913,7 +15345,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The differential temperature between the ports.")]
         [ComponentElement]
-		[XmlElement("tempDiff", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("tempDiff")]
         public ThermodynamicTemperatureMeasure TempDiff {
             get {
                 return tempDiffField;
@@ -14931,7 +15364,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The size of the choke. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be implemented using a valve or an actual choke.")]
         [ComponentElement]
-		[XmlElement("chokeSize", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("chokeSize")]
         public LengthMeasure ChokeSize {
             get {
                 return chokeSizeField;
@@ -14949,7 +15383,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The relative size of the choke restriction. This characterizes the overall unit with respect to the flow restriction between the ports. The restriction might be implemented using a valve or an actual choke.")]
         [ComponentElement]
-		[XmlElement("chokeRelative", DataType="lengthPerLengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthPerLengthMeasure")]
+		[XmlElement("chokeRelative")]
         public LengthPerLengthMeasure ChokeRelative {
             get {
                 return chokeRelativeField;
@@ -14967,7 +15402,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -14998,7 +15434,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -15054,7 +15491,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The density of the product.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -15070,7 +15508,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines the standard temperature and pressure to which the density has been corrected. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the procuctVolume root.
         /// </summary>
-        [XmlElement("standardTempPres", DataType="StandardCondition")]
+        [XmlElement("standardTempPres")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -15175,7 +15613,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -15206,7 +15645,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -15261,7 +15701,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the destination.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -15278,7 +15719,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of destination.
         /// </summary>
 		[Description("The type of destination.")]
-		[XmlElement("type", DataType="BalanceDestinationType")]
+        [EnergisticsDataTypeAttribute(DataType = "BalanceDestinationType")]
+		[XmlElement("type")]
         public BalanceDestinationType Type {
             get {
                 return typeField;
@@ -15314,7 +15756,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The country of the destination.")]
-		[XmlElement("country", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("country")]
         public string Country {
             get {
                 return countryField;
@@ -15367,7 +15810,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the aspect being described.
         /// </summary>
 		[Description("Defines the aspect being described.")]
-		[XmlElement("kind", DataType="BalanceFlowPart")]
+        [EnergisticsDataTypeAttribute(DataType = "BalanceFlowPart")]
+		[XmlElement("kind")]
         public BalanceFlowPart Kind {
             get {
                 return kindField;
@@ -15403,7 +15847,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("A cargo identifier for the product.")]
-		[XmlElement("cargoNumber", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("cargoNumber")]
         public string CargoNumber {
             get {
                 return cargoNumberField;
@@ -15420,7 +15865,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A cargo batch number. Used if the vessel needs to temporarily disconnect for some reason (e.g., weather).
         /// </summary>
 		[Description("A cargo batch number. Used if the vessel needs to temporarily  disconnect for some reason (e.g., weather).")]
-		[XmlElement("cargoBatchNumber", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("cargoBatchNumber")]
         public short? CargoBatchNumber {
             get {
                 return cargoBatchNumberField;
@@ -15456,7 +15902,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the shipper")]
-		[XmlElement("shipper", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("shipper")]
         public string Shipper {
             get {
                 return shipperField;
@@ -15474,7 +15921,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the destination of the product.")]
         [ComponentElement]
-		[XmlElement("destination", DataType="cs_productVolumeDestination")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeDestination")]
+		[XmlElement("destination")]
         public ProductVolumeDestination Destination {
             get {
                 return destinationField;
@@ -15492,7 +15940,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Provides details on the product.")]
         [RecurringElement]
-		[XmlElement("balanceDetail", DataType="cs_productVolumeBalanceDetail")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBalanceDetail")]
+		[XmlElement("balanceDetail")]
         public List<ProductVolumeBalanceDetail> BalanceDetail {
             get {
                 return balanceDetailField;
@@ -15522,7 +15971,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -15553,7 +16003,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -15607,7 +16058,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of period that is being reported. If not specified and a time is not given then the period is defined by the reporting period.
         /// </summary>
 		[Description("The type of period that is being reported. If not  specified and a time is not given then the period is defined by the reporting period.")]
-		[XmlElement("kind", DataType="ReportingPeriod")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingPeriod")]
+		[XmlElement("kind")]
         public ReportingPeriod Kind {
             get {
                 return kindField;
@@ -15641,7 +16093,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The beginning date and time that the period represents.
         /// </summary>
-        [XmlElement("dTim", DataType="timestamp")]
+        [XmlElement("dTim")]
         public DateTime? DateTime {
             get {
                 return dTimField;
@@ -15891,7 +16343,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
         [ComponentElement]
-		[XmlElement("gor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
                 return gorField;
@@ -15909,7 +16362,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
         [ComponentElement]
-		[XmlElement("gorMTD", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
                 return gorMTDField;
@@ -15927,7 +16381,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
         [ComponentElement]
-		[XmlElement("gasLiquidRatio", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
                 return gasLiquidRatioField;
@@ -15945,7 +16400,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcMass", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
                 return waterConcMassField;
@@ -15963,7 +16419,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcVol", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
                 return waterConcVolField;
@@ -15981,7 +16438,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
         [ComponentElement]
-		[XmlElement("atmosphere", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
                 return atmosphereField;
@@ -15999,7 +16457,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         [RecurringElement]
-		[XmlElement("volumeValue", DataType="cs_volumeValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_volumeValue")]
+		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
                 return volumeValueField;
@@ -16029,7 +16488,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volume", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
                 return volumeField;
@@ -16047,7 +16507,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volumeStd", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
                 return volumeStdField;
@@ -16065,7 +16526,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         [RecurringElement]
-		[XmlElement("flowRateValue", DataType="cs_flowRateValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_flowRateValue")]
+		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
                 return flowRateValueField;
@@ -16095,7 +16557,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("flowRate", DataType="volumeFlowRateQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateQualifiedMeasure")]
+		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
                 return flowRateField;
@@ -16113,7 +16576,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("temp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -16131,7 +16595,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("pres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -16149,7 +16614,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
         [ComponentElement]
-		[XmlElement("absoluteMinPres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
                 return absoluteMinPresField;
@@ -16167,7 +16633,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
         [RecurringElement]
-		[XmlElement("portDiff", DataType="cs_productVolumePortDifference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumePortDifference")]
+		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
                 return portDiffField;
@@ -16197,7 +16664,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass of the product.")]
         [ComponentElement]
-		[XmlElement("mass", DataType="massMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
+		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
                 return massField;
@@ -16215,7 +16683,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
         [ComponentElement]
-		[XmlElement("work", DataType="workMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "workMeasure")]
+		[XmlElement("work")]
         public WorkMeasure Work {
             get {
                 return workField;
@@ -16233,7 +16702,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
         [ComponentElement]
-		[XmlElement("efficiency", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
                 return efficiencyField;
@@ -16251,7 +16721,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
         [ComponentElement]
-		[XmlElement("rvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
                 return rvpField;
@@ -16269,7 +16740,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
         [ComponentElement]
-		[XmlElement("tvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
                 return tvpField;
@@ -16287,7 +16759,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
         [ComponentElement]
-		[XmlElement("bsw", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
                 return bswField;
@@ -16305,7 +16778,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
         [ComponentElement]
-		[XmlElement("bswPrevious", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
                 return bswPreviousField;
@@ -16323,7 +16797,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
         [RecurringElement]
-		[XmlElement("densityValue", DataType="cs_densityValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_densityValue")]
+		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
                 return densityValueField;
@@ -16353,7 +16828,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -16371,7 +16847,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
         [ComponentElement]
-		[XmlElement("densityFlowRate", DataType="massFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massFlowRateMeasure")]
+		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
                 return densityFlowRateField;
@@ -16389,7 +16866,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("densityStd", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
                 return densityStdField;
@@ -16407,7 +16885,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
         [ComponentElement]
-		[XmlElement("concentration", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
                 return concentrationField;
@@ -16424,7 +16903,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molecularWeight property
         /// </summary>
 		[Description("The molecular weight of the product.")]
-		[XmlElement("molecularWeight", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("molecularWeight")]
         public double? MolecularWeight {
             get {
                 return molecularWeightField;
@@ -16460,7 +16940,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The weight fraction of the product.")]
         [ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -16478,7 +16959,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mole fraction of the product.")]
         [ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -16496,7 +16978,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molar amount.")]
         [ComponentElement]
-		[XmlElement("moleAmt", DataType="amountOfSubstanceMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "amountOfSubstanceMeasure")]
+		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
                 return moleAmtField;
@@ -16514,7 +16997,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The specific gravity of the product.")]
         [ComponentElement]
-		[XmlElement("sg", DataType="dimensionlessMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dimensionlessMeasure")]
+		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
                 return sgField;
@@ -16532,7 +17016,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
         [ComponentElement]
-		[XmlElement("hcDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
                 return hcDewpointField;
@@ -16550,7 +17035,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
         [ComponentElement]
-		[XmlElement("waterDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
                 return waterDewpointField;
@@ -16568,7 +17054,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
         [ComponentElement]
-		[XmlElement("wobbeIndex", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
                 return wobbeIndexField;
@@ -16586,7 +17073,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("grossCalorificValueStd", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
                 return grossCalorificValueStdField;
@@ -16604,7 +17092,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("rvpStabilizedCrude", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
                 return rvpStabilizedCrudeField;
@@ -16622,7 +17111,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
         [ComponentElement]
-		[XmlElement("bswStabilizedCrude", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
                 return bswStabilizedCrudeField;
@@ -16640,7 +17130,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("densityStabilizedCrude", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
                 return densityStabilizedCrudeField;
@@ -16658,7 +17149,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The relative amount of a component product in the product stream.")]
         [RecurringElement]
-		[XmlElement("componentContent", DataType="cs_productVolumeComponentContent")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeComponentContent")]
+		[XmlElement("componentContent")]
         public List<ProductVolumeComponentContent> ComponentContent {
             get {
                 return componentContentField;
@@ -16688,7 +17180,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Provides the sales context for this period.")]
         [RecurringElement]
-		[XmlElement("balanceSet", DataType="cs_productVolumeBalanceSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBalanceSet")]
+		[XmlElement("balanceSet")]
         public List<ProductVolumeBalanceSet> BalanceSet {
             get {
                 return balanceSetField;
@@ -16718,7 +17211,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An indication of some sort of abnormal condition relative the values in this period.")]
         [ComponentElement]
-		[XmlElement("alert", DataType="cs_productVolumeAlert")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeAlert")]
+		[XmlElement("alert")]
         public ProductVolumeAlert Alert {
             get {
                 return alertField;
@@ -16736,7 +17230,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A timestamped remark about the amounts.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -16766,7 +17261,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -16797,7 +17293,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -16852,7 +17349,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("An XPATH to the target value within the message  containing this XPATH value.")]
-		[XmlElement("target", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("target")]
         public string Target {
             get {
                 return targetField;
@@ -16870,7 +17368,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The level of the alert.")]
-		[XmlElement("level", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("level")]
         public string Level {
             get {
                 return levelField;
@@ -16888,7 +17387,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of alert. For example \"off specification\".")]
-		[XmlElement("type", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("type")]
         public string Type {
             get {
                 return typeField;
@@ -16906,7 +17406,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A textual decription of the alert.")]
-		[XmlElement("description", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -16960,7 +17461,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the person providing the comment.")]
-		[XmlElement("who", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("who")]
         public string Who {
             get {
                 return whoField;
@@ -16978,7 +17480,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The role of the person providing the comment. This is the role of the person within the context of comment.")]
-		[XmlElement("role", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("role")]
         public string Role {
             get {
                 return roleField;
@@ -16995,7 +17498,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time where the comment begins to be valid.
         /// </summary>
 		[Description("The date and time where the comment begins to be valid.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -17030,7 +17534,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time where the comment is no longer valid.
         /// </summary>
 		[Description("The date and time where the comment is no longer valid.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -17067,7 +17572,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(4000)]
         [Description("The relevant comment.")]
-		[XmlElement("remark", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("remark")]
         public string Remark {
             get {
                 return remarkField;
@@ -17085,7 +17591,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -17116,7 +17623,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -17172,7 +17680,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the flow within the facility.")]
         [ComponentElement]
-		[XmlElement("referencedFlow", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("referencedFlow")]
         public RefNameString ReferencedFlow {
             get {
                 return referencedFlowField;
@@ -17191,7 +17700,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the facility that contains the flow.")]
         [ComponentElement]
-		[XmlElement("parentfacility", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("parentfacility")]
         public RefNameString Parentfacility {
             get {
                 return parentfacilityField;
@@ -17245,7 +17755,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The type of product that is being reported.")]
-		[XmlElement("kind", DataType="ReportingProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProduct")]
+		[XmlElement("kind")]
         public ReportingProduct Kind {
             get {
                 return kindField;
@@ -17263,7 +17774,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of product that is being reported. This is reserved for generic kinds like chemical.")]
         [ComponentElement]
-		[XmlElement("name", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("name")]
         public NameStruct Name {
             get {
                 return nameField;
@@ -17281,7 +17793,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Range(0, 1)]
         [Description("This factor describes the fraction of fluid in the source flow  that is allocated to this product stream. The volumes reported here are derived from the  source flow based on this split factor. This should be an allocation flow.")]
-		[XmlElement("splitFactor", DataType="nonNegativeFraction")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeFraction")]
+		[XmlElement("splitFactor")]
         public double? SplitFactor {
             get {
                 return splitFactorField;
@@ -17317,7 +17830,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to the source flow whose volumes are used to determine the volumes within this target product stream based on the split factor.")]
         [ComponentElement]
-		[XmlElement("sourceFlow", DataType="cs_refProductFlow")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_refProductFlow")]
+		[XmlElement("sourceFlow")]
         public RefProductFlow SourceFlow {
             get {
                 return sourceFlowField;
@@ -17335,7 +17849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
         [ComponentElement]
-		[XmlElement("gor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
                 return gorField;
@@ -17353,7 +17868,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
         [ComponentElement]
-		[XmlElement("gorMTD", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
                 return gorMTDField;
@@ -17371,7 +17887,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
         [ComponentElement]
-		[XmlElement("gasLiquidRatio", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
                 return gasLiquidRatioField;
@@ -17389,7 +17906,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcMass", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
                 return waterConcMassField;
@@ -17407,7 +17925,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcVol", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
                 return waterConcVolField;
@@ -17425,7 +17944,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
         [ComponentElement]
-		[XmlElement("atmosphere", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
                 return atmosphereField;
@@ -17443,7 +17963,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         [RecurringElement]
-		[XmlElement("volumeValue", DataType="cs_volumeValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_volumeValue")]
+		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
                 return volumeValueField;
@@ -17473,7 +17994,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volume", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
                 return volumeField;
@@ -17491,7 +18013,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volumeStd", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
                 return volumeStdField;
@@ -17509,7 +18032,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         [RecurringElement]
-		[XmlElement("flowRateValue", DataType="cs_flowRateValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_flowRateValue")]
+		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
                 return flowRateValueField;
@@ -17539,7 +18063,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("flowRate", DataType="volumeFlowRateQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateQualifiedMeasure")]
+		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
                 return flowRateField;
@@ -17557,7 +18082,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("temp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -17575,7 +18101,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("pres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -17593,7 +18120,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
         [ComponentElement]
-		[XmlElement("absoluteMinPres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
                 return absoluteMinPresField;
@@ -17611,7 +18139,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
         [RecurringElement]
-		[XmlElement("portDiff", DataType="cs_productVolumePortDifference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumePortDifference")]
+		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
                 return portDiffField;
@@ -17641,7 +18170,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass of the product.")]
         [ComponentElement]
-		[XmlElement("mass", DataType="massMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
+		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
                 return massField;
@@ -17659,7 +18189,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
         [ComponentElement]
-		[XmlElement("work", DataType="workMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "workMeasure")]
+		[XmlElement("work")]
         public WorkMeasure Work {
             get {
                 return workField;
@@ -17677,7 +18208,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
         [ComponentElement]
-		[XmlElement("efficiency", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
                 return efficiencyField;
@@ -17695,7 +18227,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
         [ComponentElement]
-		[XmlElement("rvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
                 return rvpField;
@@ -17713,7 +18246,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
         [ComponentElement]
-		[XmlElement("tvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
                 return tvpField;
@@ -17731,7 +18265,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
         [ComponentElement]
-		[XmlElement("bsw", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
                 return bswField;
@@ -17749,7 +18284,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
         [ComponentElement]
-		[XmlElement("bswPrevious", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
                 return bswPreviousField;
@@ -17767,7 +18303,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
         [RecurringElement]
-		[XmlElement("densityValue", DataType="cs_densityValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_densityValue")]
+		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
                 return densityValueField;
@@ -17797,7 +18334,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -17815,7 +18353,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
         [ComponentElement]
-		[XmlElement("densityFlowRate", DataType="massFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massFlowRateMeasure")]
+		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
                 return densityFlowRateField;
@@ -17833,7 +18372,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("densityStd", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
                 return densityStdField;
@@ -17851,7 +18391,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
         [ComponentElement]
-		[XmlElement("concentration", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
                 return concentrationField;
@@ -17868,7 +18409,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molecularWeight property
         /// </summary>
 		[Description("The molecular weight of the product.")]
-		[XmlElement("molecularWeight", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("molecularWeight")]
         public double? MolecularWeight {
             get {
                 return molecularWeightField;
@@ -17904,7 +18446,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The weight fraction of the product.")]
         [ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -17922,7 +18465,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mole fraction of the product.")]
         [ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -17940,7 +18484,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molar amount.")]
         [ComponentElement]
-		[XmlElement("moleAmt", DataType="amountOfSubstanceMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "amountOfSubstanceMeasure")]
+		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
                 return moleAmtField;
@@ -17958,7 +18503,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The specific gravity of the product.")]
         [ComponentElement]
-		[XmlElement("sg", DataType="dimensionlessMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dimensionlessMeasure")]
+		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
                 return sgField;
@@ -17976,7 +18522,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
         [ComponentElement]
-		[XmlElement("hcDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
                 return hcDewpointField;
@@ -17994,7 +18541,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
         [ComponentElement]
-		[XmlElement("waterDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
                 return waterDewpointField;
@@ -18012,7 +18560,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
         [ComponentElement]
-		[XmlElement("wobbeIndex", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
                 return wobbeIndexField;
@@ -18030,7 +18579,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("grossCalorificValueStd", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
                 return grossCalorificValueStdField;
@@ -18048,7 +18598,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("rvpStabilizedCrude", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
                 return rvpStabilizedCrudeField;
@@ -18066,7 +18617,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
         [ComponentElement]
-		[XmlElement("bswStabilizedCrude", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
                 return bswStabilizedCrudeField;
@@ -18084,7 +18636,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("densityStabilizedCrude", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
                 return densityStabilizedCrudeField;
@@ -18102,7 +18655,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The relative amount of a component product in the product stream.")]
         [RecurringElement]
-		[XmlElement("componentContent", DataType="cs_productVolumeComponentContent")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeComponentContent")]
+		[XmlElement("componentContent")]
         public List<ProductVolumeComponentContent> ComponentContent {
             get {
                 return componentContentField;
@@ -18133,7 +18687,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Product amounts for a specific period.")]
         [RecurringElement]
-		[XmlElement("period", DataType="cs_productVolumePeriod")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumePeriod")]
+		[XmlElement("period")]
         public List<ProductVolumePeriod> Period {
             get {
                 return periodField;
@@ -18163,7 +18718,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A (possibly timstamped) remark about the product.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -18193,7 +18749,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -18224,7 +18781,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -18279,7 +18837,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
         [ComponentElement]
-		[XmlElement("name", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
             get {
                 return nameField;
@@ -18297,7 +18856,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility.  The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent1", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
                 return facilityParent1Field;
@@ -18315,7 +18875,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of parent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent2", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
                 return facilityParent2Field;
@@ -18332,7 +18893,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A kind of facility where the specific name is not relevant.
         /// </summary>
 		[Description("A kind of facility where the specific name is not relevant.")]
-		[XmlElement("kind", DataType="ReportingFacility")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingFacility")]
+		[XmlElement("kind")]
         public ReportingFacility Kind {
             get {
                 return kindField;
@@ -18368,7 +18930,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Port associated with the Product Flow Unit.")]
         [ComponentElement]
-		[XmlElement("port", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("port")]
         public RefNameString Port {
             get {
                 return portField;
@@ -18386,7 +18949,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Unit representing the facility.")]
         [ComponentElement]
-		[XmlElement("unit", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("unit")]
         public RefNameString Unit {
             get {
                 return unitField;
@@ -18404,7 +18968,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Network representing the facility. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.")]
         [ComponentElement]
-		[XmlElement("network", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("network")]
         public RefNameString Network {
             get {
                 return networkField;
@@ -18478,7 +19043,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The kind of facility.
         /// </summary>
 		[Description("The kind of facility.")]
-        [XmlAttribute("kind", DataType = "ReportingFacility")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingFacility")]
+        [XmlAttribute("kind")]
 		        public string KindSurrogate
         {
             get {
@@ -18531,7 +19097,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("A custom sub-categorization of facility kind. This attribute is free-form text and allows  implementers to provide a more specific or specialized description of the facility kind.")]
-        [XmlAttribute("siteKind", DataType = "nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+        [XmlAttribute("siteKind")]
 		
         public string SiteKind {
             get {
@@ -18550,7 +19117,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The naming system within which the name is unique. For example, API or NPD.")]
-        [XmlAttribute("namingSystem", DataType = "nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+        [XmlAttribute("namingSystem")]
 		
         public string NamingSystem {
             get {
@@ -18570,7 +19138,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("If the facility is defined and instantiated within the context of a WITSML server, this is a pointer to the uid value of that object instance.")]
-        [XmlAttribute("uidRef", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uidRef")]
 		
         public string UidRef {
             get {
@@ -18642,7 +19211,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of this flow within the context of this report. This might reflect some combination of the kind of flow, port, qualifier and related facility.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -18660,7 +19230,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Indicates the type of flow that is being reported. The type of flow is an indication of the overall source or target of the flow. A production flow has one or more wells as the originating source. An injection flow has one or more wells as the ultimate target. An import flow has an offsite source. An export flow has an offiste target. A consumption flow generally has a kind of equipment as a target.")]
-		[XmlElement("kind", DataType="ReportingFlow")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingFlow")]
+		[XmlElement("kind")]
         public ReportingFlow Kind {
             get {
                 return kindField;
@@ -18678,7 +19249,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Port to which the flow is assigned. This is the port on the Product Flow Unit that represents the facility.")]
         [ComponentElement]
-		[XmlElement("port", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("port")]
         public RefNameString Port {
             get {
                 return portField;
@@ -18695,7 +19267,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The kind of port that this flow represents: inlet or outlet.
         /// </summary>
 		[Description("The kind of port that this flow represents: inlet or outlet.")]
-		[XmlElement("direction", DataType="ProductFlowPortType")]
+        [EnergisticsDataTypeAttribute(DataType = "ProductFlowPortType")]
+		[XmlElement("direction")]
         public ProductFlowPortType Direction {
             get {
                 return directionField;
@@ -18731,7 +19304,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility represented by the port  where the measurements were taken.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
                 return facilityField;
@@ -18749,7 +19323,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternatative name of a facility represented by the port. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
         [RecurringElement]
-		[XmlElement("facilityAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
                 return facilityAliasField;
@@ -18778,7 +19353,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Qualifies the type of flow that is being reported.
         /// </summary>
 		[Description("Qualifies the type of flow that is being reported.")]
-		[XmlElement("qualifier", DataType="FlowQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "FlowQualifier")]
+		[XmlElement("qualifier")]
         public FlowQualifier Qualifier {
             get {
                 return qualifierField;
@@ -18813,7 +19389,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines a specialization of the qualifier value. This should only be given if a qualifier is given.
         /// </summary>
 		[Description("Defines a specialization of the qualifier value. This should only be given if a qualifier is given.")]
-		[XmlElement("subQualifier", DataType="FlowSubQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "FlowSubQualifier")]
+		[XmlElement("subQualifier")]
         public FlowSubQualifier SubQualifier {
             get {
                 return subQualifierField;
@@ -18849,7 +19426,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A second facility related to this flow.  For a production flow, this would represent a role of 'produced for'. For an import flow, this would represent a role of 'inport from'. For an export flow, this would represent a role of 'export to'.")]
         [ComponentElement]
-		[XmlElement("relatedFacility", DataType="cs_productVolumeRelatedFacility")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeRelatedFacility")]
+		[XmlElement("relatedFacility")]
         public ProductVolumeRelatedFacility RelatedFacility {
             get {
                 return relatedFacilityField;
@@ -18866,7 +19444,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A timestamp representing the version of this data. A flow (same port and products) with a more recent timestamp will represent the "current" version.
         /// </summary>
 		[Description("A timestamp representing the version of this data.  A flow (same port and products) with a more recent timestamp will represent  the \"current\" version.")]
-		[XmlElement("version", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("version")]
         public Timestamp? Version {
             get {
                 return versionField;
@@ -18902,7 +19481,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Identifies the source of the version.  This will commonly be the name of the software which created the version.")]
-		[XmlElement("versionSource", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("versionSource")]
         public string VersionSource {
             get {
                 return versionSourceField;
@@ -18920,7 +19500,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This is a pointer to the flow from which this flow was derived.")]
         [ComponentElement]
-		[XmlElement("sourceFlow", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("sourceFlow")]
         public RefNameString SourceFlow {
             get {
                 return sourceFlowField;
@@ -18938,7 +19519,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio. The ratio between the total produced gas volume and the total produced oil volume including oil and gas volumes used on the installation.")]
         [ComponentElement]
-		[XmlElement("gor", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gor")]
         public VolumePerVolumeMeasure Gor {
             get {
                 return gorField;
@@ -18956,7 +19538,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gas oil ratio month to date. The gas oil ratio from the beginning of the month  to the end of the reporting priod.")]
         [ComponentElement]
-		[XmlElement("gorMTD", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gorMTD")]
         public VolumePerVolumeMeasure GorMTD {
             get {
                 return gorMTDField;
@@ -18974,7 +19557,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volumetric ratio of gas to liquid for all products in the whole flow.")]
         [ComponentElement]
-		[XmlElement("gasLiquidRatio", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("gasLiquidRatio")]
         public VolumePerVolumeMeasure GasLiquidRatio {
             get {
                 return gasLiquidRatioField;
@@ -18992,7 +19576,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration mass basis.  The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcMass", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("waterConcMass")]
         public MassConcentrationMeasure WaterConcMass {
             get {
                 return waterConcMassField;
@@ -19010,7 +19595,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Water concentration volume basis. The ratio of water produced compared to the mass of total liquids produced.")]
         [ComponentElement]
-		[XmlElement("waterConcVol", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("waterConcVol")]
         public VolumePerVolumeMeasure WaterConcVol {
             get {
                 return waterConcVolField;
@@ -19028,7 +19614,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The average atmospheric pressure during the reporting period.")]
         [ComponentElement]
-		[XmlElement("atmosphere", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("atmosphere")]
         public PressureMeasure Atmosphere {
             get {
                 return atmosphereField;
@@ -19046,7 +19633,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume of the fluid, possibly corrected to specific  conditions of temperature and pressure. A positive value for an inlet port indicates flow into the port. A negative value for an inlet port indicates flow out of the port. A positive value for an outlet port indicates flow out of the port. A negative value for an outlet port indicates flow into of the port. This convention is designed such that a positive sign indicates an expected condition based on the intended port direction while a negative sign indicates an anomolous condition. If more than one value is specified then all values must represent the same  opinion of the volume (at different conditions).")]
         [RecurringElement]
-		[XmlElement("volumeValue", DataType="cs_volumeValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_volumeValue")]
+		[XmlElement("volumeValue")]
         public List<VolumeValue> VolumeValue {
             get {
                 return volumeValueField;
@@ -19076,7 +19664,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The uncorrected volume of the product. The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volume", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volume")]
         public VolumeQualifiedMeasure Volume {
             get {
                 return volumeField;
@@ -19094,7 +19683,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use volumeValue for new work. The volume of the fluid, corrected to standard  conditions of temperature and pressure.  The sign of the value should conform to the above description of volumeValue. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("volumeStd", DataType="volumeQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeQualifiedMeasure")]
+		[XmlElement("volumeStd")]
         public VolumeQualifiedMeasure VolumeStd {
             get {
                 return volumeStdField;
@@ -19112,7 +19702,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The flow rate of the product, possibly corrected to specific  conditions of temperature and pressure. The sign of the value should conform to the above description of volumeValue. If more than one value is specified then all values must represent the same  opinion of the flow rate (at different conditions).")]
         [RecurringElement]
-		[XmlElement("flowRateValue", DataType="cs_flowRateValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_flowRateValue")]
+		[XmlElement("flowRateValue")]
         public List<FlowRateValue> FlowRateValue {
             get {
                 return flowRateValueField;
@@ -19142,7 +19733,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use flowRateValue for new work. The flow rate of the product. The sign of the value should conform to the above description of volume. If the 'status' attribute is absent and the value is not \"NaN\",  the data value can be assumed to be good with no restrictions. A value of \"NaN\" should be interpreted as null and should be not be given unless  a status is also specified to explain why it is null.")]
         [ComponentElement]
-		[XmlElement("flowRate", DataType="volumeFlowRateQualifiedMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeFlowRateQualifiedMeasure")]
+		[XmlElement("flowRate")]
         public VolumeFlowRateQualifiedMeasure FlowRate {
             get {
                 return flowRateField;
@@ -19160,7 +19752,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Temperature of the port. Specifying the temperature here (as opposed to in Period) implies that the temperature is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("temp", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -19178,7 +19771,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Pressure of the port. Specifying the pressure here (as opposed to in Period) implies that the pressure is constant for all periods of the flow.")]
         [ComponentElement]
-		[XmlElement("pres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("pres")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -19196,7 +19790,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Absolute minimum pressure before the system will give an alarm.")]
         [ComponentElement]
-		[XmlElement("absoluteMinPres", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("absoluteMinPres")]
         public PressureMeasure AbsoluteMinPres {
             get {
                 return absoluteMinPresField;
@@ -19214,7 +19809,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The internal differences between this port and one other port on this unit.")]
         [RecurringElement]
-		[XmlElement("portDiff", DataType="cs_productVolumePortDifference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumePortDifference")]
+		[XmlElement("portDiff")]
         public List<ProductVolumePortDifference> PortDiff {
             get {
                 return portDiffField;
@@ -19244,7 +19840,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass of the product.")]
         [ComponentElement]
-		[XmlElement("mass", DataType="massMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
+		[XmlElement("mass")]
         public MassMeasure Mass {
             get {
                 return massField;
@@ -19262,7 +19859,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The electrical energy represented by the product.")]
         [ComponentElement]
-		[XmlElement("work", DataType="workMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "workMeasure")]
+		[XmlElement("work")]
         public WorkMeasure Work {
             get {
                 return workField;
@@ -19280,7 +19878,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The actual volume divided by the potential volume.")]
         [ComponentElement]
-		[XmlElement("efficiency", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("efficiency")]
         public VolumePerVolumeMeasure Efficiency {
             get {
                 return efficiencyField;
@@ -19298,7 +19897,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
         [ComponentElement]
-		[XmlElement("rvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
                 return rvpField;
@@ -19316,7 +19916,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
         [ComponentElement]
-		[XmlElement("tvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
                 return tvpField;
@@ -19334,7 +19935,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the production stream.")]
         [ComponentElement]
-		[XmlElement("bsw", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
                 return bswField;
@@ -19352,7 +19954,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The basic sediment and water as measured on the  previous reporting period (e.g., day).")]
         [ComponentElement]
-		[XmlElement("bswPrevious", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswPrevious")]
         public VolumePerVolumeMeasure BswPrevious {
             get {
                 return bswPreviousField;
@@ -19370,7 +19973,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of the fluid, possibly corrected to specific  conditions of temperature and pressure. If more than one value is specified then all values must represent the same  opinion of the density (at different conditions).")]
         [RecurringElement]
-		[XmlElement("densityValue", DataType="cs_densityValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_densityValue")]
+		[XmlElement("densityValue")]
         public List<DensityValue> DensityValue {
             get {
                 return densityValueField;
@@ -19400,7 +20004,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -19418,7 +20023,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mass basis flow rate of the product. This is used for things like a sand component.")]
         [ComponentElement]
-		[XmlElement("densityFlowRate", DataType="massFlowRateMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massFlowRateMeasure")]
+		[XmlElement("densityFlowRate")]
         public MassFlowRateMeasure DensityFlowRate {
             get {
                 return densityFlowRateField;
@@ -19436,7 +20042,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use densityValue for new work. The density of the product after it has been  corrected to standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("densityStd", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStd")]
         public DensityMeasure DensityStd {
             get {
                 return densityStdField;
@@ -19454,7 +20061,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The concentration of the product as a volume  percentage of the product stream.")]
         [ComponentElement]
-		[XmlElement("concentration", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
                 return concentrationField;
@@ -19471,7 +20079,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molecularWeight property
         /// </summary>
 		[Description("The molecular weight of the product.")]
-		[XmlElement("molecularWeight", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("molecularWeight")]
         public double? MolecularWeight {
             get {
                 return molecularWeightField;
@@ -19507,7 +20116,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The weight fraction of the product.")]
         [ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -19525,7 +20135,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mole fraction of the product.")]
         [ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -19543,7 +20154,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The molar amount.")]
         [ComponentElement]
-		[XmlElement("moleAmt", DataType="amountOfSubstanceMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "amountOfSubstanceMeasure")]
+		[XmlElement("moleAmt")]
         public AmountOfSubstanceMeasure MoleAmt {
             get {
                 return moleAmtField;
@@ -19561,7 +20173,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The specific gravity of the product.")]
         [ComponentElement]
-		[XmlElement("sg", DataType="dimensionlessMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dimensionlessMeasure")]
+		[XmlElement("sg")]
         public DimensionlessMeasure SG {
             get {
                 return sgField;
@@ -19579,7 +20192,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the heavier hydrocarbons come out of solution.")]
         [ComponentElement]
-		[XmlElement("hcDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("hcDewpoint")]
         public ThermodynamicTemperatureMeasure HCDewpoint {
             get {
                 return hcDewpointField;
@@ -19597,7 +20211,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature at which the first water comes out of solution.")]
         [ComponentElement]
-		[XmlElement("waterDewpoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("waterDewpoint")]
         public ThermodynamicTemperatureMeasure WaterDewpoint {
             get {
                 return waterDewpointField;
@@ -19615,7 +20230,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Wobbe Index. A number which indicates interchangeability of fuel gasses and is obtained by dividing the heating value of a gas by the  square root of its specific gravity.")]
         [ComponentElement]
-		[XmlElement("wobbeIndex", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("wobbeIndex")]
         public ModulusOfCompressionMeasure WobbeIndex {
             get {
                 return wobbeIndexField;
@@ -19633,7 +20249,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of heat which would be released by the complete combustion in air of a specific quantity of product at standard temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("grossCalorificValueStd", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("grossCalorificValueStd")]
         public ModulusOfCompressionMeasure GrossCalorificValueStd {
             get {
                 return grossCalorificValueStdField;
@@ -19651,7 +20268,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("rvpStabilizedCrude", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvpStabilizedCrude")]
         public PressureMeasure RvpStabilizedCrude {
             get {
                 return rvpStabilizedCrudeField;
@@ -19669,7 +20287,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water content in stabilized crude.")]
         [ComponentElement]
-		[XmlElement("bswStabilizedCrude", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bswStabilizedCrude")]
         public VolumePerVolumeMeasure BswStabilizedCrude {
             get {
                 return bswStabilizedCrudeField;
@@ -19687,7 +20306,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The density of stabilized crude.")]
         [ComponentElement]
-		[XmlElement("densityStabilizedCrude", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStabilizedCrude")]
         public DensityMeasure DensityStabilizedCrude {
             get {
                 return densityStabilizedCrudeField;
@@ -19705,7 +20325,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reports a product flow stream.")]
         [RecurringElement]
-		[XmlElement("product", DataType="cs_productVolumeProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeProduct")]
+		[XmlElement("product")]
         public List<ProductVolumeProduct> Product {
             get {
                 return productField;
@@ -19735,7 +20356,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A timestamped remark about the flow.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -19765,7 +20387,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -19796,7 +20419,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -19871,7 +20495,8 @@ namespace Energistics.DataAccess.PRODML131
         /// An indicator of the quality of the value.
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -19997,7 +20622,8 @@ namespace Energistics.DataAccess.PRODML131
         /// An indicator of the quality of the value.
         /// </summary>
 		[Description("An indicator of the quality of the value.")]
-        [XmlAttribute("status", DataType = "ValueStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ValueStatus")]
+        [XmlAttribute("status")]
 		        public string StatusSurrogate
         {
             get {
@@ -20104,7 +20730,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         [RecurringElement]
-		[XmlElement("index", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("index")]
         public List<double> Index {
             get {
                 return indexField;
@@ -20135,7 +20762,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         [RecurringElement]
-		[XmlElement("value", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("value")]
         public List<double> Value {
             get {
                 return valueField;
@@ -20166,7 +20794,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -20220,7 +20849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time at which the parameter applies. If no time is specified then the value is static.
         /// </summary>
 		[Description("The date and time at which the parameter applies. If no time is specified then the value is static.")]
-		[XmlElement("dTim", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTim")]
         public Timestamp? DateTime {
             get {
                 return dTimField;
@@ -20255,7 +20885,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time at which the parameter no longer applies. The "active" time interval is inclusive of this point. If dTimEnd is given then dTim shall also be given.
         /// </summary>
 		[Description("The date and time at which the parameter no longer applies. The \"active\" time interval is inclusive of this point. If dTimEnd is given then dTim shall also be given.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -20290,7 +20921,7 @@ namespace Energistics.DataAccess.PRODML131
         /// A measure value. Unless the parameter is defined as a tuple, only one value should be specified. The measure class is defined by measureClass in the parent set. The unit of measure must conform to the units allowed by the measure class in the unit dictionary file. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
         [ComponentElement]
-        [XmlElement("measureValue", DataType="generalQualifiedMeasure")]
+        [XmlElement("measureValue")]
         public GeneralQualifiedMeasure[] MeasureValue {
             get {
                 return measureValueField;
@@ -20326,7 +20957,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The values in one row of a curve. The aggregate of the curve rows represent the curve.
         /// </summary>
         [ComponentElement]
-        [XmlElement("curveValue", DataType="cs_curveData")]
+        [XmlElement("curveValue")]
         public CurveData[] CurveValue {
             get {
                 return curveValueField;
@@ -20362,7 +20993,7 @@ namespace Energistics.DataAccess.PRODML131
         /// A string value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
         [ComponentElement]
-        [XmlElement("stringValue", DataType="kindQualifiedString")]
+        [XmlElement("stringValue")]
         public KindQualifiedString StringValue {
             get {
                 return stringValueField;
@@ -20398,7 +21029,7 @@ namespace Energistics.DataAccess.PRODML131
         /// An integer value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
         [ComponentElement]
-        [XmlElement("integerValue", DataType="integerQualifiedCount")]
+        [XmlElement("integerValue")]
         public IntegerQualifiedCount IntegerValue {
             get {
                 return integerValueField;
@@ -20436,7 +21067,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A port related to the parameter. If a port is given then the corresponding unit usually must be given. For example, an \"offset along network\" parameter must specify a port from which the offset was measured.")]
         [ComponentElement]
-		[XmlElement("port", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("port")]
         public RefNameString Port {
             get {
                 return portField;
@@ -20454,7 +21086,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A unit related to the parameter. For example, an \"offset along network\" parameter must specify a port (on a unit) from which the offset was measured.")]
         [ComponentElement]
-		[XmlElement("unit", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("unit")]
         public RefNameString Unit {
             get {
                 return unitField;
@@ -20472,7 +21105,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An indication of some sort of abnormal condition relative this parameter.")]
         [ComponentElement]
-		[XmlElement("alert", DataType="cs_productVolumeAlert")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeAlert")]
+		[XmlElement("alert")]
         public ProductVolumeAlert Alert {
             get {
                 return alertField;
@@ -20490,7 +21124,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -20521,7 +21156,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -20576,7 +21212,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The order of the value in the index or data tuple. If isIndex is true this is the order of the (independent) index element. If isIndex is false, this is the order of the (dependent) value element.")]
-		[XmlElement("order", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("order")]
         public short? Order {
             get {
                 return orderField;
@@ -20595,7 +21232,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(40)]
         [Description("The name of the variable in this curve.")]
-		[XmlElement("parameter", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("parameter")]
         public string Parameter {
             get {
                 return parameterField;
@@ -20612,7 +21250,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True (equal "1" or "true") indicates that this is an independent variable in this curve. At least one column column should be flagged as independent.
         /// </summary>
 		[Description("True (equal \"1\" or \"true\") indicates that this is an independent variable in this curve.  At least one column column should be flagged as independent.")]
-		[XmlElement("isIndex", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("isIndex")]
         public bool? IsIndex {
             get {
                 return isIndexField;
@@ -20648,7 +21287,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The measure class of the variable. This defines which units of measure are valid for the value.")]
-		[XmlElement("measureClass", DataType="MeasureClass")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasureClass")]
+		[XmlElement("measureClass")]
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -20667,7 +21307,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(24)]
         [Description("The unit of measure of the variable. The unit of measure must match a unit allowed by the measure class.")]
-		[XmlElement("unit", DataType="uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+		[XmlElement("unit")]
         public string Unit {
             get {
                 return unitField;
@@ -20685,7 +21326,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -20716,7 +21358,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -20771,7 +21414,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The name of the facility parameter. This should reflect the business semantics of all values in the set and not   the underlying kind. For example, specify \"diameter\" rather than \"length\" or \"distance\".")]
-		[XmlElement("name", DataType="FacilityParameter")]
+        [EnergisticsDataTypeAttribute(DataType = "FacilityParameter")]
+		[XmlElement("name")]
         public FacilityParameter Name {
             get {
                 return nameField;
@@ -20788,6 +21432,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The "PRODML Relative Identifier" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent facility. This identifies a sub-facility which is identified within the context of the parent facilityParent2/facilityParent1/name identification hierarchy.
         /// </summary>
 		[Description("The \"PRODML Relative Identifier\" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent facility. This identifies a sub-facility which is identified within the context of the  parent facilityParent2/facilityParent1/name identification hierarchy.")]
+        [EnergisticsDataTypeAttribute(DataType = "prodmlRelativeIdentifier")]
 		[XmlElement("childFacilityIdentifier", DataType="anyURI")]
         public string ChildFacilityIdentifier {
             get {
@@ -20806,7 +21451,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The port to which this parameter is assigned. This must be a port on the unit representing the parent facility of this parameter. If not specified then the parameter represents the unit.")]
         [ComponentElement]
-		[XmlElement("port", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("port")]
         public RefNameString Port {
             get {
                 return portField;
@@ -20823,7 +21469,8 @@ namespace Energistics.DataAccess.PRODML131
         /// If the value is a measure (value with unit of measure), this defines the measurement class of the value. The units of measure for the value must conform to the list allowed by the measurement class in the unit dictionary file. Mutually exclusive with curveDefinition.
         /// </summary>
 		[Description("If the value is a measure (value with unit of measure), this defines the  measurement class of the value. The units of measure for the value must conform to the  list allowed by the measurement class in the unit dictionary file. Mutually exclusive with curveDefinition.")]
-		[XmlElement("measureClass", DataType="MeasureClass")]
+        [EnergisticsDataTypeAttribute(DataType = "MeasureClass")]
+		[XmlElement("measureClass")]
         public MeasureClass MeasureClass {
             get {
                 return measureClassField;
@@ -20859,7 +21506,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The pointer to the coordinate reference system. This is needed for coordinates such as measure depth to specify the reference datum.")]
         [ComponentElement]
-		[XmlElement("coordinateReferenceSystem", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("coordinateReferenceSystem")]
         public RefNameString CoordinateReferenceSystem {
             get {
                 return coordinateReferenceSystemField;
@@ -20877,7 +21525,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("If the value is a curve, this defines the meaning of the one column  in the table representing the curve. Mutually exclusive with measureClass.")]
         [RecurringElement]
-		[XmlElement("curveDefinition", DataType="cs_curveDefinition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_curveDefinition")]
+		[XmlElement("curveDefinition")]
         public List<CurveDefinition> CurveDefinition {
             get {
                 return curveDefinitionField;
@@ -20906,7 +21555,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Qualifies the type of parameter that is being reported.
         /// </summary>
 		[Description("Qualifies the type of parameter that is being reported.")]
-		[XmlElement("qualifier", DataType="FlowQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "FlowQualifier")]
+		[XmlElement("qualifier")]
         public FlowQualifier Qualifier {
             get {
                 return qualifierField;
@@ -20941,7 +21591,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines a specialization of the qualifier value. This should only be given if a qualifier is given.
         /// </summary>
 		[Description("Defines a specialization of the qualifier value. This should only be given if a qualifier is given.")]
-		[XmlElement("subQualifier", DataType="FlowSubQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "FlowSubQualifier")]
+		[XmlElement("subQualifier")]
         public FlowSubQualifier SubQualifier {
             get {
                 return subQualifierField;
@@ -20976,7 +21627,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A timestamp representing the version of this data. A parameter set with a more recent timestamp will represent the "current" version.
         /// </summary>
 		[Description("A timestamp representing the version of this data.  A parameter set with a more recent timestamp will represent  the \"current\" version.")]
-		[XmlElement("version", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("version")]
         public Timestamp? Version {
             get {
                 return versionField;
@@ -21012,7 +21664,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Identifies the source of the version.  This will commonly be the name of the software which created the version.")]
-		[XmlElement("versionSource", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("versionSource")]
         public string VersionSource {
             get {
                 return versionSourceField;
@@ -21029,7 +21682,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of product that is being reported. This would be useful for something like specifying a tank procuct volume or level.
         /// </summary>
 		[Description("The type of product that is being reported. This would be useful for something like specifying a tank procuct volume or level.")]
-		[XmlElement("product", DataType="ReportingProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProduct")]
+		[XmlElement("product")]
         public ReportingProduct Product {
             get {
                 return productField;
@@ -21064,7 +21718,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of period that is being reported.
         /// </summary>
 		[Description("The type of period that is being reported.")]
-		[XmlElement("periodKind", DataType="ReportingPeriod")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingPeriod")]
+		[XmlElement("periodKind")]
         public ReportingPeriod PeriodKind {
             get {
                 return periodKindField;
@@ -21101,7 +21756,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A parameter value, possibly at a time. If a time is not given then only one parameter should be given. If a time is specified with one value then time should be specified for all values. Each value in a time series should be of the same  underling kind of value (for example, a length measure).")]
         [RecurringElement]
-		[XmlElement("parameter", DataType="cs_productVolumeParameterValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeParameterValue")]
+		[XmlElement("parameter")]
         public List<ProductVolumeParameterValue> Parameter {
             get {
                 return parameterField;
@@ -21131,7 +21787,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A comment about the parameter.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -21149,7 +21806,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -21180,7 +21838,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -21236,7 +21895,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The name of the facility. The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("name", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
             get {
                 return nameField;
@@ -21254,7 +21914,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent1", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
                 return facilityParent1Field;
@@ -21272,7 +21933,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of parent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent2", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
                 return facilityParent2Field;
@@ -21290,7 +21952,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
         [RecurringElement]
-		[XmlElement("facilityAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
                 return facilityAliasField;
@@ -21320,7 +21983,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
         [ComponentElement]
-		[XmlElement("unit", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("unit")]
         public RefNameString Unit {
             get {
                 return unitField;
@@ -21338,7 +22002,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Network representing the facility. This can only be given if unit is given. This is only required if the network is not the same as the primary network that represents the Product Flow Model. This must be unique within the context of the Product Flow Model represented  by this report.")]
         [ComponentElement]
-		[XmlElement("network", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("network")]
         public RefNameString Network {
             get {
                 return networkField;
@@ -21356,7 +22021,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to this facility.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -21385,7 +22051,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The status of the well. In PRODML, the value of "active -- injecting" has been DEPRECATED. Instead, use "active" with wellProducing=true. In PRODML, the value of "active -- producing" has been DEPRECATED. Instead, use "active" with wellInjecting=true.
         /// </summary>
 		[Description("The status of the well. In PRODML, the value of \"active -- injecting\" has been DEPRECATED. Instead, use \"active\" with wellProducing=true. In PRODML, the value of \"active -- producing\" has been DEPRECATED. Instead, use \"active\" with wellInjecting=true.")]
-		[XmlElement("statusWell", DataType="WellStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "WellStatus")]
+		[XmlElement("statusWell")]
         public WellStatus? StatusWell {
             get {
                 return statusWellField;
@@ -21420,7 +22087,8 @@ namespace Energistics.DataAccess.PRODML131
         /// POSC well fluid. The type of fluid being produced from or injected into a well facility. 
         /// </summary>
 		[Description("POSC well fluid. The type of fluid being produced from or injected  into a well facility.")]
-		[XmlElement("fluidWell", DataType="WellFluid")]
+        [EnergisticsDataTypeAttribute(DataType = "WellFluid")]
+		[XmlElement("fluidWell")]
         public WellFluid? FluidWell {
             get {
                 return fluidWellField;
@@ -21455,7 +22123,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The lift method being used to operate the well.
         /// </summary>
 		[Description("The lift method being used to operate the well.")]
-		[XmlElement("operatingMethod", DataType="WellOperationMethod")]
+        [EnergisticsDataTypeAttribute(DataType = "WellOperationMethod")]
+		[XmlElement("operatingMethod")]
         public WellOperationMethod OperatingMethod {
             get {
                 return operatingMethodField;
@@ -21490,7 +22159,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True (or 1) indicates that the well is producing. False (or 0) or not given indicates that the well is not producing. This only applies if the facility is a well or wellbore.
         /// </summary>
 		[Description("True (or 1) indicates that the well is producing. False (or 0) or not given indicates that the well is not producing. This only applies if the facility is a well or wellbore.")]
-		[XmlElement("wellProducing", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("wellProducing")]
         public bool? WellProducing {
             get {
                 return wellProducingField;
@@ -21525,7 +22195,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True (or 1) indicates that the well is injecting. False (or 0) or not given indicates that the well is not injecting. This only applies if the facility is a well or wellbore.
         /// </summary>
 		[Description("True (or 1) indicates that the well is injecting. False (or 0) or not given indicates that the well is not injecting. This only applies if the facility is a well or wellbore.")]
-		[XmlElement("wellInjecting", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("wellInjecting")]
         public bool? WellInjecting {
             get {
                 return wellInjectingField;
@@ -21561,7 +22232,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The storage capacity of the facility (e.g., a tank).")]
         [ComponentElement]
-		[XmlElement("capacity", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("capacity")]
         public VolumeMeasure Capacity {
             get {
                 return capacityField;
@@ -21579,7 +22251,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of time that the facility was active during the  reporting period.")]
         [ComponentElement]
-		[XmlElement("operationTime", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("operationTime")]
         public TimeMeasure OperationTime {
             get {
                 return operationTimeField;
@@ -21597,7 +22270,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The reason for any down time during the reporting period.")]
         [RecurringElement]
-		[XmlElement("downtimeReason", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("downtimeReason")]
         public List<DatedComment> DowntimeReason {
             get {
                 return downtimeReasonField;
@@ -21627,7 +22301,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Usage values for one parameter associated with the facility.")]
         [RecurringElement]
-		[XmlElement("parameterSet", DataType="cs_productVolumeParameterSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeParameterSet")]
+		[XmlElement("parameterSet")]
         public List<ProductVolumeParameterSet> ParameterSet {
             get {
                 return parameterSetField;
@@ -21657,7 +22332,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reports a flow of a product.")]
         [RecurringElement]
-		[XmlElement("flow", DataType="cs_productVolumeFlow")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeFlow")]
+		[XmlElement("flow")]
         public List<ProductVolumeFlow> Flow {
             get {
                 return flowField;
@@ -21687,7 +22363,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A timestamped remark about the facility.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -21717,7 +22394,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -21748,7 +22426,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -21803,7 +22482,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Human recognizable context for the Product Volume Report.")]
         [ComponentElement]
-		[XmlElement("name", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("name")]
         public NameStruct Name {
             get {
                 return nameField;
@@ -21821,7 +22501,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -21839,7 +22520,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -21869,7 +22551,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of report.")]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public string Kind {
             get {
                 return kindField;
@@ -21886,7 +22569,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of period that is being reported. This value must be consistent with the reporting start and end values.
         /// </summary>
 		[Description("The type of period that is being reported. This value must be consistent with the reporting start and end values.")]
-		[XmlElement("periodKind", DataType="ReportingPeriod")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingPeriod")]
+		[XmlElement("periodKind")]
         public ReportingPeriod PeriodKind {
             get {
                 return periodKindField;
@@ -22128,7 +22812,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum time index contained within the report. For the purposes of this parameter, a \"period\" or \"facility parameter\" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMin", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
                 return dTimMinField;
@@ -22146,7 +22831,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum time index contained within the report. For the purposes of this parameter, a \"period\" or \"facility parameter\" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMax", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
                 return dTimMaxField;
@@ -22163,7 +22849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The definition of the "current time" index for this report. The current time index is a server query parameter which requests the selection of a single node from a recurring "period" set (e.g., the data related to one point in a time series). For the purposes of this parameter, a "period" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on "Special Handling" of growing objects for a description of the behavior related to this parameter.
         /// </summary>
 		[Description("The definition of the \"current time\" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring \"period\" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a \"period\" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
-		[XmlElement("dTimCurrent", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimCurrent")]
         public Timestamp? DateTimeCurrent {
             get {
                 return dTimCurrentField;
@@ -22198,7 +22885,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The calculation method for for "filling in" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set. This is not to be construed as to prevent concepts such as simulation and forcasting from being applied in order to create a new set. This is a server query parameter.
         /// </summary>
 		[Description("The calculation method for for \"filling in\" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set.  This is not to be construed as to prevent concepts such as simulation  and forcasting from being applied in order to create a new set. This is a server query parameter.")]
-		[XmlElement("calculationMethod", DataType="CalculationMethod")]
+        [EnergisticsDataTypeAttribute(DataType = "CalculationMethod")]
+		[XmlElement("calculationMethod")]
         public CalculationMethod CalculationMethod {
             get {
                 return calculationMethodField;
@@ -22234,7 +22922,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The operator of the facilities in the report.")]
         [ComponentElement]
-		[XmlElement("operator", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
                 return operatorField;
@@ -22252,7 +22941,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The tile of the report if different from the name of the report.")]
         [ComponentElement]
-		[XmlElement("title", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("title")]
         public NameStruct Title {
             get {
                 return titleField;
@@ -22270,7 +22960,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The geographic context of the report.")]
         [ComponentElement]
-		[XmlElement("geographicContext", DataType="cs_geographicContext")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_geographicContext")]
+		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
                 return geographicContextField;
@@ -22287,6 +22978,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report was issued.
         /// </summary>
 		[Description("The date that the report was issued.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("issueDate", DataType="date")]
         public DateTime? IssueDate {
             get {
@@ -22323,7 +23015,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The person or company that issued the report. This may contain the role of the person or company within the context of the report.")]
         [ComponentElement]
-		[XmlElement("issuedBy", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("issuedBy")]
         public BusinessAssociate IssuedBy {
             get {
                 return issuedByField;
@@ -22340,6 +23033,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report was approved.
         /// </summary>
 		[Description("The date that the report was approved.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("approvalDate", DataType="date")]
         public DateTime? ApprovalDate {
             get {
@@ -22376,7 +23070,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The person or company that approved the report. This may contain the role of the person or company within the context of the report.")]
         [ComponentElement]
-		[XmlElement("approver", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("approver")]
         public BusinessAssociate Approver {
             get {
                 return approverField;
@@ -22394,7 +23089,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The Product Flow Model for the overall installation. This model represents all Product Flow Units referenced within this report.")]
         [ComponentElement]
-		[XmlElement("productFlowModel", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("productFlowModel")]
         public RefNameString ProductFlowModel {
             get {
                 return productFlowModelField;
@@ -22411,7 +23107,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions (i.e., uncorrected) unless otherwise specified at a local level.
         /// </summary>
 		[Description("Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions  (i.e., uncorrected) unless otherwise specified at a local level.")]
-		[XmlElement("standardTempPres", DataType="StandardCondition")]
+        [EnergisticsDataTypeAttribute(DataType = "StandardCondition")]
+		[XmlElement("standardTempPres")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -22447,7 +23144,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A business unit and related account or ownership share information.")]
         [RecurringElement]
-		[XmlElement("businessUnit", DataType="cs_productVolumeBusinessUnit")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBusinessUnit")]
+		[XmlElement("businessUnit")]
         public List<ProductVolumeBusinessUnit> BusinessUnit {
             get {
                 return businessUnitField;
@@ -22478,7 +23176,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A facility for which product information is being reported.")]
         [RecurringElement]
-		[XmlElement("facility", DataType="cs_productVolumeFacility")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeFacility")]
+		[XmlElement("facility")]
         public List<ProductVolumeFacility> Facility {
             get {
                 return facilityField;
@@ -22508,7 +23207,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -22525,7 +23225,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -22544,7 +23245,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -22613,7 +23315,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the business associate.  This can be the name of a person, business, group, etc.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -22631,7 +23334,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The role of the business associate within the  context. For example, \"driller\" or \"operator\",  \"lead agency - CEQA compliance\" \"regulatory contact\", \"safety contact\".  A business associate will generally have one role but the role may be called different things in different naming systems.")]
         [RecurringElement]
-		[XmlElement("role", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("role")]
         public List<NameStruct> Role {
             get {
                 return roleField;
@@ -22661,7 +23365,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("If the business associate is a person, this specifies the component names of the person.")]
         [ComponentElement]
-		[XmlElement("personName", DataType="cs_personName")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_personName")]
+		[XmlElement("personName")]
         public PersonName PersonName {
             get {
                 return personNameField;
@@ -22679,7 +23384,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The alias is an alternate name of a  business associate. It is generally associated with a  naming system. An alias is not necessarily unique  within the naming system.")]
         [RecurringElement]
-		[XmlElement("alias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("alias")]
         public List<NameStruct> Alias {
             get {
                 return aliasField;
@@ -22709,7 +23415,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Note that address may occur more than  once, because it may be necessary to give a physical  address, a mailing address, or both.")]
         [RecurringElement]
-		[XmlElement("address", DataType="cs_generalAddress")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_generalAddress")]
+		[XmlElement("address")]
         public List<GeneralAddress> Address {
             get {
                 return addressField;
@@ -22739,7 +23446,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The various types of phone numbers may  be given. The may be office or home, they may be a  number for a cell phone, or for a fax, etc. Attributes  of PhoneNumber declare the type of phone number that is  being given.")]
         [RecurringElement]
-		[XmlElement("phoneNumber", DataType="phoneNumberStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "phoneNumberStruct")]
+		[XmlElement("phoneNumber")]
         public List<PhoneNumberStruct> PhoneNumber {
             get {
                 return phoneNumberField;
@@ -22769,7 +23477,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The email address may be home, office,  or permanent. More than one may be given.")]
         [RecurringElement]
-		[XmlElement("email", DataType="emailQualifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "emailQualifierStruct")]
+		[XmlElement("email")]
         public List<EmailQualifierStruct> Email {
             get {
                 return emailField;
@@ -22799,7 +23508,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The preferred method of being contacted within the context of this role.")]
         [RecurringElement]
-		[XmlElement("contactPreference", DataType="ContactPreference")]
+        [EnergisticsDataTypeAttribute(DataType = "ContactPreference")]
+		[XmlElement("contactPreference")]
         public List<ContactPreference> ContactPreference {
             get {
                 return contactPreferenceField;
@@ -22829,7 +23539,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to another business associate that this  business associate is associated with. The most common situation is that  of an employee being associated with a company. But it may also be, for  example, a work group associated with a university.")]
         [ComponentElement]
-		[XmlElement("associatedWith", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("associatedWith")]
         public RefNameString AssociatedWith {
             get {
                 return associatedWithField;
@@ -22847,7 +23558,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to a business associate  (generally a person) who serves as a contact for this  business associate.")]
         [RecurringElement]
-		[XmlElement("contact", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("contact")]
         public List<RefNameString> Contact {
             get {
                 return contactField;
@@ -22876,7 +23588,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The count of the number of personnel in a group.
         /// </summary>
 		[Description("The count of the number of personnel in a group.")]
-		[XmlElement("personnelCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("personnelCount")]
         public short? PersonnelCount {
             get {
                 return personnelCountField;
@@ -22912,7 +23625,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A general comment. This should not  be used to carry semantic information. This is not  intended to be machine interpretable.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -22966,7 +23680,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("A name prefix. Such as, Dr, Ms, Miss, Mr, etc.")]
-		[XmlElement("prefix", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("prefix")]
         public string Prefix {
             get {
                 return prefixField;
@@ -22985,7 +23700,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The persons first name.")]
-		[XmlElement("first", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("first")]
         public string First {
             get {
                 return firstField;
@@ -23003,7 +23719,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The persons middle name or initial name.")]
-		[XmlElement("middle", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("middle")]
         public string Middle {
             get {
                 return middleField;
@@ -23022,7 +23739,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The persons last or given name.")]
-		[XmlElement("last", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("last")]
         public string Last {
             get {
                 return lastField;
@@ -23040,7 +23758,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A name suffix. Such as Esq, Phd, etc.")]
         [RecurringElement]
-		[XmlElement("suffix", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("suffix")]
         public List<string> Suffix {
             get {
                 return suffixField;
@@ -23106,7 +23825,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The Name line of an address.  If missing, use the Name of the business associate.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -23125,7 +23845,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The Street is a generic term for the  middle lines of an address. They may be a street address, PO Box, Suite number, or any lines that come  between the \"name\" and \"city\" lines. This may be repeated  for up to four, ordered lines.")]
         [RecurringElement]
-		[XmlElement("street", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("street")]
         public List<string> Street {
             get {
                 return streetField;
@@ -23156,7 +23877,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The City for the business associate's  address")]
-		[XmlElement("city", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("city")]
         public string City {
             get {
                 return cityField;
@@ -23172,7 +23894,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// state property
         /// </summary>
-        [XmlElement("state", DataType="nameString")]
+        [XmlElement("state")]
         public string State {
             get {
                 return stateField;
@@ -23206,7 +23928,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// province property
         /// </summary>
-        [XmlElement("province", DataType="nameString")]
+        [XmlElement("province")]
         public string Province {
             get {
                 return provinceField;
@@ -23240,7 +23962,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// county property
         /// </summary>
-        [XmlElement("county", DataType="nameString")]
+        [XmlElement("county")]
         public string County {
             get {
                 return countyField;
@@ -23294,7 +24016,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The Country may be included. Although  this is optional, it is probably required for most uses.")]
-		[XmlElement("country", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("country")]
         public string Country {
             get {
                 return countryField;
@@ -23312,7 +24035,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("A postal code, if appropriate for the country.  In the USA this would be the five or nine digit zip code.")]
-		[XmlElement("postalCode", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("postalCode")]
         public string PostalCode {
             get {
                 return postalCodeField;
@@ -23330,7 +24054,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -23359,7 +24084,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of address: mailing, physical, or both.
         /// </summary>
 		[Description("The type of address: mailing, physical, or both.")]
-        [XmlAttribute("kind", DataType = "AddressKindEnum")]
+        [EnergisticsDataTypeAttribute(DataType = "AddressKindEnum")]
+        [XmlAttribute("kind")]
 		        public string KindSurrogate
         {
             get {
@@ -23413,7 +24139,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -23489,7 +24216,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The kind of phone such as voice or fax.")]
-        [XmlAttribute("type", DataType = "PhoneType")]
+        [EnergisticsDataTypeAttribute(DataType = "PhoneType")]
+        [XmlAttribute("type")]
 		        public string TypeSurrogate
         {
             get {
@@ -23523,7 +24251,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Indicates whether the number is personal, business or both.
         /// </summary>
 		[Description("Indicates whether the number  is personal, business or both.")]
-        [XmlAttribute("qualifier", DataType = "AddressQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "AddressQualifier")]
+        [XmlAttribute("qualifier")]
 		        public string QualifierSurrogate
         {
             get {
@@ -23576,7 +24305,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The phone number extension.")]
-        [XmlAttribute("extension", DataType = "kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+        [XmlAttribute("extension")]
 		
         public string Extension {
             get {
@@ -23667,8 +24397,8 @@ namespace Energistics.DataAccess.PRODML131
 		/// <summary>
         /// qualifier property
         /// </summary>
-		
-        [XmlAttribute("qualifier", DataType = "AddressQualifier")]
+		[EnergisticsDataTypeAttribute(DataType = "AddressQualifier")]
+        [XmlAttribute("qualifier")]
 		        public string QualifierSurrogate
         {
             get {
@@ -23774,7 +24504,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the country.")]
-		[XmlElement("country", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("country")]
         public string Country {
             get {
                 return countryField;
@@ -23792,7 +24523,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The state of province within the country.")]
-		[XmlElement("state", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("state")]
         public string State {
             get {
                 return stateField;
@@ -23810,7 +24542,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the field within whose context the report exists.")]
         [ComponentElement]
-		[XmlElement("field", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("field")]
         public NameStruct Field {
             get {
                 return fieldField;
@@ -23828,7 +24561,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An offshore context.")]
         [ComponentElement]
-		[XmlElement("offshoreLocation", DataType="cs_offshoreLocation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_offshoreLocation")]
+		[XmlElement("offshoreLocation")]
         public OffshoreLocation OffshoreLocation {
             get {
                 return offshoreLocationField;
@@ -23846,7 +24580,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("An general comment that further explains the  offshore location.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -23900,7 +24635,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("A general meaning of Area. It may be as  general as 'UK North Sea' or 'Viosca Knoll'. The user community must agree on the meaning of this element.")]
-		[XmlElement("areaName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("areaName")]
         public string AreaName {
             get {
                 return areaNameField;
@@ -23919,7 +24655,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A block ID that can more tightly locate the object.  The BlockID should be an identifying name or code.  The user community for an area must agree on the exact meaning of this element. An aggregate of increasingly specialized block IDs are sometimes necessary to define the location.")]
         [RecurringElement]
-		[XmlElement("blockID", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("blockID")]
         public List<string> BlockID {
             get {
                 return blockIDField;
@@ -23950,7 +24687,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("An offshore location using the North Sea Offshore  terminology.")]
         [ComponentElement]
-		[XmlElement("northSeaOffshore", DataType="cs_northSeaOffshore")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_northSeaOffshore")]
+		[XmlElement("northSeaOffshore")]
         public NorthSeaOffshore NorthSeaOffshore {
             get {
                 return northSeaOffshoreField;
@@ -23968,7 +24706,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("An general comment that further explains the  offshore location.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -24022,7 +24761,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("An optional, uncontrolled value, which may be  used to describe the general area of offshore North Sea in which the  point is located.")]
-		[XmlElement("areaName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("areaName")]
         public string AreaName {
             get {
                 return areaNameField;
@@ -24041,7 +24781,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The number or letter of the quadrant in  the North Sea.")]
-		[XmlElement("quadrant", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("quadrant")]
         public string Quadrant {
             get {
                 return quadrantField;
@@ -24059,7 +24800,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(2)]
         [Description("A lower case letter assigned if a block is subdivided.")]
-		[XmlElement("blockSuffix", DataType="str2")]
+        [EnergisticsDataTypeAttribute(DataType = "str2")]
+		[XmlElement("blockSuffix")]
         public string BlockSuffix {
             get {
                 return blockSuffixField;
@@ -24113,7 +24855,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The type of business unit.")]
-		[XmlElement("kind", DataType="BusinessUnitKind")]
+        [EnergisticsDataTypeAttribute(DataType = "BusinessUnitKind")]
+		[XmlElement("kind")]
         public BusinessUnitKind Kind {
             get {
                 return kindField;
@@ -24131,7 +24874,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The human contextual name of the business unit.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -24149,7 +24893,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("A textual description of the business unit.")]
-		[XmlElement("description", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -24167,7 +24912,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A component part of the unit.  The composition of a unit may vary with time. This defines the ownership share or account information for a sub unit within the context of the whole unit. For ownership shares, at any one point in time the sum of the shares should be 100%.")]
         [RecurringElement]
-		[XmlElement("subUnit", DataType="cs_productVolumeBusinessSubUnit")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBusinessSubUnit")]
+		[XmlElement("subUnit")]
         public List<ProductVolumeBusinessSubUnit> SubUnit {
             get {
                 return subUnitField;
@@ -24197,7 +24943,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -24228,7 +24975,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -24284,7 +25032,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Points to business unit which is part of another business unit.")]
         [ComponentElement]
-		[XmlElement("kind", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("kind")]
         public RefNameString Kind {
             get {
                 return kindField;
@@ -24301,7 +25050,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the ownership share in the parent unit at a point in time. This commonly applies at a parent source unit (e.g., a field or platform).
         /// </summary>
         [ComponentElement]
-        [XmlElement("ownershipShare", DataType="cs_productVolumeBusinessOwnershipShare")]
+        [XmlElement("ownershipShare")]
         public ProductVolumeBusinessOwnershipShare[] OwnershipShare {
             get {
                 return ownershipShareField;
@@ -24335,7 +25084,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines account information in the parent unit. This commonly applies at a parent terminus unit (e.g., a terminal),
         /// </summary>
         [ComponentElement]
-        [XmlElement("accountInformation", DataType="cs_productVolumeBusinessAccountInfo")]
+        [XmlElement("accountInformation")]
         public ProductVolumeBusinessAccountInfo[] AccountInformation {
             get {
                 return accountInformationField;
@@ -24371,7 +25120,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -24402,7 +25152,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -24458,7 +25209,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The identifier of the account of the sub-unit within the whole business unit.")]
-		[XmlElement("accountId", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("accountId")]
         public string AccountId {
             get {
                 return accountIdField;
@@ -24475,7 +25227,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The product associated with the account identifier.
         /// </summary>
 		[Description("The product associated with the account identifier.")]
-		[XmlElement("product", DataType="ReportingProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProduct")]
+		[XmlElement("product")]
         public ReportingProduct Product {
             get {
                 return productField;
@@ -24511,7 +25264,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -24542,7 +25296,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -24598,7 +25353,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The percent ownership of the sub-unit in the unit during the specified time.")]
         [ComponentElement]
-		[XmlElement("share", DataType="volumePerVolumeMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasurePercent")]
+		[XmlElement("share")]
         public VolumePerVolumeMeasurePercent Share {
             get {
                 return shareField;
@@ -24615,6 +25371,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date on which the ownership became valid.
         /// </summary>
 		[Description("The date on which the ownership became valid.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("startDate", DataType="date")]
         public DateTime? StartDate {
             get {
@@ -24650,6 +25407,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The final date on which the ownership was valid. If no end date is specified, the share is considered to still be valid.
         /// </summary>
 		[Description("The final date on which the ownership was valid. If no end date is specified, the share is considered to still be valid.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("endDate", DataType="date")]
         public DateTime? EndDate {
             get {
@@ -24686,7 +25444,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -24717,7 +25476,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -24771,7 +25531,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The kind of operation
         /// </summary>
 		[Description("The kind of operation")]
-		[XmlElement("type", DataType="OperationKind")]
+        [EnergisticsDataTypeAttribute(DataType = "OperationKind")]
+		[XmlElement("type")]
         public OperationKind Type {
             get {
                 return typeField;
@@ -24806,7 +25567,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The beginning date and time that the comment represents.
         /// </summary>
 		[Description("The beginning date and time that the comment represents.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -24841,7 +25603,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The ending date and time that the comment represents.
         /// </summary>
 		[Description("The ending date and time that the comment represents.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -24877,7 +25640,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A comment about the operation and/or the activities  within the operation.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public List<string> Comment {
             get {
                 return commentField;
@@ -24907,7 +25671,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -24938,7 +25703,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -24993,7 +25759,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the cargo vessel for the installation.")]
-		[XmlElement("vesselName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("vesselName")]
         public string VesselName {
             get {
                 return vesselNameField;
@@ -25010,7 +25777,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time that the vessel arrived.
         /// </summary>
 		[Description("The date and time that the vessel arrived.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -25045,7 +25813,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time that the vessel left.
         /// </summary>
 		[Description("The date and time that the vessel left.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -25081,7 +25850,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the captain of the vessel.")]
-		[XmlElement("captain", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("captain")]
         public string Captain {
             get {
                 return captainField;
@@ -25099,7 +25869,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("the cargo identifier.")]
-		[XmlElement("cargoNumber", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("cargoNumber")]
         public string CargoNumber {
             get {
                 return cargoNumberField;
@@ -25116,7 +25887,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The cargo batch number. Used if the vessel needs to temporarily disconnect for some reason (e.g., weather).
         /// </summary>
 		[Description("The cargo batch number. Used if the vessel needs to temporarily  disconnect for some reason (e.g., weather).")]
-		[XmlElement("cargoBatchNumber", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("cargoBatchNumber")]
         public short? CargoBatchNumber {
             get {
                 return cargoBatchNumberField;
@@ -25152,7 +25924,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("Description of cargo on the vessel.")]
-		[XmlElement("cargo", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("cargo")]
         public string Cargo {
             get {
                 return cargoField;
@@ -25170,7 +25943,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gross oil loaded to the ship during the report period. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("oilGrossStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("oilGrossStdTempPres")]
         public VolumeMeasure OilGrossStdTempPres {
             get {
                 return oilGrossStdTempPresField;
@@ -25188,7 +25962,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Gross oil loaded to the ship in total during the operation. Gross oil includes BS and W. This volume has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("oilGrossTotalStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("oilGrossTotalStdTempPres")]
         public VolumeMeasure OilGrossTotalStdTempPres {
             get {
                 return oilGrossTotalStdTempPresField;
@@ -25206,7 +25981,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Net oil loaded to the ship during the report period. Net oil excludes BS and W, fuel, spill and leaks. This volume has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("oilNetStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("oilNetStdTempPres")]
         public VolumeMeasure OilNetStdTempPres {
             get {
                 return oilNetStdTempPresField;
@@ -25224,7 +26000,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Net oil loaded to the ship from the beginning of the  month to the end of the reporting period. Net oil excludes BS and W, fuel, spill and leaks. This volume has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("oilNetMonthToDateStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("oilNetMonthToDateStdTempPres")]
         public VolumeMeasure OilNetMonthToDateStdTempPres {
             get {
                 return oilNetMonthToDateStdTempPresField;
@@ -25242,7 +26019,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Density of the liquid loaded to the tanker. This density has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("densityStdTempPres", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("densityStdTempPres")]
         public DensityMeasure DensityStdTempPres {
             get {
                 return densityStdTempPresField;
@@ -25260,7 +26038,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Density of the liquid loaded to the tanker.")]
         [ComponentElement]
-		[XmlElement("density", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("density")]
         public DensityMeasure Density {
             get {
                 return densityField;
@@ -25278,7 +26057,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of the liquid.")]
         [ComponentElement]
-		[XmlElement("rvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
                 return rvpField;
@@ -25296,7 +26076,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Basic sediment and water is measured from a liquid sample  of the production stream. It includes free water, sediment and emulsion and  is measured as a volume percentage of the liquid.")]
         [ComponentElement]
-		[XmlElement("bsw", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("bsw")]
         public VolumePerVolumeMeasure Bsw {
             get {
                 return bswField;
@@ -25314,7 +26095,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Salt content. The product formed by neutralization of an acid  and a base. The term is more specifically applied to sodium chloride.")]
         [ComponentElement]
-		[XmlElement("salt", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("salt")]
         public DensityMeasure Salt {
             get {
                 return saltField;
@@ -25332,7 +26114,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A commnet about the operation.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -25362,7 +26145,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -25393,7 +26177,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -25447,7 +26232,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The beginning date and time that the information represents.
         /// </summary>
 		[Description("The beginning date and time that the information represents.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -25482,7 +26268,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The ending date and time that the comment represents.
         /// </summary>
 		[Description("The ending date and time that the comment represents.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -25518,7 +26305,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A general comment on marine activity in the area")]
-		[XmlElement("generalComment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("generalComment")]
         public string GeneralComment {
             get {
                 return generalCommentField;
@@ -25536,7 +26324,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Name of supply vessel for the installation.")]
-		[XmlElement("supplyShip", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("supplyShip")]
         public string SupplyShip {
             get {
                 return supplyShipField;
@@ -25554,7 +26343,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Name of standby vessel for the installation.")]
-		[XmlElement("standbyVessel", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("standbyVessel")]
         public string StandbyVessel {
             get {
                 return standbyVesselField;
@@ -25572,7 +26362,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Comment regarding the supply ship.")]
         [RecurringElement]
-		[XmlElement("supplyShipComment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("supplyShipComment")]
         public List<DatedComment> SupplyShipComment {
             get {
                 return supplyShipCommentField;
@@ -25602,7 +26393,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Comment regarding the standby vessel.")]
         [RecurringElement]
-		[XmlElement("standbyVesselComment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("standbyVesselComment")]
         public List<DatedComment> StandbyVesselComment {
             get {
                 return standbyVesselCommentField;
@@ -25632,7 +26424,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Report of any basket movement to and from the installation.")]
         [RecurringElement]
-		[XmlElement("basketMovement", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("basketMovement")]
         public List<DatedComment> BasketMovement {
             get {
                 return basketMovementField;
@@ -25662,7 +26455,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A comment on a special event in the marine area.")]
         [RecurringElement]
-		[XmlElement("activity", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("activity")]
         public List<DatedComment> Activity {
             get {
                 return activityField;
@@ -25692,7 +26486,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -25723,7 +26518,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -25777,7 +26573,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time when the alarms went off.
         /// </summary>
 		[Description("The date and time when the alarms went off.")]
-		[XmlElement("dTim", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTim")]
         public Timestamp? DateTime {
             get {
                 return dTimField;
@@ -25813,7 +26610,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The area where the alarm went off.")]
-		[XmlElement("area", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("area")]
         public string Area {
             get {
                 return areaField;
@@ -25831,7 +26629,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of alarm that went off.")]
-		[XmlElement("type", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("type")]
         public string Type {
             get {
                 return typeField;
@@ -25849,7 +26648,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("The reason for the alarm going off.")]
-		[XmlElement("reason", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("reason")]
         public string Reason {
             get {
                 return reasonField;
@@ -25867,7 +26667,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A general comment relevant for the alarm.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -25885,7 +26686,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -25916,7 +26718,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -25971,7 +26774,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the installation which was shut down.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -25989,7 +26793,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("A general description of the shutdown with reason and  other relevant information.")]
-		[XmlElement("description", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -26006,7 +26811,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The time the shutdown started.
         /// </summary>
 		[Description("The time the shutdown started.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -26041,7 +26847,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The time the shutdown ended.
         /// </summary>
 		[Description("The time the shutdown ended.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -26077,7 +26884,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Downtime when the installation is unable to produce 100% of its capability.")]
         [ComponentElement]
-		[XmlElement("volumetricDownTime", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("volumetricDownTime")]
         public TimeMeasure VolumetricDownTime {
             get {
                 return volumetricDownTimeField;
@@ -26095,7 +26903,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Estimated loss of oil deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("lossOilStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("lossOilStdTempPres")]
         public VolumeMeasure LossOilStdTempPres {
             get {
                 return lossOilStdTempPresField;
@@ -26113,7 +26922,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Estimated loss of gas deliveries because of the shutdown. This volume has been corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("lossGasStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("lossGasStdTempPres")]
         public VolumeMeasure LossGasStdTempPres {
             get {
                 return lossGasStdTempPresField;
@@ -26131,7 +26941,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A description of main activities from time to time during the shutdown period.")]
         [RecurringElement]
-		[XmlElement("activity", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("activity")]
         public List<DatedComment> Activity {
             get {
                 return activityField;
@@ -26161,7 +26972,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -26192,7 +27004,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -26247,7 +27060,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("An identifier of the point from which the sample was taken.  This is an uncontrolled string value, which should be as descriptive as possible.")]
-		[XmlElement("samplePoint", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("samplePoint")]
         public string SamplePoint {
             get {
                 return samplePointField;
@@ -26265,7 +27079,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Total measured oil in the water after the water cleaning process,  but before it is discharged from the installation.")]
         [ComponentElement]
-		[XmlElement("oilInWaterProduced", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("oilInWaterProduced")]
         public MassConcentrationMeasure OilInWaterProduced {
             get {
                 return oilInWaterProducedField;
@@ -26283,7 +27098,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Total measured oil in the water after the water cleaning process,  but before it is discharged from the installation")]
         [ComponentElement]
-		[XmlElement("amountOfOil", DataType="massMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
+		[XmlElement("amountOfOil")]
         public MassMeasure AmountOfOil {
             get {
                 return amountOfOilField;
@@ -26301,7 +27117,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of ammonium found in the water sample.")]
         [ComponentElement]
-		[XmlElement("ammonium", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("ammonium")]
         public DensityMeasure Ammonium {
             get {
                 return ammoniumField;
@@ -26319,7 +27136,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of total organic carbon found in the water.  The water is under high temperature and the carbon left is measured")]
         [ComponentElement]
-		[XmlElement("totalOrganicCarbon", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("totalOrganicCarbon")]
         public MassConcentrationMeasure TotalOrganicCarbon {
             get {
                 return totalOrganicCarbonField;
@@ -26337,7 +27155,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of Fenol found in the water sample.")]
         [ComponentElement]
-		[XmlElement("phenol", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("phenol")]
         public DensityMeasure Phenol {
             get {
                 return phenolField;
@@ -26355,7 +27174,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of Glycol found in the water sample.")]
         [ComponentElement]
-		[XmlElement("glycol", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("glycol")]
         public DensityMeasure Glycol {
             get {
                 return glycolField;
@@ -26372,7 +27192,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The pH value of the treated water. The pH value is best given as a value, with no unit of measure, since there are no variations from the pH.
         /// </summary>
 		[Description("The pH value of the treated water.  The pH value is best given as a value, with no unit of measure,  since there are no variations from the pH.")]
-		[XmlElement("phValue", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("phValue")]
         public double? PHValue {
             get {
                 return phValueField;
@@ -26408,7 +27229,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature of the water before it is discharged.")]
         [ComponentElement]
-		[XmlElement("waterTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("waterTemperature")]
         public ThermodynamicTemperatureMeasure WaterTemperature {
             get {
                 return waterTemperatureField;
@@ -26426,7 +27248,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Total measured residual clorines in the water after the  water cleaning process, but before it is discharged from the installation.")]
         [ComponentElement]
-		[XmlElement("residualChloride", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("residualChloride")]
         public MassConcentrationMeasure ResidualChloride {
             get {
                 return residualChlorideField;
@@ -26444,7 +27267,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Total measured Oxygen in the water after the water cleaning  process, but before it is discharged from the installation.")]
         [ComponentElement]
-		[XmlElement("oxygen", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("oxygen")]
         public MassConcentrationMeasure Oxygen {
             get {
                 return oxygenField;
@@ -26461,7 +27285,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A measure of the cloudiness of water caused by suspended particles.
         /// </summary>
 		[Description("A measure of the cloudiness of water caused by suspended particles.")]
-		[XmlElement("turbidity", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("turbidity")]
         public double? Turbidity {
             get {
                 return turbidityField;
@@ -26497,7 +27322,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A measure of the number of particles in water as measured by a coulter counter.")]
         [ComponentElement]
-		[XmlElement("coulterCounter", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("coulterCounter")]
         public MassConcentrationMeasure CoulterCounter {
             get {
                 return coulterCounterField;
@@ -26515,7 +27341,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Any comment that may be useful in describing the water quality.  There can be multiple comments.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -26545,7 +27372,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -26576,7 +27404,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -26631,7 +27460,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the installation which performed the processing.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -26649,7 +27479,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The estimated amount of oil lost. This volume has been corrected to standard conditions of temperature and pressure")]
         [ComponentElement]
-		[XmlElement("oilStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("oilStdTempPres")]
         public VolumeMeasure OilStdTempPres {
             get {
                 return oilStdTempPresField;
@@ -26667,7 +27498,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The estimated amount of gas lost. This volume has been corrected to standard conditions of temperature and pressure")]
         [ComponentElement]
-		[XmlElement("gasStdTempPres", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("gasStdTempPres")]
         public VolumeMeasure GasStdTempPres {
             get {
                 return gasStdTempPresField;
@@ -26685,7 +27517,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -26716,7 +27549,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -26771,7 +27605,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A estimated lost volume and the reason for the loss.")]
         [RecurringElement]
-		[XmlElement("volumeAndReason", DataType="lostVolumeAndReason")]
+        [EnergisticsDataTypeAttribute(DataType = "lostVolumeAndReason")]
+		[XmlElement("volumeAndReason")]
         public List<LostVolumeAndReason> VolumeAndReason {
             get {
                 return volumeAndReasonField;
@@ -26801,7 +27636,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The estimated amount of oil and gas lost due to  third party processing at an installation.")]
         [RecurringElement]
-		[XmlElement("thirdPartyProcessing", DataType="cs_productionOperationThirdPartyProcessing")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationThirdPartyProcessing")]
+		[XmlElement("thirdPartyProcessing")]
         public List<ProductionOperationThirdPartyProcessing> ThirdPartyProcessing {
             get {
                 return thirdPartyProcessingField;
@@ -26867,7 +27703,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Infomation about a lost production.")]
         [ComponentElement]
-		[XmlElement("lostProduction", DataType="cs_productionOperationLostProduction")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationLostProduction")]
+		[XmlElement("lostProduction")]
         public ProductionOperationLostProduction LostProduction {
             get {
                 return lostProductionField;
@@ -26885,7 +27722,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Infomation about a lost injection.")]
         [ComponentElement]
-		[XmlElement("lostInjection", DataType="cs_productionOperationLostProduction")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationLostProduction")]
+		[XmlElement("lostInjection")]
         public ProductionOperationLostProduction LostInjection {
             get {
                 return lostInjectionField;
@@ -26903,7 +27741,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the contaminants in water, and the general water quality.")]
         [RecurringElement]
-		[XmlElement("waterCleaningQuality", DataType="cs_productionOperationWaterCleaningQuality")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationWaterCleaningQuality")]
+		[XmlElement("waterCleaningQuality")]
         public List<ProductionOperationWaterCleaningQuality> WaterCleaningQuality {
             get {
                 return waterCleaningQualityField;
@@ -26933,7 +27772,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Infomation about a shutdown event.")]
         [RecurringElement]
-		[XmlElement("shutdown", DataType="cs_productionOperationShutdown")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationShutdown")]
+		[XmlElement("shutdown")]
         public List<ProductionOperationShutdown> Shutdown {
             get {
                 return shutdownField;
@@ -26963,7 +27803,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Infomation about an alarm.")]
         [RecurringElement]
-		[XmlElement("alarm", DataType="cs_productionOperationAlarm")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationAlarm")]
+		[XmlElement("alarm")]
         public List<ProductionOperationAlarm> Alarm {
             get {
                 return alarmField;
@@ -26993,7 +27834,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a marine operation.")]
         [RecurringElement]
-		[XmlElement("marineOperation", DataType="cs_productionOperationMarineOperation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationMarineOperation")]
+		[XmlElement("marineOperation")]
         public List<ProductionOperationMarineOperation> MarineOperation {
             get {
                 return marineOperationField;
@@ -27023,7 +27865,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a cargo operation.")]
         [RecurringElement]
-		[XmlElement("cargoShipOperation", DataType="cs_productionOperationCargoShipOperation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationCargoShipOperation")]
+		[XmlElement("cargoShipOperation")]
         public List<ProductionOperationCargoShipOperation> CargoShipOperation {
             get {
                 return cargoShipOperationField;
@@ -27053,7 +27896,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A comment about a kind of operation. The time of the operation can be specified.")]
         [RecurringElement]
-		[XmlElement("operationalComment", DataType="cs_productionOperationOperationalComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationOperationalComment")]
+		[XmlElement("operationalComment")]
         public List<ProductionOperationOperationalComment> OperationalComment {
             get {
                 return operationalCommentField;
@@ -27119,7 +27963,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Date and time the information is related to.")]
-		[XmlElement("dTim", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTim")]
         public Timestamp? DateTime {
             get {
                 return dTimField;
@@ -27137,7 +27982,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("Name of company that supplied the data.")]
-		[XmlElement("agency", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("agency")]
         public string Agency {
             get {
                 return agencyField;
@@ -27155,7 +28001,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Atmospheric pressure.")]
         [ComponentElement]
-		[XmlElement("barometricPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("barometricPressure")]
         public PressureMeasure BarometricPressure {
             get {
                 return barometricPressureField;
@@ -27173,7 +28020,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Range(0, 12)]
         [Description("The Beaufort wind scale is a system used to estimate and report wind speeds  when no measuring apparatus is available. It was invented in the early 19th Century by Admiral  Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions.")]
-		[XmlElement("beaufortScaleNumber", DataType="beaufortScaleIntegerCode")]
+        [EnergisticsDataTypeAttribute(DataType = "beaufortScaleIntegerCode")]
+		[XmlElement("beaufortScaleNumber")]
         public short? BeaufortScaleNumber {
             get {
                 return beaufortScaleNumberField;
@@ -27209,7 +28057,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Average temperature above ground for the period. Temperature of the atmosphere.")]
         [ComponentElement]
-		[XmlElement("tempSurface", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("tempSurface")]
         public ThermodynamicTemperatureMeasure TempSurface {
             get {
                 return tempSurfaceField;
@@ -27227,7 +28076,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Minimum temperature above ground. Temperature of the atmosphere.")]
         [ComponentElement]
-		[XmlElement("tempSurfaceMn", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("tempSurfaceMn")]
         public ThermodynamicTemperatureMeasure TempSurfaceMin {
             get {
                 return tempSurfaceMnField;
@@ -27245,7 +28095,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Maximum temperature above ground.")]
         [ComponentElement]
-		[XmlElement("tempSurfaceMx", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("tempSurfaceMx")]
         public ThermodynamicTemperatureMeasure TempSurfaceMax {
             get {
                 return tempSurfaceMxField;
@@ -27263,7 +28114,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A measure of the combined chilling effect of wind and low temperature on  living things, also named chill factor, e.g., according to US weather service table, an air  temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF.")]
         [ComponentElement]
-		[XmlElement("tempWindChill", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("tempWindChill")]
         public ThermodynamicTemperatureMeasure TempWindChill {
             get {
                 return tempWindChillField;
@@ -27281,7 +28133,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Sea temperature.")]
         [ComponentElement]
-		[XmlElement("tempsea", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("tempsea")]
         public ThermodynamicTemperatureMeasure Tempsea {
             get {
                 return tempseaField;
@@ -27299,7 +28152,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Horizontal visibility.")]
         [ComponentElement]
-		[XmlElement("visibility", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("visibility")]
         public LengthMeasure Visibility {
             get {
                 return visibilityField;
@@ -27317,7 +28171,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The direction from which the waves are coming, measured from true north.")]
         [ComponentElement]
-		[XmlElement("aziWave", DataType="planeAngleMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
+		[XmlElement("aziWave")]
         public PlaneAngleMeasure AziWave {
             get {
                 return aziWaveField;
@@ -27335,7 +28190,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Average height of the waves.")]
         [ComponentElement]
-		[XmlElement("htWave", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("htWave")]
         public LengthMeasure HeightWave {
             get {
                 return htWaveField;
@@ -27353,7 +28209,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An average of the higher 1/3 of the wave heights passing during a   sample period (typically 20 to 30 minutes).")]
         [ComponentElement]
-		[XmlElement("significantWave", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("significantWave")]
         public LengthMeasure SignificantWave {
             get {
                 return significantWaveField;
@@ -27371,7 +28228,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum wave height.")]
         [ComponentElement]
-		[XmlElement("maxWave", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("maxWave")]
         public LengthMeasure MaxWave {
             get {
                 return maxWaveField;
@@ -27389,7 +28247,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The elapsed time between the passing of two wave tops.")]
         [ComponentElement]
-		[XmlElement("periodWave", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("periodWave")]
         public TimeMeasure PeriodWave {
             get {
                 return periodWaveField;
@@ -27407,7 +28266,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The direction from which the wind is blowing, measured from true north.")]
         [ComponentElement]
-		[XmlElement("aziWind", DataType="planeAngleMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
+		[XmlElement("aziWind")]
         public PlaneAngleMeasure AziWind {
             get {
                 return aziWindField;
@@ -27425,7 +28285,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Wind speed.")]
         [ComponentElement]
-		[XmlElement("velWind", DataType="velocityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "velocityMeasure")]
+		[XmlElement("velWind")]
         public VelocityMeasure VelWind {
             get {
                 return velWindField;
@@ -27443,7 +28304,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("Type of precipitation.")]
-		[XmlElement("typePrecip", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("typePrecip")]
         public string TypePrecip {
             get {
                 return typePrecipField;
@@ -27461,7 +28323,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Amount of precipitation.")]
         [ComponentElement]
-		[XmlElement("amtPrecip", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("amtPrecip")]
         public LengthMeasure AmtPrecip {
             get {
                 return amtPrecipField;
@@ -27479,7 +28342,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(32)]
         [Description("Description of cloud cover.")]
-		[XmlElement("coverCloud", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("coverCloud")]
         public string CoverCloud {
             get {
                 return coverCloudField;
@@ -27497,7 +28361,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Height of cloud cover.")]
         [ComponentElement]
-		[XmlElement("ceilingCloud", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("ceilingCloud")]
         public LengthMeasure CeilingCloud {
             get {
                 return ceilingCloudField;
@@ -27515,7 +28380,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Current speed.")]
         [ComponentElement]
-		[XmlElement("currentSea", DataType="velocityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "velocityMeasure")]
+		[XmlElement("currentSea")]
         public VelocityMeasure CurrentSea {
             get {
                 return currentSeaField;
@@ -27533,7 +28399,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Azimuth of current.")]
         [ComponentElement]
-		[XmlElement("aziCurrentSea", DataType="planeAngleMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
+		[XmlElement("aziCurrentSea")]
         public PlaneAngleMeasure AziCurrentSea {
             get {
                 return aziCurrentSeaField;
@@ -27551,7 +28418,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comments and remarks.")]
-		[XmlElement("comments", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comments")]
         public string Comments {
             get {
                 return commentsField;
@@ -27569,7 +28437,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -27600,7 +28469,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -27675,7 +28545,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of safety issue for which a count is being defined.
         /// </summary>
 		[Description("The type of safety issue for which a count is being defined.")]
-        [XmlAttribute("type", DataType = "SafetyType")]
+        [EnergisticsDataTypeAttribute(DataType = "SafetyType")]
+        [XmlAttribute("type")]
 		        public string TypeSurrogate
         {
             get {
@@ -27727,7 +28598,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of period being reported by this count.
         /// </summary>
 		[Description("The type of period being reported by this count.")]
-        [XmlAttribute("period", DataType = "ReportingPeriod")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingPeriod")]
+        [XmlAttribute("period")]
 		        public string PeriodSurrogate
         {
             get {
@@ -27833,7 +28705,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The mean time between safety incidents.")]
         [ComponentElement]
-		[XmlElement("meantimeIncident", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("meantimeIncident")]
         public TimeMeasure MeantimeIncident {
             get {
                 return meantimeIncidentField;
@@ -27851,7 +28724,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The count of a type of safety issue.")]
         [RecurringElement]
-		[XmlElement("safetyCount", DataType="safetyCount")]
+        [EnergisticsDataTypeAttribute(DataType = "safetyCount")]
+		[XmlElement("safetyCount")]
         public List<SafetyCount> SafetyCount {
             get {
                 return safetyCountField;
@@ -27881,7 +28755,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Safety related comment.")]
         [RecurringElement]
-		[XmlElement("comment", DataType="cs_datedComment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_datedComment")]
+		[XmlElement("comment")]
         public List<DatedComment> Comment {
             get {
                 return commentField;
@@ -27911,7 +28786,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -27942,7 +28818,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -27996,7 +28873,8 @@ namespace Energistics.DataAccess.PRODML131
         /// the number of incidents of accidents and injuries that were reported.
         /// </summary>
 		[Description("the number of incidents of accidents and injuries that were reported.")]
-		[XmlElement("IncidentCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("IncidentCount")]
         public short? IncidentCount {
             get {
                 return IncidentCountField;
@@ -28032,7 +28910,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of time since the most recent Lost Time Accident.")]
         [ComponentElement]
-		[XmlElement("sinceLostTime", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("sinceLostTime")]
         public TimeMeasure SinceLostTime {
             get {
                 return sinceLostTimeField;
@@ -28050,7 +28929,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of time since the most recent accident prevention exercise.")]
         [ComponentElement]
-		[XmlElement("sincePreventionExercise", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("sincePreventionExercise")]
         public TimeMeasure SincePreventionExercise {
             get {
                 return sincePreventionExerciseField;
@@ -28068,7 +28948,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The amount of time since the most recent defined hazard and accident situation (Norwegian DFU).")]
         [ComponentElement]
-		[XmlElement("sinceDefinedSituation", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("sinceDefinedSituation")]
         public TimeMeasure SinceDefinedSituation {
             get {
                 return sinceDefinedSituationField;
@@ -28085,7 +28966,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The number of medical treatments that have occurred.
         /// </summary>
 		[Description("The number of medical treatments that have occurred.")]
-		[XmlElement("medicalTreatmentCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("medicalTreatmentCount")]
         public short? MedicalTreatmentCount {
             get {
                 return medicalTreatmentCountField;
@@ -28120,7 +29002,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The number of system alarms that have occurred.
         /// </summary>
 		[Description("The number of system alarms that have occurred.")]
-		[XmlElement("alarmCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("alarmCount")]
         public short? AlarmCount {
             get {
                 return alarmCountField;
@@ -28155,7 +29038,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The number of personnel safety introductions that have occurred.
         /// </summary>
 		[Description("The number of personnel safety introductions that have occurred.")]
-		[XmlElement("safetyIntroCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("safetyIntroCount")]
         public short? SafetyIntroCount {
             get {
                 return safetyIntroCountField;
@@ -28191,7 +29075,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A textual description of safety considerations.")]
-		[XmlElement("safetyDescription", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("safetyDescription")]
         public string SafetyDescription {
             get {
                 return safetyDescriptionField;
@@ -28209,7 +29094,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Safety information at a specific installatino.")]
         [RecurringElement]
-		[XmlElement("safety", DataType="cs_productionOperationSafety")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationSafety")]
+		[XmlElement("safety")]
         public List<ProductionOperationSafety> Safety {
             get {
                 return safetyField;
@@ -28239,7 +29125,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the weather at a point in time.")]
         [RecurringElement]
-		[XmlElement("weather", DataType="cs_productionOperationWeather")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationWeather")]
+		[XmlElement("weather")]
         public List<ProductionOperationWeather> Weather {
             get {
                 return weatherField;
@@ -28269,7 +29156,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -28300,7 +29188,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -28375,7 +29264,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of crew for which a count is being defined.
         /// </summary>
 		[Description("The type of crew for which a count is being defined.")]
-        [XmlAttribute("type", DataType = "CrewType")]
+        [EnergisticsDataTypeAttribute(DataType = "CrewType")]
+        [XmlAttribute("type")]
 		        public string TypeSurrogate
         {
             get {
@@ -28481,7 +29371,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The installation represented by this report.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -28498,7 +29389,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Total count of beds available on the installation.
         /// </summary>
 		[Description("Total count of beds available on the installation.")]
-		[XmlElement("bedsAvailable", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("bedsAvailable")]
         public short? BedsAvailable {
             get {
                 return bedsAvailableField;
@@ -28534,7 +29426,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The count of personnel on a type of crew. One of the types is all personnel on board.")]
         [RecurringElement]
-		[XmlElement("crewCount", DataType="crewCount")]
+        [EnergisticsDataTypeAttribute(DataType = "crewCount")]
+		[XmlElement("crewCount")]
         public List<CrewCount> CrewCount {
             get {
                 return crewCountField;
@@ -28564,7 +29457,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The total cumulative amount of time worked during the  reporting period.  Commonly specified in units of hours.  Note that a day unit translates to 24 hours worked.")]
         [ComponentElement]
-		[XmlElement("work", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("work")]
         public TimeMeasure Work {
             get {
                 return workField;
@@ -28582,7 +29476,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The total cumulative amount of time worked from the beginning of  the month to the end of reporting period.  Commonly specified in units of hours.  Note that a day unit translates to 24 hours worked.")]
         [ComponentElement]
-		[XmlElement("workMonthToDate", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("workMonthToDate")]
         public TimeMeasure WorkMonthToDate {
             get {
                 return workMonthToDateField;
@@ -28600,7 +29495,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The total cumulative amount of time worked from the beginning of  the year to the end of reporting period.  Commonly specified in units of hours.  Note that a day unit translates to 24 hours worked.")]
         [ComponentElement]
-		[XmlElement("workYearToDate", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("workYearToDate")]
         public TimeMeasure WorkYearToDate {
             get {
                 return workYearToDateField;
@@ -28618,7 +29514,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Health, Safety and Environmenal information.")]
         [RecurringElement]
-		[XmlElement("operationalHSE", DataType="cs_productionOperationHSE")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationHSE")]
+		[XmlElement("operationalHSE")]
         public List<ProductionOperationHSE> OperationalHSE {
             get {
                 return operationalHSEField;
@@ -28648,7 +29545,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Production activities.")]
         [ComponentElement]
-		[XmlElement("productionActivity", DataType="cs_productionOperationActivity")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationActivity")]
+		[XmlElement("productionActivity")]
         public ProductionOperationActivity ProductionActivity {
             get {
                 return productionActivityField;
@@ -28666,7 +29564,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -28697,7 +29596,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -28752,7 +29652,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Human recognizable context for the Production Operation Report.")]
         [ComponentElement]
-		[XmlElement("name", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("name")]
         public NameStruct Name {
             get {
                 return nameField;
@@ -28770,7 +29671,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -28788,7 +29690,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -28818,7 +29721,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of report.")]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public string Kind {
             get {
                 return kindField;
@@ -28835,7 +29739,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The type of period that is being reported. This value must be consistent with the reporting start and end values.
         /// </summary>
 		[Description("The type of period that is being reported. This value must be consistent with the reporting start and end values.")]
-		[XmlElement("periodKind", DataType="ReportingPeriod")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingPeriod")]
+		[XmlElement("periodKind")]
         public ReportingPeriod PeriodKind {
             get {
                 return periodKindField;
@@ -29037,7 +29942,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The operator of the facilities in the report.")]
         [ComponentElement]
-		[XmlElement("operator", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
                 return operatorField;
@@ -29055,7 +29961,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The tile of the report if different from the name of the report.")]
         [ComponentElement]
-		[XmlElement("title", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("title")]
         public NameStruct Title {
             get {
                 return titleField;
@@ -29073,7 +29980,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The geographic context of the report.")]
         [ComponentElement]
-		[XmlElement("geographicContext", DataType="cs_geographicContext")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_geographicContext")]
+		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
                 return geographicContextField;
@@ -29090,6 +29998,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report was issued.
         /// </summary>
 		[Description("The date that the report was issued.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("issueDate", DataType="date")]
         public DateTime? IssueDate {
             get {
@@ -29126,7 +30035,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The person or company that issued the report. This may contain the role of the person or company within the context of the report.")]
         [ComponentElement]
-		[XmlElement("issuedBy", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("issuedBy")]
         public BusinessAssociate IssuedBy {
             get {
                 return issuedByField;
@@ -29143,6 +30053,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report was approved.
         /// </summary>
 		[Description("The date that the report was approved.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("approvalDate", DataType="date")]
         public DateTime? ApprovalDate {
             get {
@@ -29179,7 +30090,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The person or company that approved the report. This may contain the role of the person or company within the context of the report.")]
         [ComponentElement]
-		[XmlElement("approver", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("approver")]
         public BusinessAssociate Approver {
             get {
                 return approverField;
@@ -29197,7 +30109,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A report for each installation")]
         [RecurringElement]
-		[XmlElement("installationReport", DataType="cs_productionOperationInstallationReport")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productionOperationInstallationReport")]
+		[XmlElement("installationReport")]
         public List<ProductionOperationInstallationReport> InstallationReport {
             get {
                 return installationReportField;
@@ -29227,7 +30140,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -29244,7 +30158,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -29263,7 +30178,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -29331,7 +30247,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the Product Flow Model.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -29349,7 +30266,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this model.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -29367,7 +30285,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -29396,7 +30315,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time of the start of validity for this model.
         /// </summary>
 		[Description("The date and time of the start of validity for this model.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -29431,7 +30351,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time of the termination of validity for this model.
         /// </summary>
 		[Description("The date and time of the termination of validity for this model.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -29467,7 +30388,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The time for which \"currently existing\" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("existenceTime", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("existenceTime")]
         public EndpointQualifiedDateTime ExistenceTime {
             get {
                 return existenceTimeField;
@@ -29485,7 +30407,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMin", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
                 return dTimMinField;
@@ -29503,7 +30426,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMax", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
                 return dTimMaxField;
@@ -29521,7 +30445,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.")]
         [RecurringElement]
-		[XmlElement("externalConnect", DataType="cs_productFlowExternalReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowExternalReference")]
+		[XmlElement("externalConnect")]
         public List<ProductFlowExternalReference> ExternalConnect {
             get {
                 return externalConnectField;
@@ -29552,7 +30477,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail. One of the networks must represent this model.")]
         [RecurringElement]
-		[XmlElement("network", DataType="cs_productFlowNetwork")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowNetwork")]
+		[XmlElement("network")]
         public List<ProductFlowNetwork> Network {
             get {
                 return networkField;
@@ -29582,7 +30508,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the model.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -29600,7 +30527,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -29617,7 +30545,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -29636,7 +30565,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -29705,7 +30635,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the external port in the network  that represents the current Model.  This is the port to which a different model is being connected.")]
         [ComponentElement]
-		[XmlElement("port", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("port")]
         public RefNameString Port {
             get {
                 return portField;
@@ -29724,7 +30655,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the external port within the connected Model. This is the port on a different model to which the port on this model is connected.")]
         [ComponentElement]
-		[XmlElement("connectedPort", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("connectedPort")]
         public RefNameString ConnectedPort {
             get {
                 return connectedPortField;
@@ -29743,7 +30675,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A pointer to the Product Flow Model that contains the connected port.")]
         [ComponentElement]
-		[XmlElement("connectedModel", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("connectedModel")]
         public RefNameString ConnectedModel {
             get {
                 return connectedModelField;
@@ -29761,7 +30694,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility that is represented by the connected model.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("connectedInstallation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("connectedInstallation")]
         public FacilityIdentifierStruct ConnectedInstallation {
             get {
                 return connectedInstallationField;
@@ -29779,7 +30713,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -29810,7 +30745,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -29866,7 +30802,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the Product Flow Network. This must be unique within the context of the overall Product Flow Model.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -29884,7 +30821,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned network. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual network.")]
-		[XmlElement("planName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("planName")]
         public string PlanName {
             get {
                 return planNameField;
@@ -29902,7 +30840,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the network containing the unit that this network represents. That is, the Unit must exist in a different Network. If a parent network is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside the model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence).")]
         [ComponentElement]
-		[XmlElement("parentNetwork", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("parentNetwork")]
         public RefNameString ParentNetwork {
             get {
                 return parentNetworkField;
@@ -29920,7 +30859,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("DEPRECATED. Use parentNetwork for all new work. A pointer to the Flow Unit that this network represents. The Unit must exist in a different Network. If a unit is not specified then the network represents the model. A model should only be represented by one network. The model network represents the overall installation.  All other networks represent internal detail and should not be referenced from  outside this model. The external ports on the model network represent  the external ports to the overall Product Flow Model. A pointer to an external port on the Product Flow Model does not require the name of the model network because it is redundant to knowledge of the model name  (i.e., there is a one-to-one correspondence). A unit model defines the internal behavior of a Flow Unit.")]
         [ComponentElement]
-		[XmlElement("representedUnit", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("representedUnit")]
         public RefNameString RepresentedUnit {
             get {
                 return representedUnitField;
@@ -29938,7 +30878,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the network.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -29956,7 +30897,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An external port. This exposes an internal node for the purpose of allowing connections to the internal behavior of the network. Networks that represent a Flow Unit should always have external ports. If this network represents a Unit then the name of the external port must match the name of a port on the Unit (i.e., they are logically the same port).")]
         [RecurringElement]
-		[XmlElement("port", DataType="cs_productFlowlExternalPort")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowlExternalPort")]
+		[XmlElement("port")]
         public List<ProductFlowlExternalPort> Port {
             get {
                 return portField;
@@ -29987,7 +30929,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A flow behavior for one unit. Within this context, a unit represents a usage of equipment for some purpose. The unit is generally identified by its function rather than the actual equipment used to realize the function. A unit might represent something complex like a field or separator or something simple  like a valve or pump.")]
         [RecurringElement]
-		[XmlElement("unit", DataType="cs_productFlowUnit")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowUnit")]
+		[XmlElement("unit")]
         public List<ProductFlowUnit> Unit {
             get {
                 return unitField;
@@ -30017,7 +30960,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Documents that a change occurred at a particular time.")]
         [RecurringElement]
-		[XmlElement("changeLog", DataType="cs_productFlowChangeLog")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowChangeLog")]
+		[XmlElement("changeLog")]
         public List<ProductFlowChangeLog> ChangeLog {
             get {
                 return changeLogField;
@@ -30047,7 +30991,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the existance of a planned network which is a variant of this network beginning at a specified point in time. Any changes to the actual network after that time do not affect the plan.")]
         [RecurringElement]
-		[XmlElement("plan", DataType="cs_productFlowNetworkPlan")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowNetworkPlan")]
+		[XmlElement("plan")]
         public List<ProductFlowNetworkPlan> Plan {
             get {
                 return planField;
@@ -30077,7 +31022,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -30108,7 +31054,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -30164,7 +31111,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the external port within the context of  the current Product Flow Network.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -30182,7 +31130,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Defines whether this port is an inlet or outlet. Note that this is a nominal intended direction.")]
-		[XmlElement("direction", DataType="ProductFlowPortType")]
+        [EnergisticsDataTypeAttribute(DataType = "ProductFlowPortType")]
+		[XmlElement("direction")]
         public ProductFlowPortType Direction {
             get {
                 return directionField;
@@ -30199,7 +31148,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True ("true" or "1") indicates that the port is an exposed internal port and cannot be used in a connection external to the network. False ("false" or "0") or not given indicates a normal port.
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the port is an exposed internal port and cannot be used in a connection external to the network. False (\"false\" or \"0\") or not given indicates a normal port.")]
-		[XmlElement("exposed", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("exposed")]
         public bool? Exposed {
             get {
                 return exposedField;
@@ -30236,7 +31186,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Defines the internal node to which this external port is connected. All ports (whether internal or external) that are connected to a node with the  same name are connected to each other. Node names are unique to each network. The purpose of the external port is to provide input to or output from the internal network except when the port is an \"exposed\" port. The purpose of an exposed port is to allow the properties of the port to be seen external to the network. For an exposed port, the connection points to the associated port.")]
-		[XmlElement("connectedNode", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("connectedNode")]
         public string ConnectedNode {
             get {
                 return connectedNodeField;
@@ -30254,7 +31205,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the port.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -30272,7 +31224,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -30303,7 +31256,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -30358,7 +31312,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the Product Flow Unit within the  context of the Product Flow Network.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -30376,7 +31331,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned unit. All child network components must all be planned and be part of the same plan. The parent network must either contain the plan (i.e., be an actual) or be part of the same plan. Not specified indicates an actual unit.")]
-		[XmlElement("planName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("planName")]
         public string PlanName {
             get {
                 return planNameField;
@@ -30394,7 +31350,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A pointer to the network representing the internal behavior of this unit. The names of the external ports on the internal network must match the names of  the ports on this unit. That is they are logically the same ports.")]
         [ComponentElement]
-		[XmlElement("internalNetwork", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("internalNetwork")]
         public RefNameString InternalNetwork {
             get {
                 return internalNetworkField;
@@ -30412,7 +31369,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility for which this Product Flow Unit describes fluid flow connecton behavior. The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
                 return facilityField;
@@ -30430,7 +31388,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility this named facility.  The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent1", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
                 return facilityParent1Field;
@@ -30448,7 +31407,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of facilityParent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent2", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
                 return facilityParent2Field;
@@ -30466,7 +31426,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
         [RecurringElement]
-		[XmlElement("facilityAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
                 return facilityAliasField;
@@ -30496,7 +31457,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented facility.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -30526,7 +31488,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines an expected property of the facility represented by this unit.")]
         [RecurringElement]
-		[XmlElement("expectedProperty", DataType="cs_productFlowExpectedUnitProperty")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowExpectedUnitProperty")]
+		[XmlElement("expectedProperty")]
         public List<ProductFlowExpectedUnitProperty> ExpectedProperty {
             get {
                 return expectedPropertyField;
@@ -30556,7 +31519,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the relative coordinate of the unit on a display screen. This is not intended for detailed diagrams. Rather it is intended to allow different applications to present a user view which has a consistent layout.")]
         [ComponentElement]
-		[XmlElement("relativeCoordinate", DataType="cs_relativeCoordinate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_relativeCoordinate")]
+		[XmlElement("relativeCoordinate")]
         public RelativeCoordinate RelativeCoordinate {
             get {
                 return relativeCoordinateField;
@@ -30575,7 +31539,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("An inlet or outlet port associated with this unit. If there is an internal network then the name of this port must match the name of  an external port for that network. Any properties (e.g., volume, pressure, temperature) that are assigned to this port  are inherently assigned to the corresponding external port on the internal network.  That is, the ports are logically the same port. Similar to a node, there is no pressure drop across a port.   Also similar to a node, conservation of mass exists across the port and the flow direction across the port can change over time if the relative pressures across connected units change.")]
         [RecurringElement]
-		[XmlElement("port", DataType="cs_productFlowPort")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowPort")]
+		[XmlElement("port")]
         public List<ProductFlowPort> Port {
             get {
                 return portField;
@@ -30605,7 +31570,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this unit.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -30623,7 +31589,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -30654,7 +31621,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -30709,7 +31677,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The expected kind of facility property. Each property is documented to have values of a particular type.")]
-		[XmlElement("property", DataType="FacilityParameter")]
+        [EnergisticsDataTypeAttribute(DataType = "FacilityParameter")]
+		[XmlElement("property")]
         public FacilityParameter Property {
             get {
                 return propertyField;
@@ -30726,6 +31695,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The "PRODML Relative Identifier" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent facility. This identifies a sub-facility which is identified within the context of the parent facilityParent2/facilityParent1/name identification hierarchy. The property will only be expected to be defined for this child and not for the parent.
         /// </summary>
 		[Description("The \"PRODML Relative Identifier\" of a child of the parent facility. The idenfifier path is presumed to begin with the identity of the parent facility. This identifies a sub-facility which is identified within the context of the parent facilityParent2/facilityParent1/name identification hierarchy. The property will only be expected to be defined for this child and not for the parent.")]
+        [EnergisticsDataTypeAttribute(DataType = "prodmlRelativeIdentifier")]
 		[XmlElement("childFacilityIdentifier", DataType="anyURI")]
         public string ChildFacilityIdentifier {
             get {
@@ -30743,7 +31713,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the expected flow and product pairs to be assigned to this unit by a Product Volume report. A set of expected qualifiers can also be defined for each pair. Each unique combination of product, flow and qualifier represents an expected variation of the specified property. This element should only be specified for properties tha represent a flow stream (e.g., volume, pressure).
         /// </summary>
         [ComponentElement]
-        [XmlElement("expectedFlowProduct", DataType="cs_productFlowQualifierExpected")]
+        [XmlElement("expectedFlowProduct")]
         public ProductFlowQualifierExpected[] ExpectedFlowProduct {
             get {
                 return expectedFlowProductField;
@@ -30776,7 +31746,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The expected kind of qualifier of the property. This element should only be specified for properties that do not represent the fluid stream (e.g., a valve status)
         /// </summary>
-        [XmlElement("qualifier", DataType="FlowQualifier")]
+        [XmlElement("qualifier")]
         public FlowQualifier[] Qualifier {
             get {
                 return qualifierField;
@@ -30812,7 +31782,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternative name for the sensor that will measure the property.")]
         [RecurringElement]
-		[XmlElement("tagAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("tagAlias")]
         public List<NameStruct> TagAlias {
             get {
                 return tagAliasField;
@@ -30842,7 +31813,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Difference between two consecutive readings must exceeds deadband value to be accepted")]
         [ComponentElement]
-		[XmlElement("deadband", DataType="generalMeasureType")]
+        [EnergisticsDataTypeAttribute(DataType = "generalMeasureType")]
+		[XmlElement("deadband")]
         public GeneralMeasureType Deadband {
             get {
                 return deadbandField;
@@ -30860,7 +31832,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum time difference from the last sent event before the next event is sent.")]
         [ComponentElement]
-		[XmlElement("maximumFrequency", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("maximumFrequency")]
         public TimeMeasure MaximumFrequency {
             get {
                 return maximumFrequencyField;
@@ -30878,7 +31851,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this property.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -30896,7 +31870,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -30927,7 +31902,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -30982,7 +31958,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The expected kind of flow.")]
-		[XmlElement("flow", DataType="ReportingFlow")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingFlow")]
+		[XmlElement("flow")]
         public ReportingFlow Flow {
             get {
                 return flowField;
@@ -30999,7 +31976,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The expected kind of product within the flow.
         /// </summary>
 		[Description("The expected kind of product within the flow.")]
-		[XmlElement("product", DataType="ReportingProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProduct")]
+		[XmlElement("product")]
         public ReportingProduct Product {
             get {
                 return productField;
@@ -31035,7 +32013,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The expected kind of qualifier of the flow.")]
         [RecurringElement]
-		[XmlElement("qualifier", DataType="FlowQualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "FlowQualifier")]
+		[XmlElement("qualifier")]
         public List<FlowQualifier> Qualifier {
             get {
                 return qualifierField;
@@ -31065,7 +32044,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -31096,7 +32076,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -31151,7 +32132,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the relative from-left-to-right location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as viewed by the user.")]
         [ComponentElement]
-		[XmlElement("x", DataType="lengthPerLengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthPerLengthMeasure")]
+		[XmlElement("x")]
         public LengthPerLengthMeasure X {
             get {
                 return xField;
@@ -31169,7 +32151,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the relative from-top-to-bottom location on a display screen. The display origin (0,0) is the upper left-hand corner of the display as viewed by the user.")]
         [ComponentElement]
-		[XmlElement("y", DataType="lengthPerLengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthPerLengthMeasure")]
+		[XmlElement("y")]
         public LengthPerLengthMeasure Y {
             get {
                 return yField;
@@ -31187,7 +32170,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the relative from-front-to-back location in a 3D system. The unrotated display origin (0,0) is the upper left-hand corner of the display as viewed by the user. The \"3D picture\" may be rotated on the 2d display.")]
         [ComponentElement]
-		[XmlElement("z", DataType="lengthPerLengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthPerLengthMeasure")]
+		[XmlElement("z")]
         public LengthPerLengthMeasure Z {
             get {
                 return zField;
@@ -31242,7 +32226,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the port within the context of the Product Flow Unit.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -31260,7 +32245,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned port. All child network components must all be planned and be part of the same plan. The parent unit must be part of the same plan or be an actual. Not specified indicates an actual port.")]
-		[XmlElement("planName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("planName")]
         public string PlanName {
             get {
                 return planNameField;
@@ -31278,7 +32264,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Defines whether this port is an inlet or outlet. This is a nominal intended direction.")]
-		[XmlElement("direction", DataType="ProductFlowPortType")]
+        [EnergisticsDataTypeAttribute(DataType = "ProductFlowPortType")]
+		[XmlElement("direction")]
         public ProductFlowPortType Direction {
             get {
                 return directionField;
@@ -31296,7 +32283,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility represented by this Product Flow Port The name can be qualified by a naming system. The facility name is assumed to be unique within the context of the facility  represented by the unit.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
                 return facilityField;
@@ -31314,7 +32302,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name  should also be listed as an alias.")]
         [RecurringElement]
-		[XmlElement("facilityAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
                 return facilityAliasField;
@@ -31343,7 +32332,8 @@ namespace Energistics.DataAccess.PRODML131
         /// True ("true" or "1") indicates that the port is an exposed internal port and cannot be used in a connection external to the unit. False ("false" or "0") or not given indicates a normal port.
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the port is an exposed internal port and cannot be used in a connection external to the unit. False (\"false\" or \"0\") or not given indicates a normal port.")]
-		[XmlElement("exposed", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("exposed")]
         public bool? Exposed {
             get {
                 return exposedField;
@@ -31380,7 +32370,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Defines the node to which this port is connected. A timestamp activates and deactivates the connection.  Only one connectedNode should be active at any one point in time. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one port is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port(s) if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
         [RecurringElement]
-		[XmlElement("connectedNode", DataType="cs_connectedNode")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_connectedNode")]
+		[XmlElement("connectedNode")]
         public List<ConnectedNode> ConnectedNode {
             get {
                 return connectedNodeField;
@@ -31410,7 +32401,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair.")]
         [RecurringElement]
-		[XmlElement("expectedFlowProduct", DataType="cs_productFlowQualifierExpected")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowQualifierExpected")]
+		[XmlElement("expectedFlowProduct")]
         public List<ProductFlowQualifierExpected> ExpectedFlowProduct {
             get {
                 return expectedFlowProductField;
@@ -31440,7 +32432,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the properties that are expected to be measured at this port. This can also specify the equipment tag(s) of the sensor that will read the value. Only one of each property kind should be active at any point in time.")]
         [RecurringElement]
-		[XmlElement("expectedFlowProperty", DataType="cs_productFlowExpectedPortProperty")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowExpectedPortProperty")]
+		[XmlElement("expectedFlowProperty")]
         public List<ProductFlowExpectedPortProperty> ExpectedFlowProperty {
             get {
                 return expectedFlowPropertyField;
@@ -31470,7 +32463,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this port.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -31488,7 +32482,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -31519,7 +32514,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -31575,7 +32571,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Defines the node to which this port is connected. Only two ports should be actively connected to the same node at the same point in time. That is, a port should only be connected to one other port. There are no semantics for the node except common connection. All ports that are connected to a node with the the same name are inherently connected to each other. The name of the node is only required to be unique within the context of the current Product Flow Network (that is, not the overall model). All ports must be connected to a node and whether or not any other port is connected to the same node depends on the requirements of the network.  Any node that is internally connected to only one node is presumably a candidate  to be connected to an external node. The behavior of ports connected at a common node is as follows:  a) There is no pressure drop across the node. All ports connected to the node have   the same pressure. That is, there is an assumption of steady state fluid flow.  b) Conservation of mass exists across the node. The mass into the node via all   connected ports equals the mass out of the node via all connected ports.  c) The flow direction of a port connected to the node may be transient. That is, flow   direction may change toward any port if the relative internal pressure of  the Product Flow Units change and a new steady state is achieved.")]
-		[XmlElement("node", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("node")]
         public string Node {
             get {
                 return nodeField;
@@ -31593,7 +32590,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of a network plan. This indicates a planned connection. The connected port must be part of the same plan or be an actual. Not specified indicates an actual connection.")]
-		[XmlElement("planName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("planName")]
         public string PlanName {
             get {
                 return planNameField;
@@ -31610,7 +32608,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time that the connection was activated.
         /// </summary>
 		[Description("The date and time that the connection was activated.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -31645,7 +32644,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time that the connection was terminated.
         /// </summary>
 		[Description("The date and time that the connection was terminated.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -31681,7 +32681,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this connection, possibly including a reason for termination.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -31699,7 +32700,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -31730,7 +32732,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -31785,7 +32788,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The expected kind of property.")]
-		[XmlElement("property", DataType="ReportingProperty")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportingProperty")]
+		[XmlElement("property")]
         public ReportingProperty Property {
             get {
                 return propertyField;
@@ -31802,7 +32806,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time that the sensor was activated on the port.
         /// </summary>
 		[Description("The date and time that the sensor was activated on the port.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -31837,7 +32842,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time that the sensor was deactivated on the port.
         /// </summary>
 		[Description("The date and time that the sensor was deactivated on the port.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -31873,7 +32879,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternative name for the sensor that will measure the property.")]
         [RecurringElement]
-		[XmlElement("tagAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("tagAlias")]
         public List<NameStruct> TagAlias {
             get {
                 return tagAliasField;
@@ -31903,7 +32910,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Difference between two consecutive readings must exceeds deadband value to be accepted")]
         [ComponentElement]
-		[XmlElement("deadband", DataType="generalMeasureType")]
+        [EnergisticsDataTypeAttribute(DataType = "generalMeasureType")]
+		[XmlElement("deadband")]
         public GeneralMeasureType Deadband {
             get {
                 return deadbandField;
@@ -31921,7 +32929,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum time difference from the last sent event before the next event is sent.")]
         [ComponentElement]
-		[XmlElement("maximumFrequency", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("maximumFrequency")]
         public TimeMeasure MaximumFrequency {
             get {
                 return maximumFrequencyField;
@@ -31939,7 +32948,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the expected flow and product pairs to be  assigned to this port by a Product Volume report. A set of expected qualifiers can be defined for each pair. The aggregate of expectations on all properties should be a subset of  the aggregate of expectations on the port.  If no expectations are defined on the port then the port aggregate will be defined by the properties.")]
         [RecurringElement]
-		[XmlElement("expectedFlowProduct", DataType="cs_productFlowQualifierExpected")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowQualifierExpected")]
+		[XmlElement("expectedFlowProduct")]
         public List<ProductFlowQualifierExpected> ExpectedFlowProduct {
             get {
                 return expectedFlowProductField;
@@ -31969,7 +32979,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark associated with this property.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -31987,7 +32998,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -32018,7 +33030,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -32074,7 +33087,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("A name assigned to the change.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -32092,7 +33106,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The timestamp associated with the change. All changes must use this timestamp.")]
-		[XmlElement("dTim", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTim")]
         public Timestamp? DateTime {
             get {
                 return dTimField;
@@ -32110,7 +33125,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A textual reason for the change.")]
-		[XmlElement("reason", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("reason")]
         public string Reason {
             get {
                 return reasonField;
@@ -32128,7 +33144,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -32159,7 +33176,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -32215,7 +33233,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name assigned to the plan.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -32233,7 +33252,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -32251,7 +33271,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A textual description of the purpose of the plan.")]
-		[XmlElement("purpose", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("purpose")]
         public string Purpose {
             get {
                 return purposeField;
@@ -32269,7 +33290,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Documents that a change occurred at a particular time.")]
         [RecurringElement]
-		[XmlElement("changeLog", DataType="cs_productFlowChangeLog")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowChangeLog")]
+		[XmlElement("changeLog")]
         public List<ProductFlowChangeLog> ChangeLog {
             get {
                 return changeLogField;
@@ -32299,7 +33321,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -32330,7 +33353,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -32385,7 +33409,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the Fluid Sample.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -32403,7 +33428,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("sampleBottle", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("sampleBottle")]
         public string SampleBottle {
             get {
                 return sampleBottleField;
@@ -32420,7 +33446,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("sampleType", DataType="FluidSampleKind")]
+        [EnergisticsDataTypeAttribute(DataType = "FluidSampleKind")]
+		[XmlElement("sampleType")]
         public FluidSampleKind SampleType {
             get {
                 return sampleTypeField;
@@ -32456,7 +33483,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility from which the sample was acquired.  The name can be qualified by a naming system.  This also defines the kind of facility. Common facilities are wells, wellbores within a well, completions within a well.")]
         [ComponentElement]
-		[XmlElement("facility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facility")]
         public FacilityIdentifierStruct Facility {
             get {
                 return facilityField;
@@ -32474,7 +33502,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility. For example, if name represents a completion, then facilityParent1 would represent the name of the well within which name was unique. The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent1", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent1")]
         public FacilityIdentifierStruct FacilityParent1 {
             get {
                 return facilityParent1Field;
@@ -32492,7 +33521,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For facilities whose name is unique within the context of another  facility, the name of the parent facility of parent1.  The name can be qualified by a naming system. This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("facilityParent2", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("facilityParent2")]
         public FacilityIdentifierStruct FacilityParent2 {
             get {
                 return facilityParent2Field;
@@ -32510,7 +33540,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("An alternatative name of a facility. This is generally unique within a naming system. The above contextually unique name (that is, within  the context of a parent) should also be listed as an alias.")]
         [RecurringElement]
-		[XmlElement("facilityAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("facilityAlias")]
         public List<NameStruct> FacilityAlias {
             get {
                 return facilityAliasField;
@@ -32539,7 +33570,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The kind of test which acquired the sample.
         /// </summary>
 		[Description("The kind of test which acquired the sample.")]
-		[XmlElement("testKind", DataType="FluidSampleTestAcquisition")]
+        [EnergisticsDataTypeAttribute(DataType = "FluidSampleTestAcquisition")]
+		[XmlElement("testKind")]
         public FluidSampleTestAcquisition TestKind {
             get {
                 return testKindField;
@@ -32575,7 +33607,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The measured depth of the test in a wellbore.")]
         [ComponentElement]
-		[XmlElement("testMD", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("testMD")]
         public MeasuredDepthCoord TestMD {
             get {
                 return testMDField;
@@ -32593,7 +33626,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The test identifier.")]
-		[XmlElement("testId", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("testId")]
         public string TestId {
             get {
                 return testIdField;
@@ -32611,7 +33645,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The test run number (e.g., for an RFT)")]
-		[XmlElement("testRun", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("testRun")]
         public string TestRun {
             get {
                 return testRunField;
@@ -32629,7 +33664,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the company which ran the test.")]
-		[XmlElement("testProvider", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("testProvider")]
         public string TestProvider {
             get {
                 return testProviderField;
@@ -32646,7 +33682,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("reservoirFluidType", DataType="ReservoirFluidKind")]
+        [EnergisticsDataTypeAttribute(DataType = "ReservoirFluidKind")]
+		[XmlElement("reservoirFluidType")]
         public ReservoirFluidKind ReservoirFluidType {
             get {
                 return reservoirFluidTypeField;
@@ -32681,6 +33718,7 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("acquisitionDate", DataType="date")]
         public DateTime? AcquisitionDate {
             get {
@@ -32717,7 +33755,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("acquisitionMD", DataType="measuredDepthCoord")]
+        [EnergisticsDataTypeAttribute(DataType = "measuredDepthCoord")]
+		[XmlElement("acquisitionMD")]
         public MeasuredDepthCoord AcquisitionMD {
             get {
                 return acquisitionMDField;
@@ -32735,7 +33774,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("acquisitionPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("acquisitionPressure")]
         public PressureMeasure AcquisitionPressure {
             get {
                 return acquisitionPressureField;
@@ -32753,7 +33793,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("acquisitionTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("acquisitionTemperature")]
         public ThermodynamicTemperatureMeasure AcquisitionTemperature {
             get {
                 return acquisitionTemperatureField;
@@ -32771,7 +33812,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("acquisitionGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("acquisitionGORStd")]
         public StandardVolumePerStandardVolumeMeasure AcquisitionGORStd {
             get {
                 return acquisitionGORStdField;
@@ -32789,7 +33831,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("sampleDisposition", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("sampleDisposition")]
         public string SampleDisposition {
             get {
                 return sampleDispositionField;
@@ -32806,7 +33849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("representative", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("representative")]
         public bool? Representative {
             get {
                 return representativeField;
@@ -32842,7 +33886,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -32860,7 +33905,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -32877,7 +33923,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -32896,7 +33943,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -32964,7 +34012,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("contaminantKind", DataType="FluidContaminant")]
+        [EnergisticsDataTypeAttribute(DataType = "FluidContaminant")]
+		[XmlElement("contaminantKind")]
         public FluidContaminant ContaminantKind {
             get {
                 return contaminantKindField;
@@ -32982,7 +34031,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -33000,7 +34050,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("volumePercent", DataType="volumePerVolumeMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasurePercent")]
+		[XmlElement("volumePercent")]
         public VolumePerVolumeMeasurePercent VolumePercent {
             get {
                 return volumePercentField;
@@ -33018,7 +34069,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("description", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -33037,7 +34089,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -33091,7 +34144,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -33127,7 +34181,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("stepTemperature")]
         public ThermodynamicTemperatureMeasure StepTemperature {
             get {
                 return stepTemperatureField;
@@ -33145,7 +34200,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
                 return stepPressureField;
@@ -33162,7 +34218,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -33196,7 +34252,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -33248,7 +34304,7 @@ namespace Energistics.DataAccess.PRODML131
         /// oilAPIGravity property
         /// </summary>
         [ComponentElement]
-        [XmlElement("oilAPIGravity", DataType="densityMeasure")]
+        [XmlElement("oilAPIGravity")]
         public DensityMeasure OilAPIGravity {
             get {
                 return oilAPIGravityField;
@@ -33281,7 +34337,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilSpecificGravity property
         /// </summary>
-        [XmlElement("oilSpecificGravity", DataType="unitlessQuantity")]
+        [XmlElement("oilSpecificGravity")]
         public double? OilSpecificGravity {
             get {
                 return oilSpecificGravityField;
@@ -33316,7 +34372,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
                 return oilMassDensityField;
@@ -33333,7 +34390,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilFormationVolumeFactorStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilFormationVolumeFactorStd", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("oilFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure OilFormationVolumeFactorStd {
             get {
                 return oilFormationVolumeFactorStdField;
@@ -33350,7 +34408,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
                 return oilViscosityField;
@@ -33508,7 +34567,8 @@ namespace Energistics.DataAccess.PRODML131
         /// correctedStageSeparatorGORStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("correctedStageSeparatorGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("correctedStageSeparatorGORStd")]
         public StandardVolumePerStandardVolumeMeasure CorrectedStageSeparatorGORStd {
             get {
                 return correctedStageSeparatorGORStdField;
@@ -33525,7 +34585,8 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeStockTankGORStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("cumulativeStockTankGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("cumulativeStockTankGORStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeStockTankGORStd {
             get {
                 return cumulativeStockTankGORStdField;
@@ -33542,7 +34603,8 @@ namespace Energistics.DataAccess.PRODML131
         /// solutionGORStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("solutionGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("solutionGORStd")]
         public StandardVolumePerStandardVolumeMeasure SolutionGORStd {
             get {
                 return solutionGORStdField;
@@ -33558,8 +34620,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasMolecularWeight property
         /// </summary>
-		
-		[XmlElement("gasMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasMolecularWeight")]
         public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
@@ -33593,8 +34655,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasGravity property
         /// </summary>
-		
-		[XmlElement("gasGravity", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravity")]
         public double? GasGravity {
             get {
                 return gasGravityField;
@@ -33629,7 +34691,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
                 return gasMassDensityField;
@@ -33645,8 +34708,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasZFactor property
         /// </summary>
-		
-		[XmlElement("gasZFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasZFactor")]
         public double? GasZFactor {
             get {
                 return gasZFactorField;
@@ -33681,7 +34744,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
                 return gasViscosityField;
@@ -33698,7 +34762,8 @@ namespace Energistics.DataAccess.PRODML131
         /// residualAPIGravity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("residualAPIGravity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("residualAPIGravity")]
         public DensityMeasure ResidualAPIGravity {
             get {
                 return residualAPIGravityField;
@@ -33715,7 +34780,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -33796,7 +34862,7 @@ namespace Energistics.DataAccess.PRODML131
         /// stockTank property
         /// </summary>
         [ComponentElement]
-        [XmlElement("stockTank", DataType="cs_fluidResultStockTank")]
+        [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -33859,7 +34925,8 @@ namespace Energistics.DataAccess.PRODML131
         /// vaporComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
                 return vaporCompositionField;
@@ -33888,7 +34955,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
                 return liquidCompositionField;
@@ -33917,7 +34985,8 @@ namespace Energistics.DataAccess.PRODML131
         /// compositeComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCompositeComposition")]
+		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
                 return compositeCompositionField;
@@ -33948,7 +35017,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -34002,7 +35072,8 @@ namespace Energistics.DataAccess.PRODML131
         /// temperature property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("temperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("temperature")]
         public ThermodynamicTemperatureMeasure Temperature {
             get {
                 return temperatureField;
@@ -34057,7 +35128,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(40)]
         [Description("xxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("componentName", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("componentName")]
         public string ComponentName {
             get {
                 return componentNameField;
@@ -34074,7 +35146,8 @@ namespace Energistics.DataAccess.PRODML131
         /// weightPercent property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -34091,7 +35164,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molePercent property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -34110,7 +35184,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -34165,7 +35240,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [StringLength(40)]
-		[XmlElement("componentName", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("componentName")]
         public string ComponentName {
             get {
                 return componentNameField;
@@ -34182,7 +35258,8 @@ namespace Energistics.DataAccess.PRODML131
         /// weightPercent property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -34199,7 +35276,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molePercent property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -34215,8 +35293,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// kValue property
         /// </summary>
-		
-		[XmlElement("kValue", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("kValue")]
         public double? KValue {
             get {
                 return kValueField;
@@ -34253,7 +35331,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -34307,7 +35386,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -34342,7 +35422,8 @@ namespace Energistics.DataAccess.PRODML131
         /// shrinkageReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("shrinkageReference", DataType="cs_fluidResultVolumeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultVolumeReference")]
+		[XmlElement("shrinkageReference")]
         public FluidResultVolumeReference ShrinkageReference {
             get {
                 return shrinkageReferenceField;
@@ -34360,7 +35441,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("separatorTestStep", DataType="cs_fluidResultSeparatorTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultSeparatorTestStep")]
+		[XmlElement("separatorTestStep")]
         public List<FluidResultSeparatorTestStep> SeparatorTestStep {
             get {
                 return separatorTestStepField;
@@ -34391,7 +35473,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -34445,7 +35528,8 @@ namespace Energistics.DataAccess.PRODML131
         /// kind property
         /// </summary>
 		[Required]
-		[XmlElement("kind", DataType="VolumeReferenceKind")]
+        [EnergisticsDataTypeAttribute(DataType = "VolumeReferenceKind")]
+		[XmlElement("kind")]
         public VolumeReferenceKind Kind {
             get {
                 return kindField;
@@ -34462,7 +35546,8 @@ namespace Energistics.DataAccess.PRODML131
         /// referenceVolume property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("referenceVolume", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("referenceVolume")]
         public VolumeMeasure ReferenceVolume {
             get {
                 return referenceVolumeField;
@@ -34479,7 +35564,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -34532,7 +35618,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -34568,7 +35655,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("stepTemperature")]
         public ThermodynamicTemperatureMeasure StepTemperature {
             get {
                 return stepTemperatureField;
@@ -34586,7 +35674,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
                 return stepPressureField;
@@ -34603,7 +35692,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -34637,7 +35726,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -34689,7 +35778,8 @@ namespace Energistics.DataAccess.PRODML131
         /// dewPointPressure property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("dewPointPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("dewPointPressure")]
         public PressureMeasure DewPointPressure {
             get {
                 return dewPointPressureField;
@@ -34706,7 +35796,8 @@ namespace Energistics.DataAccess.PRODML131
         /// cloudPoint property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("cloudPoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("cloudPoint")]
         public ThermodynamicTemperatureMeasure CloudPoint {
             get {
                 return cloudPointField;
@@ -34723,7 +35814,8 @@ namespace Energistics.DataAccess.PRODML131
         /// pourPoint property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("pourPoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("pourPoint")]
         public ThermodynamicTemperatureMeasure PourPoint {
             get {
                 return pourPointField;
@@ -34739,8 +35831,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilMolecularWeight property
         /// </summary>
-		
-		[XmlElement("oilMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("oilMolecularWeight")]
         public double? OilMolecularWeight {
             get {
                 return oilMolecularWeightField;
@@ -34775,7 +35867,7 @@ namespace Energistics.DataAccess.PRODML131
         /// oilAPIGravity property
         /// </summary>
         [ComponentElement]
-        [XmlElement("oilAPIGravity", DataType="densityMeasure")]
+        [XmlElement("oilAPIGravity")]
         public DensityMeasure OilAPIGravity {
             get {
                 return oilAPIGravityField;
@@ -34808,7 +35900,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilSpecificGravity property
         /// </summary>
-        [XmlElement("oilSpecificGravity", DataType="unitlessQuantity")]
+        [XmlElement("oilSpecificGravity")]
         public double? OilSpecificGravity {
             get {
                 return oilSpecificGravityField;
@@ -34843,7 +35935,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
                 return oilMassDensityField;
@@ -34860,7 +35953,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilCompressibility property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilCompressibility", DataType="compressibilityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "compressibilityMeasure")]
+		[XmlElement("oilCompressibility")]
         public CompressibilityMeasure OilCompressibility {
             get {
                 return oilCompressibilityField;
@@ -34877,7 +35971,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
                 return oilViscosityField;
@@ -34894,7 +35989,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilThermalConductivity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilThermalConductivity", DataType="thermalConductivityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermalConductivityMeasure")]
+		[XmlElement("oilThermalConductivity")]
         public ThermalConductivityMeasure OilThermalConductivity {
             get {
                 return oilThermalConductivityField;
@@ -34910,8 +36006,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasMolecularWeight property
         /// </summary>
-		
-		[XmlElement("gasMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasMolecularWeight")]
         public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
@@ -34945,8 +36041,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasGravity property
         /// </summary>
-		
-		[XmlElement("gasGravity", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravity")]
         public double? GasGravity {
             get {
                 return gasGravityField;
@@ -34981,7 +36077,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
                 return gasMassDensityField;
@@ -34997,8 +36094,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasZFactor property
         /// </summary>
-		
-		[XmlElement("gasZFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasZFactor")]
         public double? GasZFactor {
             get {
                 return gasZFactorField;
@@ -35033,7 +36130,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasCompressibility property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasCompressibility", DataType="compressibilityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "compressibilityMeasure")]
+		[XmlElement("gasCompressibility")]
         public CompressibilityMeasure GasCompressibility {
             get {
                 return gasCompressibilityField;
@@ -35050,7 +36148,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
                 return gasViscosityField;
@@ -35067,7 +36166,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasThermalConductivity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasThermalConductivity", DataType="thermalConductivityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermalConductivityMeasure")]
+		[XmlElement("gasThermalConductivity")]
         public ThermalConductivityMeasure GasThermalConductivity {
             get {
                 return gasThermalConductivityField;
@@ -35084,7 +36184,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasHeatingValue property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasHeatingValue", DataType="modulusOfCompressionMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "modulusOfCompressionMeasure")]
+		[XmlElement("gasHeatingValue")]
         public ModulusOfCompressionMeasure GasHeatingValue {
             get {
                 return gasHeatingValueField;
@@ -35101,7 +36202,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -35182,7 +36284,7 @@ namespace Energistics.DataAccess.PRODML131
         /// stockTank property
         /// </summary>
         [ComponentElement]
-        [XmlElement("stockTank", DataType="cs_fluidResultStockTank")]
+        [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -35245,7 +36347,8 @@ namespace Energistics.DataAccess.PRODML131
         /// vaporComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
                 return vaporCompositionField;
@@ -35274,7 +36377,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
                 return liquidCompositionField;
@@ -35303,7 +36407,8 @@ namespace Energistics.DataAccess.PRODML131
         /// compositeComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCompositeComposition")]
+		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
                 return compositeCompositionField;
@@ -35334,7 +36439,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -35388,7 +36494,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -35424,7 +36531,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("transportTestStep", DataType="cs_fluidResultTransportTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultTransportTestStep")]
+		[XmlElement("transportTestStep")]
         public List<FluidResultTransportTestStep> TransportTestStep {
             get {
                 return transportTestStepField;
@@ -35455,7 +36563,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -35509,7 +36618,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -35545,7 +36655,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
                 return stepPressureField;
@@ -35562,7 +36673,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
                 return oilViscosityField;
@@ -35579,7 +36691,7 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidVolume property
         /// </summary>
         [ComponentElement]
-        [XmlElement("liquidVolume", DataType="volumeMeasure")]
+        [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
                 return liquidVolumeField;
@@ -35613,7 +36725,7 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidDropoutPercent property
         /// </summary>
         [ComponentElement]
-        [XmlElement("liquidDropoutPercent", DataType="volumePerVolumeMeasurePercent")]
+        [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
                 return liquidDropoutPercentField;
@@ -35647,8 +36759,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasMolecularWeight property
         /// </summary>
-		
-		[XmlElement("gasMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasMolecularWeight")]
         public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
@@ -35682,8 +36794,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasGravity property
         /// </summary>
-		
-		[XmlElement("gasGravity", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravity")]
         public double? GasGravity {
             get {
                 return gasGravityField;
@@ -35718,7 +36830,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasFormationVolumeFactorStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasFormationVolumeFactorStd", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("gasFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure GasFormationVolumeFactorStd {
             get {
                 return gasFormationVolumeFactorStdField;
@@ -35734,8 +36847,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasZFactor property
         /// </summary>
-		
-		[XmlElement("gasZFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasZFactor")]
         public double? GasZFactor {
             get {
                 return gasZFactorField;
@@ -35770,7 +36883,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
                 return gasViscosityField;
@@ -35787,7 +36901,7 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeGasProducedVolume property
         /// </summary>
         [ComponentElement]
-        [XmlElement("cumulativeGasProducedVolume", DataType="standardVolumeMeasure")]
+        [XmlElement("cumulativeGasProducedVolume")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
                 return cumulativeGasProducedVolumeField;
@@ -35821,7 +36935,7 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeGasProducedRatioStd property
         /// </summary>
         [ComponentElement]
-        [XmlElement("cumulativeGasProducedRatioStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [XmlElement("cumulativeGasProducedRatioStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
                 return cumulativeGasProducedRatioStdField;
@@ -35856,7 +36970,8 @@ namespace Energistics.DataAccess.PRODML131
         /// condensateYieldVolumeRatio1Std property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("condensateYieldVolumeRatio1Std", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("condensateYieldVolumeRatio1Std")]
         public VolumePerStandardVolumeMeasure CondensateYieldVolumeRatio1Std {
             get {
                 return condensateYieldVolumeRatio1StdField;
@@ -35873,7 +36988,8 @@ namespace Energistics.DataAccess.PRODML131
         /// condensateYieldVolumeRatio2Std property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("condensateYieldVolumeRatio2Std", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("condensateYieldVolumeRatio2Std")]
         public VolumePerStandardVolumeMeasure CondensateYieldVolumeRatio2Std {
             get {
                 return condensateYieldVolumeRatio2StdField;
@@ -35890,7 +37006,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -35971,7 +37088,7 @@ namespace Energistics.DataAccess.PRODML131
         /// stockTank property
         /// </summary>
         [ComponentElement]
-        [XmlElement("stockTank", DataType="cs_fluidResultStockTank")]
+        [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -36034,7 +37151,8 @@ namespace Energistics.DataAccess.PRODML131
         /// vaporComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
                 return vaporCompositionField;
@@ -36063,7 +37181,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
                 return liquidCompositionField;
@@ -36092,7 +37211,8 @@ namespace Energistics.DataAccess.PRODML131
         /// compositeComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCompositeComposition")]
+		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
                 return compositeCompositionField;
@@ -36123,7 +37243,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -36177,7 +37298,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -36213,7 +37335,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("testTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
                 return testTemperatureField;
@@ -36230,7 +37353,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -36264,7 +37387,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -36316,7 +37439,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidDropoutReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("liquidDropoutReference", DataType="cs_fluidResultVolumeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultVolumeReference")]
+		[XmlElement("liquidDropoutReference")]
         public FluidResultVolumeReference LiquidDropoutReference {
             get {
                 return liquidDropoutReferenceField;
@@ -36333,7 +37457,8 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeGasProducedReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("cumulativeGasProducedReference", DataType="standardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumeMeasure")]
+		[XmlElement("cumulativeGasProducedReference")]
         public StandardVolumeMeasure CumulativeGasProducedReference {
             get {
                 return cumulativeGasProducedReferenceField;
@@ -36350,7 +37475,8 @@ namespace Energistics.DataAccess.PRODML131
         /// condensateYieldPressure1 property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("condensateYieldPressure1", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("condensateYieldPressure1")]
         public PressureMeasure CondensateYieldPressure1 {
             get {
                 return condensateYieldPressure1Field;
@@ -36367,7 +37493,8 @@ namespace Energistics.DataAccess.PRODML131
         /// condensateYieldTemperature1 property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("condensateYieldTemperature1", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("condensateYieldTemperature1")]
         public ThermodynamicTemperatureMeasure CondensateYieldTemperature1 {
             get {
                 return condensateYieldTemperature1Field;
@@ -36384,7 +37511,8 @@ namespace Energistics.DataAccess.PRODML131
         /// condensateYieldPressure2 property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("condensateYieldPressure2", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("condensateYieldPressure2")]
         public PressureMeasure CondensateYieldPressure2 {
             get {
                 return condensateYieldPressure2Field;
@@ -36401,7 +37529,8 @@ namespace Energistics.DataAccess.PRODML131
         /// condensateYieldTemperature2 property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("condensateYieldTemperature2", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("condensateYieldTemperature2")]
         public ThermodynamicTemperatureMeasure CondensateYieldTemperature2 {
             get {
                 return condensateYieldTemperature2Field;
@@ -36419,7 +37548,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("jcrvTestStep", DataType="cs_fluidResultJCurveTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultJCurveTestStep")]
+		[XmlElement("jcrvTestStep")]
         public List<FluidResultJCurveTestStep> JcrvTestStep {
             get {
                 return jcrvTestStepField;
@@ -36450,7 +37580,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -36504,7 +37635,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -36540,7 +37672,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
                 return stepPressureField;
@@ -36557,7 +37690,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
                 return oilMassDensityField;
@@ -36574,7 +37708,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilFormationVolumeFactorStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilFormationVolumeFactorStd", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("oilFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure OilFormationVolumeFactorStd {
             get {
                 return oilFormationVolumeFactorStdField;
@@ -36591,7 +37726,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilCompressibility property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilCompressibility", DataType="compressibilityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "compressibilityMeasure")]
+		[XmlElement("oilCompressibility")]
         public CompressibilityMeasure OilCompressibility {
             get {
                 return oilCompressibilityField;
@@ -36608,7 +37744,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
                 return oilViscosityField;
@@ -36625,7 +37762,7 @@ namespace Energistics.DataAccess.PRODML131
         /// oilVolume property
         /// </summary>
         [ComponentElement]
-        [XmlElement("oilVolume", DataType="volumeMeasure")]
+        [XmlElement("oilVolume")]
         public VolumeMeasure OilVolume {
             get {
                 return oilVolumeField;
@@ -36659,7 +37796,7 @@ namespace Energistics.DataAccess.PRODML131
         /// oilShrinkageFactor property
         /// </summary>
         [ComponentElement]
-        [XmlElement("oilShrinkageFactor", DataType="volumePerVolumeMeasure")]
+        [XmlElement("oilShrinkageFactor")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
                 return oilShrinkageFactorField;
@@ -36693,8 +37830,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasMolecularWeight property
         /// </summary>
-		
-		[XmlElement("gasMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasMolecularWeight")]
         public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
@@ -36728,8 +37865,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasGravity property
         /// </summary>
-		
-		[XmlElement("gasGravity", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravity")]
         public double? GasGravity {
             get {
                 return gasGravityField;
@@ -36764,7 +37901,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
                 return gasMassDensityField;
@@ -36781,7 +37919,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasFormationVolumeFactorStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasFormationVolumeFactorStd", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("gasFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure GasFormationVolumeFactorStd {
             get {
                 return gasFormationVolumeFactorStdField;
@@ -36797,8 +37936,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasZFactor property
         /// </summary>
-		
-		[XmlElement("gasZFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasZFactor")]
         public double? GasZFactor {
             get {
                 return gasZFactorField;
@@ -36833,7 +37972,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
                 return gasViscosityField;
@@ -36850,7 +37990,8 @@ namespace Energistics.DataAccess.PRODML131
         /// totalFormationVolumeFactorStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("totalFormationVolumeFactorStd", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("totalFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure TotalFormationVolumeFactorStd {
             get {
                 return totalFormationVolumeFactorStdField;
@@ -36867,7 +38008,8 @@ namespace Energistics.DataAccess.PRODML131
         /// solutionGORStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("solutionGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("solutionGORStd")]
         public StandardVolumePerStandardVolumeMeasure SolutionGORStd {
             get {
                 return solutionGORStdField;
@@ -36884,7 +38026,8 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeStockTankGORStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("cumulativeStockTankGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("cumulativeStockTankGORStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeStockTankGORStd {
             get {
                 return cumulativeStockTankGORStdField;
@@ -36901,7 +38044,8 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeSaturatedGORStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("cumulativeSaturatedGORStd", DataType="standardVolumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerVolumeMeasure")]
+		[XmlElement("cumulativeSaturatedGORStd")]
         public StandardVolumePerVolumeMeasure CumulativeSaturatedGORStd {
             get {
                 return cumulativeSaturatedGORStdField;
@@ -36918,7 +38062,8 @@ namespace Energistics.DataAccess.PRODML131
         /// residualAPIGravity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("residualAPIGravity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("residualAPIGravity")]
         public DensityMeasure ResidualAPIGravity {
             get {
                 return residualAPIGravityField;
@@ -36935,7 +38080,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -37016,7 +38162,7 @@ namespace Energistics.DataAccess.PRODML131
         /// stockTank property
         /// </summary>
         [ComponentElement]
-        [XmlElement("stockTank", DataType="cs_fluidResultStockTank")]
+        [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -37079,7 +38225,8 @@ namespace Energistics.DataAccess.PRODML131
         /// vaporComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
                 return vaporCompositionField;
@@ -37108,7 +38255,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
                 return liquidCompositionField;
@@ -37137,7 +38285,8 @@ namespace Energistics.DataAccess.PRODML131
         /// compositeComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCompositeComposition")]
+		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
                 return compositeCompositionField;
@@ -37168,7 +38317,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -37222,7 +38372,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -37258,7 +38409,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("testTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
                 return testTemperatureField;
@@ -37275,7 +38427,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -37309,7 +38461,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -37361,7 +38513,8 @@ namespace Energistics.DataAccess.PRODML131
         /// shrinkageReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("shrinkageReference", DataType="cs_fluidResultVolumeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultVolumeReference")]
+		[XmlElement("shrinkageReference")]
         public FluidResultVolumeReference ShrinkageReference {
             get {
                 return shrinkageReferenceField;
@@ -37379,7 +38532,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("dlTestStep", DataType="cs_fluidResultDifferentialLiberationTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultDifferentialLiberationTestStep")]
+		[XmlElement("dlTestStep")]
         public List<FluidResultDifferentialLiberationTestStep> DLTestStep {
             get {
                 return dlTestStepField;
@@ -37410,7 +38564,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -37464,7 +38619,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -37500,7 +38656,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
                 return stepPressureField;
@@ -37517,7 +38674,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
                 return oilViscosityField;
@@ -37534,7 +38692,7 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidVolume property
         /// </summary>
         [ComponentElement]
-        [XmlElement("liquidVolume", DataType="volumeMeasure")]
+        [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
                 return liquidVolumeField;
@@ -37568,7 +38726,7 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidDropoutPercent property
         /// </summary>
         [ComponentElement]
-        [XmlElement("liquidDropoutPercent", DataType="volumePerVolumeMeasurePercent")]
+        [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
                 return liquidDropoutPercentField;
@@ -37602,8 +38760,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasMolecularWeight property
         /// </summary>
-		
-		[XmlElement("gasMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasMolecularWeight")]
         public double? GasMolecularWeight {
             get {
                 return gasMolecularWeightField;
@@ -37637,8 +38795,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasGravity property
         /// </summary>
-		
-		[XmlElement("gasGravity", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravity")]
         public double? GasGravity {
             get {
                 return gasGravityField;
@@ -37673,7 +38831,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasFormationVolumeFactorStd property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasFormationVolumeFactorStd", DataType="volumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerStandardVolumeMeasure")]
+		[XmlElement("gasFormationVolumeFactorStd")]
         public VolumePerStandardVolumeMeasure GasFormationVolumeFactorStd {
             get {
                 return gasFormationVolumeFactorStdField;
@@ -37689,8 +38848,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasZFactor property
         /// </summary>
-		
-		[XmlElement("gasZFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasZFactor")]
         public double? GasZFactor {
             get {
                 return gasZFactorField;
@@ -37725,7 +38884,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
                 return gasViscosityField;
@@ -37742,7 +38902,7 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeGasProducedVolume property
         /// </summary>
         [ComponentElement]
-        [XmlElement("cumulativeGasProducedVolume", DataType="standardVolumeMeasure")]
+        [XmlElement("cumulativeGasProducedVolume")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
                 return cumulativeGasProducedVolumeField;
@@ -37776,7 +38936,7 @@ namespace Energistics.DataAccess.PRODML131
         /// cumulativeGasProducedRatioStd property
         /// </summary>
         [ComponentElement]
-        [XmlElement("cumulativeGasProducedRatioStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [XmlElement("cumulativeGasProducedRatioStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
                 return cumulativeGasProducedRatioStdField;
@@ -37811,7 +38971,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -37892,7 +39053,7 @@ namespace Energistics.DataAccess.PRODML131
         /// stockTank property
         /// </summary>
         [ComponentElement]
-        [XmlElement("stockTank", DataType="cs_fluidResultStockTank")]
+        [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -37955,7 +39116,8 @@ namespace Energistics.DataAccess.PRODML131
         /// vaporComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
                 return vaporCompositionField;
@@ -37984,7 +39146,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
                 return liquidCompositionField;
@@ -38013,7 +39176,8 @@ namespace Energistics.DataAccess.PRODML131
         /// compositeComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCompositeComposition")]
+		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
                 return compositeCompositionField;
@@ -38044,7 +39208,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -38098,7 +39263,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -38134,7 +39300,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("testTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
                 return testTemperatureField;
@@ -38151,7 +39318,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -38185,7 +39352,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -38237,7 +39404,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidDropoutReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("liquidDropoutReference", DataType="cs_fluidResultVolumeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultVolumeReference")]
+		[XmlElement("liquidDropoutReference")]
         public FluidResultVolumeReference LiquidDropoutReference {
             get {
                 return liquidDropoutReferenceField;
@@ -38255,7 +39423,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The volume is corrected to standard conditions of temperature and pressure.")]
         [ComponentElement]
-		[XmlElement("cumulativeGasProducedReferenceStd", DataType="standardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumeMeasure")]
+		[XmlElement("cumulativeGasProducedReferenceStd")]
         public StandardVolumeMeasure CumulativeGasProducedReferenceStd {
             get {
                 return cumulativeGasProducedReferenceStdField;
@@ -38273,7 +39442,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("cvdTestStep", DataType="cs_fluidResultCvdTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCvdTestStep")]
+		[XmlElement("cvdTestStep")]
         public List<FluidResultCvdTestStep> CvdTestStep {
             get {
                 return cvdTestStepField;
@@ -38304,7 +39474,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -38358,7 +39529,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -38394,7 +39566,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("stepPressure")]
         public PressureMeasure StepPressure {
             get {
                 return stepPressureField;
@@ -38411,7 +39584,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("oilMassDensity")]
         public DensityMeasure OilMassDensity {
             get {
                 return oilMassDensityField;
@@ -38428,7 +39602,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilCompressibility property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilCompressibility", DataType="compressibilityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "compressibilityMeasure")]
+		[XmlElement("oilCompressibility")]
         public CompressibilityMeasure OilCompressibility {
             get {
                 return oilCompressibilityField;
@@ -38445,7 +39620,8 @@ namespace Energistics.DataAccess.PRODML131
         /// oilViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("oilViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("oilViscosity")]
         public DynamicViscosityMeasure OilViscosity {
             get {
                 return oilViscosityField;
@@ -38530,7 +39706,7 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidDropoutPercent property
         /// </summary>
         [ComponentElement]
-        [XmlElement("liquidDropoutPercent", DataType="volumePerVolumeMeasurePercent")]
+        [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
                 return liquidDropoutPercentField;
@@ -38595,7 +39771,8 @@ namespace Energistics.DataAccess.PRODML131
         /// relativeVolumeRatio property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("relativeVolumeRatio", DataType="volumePerVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
+		[XmlElement("relativeVolumeRatio")]
         public VolumePerVolumeMeasure RelativeVolumeRatio {
             get {
                 return relativeVolumeRatioField;
@@ -38612,7 +39789,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasMassDensity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasMassDensity", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("gasMassDensity")]
         public DensityMeasure GasMassDensity {
             get {
                 return gasMassDensityField;
@@ -38628,8 +39806,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasZFactor property
         /// </summary>
-		
-		[XmlElement("gasZFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasZFactor")]
         public double? GasZFactor {
             get {
                 return gasZFactorField;
@@ -38664,7 +39842,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasCompressibility property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasCompressibility", DataType="compressibilityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "compressibilityMeasure")]
+		[XmlElement("gasCompressibility")]
         public CompressibilityMeasure GasCompressibility {
             get {
                 return gasCompressibilityField;
@@ -38681,7 +39860,8 @@ namespace Energistics.DataAccess.PRODML131
         /// gasViscosity property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("gasViscosity", DataType="dynamicViscosityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dynamicViscosityMeasure")]
+		[XmlElement("gasViscosity")]
         public DynamicViscosityMeasure GasViscosity {
             get {
                 return gasViscosityField;
@@ -38697,8 +39877,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// yFactor property
         /// </summary>
-		
-		[XmlElement("yFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("yFactor")]
         public double? YFactor {
             get {
                 return yFactorField;
@@ -38733,7 +39913,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -38814,7 +39995,7 @@ namespace Energistics.DataAccess.PRODML131
         /// stockTank property
         /// </summary>
         [ComponentElement]
-        [XmlElement("stockTank", DataType="cs_fluidResultStockTank")]
+        [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -38877,7 +40058,8 @@ namespace Energistics.DataAccess.PRODML131
         /// vaporComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("vaporComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("vaporComposition")]
         public List<FluidResultPhaseComposition> VaporComposition {
             get {
                 return vaporCompositionField;
@@ -38906,7 +40088,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("liquidComposition", DataType="cs_fluidResultPhaseComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultPhaseComposition")]
+		[XmlElement("liquidComposition")]
         public List<FluidResultPhaseComposition> LiquidComposition {
             get {
                 return liquidCompositionField;
@@ -38935,7 +40118,8 @@ namespace Energistics.DataAccess.PRODML131
         /// compositeComposition property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("compositeComposition", DataType="cs_fluidResultCompositeComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCompositeComposition")]
+		[XmlElement("compositeComposition")]
         public List<FluidResultCompositeComposition> CompositeComposition {
             get {
                 return compositeCompositionField;
@@ -38966,7 +40150,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -39020,7 +40205,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -39056,7 +40242,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("testTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("testTemperature")]
         public ThermodynamicTemperatureMeasure TestTemperature {
             get {
                 return testTemperatureField;
@@ -39073,7 +40260,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -39107,7 +40294,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -39159,7 +40346,8 @@ namespace Energistics.DataAccess.PRODML131
         /// liquidDropoutReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("liquidDropoutReference", DataType="cs_fluidResultVolumeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultVolumeReference")]
+		[XmlElement("liquidDropoutReference")]
         public FluidResultVolumeReference LiquidDropoutReference {
             get {
                 return liquidDropoutReferenceField;
@@ -39176,7 +40364,8 @@ namespace Energistics.DataAccess.PRODML131
         /// relativeVolumeReference property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("relativeVolumeReference", DataType="cs_fluidResultVolumeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultVolumeReference")]
+		[XmlElement("relativeVolumeReference")]
         public FluidResultVolumeReference RelativeVolumeReference {
             get {
                 return relativeVolumeReferenceField;
@@ -39194,7 +40383,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("cceTestStep", DataType="cs_fluidResultCceTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultCceTestStep")]
+		[XmlElement("cceTestStep")]
         public List<FluidResultCceTestStep> CceTestStep {
             get {
                 return cceTestStepField;
@@ -39225,7 +40415,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -39279,7 +40470,8 @@ namespace Energistics.DataAccess.PRODML131
         /// stepNumber property
         /// </summary>
 		[Description("The stepNumber represents a row in the table.")]
-		[XmlElement("stepNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("stepNumber")]
         public short? StepNumber {
             get {
                 return stepNumberField;
@@ -39315,7 +40507,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("stepTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("stepTemperature")]
         public ThermodynamicTemperatureMeasure StepTemperature {
             get {
                 return stepTemperatureField;
@@ -39332,7 +40525,7 @@ namespace Energistics.DataAccess.PRODML131
         /// bubblePointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("bubblePointPressure", DataType="pressureMeasure")]
+        [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -39366,7 +40559,7 @@ namespace Energistics.DataAccess.PRODML131
         /// retrogradeDewPointPressure property
         /// </summary>
         [ComponentElement]
-        [XmlElement("retrogradeDewPointPressure", DataType="pressureMeasure")]
+        [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -39418,7 +40611,8 @@ namespace Energistics.DataAccess.PRODML131
         /// dewPointPressure property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("dewPointPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("dewPointPressure")]
         public PressureMeasure DewPointPressure {
             get {
                 return dewPointPressureField;
@@ -39435,7 +40629,8 @@ namespace Energistics.DataAccess.PRODML131
         /// comment property
         /// </summary>
 		[StringLength(4000)]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -39454,7 +40649,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -39508,7 +40704,8 @@ namespace Energistics.DataAccess.PRODML131
         /// testNumber property
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxxxxxxxx")]
-		[XmlElement("testNumber", DataType="positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("testNumber")]
         public short? TestNumber {
             get {
                 return testNumberField;
@@ -39544,7 +40741,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("saturationTestStep", DataType="cs_fluidResultSaturationTestStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultSaturationTestStep")]
+		[XmlElement("saturationTestStep")]
         public List<FluidResultSaturationTestStep> SaturationTestStep {
             get {
                 return saturationTestStepField;
@@ -39575,7 +40773,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -39651,7 +40850,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [StringLength(40)]
-        [XmlAttribute("referenceComponent", DataType = "kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+        [XmlAttribute("referenceComponent")]
 		
         public string ReferenceComponent {
             get {
@@ -39723,7 +40923,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the component is the  primary component in the composition.  False (\"false\" or \"0\") or not given indicates that this is not a primary component.")]
-		[XmlElement("isPrimary", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("isPrimary")]
         public bool? IsPrimary {
             get {
                 return isPrimaryField;
@@ -39741,7 +40942,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [StringLength(64)]
-		[XmlElement("componentName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("componentName")]
         public string ComponentName {
             get {
                 return componentNameField;
@@ -39757,8 +40959,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// componentBaseKind property
         /// </summary>
-		
-		[XmlElement("componentBaseKind", DataType="FluidComponent")]
+		[EnergisticsDataTypeAttribute(DataType = "FluidComponent")]
+		[XmlElement("componentBaseKind")]
         public FluidComponent ComponentBaseKind {
             get {
                 return componentBaseKindField;
@@ -39792,8 +40994,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// componentKind property
         /// </summary>
-		
-		[XmlElement("componentKind", DataType="FluidComponentKind")]
+		[EnergisticsDataTypeAttribute(DataType = "FluidComponentKind")]
+		[XmlElement("componentKind")]
         public FluidComponentKind ComponentKind {
             get {
                 return componentKindField;
@@ -39827,8 +41029,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// molecularWeight property
         /// </summary>
-		
-		[XmlElement("molecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("molecularWeight")]
         public double? MolecularWeight {
             get {
                 return molecularWeightField;
@@ -39863,7 +41065,8 @@ namespace Energistics.DataAccess.PRODML131
         /// weightPercent property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("weightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("weightPercent")]
         public MassConcentrationMeasurePercent WeightPercent {
             get {
                 return weightPercentField;
@@ -39880,7 +41083,8 @@ namespace Energistics.DataAccess.PRODML131
         /// molePercent property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("molePercent", DataType="molarFractionMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "molarFractionMeasurePercent")]
+		[XmlElement("molePercent")]
         public MolarFractionMeasurePercent MolePercent {
             get {
                 return molePercentField;
@@ -39896,8 +41100,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// specificGravity property
         /// </summary>
-		
-		[XmlElement("specificGravity", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("specificGravity")]
         public double? SpecificGravity {
             get {
                 return specificGravityField;
@@ -39932,7 +41136,8 @@ namespace Energistics.DataAccess.PRODML131
         /// boilingPoint property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("boilingPoint", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("boilingPoint")]
         public ThermodynamicTemperatureMeasure BoilingPoint {
             get {
                 return boilingPointField;
@@ -39949,7 +41154,8 @@ namespace Energistics.DataAccess.PRODML131
         /// criticalPressure property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("criticalPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("criticalPressure")]
         public PressureMeasure CriticalPressure {
             get {
                 return criticalPressureField;
@@ -39966,7 +41172,8 @@ namespace Energistics.DataAccess.PRODML131
         /// criticalTemperature property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("criticalTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("criticalTemperature")]
         public ThermodynamicTemperatureMeasure CriticalTemperature {
             get {
                 return criticalTemperatureField;
@@ -39983,7 +41190,8 @@ namespace Energistics.DataAccess.PRODML131
         /// criticalVolume property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("criticalVolume", DataType="volumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
+		[XmlElement("criticalVolume")]
         public VolumeMeasure CriticalVolume {
             get {
                 return criticalVolumeField;
@@ -39999,8 +41207,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// acentricFactor property
         /// </summary>
-		
-		[XmlElement("acentricFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("acentricFactor")]
         public double? AcentricFactor {
             get {
                 return acentricFactorField;
@@ -40035,7 +41243,8 @@ namespace Energistics.DataAccess.PRODML131
         /// volumeTranslationFactor property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("volumeTranslationFactor", DataType="molarVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "molarVolumeMeasure")]
+		[XmlElement("volumeTranslationFactor")]
         public MolarVolumeMeasure VolumeTranslationFactor {
             get {
                 return volumeTranslationFactorField;
@@ -40051,8 +41260,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// alphaShapeFactor property
         /// </summary>
-		
-		[XmlElement("alphaShapeFactor", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("alphaShapeFactor")]
         public double? AlphaShapeFactor {
             get {
                 return alphaShapeFactorField;
@@ -40086,8 +41295,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// watsonKExponent property
         /// </summary>
-		
-		[XmlElement("watsonKExponent", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("watsonKExponent")]
         public double? WatsonKExponent {
             get {
                 return watsonKExponentField;
@@ -40121,8 +41330,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// splitCount property
         /// </summary>
-		
-		[XmlElement("splitCount", DataType="positiveCount")]
+		[EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+		[XmlElement("splitCount")]
         public short? SplitCount {
             get {
                 return splitCountField;
@@ -40156,8 +41365,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// plusMinimumMolecularWeight property
         /// </summary>
-		
-		[XmlElement("plusMinimumMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("plusMinimumMolecularWeight")]
         public double? PlusMinimumMolecularWeight {
             get {
                 return plusMinimumMolecularWeightField;
@@ -40191,8 +41400,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// plusMaximumMolecularWeight property
         /// </summary>
-		
-		[XmlElement("plusMaximumMolecularWeight", DataType="unitlessQuantity")]
+		[EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("plusMaximumMolecularWeight")]
         public double? PlusMaximumMolecularWeight {
             get {
                 return plusMaximumMolecularWeightField;
@@ -40228,7 +41437,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Reid vapor pressure of the product. The absolute vapor pressure of volatile crude oil and  volatile petroleum liquids, except liquefied petroleum gases, as  determined in  accordance with American Society for Testing and Materials under the designation ASTM D323-56.")]
         [ComponentElement]
-		[XmlElement("rvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("rvp")]
         public PressureMeasure Rvp {
             get {
                 return rvpField;
@@ -40246,7 +41456,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("True vapor pressure of the product. The equilibrium partial pressure exerted by a petroleum liquid  as determined in accordance with standard methods.")]
         [ComponentElement]
-		[XmlElement("tvp", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("tvp")]
         public PressureMeasure Tvp {
             get {
                 return tvpField;
@@ -40263,7 +41474,8 @@ namespace Energistics.DataAccess.PRODML131
         /// binaryInteractionCoefficient property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("binaryInteractionCoefficient", DataType="binaryInteractionCoefficient")]
+        [EnergisticsDataTypeAttribute(DataType = "binaryInteractionCoefficient")]
+		[XmlElement("binaryInteractionCoefficient")]
         public List<BinaryInteractionCoefficient> BinaryInteractionCoefficient {
             get {
                 return binaryInteractionCoefficientField;
@@ -40291,8 +41503,8 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// calculated property
         /// </summary>
-		
-		[XmlElement("calculated", DataType="logicalBoolean")]
+		[EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("calculated")]
         public bool? Calculated {
             get {
                 return calculatedField;
@@ -40329,7 +41541,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -40383,7 +41596,8 @@ namespace Energistics.DataAccess.PRODML131
         /// quality property
         /// </summary>
 		[Required]
-		[XmlElement("quality", DataType="DataQuality")]
+        [EnergisticsDataTypeAttribute(DataType = "DataQuality")]
+		[XmlElement("quality")]
         public DataQuality Quality {
             get {
                 return qualityField;
@@ -40400,7 +41614,8 @@ namespace Energistics.DataAccess.PRODML131
         /// source property
         /// </summary>
 		[StringLength(64)]
-		[XmlElement("source", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("source")]
         public string Source {
             get {
                 return sourceField;
@@ -40417,7 +41632,8 @@ namespace Energistics.DataAccess.PRODML131
         /// purpose property
         /// </summary>
 		[StringLength(256)]
-		[XmlElement("purpose", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("purpose")]
         public string Purpose {
             get {
                 return purposeField;
@@ -40470,7 +41686,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Human recognizable context for the fluid sample that was analyzed.")]
-		[XmlElement("nameFluidSample", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameFluidSample")]
         public string NameFluidSample {
             get {
                 return nameFluidSampleField;
@@ -40488,7 +41705,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Human recognizable context for the fluid analysis that produced this result.")]
-		[XmlElement("nameFluidAnalysis", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameFluidAnalysis")]
         public string NameFluidAnalysis {
             get {
                 return nameFluidAnalysisField;
@@ -40507,7 +41725,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the Fluid Analysis Result.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -40525,7 +41744,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("transferPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("transferPressure")]
         public PressureMeasure TransferPressure {
             get {
                 return transferPressureField;
@@ -40543,7 +41763,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("transferTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("transferTemperature")]
         public ThermodynamicTemperatureMeasure TransferTemperature {
             get {
                 return transferTemperatureField;
@@ -40561,7 +41782,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("reservoirPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("reservoirPressure")]
         public PressureMeasure ReservoirPressure {
             get {
                 return reservoirPressureField;
@@ -40579,7 +41801,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("reservoirTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("reservoirTemperature")]
         public ThermodynamicTemperatureMeasure ReservoirTemperature {
             get {
                 return reservoirTemperatureField;
@@ -40597,7 +41820,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("saturationPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("saturationPressure")]
         public PressureMeasure SaturationPressure {
             get {
                 return saturationPressureField;
@@ -40615,7 +41839,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("producingGORStd", DataType="standardVolumePerStandardVolumeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
+		[XmlElement("producingGORStd")]
         public StandardVolumePerStandardVolumeMeasure ProducingGORStd {
             get {
                 return producingGORStdField;
@@ -40633,7 +41858,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("oilAPIGravityMeasured", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("oilAPIGravityMeasured")]
         public DensityMeasure OilAPIGravityMeasured {
             get {
                 return oilAPIGravityMeasuredField;
@@ -40651,7 +41877,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("oilAPIGravityCorrected", DataType="densityMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
+		[XmlElement("oilAPIGravityCorrected")]
         public DensityMeasure OilAPIGravityCorrected {
             get {
                 return oilAPIGravityCorrectedField;
@@ -40668,7 +41895,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("gasGravityMeasured", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravityMeasured")]
         public double? GasGravityMeasured {
             get {
                 return gasGravityMeasuredField;
@@ -40703,7 +41931,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("gasGravityCorrected", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("gasGravityCorrected")]
         public double? GasGravityCorrected {
             get {
                 return gasGravityCorrectedField;
@@ -40738,7 +41967,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("h2oGravityMeasured", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("h2oGravityMeasured")]
         public double? H2oGravityMeasured {
             get {
                 return h2oGravityMeasuredField;
@@ -40773,7 +42003,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("h2oGravityCorrected", DataType="unitlessQuantity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
+		[XmlElement("h2oGravityCorrected")]
         public double? H2oGravityCorrected {
             get {
                 return h2oGravityCorrectedField;
@@ -40809,7 +42040,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("h2oSalinity", DataType="massConcentrationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
+		[XmlElement("h2oSalinity")]
         public MassConcentrationMeasure H2oSalinity {
             get {
                 return h2oSalinityField;
@@ -40827,7 +42059,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("aromaticsWeightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("aromaticsWeightPercent")]
         public MassConcentrationMeasurePercent AromaticsWeightPercent {
             get {
                 return aromaticsWeightPercentField;
@@ -40845,7 +42078,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("asphaltenesWeightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("asphaltenesWeightPercent")]
         public MassConcentrationMeasurePercent AsphaltenesWeightPercent {
             get {
                 return asphaltenesWeightPercentField;
@@ -40863,7 +42097,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("napthenesWeightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("napthenesWeightPercent")]
         public MassConcentrationMeasurePercent NapthenesWeightPercent {
             get {
                 return napthenesWeightPercentField;
@@ -40881,7 +42116,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("parafinsWeightPercent", DataType="massConcentrationMeasurePercent")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasurePercent")]
+		[XmlElement("parafinsWeightPercent")]
         public MassConcentrationMeasurePercent ParafinsWeightPercent {
             get {
                 return parafinsWeightPercentField;
@@ -40899,7 +42135,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The definition of standard pressure for all elements which end in \"Std\".")]
         [ComponentElement]
-		[XmlElement("standardPressure", DataType="pressureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
+		[XmlElement("standardPressure")]
         public PressureMeasure StandardPressure {
             get {
                 return standardPressureField;
@@ -40917,7 +42154,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The definition of standard temperature for all elements which end in \"Std\".")]
         [ComponentElement]
-		[XmlElement("standardTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("standardTemperature")]
         public ThermodynamicTemperatureMeasure StandardTemperature {
             get {
                 return standardTemperatureField;
@@ -40934,7 +42172,8 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("eosMOdel", DataType="EosModelKind")]
+        [EnergisticsDataTypeAttribute(DataType = "EosModelKind")]
+		[XmlElement("eosMOdel")]
         public EosModelKind EosMOdel {
             get {
                 return eosMOdelField;
@@ -40970,7 +42209,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("analysisDescription", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("analysisDescription")]
         public string AnalysisDescription {
             get {
                 return analysisDescriptionField;
@@ -40988,7 +42228,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("analysisPurpose", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("analysisPurpose")]
         public string AnalysisPurpose {
             get {
                 return analysisPurposeField;
@@ -41006,7 +42247,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [ComponentElement]
-		[XmlElement("fluidDataQuality", DataType="cs_fluidResultDataQuality")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultDataQuality")]
+		[XmlElement("fluidDataQuality")]
         public FluidResultDataQuality FluidDataQuality {
             get {
                 return fluidDataQualityField;
@@ -41024,7 +42266,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [RecurringElement]
-		[XmlElement("fluidSampleComposition", DataType="cs_fluidResultComposition")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultComposition")]
+		[XmlElement("fluidSampleComposition")]
         public List<FluidResultComposition> FluidSampleComposition {
             get {
                 return fluidSampleCompositionField;
@@ -41286,7 +42529,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
         [RecurringElement]
-		[XmlElement("fluidSampleContaminant", DataType="cs_fluidResultContaminant")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultContaminant")]
+		[XmlElement("fluidSampleContaminant")]
         public List<FluidResultContaminant> FluidSampleContaminant {
             get {
                 return fluidSampleContaminantField;
@@ -41316,7 +42560,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -41333,7 +42578,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -41352,7 +42598,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the Fluid Sample that was analyzed.")]
-        [XmlAttribute("uidFluidSample", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("uidFluidSample")]
 		
         public string UidFluidSample {
             get {
@@ -41372,7 +42619,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the Fluid Analysis that produced this result.")]
-        [XmlAttribute("uidFluidAnalysis", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("uidFluidAnalysis")]
 		
         public string UidFluidAnalysis {
             get {
@@ -41392,7 +42640,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -41460,7 +42709,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the Fluid Analysis.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -41544,6 +42794,7 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("analysisdDate", DataType="date")]
         public DateTime? AnalysisdDate {
             get {
@@ -41580,7 +42831,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the application that was run by the user.")]
-		[XmlElement("applicationName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("applicationName")]
         public string ApplicationName {
             get {
                 return applicationNameField;
@@ -41598,7 +42850,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The version of the application that was run by the user.")]
-		[XmlElement("applicationVersion", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("applicationVersion")]
         public string ApplicationVersion {
             get {
                 return applicationVersionField;
@@ -41616,7 +42869,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("analysisCompany", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("analysisCompany")]
         public string AnalysisCompany {
             get {
                 return analysisCompanyField;
@@ -41634,7 +42888,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the analyst or user who is responsible for the results.")]
-		[XmlElement("personName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("personName")]
         public string PersonName {
             get {
                 return personNameField;
@@ -41652,7 +42907,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("reportIdentifier", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("reportIdentifier")]
         public string ReportIdentifier {
             get {
                 return reportIdentifierField;
@@ -41669,6 +42925,7 @@ namespace Energistics.DataAccess.PRODML131
         /// xxxxxxxxxxxxxxxx
         /// </summary>
 		[Description("xxxxxxxxxxxxxxxx")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("reportDate", DataType="date")]
         public DateTime? ReportDate {
             get {
@@ -41705,7 +42962,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(256)]
         [Description("xxxxxxxxxxxxxxxx")]
-		[XmlElement("reportLocation", DataType="descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+		[XmlElement("reportLocation")]
         public string ReportLocation {
             get {
                 return reportLocationField;
@@ -41723,7 +42981,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data  objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -41740,7 +42999,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -41759,7 +43019,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -41828,7 +43089,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name for this OTDR.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -41845,7 +43107,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The reason the OTDR test was run. The three main reasons are pre-installation' which is before the installation of the fiber; 'post-installation' which is used to validate a successful fiber installation; and 'DTS run' a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.
         /// </summary>
 		[Description("The reason the OTDR test was run. The three main reasons are pre-installation' which is before the installation of the fiber; 'post-installation'  which is used to validate a successful fiber installation;  and 'DTS run' a quality check of the fiber prior to a DTS run. A fourth permitted value is 'other'.")]
-		[XmlElement("reasonForRun", DataType="OTDRReason")]
+        [EnergisticsDataTypeAttribute(DataType = "OTDRReason")]
+		[XmlElement("reasonForRun")]
         public OTDRReason ReasonForRun {
             get {
                 return reasonForRunField;
@@ -41881,7 +43144,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The dateTime of the run.")]
-		[XmlElement("dTimRun", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimRun")]
         public Timestamp? DateTimeRun {
             get {
                 return dTimRunField;
@@ -41899,7 +43163,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to the external file used to record the OTDR data. Note this file will not be in an Energistics format but likely in a special OTDR format.")]
         [ComponentElement]
-		[XmlElement("dataInOTDRFile", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("dataInOTDRFile")]
         public RefNameString DataInOTDRFile {
             get {
                 return dataInOTDRFileField;
@@ -41917,7 +43182,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to the well log used to record the table of data.")]
         [ComponentElement]
-		[XmlElement("OTDRImageFile", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("OTDRImageFile")]
         public RefNameString OTDRImageFile {
             get {
                 return OTDRImageFileField;
@@ -41935,7 +43201,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A reference to the instrument box that was used for the OTDR run")]
         [ComponentElement]
-		[XmlElement("OTDRInstrument", DataType="cs_fiberOTDRInstrumentBox")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberOTDRInstrumentBox")]
+		[XmlElement("OTDRInstrument")]
         public FiberOTDRInstrumentBox OTDRInstrument {
             get {
                 return OTDRInstrumentField;
@@ -41954,7 +43221,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The point measured along the optical path at which this OTDR survey starts.")]
         [ComponentElement]
-		[XmlElement("opticalPathDistanceStart", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathDistanceStart")]
         public LengthMeasure OpticalPathDistanceStart {
             get {
                 return opticalPathDistanceStartField;
@@ -41973,7 +43241,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The point measured along the optical path at which this OTDR survey ends.")]
         [ComponentElement]
-		[XmlElement("opticalPathDistanceEnd", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathDistanceEnd")]
         public LengthMeasure OpticalPathDistanceEnd {
             get {
                 return opticalPathDistanceEndField;
@@ -41991,7 +43260,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum. The direction of the OTDR survey.  \"Forward\"  means \"in the same direction as the positive direction along the optical path\".")]
-		[XmlElement("direction", DataType="OTDRDirection")]
+        [EnergisticsDataTypeAttribute(DataType = "OTDRDirection")]
+		[XmlElement("direction")]
         public OTDRDirection? Direction {
             get {
                 return directionField;
@@ -42010,7 +43280,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The wavelength at which this OTDR survey was carried out.")]
         [ComponentElement]
-		[XmlElement("wavelength", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
                 return wavelengthField;
@@ -42028,7 +43299,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Contact for the person who performed the OTDR reading")]
         [ComponentElement]
-		[XmlElement("measurementContact", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("measurementContact")]
         public BusinessAssociate MeasurementContact {
             get {
                 return measurementContactField;
@@ -42046,7 +43318,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -42077,7 +43350,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -42151,7 +43425,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Contact information for the person/company that provided the equipment")]
         [ComponentElement]
-		[XmlElement("instrumentVendor", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("instrumentVendor")]
         public BusinessAssociate InstrumentVendor {
             get {
                 return instrumentVendorField;
@@ -42196,7 +43471,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name for the item of equipment.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -42214,7 +43490,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The manufacturer for this item of equipment.")]
-		[XmlElement("manufacturer", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("manufacturer")]
         public string Manufacturer {
             get {
                 return manufacturerField;
@@ -42231,6 +43508,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Date when the equipment (e.g. instrument box) was manufactured
         /// </summary>
 		[Description("Date when the equipment (e.g. instrument box) was manufactured")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("manufacturingDate", DataType="date")]
         public DateTime? ManufacturingDate {
             get {
@@ -42267,7 +43545,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of equipment. This might include the model type.")]
-		[XmlElement("type", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("type")]
         public string Type {
             get {
                 return typeField;
@@ -42285,7 +43564,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Contact details for the company/person supplying the equipment.")]
         [ComponentElement]
-		[XmlElement("supplier", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("supplier")]
         public BusinessAssociate Supplier {
             get {
                 return supplierField;
@@ -42302,6 +43582,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date on which this fiber segment was suppied.
         /// </summary>
 		[Description("The date on which this fiber segment was suppied.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("supplyDate", DataType="date")]
         public DateTime? SupplyDate {
             get {
@@ -42338,7 +43619,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The model number (alphanumeric) that is used by the supplier to reference the type of fiber that is supplied to the user.")]
-		[XmlElement("supplierModelNumber", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("supplierModelNumber")]
         public string SupplierModelNumber {
             get {
                 return supplierModelNumberField;
@@ -42356,7 +43638,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("Latest known version of the software/firmware that is running in the equipment")]
-		[XmlElement("softwareVersion", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("softwareVersion")]
         public string SoftwareVersion {
             get {
                 return softwareVersionField;
@@ -42374,7 +43657,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the equipment (e.g. optical fiber)")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -42433,7 +43717,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The fraction of incident light that is reflected by a fiber path component. Measured in dB.")]
         [ComponentElement]
-		[XmlElement("reflectance", DataType="dimensionlessMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dimensionlessMeasure")]
+		[XmlElement("reflectance")]
         public DimensionlessMeasure Reflectance {
             get {
                 return reflectanceField;
@@ -42451,7 +43736,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The fraction of incident light that is lost by a fiber path component. Measured in dB.")]
         [ComponentElement]
-		[XmlElement("loss", DataType="dimensionlessMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "dimensionlessMeasure")]
+		[XmlElement("loss")]
         public DimensionlessMeasure Loss {
             get {
                 return lossField;
@@ -42469,7 +43755,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Any remarks that help understand why the optical fiber is no longer in use.")]
-		[XmlElement("reasonForDecommissioning", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("reasonForDecommissioning")]
         public string ReasonForDecommissioning {
             get {
                 return reasonForDecommissioningField;
@@ -42488,7 +43775,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -42524,7 +43812,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Information about the termination used for the fiber")]
-		[XmlElement("terminationType", DataType="TerminationType")]
+        [EnergisticsDataTypeAttribute(DataType = "TerminationType")]
+		[XmlElement("terminationType")]
         public TerminationType? TerminationType {
             get {
                 return terminationTypeField;
@@ -42560,7 +43849,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Specifies whether this is a dry mate or wet mate")]
         [RecurringElement]
-		[XmlElement("connectorType", DataType="FiberConnectorTypes")]
+        [EnergisticsDataTypeAttribute(DataType = "FiberConnectorTypes")]
+		[XmlElement("connectorType")]
         public List<FiberConnectorTypeList> ConnectorType {
             get {
                 return connectorTypeField;
@@ -42590,7 +43880,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Describes whether the fiber end is angle polished or flat polished")]
         [RecurringElement]
-		[XmlElement("endType", DataType="FiberEndType")]
+        [EnergisticsDataTypeAttribute(DataType = "FiberEndType")]
+		[XmlElement("endType")]
         public List<FiberEndType> EndType {
             get {
                 return endTypeField;
@@ -42621,7 +43912,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The uid of this object.")]
-        [XmlAttribute("connectionID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("connectionID")]
 		
         public string ConnectionID {
             get {
@@ -42657,7 +43949,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum.  The type of splice.")]
-		[XmlElement("fiberSpliceType", DataType="FiberSpliceTypes")]
+        [EnergisticsDataTypeAttribute(DataType = "FiberSpliceTypes")]
+		[XmlElement("fiberSpliceType")]
         public FiberSpliceTypeList? FiberSpliceType {
             get {
                 return fiberSpliceTypeField;
@@ -42674,7 +43967,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The pressure rating for which the splice is expected to withstand
         /// </summary>
 		[Description("The pressure rating for which the splice is expected to withstand")]
-		[XmlElement("pressureRating", DataType="PressureUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PressureUom")]
+		[XmlElement("pressureRating")]
         public PressureUom? PressureRating {
             get {
                 return pressureRatingField;
@@ -42709,7 +44003,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The measurement of the bend on the splice.
         /// </summary>
 		[Description("The measurement of the bend on the splice.")]
-		[XmlElement("bendAngle", DataType="PlaneAngleUom")]
+        [EnergisticsDataTypeAttribute(DataType = "PlaneAngleUom")]
+		[XmlElement("bendAngle")]
         public PlaneAngleUom? BendAngle {
             get {
                 return bendAngleField;
@@ -42744,7 +44039,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A useful description of the equipment used to create the splice
         /// </summary>
 		[Description("A useful description of the equipment used to create the splice")]
-		[XmlElement("spliceEquipmentUsed", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("spliceEquipmentUsed")]
         public string SpliceEquipmentUsed {
             get {
                 return spliceEquipmentUsedField;
@@ -42761,7 +44057,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A useful description of the stripping type that was conducted
         /// </summary>
 		[Description("A useful description of the stripping type that was conducted")]
-		[XmlElement("strippingType", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("strippingType")]
         public string StrippingType {
             get {
                 return strippingTypeField;
@@ -42778,7 +44075,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A useful description of the type of protector used in the splice.
         /// </summary>
 		[Description("A useful description of the type of protector used in the splice.")]
-		[XmlElement("protectorType", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("protectorType")]
         public string ProtectorType {
             get {
                 return protectorTypeField;
@@ -42831,7 +44129,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The length of fiber in this optical path section.")]
         [ComponentElement]
-		[XmlElement("fiberLength", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("fiberLength")]
         public LengthMeasure FiberLength {
             get {
                 return fiberLengthField;
@@ -42849,7 +44148,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("For this fiber segment, the amount of \"overstuffing\", ie the excess length of fiber which was installed compared to the length of the facility which is to be surveyed. Example, if 110m of fiber were to be installed to measure 100m length of pipeline, the overstuffing would be 10m.  Overstuffing can be allowed for in the facilityMapping section. The overstuffing is assumed to be linear distributed along the facility being measured.")]
         [ComponentElement]
-		[XmlElement("overStuffing", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("overStuffing")]
         public LengthMeasure OverStuffing {
             get {
                 return overStuffingField;
@@ -42867,7 +44167,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The inner diameter of the core, generally measured in microns (um).")]
         [ComponentElement]
-		[XmlElement("coreDiameter", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("coreDiameter")]
         public LengthMeasure CoreDiameter {
             get {
                 return coreDiameterField;
@@ -42885,7 +44186,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The diameter of the core plus the cladding, generally measured in microns (um).")]
         [ComponentElement]
-		[XmlElement("claddedDiameter", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("claddedDiameter")]
         public LengthMeasure CladdedDiameter {
             get {
                 return claddedDiameterField;
@@ -42903,7 +44205,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The diameter of the cable containing the fiber, including all its sheathing layers.")]
         [ComponentElement]
-		[XmlElement("outsideDiameter", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("outsideDiameter")]
         public LengthMeasure OutsideDiameter {
             get {
                 return outsideDiameterField;
@@ -42920,7 +44223,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The mode of fiber. Enum. Values are single- or multi- mode fiber, or other/unknown.
         /// </summary>
 		[Description("The mode of fiber.  Enum. Values are single- or multi- mode fiber, or other/unknown.")]
-		[XmlElement("mode", DataType="FiberMode")]
+        [EnergisticsDataTypeAttribute(DataType = "FiberMode")]
+		[XmlElement("mode")]
         public FiberMode Mode {
             get {
                 return modeField;
@@ -42956,7 +44260,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of coating on the fiber.")]
-		[XmlElement("coating", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("coating")]
         public string Coating {
             get {
                 return coatingField;
@@ -42974,7 +44279,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of jacket covering the fiber.")]
-		[XmlElement("jacket", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("jacket")]
         public string Jacket {
             get {
                 return jacketField;
@@ -42992,7 +44298,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("Property of the fiber core.")]
-		[XmlElement("coreType", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("coreType")]
         public string CoreType {
             get {
                 return coreTypeField;
@@ -43010,7 +44317,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Additional parameters to define the fiber as a material.")]
         [RecurringElement]
-		[XmlElement("parameter", DataType="indexedObject")]
+        [EnergisticsDataTypeAttribute(DataType = "indexedObject")]
+		[XmlElement("parameter")]
         public List<IndexedObject> Parameter {
             get {
                 return parameterField;
@@ -43040,7 +44348,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The spool number of the particular spool from which this fiber segement was taken. The spool number may contain alphanumeric characters.")]
-		[XmlElement("spoolNumberTag", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("spoolNumberTag")]
         public string SpoolNumberTag {
             get {
                 return spoolNumberTagField;
@@ -43058,7 +44367,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The length of the fiber on the spool when purchased.")]
         [ComponentElement]
-		[XmlElement("spoolLength", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("spoolLength")]
         public LengthMeasure SpoolLength {
             get {
                 return spoolLengthField;
@@ -43076,7 +44386,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The refractive index of a material depends on the frequency (or wavelength) of the light. Hence it is necessary to include both the value (a unitless number) and the frequency (or wavelength) it was measured at. The frequency will be a quantity type with a frequency unit such as Hz.")]
         [RecurringElement]
-		[XmlElement("refractiveIndex", DataType="cs_fiberRefractiveIndex")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberRefractiveIndex")]
+		[XmlElement("refractiveIndex")]
         public List<FiberRefractiveIndex> RefractiveIndex {
             get {
                 return refractiveIndexField;
@@ -43106,7 +44417,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The power loss for one way travel of a beam of light, usually measured in decibels per unit length. It is necessary to include both the value (and its unit) and the wavelength. The wavelength varies with the refractive index, while the frequency remains constant.  The wavelength given to specify this type is the wavelength in a vacuum (refractive index = 1).")]
         [RecurringElement]
-		[XmlElement("oneWayAttenuation", DataType="cs_fiberOneWayAttenuation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberOneWayAttenuation")]
+		[XmlElement("oneWayAttenuation")]
         public List<FiberOneWayAttenuation> OneWayAttenuation {
             get {
                 return oneWayAttenuationField;
@@ -43136,7 +44448,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The means by which this fiber segment is conveyed into the well.")]
         [ComponentElement]
-		[XmlElement("fiberConveyance", DataType="cs_fiberConveyance")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberConveyance")]
+		[XmlElement("fiberConveyance")]
         public FiberConveyance FiberConveyance {
             get {
                 return fiberConveyanceField;
@@ -43153,7 +44466,8 @@ namespace Energistics.DataAccess.PRODML131
         /// ENUM: The type of cable used in this segment. Example: single-fiber-cable 
         /// </summary>
 		[Description("ENUM: The type of cable used in this segment.  Example: single-fiber-cable")]
-		[XmlElement("cableType", DataType="CableType")]
+        [EnergisticsDataTypeAttribute(DataType = "CableType")]
+		[XmlElement("cableType")]
         public CableType? CableType {
             get {
                 return cableTypeField;
@@ -43229,7 +44543,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Indexes things with the same name.  That is the first one, the second one, etc.")]
-        [XmlAttribute("index", DataType = "positiveCount")]
+        [EnergisticsDataTypeAttribute(DataType = "positiveCount")]
+        [XmlAttribute("index")]
 		
         public short Index {
             get {
@@ -43247,7 +44562,8 @@ namespace Energistics.DataAccess.PRODML131
         /// name property
         /// </summary>
 		[StringLength(40)]
-        [XmlAttribute("name", DataType = "kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+        [XmlAttribute("name")]
 		
         public string Name {
             get {
@@ -43265,7 +44581,8 @@ namespace Energistics.DataAccess.PRODML131
         /// uom property
         /// </summary>
 		[StringLength(24)]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -43283,7 +44600,8 @@ namespace Energistics.DataAccess.PRODML131
         /// description property
         /// </summary>
 		[StringLength(256)]
-        [XmlAttribute("description", DataType = "descriptionString")]
+        [EnergisticsDataTypeAttribute(DataType = "descriptionString")]
+        [XmlAttribute("description")]
 		
         public string Description {
             get {
@@ -43356,7 +44674,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The value of the refractive index.")]
         [ComponentElement]
-		[XmlElement("value", DataType="attenuationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "attenuationMeasure")]
+		[XmlElement("value")]
         public AttenuationMeasure Value {
             get {
                 return valueField;
@@ -43374,7 +44693,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The frequency (and uom) for which the refractive index is measured.")]
         [ComponentElement]
-		[XmlElement("frequency", DataType="frequencyMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "frequencyMeasure")]
+		[XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
                 return frequencyField;
@@ -43392,7 +44712,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The wavelength (and uom) for which the refractive index is measured. The reported wavelength should be the wavelength of the light in a vacuum.")]
         [ComponentElement]
-		[XmlElement("wavelength", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
                 return wavelengthField;
@@ -43411,7 +44732,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -43467,7 +44789,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The value of the one way loss per unit of length. The usual uom is decibels per kilometre (dB/km) although this might vary depending on the calibration method used.")]
         [ComponentElement]
-		[XmlElement("value", DataType="attenuationMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "attenuationMeasure")]
+		[XmlElement("value")]
         public AttenuationMeasure Value {
             get {
                 return valueField;
@@ -43484,7 +44807,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The frequency for which the one way loss is measured. 
         /// </summary>
         [ComponentElement]
-        [XmlElement("frequency", DataType="frequencyMeasure")]
+        [XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
                 return frequencyField;
@@ -43518,7 +44841,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The wavelength for which the one way loss is measured. 
         /// </summary>
         [ComponentElement]
-        [XmlElement("wavelength", DataType="lengthMeasure")]
+        [XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
                 return wavelengthField;
@@ -43555,7 +44878,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -43609,7 +44933,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Information on type of intervention conveyance used by the optical path. 
         /// </summary>
         [ComponentElement]
-        [XmlElement("intervention", DataType="cs_interventionConveyance")]
+        [XmlElement("intervention")]
         public InterventionConveyance Intervention {
             get {
                 return interventionField;
@@ -43644,7 +44968,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Information on type of permanent conveyance used by the optical path. 
         /// </summary>
         [ComponentElement]
-        [XmlElement("permanent", DataType="cs_permanentCable")]
+        [XmlElement("permanent")]
         public PermanentCable Permanent {
             get {
                 return permanentField;
@@ -43679,7 +45003,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Information regarding the control line into which a fiber cable may be pumped in order to measure a facility. 
         /// </summary>
         [ComponentElement]
-        [XmlElement("fiberControlLine", DataType="cs_fiberControlLine")]
+        [XmlElement("fiberControlLine")]
         public FiberControlLine FiberControlLine {
             get {
                 return fiberControlLineField;
@@ -43752,7 +45076,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum of the common sizes of control line. The enum list gives diameters and weight per length values.  A fiber may be installed inside the control line.")]
-		[XmlElement("size", DataType="ControlLineSize")]
+        [EnergisticsDataTypeAttribute(DataType = "ControlLineSize")]
+		[XmlElement("size")]
         public ControlLineSize? Size {
             get {
                 return sizeField;
@@ -43770,7 +45095,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum of the common materials from which control line may be made.  A fiber may be installed inside the control line.")]
-		[XmlElement("material", DataType="ControlLineMaterial")]
+        [EnergisticsDataTypeAttribute(DataType = "ControlLineMaterial")]
+		[XmlElement("material")]
         public ControlLineMaterial? Material {
             get {
                 return materialField;
@@ -43788,7 +45114,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum of square or round encapsulation  for a control line.   A fiber may be installed inside the control line.")]
-		[XmlElement("encapsulationType", DataType="ControlLineEncapsulationType")]
+        [EnergisticsDataTypeAttribute(DataType = "ControlLineEncapsulationType")]
+		[XmlElement("encapsulationType")]
         public ControlLineEncapsulationType? EncapsulationType {
             get {
                 return encapsulationTypeField;
@@ -43806,7 +45133,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum of the size of encapsulation of a fiber within a control line.")]
-		[XmlElement("encapsulationSize", DataType="ControlLineEncapsulationSize")]
+        [EnergisticsDataTypeAttribute(DataType = "ControlLineEncapsulationSize")]
+		[XmlElement("encapsulationSize")]
         public ControlLineEncapsulationSize? EncapsulationSize {
             get {
                 return encapsulationSizeField;
@@ -43824,7 +45152,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the fiber control line")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -43842,7 +45171,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The activity of pumping the fiber downhole into a control line (small diameter tube).")]
         [RecurringElement]
-		[XmlElement("pumpActivity", DataType="cs_fiberPumpActivity")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberPumpActivity")]
+		[XmlElement("pumpActivity")]
         public List<FiberPumpActivity> PumpActivity {
             get {
                 return pumpActivityField;
@@ -43873,7 +45203,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("A reference to the control line string in a Completion data-object which represents this control line containing a fiber.")]
-        [XmlAttribute("downholeControlLineRefUID", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("downholeControlLineRefUID")]
 		
         public string DownholeControlLineRefUID {
             get {
@@ -43928,7 +45259,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("A name which can be used to reference the pumping activity. In general a pumping activity does not have a natural name so that this element will not be often used.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -43946,7 +45278,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the InstalledFiberInstance that this activity relates to.")]
         [ComponentElement]
-		[XmlElement("installedFiber", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("installedFiber")]
         public RefNameString InstalledFiber {
             get {
                 return installedFiberField;
@@ -43963,6 +45296,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date of the pumping activity.
         /// </summary>
 		[Description("The date of the pumping activity.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("pumpingDate", DataType="date")]
         public DateTime? PumpingDate {
             get {
@@ -43999,7 +45333,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The person in charge of the pumping activity.")]
-		[XmlElement("engineerName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("engineerName")]
         public string EngineerName {
             get {
                 return engineerNameField;
@@ -44017,7 +45352,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The company that performed the pumping activity.")]
-		[XmlElement("serviceCompany", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("serviceCompany")]
         public string ServiceCompany {
             get {
                 return serviceCompanyField;
@@ -44035,7 +45371,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of fluid used in the pump.")]
-		[XmlElement("pumpFluidType", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("pumpFluidType")]
         public string PumpFluidType {
             get {
                 return pumpFluidTypeField;
@@ -44053,7 +45390,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of fluid used in the control line.")]
-		[XmlElement("controlLineFluid", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("controlLineFluid")]
         public string ControlLineFluid {
             get {
                 return controlLineFluidField;
@@ -44071,7 +45409,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The direction of the pumping.")]
-		[XmlElement("pumpDirection", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("pumpDirection")]
         public string PumpDirection {
             get {
                 return pumpDirectionField;
@@ -44089,7 +45428,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of end seal on the fiber.")]
-		[XmlElement("fiberEndSeal", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("fiberEndSeal")]
         public string FiberEndSeal {
             get {
                 return fiberEndSealField;
@@ -44107,7 +45447,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of cable meter.")]
-		[XmlElement("cableMeterType", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("cableMeterType")]
         public string CableMeterType {
             get {
                 return cableMeterTypeField;
@@ -44125,7 +45466,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The serial number of the cable meter.")]
-		[XmlElement("cableMeterSerialNumber", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("cableMeterSerialNumber")]
         public string CableMeterSerialNumber {
             get {
                 return cableMeterSerialNumberField;
@@ -44142,6 +45484,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date the cable meter was calibrated.
         /// </summary>
 		[Description("The date the cable meter was calibrated.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("cableMeterCalibrationDate", DataType="date")]
         public DateTime? CableMeterCalibrationDate {
             get {
@@ -44178,7 +45521,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The length of the excess fiber that was removed.")]
         [ComponentElement]
-		[XmlElement("excessFiberRecovered", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("excessFiberRecovered")]
         public LengthMeasure ExcessFiberRecovered {
             get {
                 return excessFiberRecoveredField;
@@ -44196,7 +45540,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -44226,7 +45571,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comment about the pump activity.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -44280,7 +45626,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum. For intervention conveyance option, the type of conveyance. Example: coiled tubing.")]
-		[XmlElement("interventionConveyanceType", DataType="InterventionConveyanceType")]
+        [EnergisticsDataTypeAttribute(DataType = "InterventionConveyanceType")]
+		[XmlElement("interventionConveyanceType")]
         public InterventionConveyanceType? InterventionConveyanceType {
             get {
                 return interventionConveyanceTypeField;
@@ -44298,7 +45645,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comment about the intervention conveyance.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -44352,7 +45700,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum. For permanent conveyance option, the type of conveyance. Example: clamped to tubular")]
-		[XmlElement("permanentCableInstallationType", DataType="PermanentCableInstallationType")]
+        [EnergisticsDataTypeAttribute(DataType = "PermanentCableInstallationType")]
+		[XmlElement("permanentCableInstallationType")]
         public PermanentCableInstallationType? PermanentCableInstallationType {
             get {
                 return permanentCableInstallationTypeField;
@@ -44370,7 +45719,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comment about the intervention conveyance.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -44423,7 +45773,8 @@ namespace Energistics.DataAccess.PRODML131
         /// serial_number property
         /// </summary>
 		[Description("An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.")]
-		[XmlElement("serial_number", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("serial_number")]
         public string Serial_number {
             get {
                 return serial_numberField;
@@ -44441,7 +45792,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Near distance of the oven from the beginning of the fiber.")]
         [ComponentElement]
-		[XmlElement("internalOvenLocationNear", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("internalOvenLocationNear")]
         public LengthMeasure InternalOvenLocationNear {
             get {
                 return internalOvenLocationNearField;
@@ -44459,7 +45811,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Far distance of the oven from the beginning of the fiber.")]
         [ComponentElement]
-		[XmlElement("internalOvenLocationFar", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("internalOvenLocationFar")]
         public LengthMeasure InternalOvenLocationFar {
             get {
                 return internalOvenLocationFarField;
@@ -44477,7 +45830,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The temperature of the oven.")]
         [ComponentElement]
-		[XmlElement("referenceCoilTemperature", DataType="thermodynamicTemperatureMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
+		[XmlElement("referenceCoilTemperature")]
         public ThermodynamicTemperatureMeasure ReferenceCoilTemperature {
             get {
                 return referenceCoilTemperatureField;
@@ -44495,7 +45849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Additional parameters to define the instrument box as a  piece of equipment. These should not be parameters to define the installation  or use of the box in the wellbore, or other system. This element should be used  only if an appropriate parameter is not available as an element, or in the  calibration operation.")]
         [RecurringElement]
-		[XmlElement("parameter", DataType="indexedObject")]
+        [EnergisticsDataTypeAttribute(DataType = "indexedObject")]
+		[XmlElement("parameter")]
         public List<IndexedObject> Parameter {
             get {
                 return parameterField;
@@ -44525,7 +45880,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The duration of time starting from the initiation of the first temperature measurement until the unit complies with the stated values of the main measurement specifications.")]
         [ComponentElement]
-		[XmlElement("warmupTime", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("warmupTime")]
         public TimeMeasure WarmupTime {
             get {
                 return warmupTimeField;
@@ -44543,7 +45899,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The start-up time is the duration of time from the initial powering on the instrument until the first temperature measurement is permitted.")]
         [ComponentElement]
-		[XmlElement("startupTime", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("startupTime")]
         public TimeMeasure StartupTime {
             get {
                 return startupTimeField;
@@ -44561,7 +45918,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Calibration parameters vary from vendor to vendor, depending  on the calibration method being used. This is a general type that allows a calibration  date, business associate, and many  name/value pairs.")]
         [RecurringElement]
-		[XmlElement("instrumentCalibration", DataType="cs_dtsCalibration")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_dtsCalibration")]
+		[XmlElement("instrumentCalibration")]
         public List<DtsCalibration> InstrumentCalibration {
             get {
                 return instrumentCalibrationField;
@@ -44591,7 +45949,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -44621,7 +45980,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information regarding the patch cord used to connect the instrument box to the start of the optical fiber path.")]
         [ComponentElement]
-		[XmlElement("cs_dtsPatchCord", DataType="cs_dtsPatchCord")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_dtsPatchCord")]
+		[XmlElement("cs_dtsPatchCord")]
         public DtsPatchCord Cs_dtsPatchCord {
             get {
                 return cs_dtsPatchCordField;
@@ -44655,6 +46015,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date of the calibration
         /// </summary>
 		[Description("The date of the calibration")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("dTimCalibration", DataType="date")]
         public DateTime? DateTimeCalibration {
             get {
@@ -44691,7 +46052,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The business associate that performed the calibration.")]
-		[XmlElement("calibratedBy", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("calibratedBy")]
         public string CalibratedBy {
             get {
                 return calibratedByField;
@@ -44709,7 +46071,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("This may be a standard protocol, or a software application.")]
-		[XmlElement("calibrationProtocol", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("calibrationProtocol")]
         public string CalibrationProtocol {
             get {
                 return calibrationProtocolField;
@@ -44727,7 +46090,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Attribute name is the name of the parameter. Optional attribute  uom is the unit of measure of the parameter. The value of the element is the value  of the parameter. Note that a string value may appear as a parameter.")]
         [RecurringElement]
-		[XmlElement("parameter", DataType="calibrationParameter")]
+        [EnergisticsDataTypeAttribute(DataType = "calibrationParameter")]
+		[XmlElement("parameter")]
         public List<CalibrationParameter> Parameter {
             get {
                 return parameterField;
@@ -44757,7 +46121,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Any remarks that may be useful, regarding the calibration information.")]
-		[XmlElement("remarks", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("remarks")]
         public string Remarks {
             get {
                 return remarksField;
@@ -44775,7 +46140,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -44806,7 +46172,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -44884,7 +46251,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(24)]
         [Description("The unit of measure of the parameter value.")]
-        [XmlAttribute("uom", DataType = "uomString")]
+        [EnergisticsDataTypeAttribute(DataType = "uomString")]
+        [XmlAttribute("uom")]
 		
         public string Uom {
             get {
@@ -44904,7 +46272,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of the parameter.")]
-        [XmlAttribute("name", DataType = "nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+        [XmlAttribute("name")]
 		
         public string Name {
             get {
@@ -44976,7 +46345,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Optical distance between the instrument and the end of the patch cord that will be attached to the rest of the optical path from which a measurement will be taken.")]
         [ComponentElement]
-		[XmlElement("fiberLength", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("fiberLength")]
         public LengthMeasure FiberLength {
             get {
                 return fiberLengthField;
@@ -44994,7 +46364,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A textual description of the patch cord")]
-		[XmlElement("description", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("description")]
         public string Description {
             get {
                 return descriptionField;
@@ -45049,7 +46420,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The name of this facilityMapping instance.")]
         [ComponentElement]
-		[XmlElement("name", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("name")]
         public NameStruct Name {
             get {
                 return nameField;
@@ -45066,7 +46438,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A description of which "port" ie, connection/end or defined point on a pipeline the facilityLength is indexed from. 
         /// </summary>
 		[Description("A description of which \"port\" ie, connection/end or defined point on a pipeline the facilityLength is indexed from.")]
-		[XmlElement("datumPortReference", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("datumPortReference")]
         public string DatumPortReference {
             get {
                 return datumPortReferenceField;
@@ -45084,7 +46457,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this facilityMapping")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -45102,7 +46476,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The kind of facility mapped to the optical path. Expected to be a pipeline but this element can be used to show other facilities being mapped to fiber length in future.")]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public string Kind {
             get {
                 return kindField;
@@ -45120,7 +46495,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
         [ComponentElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public FacilityIdentifierStruct ContextFacility {
             get {
                 return contextFacilityField;
@@ -45175,7 +46551,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("The name of this facilityMapping instance.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -45194,7 +46571,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the well that contains the well.")]
-		[XmlElement("nameWell", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameWell")]
         public string NameWell {
             get {
                 return nameWellField;
@@ -45213,7 +46591,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("Human recognizable context for the wellbore that contains the optical path being mapped to the wellbore.")]
-		[XmlElement("nameWellbore", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("nameWellbore")]
         public string NameWellbore {
             get {
                 return nameWellboreField;
@@ -45232,7 +46611,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("A reference to the wellDatum from which the facilityLength (ie, depth in this case of a wellbore being mapped) is measured from.")]
-		[XmlElement("wellDatum", DataType="refWellDatum")]
+        [EnergisticsDataTypeAttribute(DataType = "refWellDatum")]
+		[XmlElement("wellDatum")]
         public string WellDatum {
             get {
                 return wellDatumField;
@@ -45251,7 +46631,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.")]
-        [XmlAttribute("uidWell", DataType = "uidParentString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidParentString")]
+        [XmlAttribute("uidWell")]
 		
         public string UidWell {
             get {
@@ -45271,7 +46652,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.")]
-        [XmlAttribute("uidWellbore", DataType = "uidParentString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidParentString")]
+        [XmlAttribute("uidWellbore")]
 		
         public string UidWellbore {
             get {
@@ -45326,7 +46708,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.")]
         [RecurringElement]
-		[XmlElement("opticalPathDistanceStart", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathDistanceStart")]
         public List<LengthMeasure> OpticalPathDistanceStart {
             get {
                 return opticalPathDistanceStartField;
@@ -45356,7 +46739,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Distance between the beginning of the optical path to the distance where the mapping with the facility ends.")]
         [RecurringElement]
-		[XmlElement("opticalPathDistanceEnd", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathDistanceEnd")]
         public List<LengthMeasure> OpticalPathDistanceEnd {
             get {
                 return opticalPathDistanceEndField;
@@ -45386,7 +46770,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Distance between the facility datum and the distance where the mapping with the optical path takes place")]
         [RecurringElement]
-		[XmlElement("facilityLengthStart", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("facilityLengthStart")]
         public List<LengthMeasure> FacilityLengthStart {
             get {
                 return facilityLengthStartField;
@@ -45416,7 +46801,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Distance between the facility datum and the distance where the mapping with the optical path ends.")]
         [RecurringElement]
-		[XmlElement("facilityLengthEnd", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("facilityLengthEnd")]
         public List<LengthMeasure> FacilityLengthEnd {
             get {
                 return facilityLengthEndField;
@@ -45446,7 +46832,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A descriptive remark about the facility mapping")]
         [RecurringElement]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public List<string> Comment {
             get {
                 return commentField;
@@ -45475,7 +46862,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Choice where the facility mapping is inside a well.
         /// </summary>
         [ComponentElement]
-        [XmlElement("well", DataType="cs_fiberFacilityWell")]
+        [XmlElement("well")]
         public FiberFacilityWell Well {
             get {
                 return wellField;
@@ -45509,7 +46896,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Choice where the facility mapping is a pipeline.
         /// </summary>
         [ComponentElement]
-        [XmlElement("pipeline", DataType="cs_fiberFacilityPipeline")]
+        [XmlElement("pipeline")]
         public FiberFacilityPipeline Pipeline {
             get {
                 return pipelineField;
@@ -45547,7 +46934,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The uid of this facility mapping part.")]
-        [XmlAttribute("mappingPartID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("mappingPartID")]
 		
         public string MappingPartID {
             get {
@@ -45602,7 +46990,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Date when the mapping between the facility and the optical path becomes effective")]
-		[XmlElement("timeStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("timeStart")]
         public Timestamp? TimeStart {
             get {
                 return timeStartField;
@@ -45619,7 +47008,8 @@ namespace Energistics.DataAccess.PRODML131
         /// Date when the mapping between the facility and the optical path is no longer valid
         /// </summary>
 		[Description("Date when the mapping between the facility and the optical path is no longer valid")]
-		[XmlElement("timeEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("timeEnd")]
         public Timestamp? TimeEnd {
             get {
                 return timeEndField;
@@ -45656,7 +47046,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).")]
         [RecurringElement]
-		[XmlElement("fiberFacilityMappingPart", DataType="cs_fiberFacilityMappingPart")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberFacilityMappingPart")]
+		[XmlElement("fiberFacilityMappingPart")]
         public List<FiberFacilityMappingPart> FiberFacilityMappingPart {
             get {
                 return fiberFacilityMappingPartField;
@@ -45686,7 +47077,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the facility mapping")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -45706,7 +47098,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The uid of this facility mapping collection.")]
-        [XmlAttribute("mappingID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("mappingID")]
 		
         public string MappingID {
             get {
@@ -45761,7 +47154,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Starting point of the detected defect as distance in the optical path from the lightbox")]
         [RecurringElement]
-		[XmlElement("opticalPathDistanceStart", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathDistanceStart")]
         public List<LengthMeasure> OpticalPathDistanceStart {
             get {
                 return opticalPathDistanceStartField;
@@ -45791,7 +47185,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Ending point of the detected defect as distance in the optical path from the lightbox.  Can have the same value as the 'opticalPathDistanceStart' if the defect is found at a specific location rather than a segment.")]
         [RecurringElement]
-		[XmlElement("opticalPathDistanceEnd", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathDistanceEnd")]
         public List<LengthMeasure> OpticalPathDistanceEnd {
             get {
                 return opticalPathDistanceEndField;
@@ -45821,7 +47216,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Enum.  The type of defect on the optical path.")]
         [RecurringElement]
-		[XmlElement("defectType", DataType="PathDefectTypes")]
+        [EnergisticsDataTypeAttribute(DataType = "PathDefectTypes")]
+		[XmlElement("defectType")]
         public List<PathDefectTypeList> DefectType {
             get {
                 return defectTypeField;
@@ -45851,7 +47247,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Date when the defect was detected")]
         [RecurringElement]
-		[XmlElement("timeStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("timeStart")]
         public List<DateTime> TimeStart {
             get {
                 return timeStartField;
@@ -45881,7 +47278,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Date when the defect was no longer detected (or was corrected)")]
         [RecurringElement]
-		[XmlElement("timeEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("timeEnd")]
         public List<DateTime> TimeEnd {
             get {
                 return timeEndField;
@@ -45911,7 +47309,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A descriptive remark about the defect found on this location")]
         [RecurringElement]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public List<string> Comment {
             get {
                 return commentField;
@@ -45942,7 +47341,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The uid of this object.")]
-        [XmlAttribute("defectID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("defectID")]
 		
         public string DefectID {
             get {
@@ -45998,7 +47398,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this model.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -46016,7 +47417,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -46045,7 +47447,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time of the start of validity for this model.
         /// </summary>
 		[Description("The date and time of the start of validity for this model.")]
-		[XmlElement("dTimStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimStart")]
         public Timestamp? DateTimeStart {
             get {
                 return dTimStartField;
@@ -46080,7 +47483,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date and time of the termination of validity for this model.
         /// </summary>
 		[Description("The date and time of the termination of validity for this model.")]
-		[XmlElement("dTimEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dTimEnd")]
         public Timestamp? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -46116,7 +47520,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The time for which \"currently existing\" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("existenceTime", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("existenceTime")]
         public EndpointQualifiedDateTime ExistenceTime {
             get {
                 return existenceTimeField;
@@ -46134,7 +47539,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMin", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
                 return dTimMinField;
@@ -46152,7 +47558,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMax", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
                 return dTimMaxField;
@@ -46170,7 +47577,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.")]
         [RecurringElement]
-		[XmlElement("externalConnect", DataType="cs_productFlowExternalReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowExternalReference")]
+		[XmlElement("externalConnect")]
         public List<ProductFlowExternalReference> ExternalConnect {
             get {
                 return externalConnectField;
@@ -46201,7 +47609,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail. One of the networks must represent this model.")]
         [RecurringElement]
-		[XmlElement("network", DataType="cs_productFlowNetwork")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowNetwork")]
+		[XmlElement("network")]
         public List<ProductFlowNetwork> Network {
             get {
                 return networkField;
@@ -46231,7 +47640,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the model.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -46303,7 +47713,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A single segment of the optical fiber used for distributed temperature surveys. Multiple such segments may be connected by other types of component including connectors, splices and fiber turnarounds.")]
         [RecurringElement]
-		[XmlElement("segment", DataType="cs_fiberOpticalPathSegment")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberOpticalPathSegment")]
+		[XmlElement("segment")]
         public List<FiberOpticalPathSegment> Segment {
             get {
                 return segmentField;
@@ -46333,7 +47744,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A turnaround component within the optical path.")]
         [RecurringElement]
-		[XmlElement("turnaround", DataType="cs_fiberTurnaround")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberTurnaround")]
+		[XmlElement("turnaround")]
         public List<FiberTurnaround> Turnaround {
             get {
                 return turnaroundField;
@@ -46363,7 +47775,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A splice component within the optical path.")]
         [RecurringElement]
-		[XmlElement("splice", DataType="cs_fiberSplice")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberSplice")]
+		[XmlElement("splice")]
         public List<FiberSplice> Splice {
             get {
                 return spliceField;
@@ -46393,7 +47806,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A connection component within the optical path.")]
         [RecurringElement]
-		[XmlElement("connection", DataType="cs_fiberConnection")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberConnection")]
+		[XmlElement("connection")]
         public List<FiberConnection> Connection {
             get {
                 return connectionField;
@@ -46424,7 +47838,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The terminator of the optical path. This may be a component (in the case of a single ended fiber installation), or it may be a connection back into the instrument box in the case of a double ended fiber installation.")]
         [ComponentElement]
-		[XmlElement("terminator", DataType="cs_fiberTerminator")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberTerminator")]
+		[XmlElement("terminator")]
         public FiberTerminator Terminator {
             get {
                 return terminatorField;
@@ -46478,7 +47893,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(64)]
         [Description("A human understandable name for the fiber. This is used for  identification of the instance.")]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -46497,7 +47913,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The list of equipment used in the optical path.  Equipment may be used in the optical path for different periods of time, so this inventory contains all items of equipment which are used at some period of time.")]
         [ComponentElement]
-		[XmlElement("inventory", DataType="cs_fiberOpticalPathInventory")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberOpticalPathInventory")]
+		[XmlElement("inventory")]
         public FiberOpticalPathInventory Inventory {
             get {
                 return inventoryField;
@@ -46516,7 +47933,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The sequence of connected items of equipment along the optical path. Represented by a flow network.")]
         [RecurringElement]
-		[XmlElement("opticalPathNetwork", DataType="cs_fiberOpticalPathNetwork")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberOpticalPathNetwork")]
+		[XmlElement("opticalPathNetwork")]
         public List<FiberOpticalPathNetwork> OpticalPathNetwork {
             get {
                 return opticalPathNetworkField;
@@ -46546,7 +47964,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A zone of the fibre which has defective optical properties (e.g., darkening).")]
         [RecurringElement]
-		[XmlElement("defect", DataType="cs_fiberPathDefect")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberPathDefect")]
+		[XmlElement("defect")]
         public List<FiberPathDefect> Defect {
             get {
                 return defectField;
@@ -46576,7 +47995,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).")]
         [RecurringElement]
-		[XmlElement("facilityMapping", DataType="cs_fiberFacilityMapping")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberFacilityMapping")]
+		[XmlElement("facilityMapping")]
         public List<FiberFacilityMapping> FacilityMapping {
             get {
                 return facilityMappingField;
@@ -46606,7 +48026,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The vendor who performed the physical deployment")]
         [ComponentElement]
-		[XmlElement("installingVendor", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("installingVendor")]
         public BusinessAssociate InstallingVendor {
             get {
                 return installingVendorField;
@@ -46624,7 +48045,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This records the result arrays along with context information for an Optical Time Domain Reflectometry (OTDR) survey.  The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber.  The actual data values are recorded in a OTDR file and/or image file, which are referenced in subelements.")]
         [RecurringElement]
-		[XmlElement("otdr", DataType="cs_fiberOTDR")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fiberOTDR")]
+		[XmlElement("otdr")]
         public List<FiberOTDR> Otdr {
             get {
                 return otdrField;
@@ -46654,7 +48076,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -46671,7 +48094,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -46690,7 +48114,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -46759,7 +48184,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("A reference to the facilityMapping to which this InterpretationData relates. The facility mapping relates a length of fiber to a corresponding length of a facility (probably a wellbore or pipeline). The facilityMapping also contains the datum from which the InterpretedData is indexed.")]
         [ComponentElement]
-		[XmlElement("facilityMappingRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("facilityMappingRef")]
         public RefNameString FacilityMappingRef {
             get {
                 return facilityMappingRefField;
@@ -46778,7 +48204,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The “sampling interval” is the difference in fiber distance between consecutive temperature sample points in a single temperature trace.")]
         [ComponentElement]
-		[XmlElement("samplingInterval", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("samplingInterval")]
         public LengthMeasure SamplingInterval {
             get {
                 return samplingIntervalField;
@@ -46796,7 +48223,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Indicates whether the interpretation log contains bad data or not.  This allows you to keep bad data around (so at least you know that something was generated/acquired) and filter it out when doing relevant data-wise operations.")]
-		[XmlElement("badFlag", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("badFlag")]
         public bool? BadFlag {
             get {
                 return badFlagField;
@@ -46814,7 +48242,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Time when the interpretation log data was generated.")]
-		[XmlElement("creationStartTime", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("creationStartTime")]
         public Timestamp? CreationStartTime {
             get {
                 return creationStartTimeField;
@@ -46832,7 +48261,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Indicates what type of post-processing technique was used to generate this interpretation log.  Enum list. The meaning is that this process was applied to the InterpretedData referenced by the parentInterpretationID.")]
-		[XmlElement("interpretationProcessingType", DataType="InterpretationProcessingType")]
+        [EnergisticsDataTypeAttribute(DataType = "InterpretationProcessingType")]
+		[XmlElement("interpretationProcessingType")]
         public InterpretationProcessingType? InterpretationProcessingType {
             get {
                 return interpretationProcessingTypeField;
@@ -46851,7 +48281,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(32)]
         [Description("This is the mnemonic of the channel in the InterpretedData which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.")]
-		[XmlElement("indexMnemonic", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("indexMnemonic")]
         public string IndexMnemonic {
             get {
                 return indexMnemonicField;
@@ -46869,7 +48300,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The number of rows in this interpreted data object. Each row or \"point\" represents a measurement along the fiber.")]
-		[XmlElement("pointCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("pointCount")]
         public short? PointCount {
             get {
                 return pointCountField;
@@ -46887,7 +48319,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the interpretation log")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -46905,7 +48338,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("logDataInterpretation", DataType="cs_logDataInterpretation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_logDataInterpretation")]
+		[XmlElement("logDataInterpretation")]
         public LogDataInterpretation LogDataInterpretation {
             get {
                 return logDataInterpretationField;
@@ -46924,7 +48358,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Optional element indicating that the referenced InterpretedData object is the parent from which this InterpretedData is derived. Example, this instance may be derived from a parent by the data having been temperature-shifted to match an external data source. The element InterpretationProcessingType is provided to record which type of operation was peformed on the parent data to obtain this instance of data.")]
-        [XmlAttribute("parentInterpretationID", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("parentInterpretationID")]
 		
         public string ParentInterpretationID {
             get {
@@ -46945,7 +48380,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Reference to the  interpretation for this set of data.")]
-        [XmlAttribute("interpretationID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("interpretationID")]
 		
         public string InterpretationID {
             get {
@@ -47019,7 +48455,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("A comma delimited list of curve mnemonics. Each mnemonic should only occur once in the list. The order of the mnemonics defines the order of the  delimited values in elements \"unitList\" and \"data\".  If the index curve is specified then it must be first in the list. This is an API \"column-identifier\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
-		[XmlElement("mnemonicList", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("mnemonicList")]
         public string MnemonicList {
             get {
                 return mnemonicListField;
@@ -47037,7 +48474,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("A comma delimited list of unit of measure acronyms that represent the values in \"data\". The units are in the same order as the mnemonics in element mnemonicList. Each unit value must match the value in the logCurveInfo structure for that curve. A null value (i.e., unitless as opposed to dimensionless) will be defined by adjacent commas.")]
-		[XmlElement("unitList", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("unitList")]
         public string UnitList {
             get {
                 return unitListField;
@@ -47055,7 +48493,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The actual data corresponding to the curves defined in  the \"mnemonicList\" element. Normally a comma delimited list of data values (see dataDelimiter) with one  value for each curve on the log (e.g., \"xxx,yyy, zzz\"). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., \"xxx,aa bb cc,zzz\"). This essentially represents one row of a table where the curve  mnemonics represent the column headings. This is an API \"data-node\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         [RecurringElement]
-		[XmlElement("data", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("data")]
         public List<string> Data {
             get {
                 return dataField;
@@ -47139,7 +48578,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Where there is a set of dtsInterpretedData logs that are generated from the same measurement (each log having gone through a different post-processing type, for example), if there is one log that is ‘preferred’ for additional business decisions (while the other ones were merely what-if scenarios), then this preferred log in the collection of child dtsInterpretedData can be flagged by referencing its UID with this element.")]
-		[XmlElement("preferredInterpretationID", DataType="refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+		[XmlElement("preferredInterpretationID")]
         public string PreferredInterpretationID {
             get {
                 return preferredInterpretationIDField;
@@ -47157,7 +48597,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [RecurringElement]
-		[XmlElement("interpretationData", DataType="cs_dtsInterpretationData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_dtsInterpretationData")]
+		[XmlElement("interpretationData")]
         public List<DtsInterpretationData> InterpretationData {
             get {
                 return interpretationDataField;
@@ -47188,7 +48629,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Mandatory element indicating that the referenced MeasuredTraceSet object is the raw trace data from which this InterpretedData is derived. This is needed so that any InterpretedData can be related to the raw measurement from which it is derived.")]
-        [XmlAttribute("measurementID", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("measurementID")]
 		
         public string MeasurementID {
             get {
@@ -47208,7 +48650,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The uid of this object.")]
-        [XmlAttribute("interpretationLogID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("interpretationLogID")]
 		
         public string InterpretationLogID {
             get {
@@ -47263,7 +48706,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Denotes whether the trace was stored as acquired by the measurement device or recalibrated in any way.")]
-		[XmlElement("traceProcessingType", DataType="TraceProcessingType")]
+        [EnergisticsDataTypeAttribute(DataType = "TraceProcessingType")]
+		[XmlElement("traceProcessingType")]
         public TraceProcessingType? TraceProcessingType {
             get {
                 return traceProcessingTypeField;
@@ -47282,7 +48726,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("The sampling interval is the difference in fiber distance between consecutive temperature sample points in a single temperature trace.")]
         [ComponentElement]
-		[XmlElement("samplingInterval", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("samplingInterval")]
         public LengthMeasure SamplingInterval {
             get {
                 return samplingIntervalField;
@@ -47301,7 +48746,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [StringLength(32)]
         [Description("This is the mnemonic of the channel in the MeasuredTraceSet which represents the index to the data (expected to be a length along the facility (e.g., wellbore, pipeline) being measured.")]
-		[XmlElement("indexMnemonic", DataType="str32")]
+        [EnergisticsDataTypeAttribute(DataType = "str32")]
+		[XmlElement("indexMnemonic")]
         public string IndexMnemonic {
             get {
                 return indexMnemonicField;
@@ -47319,7 +48765,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The number of rows in this interpreted data object. Each row or \"point\" represents a measurement along the fiber.")]
-		[XmlElement("pointCount", DataType="nonNegativeCount")]
+        [EnergisticsDataTypeAttribute(DataType = "nonNegativeCount")]
+		[XmlElement("pointCount")]
         public short? PointCount {
             get {
                 return pointCountField;
@@ -47337,7 +48784,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Frequency reference for Rayleigh 1 measurement.")]
         [ComponentElement]
-		[XmlElement("frequencyRayleigh1", DataType="frequencyMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "frequencyMeasure")]
+		[XmlElement("frequencyRayleigh1")]
         public FrequencyMeasure FrequencyRayleigh1 {
             get {
                 return frequencyRayleigh1Field;
@@ -47355,7 +48803,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Frequency reference for Rayleigh 2 measurement.")]
         [ComponentElement]
-		[XmlElement("frequencyRayleigh2", DataType="frequencyMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "frequencyMeasure")]
+		[XmlElement("frequencyRayleigh2")]
         public FrequencyMeasure FrequencyRayleigh2 {
             get {
                 return frequencyRayleigh2Field;
@@ -47373,7 +48822,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A descriptive remark about the measured trace set")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -47391,7 +48841,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("logDataTrace", DataType="cs_logDataTrace")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_logDataTrace")]
+		[XmlElement("logDataTrace")]
         public LogDataTrace LogDataTrace {
             get {
                 return logDataTraceField;
@@ -47410,7 +48861,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("Where this dtsMeasuredTraceSet was derived from a \"parent\" dtsMeasuredTraceSet (having been recalibrated for example), the parent dtsMeasuredTraceSet can be indicated by referencing its UID with this element.")]
-        [XmlAttribute("parentMeasurementID", DataType = "refString")]
+        [EnergisticsDataTypeAttribute(DataType = "refString")]
+        [XmlAttribute("parentMeasurementID")]
 		
         public string ParentMeasurementID {
             get {
@@ -47430,7 +48882,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The uid of this object.")]
-        [XmlAttribute("measurementID", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("measurementID")]
 		
         public string MeasurementID {
             get {
@@ -47484,7 +48937,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [StringLength(64)]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -47502,7 +48956,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Set to 'true' when a measurement is included but is known to be bad (i.e. all the values are null).  Use this flag in situations when you want to keep track of the fact that a measurement was generated/received however the measurement was bad.")]
-		[XmlElement("badSetFlag", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("badSetFlag")]
         public bool? BadSetFlag {
             get {
                 return badSetFlagField;
@@ -47520,7 +48975,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Set to 'true' when the measurement set is empty (only the header is provided).  Use this flag for situations when the instrument box attempts to get a reading but nothing is generated (fiber is disconnected, for example).")]
-		[XmlElement("emptySetFlag", DataType="logicalBoolean")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
+		[XmlElement("emptySetFlag")]
         public bool? EmptySetFlag {
             get {
                 return emptySetFlagField;
@@ -47538,7 +48994,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Time when the installed system began taking the measurement")]
-		[XmlElement("timeStart", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("timeStart")]
         public Timestamp? TimeStart {
             get {
                 return timeStartField;
@@ -47555,7 +49012,8 @@ namespace Energistics.DataAccess.PRODML131
         /// timeEnd property
         /// </summary>
 		[Description("Time when the installed system finished taking the measurement")]
-		[XmlElement("timeEnd", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("timeEnd")]
         public Timestamp? TimeEnd {
             get {
                 return timeEndField;
@@ -47591,7 +49049,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Length of time that the instrument box has been up and running since its last power up.")]
         [ComponentElement]
-		[XmlElement("timeSinceInstrumentStartup", DataType="timeMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
+		[XmlElement("timeSinceInstrumentStartup")]
         public TimeMeasure TimeSinceInstrumentStartup {
             get {
                 return timeSinceInstrumentStartupField;
@@ -47609,7 +49068,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("This supports user-defined \"tags\" (in the form of text strings) to be attached to the measurement. Example: to indicate other operations under way at the time (e.g., \"start of injection\").")]
         [RecurringElement]
-		[XmlElement("measurementTags", DataType="string")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
+		[XmlElement("measurementTags")]
         public List<string> MeasurementTags {
             get {
                 return measurementTagsField;
@@ -47640,7 +49100,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Reference to the installed system used to take the measurement (combination of instrument box and optical path)")]
         [ComponentElement]
-		[XmlElement("installedSystemRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("installedSystemRef")]
         public RefNameString InstalledSystemRef {
             get {
                 return installedSystemRefField;
@@ -47658,7 +49119,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("Enum. The configuration of the optical path. This may be varied from measurement to measurement independent of the fiber path network.")]
-		[XmlElement("measurementConfiguration", DataType="OpticalPathConfiguration")]
+        [EnergisticsDataTypeAttribute(DataType = "OpticalPathConfiguration")]
+		[XmlElement("measurementConfiguration")]
         public OpticalPathConfiguration? MeasurementConfiguration {
             get {
                 return measurementConfigurationField;
@@ -47676,7 +49138,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Diagnostic information generated by the instrument box at the time the measurement was taken.")]
         [RecurringElement]
-		[XmlElement("diagnosticParameters", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("diagnosticParameters")]
         public List<ExtensionNameValue> DiagnosticParameters {
             get {
                 return diagnosticParametersField;
@@ -47706,7 +49169,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Header data for raw (measured) traces collections")]
         [RecurringElement]
-		[XmlElement("measurementTrace", DataType="cs_dtsMeasurementTrace")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_dtsMeasurementTrace")]
+		[XmlElement("measurementTrace")]
         public List<DtsMeasurementTrace> MeasurementTrace {
             get {
                 return measurementTraceField;
@@ -47736,7 +49200,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Container of interpreted data which also specifies by reference the measured data on which the interpretation is based.")]
         [ComponentElement]
-		[XmlElement("interpretationLog", DataType="cs_dtsInterpretationLogSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_dtsInterpretationLogSet")]
+		[XmlElement("interpretationLog")]
         public DtsInterpretationLogSet InterpretationLog {
             get {
                 return interpretationLogField;
@@ -47754,7 +49219,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -47771,7 +49237,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -47790,7 +49257,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -47857,7 +49325,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("grp_dtsInstrumentBox", DataType="grp_dtsInstrumentBox")]
+        [EnergisticsDataTypeAttribute(DataType = "grp_dtsInstrumentBox")]
+		[XmlElement("grp_dtsInstrumentBox")]
         public Grp_dtsInstrumentBox Grp_dtsInstrumentBox {
             get {
                 return grp_dtsInstrumentBoxField;
@@ -47875,7 +49344,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -47892,7 +49362,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -47911,7 +49382,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -47978,7 +49450,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [StringLength(64)]
-		[XmlElement("name", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
         public string Name {
             get {
                 return nameField;
@@ -47996,7 +49469,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. That is, all measurements for a well in the specified period defined by the min/max. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
-		[XmlElement("dateMin", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dateMin")]
         public Timestamp? DateMin {
             get {
                 return dateMinField;
@@ -48013,7 +49487,8 @@ namespace Energistics.DataAccess.PRODML131
         /// dateMax property
         /// </summary>
 		[Description("The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a \"get\" result. See the WITSML API Specification appendix on \"Special Handling\" of growing objects  for a description of the behavior related to this parameter.")]
-		[XmlElement("dateMax", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("dateMax")]
         public Timestamp? DateMax {
             get {
                 return dateMaxField;
@@ -48049,7 +49524,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The length of the fiber installed in the wellbore.")]
         [ComponentElement]
-		[XmlElement("opticalPathLength", DataType="lengthMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
+		[XmlElement("opticalPathLength")]
         public LengthMeasure OpticalPathLength {
             get {
                 return opticalPathLengthField;
@@ -48066,7 +49542,8 @@ namespace Energistics.DataAccess.PRODML131
         /// opticalBudget property
         /// </summary>
 		[Description("Total light budget available for the installation. This is  generally measured in decibels, and indicates the total power loss for two-way  travel of the light in the installed fiber.")]
-		[XmlElement("opticalBudget", DataType="double")]
+        [EnergisticsDataTypeAttribute(DataType = "double")]
+		[XmlElement("opticalBudget")]
         public double? OpticalBudget {
             get {
                 return opticalBudgetField;
@@ -48103,7 +49580,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Reference to optical path.")]
         [ComponentElement]
-		[XmlElement("opticalPathRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("opticalPathRef")]
         public RefNameString OpticalPathRef {
             get {
                 return opticalPathRefField;
@@ -48122,7 +49600,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Reference to instrument box.")]
         [ComponentElement]
-		[XmlElement("instrumentBoxRef", DataType="refNameString")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("instrumentBoxRef")]
         public RefNameString InstrumentBoxRef {
             get {
                 return instrumentBoxRefField;
@@ -48140,7 +49619,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Comment about this installed system.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -48158,7 +49638,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Calibration parameters vary from vendor to vendor, depending  on the calibration method being used. This is a general type that allows a calibration  date, business associate, and many  name/value pairs.")]
         [RecurringElement]
-		[XmlElement("dtsCalibration", DataType="cs_dtsCalibration")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_dtsCalibration")]
+		[XmlElement("dtsCalibration")]
         public List<DtsCalibration> DtsCalibration {
             get {
                 return dtsCalibrationField;
@@ -48188,7 +49669,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A container element that contains elements that are common to all data objects.")]
         [ComponentElement]
-		[XmlElement("commonData", DataType="cs_commonData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
         public CommonData CommonData {
             get {
                 return commonDataField;
@@ -48205,7 +49687,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -48224,7 +49707,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -48293,7 +49777,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Name of the facility")]
         [ComponentElement]
-		[XmlElement("name", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("name")]
         public NameStruct Name {
             get {
                 return nameField;
@@ -48311,7 +49796,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this facilityMapping")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -48329,7 +49815,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("Type of facility where the fiber is deployed")]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public string Kind {
             get {
                 return kindField;
@@ -48347,7 +49834,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to the represented installation.")]
         [ComponentElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public FacilityIdentifierStruct ContextFacility {
             get {
                 return contextFacilityField;
@@ -48365,7 +49853,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The geographical information about the facility.")]
         [ComponentElement]
-		[XmlElement("geographicContext", DataType="cs_geographicContext")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_geographicContext")]
+		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
                 return geographicContextField;
@@ -48383,7 +49872,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Identifier of the business unit responsible for the facility.")]
         [ComponentElement]
-		[XmlElement("businessUnit", DataType="cs_productVolumeBusinessUnit")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBusinessUnit")]
+		[XmlElement("businessUnit")]
         public ProductVolumeBusinessUnit BusinessUnit {
             get {
                 return businessUnitField;
@@ -48401,7 +49891,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Contact for the company/person operating the facility")]
         [ComponentElement]
-		[XmlElement("operator", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
                 return operatorField;
@@ -48455,7 +49946,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The minimum start time for an object. This only applies to objects with a root level date and/or dateTime element(s). The objects may or not be growing objects but the See the API specification for behavior related to this query parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMin", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMin")]
         public EndpointQualifiedDateTime DateTimeMin {
             get {
                 return dTimMinField;
@@ -48473,7 +49965,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The maximum start time for an object. This only applies to objects with a root level date and/or dateTime element(s). See the API specification for behavior related to this query parameter.")]
         [ComponentElement]
-		[XmlElement("dTimMax", DataType="endpointQualifiedDateTime")]
+        [EnergisticsDataTypeAttribute(DataType = "endpointQualifiedDateTime")]
+		[XmlElement("dTimMax")]
         public EndpointQualifiedDateTime DateTimeMax {
             get {
                 return dTimMaxField;
@@ -48527,7 +50020,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The date on which the event took place.")]
-		[XmlElement("eventDate", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("eventDate")]
         public Timestamp? EventDate {
             get {
                 return eventDateField;
@@ -48545,7 +50039,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The kind of event event.")]
-		[XmlElement("eventType", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("eventType")]
         public string EventType {
             get {
                 return eventTypeField;
@@ -48563,7 +50058,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The party responsible for the event.")]
-		[XmlElement("responsibleParty", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("responsibleParty")]
         public string ResponsibleParty {
             get {
                 return responsiblePartyField;
@@ -48581,7 +50077,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A free form comment that can further  define the event that occurred.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -48599,7 +50096,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -48630,7 +50128,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -48685,7 +50184,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
-		[XmlElement("class", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("class")]
         public string Class {
             get {
                 return classField;
@@ -48703,7 +50203,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The security classification system.  This gives context to the meaning of the Class value.")]
-		[XmlElement("securitySystem", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("securitySystem")]
         public string SecuritySystem {
             get {
                 return securitySystemField;
@@ -48720,7 +50221,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date on which this security class is no longer applicable.
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
-		[XmlElement("endDate", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("endDate")]
         public Timestamp? EndDate {
             get {
                 return endDateField;
@@ -48756,7 +50258,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A general comment to further define the security  class.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -48774,7 +50277,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("extensionNameValue", DataType="cs_extensionNameValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_extensionNameValue")]
+		[XmlElement("extensionNameValue")]
         public List<ExtensionNameValue> ExtensionNameValue {
             get {
                 return extensionNameValueField;
@@ -48805,7 +50309,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("[^ ]*")]
         [StringLength(64)]
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
-        [XmlAttribute("uid", DataType = "uidString")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
 		
         public string Uid {
             get {
@@ -48860,7 +50365,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [Description("The date and time that the file was created.")]
-		[XmlElement("fileCreationDate", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("fileCreationDate")]
         public Timestamp? FileCreationDate {
             get {
                 return fileCreationDateField;
@@ -48878,7 +50384,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
-		[XmlElement("softwareName", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("softwareName")]
         public string SoftwareName {
             get {
                 return softwareNameField;
@@ -48896,7 +50403,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The person or business associate that created  the file.")]
-		[XmlElement("fileCreator", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("fileCreator")]
         public string FileCreator {
             get {
                 return fileCreatorField;
@@ -48914,7 +50422,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("Any comment that would be useful to further  explain the creation of this instance document.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -48969,7 +50478,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("An identifier for the document. This is  intended to be unique within the context of the NamingSystem.")]
         [ComponentElement]
-		[XmlElement("documentName", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("documentName")]
         public NameStruct DocumentName {
             get {
                 return documentNameField;
@@ -48987,7 +50497,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Zero or more alternate names for the document.  These names do not need to be unique within the naming system.")]
         [RecurringElement]
-		[XmlElement("documentAlias", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("documentAlias")]
         public List<NameStruct> DocumentAlias {
             get {
                 return documentAliasField;
@@ -49016,7 +50527,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The date of the creation of the document. This is not the same as the date that the file was created. For this date, the document is considered to be the set of information associated with this document information. For example, the document may be a seismic binset. This represents the date that the binset was created. The FileCreation information would capture the date that the XML file was created to send or exchange the binset.
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
-		[XmlElement("documentDate", DataType="timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
+		[XmlElement("documentDate")]
         public Timestamp? DocumentDate {
             get {
                 return documentDateField;
@@ -49052,7 +50564,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A document class. Examples of classes would be a  metadata classification or a set of keywords.")]
         [RecurringElement]
-		[XmlElement("documentClass", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("documentClass")]
         public List<NameStruct> DocumentClass {
             get {
                 return documentClassField;
@@ -49082,7 +50595,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The information about the creation of the  exchange file. This is not about the creation of the data within  the file, but the creation of the file itself.")]
         [ComponentElement]
-		[XmlElement("fileCreationInformation", DataType="cs_documentFileCreation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentFileCreation")]
+		[XmlElement("fileCreationInformation")]
         public DocumentFileCreation FileCreationInformation {
             get {
                 return fileCreationInformationField;
@@ -49100,7 +50614,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the security to be applied to  this file. More than one classification can be given.")]
         [RecurringElement]
-		[XmlElement("securityInformation", DataType="cs_documentSecurityInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentSecurityInfo")]
+		[XmlElement("securityInformation")]
         public List<DocumentSecurityInfo> SecurityInformation {
             get {
                 return securityInformationField;
@@ -49130,7 +50645,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A free-form string that allows a disclaimer to  accompany the information.")]
-		[XmlElement("disclaimer", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("disclaimer")]
         public string Disclaimer {
             get {
                 return disclaimerField;
@@ -49148,7 +50664,9 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A collection of events that can document the  history of the data.")]
         [RecurringElement]
-		[XmlElement("auditTrail", DataType="cs_documentAudit")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentAudit")]
+		[XmlArrayItem("event")]
+        [XmlArray("auditTrail")]
         public List<DocumentEvent> AuditTrail {
             get {
                 return auditTrailField;
@@ -49178,7 +50696,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(64)]
         [Description("The owner of the data.")]
-		[XmlElement("owner", DataType="nameString")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("owner")]
         public string Owner {
             get {
                 return ownerField;
@@ -49196,7 +50715,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("WITSML query parameters.")]
         [ComponentElement]
-		[XmlElement("queryParam", DataType="cs_documentInfoQueryParam")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfoQueryParam")]
+		[XmlElement("queryParam")]
         public DocumentInfoQueryParam QueryParam {
             get {
                 return queryParamField;
@@ -49214,7 +50734,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("An optional comment about the document.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -49267,7 +50788,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -49285,7 +50807,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single Wireline Formation Test (WFT).")]
         [RecurringElement]
-		[XmlElement("wftRun", DataType="obj_wftRun")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_wftRun")]
+		[XmlElement("wftRun")]
         public List<WftRun> WftRun {
             get {
                 return wftRunField;
@@ -49328,7 +50851,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -49362,7 +50886,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -49380,7 +50905,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single well test.")]
         [RecurringElement]
-		[XmlElement("wellTest", DataType="obj_wellTest")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_wellTest")]
+		[XmlElement("wellTest")]
         public List<WellTest> WellTest {
             get {
                 return wellTestField;
@@ -49423,7 +50949,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -49457,7 +50984,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -49475,7 +51003,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Statistics about a single range of time. This is a VIEW of the time series data and represents derived information about that series. As such, it is not persisted and cannot be added, updated or deleted from a persistent server. The statistics view uses the same identity (including uid) as the time series data object.")]
         [RecurringElement]
-		[XmlElement("timeSeriesStatistic", DataType="obj_timeSeriesStatistic")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_timeSeriesStatistic")]
+		[XmlElement("timeSeriesStatistic")]
         public List<TimeSeriesStatistic> TimeSeriesStatistic {
             get {
                 return timeSeriesStatisticField;
@@ -49518,7 +51047,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -49552,7 +51082,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single time series.")]
         [RecurringElement]
-		[XmlElement("timeSeriesData", DataType="obj_timeSeriesData")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_timeSeriesData")]
+		[XmlElement("timeSeriesData")]
         public List<TimeSeriesData> TimeSeriesData {
             get {
                 return timeSeriesDataField;
@@ -49595,7 +51126,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -49630,7 +51162,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The type of report.  This should define and constrain the expected content of the report.")]
-		[XmlElement("kind", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("kind")]
         public string Kind {
             get {
                 return kindField;
@@ -49648,7 +51181,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The tile of the report if different from the name of the report.")]
         [ComponentElement]
-		[XmlElement("title", DataType="nameStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "nameStruct")]
+		[XmlElement("title")]
         public NameStruct Title {
             get {
                 return titleField;
@@ -49665,6 +51199,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report represents (i.e., not a year or month). Only one of date, month or year should be specified.
         /// </summary>
 		[Description("The date that the report represents (i.e., not a year or month). Only one of date, month or year should be specified.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("date", DataType="date")]
         public DateTime? Date {
             get {
@@ -49700,6 +51235,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The ending date that the report represents if it represents an interval.
         /// </summary>
 		[Description("The ending date that the report represents if it represents an interval.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("dateEnd", DataType="date")]
         public DateTime? DateEnd {
             get {
@@ -49736,7 +51272,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[RegularExpression("([1-9][0-9][0-9][0-9])-(([0][0-9])|([1][0-2]))")]
         [Description("The month that the report represents (i.e., not a year, date or date range). Only one of date, month or year should be specified.")]
-		[XmlElement("month", DataType="calendarMonth")]
+        [EnergisticsDataTypeAttribute(DataType = "calendarMonth")]
+		[XmlElement("month")]
         public string Month {
             get {
                 return monthField;
@@ -49754,7 +51291,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Range(1000, 9999)]
         [Description("The year that the report represents (i.e., not a month, date or date range). Only one of date, month or year should be specified.")]
-		[XmlElement("year", DataType="calendarYear")]
+        [EnergisticsDataTypeAttribute(DataType = "calendarYear")]
+		[XmlElement("year")]
         public int? Year {
             get {
                 return yearField;
@@ -49790,7 +51328,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(4000)]
         [Description("A textual comment about the report.")]
-		[XmlElement("comment", DataType="commentString")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
+		[XmlElement("comment")]
         public string Comment {
             get {
                 return commentField;
@@ -49808,7 +51347,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[StringLength(40)]
         [Description("The current report version.")]
-		[XmlElement("reportVersion", DataType="kindString")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
+		[XmlElement("reportVersion")]
         public string ReportVersion {
             get {
                 return reportVersionField;
@@ -49825,7 +51365,8 @@ namespace Energistics.DataAccess.PRODML131
         /// The current document version status.
         /// </summary>
 		[Description("The current document version status.")]
-		[XmlElement("reportStatus", DataType="ReportVersionStatus")]
+        [EnergisticsDataTypeAttribute(DataType = "ReportVersionStatus")]
+		[XmlElement("reportStatus")]
         public ReportVersionStatus ReportStatus {
             get {
                 return reportStatusField;
@@ -49861,7 +51402,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name of the facility which is represented by this report.  The name can be qualified by a naming system.  This also defines the kind of facility.")]
         [ComponentElement]
-		[XmlElement("installation", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("installation")]
         public FacilityIdentifierStruct Installation {
             get {
                 return installationField;
@@ -49879,7 +51421,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The name and type of a facility whose context is relevant to  the represented installation.")]
         [RecurringElement]
-		[XmlElement("contextFacility", DataType="facilityIdentifierStruct")]
+        [EnergisticsDataTypeAttribute(DataType = "facilityIdentifierStruct")]
+		[XmlElement("contextFacility")]
         public List<FacilityIdentifierStruct> ContextFacility {
             get {
                 return contextFacilityField;
@@ -49909,7 +51452,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The operator of the facilities in the report.")]
         [ComponentElement]
-		[XmlElement("operator", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("operator")]
         public BusinessAssociate Operator {
             get {
                 return operatorField;
@@ -49927,7 +51471,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The geographic context of the report.")]
         [ComponentElement]
-		[XmlElement("geographicContext", DataType="cs_geographicContext")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_geographicContext")]
+		[XmlElement("geographicContext")]
         public GeographicContext GeographicContext {
             get {
                 return geographicContextField;
@@ -49944,6 +51489,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report was issued.
         /// </summary>
 		[Description("The date that the report was issued.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("issueDate", DataType="date")]
         public DateTime? IssueDate {
             get {
@@ -49980,7 +51526,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The person or company that issued the report. This may contain the role of the person or company within the context of the report.")]
         [ComponentElement]
-		[XmlElement("issuedBy", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("issuedBy")]
         public BusinessAssociate IssuedBy {
             get {
                 return issuedByField;
@@ -49997,6 +51544,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The date that the report was approved.
         /// </summary>
 		[Description("The date that the report was approved.")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
 		[XmlElement("approvalDate", DataType="date")]
         public DateTime? ApprovalDate {
             get {
@@ -50033,7 +51581,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("The person or company that approved the report. This may contain the role of the person or company within the context of the report.")]
         [ComponentElement]
-		[XmlElement("approver", DataType="cs_businessAssociate")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_businessAssociate")]
+		[XmlElement("approver")]
         public BusinessAssociate Approver {
             get {
                 return approverField;
@@ -50050,7 +51599,8 @@ namespace Energistics.DataAccess.PRODML131
         /// A container element that can contain custom or user defined data elements.
         /// </summary>
 		[Description("A container element that can contain custom or user defined  data elements.")]
-		[XmlElement("customData", DataType="cs_customData")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
         public CustomData CustomData {
             get {
                 return customDataField;
@@ -50083,7 +51633,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50101,7 +51652,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single productVolume.")]
         [RecurringElement]
-		[XmlElement("productVolume", DataType="obj_productVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_productVolume")]
+		[XmlElement("productVolume")]
         public List<ProductVolume> ProductVolume {
             get {
                 return productVolumeField;
@@ -50144,7 +51696,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50178,7 +51731,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50197,7 +51751,8 @@ namespace Energistics.DataAccess.PRODML131
 		[Required]
         [Description("Information about a single productionOperation.")]
         [RecurringElement]
-		[XmlElement("productionOperation", DataType="obj_productionOperation")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_productionOperation")]
+		[XmlElement("productionOperation")]
         public List<ProductionOperation> ProductionOperation {
             get {
                 return productionOperationField;
@@ -50240,7 +51795,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50274,7 +51830,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50292,7 +51849,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single Product Flow Model.")]
         [RecurringElement]
-		[XmlElement("productFlowModel", DataType="obj_productFlowModel")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_productFlowModel")]
+		[XmlElement("productFlowModel")]
         public List<ProductFlowModel> ProductFlowModel {
             get {
                 return productFlowModelField;
@@ -50335,7 +51893,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50369,7 +51928,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50387,7 +51947,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single Fluid Sample.")]
         [RecurringElement]
-		[XmlElement("fluidSample", DataType="obj_fluidSample")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_fluidSample")]
+		[XmlElement("fluidSample")]
         public List<FluidSample> FluidSample {
             get {
                 return fluidSampleField;
@@ -50430,7 +51991,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50464,7 +52026,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50482,7 +52045,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single Fluid Analysis Result.")]
         [RecurringElement]
-		[XmlElement("fluidAnalysisResult", DataType="obj_fluidAnalysisResult")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_fluidAnalysisResult")]
+		[XmlElement("fluidAnalysisResult")]
         public List<FluidAnalysisResult> FluidAnalysisResult {
             get {
                 return fluidAnalysisResultField;
@@ -50525,7 +52089,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50559,7 +52124,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about the XML message instance.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50577,7 +52143,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("Information about a single Fluid Analysis.")]
         [RecurringElement]
-		[XmlElement("fluidAnalysis", DataType="obj_fluidAnalysis")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_fluidAnalysis")]
+		[XmlElement("fluidAnalysis")]
         public List<FluidAnalysis> FluidAnalysis {
             get {
                 return fluidAnalysisField;
@@ -50620,7 +52187,8 @@ namespace Energistics.DataAccess.PRODML131
         [RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the documenti nstance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50654,7 +52222,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50672,7 +52241,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("facilityIdentifier", DataType="cs_facilityIdentifier")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_facilityIdentifier")]
+		[XmlElement("facilityIdentifier")]
         public FacilityIdentifier FacilityIdentifier {
             get {
                 return facilityIdentifierField;
@@ -50689,7 +52259,8 @@ namespace Energistics.DataAccess.PRODML131
         /// fiberOpticalPath property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("fiberOpticalPath", DataType="obj_fiberOpticalPath")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_fiberOpticalPath")]
+		[XmlElement("fiberOpticalPath")]
         public List<FiberOpticalPath> FiberOpticalPath {
             get {
                 return fiberOpticalPathField;
@@ -50731,7 +52302,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50765,7 +52337,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50783,7 +52356,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("facilityIdentifier", DataType="cs_facilityIdentifier")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_facilityIdentifier")]
+		[XmlElement("facilityIdentifier")]
         public FacilityIdentifier FacilityIdentifier {
             get {
                 return facilityIdentifierField;
@@ -50800,7 +52374,8 @@ namespace Energistics.DataAccess.PRODML131
         /// dtsMeasurement property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("dtsMeasurement", DataType="obj_dtsMeasurement")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_dtsMeasurement")]
+		[XmlElement("dtsMeasurement")]
         public List<DtsMeasurement> DtsMeasurement {
             get {
                 return dtsMeasurementField;
@@ -50842,7 +52417,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50876,7 +52452,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -50894,7 +52471,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("facilityIdentifier", DataType="cs_facilityIdentifier")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_facilityIdentifier")]
+		[XmlElement("facilityIdentifier")]
         public FacilityIdentifier FacilityIdentifier {
             get {
                 return facilityIdentifierField;
@@ -50911,7 +52489,8 @@ namespace Energistics.DataAccess.PRODML131
         /// fiberInstrumentBox property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("fiberInstrumentBox", DataType="obj_dtsInstrumentBox")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_dtsInstrumentBox")]
+		[XmlElement("fiberInstrumentBox")]
         public List<DtsInstrumentBox> FiberInstrumentBox {
             get {
                 return fiberInstrumentBoxField;
@@ -50953,7 +52532,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {
@@ -50987,7 +52567,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
         [ComponentElement]
-		[XmlElement("documentInfo", DataType="cs_documentInfo")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
         public DocumentInfo DocumentInfo {
             get {
                 return documentInfoField;
@@ -51005,7 +52586,8 @@ namespace Energistics.DataAccess.PRODML131
         /// </summary>
 		[Required]
         [ComponentElement]
-		[XmlElement("facilityIdentifier", DataType="cs_facilityIdentifier")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_facilityIdentifier")]
+		[XmlElement("facilityIdentifier")]
         public FacilityIdentifier FacilityIdentifier {
             get {
                 return facilityIdentifierField;
@@ -51022,7 +52604,8 @@ namespace Energistics.DataAccess.PRODML131
         /// dtsinstalledSystem property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("dtsinstalledSystem", DataType="obj_dtsInstalledSystem")]
+        [EnergisticsDataTypeAttribute(DataType = "obj_dtsInstalledSystem")]
+		[XmlElement("dtsinstalledSystem")]
         public List<DtsInstalledSystem> DtsinstalledSystem {
             get {
                 return dtsinstalledSystemField;
@@ -51064,7 +52647,8 @@ namespace Energistics.DataAccess.PRODML131
 		[RegularExpression("1\\.2\\.[0-9]\\.[1-9]?[0-9]\\(PRODML\\)")]
         [StringLength(16)]
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
-        [XmlAttribute("version", DataType = "schemaVersionStringProdml")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionStringProdml")]
+        [XmlAttribute("version")]
 		
         public string Version {
             get {

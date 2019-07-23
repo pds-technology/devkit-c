@@ -59,6 +59,9 @@
     <Compile Include="..\DataAccess\ExtensibleEnum.cs">
       <Link>ExtensibleEnum.cs</Link>
     </Compile>
+    <Compile Include="..\DataAccess\Reflection\EnergisticsDataTypeAttribute.cs">
+      <Link>EnergisticsDataTypeAttribute.cs</Link>
+    </Compile>
     <Compile Include="..\DataAccess\Timestamp.cs">
       <Link>Timestamp.cs</Link>
     </Compile>

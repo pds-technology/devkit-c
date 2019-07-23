@@ -73,6 +73,7 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+using Energistics.DataAccess.Reflection;
 using System;
 using System.CodeDom;
 using System.CodeDom.Compiler;
@@ -497,23 +498,7 @@ namespace Energistics.SchemaGatherer
             if (string.IsNullOrEmpty(attribute?.SchemaTypeName?.Name))
                 return;
 
-            var attributeAttribute = Get<XmlAttributeAttribute>(memberProperty);
-            if (attributeAttribute != null)
-            {
-                foreach (var arg in attributeAttribute.Arguments.Cast<CodeAttributeArgument>())
-                {
-                    if (arg.Name == "DataType")
-                        return;
-                }
-            }
-
-            var argument = new CodeAttributeArgument("DataType", new CodePrimitiveExpression(attribute.SchemaTypeName.Name));
-            if (attributeAttribute == null)
-            {
-                attributeAttribute = new CodeAttributeDeclaration(new CodeTypeReference(typeof(XmlAttributeAttribute)));
-                memberProperty.CustomAttributes.Add(attributeAttribute);
-            }
-            attributeAttribute.Arguments.Add(argument);
+            AddDataType(memberProperty, attribute.Name, attribute.SchemaTypeName.Name);
         }
 
         private static void AddElementDataType(XmlSchemaElement element, CodeMemberProperty memberProperty)
@@ -521,11 +506,16 @@ namespace Energistics.SchemaGatherer
             if (string.IsNullOrEmpty(element?.SchemaTypeName?.Name))
                 return;
 
-            var elementAttributes = GetAll<XmlElementAttribute>(memberProperty);
-            CodeAttributeDeclaration elementAttribute = null;
-            if (elementAttributes != null)
+            AddDataType(memberProperty, element.Name, element.SchemaTypeName.Name);
+        }
+
+        private static void AddDataType(CodeMemberProperty memberProperty, string name, string schemaType)
+        {
+            var dataTypeAttributes = GetAll<EnergisticsDataTypeAttribute>(memberProperty);
+            CodeAttributeDeclaration dataTypeAttribute = null;
+            if (dataTypeAttributes != null)
             {
-                foreach (var attribute in elementAttributes)
+                foreach (var attribute in dataTypeAttributes)
                 {
                     bool hasElementName = false;
                     bool nameMatches = false;
@@ -538,7 +528,7 @@ namespace Energistics.SchemaGatherer
                         if (expression.Value is string)
                         {
                             hasElementName = true;
-                            if ((string)expression.Value == element.Name)
+                            if ((string)expression.Value == name)
                                 nameMatches = true;
                         }
                     }
@@ -553,18 +543,21 @@ namespace Energistics.SchemaGatherer
                     }
 
                     if (!hasElementName || nameMatches)
-                        elementAttribute = attribute;
+                        dataTypeAttribute = attribute;
                 }
             }
-            if (elementAttribute == null)
+            if (dataTypeAttribute == null)
             {
-                elementAttribute = new CodeAttributeDeclaration(new CodeTypeReference(typeof(XmlElementAttribute)));
-                memberProperty.CustomAttributes.Add(elementAttribute);
+                dataTypeAttribute = new CodeAttributeDeclaration(new CodeTypeReference(typeof(EnergisticsDataTypeAttribute)));
+                memberProperty.CustomAttributes.Add(dataTypeAttribute);
             }
 
-            var argument = new CodeAttributeArgument("DataType", new CodePrimitiveExpression(element.SchemaTypeName.Name));
-            elementAttribute.Arguments.Add(argument);
+            var n = new CodeAttributeArgument(new CodePrimitiveExpression(name));
+            dataTypeAttribute.Arguments.Add(n);
+            var dataType = new CodeAttributeArgument("DataType", new CodePrimitiveExpression(schemaType));
+            dataTypeAttribute.Arguments.Add(dataType);
         }
+
 
         private static void AddRestrictionAttributes(CodeNamespace codeNamespace, CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, IList<XmlSchemaFacet> restrictions)
         {

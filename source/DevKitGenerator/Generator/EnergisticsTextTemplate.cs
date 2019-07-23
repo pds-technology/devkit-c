@@ -415,12 +415,6 @@ using Energistics.DataAccess.");
             
             #line default
             #line hidden
-            
-            #line 135 "C:\development\WITSML\witsml-studio\ext\witsml\ext\devkit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(string.IsNullOrEmpty(attribute.DataType) ? String.Empty : String.Format(", DataType = \"{0}\"", attribute.DataType)));
-            
-            #line default
-            #line hidden
             this.Write(")]\r\n\t\t");
             
             #line 136 "C:\development\WITSML\witsml-studio\ext\witsml\ext\devkit-c\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"

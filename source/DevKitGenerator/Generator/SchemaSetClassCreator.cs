@@ -84,6 +84,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Serialization;
+using Energistics.DataAccess.Reflection;
 using Energistics.SchemaGatherer;
 
 namespace Energistics.Generator
@@ -1277,6 +1278,14 @@ namespace Energistics.Generator
             {
                 init();
                 sb.Append("[RecurringElement]");
+            }
+
+            var dataTypes = property.GetCustomAttributes(typeof(EnergisticsDataTypeAttribute), false);
+            if (dataTypes.Length > 0)
+            {
+                init();
+                var dataType = ((EnergisticsDataTypeAttribute)dataTypes[0]);
+                sb.AppendFormat("[EnergisticsDataTypeAttribute(DataType = \"{0}\")]", dataType.DataType);
             }
 
             return sb.ToString();
