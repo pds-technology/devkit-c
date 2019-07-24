@@ -57,12 +57,12 @@
 	<!--                                                         -->
 	<xsd:complexType name="obj_wellCMLedger">
 		<xsd:sequence>
-			<xsd:element name="nameWell" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+			<xsd:element name="nameWell" type="witsml:nameString" minOccurs="1" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>Well name.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="nameWellbore" type="witsml:nameString" minOccurs="0" maxOccurs="1">
+			<xsd:element name="nameWellbore" type="witsml:nameString" minOccurs="1" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>Wellbore name.</xsd:documentation>
 				</xsd:annotation>

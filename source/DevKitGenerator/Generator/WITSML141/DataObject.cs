@@ -67667,6 +67667,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Well name.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Well name.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nameWell", DataType="nameString")]
@@ -67681,6 +67682,7 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Wellbore name.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Wellbore name.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nameWellbore", DataType="nameString")]

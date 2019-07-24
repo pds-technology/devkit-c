@@ -79792,7 +79792,8 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// nameWell property
         /// </summary>
-		[StringLength(64)]
+		[Required]
+        [StringLength(64)]
         [Description("Well name.")]
         [EnergisticsDataTypeAttribute(DataType = "nameString")]
 		[XmlElement("nameWell")]
@@ -79811,7 +79812,8 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// nameWellbore property
         /// </summary>
-		[StringLength(64)]
+		[Required]
+        [StringLength(64)]
         [Description("Wellbore name.")]
         [EnergisticsDataTypeAttribute(DataType = "nameString")]
 		[XmlElement("nameWellbore")]
