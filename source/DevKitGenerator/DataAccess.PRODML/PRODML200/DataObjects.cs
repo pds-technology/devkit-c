@@ -37448,7 +37448,7 @@ namespace Energistics.DataAccess.PRODML200
             }
         }
 
-        private string versionField = "2.0"; 
+        private string versionField; 
 
 
         

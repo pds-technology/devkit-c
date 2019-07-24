@@ -195,7 +195,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private string versionField = "1.3.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// schemaVersion property
@@ -528,7 +528,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private string versionField = "1.3.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// schemaVersion property
@@ -887,7 +887,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private string versionField = "1.3.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// schemaVersion property
@@ -1159,7 +1159,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private string versionField = "1.3.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// schemaVersion property

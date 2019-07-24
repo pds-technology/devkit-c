@@ -1072,7 +1072,13 @@ namespace Energistics.Generator
                     sb.AppendLine("             }");
                     sb.AppendLine("         }");
                 }
-                sb.AppendLine("        private " + GetPropertyType(property) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
+                bool addSchemaVersion = true;
+                if (property.PropertyType != typeof(String) || privateFieldName != "versionField" || string.IsNullOrEmpty(versionString))
+                    addSchemaVersion = false;
+                if (!IsEnergisticsCollection(type) && !type.Name.Equals("obj_capServers") && !type.Name.Equals("obj_capClients") && !type.Name.Equals("obj_capPublishers") && !type.Name.Equals("obj_capSubscribers"))
+                    addSchemaVersion = false;
+
+                sb.AppendLine("        private " + GetPropertyType(property) + MakePropertyNullable(property) + " " + privateFieldName + (addSchemaVersion ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
 
 
                 return sb.ToString();

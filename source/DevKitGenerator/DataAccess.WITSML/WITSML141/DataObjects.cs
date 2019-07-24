@@ -20140,7 +20140,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private string versionField = "1.4.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// A comment about the object. This should include information regarding the derivation of the information.
@@ -90312,7 +90312,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private string versionField = "1.4.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// alias property
@@ -94574,7 +94574,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private string versionField = "1.4.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// schemaVersion property
@@ -94907,7 +94907,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private string versionField = "1.4.1.1"; 
+        private string versionField; 
 
         /// <summary>
         /// schemaVersion property
