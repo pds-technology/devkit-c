@@ -88,7 +88,7 @@ namespace Energistics.DataAccess
     /// <typeparam name="TEnum">The <typeparamref name="TEnum"/> enumeration to use as the native enumeration.</typeparam>
     [Serializable]
     public struct ExtensibleEnum<TEnum> : IComparable<ExtensibleEnum<TEnum>>, IEquatable<ExtensibleEnum<TEnum>>, IComparable<TEnum>, IEquatable<TEnum>, IXmlSerializable
-        where TEnum : struct, Enum
+        where TEnum : struct, IComparable
     {
         /// <summary>
         /// The standard enumeration value, if set.
