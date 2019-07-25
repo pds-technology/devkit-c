@@ -138,7 +138,8 @@ namespace Energistics.DataAccess
         /// <param name="enum">The string enumeration to initialize from.</param>
         private void InitializeFromString(string @enum)
         {
-            if (System.Enum.TryParse<TEnum>(@enum, out var parsedEnum))
+            TEnum parsedEnum;
+            if (System.Enum.TryParse<TEnum>(@enum, out parsedEnum))
             {
                 Enum = parsedEnum;
                 Extension = null;
@@ -280,7 +281,7 @@ namespace Energistics.DataAccess
         /// <returns>The native enumeration value if set or the default value for <typeparamref name="TEnum"/> if not set.</returns>
         public static implicit operator TEnum(ExtensibleEnum<TEnum> @enum)
         {
-            return @enum.IsEnum ? @enum.Enum : default;
+            return @enum.IsEnum ? @enum.Enum : default(TEnum);
         }
 
         /// <summary>
