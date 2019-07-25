@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<Relationships xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Type="http://schemas.energistics.org/package/2012/relationships/externalPartProxyToMl" Target="DasAcquisition_dc0e381a-094a-4fd2-ab89-dce867e3b99d.xml" Id="dc0e381a-094a-4fd2-ab89-dce867e3b99d"/>
-  <Relationship TargetMode="External" Type="http://schemas.energistics.org/package/2012/relationships/externalResource" Target="part2.h5" Id="_602735d9-0ebb-41e4-99c5-281582916805"/>
-</Relationships>
