@@ -174,11 +174,13 @@ namespace Energistics.DataAccess.<#=mlVersion#>
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion

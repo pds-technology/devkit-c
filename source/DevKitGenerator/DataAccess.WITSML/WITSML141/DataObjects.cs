@@ -757,11 +757,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -7177,11 +7179,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -9870,11 +9874,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -16016,11 +16022,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -16772,11 +16780,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -20003,11 +20013,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -21185,11 +21197,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -22081,11 +22095,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -22768,11 +22784,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -32793,11 +32811,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -34967,11 +34987,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -35704,11 +35726,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -42296,11 +42320,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -49001,11 +49027,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -53701,11 +53729,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -55128,11 +55158,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -57872,11 +57904,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -59739,11 +59773,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -60233,11 +60269,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -60566,11 +60604,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -67548,11 +67588,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -68299,11 +68341,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -68981,11 +69025,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -74722,11 +74768,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -75311,11 +75359,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -75713,11 +75763,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -76128,11 +76180,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -80669,11 +80723,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -83162,11 +83218,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -86888,11 +86946,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -87793,11 +87853,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
@@ -90552,11 +90614,13 @@ namespace Energistics.DataAccess.WITSML141
         ICommonData ICommonDataObject.CommonData
         {
             get { return CommonData; }
+            set { CommonData = value as CommonData; }
         }
 
         ICustomData ICommonDataObject.CustomData
         {
             get { return CustomData; }
+            set { CustomData = value as CustomData; }
         }
 
         #endregion
