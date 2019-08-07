@@ -87,12 +87,12 @@ namespace Energistics.DataAccess
         /// <summary>
         /// Gets the common data object.
         /// </summary>
-        ICommonData CommonData { get; }
+        ICommonData CommonData { get; set; }
 
         /// <summary>
         /// Gets the custom data object.
         /// </summary>
-        ICustomData CustomData { get; }
+        ICustomData CustomData { get; set; }
     }
 
     /// <summary>
