@@ -18,6 +18,129 @@ using Energistics.DataAccess.Validation;
 namespace Energistics.DataAccess.WITSML141
 {
     #region Classes
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the abstractMeasure xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the abstractMeasure xsd type.")]
+    public abstract partial class AbstractMeasure : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// ValueSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ValueSpecified {
+            get {
+                return ValueSpecifiedField;
+            } 
+            set {
+                ValueSpecifiedField = value;
+                NotifyPropertyChanged("ValueSpecified");
+            }
+        }
+
+        private bool ValueSpecifiedField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                 this.ValueSpecified = true;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
     /// <summary>
     /// This class represents the abstractObject xsd type.
     /// </summary>
@@ -962,111 +1085,6 @@ namespace Energistics.DataAccess.WITSML141
         private string datumField; 
 
 
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the abstractMeasure xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-	[Description("This class represents the abstractMeasure xsd type.")]
-    public abstract partial class AbstractMeasure : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
     } //here
     }
 

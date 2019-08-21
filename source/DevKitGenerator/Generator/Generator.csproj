@@ -86,7 +86,9 @@
       <DependentUpon>ResqmlHD5Template.tt</DependentUpon>
     </Compile>
     <Compile Include="SchemaSetClassCreator.cs" />
+    <Compile Include="WITSML131\AbstractMeasure.cs" />
     <Compile Include="WITSML131\DataObject.cs" />
+    <Compile Include="WITSML141\AbstractMeasure.cs" />
     <Compile Include="WITSML141\DataObject.cs" />
     <Compile Include="WITSML200\DataObject.cs" />
   </ItemGroup>
