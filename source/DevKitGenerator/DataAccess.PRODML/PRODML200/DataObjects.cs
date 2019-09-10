@@ -27444,7 +27444,7 @@ namespace Energistics.DataAccess.PRODML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "FluidCharacterizationTableFormatSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("FluidCharacterizationTableFormat")]
         [XmlArray("FluidCharacterizationTableFormatSet")]
         public List<FluidCharacterizationTableFormat> FluidCharacterizationTableFormatSet {
             get {
@@ -36562,7 +36562,7 @@ namespace Energistics.DataAccess.PRODML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "ComponentPropertySet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("FluidComponentProperty")]
         [XmlArray("ComponentPropertySet")]
         public List<FluidComponentProperty> ComponentPropertySet {
             get {
@@ -36593,7 +36593,7 @@ namespace Energistics.DataAccess.PRODML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "BinaryInteractionCoefficientSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("BinaryInteractionCoefficient")]
         [XmlArray("BinaryInteractionCoefficientSet")]
         public List<BinaryInteractionCoefficient> BinaryInteractionCoefficientSet {
             get {
@@ -67731,7 +67731,7 @@ namespace Energistics.DataAccess.PRODML200
 		[Description("The collection of fluid characterization table formats.")]
         [RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "FluidCharacterizationTableFormatSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("FluidCharacterizationTableFormat")]
         [XmlArray("FluidCharacterizationTableFormatSet")]
         public List<FluidCharacterizationTableFormat> FluidCharacterizationTableFormatSet {
             get {

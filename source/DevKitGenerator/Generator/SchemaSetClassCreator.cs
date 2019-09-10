@@ -1030,7 +1030,8 @@ namespace Energistics.Generator
                 sb.AppendLine("            } ");
                 sb.AppendLine("            set {");
                 sb.AppendLine("                " + privateFieldName + " = value;");
-                if (type.GetProperty(property.Name + "Specified") != null)
+                if (type.GetProperty(property.Name + "Specified") != null ||
+                    property.Name == "MaterialCatalog") // Special case for StimJob 2.0
                 {
                     // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
                     if ((property.PropertyType.IsEnum) || (property.PropertyType.IsValueType) || (property.PropertyType.FullName.ToLower().Contains("boolean")))
@@ -1045,6 +1046,9 @@ namespace Energistics.Generator
                 sb.AppendLine("            }");
                 sb.AppendLine("        }");
                 sb.AppendLine();
+
+                if (property.Name == "MaterialCatalog")
+                    sb.AppendLine("        private bool " + specifiedBool + " = false;");
 
                 // create the Sepcified field for array list. thus prevent the nil output in xml.
                 // from the research, there is two ways to prevent the null : 1. bool xxxSpecified property 2. ShouldSerializexxx() method
@@ -1159,7 +1163,8 @@ namespace Energistics.Generator
             if (elementAttribute.Length > 0)
             {
                 XmlArrayItemAttribute xaia = (XmlArrayItemAttribute)elementAttribute[0];
-                string returnString = String.Format("[XmlArrayItem(\"{0}\")]\n        ", xaia.ElementName);
+
+                string returnString = GetArrayPropertyElementName(property, xaia);
                 returnString += String.Format("[XmlArray(\"{0}\")]", property.Name);
                 return returnString;
             }
@@ -1194,6 +1199,52 @@ namespace Energistics.Generator
                     return xmlElementAttrTag;
                 }
             }
+        }
+
+        private string GetArrayPropertyElementName(PropertyInfo property, XmlArrayItemAttribute xaia)
+        {
+            string name = xaia.ElementName;
+            if (string.IsNullOrEmpty(name))
+            {
+                if (property.PropertyType.IsArray)
+                    name = GetTypeXmlTypeName(property.PropertyType.GetElementType());
+                else
+                    name = GetTypeXmlTypeName(property.PropertyType);
+            }
+            if (string.IsNullOrEmpty(name))
+            {
+                object[] dataTypes = property.GetCustomAttributes(typeof(EnergisticsDataTypeAttribute), false);
+                if (dataTypes.Length > 0)
+                {
+                    EnergisticsDataTypeAttribute dataType = (EnergisticsDataTypeAttribute)dataTypes[0];
+
+                    if (!string.IsNullOrEmpty(dataType.DataType) && dataType.DataType != property.Name)
+                        name = dataType.DataType;
+                }
+            }
+            if (string.IsNullOrEmpty(name))
+            {
+                if (property.PropertyType.IsArray)
+                {
+                    name = property.PropertyType.GetElementType().Name;
+                }
+                else
+                    name = property.PropertyType.Name;
+            }
+
+            return String.Format("[XmlArrayItem(\"{0}\")]\n        ", name);
+        }
+
+        private string GetTypeXmlTypeName(Type type)
+        {
+            object[] xmlTypes = type.GetCustomAttributes(typeof(XmlTypeAttribute), false);
+            if (xmlTypes.Length == 0) return null;
+
+            XmlTypeAttribute typeAttribute = ((XmlTypeAttribute)xmlTypes[0]);
+            if (string.IsNullOrEmpty(typeAttribute.TypeName))
+                return type.Name;
+
+            return typeAttribute.TypeName;
         }
 
         /// <summary>

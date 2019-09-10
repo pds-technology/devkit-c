@@ -5148,7 +5148,7 @@ namespace Energistics.DataAccess.RESQML210
 		[Required]
         [RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "ThreePoint3d")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("ThreePoint3d")]
         [XmlArray("Plane")]
         public List<List<Point3d>> Plane {
             get {

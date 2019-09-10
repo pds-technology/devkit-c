@@ -62063,7 +62063,7 @@ namespace Energistics.DataAccess.WITSML131
 		[Description("Container for one or more blocks of well log data.")]
         [RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "cs_wellLogData")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("data")]
         [XmlArray("logData")]
         public List<LogCurveInfoData> LogData {
             get {

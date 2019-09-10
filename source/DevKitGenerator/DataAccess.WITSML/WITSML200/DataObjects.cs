@@ -51312,7 +51312,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "StringEquipmentSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("StringEquipment")]
         [XmlArray("StringEquipmentSet")]
         public List<StringEquipment> StringEquipmentSet {
             get {
@@ -74852,7 +74852,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Perforations added just before treating the stage.")]
         [RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "StimPerforationClusterSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("StimPerforationCluster")]
         [XmlArray("StagePerforationClusters")]
         public List<StimPerforationCluster> StagePerforationClusters {
             get {
@@ -77004,7 +77004,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Perforation clusters existing before starting the job.")]
         [RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "StimPerforationClusterSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("StimPerforationCluster")]
         [XmlArray("JobPerforationClusters")]
         public List<StimPerforationCluster> JobPerforationClusters {
             get {
@@ -77387,10 +77387,13 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 MaterialCatalogField = value;
+             if(value!=null) 
+                 this.MaterialCatalogSpecified = true;
                 NotifyPropertyChanged("MaterialCatalog");
             }
         }
 
+        private bool MaterialCatalogSpecified = false;
         private StimJobMaterialCatalog MaterialCatalogField; 
 
         /// <summary>
@@ -84405,7 +84408,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "DownholeStringSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("DownholeString")]
         [XmlArray("DownholeStringSet")]
         public List<DownholeString> DownholeStringSet {
             get {
@@ -84436,7 +84439,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "PerforationSets")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("PerforationSet")]
         [XmlArray("PerforationSets")]
         public List<PerforationSet> PerforationSets {
             get {
@@ -84467,7 +84470,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "EquipmentSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("Equipment")]
         [XmlArray("EquipmentSet")]
         public List<Equipment> EquipmentSet {
             get {
@@ -84535,7 +84538,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
         [EnergisticsDataTypeAttribute(DataType = "BoreholeStringSet")]
-		[XmlArrayItem("")]
+		[XmlArrayItem("BoreholeString")]
         [XmlArray("BoreholeStringSet")]
         public List<BoreholeString> BoreholeStringSet {
             get {
