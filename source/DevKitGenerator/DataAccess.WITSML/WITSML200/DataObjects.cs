@@ -1121,10 +1121,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -1361,10 +1380,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EventDateField = value;
+                 this.EventDateSpecified = true;
                 NotifyPropertyChanged("EventDate");
             }
         }
 
+        
+        private bool EventDateSpecifiedField = false;
+        
+        /// <summary>
+        /// EventDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EventDateSpecified {
+            get {
+                return EventDateSpecifiedField;
+            } 
+            set {
+                EventDateSpecifiedField = value;
+                NotifyPropertyChanged("EventDateSpecified");
+            }
+        }
+        
         private Timestamp? EventDateField; 
 
 
@@ -1451,10 +1489,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StartDateField = value;
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
 
+        
+        private bool StartDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StartDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StartDateSpecified {
+            get {
+                return StartDateSpecifiedField;
+            } 
+            set {
+                StartDateSpecifiedField = value;
+                NotifyPropertyChanged("StartDateSpecified");
+            }
+        }
+        
         private Timestamp? StartDateField; 
 
         /// <summary>
@@ -1469,10 +1526,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EndDateField = value;
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
 
+        
+        private bool EndDateSpecifiedField = false;
+        
+        /// <summary>
+        /// EndDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EndDateSpecified {
+            get {
+                return EndDateSpecifiedField;
+            } 
+            set {
+                EndDateSpecifiedField = value;
+                NotifyPropertyChanged("EndDateSpecified");
+            }
+        }
+        
         private Timestamp? EndDateField; 
 
         /// <summary>
@@ -1654,10 +1730,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StartDateField = value;
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
 
+        
+        private bool StartDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StartDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StartDateSpecified {
+            get {
+                return StartDateSpecifiedField;
+            } 
+            set {
+                StartDateSpecifiedField = value;
+                NotifyPropertyChanged("StartDateSpecified");
+            }
+        }
+        
         private Timestamp? StartDateField; 
 
         /// <summary>
@@ -1672,10 +1767,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EndDateField = value;
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
 
+        
+        private bool EndDateSpecifiedField = false;
+        
+        /// <summary>
+        /// EndDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EndDateSpecified {
+            get {
+                return EndDateSpecifiedField;
+            } 
+            set {
+                EndDateSpecifiedField = value;
+                NotifyPropertyChanged("EndDateSpecified");
+            }
+        }
+        
         private Timestamp? EndDateField; 
 
         /// <summary>
@@ -2707,10 +2821,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StartDateField = value;
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
 
+        
+        private bool StartDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StartDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StartDateSpecified {
+            get {
+                return StartDateSpecifiedField;
+            } 
+            set {
+                StartDateSpecifiedField = value;
+                NotifyPropertyChanged("StartDateSpecified");
+            }
+        }
+        
         private Timestamp? StartDateField; 
 
         /// <summary>
@@ -2725,10 +2858,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EndDateField = value;
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
 
+        
+        private bool EndDateSpecifiedField = false;
+        
+        /// <summary>
+        /// EndDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EndDateSpecified {
+            get {
+                return EndDateSpecifiedField;
+            } 
+            set {
+                EndDateSpecifiedField = value;
+                NotifyPropertyChanged("EndDateSpecified");
+            }
+        }
+        
         private Timestamp? EndDateField; 
 
         /// <summary>
@@ -9369,10 +9521,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -9387,10 +9558,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -10932,10 +11122,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -11221,10 +11430,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -11258,10 +11486,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -11470,10 +11717,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -12328,10 +12594,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -12346,10 +12631,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -13077,10 +13381,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPumpOnField = value;
+                 this.DateTimePumpOnSpecified = true;
                 NotifyPropertyChanged("DateTimePumpOn");
             }
         }
 
+        
+        private bool DateTimePumpOnSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePumpOnSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePumpOnSpecified {
+            get {
+                return DateTimePumpOnSpecifiedField;
+            } 
+            set {
+                DateTimePumpOnSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePumpOnSpecified");
+            }
+        }
+        
         private Timestamp? DTimPumpOnField; 
 
         /// <summary>
@@ -13095,10 +13418,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPumpOffField = value;
+                 this.DateTimePumpOffSpecified = true;
                 NotifyPropertyChanged("DateTimePumpOff");
             }
         }
 
+        
+        private bool DateTimePumpOffSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePumpOffSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePumpOffSpecified {
+            get {
+                return DateTimePumpOffSpecifiedField;
+            } 
+            set {
+                DateTimePumpOffSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePumpOffSpecified");
+            }
+        }
+        
         private Timestamp? DTimPumpOffField; 
 
         /// <summary>
@@ -13132,10 +13474,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimWellShutinField = value;
+                 this.DateTimeWellShutinSpecified = true;
                 NotifyPropertyChanged("DateTimeWellShutin");
             }
         }
 
+        
+        private bool DateTimeWellShutinSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeWellShutinSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeWellShutinSpecified {
+            get {
+                return DateTimeWellShutinSpecifiedField;
+            } 
+            set {
+                DateTimeWellShutinSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeWellShutinSpecified");
+            }
+        }
+        
         private Timestamp? DTimWellShutinField; 
 
         /// <summary>
@@ -13150,10 +13511,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimFractureCloseField = value;
+                 this.DateTimeFractureCloseSpecified = true;
                 NotifyPropertyChanged("DateTimeFractureClose");
             }
         }
 
+        
+        private bool DateTimeFractureCloseSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeFractureCloseSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeFractureCloseSpecified {
+            get {
+                return DateTimeFractureCloseSpecifiedField;
+            } 
+            set {
+                DateTimeFractureCloseSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeFractureCloseSpecified");
+            }
+        }
+        
         private Timestamp? DTimFractureCloseField; 
 
         /// <summary>
@@ -15048,10 +15428,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -15066,10 +15465,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -15694,10 +16112,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 InstallationDateField = value;
+                 this.InstallationDateSpecified = true;
                 NotifyPropertyChanged("InstallationDate");
             }
         }
 
+        
+        private bool InstallationDateSpecifiedField = false;
+        
+        /// <summary>
+        /// InstallationDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool InstallationDateSpecified {
+            get {
+                return InstallationDateSpecifiedField;
+            } 
+            set {
+                InstallationDateSpecifiedField = value;
+                NotifyPropertyChanged("InstallationDateSpecified");
+            }
+        }
+        
         private Timestamp? InstallationDateField; 
 
         /// <summary>
@@ -15895,10 +16332,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -15913,10 +16369,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -16145,10 +16620,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -16163,10 +16657,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -16414,10 +16927,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -16432,10 +16964,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -17116,10 +17667,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -17134,10 +17704,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -17694,10 +18283,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -17712,10 +18320,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -18455,10 +19082,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimInstallField = value;
+                 this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
         }
 
+        
+        private bool DateTimeInstallSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeInstallSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeInstallSpecified {
+            get {
+                return DateTimeInstallSpecifiedField;
+            } 
+            set {
+                DateTimeInstallSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeInstallSpecified");
+            }
+        }
+        
         private Timestamp? DTimInstallField; 
 
         /// <summary>
@@ -18473,10 +19119,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRemoveField = value;
+                 this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
         }
 
+        
+        private bool DateTimeRemoveSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRemoveSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRemoveSpecified {
+            get {
+                return DateTimeRemoveSpecifiedField;
+            } 
+            set {
+                DateTimeRemoveSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRemoveSpecified");
+            }
+        }
+        
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
@@ -21614,10 +22279,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DateTimeGasSampleProcessedField = value;
+                 this.DateTimeGasSampleProcessedSpecified = true;
                 NotifyPropertyChanged("DateTimeGasSampleProcessed");
             }
         }
 
+        
+        private bool DateTimeGasSampleProcessedSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeGasSampleProcessedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeGasSampleProcessedSpecified {
+            get {
+                return DateTimeGasSampleProcessedSpecifiedField;
+            } 
+            set {
+                DateTimeGasSampleProcessedSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeGasSampleProcessedSpecified");
+            }
+        }
+        
         private Timestamp? DateTimeGasSampleProcessedField; 
 
         /// <summary>
@@ -21670,10 +22354,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 ChromReportTimeField = value;
+                 this.ChromReportTimeSpecified = true;
                 NotifyPropertyChanged("ChromReportTime");
             }
         }
 
+        
+        private bool ChromReportTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// ChromReportTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ChromReportTimeSpecified {
+            get {
+                return ChromReportTimeSpecifiedField;
+            } 
+            set {
+                ChromReportTimeSpecifiedField = value;
+                NotifyPropertyChanged("ChromReportTimeSpecified");
+            }
+        }
+        
         private Timestamp? ChromReportTimeField; 
 
         /// <summary>
@@ -26970,10 +27673,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 RangeDateTimeMinField = value;
+                 this.RangeDateTimeMinSpecified = true;
                 NotifyPropertyChanged("RangeDateTimeMin");
             }
         }
 
+        
+        private bool RangeDateTimeMinSpecifiedField = false;
+        
+        /// <summary>
+        /// RangeDateTimeMinSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool RangeDateTimeMinSpecified {
+            get {
+                return RangeDateTimeMinSpecifiedField;
+            } 
+            set {
+                RangeDateTimeMinSpecifiedField = value;
+                NotifyPropertyChanged("RangeDateTimeMinSpecified");
+            }
+        }
+        
         private Timestamp? RangeDateTimeMinField; 
 
         /// <summary>
@@ -26988,10 +27710,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 RangeDateTimeMaxField = value;
+                 this.RangeDateTimeMaxSpecified = true;
                 NotifyPropertyChanged("RangeDateTimeMax");
             }
         }
 
+        
+        private bool RangeDateTimeMaxSpecifiedField = false;
+        
+        /// <summary>
+        /// RangeDateTimeMaxSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool RangeDateTimeMaxSpecified {
+            get {
+                return RangeDateTimeMaxSpecifiedField;
+            } 
+            set {
+                RangeDateTimeMaxSpecifiedField = value;
+                NotifyPropertyChanged("RangeDateTimeMaxSpecified");
+            }
+        }
+        
         private Timestamp? RangeDateTimeMaxField; 
 
         /// <summary>
@@ -27043,10 +27784,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 ReferenceDateTimeField = value;
+                 this.ReferenceDateTimeSpecified = true;
                 NotifyPropertyChanged("ReferenceDateTime");
             }
         }
 
+        
+        private bool ReferenceDateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// ReferenceDateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ReferenceDateTimeSpecified {
+            get {
+                return ReferenceDateTimeSpecifiedField;
+            } 
+            set {
+                ReferenceDateTimeSpecifiedField = value;
+                NotifyPropertyChanged("ReferenceDateTimeSpecified");
+            }
+        }
+        
         private Timestamp? ReferenceDateTimeField; 
 
         /// <summary>
@@ -29035,10 +29795,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimeNextTestDateField = value;
+                 this.DTimeNextTestDateSpecified = true;
                 NotifyPropertyChanged("DTimeNextTestDate");
             }
         }
 
+        
+        private bool DTimeNextTestDateSpecifiedField = false;
+        
+        /// <summary>
+        /// DTimeNextTestDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DTimeNextTestDateSpecified {
+            get {
+                return DTimeNextTestDateSpecifiedField;
+            } 
+            set {
+                DTimeNextTestDateSpecifiedField = value;
+                NotifyPropertyChanged("DTimeNextTestDateSpecified");
+            }
+        }
+        
         private Timestamp? DTimeNextTestDateField; 
 
         /// <summary>
@@ -30197,10 +30976,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -30512,10 +31310,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -30696,10 +31513,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -32757,10 +33593,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -33432,10 +34287,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimArrivedField = value;
+                 this.DateTimeArrivedSpecified = true;
                 NotifyPropertyChanged("DateTimeArrived");
             }
         }
 
+        
+        private bool DateTimeArrivedSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeArrivedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeArrivedSpecified {
+            get {
+                return DateTimeArrivedSpecifiedField;
+            } 
+            set {
+                DateTimeArrivedSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeArrivedSpecified");
+            }
+        }
+        
         private Timestamp? DTimArrivedField; 
 
         /// <summary>
@@ -33450,10 +34324,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimDepartedField = value;
+                 this.DateTimeDepartedSpecified = true;
                 NotifyPropertyChanged("DateTimeDeparted");
             }
         }
 
+        
+        private bool DateTimeDepartedSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeDepartedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeDepartedSpecified {
+            get {
+                return DateTimeDepartedSpecifiedField;
+            } 
+            set {
+                DateTimeDepartedSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeDepartedSpecified");
+            }
+        }
+        
         private Timestamp? DTimDepartedField; 
 
         /// <summary>
@@ -33576,10 +34469,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -33997,10 +34909,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastCsgPresTestField = value;
+                 this.LastCsgPresTestSpecified = true;
                 NotifyPropertyChanged("LastCsgPresTest");
             }
         }
 
+        
+        private bool LastCsgPresTestSpecifiedField = false;
+        
+        /// <summary>
+        /// LastCsgPresTestSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastCsgPresTestSpecified {
+            get {
+                return LastCsgPresTestSpecifiedField;
+            } 
+            set {
+                LastCsgPresTestSpecifiedField = value;
+                NotifyPropertyChanged("LastCsgPresTestSpecified");
+            }
+        }
+        
         private Timestamp? LastCsgPresTestField; 
 
         /// <summary>
@@ -34034,10 +34965,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastBopPresTestField = value;
+                 this.LastBopPresTestSpecified = true;
                 NotifyPropertyChanged("LastBopPresTest");
             }
         }
 
+        
+        private bool LastBopPresTestSpecifiedField = false;
+        
+        /// <summary>
+        /// LastBopPresTestSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastBopPresTestSpecified {
+            get {
+                return LastBopPresTestSpecifiedField;
+            } 
+            set {
+                LastBopPresTestSpecifiedField = value;
+                NotifyPropertyChanged("LastBopPresTestSpecified");
+            }
+        }
+        
         private Timestamp? LastBopPresTestField; 
 
         /// <summary>
@@ -34052,10 +35002,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 NextBopPresTestField = value;
+                 this.NextBopPresTestSpecified = true;
                 NotifyPropertyChanged("NextBopPresTest");
             }
         }
 
+        
+        private bool NextBopPresTestSpecifiedField = false;
+        
+        /// <summary>
+        /// NextBopPresTestSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool NextBopPresTestSpecified {
+            get {
+                return NextBopPresTestSpecifiedField;
+            } 
+            set {
+                NextBopPresTestSpecifiedField = value;
+                NotifyPropertyChanged("NextBopPresTestSpecified");
+            }
+        }
+        
         private Timestamp? NextBopPresTestField; 
 
         /// <summary>
@@ -34203,10 +35172,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastFireBoatDrillField = value;
+                 this.LastFireBoatDrillSpecified = true;
                 NotifyPropertyChanged("LastFireBoatDrill");
             }
         }
 
+        
+        private bool LastFireBoatDrillSpecifiedField = false;
+        
+        /// <summary>
+        /// LastFireBoatDrillSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastFireBoatDrillSpecified {
+            get {
+                return LastFireBoatDrillSpecifiedField;
+            } 
+            set {
+                LastFireBoatDrillSpecifiedField = value;
+                NotifyPropertyChanged("LastFireBoatDrillSpecified");
+            }
+        }
+        
         private Timestamp? LastFireBoatDrillField; 
 
         /// <summary>
@@ -34221,10 +35209,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastAbandonDrillField = value;
+                 this.LastAbandonDrillSpecified = true;
                 NotifyPropertyChanged("LastAbandonDrill");
             }
         }
 
+        
+        private bool LastAbandonDrillSpecifiedField = false;
+        
+        /// <summary>
+        /// LastAbandonDrillSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastAbandonDrillSpecified {
+            get {
+                return LastAbandonDrillSpecifiedField;
+            } 
+            set {
+                LastAbandonDrillSpecifiedField = value;
+                NotifyPropertyChanged("LastAbandonDrillSpecified");
+            }
+        }
+        
         private Timestamp? LastAbandonDrillField; 
 
         /// <summary>
@@ -34239,10 +35246,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastRigInspectionField = value;
+                 this.LastRigInspectionSpecified = true;
                 NotifyPropertyChanged("LastRigInspection");
             }
         }
 
+        
+        private bool LastRigInspectionSpecifiedField = false;
+        
+        /// <summary>
+        /// LastRigInspectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastRigInspectionSpecified {
+            get {
+                return LastRigInspectionSpecifiedField;
+            } 
+            set {
+                LastRigInspectionSpecifiedField = value;
+                NotifyPropertyChanged("LastRigInspectionSpecified");
+            }
+        }
+        
         private Timestamp? LastRigInspectionField; 
 
         /// <summary>
@@ -34257,10 +35283,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastSafetyMeetingField = value;
+                 this.LastSafetyMeetingSpecified = true;
                 NotifyPropertyChanged("LastSafetyMeeting");
             }
         }
 
+        
+        private bool LastSafetyMeetingSpecifiedField = false;
+        
+        /// <summary>
+        /// LastSafetyMeetingSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastSafetyMeetingSpecified {
+            get {
+                return LastSafetyMeetingSpecifiedField;
+            } 
+            set {
+                LastSafetyMeetingSpecifiedField = value;
+                NotifyPropertyChanged("LastSafetyMeetingSpecified");
+            }
+        }
+        
         private Timestamp? LastSafetyMeetingField; 
 
         /// <summary>
@@ -34275,10 +35320,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastSafetyInspectionField = value;
+                 this.LastSafetyInspectionSpecified = true;
                 NotifyPropertyChanged("LastSafetyInspection");
             }
         }
 
+        
+        private bool LastSafetyInspectionSpecifiedField = false;
+        
+        /// <summary>
+        /// LastSafetyInspectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastSafetyInspectionSpecified {
+            get {
+                return LastSafetyInspectionSpecifiedField;
+            } 
+            set {
+                LastSafetyInspectionSpecifiedField = value;
+                NotifyPropertyChanged("LastSafetyInspectionSpecified");
+            }
+        }
+        
         private Timestamp? LastSafetyInspectionField; 
 
         /// <summary>
@@ -34293,10 +35357,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastTripDrillField = value;
+                 this.LastTripDrillSpecified = true;
                 NotifyPropertyChanged("LastTripDrill");
             }
         }
 
+        
+        private bool LastTripDrillSpecifiedField = false;
+        
+        /// <summary>
+        /// LastTripDrillSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastTripDrillSpecified {
+            get {
+                return LastTripDrillSpecifiedField;
+            } 
+            set {
+                LastTripDrillSpecifiedField = value;
+                NotifyPropertyChanged("LastTripDrillSpecified");
+            }
+        }
+        
         private Timestamp? LastTripDrillField; 
 
         /// <summary>
@@ -34311,10 +35394,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastDiverterDrillField = value;
+                 this.LastDiverterDrillSpecified = true;
                 NotifyPropertyChanged("LastDiverterDrill");
             }
         }
 
+        
+        private bool LastDiverterDrillSpecifiedField = false;
+        
+        /// <summary>
+        /// LastDiverterDrillSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastDiverterDrillSpecified {
+            get {
+                return LastDiverterDrillSpecifiedField;
+            } 
+            set {
+                LastDiverterDrillSpecifiedField = value;
+                NotifyPropertyChanged("LastDiverterDrillSpecified");
+            }
+        }
+        
         private Timestamp? LastDiverterDrillField; 
 
         /// <summary>
@@ -34329,10 +35431,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 LastBopDrillField = value;
+                 this.LastBopDrillSpecified = true;
                 NotifyPropertyChanged("LastBopDrill");
             }
         }
 
+        
+        private bool LastBopDrillSpecifiedField = false;
+        
+        /// <summary>
+        /// LastBopDrillSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool LastBopDrillSpecified {
+            get {
+                return LastBopDrillSpecifiedField;
+            } 
+            set {
+                LastBopDrillSpecifiedField = value;
+                NotifyPropertyChanged("LastBopDrillSpecified");
+            }
+        }
+        
         private Timestamp? LastBopDrillField; 
 
         /// <summary>
@@ -34616,10 +35737,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -34634,10 +35774,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -34858,10 +36017,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -36727,10 +37905,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStnField = value;
+                 this.DateTimeStnSpecified = true;
                 NotifyPropertyChanged("DateTimeStn");
             }
         }
 
+        
+        private bool DateTimeStnSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStnSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStnSpecified {
+            get {
+                return DateTimeStnSpecifiedField;
+            } 
+            set {
+                DateTimeStnSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStnSpecified");
+            }
+        }
+        
         private Timestamp? DTimStnField; 
 
         /// <summary>
@@ -50996,10 +52193,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 PerforationDateField = value;
+                 this.PerforationDateSpecified = true;
                 NotifyPropertyChanged("PerforationDate");
             }
         }
 
+        
+        private bool PerforationDateSpecifiedField = false;
+        
+        /// <summary>
+        /// PerforationDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PerforationDateSpecified {
+            get {
+                return PerforationDateSpecifiedField;
+            } 
+            set {
+                PerforationDateSpecifiedField = value;
+                NotifyPropertyChanged("PerforationDateSpecified");
+            }
+        }
+        
         private Timestamp? PerforationDateField; 
 
         /// <summary>
@@ -51182,10 +52398,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StringInstallDateField = value;
+                 this.StringInstallDateSpecified = true;
                 NotifyPropertyChanged("StringInstallDate");
             }
         }
 
+        
+        private bool StringInstallDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StringInstallDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StringInstallDateSpecified {
+            get {
+                return StringInstallDateSpecifiedField;
+            } 
+            set {
+                StringInstallDateSpecifiedField = value;
+                NotifyPropertyChanged("StringInstallDateSpecified");
+            }
+        }
+        
         private Timestamp? StringInstallDateField; 
 
         /// <summary>
@@ -55027,10 +56262,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimMixStartField = value;
+                 this.DateTimeMixStartSpecified = true;
                 NotifyPropertyChanged("DateTimeMixStart");
             }
         }
 
+        
+        private bool DateTimeMixStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeMixStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeMixStartSpecified {
+            get {
+                return DateTimeMixStartSpecifiedField;
+            } 
+            set {
+                DateTimeMixStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeMixStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimMixStartField; 
 
         /// <summary>
@@ -55045,10 +56299,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPumpStartField = value;
+                 this.DateTimePumpStartSpecified = true;
                 NotifyPropertyChanged("DateTimePumpStart");
             }
         }
 
+        
+        private bool DateTimePumpStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePumpStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePumpStartSpecified {
+            get {
+                return DateTimePumpStartSpecifiedField;
+            } 
+            set {
+                DateTimePumpStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePumpStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimPumpStartField; 
 
         /// <summary>
@@ -55063,10 +56336,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPumpEndField = value;
+                 this.DateTimePumpEndSpecified = true;
                 NotifyPropertyChanged("DateTimePumpEnd");
             }
         }
 
+        
+        private bool DateTimePumpEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePumpEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePumpEndSpecified {
+            get {
+                return DateTimePumpEndSpecifiedField;
+            } 
+            set {
+                DateTimePumpEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePumpEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimPumpEndField; 
 
         /// <summary>
@@ -55081,10 +56373,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimDisplaceStartField = value;
+                 this.DateTimeDisplaceStartSpecified = true;
                 NotifyPropertyChanged("DateTimeDisplaceStart");
             }
         }
 
+        
+        private bool DateTimeDisplaceStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeDisplaceStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeDisplaceStartSpecified {
+            get {
+                return DateTimeDisplaceStartSpecifiedField;
+            } 
+            set {
+                DateTimeDisplaceStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeDisplaceStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimDisplaceStartField; 
 
         /// <summary>
@@ -55969,10 +57280,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimJobEndField = value;
+                 this.DateTimeJobEndSpecified = true;
                 NotifyPropertyChanged("DateTimeJobEnd");
             }
         }
 
+        
+        private bool DateTimeJobEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeJobEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeJobEndSpecified {
+            get {
+                return DateTimeJobEndSpecifiedField;
+            } 
+            set {
+                DateTimeJobEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeJobEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimJobEndField; 
 
         /// <summary>
@@ -55987,10 +57317,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimJobStartField = value;
+                 this.DateTimeJobStartSpecified = true;
                 NotifyPropertyChanged("DateTimeJobStart");
             }
         }
 
+        
+        private bool DateTimeJobStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeJobStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeJobStartSpecified {
+            get {
+                return DateTimeJobStartSpecifiedField;
+            } 
+            set {
+                DateTimeJobStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeJobStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimJobStartField; 
 
         /// <summary>
@@ -56005,10 +57354,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPlugSetField = value;
+                 this.DateTimePlugSetSpecified = true;
                 NotifyPropertyChanged("DateTimePlugSet");
             }
         }
 
+        
+        private bool DateTimePlugSetSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePlugSetSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePlugSetSpecified {
+            get {
+                return DateTimePlugSetSpecifiedField;
+            } 
+            set {
+                DateTimePlugSetSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePlugSetSpecified");
+            }
+        }
+        
         private Timestamp? DTimPlugSetField; 
 
         /// <summary>
@@ -56059,10 +57427,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimCementDrillOutField = value;
+                 this.DateTimeCementDrillOutSpecified = true;
                 NotifyPropertyChanged("DateTimeCementDrillOut");
             }
         }
 
+        
+        private bool DateTimeCementDrillOutSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeCementDrillOutSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeCementDrillOutSpecified {
+            get {
+                return DateTimeCementDrillOutSpecifiedField;
+            } 
+            set {
+                DateTimeCementDrillOutSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeCementDrillOutSpecified");
+            }
+        }
+        
         private Timestamp? DTimCementDrillOutField; 
 
         /// <summary>
@@ -56077,10 +57464,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimSqueezeField = value;
+                 this.DateTimeSqueezeSpecified = true;
                 NotifyPropertyChanged("DateTimeSqueeze");
             }
         }
 
+        
+        private bool DateTimeSqueezeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSqueezeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSqueezeSpecified {
+            get {
+                return DateTimeSqueezeSpecifiedField;
+            } 
+            set {
+                DateTimeSqueezeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSqueezeSpecified");
+            }
+        }
+        
         private Timestamp? DTimSqueezeField; 
 
         /// <summary>
@@ -56095,10 +57501,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPipeRotStartField = value;
+                 this.DateTimePipeRotStartSpecified = true;
                 NotifyPropertyChanged("DateTimePipeRotStart");
             }
         }
 
+        
+        private bool DateTimePipeRotStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePipeRotStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePipeRotStartSpecified {
+            get {
+                return DateTimePipeRotStartSpecifiedField;
+            } 
+            set {
+                DateTimePipeRotStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePipeRotStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimPipeRotStartField; 
 
         /// <summary>
@@ -56113,10 +57538,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPipeRotEndField = value;
+                 this.DateTimePipeRotEndSpecified = true;
                 NotifyPropertyChanged("DateTimePipeRotEnd");
             }
         }
 
+        
+        private bool DateTimePipeRotEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePipeRotEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePipeRotEndSpecified {
+            get {
+                return DateTimePipeRotEndSpecifiedField;
+            } 
+            set {
+                DateTimePipeRotEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePipeRotEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimPipeRotEndField; 
 
         /// <summary>
@@ -56131,10 +57575,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRecipStartField = value;
+                 this.DateTimeRecipStartSpecified = true;
                 NotifyPropertyChanged("DateTimeRecipStart");
             }
         }
 
+        
+        private bool DateTimeRecipStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRecipStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRecipStartSpecified {
+            get {
+                return DateTimeRecipStartSpecifiedField;
+            } 
+            set {
+                DateTimeRecipStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRecipStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimRecipStartField; 
 
         /// <summary>
@@ -56149,10 +57612,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRecipEndField = value;
+                 this.DateTimeRecipEndSpecified = true;
                 NotifyPropertyChanged("DateTimeRecipEnd");
             }
         }
 
+        
+        private bool DateTimeRecipEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRecipEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRecipEndSpecified {
+            get {
+                return DateTimeRecipEndSpecifiedField;
+            } 
+            set {
+                DateTimeRecipEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRecipEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimRecipEndField; 
 
         /// <summary>
@@ -56893,10 +58375,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 TimeField = value;
+                 this.TimeSpecified = true;
                 NotifyPropertyChanged("Time");
             }
         }
 
+        
+        private bool TimeSpecifiedField = false;
+        
+        /// <summary>
+        /// TimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TimeSpecified {
+            get {
+                return TimeSpecifiedField;
+            } 
+            set {
+                TimeSpecifiedField = value;
+                NotifyPropertyChanged("TimeSpecified");
+            }
+        }
+        
         private Timestamp? TimeField; 
 
 
@@ -58813,10 +60314,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -59087,10 +60607,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 dTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private DateTime dTimField; 
 
         /// <summary>
@@ -59197,10 +60736,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -59474,10 +61032,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -61124,10 +62701,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -62578,10 +64174,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimSpudField = value;
+                 this.DateTimeSpudSpecified = true;
                 NotifyPropertyChanged("DateTimeSpud");
             }
         }
 
+        
+        private bool DateTimeSpudSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpudSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpudSpecified {
+            get {
+                return DateTimeSpudSpecifiedField;
+            } 
+            set {
+                DateTimeSpudSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpudSpecified");
+            }
+        }
+        
         private Timestamp? DTimSpudField; 
 
         /// <summary>
@@ -62596,10 +64211,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPreSpudField = value;
+                 this.DateTimePreSpudSpecified = true;
                 NotifyPropertyChanged("DateTimePreSpud");
             }
         }
 
+        
+        private bool DateTimePreSpudSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePreSpudSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePreSpudSpecified {
+            get {
+                return DateTimePreSpudSpecifiedField;
+            } 
+            set {
+                DateTimePreSpudSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePreSpudSpecified");
+            }
+        }
+        
         private Timestamp? DTimPreSpudField; 
 
         /// <summary>
@@ -62754,10 +64388,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -63086,10 +64739,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimOpenField = value;
+                 this.DateTimeOpenSpecified = true;
                 NotifyPropertyChanged("DateTimeOpen");
             }
         }
 
+        
+        private bool DateTimeOpenSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeOpenSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeOpenSpecified {
+            get {
+                return DateTimeOpenSpecifiedField;
+            } 
+            set {
+                DateTimeOpenSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeOpenSpecified");
+            }
+        }
+        
         private Timestamp? DTimOpenField; 
 
         /// <summary>
@@ -63104,10 +64776,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimCloseField = value;
+                 this.DateTimeCloseSpecified = true;
                 NotifyPropertyChanged("DateTimeClose");
             }
         }
 
+        
+        private bool DateTimeCloseSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeCloseSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeCloseSpecified {
+            get {
+                return DateTimeCloseSpecifiedField;
+            } 
+            set {
+                DateTimeCloseSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeCloseSpecified");
+            }
+        }
+        
         private Timestamp? DTimCloseField; 
 
         /// <summary>
@@ -63248,10 +64939,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -63411,10 +65121,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -63560,10 +65289,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRegainedField = value;
+                 this.DateTimeRegainedSpecified = true;
                 NotifyPropertyChanged("DateTimeRegained");
             }
         }
 
+        
+        private bool DateTimeRegainedSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRegainedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRegainedSpecified {
+            get {
+                return DateTimeRegainedSpecifiedField;
+            } 
+            set {
+                DateTimeRegainedSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRegainedSpecified");
+            }
+        }
+        
         private Timestamp? DTimRegainedField; 
 
         /// <summary>
@@ -64016,10 +65764,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -64110,10 +65877,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimRepairField = value;
+                 this.DateTimeRepairSpecified = true;
                 NotifyPropertyChanged("DateTimeRepair");
             }
         }
 
+        
+        private bool DateTimeRepairSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeRepairSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeRepairSpecified {
+            get {
+                return DateTimeRepairSpecifiedField;
+            } 
+            set {
+                DateTimeRepairSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeRepairSpecified");
+            }
+        }
+        
         private Timestamp? DTimRepairField; 
 
         /// <summary>
@@ -64235,10 +66021,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -64417,10 +66222,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -64711,10 +66535,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -65288,10 +67131,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -65673,10 +67535,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -65930,10 +67811,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -65948,10 +67848,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -74118,10 +76037,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 WellboreCompletionDateField = value;
+                 this.WellboreCompletionDateSpecified = true;
                 NotifyPropertyChanged("WellboreCompletionDate");
             }
         }
 
+        
+        private bool WellboreCompletionDateSpecifiedField = false;
+        
+        /// <summary>
+        /// WellboreCompletionDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool WellboreCompletionDateSpecified {
+            get {
+                return WellboreCompletionDateSpecifiedField;
+            } 
+            set {
+                WellboreCompletionDateSpecifiedField = value;
+                NotifyPropertyChanged("WellboreCompletionDateSpecified");
+            }
+        }
+        
         private Timestamp? WellboreCompletionDateField; 
 
         /// <summary>
@@ -74229,10 +76167,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StatusDateField = value;
+                 this.StatusDateSpecified = true;
                 NotifyPropertyChanged("StatusDate");
             }
         }
 
+        
+        private bool StatusDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StatusDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StatusDateSpecified {
+            get {
+                return StatusDateSpecifiedField;
+            } 
+            set {
+                StatusDateSpecifiedField = value;
+                NotifyPropertyChanged("StatusDateSpecified");
+            }
+        }
+        
         private Timestamp? StatusDateField; 
 
         /// <summary>
@@ -74406,10 +76363,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EffectiveDateField = value;
+                 this.EffectiveDateSpecified = true;
                 NotifyPropertyChanged("EffectiveDate");
             }
         }
 
+        
+        private bool EffectiveDateSpecifiedField = false;
+        
+        /// <summary>
+        /// EffectiveDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EffectiveDateSpecified {
+            get {
+                return EffectiveDateSpecifiedField;
+            } 
+            set {
+                EffectiveDateSpecifiedField = value;
+                NotifyPropertyChanged("EffectiveDateSpecified");
+            }
+        }
+        
         private Timestamp? EffectiveDateField; 
 
         /// <summary>
@@ -74424,10 +76400,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 ExpiredDateField = value;
+                 this.ExpiredDateSpecified = true;
                 NotifyPropertyChanged("ExpiredDate");
             }
         }
 
+        
+        private bool ExpiredDateSpecifiedField = false;
+        
+        /// <summary>
+        /// ExpiredDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ExpiredDateSpecified {
+            get {
+                return ExpiredDateSpecifiedField;
+            } 
+            set {
+                ExpiredDateSpecifiedField = value;
+                NotifyPropertyChanged("ExpiredDateSpecified");
+            }
+        }
+        
         private Timestamp? ExpiredDateField; 
 
         /// <summary>
@@ -74497,10 +76492,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StatusDateField = value;
+                 this.StatusDateSpecified = true;
                 NotifyPropertyChanged("StatusDate");
             }
         }
 
+        
+        private bool StatusDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StatusDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StatusDateSpecified {
+            get {
+                return StatusDateSpecifiedField;
+            } 
+            set {
+                StatusDateSpecifiedField = value;
+                NotifyPropertyChanged("StatusDateSpecified");
+            }
+        }
+        
         private Timestamp? StatusDateField; 
 
         /// <summary>
@@ -75213,10 +77227,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -75231,10 +77264,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -76842,10 +78894,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimArrivalField = value;
+                 this.DateTimeArrivalSpecified = true;
                 NotifyPropertyChanged("DateTimeArrival");
             }
         }
 
+        
+        private bool DateTimeArrivalSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeArrivalSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeArrivalSpecified {
+            get {
+                return DateTimeArrivalSpecifiedField;
+            } 
+            set {
+                DateTimeArrivalSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeArrivalSpecified");
+            }
+        }
+        
         private Timestamp? DTimArrivalField; 
 
         /// <summary>
@@ -76860,10 +78931,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -76878,10 +78968,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -77387,13 +79496,10 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 MaterialCatalogField = value;
-             if(value!=null) 
-                 this.MaterialCatalogSpecified = true;
                 NotifyPropertyChanged("MaterialCatalog");
             }
         }
 
-        private bool MaterialCatalogSpecified = false;
         private StimJobMaterialCatalog MaterialCatalogField; 
 
         /// <summary>
@@ -77579,10 +79685,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -77597,10 +79722,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -78438,10 +80582,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StartOperationTimeField = value;
+                 this.StartOperationTimeSpecified = true;
                 NotifyPropertyChanged("StartOperationTime");
             }
         }
 
+        
+        private bool StartOperationTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// StartOperationTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StartOperationTimeSpecified {
+            get {
+                return StartOperationTimeSpecifiedField;
+            } 
+            set {
+                StartOperationTimeSpecifiedField = value;
+                NotifyPropertyChanged("StartOperationTimeSpecified");
+            }
+        }
+        
         private Timestamp? StartOperationTimeField; 
 
         /// <summary>
@@ -78456,10 +80619,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EndOperationTimeField = value;
+                 this.EndOperationTimeSpecified = true;
                 NotifyPropertyChanged("EndOperationTime");
             }
         }
 
+        
+        private bool EndOperationTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// EndOperationTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EndOperationTimeSpecified {
+            get {
+                return EndOperationTimeSpecifiedField;
+            } 
+            set {
+                EndOperationTimeSpecifiedField = value;
+                NotifyPropertyChanged("EndOperationTimeSpecified");
+            }
+        }
+        
         private Timestamp? EndOperationTimeField; 
 
         /// <summary>
@@ -81563,10 +83745,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -81581,10 +83782,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -82431,10 +84651,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -83766,10 +86005,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimTrajStartField = value;
+                 this.DateTimeTrajStartSpecified = true;
                 NotifyPropertyChanged("DateTimeTrajStart");
             }
         }
 
+        
+        private bool DateTimeTrajStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeTrajStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeTrajStartSpecified {
+            get {
+                return DateTimeTrajStartSpecifiedField;
+            } 
+            set {
+                DateTimeTrajStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeTrajStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimTrajStartField; 
 
         /// <summary>
@@ -83784,10 +86042,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimTrajEndField = value;
+                 this.DateTimeTrajEndSpecified = true;
                 NotifyPropertyChanged("DateTimeTrajEnd");
             }
         }
 
+        
+        private bool DateTimeTrajEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeTrajEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeTrajEndSpecified {
+            get {
+                return DateTimeTrajEndSpecifiedField;
+            } 
+            set {
+                DateTimeTrajEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeTrajEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimTrajEndField; 
 
         /// <summary>
@@ -84379,10 +86656,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 StartDateField = value;
+                 this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
         }
 
+        
+        private bool StartDateSpecifiedField = false;
+        
+        /// <summary>
+        /// StartDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StartDateSpecified {
+            get {
+                return StartDateSpecifiedField;
+            } 
+            set {
+                StartDateSpecifiedField = value;
+                NotifyPropertyChanged("StartDateSpecified");
+            }
+        }
+        
         private Timestamp? StartDateField; 
 
         /// <summary>
@@ -84397,10 +86693,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 EndDateField = value;
+                 this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
         }
 
+        
+        private bool EndDateSpecifiedField = false;
+        
+        /// <summary>
+        /// EndDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EndDateSpecified {
+            get {
+                return EndDateSpecifiedField;
+            } 
+            set {
+                EndDateSpecifiedField = value;
+                NotifyPropertyChanged("EndDateSpecified");
+            }
+        }
+        
         private Timestamp? EndDateField; 
 
         /// <summary>
@@ -87481,10 +89796,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -87499,10 +89833,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStopField = value;
+                 this.DateTimeStopSpecified = true;
                 NotifyPropertyChanged("DateTimeStop");
             }
         }
 
+        
+        private bool DateTimeStopSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStopSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStopSpecified {
+            get {
+                return DateTimeStopSpecifiedField;
+            } 
+            set {
+                DateTimeStopSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStopSpecified");
+            }
+        }
+        
         private Timestamp? DTimStopField; 
 
         /// <summary>
@@ -87517,10 +89870,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartDrillingField = value;
+                 this.DateTimeStartDrillingSpecified = true;
                 NotifyPropertyChanged("DateTimeStartDrilling");
             }
         }
 
+        
+        private bool DateTimeStartDrillingSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartDrillingSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartDrillingSpecified {
+            get {
+                return DateTimeStartDrillingSpecifiedField;
+            } 
+            set {
+                DateTimeStartDrillingSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartDrillingSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartDrillingField; 
 
         /// <summary>
@@ -87535,10 +89907,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStopDrillingField = value;
+                 this.DateTimeStopDrillingSpecified = true;
                 NotifyPropertyChanged("DateTimeStopDrilling");
             }
         }
 
+        
+        private bool DateTimeStopDrillingSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStopDrillingSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStopDrillingSpecified {
+            get {
+                return DateTimeStopDrillingSpecifiedField;
+            } 
+            set {
+                DateTimeStopDrillingSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStopDrillingSpecified");
+            }
+        }
+        
         private Timestamp? DTimStopDrillingField; 
 
         /// <summary>
@@ -87840,10 +90231,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -87999,10 +90409,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -88018,10 +90447,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
         /// <summary>
@@ -88072,10 +90520,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 CreateDateField = value;
+                 this.CreateDateSpecified = true;
                 NotifyPropertyChanged("CreateDate");
             }
         }
 
+        
+        private bool CreateDateSpecifiedField = false;
+        
+        /// <summary>
+        /// CreateDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool CreateDateSpecified {
+            get {
+                return CreateDateSpecifiedField;
+            } 
+            set {
+                CreateDateSpecifiedField = value;
+                NotifyPropertyChanged("CreateDateSpecified");
+            }
+        }
+        
         private Timestamp? CreateDateField; 
 
         /// <summary>
@@ -89363,10 +91830,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimKickoffField = value;
+                 this.DateTimeKickoffSpecified = true;
                 NotifyPropertyChanged("DateTimeKickoff");
             }
         }
 
+        
+        private bool DateTimeKickoffSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeKickoffSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeKickoffSpecified {
+            get {
+                return DateTimeKickoffSpecifiedField;
+            } 
+            set {
+                DateTimeKickoffSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeKickoffSpecified");
+            }
+        }
+        
         private Timestamp? DTimKickoffField; 
 
         /// <summary>
@@ -89736,10 +92222,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimLicenseField = value;
+                 this.DateTimeLicenseSpecified = true;
                 NotifyPropertyChanged("DateTimeLicense");
             }
         }
 
+        
+        private bool DateTimeLicenseSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeLicenseSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeLicenseSpecified {
+            get {
+                return DateTimeLicenseSpecifiedField;
+            } 
+            set {
+                DateTimeLicenseSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeLicenseSpecified");
+            }
+        }
+        
         private Timestamp? DTimLicenseField; 
 
         /// <summary>
@@ -90146,10 +92651,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimSpudField = value;
+                 this.DateTimeSpudSpecified = true;
                 NotifyPropertyChanged("DateTimeSpud");
             }
         }
 
+        
+        private bool DateTimeSpudSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpudSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpudSpecified {
+            get {
+                return DateTimeSpudSpecifiedField;
+            } 
+            set {
+                DateTimeSpudSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpudSpecified");
+            }
+        }
+        
         private Timestamp? DTimSpudField; 
 
         /// <summary>
@@ -90164,10 +92688,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DTimPaField = value;
+                 this.DateTimePluggedAndAbandonedSpecified = true;
                 NotifyPropertyChanged("DateTimePluggedAndAbandoned");
             }
         }
 
+        
+        private bool DateTimePluggedAndAbandonedSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimePluggedAndAbandonedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimePluggedAndAbandonedSpecified {
+            get {
+                return DateTimePluggedAndAbandonedSpecifiedField;
+            } 
+            set {
+                DateTimePluggedAndAbandonedSpecifiedField = value;
+                NotifyPropertyChanged("DateTimePluggedAndAbandonedSpecified");
+            }
+        }
+        
         private Timestamp? DTimPaField; 
 
         /// <summary>
@@ -90542,10 +93085,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DateField = value;
+                 this.DateSpecified = true;
                 NotifyPropertyChanged("Date");
             }
         }
 
+        
+        private bool DateSpecifiedField = false;
+        
+        /// <summary>
+        /// DateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateSpecified {
+            get {
+                return DateSpecifiedField;
+            } 
+            set {
+                DateSpecifiedField = value;
+                NotifyPropertyChanged("DateSpecified");
+            }
+        }
+        
         private Timestamp? DateField; 
 
         /// <summary>
@@ -91057,10 +93619,29 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 DeprecationDateField = value;
+                 this.DeprecationDateSpecified = true;
                 NotifyPropertyChanged("DeprecationDate");
             }
         }
 
+        
+        private bool DeprecationDateSpecifiedField = false;
+        
+        /// <summary>
+        /// DeprecationDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DeprecationDateSpecified {
+            get {
+                return DeprecationDateSpecifiedField;
+            } 
+            set {
+                DeprecationDateSpecifiedField = value;
+                NotifyPropertyChanged("DeprecationDateSpecified");
+            }
+        }
+        
         private Timestamp? DeprecationDateField; 
 
         /// <summary>

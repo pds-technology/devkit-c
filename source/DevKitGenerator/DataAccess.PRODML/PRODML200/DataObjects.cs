@@ -34858,10 +34858,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -39345,10 +39364,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 PartStartTimeField = value;
+                 this.PartStartTimeSpecified = true;
                 NotifyPropertyChanged("PartStartTime");
             }
         }
 
+        
+        private bool PartStartTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// PartStartTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PartStartTimeSpecified {
+            get {
+                return PartStartTimeSpecifiedField;
+            } 
+            set {
+                PartStartTimeSpecifiedField = value;
+                NotifyPropertyChanged("PartStartTimeSpecified");
+            }
+        }
+        
         private Timestamp? PartStartTimeField; 
 
         /// <summary>
@@ -39363,10 +39401,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 PartEndTimeField = value;
+                 this.PartEndTimeSpecified = true;
                 NotifyPropertyChanged("PartEndTime");
             }
         }
 
+        
+        private bool PartEndTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// PartEndTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PartEndTimeSpecified {
+            get {
+                return PartEndTimeSpecifiedField;
+            } 
+            set {
+                PartEndTimeSpecifiedField = value;
+                NotifyPropertyChanged("PartEndTimeSpecified");
+            }
+        }
+        
         private Timestamp? PartEndTimeField; 
 
 
@@ -40705,10 +40762,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 StartTimeField = value;
+                 this.StartTimeSpecified = true;
                 NotifyPropertyChanged("StartTime");
             }
         }
 
+        
+        private bool StartTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// StartTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StartTimeSpecified {
+            get {
+                return StartTimeSpecifiedField;
+            } 
+            set {
+                StartTimeSpecifiedField = value;
+                NotifyPropertyChanged("StartTimeSpecified");
+            }
+        }
+        
         private Timestamp? StartTimeField; 
 
         /// <summary>
@@ -40723,10 +40799,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 EndTimeField = value;
+                 this.EndTimeSpecified = true;
                 NotifyPropertyChanged("EndTime");
             }
         }
 
+        
+        private bool EndTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// EndTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EndTimeSpecified {
+            get {
+                return EndTimeSpecifiedField;
+            } 
+            set {
+                EndTimeSpecifiedField = value;
+                NotifyPropertyChanged("EndTimeSpecified");
+            }
+        }
+        
         private Timestamp? EndTimeField; 
 
         /// <summary>
@@ -53143,10 +53238,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DTimeField = value;
+                 this.DTimeSpecified = true;
                 NotifyPropertyChanged("DTime");
             }
         }
 
+        
+        private bool DTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DTimeSpecified {
+            get {
+                return DTimeSpecifiedField;
+            } 
+            set {
+                DTimeSpecifiedField = value;
+                NotifyPropertyChanged("DTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimeField; 
 
         /// <summary>
@@ -53252,10 +53366,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DTimStartField = value;
+                 this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
         }
 
+        
+        private bool DateTimeStartSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeStartSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeStartSpecified {
+            get {
+                return DateTimeStartSpecifiedField;
+            } 
+            set {
+                DateTimeStartSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeStartSpecified");
+            }
+        }
+        
         private Timestamp? DTimStartField; 
 
         /// <summary>
@@ -53270,10 +53403,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DTimEndField = value;
+                 this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
         }
 
+        
+        private bool DateTimeEndSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeEndSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeEndSpecified {
+            get {
+                return DateTimeEndSpecifiedField;
+            } 
+            set {
+                DateTimeEndSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeEndSpecified");
+            }
+        }
+        
         private Timestamp? DTimEndField; 
 
 
@@ -54300,10 +54452,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 VersionField = value;
+                 this.VersionSpecified = true;
                 NotifyPropertyChanged("Version");
             }
         }
 
+        
+        private bool VersionSpecifiedField = false;
+        
+        /// <summary>
+        /// VersionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool VersionSpecified {
+            get {
+                return VersionSpecifiedField;
+            } 
+            set {
+                VersionSpecifiedField = value;
+                NotifyPropertyChanged("VersionSpecified");
+            }
+        }
+        
         private Timestamp? VersionField; 
 
         /// <summary>
@@ -69168,10 +69339,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 MeasurementStartTimeField = value;
+                 this.MeasurementStartTimeSpecified = true;
                 NotifyPropertyChanged("MeasurementStartTime");
             }
         }
 
+        
+        private bool MeasurementStartTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// MeasurementStartTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MeasurementStartTimeSpecified {
+            get {
+                return MeasurementStartTimeSpecifiedField;
+            } 
+            set {
+                MeasurementStartTimeSpecifiedField = value;
+                NotifyPropertyChanged("MeasurementStartTimeSpecified");
+            }
+        }
+        
         private Timestamp? MeasurementStartTimeField; 
 
         /// <summary>
@@ -70985,10 +71175,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DateField = value;
+                 this.DateSpecified = true;
                 NotifyPropertyChanged("Date");
             }
         }
 
+        
+        private bool DateSpecifiedField = false;
+        
+        /// <summary>
+        /// DateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateSpecified {
+            get {
+                return DateSpecifiedField;
+            } 
+            set {
+                DateSpecifiedField = value;
+                NotifyPropertyChanged("DateSpecified");
+            }
+        }
+        
         private Timestamp? DateField; 
 
         /// <summary>
@@ -71500,10 +71709,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DeprecationDateField = value;
+                 this.DeprecationDateSpecified = true;
                 NotifyPropertyChanged("DeprecationDate");
             }
         }
 
+        
+        private bool DeprecationDateSpecifiedField = false;
+        
+        /// <summary>
+        /// DeprecationDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DeprecationDateSpecified {
+            get {
+                return DeprecationDateSpecifiedField;
+            } 
+            set {
+                DeprecationDateSpecifiedField = value;
+                NotifyPropertyChanged("DeprecationDateSpecified");
+            }
+        }
+        
         private Timestamp? DeprecationDateField; 
 
         /// <summary>

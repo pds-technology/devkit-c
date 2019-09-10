@@ -11729,10 +11729,29 @@ namespace Energistics.DataAccess.RESQML210
             } 
             set {
                 DTimField = value;
+                 this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
         }
 
+        
+        private bool DateTimeSpecifiedField = false;
+        
+        /// <summary>
+        /// DateTimeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateTimeSpecified {
+            get {
+                return DateTimeSpecifiedField;
+            } 
+            set {
+                DateTimeSpecifiedField = value;
+                NotifyPropertyChanged("DateTimeSpecified");
+            }
+        }
+        
         private Timestamp? DTimField; 
 
         /// <summary>
@@ -21358,10 +21377,29 @@ namespace Energistics.DataAccess.RESQML210
             } 
             set {
                 DeprecationDateField = value;
+                 this.DeprecationDateSpecified = true;
                 NotifyPropertyChanged("DeprecationDate");
             }
         }
 
+        
+        private bool DeprecationDateSpecifiedField = false;
+        
+        /// <summary>
+        /// DeprecationDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DeprecationDateSpecified {
+            get {
+                return DeprecationDateSpecifiedField;
+            } 
+            set {
+                DeprecationDateSpecifiedField = value;
+                NotifyPropertyChanged("DeprecationDateSpecified");
+            }
+        }
+        
         private Timestamp? DeprecationDateField; 
 
         /// <summary>
@@ -27398,10 +27436,29 @@ namespace Energistics.DataAccess.RESQML210
             } 
             set {
                 DateField = value;
+                 this.DateSpecified = true;
                 NotifyPropertyChanged("Date");
             }
         }
 
+        
+        private bool DateSpecifiedField = false;
+        
+        /// <summary>
+        /// DateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DateSpecified {
+            get {
+                return DateSpecifiedField;
+            } 
+            set {
+                DateSpecifiedField = value;
+                NotifyPropertyChanged("DateSpecified");
+            }
+        }
+        
         private Timestamp? DateField; 
 
         /// <summary>

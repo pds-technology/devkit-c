@@ -1020,6 +1020,10 @@ namespace Energistics.Generator
             }
             else
             {
+                var dataType = GetEnergisticsDataType(property);
+                var underlyingType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                var isSpecialCase = type.GetProperty(property.Name + "Specified") == null && dataType == "TimeStamp";
+
                 //this section has run for every field in classes.
                 string specifiedBool = RenameProperty(property) + "Specified";
                 string privateFieldName = property.Name + "Field";
@@ -1030,8 +1034,7 @@ namespace Energistics.Generator
                 sb.AppendLine("            } ");
                 sb.AppendLine("            set {");
                 sb.AppendLine("                " + privateFieldName + " = value;");
-                if (type.GetProperty(property.Name + "Specified") != null ||
-                    property.Name == "MaterialCatalog") // Special case for StimJob 2.0
+                if (type.GetProperty(property.Name + "Specified") != null || isSpecialCase)
                 {
                     // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
                     if ((property.PropertyType.IsEnum) || (property.PropertyType.IsValueType) || (property.PropertyType.FullName.ToLower().Contains("boolean")))
@@ -1047,8 +1050,27 @@ namespace Energistics.Generator
                 sb.AppendLine("        }");
                 sb.AppendLine();
 
-                if (property.Name == "MaterialCatalog")
-                    sb.AppendLine("        private bool " + specifiedBool + " = false;");
+                if (isSpecialCase) // Special cases need the specified field and property added.
+                {
+                    sb.AppendLine("        ");
+                    sb.AppendLine("        private bool " + specifiedBool + "Field = false;");
+                    sb.AppendLine("        ");
+                    sb.AppendLine("        /// <summary>");
+                    sb.AppendLine("        /// " + specifiedBool + " property");
+                    sb.AppendLine("        /// </summary>");
+                    sb.AppendLine("        [XmlIgnore]");
+                    sb.AppendLine("        [Browsable(false)]");
+                    sb.AppendLine("        public bool " + specifiedBool + " {");
+                    sb.AppendLine("            get {");
+                    sb.AppendLine("                return " + specifiedBool + "Field;");
+                    sb.AppendLine("            } ");
+                    sb.AppendLine("            set {");
+                    sb.AppendLine("                " + specifiedBool + "Field = value;");
+                    sb.AppendLine("                NotifyPropertyChanged(\"" + specifiedBool + "\");");
+                    sb.AppendLine("            }");
+                    sb.AppendLine("        }");
+                    sb.AppendLine("        ");
+                }
 
                 // create the Sepcified field for array list. thus prevent the nil output in xml.
                 // from the research, there is two ways to prevent the null : 1. bool xxxSpecified property 2. ShouldSerializexxx() method
@@ -1213,14 +1235,9 @@ namespace Energistics.Generator
             }
             if (string.IsNullOrEmpty(name))
             {
-                object[] dataTypes = property.GetCustomAttributes(typeof(EnergisticsDataTypeAttribute), false);
-                if (dataTypes.Length > 0)
-                {
-                    EnergisticsDataTypeAttribute dataType = (EnergisticsDataTypeAttribute)dataTypes[0];
-
-                    if (!string.IsNullOrEmpty(dataType.DataType) && dataType.DataType != property.Name)
-                        name = dataType.DataType;
-                }
+                string dataType = GetEnergisticsDataType(property);
+                if (!string.IsNullOrEmpty(dataType) && dataType != property.Name)
+                    name = dataType;
             }
             if (string.IsNullOrEmpty(name))
             {
@@ -1233,6 +1250,17 @@ namespace Energistics.Generator
             }
 
             return String.Format("[XmlArrayItem(\"{0}\")]\n        ", name);
+        }
+
+        private string GetEnergisticsDataType(PropertyInfo property)
+        {
+            object[] dataTypes = property.GetCustomAttributes(typeof(EnergisticsDataTypeAttribute), false);
+            if (dataTypes.Length > 0)
+            {
+                return ((EnergisticsDataTypeAttribute)dataTypes[0]).DataType;
+            }
+
+            return null;
         }
 
         private string GetTypeXmlTypeName(Type type)
@@ -1337,12 +1365,11 @@ namespace Energistics.Generator
                 sb.Append("[RecurringElement]");
             }
 
-            var dataTypes = property.GetCustomAttributes(typeof(EnergisticsDataTypeAttribute), false);
-            if (dataTypes.Length > 0)
+            var dataType = GetEnergisticsDataType(property);
+            if (!string.IsNullOrEmpty(dataType))
             {
                 init();
-                var dataType = ((EnergisticsDataTypeAttribute)dataTypes[0]);
-                sb.AppendFormat("[EnergisticsDataTypeAttribute(DataType = \"{0}\")]", dataType.DataType);
+                sb.AppendFormat("[EnergisticsDataTypeAttribute(DataType = \"{0}\")]", dataType);
             }
 
             return sb.ToString();
