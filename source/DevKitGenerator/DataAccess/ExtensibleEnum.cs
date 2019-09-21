@@ -78,6 +78,8 @@ using System;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Xml.Schema;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Energistics.DataAccess
 {
@@ -90,6 +92,30 @@ namespace Energistics.DataAccess
     public struct ExtensibleEnum<TEnum> : IComparable<ExtensibleEnum<TEnum>>, IEquatable<ExtensibleEnum<TEnum>>, IComparable<TEnum>, IEquatable<TEnum>, IXmlSerializable
         where TEnum : struct, IComparable
     {
+        private static Dictionary<TEnum, string> _enumToXmlString;
+        private static Dictionary<string, TEnum> _stringToXmlEnum;
+
+        /// <summary>
+        /// Static constructor to initialize serialization dictionaries.
+        /// </summary>
+        static ExtensibleEnum()
+        {
+            _enumToXmlString = new Dictionary<TEnum, string>();
+            _stringToXmlEnum = new Dictionary<string, TEnum>();
+
+            var type = typeof(TEnum);
+
+            foreach (var value in System.Enum.GetValues(type).Cast<TEnum>())
+            {
+                var name = System.Enum.GetName(type, value);
+                var field = type.GetField(name);
+                var attribute = (XmlEnumAttribute)Attribute.GetCustomAttribute(field, typeof(XmlEnumAttribute));
+
+                _enumToXmlString[value] = attribute?.Name ?? name;
+                _stringToXmlEnum[attribute?.Name ?? name] = value;
+            }
+        }
+
         /// <summary>
         /// The standard enumeration value, if set.
         /// </summary>
@@ -124,6 +150,7 @@ namespace Energistics.DataAccess
         /// Initializes a new <see cref="ExtensibleEnum{TEnum}"/> instance from the specified string enumeration value.
         /// </summary>
         /// <param name="enum">The specified string enumeration value.</param>
+        /// <remarks>The XML Enumeration string representation is given priority over the .NET code string representaiton</remarks>
         public ExtensibleEnum(string @enum)
             : this()
         {
@@ -136,10 +163,17 @@ namespace Energistics.DataAccess
         /// the string is treated as an extension.
         /// </summary>
         /// <param name="enum">The string enumeration to initialize from.</param>
+        /// <remarks>The XML Enumeration string representation is given priority over the .NET code string representaiton</remarks>
         private void InitializeFromString(string @enum)
         {
             TEnum parsedEnum;
-            if (System.Enum.TryParse<TEnum>(@enum, out parsedEnum))
+
+            if (_stringToXmlEnum.TryGetValue(@enum, out parsedEnum))
+            {
+                Enum = parsedEnum;
+                Extension = null;
+            }
+            else if (System.Enum.TryParse<TEnum>(@enum, out parsedEnum))
             {
                 Enum = parsedEnum;
                 Extension = null;
@@ -148,6 +182,23 @@ namespace Energistics.DataAccess
             {
                 Extension = @enum;
             }
+        }
+
+        /// <summary>
+        /// Converts this instance to a string.
+        /// </summary>
+        /// <returns>The string version of this enumeration.</returns>
+        /// <remarks>The XML Enumeration string representation is given priority over the .NET code string representaiton</remarks>
+        private string ConvertToString()
+        {
+            string convertedString;
+
+            if (IsEnum && _enumToXmlString.TryGetValue(Enum, out convertedString))
+                return convertedString;
+            else if (IsEnum)
+                return Enum.ToString();
+            else
+                return Extension;
         }
 
         #region Equality and Inequality
@@ -223,7 +274,7 @@ namespace Energistics.DataAccess
         /// <returns>The string representation of this instance.</returns>
         public override string ToString()
         {
-            return IsEnum ? Enum.ToString() : Extension;
+            return ConvertToString();
         }
 
         /// <summary>
