@@ -404,10 +404,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private ValidationOperation? KindField; 
 
         /// <summary>
@@ -423,10 +442,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 ResultField = value;
+                 this.ResultSpecified = true;
                 NotifyPropertyChanged("Result");
             }
         }
 
+        
+        private bool ResultSpecifiedField = false;
+        
+        /// <summary>
+        /// ResultSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ResultSpecified {
+            get {
+                return ResultSpecifiedField;
+            } 
+            set {
+                ResultSpecifiedField = value;
+                NotifyPropertyChanged("ResultSpecified");
+            }
+        }
+        
         private Energistics.DataAccess.PRODML200.ReferenceData.ValidationResult? ResultField; 
 
         /// <summary>
@@ -10043,10 +10081,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 TestKindField = value;
+                 this.TestKindSpecified = true;
                 NotifyPropertyChanged("TestKind");
             }
         }
 
+        
+        private bool TestKindSpecifiedField = false;
+        
+        /// <summary>
+        /// TestKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TestKindSpecified {
+            get {
+                return TestKindSpecifiedField;
+            } 
+            set {
+                TestKindSpecifiedField = value;
+                NotifyPropertyChanged("TestKindSpecified");
+            }
+        }
+        
         private WftTestKind? TestKindField; 
 
         /// <summary>
@@ -10222,10 +10279,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private WftTestResultKind? KindField; 
 
         /// <summary>
@@ -10482,10 +10558,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 RoleField = value;
+                 this.RoleSpecified = true;
                 NotifyPropertyChanged("Role");
             }
         }
 
+        
+        private bool RoleSpecifiedField = false;
+        
+        /// <summary>
+        /// RoleSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool RoleSpecified {
+            get {
+                return RoleSpecifiedField;
+            } 
+            set {
+                RoleSpecifiedField = value;
+                NotifyPropertyChanged("RoleSpecified");
+            }
+        }
+        
         private WftTestDataRole? RoleField; 
 
         /// <summary>
@@ -11192,10 +11287,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private WftEventKind? KindField; 
 
         /// <summary>
@@ -11774,10 +11888,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 StationKindField = value;
+                 this.StationKindSpecified = true;
                 NotifyPropertyChanged("StationKind");
             }
         }
 
+        
+        private bool StationKindSpecifiedField = false;
+        
+        /// <summary>
+        /// StationKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool StationKindSpecified {
+            get {
+                return StationKindSpecifiedField;
+            } 
+            set {
+                StationKindSpecifiedField = value;
+                NotifyPropertyChanged("StationKindSpecified");
+            }
+        }
+        
         private WftStationKind? StationKindField; 
 
         /// <summary>
@@ -11865,10 +11998,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 FlowingIntervalKindField = value;
+                 this.FlowingIntervalKindSpecified = true;
                 NotifyPropertyChanged("FlowingIntervalKind");
             }
         }
 
+        
+        private bool FlowingIntervalKindSpecifiedField = false;
+        
+        /// <summary>
+        /// FlowingIntervalKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FlowingIntervalKindSpecified {
+            get {
+                return FlowingIntervalKindSpecifiedField;
+            } 
+            set {
+                FlowingIntervalKindSpecifiedField = value;
+                NotifyPropertyChanged("FlowingIntervalKindSpecified");
+            }
+        }
+        
         private WftFlowingIntervalKind? FlowingIntervalKindField; 
 
         /// <summary>
@@ -16866,10 +17018,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 TransferKindField = value;
+                 this.TransferKindSpecified = true;
                 NotifyPropertyChanged("TransferKind");
             }
         }
 
+        
+        private bool TransferKindSpecifiedField = false;
+        
+        /// <summary>
+        /// TransferKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TransferKindSpecified {
+            get {
+                return TransferKindSpecifiedField;
+            } 
+            set {
+                TransferKindSpecifiedField = value;
+                NotifyPropertyChanged("TransferKindSpecified");
+            }
+        }
+        
         private TransferKind? TransferKindField; 
 
         /// <summary>
@@ -22475,10 +22646,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 WettingPhaseField = value;
+                 this.WettingPhaseSpecified = true;
                 NotifyPropertyChanged("WettingPhase");
             }
         }
 
+        
+        private bool WettingPhaseSpecifiedField = false;
+        
+        /// <summary>
+        /// WettingPhaseSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool WettingPhaseSpecified {
+            get {
+                return WettingPhaseSpecifiedField;
+            } 
+            set {
+                WettingPhaseSpecifiedField = value;
+                NotifyPropertyChanged("WettingPhaseSpecified");
+            }
+        }
+        
         private ThermodynamicPhase? WettingPhaseField; 
 
         /// <summary>
@@ -22494,10 +22684,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 nonWettingPhaseField = value;
+                 this.NonWettingPhaseSpecified = true;
                 NotifyPropertyChanged("NonWettingPhase");
             }
         }
 
+        
+        private bool NonWettingPhaseSpecifiedField = false;
+        
+        /// <summary>
+        /// NonWettingPhaseSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool NonWettingPhaseSpecified {
+            get {
+                return NonWettingPhaseSpecifiedField;
+            } 
+            set {
+                NonWettingPhaseSpecifiedField = value;
+                NotifyPropertyChanged("NonWettingPhaseSpecified");
+            }
+        }
+        
         private ThermodynamicPhase? nonWettingPhaseField; 
 
         /// <summary>
@@ -29349,10 +29558,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private VolumeReferenceKind? KindField; 
 
         /// <summary>
@@ -32923,10 +33151,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 ContaminantKindField = value;
+                 this.ContaminantKindSpecified = true;
                 NotifyPropertyChanged("ContaminantKind");
             }
         }
 
+        
+        private bool ContaminantKindSpecifiedField = false;
+        
+        /// <summary>
+        /// ContaminantKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ContaminantKindSpecified {
+            get {
+                return ContaminantKindSpecifiedField;
+            } 
+            set {
+                ContaminantKindSpecifiedField = value;
+                NotifyPropertyChanged("ContaminantKindSpecified");
+            }
+        }
+        
         private FluidContaminant? ContaminantKindField; 
 
         /// <summary>
@@ -38025,10 +38272,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 SampleIntegrityField = value;
+                 this.SampleIntegritySpecified = true;
                 NotifyPropertyChanged("SampleIntegrity");
             }
         }
 
+        
+        private bool SampleIntegritySpecifiedField = false;
+        
+        /// <summary>
+        /// SampleIntegritySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool SampleIntegritySpecified {
+            get {
+                return SampleIntegritySpecifiedField;
+            } 
+            set {
+                SampleIntegritySpecifiedField = value;
+                NotifyPropertyChanged("SampleIntegritySpecified");
+            }
+        }
+        
         private SampleQuality? SampleIntegrityField; 
 
         /// <summary>
@@ -38383,10 +38649,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 InterpretationProcessingTypeField = value;
+                 this.InterpretationProcessingTypeSpecified = true;
                 NotifyPropertyChanged("InterpretationProcessingType");
             }
         }
 
+        
+        private bool InterpretationProcessingTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// InterpretationProcessingTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool InterpretationProcessingTypeSpecified {
+            get {
+                return InterpretationProcessingTypeSpecifiedField;
+            } 
+            set {
+                InterpretationProcessingTypeSpecifiedField = value;
+                NotifyPropertyChanged("InterpretationProcessingTypeSpecified");
+            }
+        }
+        
         private InterpretationProcessingType? InterpretationProcessingTypeField; 
 
         /// <summary>
@@ -38664,10 +38949,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 TraceProcessingTypeField = value;
+                 this.TraceProcessingTypeSpecified = true;
                 NotifyPropertyChanged("TraceProcessingType");
             }
         }
 
+        
+        private bool TraceProcessingTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TraceProcessingTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TraceProcessingTypeSpecified {
+            get {
+                return TraceProcessingTypeSpecifiedField;
+            } 
+            set {
+                TraceProcessingTypeSpecifiedField = value;
+                NotifyPropertyChanged("TraceProcessingTypeSpecified");
+            }
+        }
+        
         private TraceProcessingType? TraceProcessingTypeField; 
 
         /// <summary>
@@ -41966,10 +42270,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 FacilityKindField = value;
+                 this.FacilityKindSpecified = true;
                 NotifyPropertyChanged("FacilityKind");
             }
         }
 
+        
+        private bool FacilityKindSpecifiedField = false;
+        
+        /// <summary>
+        /// FacilityKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FacilityKindSpecified {
+            get {
+                return FacilityKindSpecifiedField;
+            } 
+            set {
+                FacilityKindSpecifiedField = value;
+                NotifyPropertyChanged("FacilityKindSpecified");
+            }
+        }
+        
         private FacilityKind? FacilityKindField; 
 
         /// <summary>
@@ -42985,10 +43308,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private BusinessUnitKind? KindField; 
 
         /// <summary>
@@ -43431,10 +43773,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DirectionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private OTDRDirection? DirectionField; 
 
         /// <summary>
@@ -44016,10 +44377,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 TerminationTypeField = value;
+                 this.TerminationTypeSpecified = true;
                 NotifyPropertyChanged("TerminationType");
             }
         }
 
+        
+        private bool TerminationTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TerminationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TerminationTypeSpecified {
+            get {
+                return TerminationTypeSpecifiedField;
+            } 
+            set {
+                TerminationTypeSpecifiedField = value;
+                NotifyPropertyChanged("TerminationTypeSpecified");
+            }
+        }
+        
         private TerminationType? TerminationTypeField; 
 
 
@@ -44109,10 +44489,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 FiberSpliceTypeField = value;
+                 this.FiberSpliceTypeSpecified = true;
                 NotifyPropertyChanged("FiberSpliceType");
             }
         }
 
+        
+        private bool FiberSpliceTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// FiberSpliceTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FiberSpliceTypeSpecified {
+            get {
+                return FiberSpliceTypeSpecifiedField;
+            } 
+            set {
+                FiberSpliceTypeSpecifiedField = value;
+                NotifyPropertyChanged("FiberSpliceTypeSpecified");
+            }
+        }
+        
         private FiberSpliceTypes? FiberSpliceTypeField; 
 
         /// <summary>
@@ -45048,10 +45447,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 PermanentCableInstallationTypeField = value;
+                 this.PermanentCableInstallationTypeSpecified = true;
                 NotifyPropertyChanged("PermanentCableInstallationType");
             }
         }
 
+        
+        private bool PermanentCableInstallationTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// PermanentCableInstallationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PermanentCableInstallationTypeSpecified {
+            get {
+                return PermanentCableInstallationTypeSpecifiedField;
+            } 
+            set {
+                PermanentCableInstallationTypeSpecifiedField = value;
+                NotifyPropertyChanged("PermanentCableInstallationTypeSpecified");
+            }
+        }
+        
         private PermanentCableInstallationType? PermanentCableInstallationTypeField; 
 
         /// <summary>
@@ -45103,10 +45521,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 InterventionConveyanceTypeField = value;
+                 this.InterventionConveyanceTypeSpecified = true;
                 NotifyPropertyChanged("InterventionConveyanceType");
             }
         }
 
+        
+        private bool InterventionConveyanceTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// InterventionConveyanceTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool InterventionConveyanceTypeSpecified {
+            get {
+                return InterventionConveyanceTypeSpecifiedField;
+            } 
+            set {
+                InterventionConveyanceTypeSpecifiedField = value;
+                NotifyPropertyChanged("InterventionConveyanceTypeSpecified");
+            }
+        }
+        
         private InterventionConveyanceType? InterventionConveyanceTypeField; 
 
         /// <summary>
@@ -45158,10 +45595,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 SizeField = value;
+                 this.SizeSpecified = true;
                 NotifyPropertyChanged("Size");
             }
         }
 
+        
+        private bool SizeSpecifiedField = false;
+        
+        /// <summary>
+        /// SizeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool SizeSpecified {
+            get {
+                return SizeSpecifiedField;
+            } 
+            set {
+                SizeSpecifiedField = value;
+                NotifyPropertyChanged("SizeSpecified");
+            }
+        }
+        
         private ControlLineSize? SizeField; 
 
         /// <summary>
@@ -45177,10 +45633,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 MaterialField = value;
+                 this.MaterialSpecified = true;
                 NotifyPropertyChanged("Material");
             }
         }
 
+        
+        private bool MaterialSpecifiedField = false;
+        
+        /// <summary>
+        /// MaterialSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MaterialSpecified {
+            get {
+                return MaterialSpecifiedField;
+            } 
+            set {
+                MaterialSpecifiedField = value;
+                NotifyPropertyChanged("MaterialSpecified");
+            }
+        }
+        
         private ControlLineMaterial? MaterialField; 
 
         /// <summary>
@@ -45196,10 +45671,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 EncapsulationTypeField = value;
+                 this.EncapsulationTypeSpecified = true;
                 NotifyPropertyChanged("EncapsulationType");
             }
         }
 
+        
+        private bool EncapsulationTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// EncapsulationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EncapsulationTypeSpecified {
+            get {
+                return EncapsulationTypeSpecifiedField;
+            } 
+            set {
+                EncapsulationTypeSpecifiedField = value;
+                NotifyPropertyChanged("EncapsulationTypeSpecified");
+            }
+        }
+        
         private ControlLineEncapsulationType? EncapsulationTypeField; 
 
         /// <summary>
@@ -45215,10 +45709,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 EncapsulationSizeField = value;
+                 this.EncapsulationSizeSpecified = true;
                 NotifyPropertyChanged("EncapsulationSize");
             }
         }
 
+        
+        private bool EncapsulationSizeSpecifiedField = false;
+        
+        /// <summary>
+        /// EncapsulationSizeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EncapsulationSizeSpecified {
+            get {
+                return EncapsulationSizeSpecifiedField;
+            } 
+            set {
+                EncapsulationSizeSpecifiedField = value;
+                NotifyPropertyChanged("EncapsulationSizeSpecified");
+            }
+        }
+        
         private ControlLineEncapsulationSize? EncapsulationSizeField; 
 
         /// <summary>
@@ -47666,10 +48179,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DirectionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private ProductFlowPortType? DirectionField; 
 
         /// <summary>
@@ -48410,10 +48942,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 PropertyField = value;
+                 this.PropertySpecified = true;
                 NotifyPropertyChanged("Property");
             }
         }
 
+        
+        private bool PropertySpecifiedField = false;
+        
+        /// <summary>
+        /// PropertySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PropertySpecified {
+            get {
+                return PropertySpecifiedField;
+            } 
+            set {
+                PropertySpecifiedField = value;
+                NotifyPropertyChanged("PropertySpecified");
+            }
+        }
+        
         private FacilityParameter? PropertyField; 
 
         /// <summary>
@@ -48780,10 +49331,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 FlowField = value;
+                 this.FlowSpecified = true;
                 NotifyPropertyChanged("Flow");
             }
         }
 
+        
+        private bool FlowSpecifiedField = false;
+        
+        /// <summary>
+        /// FlowSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FlowSpecified {
+            get {
+                return FlowSpecifiedField;
+            } 
+            set {
+                FlowSpecifiedField = value;
+                NotifyPropertyChanged("FlowSpecified");
+            }
+        }
+        
         private ReportingFlow? FlowField; 
 
         /// <summary>
@@ -48904,10 +49474,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DirectionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private ProductFlowPortType? DirectionField; 
 
         /// <summary>
@@ -49754,10 +50343,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 MeasureClassField = value;
+                 this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
         }
 
+        
+        private bool MeasureClassSpecifiedField = false;
+        
+        /// <summary>
+        /// MeasureClassSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MeasureClassSpecified {
+            get {
+                return MeasureClassSpecifiedField;
+            } 
+            set {
+                MeasureClassSpecifiedField = value;
+                NotifyPropertyChanged("MeasureClassSpecified");
+            }
+        }
+        
         private MeasureClass? MeasureClassField; 
 
         /// <summary>
@@ -50638,10 +51246,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 NameField = value;
+                 this.NameSpecified = true;
                 NotifyPropertyChanged("Name");
             }
         }
 
+        
+        private bool NameSpecifiedField = false;
+        
+        /// <summary>
+        /// NameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool NameSpecified {
+            get {
+                return NameSpecifiedField;
+            } 
+            set {
+                NameSpecifiedField = value;
+                NotifyPropertyChanged("NameSpecified");
+            }
+        }
+        
         private FacilityParameter? NameField; 
 
         /// <summary>
@@ -51216,10 +51843,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private BalanceEventKind? KindField; 
 
 		/// <summary>
@@ -51547,10 +52193,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private ReportingProduct? KindField; 
 
         /// <summary>
@@ -53675,10 +54340,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private ReportingProduct? KindField; 
 
         /// <summary>
@@ -54257,10 +54941,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private ReportingFlow? KindField; 
 
         /// <summary>
@@ -66503,10 +67206,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 ReservoirFluidKindField = value;
+                 this.ReservoirFluidKindSpecified = true;
                 NotifyPropertyChanged("ReservoirFluidKind");
             }
         }
 
+        
+        private bool ReservoirFluidKindSpecifiedField = false;
+        
+        /// <summary>
+        /// ReservoirFluidKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ReservoirFluidKindSpecified {
+            get {
+                return ReservoirFluidKindSpecifiedField;
+            } 
+            set {
+                ReservoirFluidKindSpecifiedField = value;
+                NotifyPropertyChanged("ReservoirFluidKindSpecified");
+            }
+        }
+        
         private ReservoirFluidKind? ReservoirFluidKindField; 
 
         /// <summary>
@@ -66800,10 +67522,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private ReportingEntityKind? KindField; 
 
         /// <summary>
@@ -67016,10 +67757,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 AnalysisQualityField = value;
+                 this.AnalysisQualitySpecified = true;
                 NotifyPropertyChanged("AnalysisQuality");
             }
         }
 
+        
+        private bool AnalysisQualitySpecifiedField = false;
+        
+        /// <summary>
+        /// AnalysisQualitySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AnalysisQualitySpecified {
+            get {
+                return AnalysisQualitySpecifiedField;
+            } 
+            set {
+                AnalysisQualitySpecifiedField = value;
+                NotifyPropertyChanged("AnalysisQualitySpecified");
+            }
+        }
+        
         private SampleQuality? AnalysisQualityField; 
 
         /// <summary>
@@ -68715,10 +69475,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 MeasurementConfigurationField = value;
+                 this.MeasurementConfigurationSpecified = true;
                 NotifyPropertyChanged("MeasurementConfiguration");
             }
         }
 
+        
+        private bool MeasurementConfigurationSpecifiedField = false;
+        
+        /// <summary>
+        /// MeasurementConfigurationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MeasurementConfigurationSpecified {
+            get {
+                return MeasurementConfigurationSpecifiedField;
+            } 
+            set {
+                MeasurementConfigurationSpecifiedField = value;
+                NotifyPropertyChanged("MeasurementConfigurationSpecified");
+            }
+        }
+        
         private OpticalPathConfiguration? MeasurementConfigurationField; 
 
         /// <summary>
@@ -71349,10 +72128,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 AxisOrderField = value;
+                 this.AxisOrderSpecified = true;
                 NotifyPropertyChanged("AxisOrder");
             }
         }
 
+        
+        private bool AxisOrderSpecifiedField = false;
+        
+        /// <summary>
+        /// AxisOrderSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AxisOrderSpecified {
+            get {
+                return AxisOrderSpecifiedField;
+            } 
+            set {
+                AxisOrderSpecifiedField = value;
+                NotifyPropertyChanged("AxisOrderSpecified");
+            }
+        }
+        
         private AxisOrder2d? AxisOrderField; 
 
         /// <summary>
@@ -71421,10 +72219,29 @@ namespace Energistics.DataAccess.PRODML200
             } 
             set {
                 DirectionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private VerticalDirection? DirectionField; 
 
         /// <summary>

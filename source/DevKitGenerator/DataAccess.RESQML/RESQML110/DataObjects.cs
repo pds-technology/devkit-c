@@ -1859,10 +1859,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 gridCellShapeField = value;
+                 this.GridCellShapeSpecified = true;
                 NotifyPropertyChanged("GridCellShape");
             }
         }
 
+        
+        private bool GridCellShapeSpecifiedField = false;
+        
+        /// <summary>
+        /// GridCellShapeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool GridCellShapeSpecified {
+            get {
+                return GridCellShapeSpecifiedField;
+            } 
+            set {
+                GridCellShapeSpecifiedField = value;
+                NotifyPropertyChanged("GridCellShapeSpecified");
+            }
+        }
+        
         private CellShape? gridCellShapeField; 
 
         /// <summary>
@@ -1916,10 +1935,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 mostComplexLineGeometryField = value;
+                 this.MostComplexLineGeometrySpecified = true;
                 NotifyPropertyChanged("MostComplexLineGeometry");
             }
         }
 
+        
+        private bool MostComplexLineGeometrySpecifiedField = false;
+        
+        /// <summary>
+        /// MostComplexLineGeometrySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MostComplexLineGeometrySpecified {
+            get {
+                return MostComplexLineGeometrySpecifiedField;
+            } 
+            set {
+                MostComplexLineGeometrySpecifiedField = value;
+                NotifyPropertyChanged("MostComplexLineGeometrySpecified");
+            }
+        }
+        
         private ResqmlMostComplexLineGeometry? mostComplexLineGeometryField; 
 
         /// <summary>
@@ -3803,10 +3841,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 propertyAttachmentField = value;
+                 this.PropertyAttachmentSpecified = true;
                 NotifyPropertyChanged("PropertyAttachment");
             }
         }
 
+        
+        private bool PropertyAttachmentSpecifiedField = false;
+        
+        /// <summary>
+        /// PropertyAttachmentSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PropertyAttachmentSpecified {
+            get {
+                return PropertyAttachmentSpecifiedField;
+            } 
+            set {
+                PropertyAttachmentSpecifiedField = value;
+                NotifyPropertyChanged("PropertyAttachmentSpecified");
+            }
+        }
+        
         private PropertyAttachment? propertyAttachmentField; 
 
         /// <summary>
@@ -4176,10 +4233,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 dataTypeField = value;
+                 this.DataTypeSpecified = true;
                 NotifyPropertyChanged("DataType");
             }
         }
 
+        
+        private bool DataTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// DataTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DataTypeSpecified {
+            get {
+                return DataTypeSpecifiedField;
+            } 
+            set {
+                DataTypeSpecifiedField = value;
+                NotifyPropertyChanged("DataTypeSpecified");
+            }
+        }
+        
         private PrimitiveType? dataTypeField; 
 
         /// <summary>
@@ -11332,10 +11408,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType? ItemElementNameField; 
 
         /// <summary>
@@ -12067,10 +12162,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 timeUnitField = value;
+                 this.TimeUnitSpecified = true;
                 NotifyPropertyChanged("TimeUnit");
             }
         }
 
+        
+        private bool TimeUnitSpecifiedField = false;
+        
+        /// <summary>
+        /// TimeUnitSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TimeUnitSpecified {
+            get {
+                return TimeUnitSpecifiedField;
+            } 
+            set {
+                TimeUnitSpecifiedField = value;
+                NotifyPropertyChanged("TimeUnitSpecified");
+            }
+        }
+        
         private VerticalTimeUnit? timeUnitField; 
 
 
@@ -12189,10 +12303,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 unitField = value;
+                 this.UnitSpecified = true;
                 NotifyPropertyChanged("Unit");
             }
         }
 
+        
+        private bool UnitSpecifiedField = false;
+        
+        /// <summary>
+        /// UnitSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool UnitSpecified {
+            get {
+                return UnitSpecifiedField;
+            } 
+            set {
+                UnitSpecifiedField = value;
+                NotifyPropertyChanged("UnitSpecified");
+            }
+        }
+        
         private WellVerticalCoordinateUom? unitField; 
 
         /// <summary>
@@ -12208,10 +12341,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 directionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private VerticalDirection? directionField; 
 
 
@@ -20308,10 +20460,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 unitField = value;
+                 this.UnitSpecified = true;
                 NotifyPropertyChanged("Unit");
             }
         }
 
+        
+        private bool UnitSpecifiedField = false;
+        
+        /// <summary>
+        /// UnitSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool UnitSpecified {
+            get {
+                return UnitSpecifiedField;
+            } 
+            set {
+                UnitSpecifiedField = value;
+                NotifyPropertyChanged("UnitSpecified");
+            }
+        }
+        
         private ProjectedCoordinateUom? unitField; 
 
         /// <summary>
@@ -20327,10 +20498,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 axisOrderField = value;
+                 this.AxisOrderSpecified = true;
                 NotifyPropertyChanged("AxisOrder");
             }
         }
 
+        
+        private bool AxisOrderSpecifiedField = false;
+        
+        /// <summary>
+        /// AxisOrderSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AxisOrderSpecified {
+            get {
+                return AxisOrderSpecifiedField;
+            } 
+            set {
+                AxisOrderSpecifiedField = value;
+                NotifyPropertyChanged("AxisOrderSpecified");
+            }
+        }
+        
         private GlobalAxisOrder? axisOrderField; 
 
 
@@ -20608,10 +20798,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 formatField = value;
+                 this.FormatSpecified = true;
                 NotifyPropertyChanged("Format");
             }
         }
 
+        
+        private bool FormatSpecifiedField = false;
+        
+        /// <summary>
+        /// FormatSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FormatSpecified {
+            get {
+                return FormatSpecifiedField;
+            } 
+            set {
+                FormatSpecifiedField = value;
+                NotifyPropertyChanged("FormatSpecified");
+            }
+        }
+        
         private ResqmlFormat? formatField; 
 
         /// <summary>
@@ -21031,10 +21240,29 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 dataTypeField = value;
+                 this.DataTypeSpecified = true;
                 NotifyPropertyChanged("DataType");
             }
         }
 
+        
+        private bool DataTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// DataTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DataTypeSpecified {
+            get {
+                return DataTypeSpecifiedField;
+            } 
+            set {
+                DataTypeSpecifiedField = value;
+                NotifyPropertyChanged("DataTypeSpecified");
+            }
+        }
+        
         private PrimitiveType? dataTypeField; 
 
         /// <summary>

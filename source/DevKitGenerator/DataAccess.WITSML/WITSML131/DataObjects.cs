@@ -14737,10 +14737,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeLithologyField = value;
+                 this.TypeLithologySpecified = true;
                 NotifyPropertyChanged("TypeLithology");
             }
         }
 
+        
+        private bool TypeLithologySpecifiedField = false;
+        
+        /// <summary>
+        /// TypeLithologySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeLithologySpecified {
+            get {
+                return TypeLithologySpecifiedField;
+            } 
+            set {
+                TypeLithologySpecifiedField = value;
+                NotifyPropertyChanged("TypeLithologySpecified");
+            }
+        }
+        
         private LithologySource? typeLithologyField; 
 
         /// <summary>
@@ -18665,10 +18684,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 modeField = value;
+                 this.ModeSpecified = true;
                 NotifyPropertyChanged("Mode");
             }
         }
 
+        
+        private bool ModeSpecifiedField = false;
+        
+        /// <summary>
+        /// ModeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ModeSpecified {
+            get {
+                return ModeSpecifiedField;
+            } 
+            set {
+                ModeSpecifiedField = value;
+                NotifyPropertyChanged("ModeSpecified");
+            }
+        }
+        
         private FiberMode? modeField; 
 
         /// <summary>
@@ -21681,10 +21719,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 reasonForRunField = value;
+                 this.ReasonForRunSpecified = true;
                 NotifyPropertyChanged("ReasonForRun");
             }
         }
 
+        
+        private bool ReasonForRunSpecifiedField = false;
+        
+        /// <summary>
+        /// ReasonForRunSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ReasonForRunSpecified {
+            get {
+                return ReasonForRunSpecifiedField;
+            } 
+            set {
+                ReasonForRunSpecifiedField = value;
+                NotifyPropertyChanged("ReasonForRunSpecified");
+            }
+        }
+        
         private OTDRReason? reasonForRunField; 
 
         /// <summary>
@@ -25342,10 +25399,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 indexTypeField = value;
+                 this.IndexTypeSpecified = true;
                 NotifyPropertyChanged("IndexType");
             }
         }
 
+        
+        private bool IndexTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// IndexTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexTypeSpecified {
+            get {
+                return IndexTypeSpecifiedField;
+            } 
+            set {
+                IndexTypeSpecifiedField = value;
+                NotifyPropertyChanged("IndexTypeSpecified");
+            }
+        }
+        
         private LogIndexType? indexTypeField; 
 
         /// <summary>
@@ -27019,10 +27095,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeMessageField = value;
+                 this.TypeMessageSpecified = true;
                 NotifyPropertyChanged("TypeMessage");
             }
         }
 
+        
+        private bool TypeMessageSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeMessageSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeMessageSpecified {
+            get {
+                return TypeMessageSpecifiedField;
+            } 
+            set {
+                TypeMessageSpecifiedField = value;
+                NotifyPropertyChanged("TypeMessageSpecified");
+            }
+        }
+        
         private MessageType? typeMessageField; 
 
         /// <summary>
@@ -27996,10 +28091,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeField = value;
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
 
+        
+        private bool TypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeSpecified {
+            get {
+                return TypeSpecifiedField;
+            } 
+            set {
+                TypeSpecifiedField = value;
+                NotifyPropertyChanged("TypeSpecified");
+            }
+        }
+        
         private MudLogParameterType? typeField; 
 
         /// <summary>
@@ -31426,10 +31540,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeTrajStationField = value;
+                 this.TypeTrajStationSpecified = true;
                 NotifyPropertyChanged("TypeTrajStation");
             }
         }
 
+        
+        private bool TypeTrajStationSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeTrajStationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeTrajStationSpecified {
+            get {
+                return TypeTrajStationSpecifiedField;
+            } 
+            set {
+                TypeTrajStationSpecifiedField = value;
+                NotifyPropertyChanged("TypeTrajStationSpecified");
+            }
+        }
+        
         private TrajStationType? typeTrajStationField; 
 
         /// <summary>
@@ -33721,10 +33854,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeScrField = value;
+                 this.TypeScrSpecified = true;
                 NotifyPropertyChanged("TypeScr");
             }
         }
 
+        
+        private bool TypeScrSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeScrSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeScrSpecified {
+            get {
+                return TypeScrSpecifiedField;
+            } 
+            set {
+                TypeScrSpecifiedField = value;
+                NotifyPropertyChanged("TypeScrSpecified");
+            }
+        }
+        
         private ScrType? typeScrField; 
 
         /// <summary>
@@ -39267,10 +39419,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType? ItemElementNameField; 
 
         /// <summary>
@@ -39373,10 +39544,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeField = value;
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
 
+        
+        private bool TypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeSpecified {
+            get {
+                return TypeSpecifiedField;
+            } 
+            set {
+                TypeSpecifiedField = value;
+                NotifyPropertyChanged("TypeSpecified");
+            }
+        }
+        
         private IntervalType? typeField; 
 
         /// <summary>
@@ -39391,10 +39581,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 methodField = value;
+                 this.MethodSpecified = true;
                 NotifyPropertyChanged("Method");
             }
         }
 
+        
+        private bool MethodSpecifiedField = false;
+        
+        /// <summary>
+        /// MethodSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MethodSpecified {
+            get {
+                return MethodSpecifiedField;
+            } 
+            set {
+                MethodSpecifiedField = value;
+                NotifyPropertyChanged("MethodSpecified");
+            }
+        }
+        
         private IntervalMethod? methodField; 
 
         /// <summary>
@@ -45767,10 +45976,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeSurfEquipField = value;
+                 this.TypeSurfEquipSpecified = true;
                 NotifyPropertyChanged("TypeSurfEquip");
             }
         }
 
+        
+        private bool TypeSurfEquipSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeSurfEquipSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeSurfEquipSpecified {
+            get {
+                return TypeSurfEquipSpecifiedField;
+            } 
+            set {
+                TypeSurfEquipSpecifiedField = value;
+                NotifyPropertyChanged("TypeSurfEquipSpecified");
+            }
+        }
+        
         private SurfEquipType? typeSurfEquipField; 
 
         /// <summary>
@@ -46834,10 +47062,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeField = value;
+                 this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
         }
 
+        
+        private bool TypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeSpecified {
+            get {
+                return TypeSpecifiedField;
+            } 
+            set {
+                TypeSpecifiedField = value;
+                NotifyPropertyChanged("TypeSpecified");
+            }
+        }
+        
         private RiskType? typeField; 
 
         /// <summary>
@@ -46853,10 +47100,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 categoryField = value;
+                 this.CategorySpecified = true;
                 NotifyPropertyChanged("Category");
             }
         }
 
+        
+        private bool CategorySpecifiedField = false;
+        
+        /// <summary>
+        /// CategorySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool CategorySpecified {
+            get {
+                return CategorySpecifiedField;
+            } 
+            set {
+                CategorySpecifiedField = value;
+                NotifyPropertyChanged("CategorySpecified");
+            }
+        }
+        
         private RiskCategory? categoryField; 
 
         /// <summary>
@@ -50045,10 +50311,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeTargetSectionScopeField = value;
+                 this.TypeTargetSectionScopeSpecified = true;
                 NotifyPropertyChanged("TypeTargetSectionScope");
             }
         }
 
+        
+        private bool TypeTargetSectionScopeSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeTargetSectionScopeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeTargetSectionScopeSpecified {
+            get {
+                return TypeTargetSectionScopeSpecifiedField;
+            } 
+            set {
+                TypeTargetSectionScopeSpecifiedField = value;
+                NotifyPropertyChanged("TypeTargetSectionScopeSpecified");
+            }
+        }
+        
         private TargetSectionScope? typeTargetSectionScopeField; 
 
         /// <summary>
@@ -51316,10 +51601,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeTrajStationField = value;
+                 this.TypeTrajStationSpecified = true;
                 NotifyPropertyChanged("TypeTrajStation");
             }
         }
 
+        
+        private bool TypeTrajStationSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeTrajStationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeTrajStationSpecified {
+            get {
+                return TypeTrajStationSpecifiedField;
+            } 
+            set {
+                TypeTrajStationSpecifiedField = value;
+                NotifyPropertyChanged("TypeTrajStationSpecified");
+            }
+        }
+        
         private TrajStationType? typeTrajStationField; 
 
         /// <summary>
@@ -52483,10 +52787,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeTubularAssyField = value;
+                 this.TypeTubularAssySpecified = true;
                 NotifyPropertyChanged("TypeTubularAssy");
             }
         }
 
+        
+        private bool TypeTubularAssySpecifiedField = false;
+        
+        /// <summary>
+        /// TypeTubularAssySpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeTubularAssySpecified {
+            get {
+                return TypeTubularAssySpecifiedField;
+            } 
+            set {
+                TypeTubularAssySpecifiedField = value;
+                NotifyPropertyChanged("TypeTubularAssySpecified");
+            }
+        }
+        
         private TubularAssembly? typeTubularAssyField; 
 
         /// <summary>
@@ -52775,10 +53098,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeTubularCompField = value;
+                 this.TypeTubularCompSpecified = true;
                 NotifyPropertyChanged("TypeTubularComp");
             }
         }
 
+        
+        private bool TypeTubularCompSpecifiedField = false;
+        
+        /// <summary>
+        /// TypeTubularCompSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TypeTubularCompSpecified {
+            get {
+                return TypeTubularCompSpecifiedField;
+            } 
+            set {
+                TypeTubularCompSpecifiedField = value;
+                NotifyPropertyChanged("TypeTubularCompSpecified");
+            }
+        }
+        
         private TubularComponentType? typeTubularCompField; 
 
         /// <summary>
@@ -56595,10 +56937,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 deflectionMethodField = value;
+                 this.DeflectionMethodSpecified = true;
                 NotifyPropertyChanged("DeflectionMethod");
             }
         }
 
+        
+        private bool DeflectionMethodSpecifiedField = false;
+        
+        /// <summary>
+        /// DeflectionMethodSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DeflectionMethodSpecified {
+            get {
+                return DeflectionMethodSpecifiedField;
+            } 
+            set {
+                DeflectionMethodSpecifiedField = value;
+                NotifyPropertyChanged("DeflectionMethodSpecified");
+            }
+        }
+        
         private DeflectionMethod? deflectionMethodField; 
 
         /// <summary>
@@ -61829,10 +62190,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 indexTypeField = value;
+                 this.IndexTypeSpecified = true;
                 NotifyPropertyChanged("IndexType");
             }
         }
 
+        
+        private bool IndexTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// IndexTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexTypeSpecified {
+            get {
+                return IndexTypeSpecifiedField;
+            } 
+            set {
+                IndexTypeSpecifiedField = value;
+                NotifyPropertyChanged("IndexTypeSpecified");
+            }
+        }
+        
         private LogIndexType? indexTypeField; 
 
         /// <summary>
@@ -62799,10 +63179,29 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 indexTypeField = value;
+                 this.IndexTypeSpecified = true;
                 NotifyPropertyChanged("IndexType");
             }
         }
 
+        
+        private bool IndexTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// IndexTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexTypeSpecified {
+            get {
+                return IndexTypeSpecifiedField;
+            } 
+            set {
+                IndexTypeSpecifiedField = value;
+                NotifyPropertyChanged("IndexTypeSpecified");
+            }
+        }
+        
         private LogIndexType? indexTypeField; 
 
         /// <summary>

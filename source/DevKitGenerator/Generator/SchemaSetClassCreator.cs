@@ -1021,9 +1021,8 @@ namespace Energistics.Generator
             else
             {
                 var dataType = GetEnergisticsDataType(property);
-                var underlyingType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
-                var isSpecialCase = type.GetProperty(property.Name + "Specified") == null && dataType == "TimeStamp";
-
+                var isNullableEnum = MakePropertyNullable(property) == "?" && property.PropertyType.IsEnum; // Enums that will be converted to nullable values.
+                var isSpecialCase = type.GetProperty(property.Name + "Specified") == null && (dataType == "TimeStamp" || isNullableEnum);
                 //this section has run for every field in classes.
                 string specifiedBool = RenameProperty(property) + "Specified";
                 string privateFieldName = property.Name + "Field";

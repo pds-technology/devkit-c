@@ -1162,10 +1162,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 FacetField = value;
+                 this.FacetSpecified = true;
                 NotifyPropertyChanged("Facet");
             }
         }
 
+        
+        private bool FacetSpecifiedField = false;
+        
+        /// <summary>
+        /// FacetSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FacetSpecified {
+            get {
+                return FacetSpecifiedField;
+            } 
+            set {
+                FacetSpecifiedField = value;
+                NotifyPropertyChanged("FacetSpecified");
+            }
+        }
+        
         private Facet? FacetField; 
 
         /// <summary>
@@ -3545,10 +3564,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 KindField = value;
+                 this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
         }
 
+        
+        private bool KindSpecifiedField = false;
+        
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+        
         private ResqmlPropertyKind? KindField; 
 
 
@@ -4532,10 +4570,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 AttachmentField = value;
+                 this.AttachmentSpecified = true;
                 NotifyPropertyChanged("Attachment");
             }
         }
 
+        
+        private bool AttachmentSpecifiedField = false;
+        
+        /// <summary>
+        /// AttachmentSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AttachmentSpecified {
+            get {
+                return AttachmentSpecifiedField;
+            } 
+            set {
+                AttachmentSpecifiedField = value;
+                NotifyPropertyChanged("AttachmentSpecified");
+            }
+        }
+        
         private GridGeometryAttachment? AttachmentField; 
 
         /// <summary>
@@ -4606,10 +4663,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 KDirectionField = value;
+                 this.KDirectionSpecified = true;
                 NotifyPropertyChanged("KDirection");
             }
         }
 
+        
+        private bool KDirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// KDirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool KDirectionSpecified {
+            get {
+                return KDirectionSpecifiedField;
+            } 
+            set {
+                KDirectionSpecifiedField = value;
+                NotifyPropertyChanged("KDirectionSpecified");
+            }
+        }
+        
         private KDirection? KDirectionField; 
 
         /// <summary>
@@ -4643,10 +4719,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 PillarShapeField = value;
+                 this.PillarShapeSpecified = true;
                 NotifyPropertyChanged("PillarShape");
             }
         }
 
+        
+        private bool PillarShapeSpecifiedField = false;
+        
+        /// <summary>
+        /// PillarShapeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PillarShapeSpecified {
+            get {
+                return PillarShapeSpecifiedField;
+            } 
+            set {
+                PillarShapeSpecifiedField = value;
+                NotifyPropertyChanged("PillarShapeSpecified");
+            }
+        }
+        
         private PillarShape? PillarShapeField; 
 
         /// <summary>
@@ -4872,10 +4967,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 SubnodeNodeObjectField = value;
+                 this.SubnodeNodeObjectSpecified = true;
                 NotifyPropertyChanged("SubnodeNodeObject");
             }
         }
 
+        
+        private bool SubnodeNodeObjectSpecifiedField = false;
+        
+        /// <summary>
+        /// SubnodeNodeObjectSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool SubnodeNodeObjectSpecified {
+            get {
+                return SubnodeNodeObjectSpecifiedField;
+            } 
+            set {
+                SubnodeNodeObjectSpecifiedField = value;
+                NotifyPropertyChanged("SubnodeNodeObjectSpecified");
+            }
+        }
+        
         private SubnodeNodeObject? SubnodeNodeObjectField; 
 
         /// <summary>
@@ -5463,10 +5577,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 IndexableElementField = value;
+                 this.IndexableElementSpecified = true;
                 NotifyPropertyChanged("IndexableElement");
             }
         }
 
+        
+        private bool IndexableElementSpecifiedField = false;
+        
+        /// <summary>
+        /// IndexableElementSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexableElementSpecified {
+            get {
+                return IndexableElementSpecifiedField;
+            } 
+            set {
+                IndexableElementSpecifiedField = value;
+                NotifyPropertyChanged("IndexableElementSpecified");
+            }
+        }
+        
         private IndexableElements? IndexableElementField; 
 
         /// <summary>
@@ -6200,10 +6333,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 CellShapeField = value;
+                 this.CellShapeSpecified = true;
                 NotifyPropertyChanged("CellShape");
             }
         }
 
+        
+        private bool CellShapeSpecifiedField = false;
+        
+        /// <summary>
+        /// CellShapeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool CellShapeSpecified {
+            get {
+                return CellShapeSpecifiedField;
+            } 
+            set {
+                CellShapeSpecifiedField = value;
+                NotifyPropertyChanged("CellShapeSpecified");
+            }
+        }
+        
         private CellShape? CellShapeField; 
 
         /// <summary>
@@ -6883,10 +7035,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 ColumnShapeField = value;
+                 this.ColumnShapeSpecified = true;
                 NotifyPropertyChanged("ColumnShape");
             }
         }
 
+        
+        private bool ColumnShapeSpecifiedField = false;
+        
+        /// <summary>
+        /// ColumnShapeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ColumnShapeSpecified {
+            get {
+                return ColumnShapeSpecifiedField;
+            } 
+            set {
+                ColumnShapeSpecifiedField = value;
+                NotifyPropertyChanged("ColumnShapeSpecified");
+            }
+        }
+        
         private ColumnShape? ColumnShapeField; 
 
         /// <summary>
@@ -7983,10 +8154,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 IdentityKindField = value;
+                 this.IdentityKindSpecified = true;
                 NotifyPropertyChanged("IdentityKind");
             }
         }
 
+        
+        private bool IdentityKindSpecifiedField = false;
+        
+        /// <summary>
+        /// IdentityKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IdentityKindSpecified {
+            get {
+                return IdentityKindSpecifiedField;
+            } 
+            set {
+                IdentityKindSpecifiedField = value;
+                NotifyPropertyChanged("IdentityKindSpecified");
+            }
+        }
+        
         private IdentityKind? IdentityKindField; 
 
         /// <summary>
@@ -8115,10 +8305,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 IdentityKindField = value;
+                 this.IdentityKindSpecified = true;
                 NotifyPropertyChanged("IdentityKind");
             }
         }
 
+        
+        private bool IdentityKindSpecifiedField = false;
+        
+        /// <summary>
+        /// IdentityKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IdentityKindSpecified {
+            get {
+                return IdentityKindSpecifiedField;
+            } 
+            set {
+                IdentityKindSpecifiedField = value;
+                NotifyPropertyChanged("IdentityKindSpecified");
+            }
+        }
+        
         private IdentityKind? IdentityKindField; 
 
         /// <summary>
@@ -8830,10 +9039,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 VolumeUomField = value;
+                 this.VolumeUomSpecified = true;
                 NotifyPropertyChanged("VolumeUom");
             }
         }
 
+        
+        private bool VolumeUomSpecifiedField = false;
+        
+        /// <summary>
+        /// VolumeUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool VolumeUomSpecified {
+            get {
+                return VolumeUomSpecifiedField;
+            } 
+            set {
+                VolumeUomSpecifiedField = value;
+                NotifyPropertyChanged("VolumeUomSpecified");
+            }
+        }
+        
         private VolumeUom? VolumeUomField; 
 
         /// <summary>
@@ -9578,10 +9806,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 IdentityKindField = value;
+                 this.IdentityKindSpecified = true;
                 NotifyPropertyChanged("IdentityKind");
             }
         }
 
+        
+        private bool IdentityKindSpecifiedField = false;
+        
+        /// <summary>
+        /// IdentityKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IdentityKindSpecified {
+            get {
+                return IdentityKindSpecifiedField;
+            } 
+            set {
+                IdentityKindSpecifiedField = value;
+                NotifyPropertyChanged("IdentityKindSpecified");
+            }
+        }
+        
         private IdentityKind? IdentityKindField; 
 
         /// <summary>
@@ -9596,10 +9843,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 IndexableElementField = value;
+                 this.IndexableElementSpecified = true;
                 NotifyPropertyChanged("IndexableElement");
             }
         }
 
+        
+        private bool IndexableElementSpecifiedField = false;
+        
+        /// <summary>
+        /// IndexableElementSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexableElementSpecified {
+            get {
+                return IndexableElementSpecifiedField;
+            } 
+            set {
+                IndexableElementSpecifiedField = value;
+                NotifyPropertyChanged("IndexableElementSpecified");
+            }
+        }
+        
         private IndexableElements? IndexableElementField; 
 
         /// <summary>
@@ -10548,10 +10814,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 ContactRelationshipField = value;
+                 this.ContactRelationshipSpecified = true;
                 NotifyPropertyChanged("ContactRelationship");
             }
         }
 
+        
+        private bool ContactRelationshipSpecifiedField = false;
+        
+        /// <summary>
+        /// ContactRelationshipSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ContactRelationshipSpecified {
+            get {
+                return ContactRelationshipSpecifiedField;
+            } 
+            set {
+                ContactRelationshipSpecifiedField = value;
+                NotifyPropertyChanged("ContactRelationshipSpecified");
+            }
+        }
+        
         private ContactRelationship? ContactRelationshipField; 
 
         /// <summary>
@@ -10708,10 +10993,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 VerbField = value;
+                 this.VerbSpecified = true;
                 NotifyPropertyChanged("Verb");
             }
         }
 
+        
+        private bool VerbSpecifiedField = false;
+        
+        /// <summary>
+        /// VerbSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool VerbSpecified {
+            get {
+                return VerbSpecifiedField;
+            } 
+            set {
+                VerbSpecifiedField = value;
+                NotifyPropertyChanged("VerbSpecified");
+            }
+        }
+        
         private ContactVerb? VerbField; 
 
         /// <summary>
@@ -18584,10 +18888,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 MdReferenceField = value;
+                 this.MDReferenceSpecified = true;
                 NotifyPropertyChanged("MDReference");
             }
         }
 
+        
+        private bool MDReferenceSpecifiedField = false;
+        
+        /// <summary>
+        /// MDReferenceSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MDReferenceSpecified {
+            get {
+                return MDReferenceSpecifiedField;
+            } 
+            set {
+                MDReferenceSpecifiedField = value;
+                NotifyPropertyChanged("MDReferenceSpecified");
+            }
+        }
+        
         private MdReference? MdReferenceField; 
 
         /// <summary>
@@ -19112,10 +19435,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 OrganizationKindField = value;
+                 this.OrganizationKindSpecified = true;
                 NotifyPropertyChanged("OrganizationKind");
             }
         }
 
+        
+        private bool OrganizationKindSpecifiedField = false;
+        
+        /// <summary>
+        /// OrganizationKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool OrganizationKindSpecified {
+            get {
+                return OrganizationKindSpecifiedField;
+            } 
+            set {
+                OrganizationKindSpecifiedField = value;
+                NotifyPropertyChanged("OrganizationKindSpecified");
+            }
+        }
+        
         private OrganizationKind? OrganizationKindField; 
 
 
@@ -19165,10 +19507,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 TectonicBoundaryKindField = value;
+                 this.TectonicBoundaryKindSpecified = true;
                 NotifyPropertyChanged("TectonicBoundaryKind");
             }
         }
 
+        
+        private bool TectonicBoundaryKindSpecifiedField = false;
+        
+        /// <summary>
+        /// TectonicBoundaryKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TectonicBoundaryKindSpecified {
+            get {
+                return TectonicBoundaryKindSpecifiedField;
+            } 
+            set {
+                TectonicBoundaryKindSpecifiedField = value;
+                NotifyPropertyChanged("TectonicBoundaryKindSpecified");
+            }
+        }
+        
         private TectonicBoundaryKind? TectonicBoundaryKindField; 
 
 
@@ -19199,10 +19560,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 GeneticBoundaryKindField = value;
+                 this.GeneticBoundaryKindSpecified = true;
                 NotifyPropertyChanged("GeneticBoundaryKind");
             }
         }
 
+        
+        private bool GeneticBoundaryKindSpecifiedField = false;
+        
+        /// <summary>
+        /// GeneticBoundaryKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool GeneticBoundaryKindSpecified {
+            get {
+                return GeneticBoundaryKindSpecifiedField;
+            } 
+            set {
+                GeneticBoundaryKindSpecifiedField = value;
+                NotifyPropertyChanged("GeneticBoundaryKindSpecified");
+            }
+        }
+        
         private GeneticBoundaryKind? GeneticBoundaryKindField; 
 
         /// <summary>
@@ -19251,10 +19631,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 FluidContactField = value;
+                 this.FluidContactSpecified = true;
                 NotifyPropertyChanged("FluidContact");
             }
         }
 
+        
+        private bool FluidContactSpecifiedField = false;
+        
+        /// <summary>
+        /// FluidContactSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FluidContactSpecified {
+            get {
+                return FluidContactSpecifiedField;
+            } 
+            set {
+                FluidContactSpecifiedField = value;
+                NotifyPropertyChanged("FluidContactSpecified");
+            }
+        }
+        
         private FluidContact? FluidContactField; 
 
 
@@ -19372,10 +19771,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 PhaseField = value;
+                 this.PhaseSpecified = true;
                 NotifyPropertyChanged("Phase");
             }
         }
 
+        
+        private bool PhaseSpecifiedField = false;
+        
+        /// <summary>
+        /// PhaseSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PhaseSpecified {
+            get {
+                return PhaseSpecifiedField;
+            } 
+            set {
+                PhaseSpecifiedField = value;
+                NotifyPropertyChanged("PhaseSpecified");
+            }
+        }
+        
         private Phase? PhaseField; 
 
         /// <summary>
@@ -19571,10 +19989,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 ProjectedAxisOrderField = value;
+                 this.ProjectedAxisOrderSpecified = true;
                 NotifyPropertyChanged("ProjectedAxisOrder");
             }
         }
 
+        
+        private bool ProjectedAxisOrderSpecifiedField = false;
+        
+        /// <summary>
+        /// ProjectedAxisOrderSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ProjectedAxisOrderSpecified {
+            get {
+                return ProjectedAxisOrderSpecifiedField;
+            } 
+            set {
+                ProjectedAxisOrderSpecifiedField = value;
+                NotifyPropertyChanged("ProjectedAxisOrderSpecified");
+            }
+        }
+        
         private AxisOrder2d? ProjectedAxisOrderField; 
 
         /// <summary>
@@ -19590,10 +20027,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 ProjectedUomField = value;
+                 this.ProjectedUomSpecified = true;
                 NotifyPropertyChanged("ProjectedUom");
             }
         }
 
+        
+        private bool ProjectedUomSpecifiedField = false;
+        
+        /// <summary>
+        /// ProjectedUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ProjectedUomSpecified {
+            get {
+                return ProjectedUomSpecifiedField;
+            } 
+            set {
+                ProjectedUomSpecifiedField = value;
+                NotifyPropertyChanged("ProjectedUomSpecified");
+            }
+        }
+        
         private LengthUom? ProjectedUomField; 
 
         /// <summary>
@@ -19609,10 +20065,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 VerticalUomField = value;
+                 this.VerticalUomSpecified = true;
                 NotifyPropertyChanged("VerticalUom");
             }
         }
 
+        
+        private bool VerticalUomSpecifiedField = false;
+        
+        /// <summary>
+        /// VerticalUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool VerticalUomSpecified {
+            get {
+                return VerticalUomSpecifiedField;
+            } 
+            set {
+                VerticalUomSpecifiedField = value;
+                NotifyPropertyChanged("VerticalUomSpecified");
+            }
+        }
+        
         private LengthUom? VerticalUomField; 
 
         /// <summary>
@@ -19735,10 +20210,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 TimeUomField = value;
+                 this.TimeUomSpecified = true;
                 NotifyPropertyChanged("TimeUom");
             }
         }
 
+        
+        private bool TimeUomSpecifiedField = false;
+        
+        /// <summary>
+        /// TimeUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TimeUomSpecified {
+            get {
+                return TimeUomSpecifiedField;
+            } 
+            set {
+                TimeUomSpecifiedField = value;
+                NotifyPropertyChanged("TimeUomSpecified");
+            }
+        }
+        
         private TimeUom? TimeUomField; 
 
 
@@ -19794,10 +20288,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 IndexableElementField = value;
+                 this.IndexableElementSpecified = true;
                 NotifyPropertyChanged("IndexableElement");
             }
         }
 
+        
+        private bool IndexableElementSpecifiedField = false;
+        
+        /// <summary>
+        /// IndexableElementSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool IndexableElementSpecified {
+            get {
+                return IndexableElementSpecifiedField;
+            } 
+            set {
+                IndexableElementSpecifiedField = value;
+                NotifyPropertyChanged("IndexableElementSpecified");
+            }
+        }
+        
         private IndexableElements? IndexableElementField; 
 
         /// <summary>
@@ -20230,10 +20743,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 UOMField = value;
+                 this.UOMSpecified = true;
                 NotifyPropertyChanged("UOM");
             }
         }
 
+        
+        private bool UOMSpecifiedField = false;
+        
+        /// <summary>
+        /// UOMSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool UOMSpecified {
+            get {
+                return UOMSpecifiedField;
+            } 
+            set {
+                UOMSpecifiedField = value;
+                NotifyPropertyChanged("UOMSpecified");
+            }
+        }
+        
         private ResqmlUom? UOMField; 
 
 
@@ -20311,10 +20843,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 TimeSetKindField = value;
+                 this.TimeSetKindSpecified = true;
                 NotifyPropertyChanged("TimeSetKind");
             }
         }
 
+        
+        private bool TimeSetKindSpecifiedField = false;
+        
+        /// <summary>
+        /// TimeSetKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TimeSetKindSpecified {
+            get {
+                return TimeSetKindSpecifiedField;
+            } 
+            set {
+                TimeSetKindSpecifiedField = value;
+                NotifyPropertyChanged("TimeSetKindSpecified");
+            }
+        }
+        
         private TimeSetKind? TimeSetKindField; 
 
         /// <summary>
@@ -20639,10 +21190,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 RepresentativeUomField = value;
+                 this.RepresentativeUomSpecified = true;
                 NotifyPropertyChanged("RepresentativeUom");
             }
         }
 
+        
+        private bool RepresentativeUomSpecifiedField = false;
+        
+        /// <summary>
+        /// RepresentativeUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool RepresentativeUomSpecified {
+            get {
+                return RepresentativeUomSpecifiedField;
+            } 
+            set {
+                RepresentativeUomSpecifiedField = value;
+                NotifyPropertyChanged("RepresentativeUomSpecified");
+            }
+        }
+        
         private ResqmlUom? RepresentativeUomField; 
 
         /// <summary>
@@ -20919,10 +21489,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 SurfaceRoleField = value;
+                 this.SurfaceRoleSpecified = true;
                 NotifyPropertyChanged("SurfaceRole");
             }
         }
 
+        
+        private bool SurfaceRoleSpecifiedField = false;
+        
+        /// <summary>
+        /// SurfaceRoleSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool SurfaceRoleSpecified {
+            get {
+                return SurfaceRoleSpecifiedField;
+            } 
+            set {
+                SurfaceRoleSpecifiedField = value;
+                NotifyPropertyChanged("SurfaceRoleSpecified");
+            }
+        }
+        
         private SurfaceRole? SurfaceRoleField; 
 
         /// <summary>
@@ -21416,10 +22005,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 MdUomField = value;
+                 this.MDUomSpecified = true;
                 NotifyPropertyChanged("MDUom");
             }
         }
 
+        
+        private bool MDUomSpecifiedField = false;
+        
+        /// <summary>
+        /// MDUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MDUomSpecified {
+            get {
+                return MDUomSpecifiedField;
+            } 
+            set {
+                MDUomSpecifiedField = value;
+                NotifyPropertyChanged("MDUomSpecified");
+            }
+        }
+        
         private LengthUom? MdUomField; 
 
         /// <summary>
@@ -21935,10 +22543,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 MdUomField = value;
+                 this.MDUomSpecified = true;
                 NotifyPropertyChanged("MDUom");
             }
         }
 
+        
+        private bool MDUomSpecifiedField = false;
+        
+        /// <summary>
+        /// MDUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MDUomSpecified {
+            get {
+                return MDUomSpecifiedField;
+            } 
+            set {
+                MDUomSpecifiedField = value;
+                NotifyPropertyChanged("MDUomSpecified");
+            }
+        }
+        
         private LengthUom? MdUomField; 
 
         /// <summary>
@@ -21993,10 +22620,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 AngleUomField = value;
+                 this.AngleUomSpecified = true;
                 NotifyPropertyChanged("AngleUom");
             }
         }
 
+        
+        private bool AngleUomSpecifiedField = false;
+        
+        /// <summary>
+        /// AngleUomSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AngleUomSpecified {
+            get {
+                return AngleUomSpecifiedField;
+            } 
+            set {
+                AngleUomSpecifiedField = value;
+                NotifyPropertyChanged("AngleUomSpecified");
+            }
+        }
+        
         private PlaneAngleUom? AngleUomField; 
 
         /// <summary>
@@ -23502,10 +24148,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 DomainField = value;
+                 this.DomainSpecified = true;
                 NotifyPropertyChanged("Domain");
             }
         }
 
+        
+        private bool DomainSpecifiedField = false;
+        
+        /// <summary>
+        /// DomainSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DomainSpecified {
+            get {
+                return DomainSpecifiedField;
+            } 
+            set {
+                DomainSpecifiedField = value;
+                NotifyPropertyChanged("DomainSpecified");
+            }
+        }
+        
         private Domain? DomainField; 
 
         /// <summary>
@@ -24340,10 +25005,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 OrderingCriteriaField = value;
+                 this.OrderingCriteriaSpecified = true;
                 NotifyPropertyChanged("OrderingCriteria");
             }
         }
 
+        
+        private bool OrderingCriteriaSpecifiedField = false;
+        
+        /// <summary>
+        /// OrderingCriteriaSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool OrderingCriteriaSpecified {
+            get {
+                return OrderingCriteriaSpecifiedField;
+            } 
+            set {
+                OrderingCriteriaSpecifiedField = value;
+                NotifyPropertyChanged("OrderingCriteriaSpecified");
+            }
+        }
+        
         private OrderingCriteria? OrderingCriteriaField; 
 
 
@@ -24504,10 +25188,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 OrderingCriteriaField = value;
+                 this.OrderingCriteriaSpecified = true;
                 NotifyPropertyChanged("OrderingCriteria");
             }
         }
 
+        
+        private bool OrderingCriteriaSpecifiedField = false;
+        
+        /// <summary>
+        /// OrderingCriteriaSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool OrderingCriteriaSpecified {
+            get {
+                return OrderingCriteriaSpecifiedField;
+            } 
+            set {
+                OrderingCriteriaSpecifiedField = value;
+                NotifyPropertyChanged("OrderingCriteriaSpecified");
+            }
+        }
+        
         private OrderingCriteria? OrderingCriteriaField; 
 
         /// <summary>
@@ -24757,10 +25460,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 DirectionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private VerticalDirection? DirectionField; 
 
         /// <summary>
@@ -24829,10 +25551,29 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 AxisOrderField = value;
+                 this.AxisOrderSpecified = true;
                 NotifyPropertyChanged("AxisOrder");
             }
         }
 
+        
+        private bool AxisOrderSpecifiedField = false;
+        
+        /// <summary>
+        /// AxisOrderSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AxisOrderSpecified {
+            get {
+                return AxisOrderSpecifiedField;
+            } 
+            set {
+                AxisOrderSpecifiedField = value;
+                NotifyPropertyChanged("AxisOrderSpecified");
+            }
+        }
+        
         private AxisOrder2d? AxisOrderField; 
 
         /// <summary>

@@ -4338,10 +4338,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 dataTypeField = value;
+                 this.DataTypeSpecified = true;
                 NotifyPropertyChanged("DataType");
             }
         }
 
+        
+        private bool DataTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// DataTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DataTypeSpecified {
+            get {
+                return DataTypeSpecifiedField;
+            } 
+            set {
+                DataTypeSpecifiedField = value;
+                NotifyPropertyChanged("DataTypeSpecified");
+            }
+        }
+        
         private PrimitiveType? dataTypeField; 
 
         /// <summary>
@@ -24013,10 +24032,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType? ItemElementNameField; 
 
         /// <summary>
@@ -34308,10 +34346,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType7? ItemElementNameField; 
 
         /// <summary>
@@ -35782,10 +35839,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType6? ItemElementNameField; 
 
         /// <summary>
@@ -37443,10 +37519,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType5? ItemElementNameField; 
 
         /// <summary>
@@ -38517,10 +38612,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType4? ItemElementNameField; 
 
         /// <summary>
@@ -39408,10 +39522,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType3? ItemElementNameField; 
 
         /// <summary>
@@ -40350,10 +40483,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType2? ItemElementNameField; 
 
         /// <summary>
@@ -40615,10 +40767,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType1? ItemElementNameField; 
 
         /// <summary>
@@ -43286,10 +43457,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 directionField = value;
+                 this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
         }
 
+        
+        private bool DirectionSpecifiedField = false;
+        
+        /// <summary>
+        /// DirectionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DirectionSpecified {
+            get {
+                return DirectionSpecifiedField;
+            } 
+            set {
+                DirectionSpecifiedField = value;
+                NotifyPropertyChanged("DirectionSpecified");
+            }
+        }
+        
         private OTDRDirection? directionField; 
 
         /// <summary>
@@ -43838,10 +44028,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 terminationTypeField = value;
+                 this.TerminationTypeSpecified = true;
                 NotifyPropertyChanged("TerminationType");
             }
         }
 
+        
+        private bool TerminationTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TerminationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TerminationTypeSpecified {
+            get {
+                return TerminationTypeSpecifiedField;
+            } 
+            set {
+                TerminationTypeSpecifiedField = value;
+                NotifyPropertyChanged("TerminationTypeSpecified");
+            }
+        }
+        
         private TerminationType? terminationTypeField; 
 
 
@@ -43975,10 +44184,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 fiberSpliceTypeField = value;
+                 this.FiberSpliceTypeSpecified = true;
                 NotifyPropertyChanged("FiberSpliceType");
             }
         }
 
+        
+        private bool FiberSpliceTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// FiberSpliceTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool FiberSpliceTypeSpecified {
+            get {
+                return FiberSpliceTypeSpecifiedField;
+            } 
+            set {
+                FiberSpliceTypeSpecifiedField = value;
+                NotifyPropertyChanged("FiberSpliceTypeSpecified");
+            }
+        }
+        
         private FiberSpliceTypeList? fiberSpliceTypeField; 
 
         /// <summary>
@@ -45102,10 +45330,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 sizeField = value;
+                 this.SizeSpecified = true;
                 NotifyPropertyChanged("Size");
             }
         }
 
+        
+        private bool SizeSpecifiedField = false;
+        
+        /// <summary>
+        /// SizeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool SizeSpecified {
+            get {
+                return SizeSpecifiedField;
+            } 
+            set {
+                SizeSpecifiedField = value;
+                NotifyPropertyChanged("SizeSpecified");
+            }
+        }
+        
         private ControlLineSize? sizeField; 
 
         /// <summary>
@@ -45121,10 +45368,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 materialField = value;
+                 this.MaterialSpecified = true;
                 NotifyPropertyChanged("Material");
             }
         }
 
+        
+        private bool MaterialSpecifiedField = false;
+        
+        /// <summary>
+        /// MaterialSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MaterialSpecified {
+            get {
+                return MaterialSpecifiedField;
+            } 
+            set {
+                MaterialSpecifiedField = value;
+                NotifyPropertyChanged("MaterialSpecified");
+            }
+        }
+        
         private ControlLineMaterial? materialField; 
 
         /// <summary>
@@ -45140,10 +45406,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 encapsulationTypeField = value;
+                 this.EncapsulationTypeSpecified = true;
                 NotifyPropertyChanged("EncapsulationType");
             }
         }
 
+        
+        private bool EncapsulationTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// EncapsulationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EncapsulationTypeSpecified {
+            get {
+                return EncapsulationTypeSpecifiedField;
+            } 
+            set {
+                EncapsulationTypeSpecifiedField = value;
+                NotifyPropertyChanged("EncapsulationTypeSpecified");
+            }
+        }
+        
         private ControlLineEncapsulationType? encapsulationTypeField; 
 
         /// <summary>
@@ -45159,10 +45444,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 encapsulationSizeField = value;
+                 this.EncapsulationSizeSpecified = true;
                 NotifyPropertyChanged("EncapsulationSize");
             }
         }
 
+        
+        private bool EncapsulationSizeSpecifiedField = false;
+        
+        /// <summary>
+        /// EncapsulationSizeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool EncapsulationSizeSpecified {
+            get {
+                return EncapsulationSizeSpecifiedField;
+            } 
+            set {
+                EncapsulationSizeSpecifiedField = value;
+                NotifyPropertyChanged("EncapsulationSizeSpecified");
+            }
+        }
+        
         private ControlLineEncapsulationSize? encapsulationSizeField; 
 
         /// <summary>
@@ -45652,10 +45956,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 interventionConveyanceTypeField = value;
+                 this.InterventionConveyanceTypeSpecified = true;
                 NotifyPropertyChanged("InterventionConveyanceType");
             }
         }
 
+        
+        private bool InterventionConveyanceTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// InterventionConveyanceTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool InterventionConveyanceTypeSpecified {
+            get {
+                return InterventionConveyanceTypeSpecifiedField;
+            } 
+            set {
+                InterventionConveyanceTypeSpecifiedField = value;
+                NotifyPropertyChanged("InterventionConveyanceTypeSpecified");
+            }
+        }
+        
         private InterventionConveyanceType? interventionConveyanceTypeField; 
 
         /// <summary>
@@ -45726,10 +46049,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 permanentCableInstallationTypeField = value;
+                 this.PermanentCableInstallationTypeSpecified = true;
                 NotifyPropertyChanged("PermanentCableInstallationType");
             }
         }
 
+        
+        private bool PermanentCableInstallationTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// PermanentCableInstallationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool PermanentCableInstallationTypeSpecified {
+            get {
+                return PermanentCableInstallationTypeSpecifiedField;
+            } 
+            set {
+                PermanentCableInstallationTypeSpecifiedField = value;
+                NotifyPropertyChanged("PermanentCableInstallationTypeSpecified");
+            }
+        }
+        
         private PermanentCableInstallationType? permanentCableInstallationTypeField; 
 
         /// <summary>
@@ -48289,10 +48631,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 interpretationProcessingTypeField = value;
+                 this.InterpretationProcessingTypeSpecified = true;
                 NotifyPropertyChanged("InterpretationProcessingType");
             }
         }
 
+        
+        private bool InterpretationProcessingTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// InterpretationProcessingTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool InterpretationProcessingTypeSpecified {
+            get {
+                return InterpretationProcessingTypeSpecifiedField;
+            } 
+            set {
+                InterpretationProcessingTypeSpecifiedField = value;
+                NotifyPropertyChanged("InterpretationProcessingTypeSpecified");
+            }
+        }
+        
         private InterpretationProcessingType? interpretationProcessingTypeField; 
 
         /// <summary>
@@ -48734,10 +49095,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 traceProcessingTypeField = value;
+                 this.TraceProcessingTypeSpecified = true;
                 NotifyPropertyChanged("TraceProcessingType");
             }
         }
 
+        
+        private bool TraceProcessingTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// TraceProcessingTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool TraceProcessingTypeSpecified {
+            get {
+                return TraceProcessingTypeSpecifiedField;
+            } 
+            set {
+                TraceProcessingTypeSpecifiedField = value;
+                NotifyPropertyChanged("TraceProcessingTypeSpecified");
+            }
+        }
+        
         private TraceProcessingType? traceProcessingTypeField; 
 
         /// <summary>
@@ -49147,10 +49527,29 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measurementConfigurationField = value;
+                 this.MeasurementConfigurationSpecified = true;
                 NotifyPropertyChanged("MeasurementConfiguration");
             }
         }
 
+        
+        private bool MeasurementConfigurationSpecifiedField = false;
+        
+        /// <summary>
+        /// MeasurementConfigurationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MeasurementConfigurationSpecified {
+            get {
+                return MeasurementConfigurationSpecifiedField;
+            } 
+            set {
+                MeasurementConfigurationSpecifiedField = value;
+                NotifyPropertyChanged("MeasurementConfigurationSpecified");
+            }
+        }
+        
         private OpticalPathConfiguration? measurementConfigurationField; 
 
         /// <summary>

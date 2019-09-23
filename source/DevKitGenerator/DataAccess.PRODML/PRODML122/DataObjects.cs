@@ -4276,10 +4276,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 dataTypeField = value;
+                 this.DataTypeSpecified = true;
                 NotifyPropertyChanged("DataType");
             }
         }
 
+        
+        private bool DataTypeSpecifiedField = false;
+        
+        /// <summary>
+        /// DataTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool DataTypeSpecified {
+            get {
+                return DataTypeSpecifiedField;
+            } 
+            set {
+                DataTypeSpecifiedField = value;
+                NotifyPropertyChanged("DataTypeSpecified");
+            }
+        }
+        
         private PrimitiveType? dataTypeField; 
 
         /// <summary>
@@ -24628,10 +24647,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType7? ItemElementNameField; 
 
         /// <summary>
@@ -34246,10 +34284,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType6? ItemElementNameField; 
 
         /// <summary>
@@ -35720,10 +35777,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType5? ItemElementNameField; 
 
         /// <summary>
@@ -37381,10 +37457,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType4? ItemElementNameField; 
 
         /// <summary>
@@ -38455,10 +38550,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType3? ItemElementNameField; 
 
         /// <summary>
@@ -39346,10 +39460,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType2? ItemElementNameField; 
 
         /// <summary>
@@ -40288,10 +40421,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType1? ItemElementNameField; 
 
         /// <summary>
@@ -40553,10 +40705,29 @@ namespace Energistics.DataAccess.PRODML122
             } 
             set {
                 ItemElementNameField = value;
+                 this.ItemElementNameSpecified = true;
                 NotifyPropertyChanged("ItemElementName");
             }
         }
 
+        
+        private bool ItemElementNameSpecifiedField = false;
+        
+        /// <summary>
+        /// ItemElementNameSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool ItemElementNameSpecified {
+            get {
+                return ItemElementNameSpecifiedField;
+            } 
+            set {
+                ItemElementNameSpecifiedField = value;
+                NotifyPropertyChanged("ItemElementNameSpecified");
+            }
+        }
+        
         private ItemChoiceType? ItemElementNameField; 
 
         /// <summary>
