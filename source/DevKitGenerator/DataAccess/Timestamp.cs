@@ -165,6 +165,161 @@ namespace Energistics.DataAccess
         }
 
         /// <summary>
+        /// Implements the operator &lt;=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator <=(Timestamp a, Timestamp b)
+        {
+            return a.value <= b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator &gt;=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator >=(Timestamp a, Timestamp b)
+        {
+            return a.value >= b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator ==.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator ==(Timestamp a, DateTimeOffset b)
+        {
+            return a.value == b;
+        }
+
+        /// <summary>
+        /// Implements the operator !=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator !=(Timestamp a, DateTimeOffset b)
+        {
+            return a.value != b;
+        }
+
+        /// <summary>
+        /// Implements the operator &lt;.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator <(Timestamp a, DateTimeOffset b)
+        {
+            return a.value < b;
+        }
+
+        /// <summary>
+        /// Implements the operator &gt;.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator >(Timestamp a, DateTimeOffset b)
+        {
+            return a.value > b;
+        }
+
+        /// <summary>
+        /// Implements the operator &lt;=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator <=(Timestamp a, DateTimeOffset b)
+        {
+            return a.value <= b;
+        }
+
+        /// <summary>
+        /// Implements the operator &gt;=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator >=(Timestamp a, DateTimeOffset b)
+        {
+            return a.value >= b;
+        }
+
+
+        /// <summary>
+        /// Implements the operator ==.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator ==(DateTimeOffset a, Timestamp b)
+        {
+            return a == b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator !=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator !=(DateTimeOffset a, Timestamp b)
+        {
+            return a != b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator &lt;.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator <(DateTimeOffset a, Timestamp b)
+        {
+            return a < b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator &gt;.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator >(DateTimeOffset a, Timestamp b)
+        {
+            return a > b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator &lt;=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator <=(DateTimeOffset a, Timestamp b)
+        {
+            return a <= b.value;
+        }
+
+        /// <summary>
+        /// Implements the operator &gt;=.
+        /// </summary>
+        /// <param name="a">Timestamp a.</param>
+        /// <param name="b">Timestamp b.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator >=(DateTimeOffset a, Timestamp b)
+        {
+            return a >= b.value;
+        }
+
+        /// <summary>
         /// Determines whether the specified <see cref="System.Object" />, is equal to this instance.
         /// </summary>
         /// <param name="other">The <see cref="System.Object" /> to compare with this instance.</param>
