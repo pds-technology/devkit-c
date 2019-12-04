@@ -760,6 +760,7 @@ namespace Energistics.DataAccess.PRODML122.PROD_GenericDataAccess {
         
         private double valueField;
         
+        /// <remarks/>
         public EndpointQualifiedDepth() {
             this.endpointField = EndpointQualifier.Inclusive;
         }
@@ -880,6 +881,7 @@ namespace Energistics.DataAccess.PRODML122.PROD_GenericDataAccess {
         
         private System.DateTime valueField;
         
+        /// <remarks/>
         public EndpointQualifiedDateTime() {
             this.endpointField = EndpointQualifier.Inclusive;
         }

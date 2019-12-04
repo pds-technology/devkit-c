@@ -74,73 +74,64 @@
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 
-namespace Energistics.DataAccess.WITSML141
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml;
+using System.Xml.Serialization;
+
+namespace Energistics.DataAccess.Reflection
 {
-    namespace ComponentSchemas
+    /// <summary>
+    /// Provides helper methods for data object serialization.
+    /// </summary>
+    public static class SerializationUtil
     {
-        using System.Runtime.Serialization;
-        using System.Security.Permissions;
-        using Energistics.DataAccess.Reflection;
+        private static readonly Type _anyType = typeof(List<XmlElement>);
+        private const string _anyName = "Any";
 
-        public partial class CommonData : ICommonData
+        /// <summary>
+        /// Gets the <see cref="XmlElement"/> list from the serialization info.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <returns>A collection of <see cref="XmlElement"/>.</returns>
+        public static List<XmlElement> GetXmlElementList(SerializationInfo info)
         {
-        }
+            var xml = info.GetString(_anyName);
 
-        public partial class CustomData : ICustomData, ISerializable
-        {
-            /// <summary>
-            /// Initializes a new instance of the <see cref="CustomData"/> class.
-            /// </summary>
-            public CustomData() { }
+            if (string.IsNullOrWhiteSpace(xml))
+                return null;
 
-            /// <summary>
-            /// Initializes a new instance of the <see cref="CustomData"/> class.
-            /// </summary>
-            /// <param name="info">The serialization info.</param>
-            /// <param name="context">The streaming context.</param>
-            protected CustomData(SerializationInfo info, StreamingContext context)
+            //Console.WriteLine($"Deserializing: {xml}");
+            //Console.WriteLine();
+
+            using (var reader = new StringReader(xml))
             {
-                Any = SerializationUtil.GetXmlElementList(info);
-            }
-
-            /// <summary>
-            /// Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
-            /// </summary>
-            /// <param name="info">The serialization info.</param>
-            /// <param name="context">The streaming context.</param>
-            [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-            public void GetObjectData(SerializationInfo info, StreamingContext context)
-            {
-                SerializationUtil.SetXmlElementList(info, Any);
+                var serializer = new XmlSerializer(_anyType);
+                return serializer.Deserialize(reader) as List<XmlElement>;
             }
         }
 
-        public partial class ExtensionAny : ISerializable
+        /// <summary>
+        /// Sets the <see cref="XmlElement"/> list in the serialization info.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="list">The xml element list.</param>
+        public static void SetXmlElementList(SerializationInfo info, List<XmlElement> list)
         {
-            /// <summary>
-            /// Initializes a new instance of the <see cref="ExtensionAny"/> class.
-            /// </summary>
-            public ExtensionAny() { }
+            if (list == null || list.Count < 1) return;
 
-            /// <summary>
-            /// Initializes a new instance of the <see cref="ExtensionAny"/> class.
-            /// </summary>
-            /// <param name="info">The serialization info.</param>
-            /// <param name="context">The streaming context.</param>
-            protected ExtensionAny(SerializationInfo info, StreamingContext context)
+            using (var writer = new StringWriter())
             {
-                Any = SerializationUtil.GetXmlElementList(info);
-            }
+                var serializer = new XmlSerializer(_anyType);
+                serializer.Serialize(writer, list);
 
-            /// <summary>
-            /// Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
-            /// </summary>
-            /// <param name="info">The serialization info.</param>
-            /// <param name="context">The streaming context.</param>
-            [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-            public void GetObjectData(SerializationInfo info, StreamingContext context)
-            {
-                SerializationUtil.SetXmlElementList(info, Any);
+                var sb = writer.GetStringBuilder();
+                info.AddValue(_anyName, sb.ToString());
+
+                //Console.WriteLine($"Serialized: {sb}");
+                //Console.WriteLine();
             }
         }
     }

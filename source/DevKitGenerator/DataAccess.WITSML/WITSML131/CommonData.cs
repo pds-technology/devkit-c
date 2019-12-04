@@ -77,12 +77,41 @@ namespace Energistics.DataAccess.WITSML131
 {
     namespace ComponentSchemas
     {
+        using System.Runtime.Serialization;
+        using System.Security.Permissions;
+        using Energistics.DataAccess.Reflection;
+
         public partial class CommonData : ICommonData
         {
         }
 
-        public partial class CustomData : ICustomData
+        public partial class CustomData : ICustomData, ISerializable
         {
+            /// <summary>
+            /// Initializes a new instance of the <see cref="CustomData"/> class.
+            /// </summary>
+            public CustomData() { }
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="CustomData"/> class.
+            /// </summary>
+            /// <param name="info">The serialization info.</param>
+            /// <param name="context">The streaming context.</param>
+            protected CustomData(SerializationInfo info, StreamingContext context)
+            {
+                Any = SerializationUtil.GetXmlElementList(info);
+            }
+
+            /// <summary>
+            /// Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
+            /// </summary>
+            /// <param name="info">The serialization info.</param>
+            /// <param name="context">The streaming context.</param>
+            [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
+            public void GetObjectData(SerializationInfo info, StreamingContext context)
+            {
+                SerializationUtil.SetXmlElementList(info, Any);
+            }
         }
     }
 }

@@ -73,6 +73,7 @@
     <Compile Include="EnergisticsConverter.cs" />
     <Compile Include="Reflection\EnergisticsDataObjectAttribute.cs" />
     <Compile Include="Reflection\EnergisticsDataTypeAttribute.cs" />
+    <Compile Include="Reflection\SerializationUtil.cs" />
     <Compile Include="Reflection\StandardFamily.cs" />
     <Compile Include="Timestamp.cs" />
     <Compile Include="Validation\ComponentElementAttribute.cs" />

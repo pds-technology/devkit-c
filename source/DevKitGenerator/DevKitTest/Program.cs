@@ -169,6 +169,29 @@ namespace DevkitTest
 
         }
 
+        static void MainEx(string[] args)
+        {
+            var document = new XmlDocument();
+            var element = document.CreateElement("feed");
+            element.InnerText = "1.0.0.0";
+
+            var instance = new Energistics.DataAccess.WITSML141.ComponentSchemas.CustomData
+            {
+                Any = new List<XmlElement> { element }
+            };
+
+            using (var file = new FileStream("./CustomData.dat", FileMode.Create))
+            {
+                var formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                formatter.Serialize(file, instance);
+
+                file.Position = 0;
+                formatter.Deserialize(file);
+            }
+
+            Console.ReadKey();
+        }
+
         static void Main(string[] args)
         {
             String product = "";

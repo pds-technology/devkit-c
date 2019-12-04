@@ -74,17 +74,13 @@
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 
-namespace Energistics.DataAccess.WITSML141
+namespace Energistics.DataAccess.WITSML200
 {
     namespace ComponentSchemas
     {
         using System.Runtime.Serialization;
         using System.Security.Permissions;
         using Energistics.DataAccess.Reflection;
-
-        public partial class CommonData : ICommonData
-        {
-        }
 
         public partial class CustomData : ICustomData, ISerializable
         {
@@ -99,35 +95,6 @@ namespace Energistics.DataAccess.WITSML141
             /// <param name="info">The serialization info.</param>
             /// <param name="context">The streaming context.</param>
             protected CustomData(SerializationInfo info, StreamingContext context)
-            {
-                Any = SerializationUtil.GetXmlElementList(info);
-            }
-
-            /// <summary>
-            /// Populates a System.Runtime.Serialization.SerializationInfo with the data needed to serialize the target object.
-            /// </summary>
-            /// <param name="info">The serialization info.</param>
-            /// <param name="context">The streaming context.</param>
-            [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-            public void GetObjectData(SerializationInfo info, StreamingContext context)
-            {
-                SerializationUtil.SetXmlElementList(info, Any);
-            }
-        }
-
-        public partial class ExtensionAny : ISerializable
-        {
-            /// <summary>
-            /// Initializes a new instance of the <see cref="ExtensionAny"/> class.
-            /// </summary>
-            public ExtensionAny() { }
-
-            /// <summary>
-            /// Initializes a new instance of the <see cref="ExtensionAny"/> class.
-            /// </summary>
-            /// <param name="info">The serialization info.</param>
-            /// <param name="context">The streaming context.</param>
-            protected ExtensionAny(SerializationInfo info, StreamingContext context)
             {
                 Any = SerializationUtil.GetXmlElementList(info);
             }

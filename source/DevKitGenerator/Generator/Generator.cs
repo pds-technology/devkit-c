@@ -250,6 +250,10 @@ namespace Energistics.Generator
                         prodGDAText = prodGDAText.Replace("public abstract partial class abstractObject", "public abstract partial class abstractUnusedObject");
                         prodGDAText = prodGDAText.Replace("abstractObject", "AbstractObject");
 
+                        var crlf = Environment.NewLine;
+                        var tabs = "        ";
+                        prodGDAText = prodGDAText.Replace($";{crlf}{tabs}{crlf}{tabs}public ", $";{crlf}{tabs}{crlf}{tabs}/// <remarks/>{crlf}{tabs}public ");
+
                         File.WriteAllText(filename, prodGDAText);
                     }
                     foreach (Match m in Regex.Matches(output, @"Writing file '(.*?)'."))
