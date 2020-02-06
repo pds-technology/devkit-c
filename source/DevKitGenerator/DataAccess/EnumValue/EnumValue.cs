@@ -83,7 +83,7 @@ using System.Collections.Concurrent;
 namespace Energistics.DataAccess.EnumValue
 {   
     /// <summary>
-    /// Base class for Enumeration values that are definied in EnumValues.xml
+    /// Base class for Enumeration values that are defined in EnumValues.xml
     /// </summary>
     [Serializable]
     public abstract class EnumValue
@@ -314,6 +314,7 @@ namespace Energistics.DataAccess.EnumValue
     /// <summary>
     /// These values represent the type of qualifier in lithology.
     /// </summary>
+    [Serializable]
     public abstract class LithoTypeEnumValue : EnumValue
     {
         /// <summary>
@@ -372,6 +373,7 @@ namespace Energistics.DataAccess.EnumValue
     /// For string types, the maximum length must be defined in number of characters.
     /// For measures, the expected measure class must be defined.
     /// </summary>
+    [Serializable]
     public abstract class ExtensionDataEnumValue : EnumValue
     {
         /// <summary>
@@ -393,7 +395,7 @@ namespace Energistics.DataAccess.EnumValue
         public Type ExtensionDataType { get; set; }
 
         /// <summary>
-        /// For extensions, the maximum number of charactetrs in a string value.
+        /// For extensions, the maximum number of characters in a string value.
         /// </summary>
         [EnumValueNameAttribute("extensionMaximumSize")]
         [XmlIgnore]
@@ -428,6 +430,7 @@ namespace Energistics.DataAccess.EnumValue
     /// These are copied from the Energistics (POSC) Units Classes v2.2.
     /// The units of measure map to the POSC Units of Measure Dictionary v2.2.
     /// </summary>
+    [Serializable]
     public abstract class MeasureUOMEnumValue : EnumValue
     {
         /// <summary>
@@ -464,8 +467,9 @@ namespace Energistics.DataAccess.EnumValue
     }
 
     /// <summary>
-    /// Defines classes of properties. A property inherents the underlying characteristis of its parent but specializes its meaning.
+    /// Defines classes of properties. A property inherits the underlying characteristics of its parent but specializes its meaning.
     /// </summary>
+    [Serializable]
     public abstract class ResqmlPropertyKindEnumValue : EnumValue
     {
         /// <summary>
@@ -574,6 +578,7 @@ namespace Energistics.DataAccess.EnumValue
     /// <summary>
     /// Lithology qualifier types.
     /// </summary>
+    [Serializable]
     public enum EnumValueRealtimeType
     {
         /// <summary>
@@ -602,6 +607,7 @@ namespace Energistics.DataAccess.EnumValue
     /// <summary>
     /// Lithology qualifier types.
     /// </summary>
+    [Serializable]
     public enum EnumValueLithoType
     {
         /// <summary>

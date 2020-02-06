@@ -95,6 +95,8 @@ using Energistics.DataAccess.PRODML122.PROD_GenericDataAccess;
 using Energistics.DataAccess.WITSML200.ComponentSchemas;
 using Energistics.DataAccess.RESQML210;
 using Energistics.DataAccess.RESQML200;
+using Energistics.DataAccess.WITSML141.ComponentSchemas;
+using Energistics.DataAccess.WITSML141.ReferenceData;
 
 namespace DevkitTest
 {
@@ -174,16 +176,38 @@ namespace DevkitTest
             var document = new XmlDocument();
             var element = document.CreateElement("feed");
             element.InnerText = "1.0.0.0";
+            element.SetAttribute("uom", "ft");
 
-            var instance = new Energistics.DataAccess.WITSML141.ComponentSchemas.CustomData
+            var wellList = new Energistics.DataAccess.WITSML141.WellList();
+            var well = new Energistics.DataAccess.WITSML141.Well
             {
-                Any = new List<XmlElement> { element }
+                Name = "well",
+                Uid = "uid",
+                CommonData = new CommonData
+                {
+                    ExtensionNameValue = new List<Energistics.DataAccess.WITSML141.ComponentSchemas.ExtensionNameValue>
+                    {
+                        new Energistics.DataAccess.WITSML141.ComponentSchemas.ExtensionNameValue
+                        {
+                            Uid = "UWIWell",
+                            Name = new Energistics.DataAccess.WITSML141.ExtensionName("EDMInstanceID"),
+                            Value = new Extensionvalue("EmInstance", "unitless"),
+                            DataType = PrimitiveType.@string
+                        }
+                    }
+                },
+                CustomData = new Energistics.DataAccess.WITSML141.ComponentSchemas.CustomData
+                {
+                    Any = new List<XmlElement> {element}
+                }
             };
+
+            wellList.Well = new List<Energistics.DataAccess.WITSML141.Well> {well};
 
             using (var file = new FileStream("./CustomData.dat", FileMode.Create))
             {
                 var formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                formatter.Serialize(file, instance);
+                formatter.Serialize(file, wellList);
 
                 file.Position = 0;
                 formatter.Deserialize(file);
