@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/pbqh9kgp6bxf81bm?svg=true)](https://ci.appveyor.com/project/PDS/devkit-c)
+[![Coverity Scan Build Status](https://scan.coverity.com/projects/20691/badge.svg)](https://scan.coverity.com/projects/pds-technology-devkit-c)
+
 ##  What is this repository for? 
   The devkit is a C# development environment.
 
