@@ -99,7 +99,7 @@ namespace Energistics.DataAccess.Validation
             if (value == null)
                 return null;
 
-            var uids = new List<string>();
+            var uids = new HashSet<string>();
             var list = value as IEnumerable;
             if (list == null)
                 return null;
