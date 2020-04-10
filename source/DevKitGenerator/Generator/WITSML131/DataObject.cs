@@ -36680,6 +36680,8 @@ namespace Energistics.Generator.WITSML131 {
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("distanceInterval", typeof(lengthMeasure))]
         [System.Xml.Serialization.XmlElementAttribute("timeInterval", typeof(timeMeasure))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("timeInterval", DataType="timeMeasure")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("distanceInterval", DataType="lengthMeasure")]
         public abstractMeasure Item {
             get {
                 return this.itemField;

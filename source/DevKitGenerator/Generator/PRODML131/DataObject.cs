@@ -9992,6 +9992,9 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlElementAttribute("fluidLevelTest", typeof(cs_wellTestFluidLevelTest))]
         [System.Xml.Serialization.XmlElementAttribute("injectionTest", typeof(cs_wellTestInjectionTestData))]
         [System.Xml.Serialization.XmlElementAttribute("productionTest", typeof(cs_wellTestProductionTestData))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("fluidLevelTest", DataType="cs_wellTestFluidLevelTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("productionTest", DataType="cs_wellTestProductionTestData")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("injectionTest", DataType="cs_wellTestInjectionTestData")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -11054,6 +11057,8 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("doubleValue", typeof(timeSeriesDoubleSample))]
         [System.Xml.Serialization.XmlElementAttribute("stringValue", typeof(timeSeriesStringSample))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("doubleValue", DataType="timeSeriesDoubleSample")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("stringValue", DataType="timeSeriesStringSample")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -19128,6 +19133,11 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlElementAttribute("dateStart", typeof(System.DateTime), DataType="date")]
         [System.Xml.Serialization.XmlElementAttribute("month", typeof(string))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("month", DataType="calendarMonth")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dTimStart", DataType="timestamp")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dTimEnd", DataType="timestamp")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dateStart", DataType="date")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dateEnd", DataType="date")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -23852,6 +23862,10 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlElementAttribute("dateEnd", typeof(System.DateTime), DataType="date")]
         [System.Xml.Serialization.XmlElementAttribute("dateStart", typeof(System.DateTime), DataType="date")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dTimStart", DataType="timestamp")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dTimEnd", DataType="timestamp")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dateStart", DataType="date")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dateEnd", DataType="date")]
         public System.DateTime[] Items {
             get {
                 return this.itemsField;
@@ -32159,6 +32173,13 @@ namespace Energistics.Generator.PRODML131 {
         [System.Xml.Serialization.XmlElementAttribute("saturationTest", typeof(cs_fluidResultSaturationTest))]
         [System.Xml.Serialization.XmlElementAttribute("separatorTest", typeof(cs_fluidResultSeparatorTest))]
         [System.Xml.Serialization.XmlElementAttribute("transportPropertiesTest", typeof(cs_fluidResultTransportPropertiesTest))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("saturationTest", DataType="cs_fluidResultSaturationTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("constantCompositionExpansionTest", DataType="cs_fluidResultConstantCompositionExpansionTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("constantVolumeDepletionTest", DataType="cs_fluidResultConstantVolumeDepletionTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("differentialLiberationTest", DataType="cs_fluidResultDifferentialLiberationTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("jCurveTest", DataType="cs_fluidResultJCurveTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("transportPropertiesTest", DataType="cs_fluidResultTransportPropertiesTest")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("separatorTest", DataType="cs_fluidResultSeparatorTest")]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -32340,6 +32361,8 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("laboratorybAnalysisKind", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("userAnalysisKind", typeof(FluidAnalysisKind))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("userAnalysisKind", DataType="FluidAnalysisKind")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("laboratorybAnalysisKind", DataType="kindString")]
         public object Item {
             get {
                 return this.itemField;

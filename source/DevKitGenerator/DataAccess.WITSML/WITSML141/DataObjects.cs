@@ -75558,6 +75558,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
         [ComponentElement]
         [XmlElement("geodeticCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_standardGeodeticCRS")]
         public StandardGeodeticCRS GeodeticCRS {
             get {
                 return geodeticCRSField;
@@ -75593,6 +75594,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
         [ComponentElement]
         [XmlElement("projectedCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_standardProjectedCRS")]
         public StandardProjectedCRS ProjectedCRS {
             get {
                 return projectedCRSField;
@@ -75628,6 +75630,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
         [ComponentElement]
         [XmlElement("verticalCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_standardVerticalCRS")]
         public StandardVerticalCRS VerticalCRS {
             get {
                 return verticalCRSField;

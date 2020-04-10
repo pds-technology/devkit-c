@@ -381,7 +381,7 @@ namespace Energistics.SchemaGatherer
 
         private static void AddValidationAttributes(CodeNamespace codeNamespace, IList<XmlSchema> schemas, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects)
         {
-            var types = new List<string>();
+            var types = new HashSet<string>();
 
             foreach (var schemaElement in schemas.SelectMany(schema => schema.Elements.Values.Cast<XmlSchemaElement>().Where(x => x != null)))
             {
@@ -432,7 +432,9 @@ namespace Energistics.SchemaGatherer
                 AddValidationAttributes(codeNamespace, element, standardFamily, dataSchemaVersion, dataObjects, types);
             }
 
-            var choices = schemaSequence.Items.OfType<XmlSchemaChoice>();
+            var choices = schemaSequence.Items.OfType<XmlSchemaSequence>()
+                .SelectMany(x => x.Items.OfType<XmlSchemaChoice>())
+                .Union(schemaSequence.Items.OfType<XmlSchemaChoice>());
 
             foreach (var choice in choices)
             {

@@ -39637,6 +39637,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("timeInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "timeMeasure")]
         public TimeMeasure TimeInterval {
             get {
                 return timeIntervalField;
@@ -39671,6 +39672,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("distanceInterval")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure DistanceInterval {
             get {
                 return distanceIntervalField;

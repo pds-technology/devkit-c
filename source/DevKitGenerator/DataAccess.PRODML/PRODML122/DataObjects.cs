@@ -9938,6 +9938,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("fluidLevelTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestFluidLevelTest")]
         public WellTestFluidLevelTest FluidLevelTest {
             get {
                 return fluidLevelTestField;
@@ -9973,6 +9974,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("productionTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestProductionTestData")]
         public WellTestProductionTestData[] ProductionTest {
             get {
                 return productionTestField;
@@ -10008,6 +10010,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("injectionTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_wellTestInjectionTestData")]
         public WellTestInjectionTestData[] InjectionTest {
             get {
                 return injectionTestField;
@@ -13334,6 +13337,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("doubleValue")]
+        [EnergisticsDataTypeAttribute(DataType = "timeSeriesDoubleSample")]
         public TimeSeriesDoubleSample[] DoubleValue {
             get {
                 return doubleValueField;
@@ -13368,6 +13372,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stringValue")]
+        [EnergisticsDataTypeAttribute(DataType = "timeSeriesStringSample")]
         public TimeSeriesStringSample[] StringValue {
             get {
                 return stringValueField;
@@ -23278,6 +23283,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date and time that the report represents. If you set this property, you must also set DateTimeEnd.
         /// </summary>
         [XmlElement("dTimStart")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
@@ -23313,6 +23319,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date and time that the report represents. If you set this property, you must also set DateTimeStart.
         /// </summary>
         [XmlElement("dTimEnd")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -23348,6 +23355,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date that the report represents. If you set this property, you must also set DateEnd.
         /// </summary>
         [XmlElement("dateStart", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? DateStart {
             get {
                 return dateStartField;
@@ -23383,6 +23391,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date that the report represents. If you set this property, you must also set DateStart.
         /// </summary>
         [XmlElement("dateEnd", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? DateEnd {
             get {
                 return dateEndField;
@@ -23418,6 +23427,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date that the report represents.
         /// </summary>
         [XmlElement("month")]
+        [EnergisticsDataTypeAttribute(DataType = "calendarMonth")]
         public string Month {
             get {
                 return monthField;
@@ -29795,6 +29805,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date and time that the report represents. If you set this property, you must also set DateTimeEnd.
         /// </summary>
         [XmlElement("dTimStart")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
@@ -29829,6 +29840,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date and time that the report represents. If you set this property, you must also set DateTimeStart.
         /// </summary>
         [XmlElement("dTimEnd")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -29863,6 +29875,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date that the report represents. If you set this property, you must also set DateEnd.
         /// </summary>
         [XmlElement("dateStart", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? DateStart {
             get {
                 return dateStartField;
@@ -29897,6 +29910,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date that the report represents. If you set this property, you must also set DateStart.
         /// </summary>
         [XmlElement("dateEnd", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? DateEnd {
             get {
                 return dateEndField;
@@ -42511,6 +42525,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("constantCompositionExpansionTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultConstantCompositionExpansionTest")]
         public FluidResultConstantCompositionExpansionTest ConstantCompositionExpansionTest {
             get {
                 return constantCompositionExpansionTestField;
@@ -42544,6 +42559,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("constantVolumeDepletionTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultConstantVolumeDepletionTest")]
         public FluidResultConstantVolumeDepletionTest ConstantVolumeDepletionTest {
             get {
                 return constantVolumeDepletionTestField;
@@ -42577,6 +42593,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("differentialLiberationTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultDifferentialLiberationTest")]
         public FluidResultDifferentialLiberationTest DifferentialLiberationTest {
             get {
                 return differentialLiberationTestField;
@@ -42610,6 +42627,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("jCurveTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultJCurveTest")]
         public FluidResultJCurveTest JCurveTest {
             get {
                 return jCurveTestField;
@@ -42643,6 +42661,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("saturationTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultSaturationTest")]
         public FluidResultSaturationTest SaturationTest {
             get {
                 return saturationTestField;
@@ -42676,6 +42695,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("separatorTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultSeparatorTest")]
         public FluidResultSeparatorTest SeparatorTest {
             get {
                 return separatorTestField;
@@ -42709,6 +42729,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("transportPropertiesTest")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultTransportPropertiesTest")]
         public FluidResultTransportPropertiesTest TransportPropertiesTest {
             get {
                 return transportPropertiesTestField;
@@ -42943,6 +42964,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
         [XmlElement("userAnalysisKind")]
+        [EnergisticsDataTypeAttribute(DataType = "FluidAnalysisKind")]
         public FluidAnalysisKind UserAnalysisKind {
             get {
                 return userAnalysisKindField;
@@ -42976,6 +42998,7 @@ namespace Energistics.DataAccess.PRODML122
         /// xxxxxxxxxxxxxxxx
         /// </summary>
         [XmlElement("laboratorybAnalysisKind")]
+        [EnergisticsDataTypeAttribute(DataType = "kindString")]
         public string LaboratorybAnalysisKind {
             get {
                 return laboratorybAnalysisKindField;

@@ -62969,6 +62969,9 @@ namespace Energistics.Generator.WITSML141 {
         [System.Xml.Serialization.XmlElementAttribute("geodeticCRS", typeof(cs_standardGeodeticCRS))]
         [System.Xml.Serialization.XmlElementAttribute("projectedCRS", typeof(cs_standardProjectedCRS))]
         [System.Xml.Serialization.XmlElementAttribute("verticalCRS", typeof(cs_standardVerticalCRS))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("geodeticCRS", DataType="cs_standardGeodeticCRS")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("projectedCRS", DataType="cs_standardProjectedCRS")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("verticalCRS", DataType="cs_standardVerticalCRS")]
         public object Item {
             get {
                 return this.itemField;
