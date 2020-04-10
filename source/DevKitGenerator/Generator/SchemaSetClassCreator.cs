@@ -1141,9 +1141,12 @@ namespace Energistics.Generator
 
             // Build an index to our attributes for easy reference
             Dictionary<string, XmlElementAttribute> attrIndex = new Dictionary<string, XmlElementAttribute>();
+            Dictionary<string, EnergisticsDataTypeAttribute> typeIndex = new Dictionary<string, EnergisticsDataTypeAttribute>();
+            var types = property.GetCustomAttributes(typeof(EnergisticsDataTypeAttribute), false).Cast<EnergisticsDataTypeAttribute>().ToList();
             foreach (XmlElementAttribute attr in property.GetCustomAttributes(typeof(XmlElementAttribute), false))
             {
                 attrIndex.Add(attr.ElementName, attr);
+                typeIndex.Add(attr.ElementName, types.Where(t => t.Name == attr.ElementName).FirstOrDefault());
             }
 
 
@@ -1156,7 +1159,7 @@ namespace Energistics.Generator
                     {
                         if (sequenceElement != null && attrIndex.ContainsKey(sequenceElement))
                         {
-                            ExpandSingleChoiceAttributes(sb, type, property, attrIndex[sequenceElement], choice);
+                            ExpandSingleChoiceAttributes(sb, type, property, attrIndex[sequenceElement], typeIndex[sequenceElement], choice);
                             attrIndex.Remove(sequenceElement);
                         }
                     }
@@ -1168,9 +1171,10 @@ namespace Energistics.Generator
             // if property is single, then create signle choiceAttribute.
 
             // Write out the remaining attributes. Since they are not in sequences, order does not matter
-            foreach (XmlElementAttribute attr in attrIndex.Values)
+            foreach (var kvp in attrIndex)
             {
-                ExpandSingleChoiceAttributes(sb, type, property, attr, null);
+                var attr = kvp.Value;
+                ExpandSingleChoiceAttributes(sb, type, property, attr, typeIndex[kvp.Key], null);
             }
 
 
@@ -1377,7 +1381,7 @@ namespace Energistics.Generator
         /// <summary>
         /// Used by ExpandChoiceAttributes
         /// </summary>
-        private void ExpandSingleChoiceAttributes(StringBuilder sb, Type type, PropertyInfo property, XmlElementAttribute attr, Sequence sequence)
+        private void ExpandSingleChoiceAttributes(StringBuilder sb, Type type, PropertyInfo property, XmlElementAttribute attr, EnergisticsDataTypeAttribute typeAttr, Sequence sequence)
         {
             string extraDesc = String.Empty;
 
@@ -1415,7 +1419,12 @@ namespace Energistics.Generator
 
             //make sure the type is specify in xmlelement annoatation , otherwise the xml output is invalidate.
             sb.AppendLine("        " + GetXmlElementAttrTag(attr, property));
-           // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
+            if (!string.IsNullOrEmpty(typeAttr?.DataType))
+            {
+                sb.AppendLine($"        [EnergisticsDataTypeAttribute(DataType = \"{typeAttr.DataType}\")]");
+            }
+
+            // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
             //check whether this is override method.
             sb.AppendLine("        public " + getOverride(property) + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
             

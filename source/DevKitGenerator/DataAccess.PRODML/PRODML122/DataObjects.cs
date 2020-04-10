@@ -10639,6 +10639,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("datumName")]
+        [EnergisticsDataTypeAttribute(DataType = "wellKnownNameStruct")]
         public WellKnownNameStruct DatumName {
             get {
                 return datumNameField;
@@ -10673,6 +10674,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("datumCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
         public RefNameString DatumCRS {
             get {
                 return datumCRSField;
@@ -11355,6 +11357,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("latitude")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
         public PlaneAngleMeasure Latitude {
             get {
                 return latitudeField;
@@ -11396,6 +11399,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("longitude")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
         public PlaneAngleMeasure Longitude {
             get {
                 return longitudeField;
@@ -11437,6 +11441,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("easting")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Easting {
             get {
                 return eastingField;
@@ -11478,6 +11483,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("northing")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Northing {
             get {
                 return northingField;
@@ -11519,6 +11525,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("westing")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Westing {
             get {
                 return westingField;
@@ -11560,6 +11567,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("southing")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Southing {
             get {
                 return southingField;
@@ -11601,6 +11609,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("projectedX")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure ProjectedX {
             get {
                 return projectedXField;
@@ -11642,6 +11651,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("projectedY")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure ProjectedY {
             get {
                 return projectedYField;
@@ -11683,6 +11693,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("localX")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure LocalX {
             get {
                 return localXField;
@@ -11724,6 +11735,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("localY")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure LocalY {
             get {
                 return localYField;
@@ -13918,6 +13930,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the standard temperature and pressure to which the volume has been corrected. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the procuctVolume root.
         /// </summary>
         [XmlElement("standardTempPres")]
+        [EnergisticsDataTypeAttribute(DataType = "StandardCondition")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -13953,6 +13966,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("temp")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -13987,6 +14001,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("pres")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -15078,6 +15093,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the standard temperature and pressure to which the flowRate has been corrected. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the procuctVolume root.
         /// </summary>
         [XmlElement("standardTempPres")]
+        [EnergisticsDataTypeAttribute(DataType = "StandardCondition")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -15113,6 +15129,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("temp")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -15147,6 +15164,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("pres")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -15472,6 +15490,7 @@ namespace Energistics.DataAccess.PRODML122
         /// Defines the standard temperature and pressure to which the density has been corrected. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the procuctVolume root.
         /// </summary>
         [XmlElement("standardTempPres")]
+        [EnergisticsDataTypeAttribute(DataType = "StandardCondition")]
         public StandardCondition StandardTempPres {
             get {
                 return standardTempPresField;
@@ -15507,6 +15526,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("temp")]
+        [EnergisticsDataTypeAttribute(DataType = "thermodynamicTemperatureMeasure")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
                 return tempField;
@@ -15541,6 +15561,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("pres")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure Pres {
             get {
                 return presField;
@@ -16057,6 +16078,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date and time that the period represents.
         /// </summary>
         [XmlElement("dTim")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTime {
             get {
                 return dTimField;
@@ -16094,6 +16116,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The day that the period represents.
         /// </summary>
         [XmlElement("date", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? Date {
             get {
                 return dateField;
@@ -16131,6 +16154,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date and time that the period represents. If you set this property, you must also set DateTimeEnd.
         /// </summary>
         [XmlElement("dTimStart")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
@@ -16167,6 +16191,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date and time that the period represents. If you set this property, you must also set DateTimeStart.
         /// </summary>
         [XmlElement("dTimEnd")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
@@ -16203,6 +16228,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The beginning date that the period represents. If you set this property, you must also set DateEnd.
         /// </summary>
         [XmlElement("dateStart", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? DateStart {
             get {
                 return dateStartField;
@@ -16239,6 +16265,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The ending date that the period represents. If you set this property, you must also set DateStart.
         /// </summary>
         [XmlElement("dateEnd", DataType="date")]
+        [EnergisticsDataTypeAttribute(DataType = "date")]
         public DateTime? DateEnd {
             get {
                 return dateEndField;
@@ -20885,6 +20912,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("measureValue")]
+        [EnergisticsDataTypeAttribute(DataType = "generalQualifiedMeasure")]
         public GeneralQualifiedMeasure[] MeasureValue {
             get {
                 return measureValueField;
@@ -20921,6 +20949,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("curveValue")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_curveData")]
         public CurveData[] CurveValue {
             get {
                 return curveValueField;
@@ -20957,6 +20986,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stringValue")]
+        [EnergisticsDataTypeAttribute(DataType = "kindQualifiedString")]
         public KindQualifiedString StringValue {
             get {
                 return stringValueField;
@@ -20993,6 +21023,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("integerValue")]
+        [EnergisticsDataTypeAttribute(DataType = "integerQualifiedCount")]
         public IntegerQualifiedCount IntegerValue {
             get {
                 return integerValueField;
@@ -22789,6 +22820,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("ownershipShare")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBusinessOwnershipShare")]
         public ProductVolumeBusinessOwnershipShare[] OwnershipShare {
             get {
                 return ownershipShareField;
@@ -22823,6 +22855,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("accountInformation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productVolumeBusinessAccountInfo")]
         public ProductVolumeBusinessAccountInfo[] AccountInformation {
             get {
                 return accountInformationField;
@@ -24537,6 +24570,7 @@ namespace Energistics.DataAccess.PRODML122
         /// state property
         /// </summary>
         [XmlElement("state")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
         public string State {
             get {
                 return stateField;
@@ -24571,6 +24605,7 @@ namespace Energistics.DataAccess.PRODML122
         /// province property
         /// </summary>
         [XmlElement("province")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
         public string Province {
             get {
                 return provinceField;
@@ -24605,6 +24640,7 @@ namespace Energistics.DataAccess.PRODML122
         /// county property
         /// </summary>
         [XmlElement("county")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
         public string County {
             get {
                 return countyField;
@@ -31721,6 +31757,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("expectedFlowProduct")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_productFlowQualifierExpected")]
         public ProductFlowQualifierExpected[] ExpectedFlowProduct {
             get {
                 return expectedFlowProductField;
@@ -31754,6 +31791,7 @@ namespace Energistics.DataAccess.PRODML122
         /// The expected kind of qualifier of the property. This element should only be specified for properties that do not represent the fluid stream (e.g., a valve status)
         /// </summary>
         [XmlElement("qualifier")]
+        [EnergisticsDataTypeAttribute(DataType = "FlowQualifier")]
         public FlowQualifier[] Qualifier {
             get {
                 return qualifierField;
@@ -34209,6 +34247,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -34243,6 +34282,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -34314,6 +34354,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("oilAPIGravity")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
         public DensityMeasure OilAPIGravity {
             get {
                 return oilAPIGravityField;
@@ -34347,6 +34388,7 @@ namespace Energistics.DataAccess.PRODML122
         /// oilSpecificGravity property
         /// </summary>
         [XmlElement("oilSpecificGravity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
         public double? OilSpecificGravity {
             get {
                 return oilSpecificGravityField;
@@ -34436,6 +34478,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("oilVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure OilVolume {
             get {
                 return oilVolumeField;
@@ -34471,6 +34514,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("gasVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumeMeasure")]
         public StandardVolumeMeasure GasVolume {
             get {
                 return gasVolumeField;
@@ -34506,6 +34550,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("oilShrinkageFactor")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
                 return oilShrinkageFactorField;
@@ -34541,6 +34586,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stageSeparatorGORStd")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerVolumeMeasure")]
         public StandardVolumePerVolumeMeasure StageSeparatorGORStd {
             get {
                 return stageSeparatorGORStdField;
@@ -34807,6 +34853,7 @@ namespace Energistics.DataAccess.PRODML122
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Reservoir {
             get {
                 return reservoirField;
@@ -34839,6 +34886,7 @@ namespace Energistics.DataAccess.PRODML122
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Saturated {
             get {
                 return saturatedField;
@@ -34872,6 +34920,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stockTank")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultStockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -35702,6 +35751,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -35736,6 +35786,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -35896,6 +35947,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("oilAPIGravity")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
         public DensityMeasure OilAPIGravity {
             get {
                 return oilAPIGravityField;
@@ -35929,6 +35981,7 @@ namespace Energistics.DataAccess.PRODML122
         /// oilSpecificGravity property
         /// </summary>
         [XmlElement("oilSpecificGravity")]
+        [EnergisticsDataTypeAttribute(DataType = "unitlessQuantity")]
         public double? OilSpecificGravity {
             get {
                 return oilSpecificGravityField;
@@ -36248,6 +36301,7 @@ namespace Energistics.DataAccess.PRODML122
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Reservoir {
             get {
                 return reservoirField;
@@ -36280,6 +36334,7 @@ namespace Energistics.DataAccess.PRODML122
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Saturated {
             get {
                 return saturatedField;
@@ -36313,6 +36368,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stockTank")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultStockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -36720,6 +36776,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("liquidVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure LiquidVolume {
             get {
                 return liquidVolumeField;
@@ -36754,6 +36811,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasurePercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
                 return liquidDropoutPercentField;
@@ -36930,6 +36988,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("cumulativeGasProducedVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumeMeasure")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
                 return cumulativeGasProducedVolumeField;
@@ -36964,6 +37023,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("cumulativeGasProducedRatioStd")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
                 return cumulativeGasProducedRatioStdField;
@@ -37052,6 +37112,7 @@ namespace Energistics.DataAccess.PRODML122
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Reservoir {
             get {
                 return reservoirField;
@@ -37084,6 +37145,7 @@ namespace Energistics.DataAccess.PRODML122
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Saturated {
             get {
                 return saturatedField;
@@ -37117,6 +37179,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stockTank")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultStockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -37382,6 +37445,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -37416,6 +37480,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -37810,6 +37875,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("oilVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure OilVolume {
             get {
                 return oilVolumeField;
@@ -37844,6 +37910,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("oilShrinkageFactor")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
                 return oilShrinkageFactorField;
@@ -38145,6 +38212,7 @@ namespace Energistics.DataAccess.PRODML122
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Reservoir {
             get {
                 return reservoirField;
@@ -38177,6 +38245,7 @@ namespace Energistics.DataAccess.PRODML122
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Saturated {
             get {
                 return saturatedField;
@@ -38210,6 +38279,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stockTank")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultStockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -38475,6 +38545,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -38509,6 +38580,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -38759,6 +38831,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("liquidVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure LiquidVolume {
             get {
                 return liquidVolumeField;
@@ -38793,6 +38866,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasurePercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
                 return liquidDropoutPercentField;
@@ -38969,6 +39043,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("cumulativeGasProducedVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumeMeasure")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
                 return cumulativeGasProducedVolumeField;
@@ -39003,6 +39078,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("cumulativeGasProducedRatioStd")]
+        [EnergisticsDataTypeAttribute(DataType = "standardVolumePerStandardVolumeMeasure")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
                 return cumulativeGasProducedRatioStdField;
@@ -39055,6 +39131,7 @@ namespace Energistics.DataAccess.PRODML122
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Reservoir {
             get {
                 return reservoirField;
@@ -39087,6 +39164,7 @@ namespace Energistics.DataAccess.PRODML122
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Saturated {
             get {
                 return saturatedField;
@@ -39120,6 +39198,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stockTank")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultStockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -39385,6 +39464,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -39419,6 +39499,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -39724,6 +39805,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("totalVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure TotalVolume {
             get {
                 return totalVolumeField;
@@ -39758,6 +39840,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("liquidVolume")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure LiquidVolume {
             get {
                 return liquidVolumeField;
@@ -39792,6 +39875,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasurePercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
                 return liquidDropoutPercentField;
@@ -40016,6 +40100,7 @@ namespace Energistics.DataAccess.PRODML122
         /// reservoir property
         /// </summary>
         [XmlElement("reservoir")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Reservoir {
             get {
                 return reservoirField;
@@ -40048,6 +40133,7 @@ namespace Energistics.DataAccess.PRODML122
         /// saturated property
         /// </summary>
         [XmlElement("saturated")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? Saturated {
             get {
                 return saturatedField;
@@ -40081,6 +40167,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("stockTank")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_fluidResultStockTank")]
         public FluidResultStockTank StockTank {
             get {
                 return stockTankField;
@@ -40346,6 +40433,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -40380,6 +40468,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -40630,6 +40719,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("bubblePointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure BubblePointPressure {
             get {
                 return bubblePointPressureField;
@@ -40664,6 +40754,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
+        [EnergisticsDataTypeAttribute(DataType = "pressureMeasure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
                 return retrogradeDewPointPressureField;
@@ -44901,6 +44992,7 @@ namespace Energistics.DataAccess.PRODML122
         /// True or False. Was a drift run performed? This element should be used to indicate if a drift run was performed or not, where the instance of the drift run (OTDR) is not available. If the OTDR is available, use the OTDRPerformed element to specify the OTDR instance.
         /// </summary>
         [XmlElement("wasDriftRunPerformed")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? WasDriftRunPerformed {
             get {
                 return wasDriftRunPerformedField;
@@ -44935,6 +45027,7 @@ namespace Energistics.DataAccess.PRODML122
         /// </summary>
         [ComponentElement]
         [XmlElement("OTDRPerformed")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
         public RefNameString[] OTDRPerformed {
             get {
                 return OTDRPerformedField;

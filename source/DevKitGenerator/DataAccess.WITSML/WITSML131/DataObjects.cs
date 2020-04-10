@@ -12881,6 +12881,7 @@ namespace Energistics.DataAccess.WITSML131
         /// ConcentrationType: %BWOC (%By weight of Cement), %BWOB (%By weight of blend), %BWOW (%By weight of water), %BWOBF (%By weight of base fluid) . If you set this property, you must also set Concentration.
         /// </summary>
         [XmlElement("typeConc")]
+        [EnergisticsDataTypeAttribute(DataType = "str16")]
         public string TypeConc {
             get {
                 return typeConcField;
@@ -12916,6 +12917,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("concentration")]
+        [EnergisticsDataTypeAttribute(DataType = "massConcentrationMeasure")]
         public MassConcentrationMeasure Concentration {
             get {
                 return concentrationField;
@@ -12951,6 +12953,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("wtSack")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
         public MassMeasure WeightSack {
             get {
                 return wtSackField;
@@ -12987,6 +12990,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("volSack")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure VolSack {
             get {
                 return volSackField;
@@ -21344,6 +21348,7 @@ namespace Energistics.DataAccess.WITSML131
         /// True or False. Was a drift run performed? This element should be used to indicate if a drift run was performed or not, where the instance of the drift run (OTDR) is not available. If the OTDR is available, use the OTDRPerformed element to specify the OTDR instance.
         /// </summary>
         [XmlElement("wasDriftRunPerformed")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? WasDriftRunPerformed {
             get {
                 return wasDriftRunPerformedField;
@@ -21378,6 +21383,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("OTDRPerformed")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
         public RefNameString[] OTDRPerformed {
             get {
                 return OTDRPerformedField;
@@ -26635,6 +26641,7 @@ namespace Energistics.DataAccess.WITSML131
         /// The serialziation of the axis positions of an array as a whitespace-delimited list values of type xsd:double. If the length of this list is less than 'count' then the difference in the last two values represents the increment to be used to fill out the list. For example, the list '2 4' with count=4 represents the list '2 4 6 8'.
         /// </summary>
         [XmlElement("doubleValues")]
+        [EnergisticsDataTypeAttribute(DataType = "listOfDouble")]
         public string DoubleValues {
             get {
                 return doubleValuesField;
@@ -26668,6 +26675,7 @@ namespace Energistics.DataAccess.WITSML131
         /// The serialziation of the axis positions of an array as a whitespace-delimited list values of type xsd:String. Note: the serialization of string elements with embedded whitespace cannot be properly decoded.
         /// </summary>
         [XmlElement("stringValues")]
+        [EnergisticsDataTypeAttribute(DataType = "listOfString")]
         public string StringValues {
             get {
                 return stringValuesField;
@@ -28195,6 +28203,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("force")]
+        [EnergisticsDataTypeAttribute(DataType = "forceMeasure")]
         public ForceMeasure Force {
             get {
                 return forceField;
@@ -28231,6 +28240,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("concentration")]
+        [EnergisticsDataTypeAttribute(DataType = "volumePerVolumeMeasure")]
         public VolumePerVolumeMeasure Concentration {
             get {
                 return concentrationField;
@@ -28267,6 +28277,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("equivalentMudWeight")]
+        [EnergisticsDataTypeAttribute(DataType = "densityMeasure")]
         public DensityMeasure EquivalentMudWeight {
             get {
                 return equivalentMudWeightField;
@@ -28303,6 +28314,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("pressureGradient")]
+        [EnergisticsDataTypeAttribute(DataType = "forcePerVolumeMeasure")]
         public ForcePerVolumeMeasure PressureGradient {
             get {
                 return pressureGradientField;
@@ -33159,6 +33171,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("latitude")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
         public PlaneAngleMeasure Latitude {
             get {
                 return latitudeField;
@@ -33200,6 +33213,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("longitude")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
         public PlaneAngleMeasure Longitude {
             get {
                 return longitudeField;
@@ -33241,6 +33255,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("easting")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Easting {
             get {
                 return eastingField;
@@ -33282,6 +33297,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("northing")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Northing {
             get {
                 return northingField;
@@ -33323,6 +33339,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("westing")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Westing {
             get {
                 return westingField;
@@ -33364,6 +33381,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("southing")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure Southing {
             get {
                 return southingField;
@@ -33405,6 +33423,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("projectedX")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure ProjectedX {
             get {
                 return projectedXField;
@@ -33446,6 +33465,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("projectedY")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure ProjectedY {
             get {
                 return projectedYField;
@@ -33487,6 +33507,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("localX")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure LocalX {
             get {
                 return localXField;
@@ -33528,6 +33549,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("localY")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure LocalY {
             get {
                 return localYField;
@@ -34833,6 +34855,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("itemWtPerUnit")]
+        [EnergisticsDataTypeAttribute(DataType = "massMeasure")]
         public MassMeasure ItemWeightPerUnit {
             get {
                 return itemWtPerUnitField;
@@ -34867,6 +34890,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("itemVolPerUnit")]
+        [EnergisticsDataTypeAttribute(DataType = "volumeMeasure")]
         public VolumeMeasure ItemVolPerUnit {
             get {
                 return itemVolPerUnitField;
@@ -39344,6 +39368,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("persistedAsLog")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
         public RefNameString PersistedAsLog {
             get {
                 return persistedAsLogField;
@@ -39378,6 +39403,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("persistedAsWellLog")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
         public RefNameString PersistedAsWellLog {
             get {
                 return persistedAsWellLogField;
@@ -56967,6 +56993,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("bendAngle")]
+        [EnergisticsDataTypeAttribute(DataType = "planeAngleMeasure")]
         public PlaneAngleMeasure BendAngle {
             get {
                 return bendAngleField;
@@ -57001,6 +57028,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("bendOffset")]
+        [EnergisticsDataTypeAttribute(DataType = "lengthMeasure")]
         public LengthMeasure BendOffset {
             get {
                 return bendOffsetField;
@@ -59715,6 +59743,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("mapProjection")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_projectionx")]
         public Projectionx MapProjection {
             get {
                 return mapProjectionField;
@@ -59750,6 +59779,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("geographic")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_geodeticModel")]
         public GeodeticModel Geographic {
             get {
                 return geographicField;
@@ -59785,6 +59815,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("localCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_localCRS")]
         public LocalCRS LocalCRS {
             get {
                 return localCRSField;
@@ -60228,6 +60259,7 @@ namespace Energistics.DataAccess.WITSML131
         /// True ("true" or "1") indicates that the well surface point is the origin of this CRS. False ("false" or "0") or not given indicates otherwise.
         /// </summary>
         [XmlElement("usesWellAsOrigin")]
+        [EnergisticsDataTypeAttribute(DataType = "logicalBoolean")]
         public bool? UsesWellAsOrigin {
             get {
                 return usesWellAsOriginField;
@@ -60263,6 +60295,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
         [ComponentElement]
         [XmlElement("origin")]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
         public RefNameString Origin {
             get {
                 return originField;
@@ -60297,6 +60330,7 @@ namespace Energistics.DataAccess.WITSML131
         /// A textual description of the origin.
         /// </summary>
         [XmlElement("originDescription")]
+        [EnergisticsDataTypeAttribute(DataType = "commentString")]
         public string OriginDescription {
             get {
                 return originDescriptionField;
@@ -62940,6 +62974,7 @@ namespace Energistics.DataAccess.WITSML131
         /// Curve data type. For simple (non-array) traces, the data type of the curve data. For array curves (except Base64-encoded array curves), the data type of curve array element. For Base64-encoded arrays, the element data type is defined by encodingDef. If neither typeLogData nor encodingDef are given then 'Double' is assumed.
         /// </summary>
         [XmlElement("typeLogData")]
+        [EnergisticsDataTypeAttribute(DataType = "LogDataType")]
         public LogDataType? TypeLogData {
             get {
                 return typeLogDataField;
@@ -62973,6 +63008,7 @@ namespace Energistics.DataAccess.WITSML131
         /// Indicates that the channel is encoded using a Base64 representation of binary values, and defines the binary type of elements of the array. If absent and axisDefinition is given, implies space delimited values, whose elemental data type is given by typeLogData.
         /// </summary>
         [XmlElement("encodingDef")]
+        [EnergisticsDataTypeAttribute(DataType = "ArrayElementDataType")]
         public ArrayElementDataType? EncodingDef {
             get {
                 return encodingDefField;

@@ -308,6 +308,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("splitNodeReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlSplitNodeReference")]
         public ResqmlSplitNodeReference[] SplitNodeReference {
             get {
                 return splitNodeReferenceField;
@@ -342,6 +343,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("splitNodeSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlPoint3dSet")]
         public ResqmlPoint3dSet SplitNodeSet {
             get {
                 return splitNodeSetField;
@@ -376,6 +378,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
                 return ijkGridHdfGroupField;
@@ -798,6 +801,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("splitLineReference")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlSplitLineReference")]
         public ResqmlSplitLineReference[] SplitLineReference {
             get {
                 return splitLineReferenceField;
@@ -832,6 +836,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("lineSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlPoint3dSet")]
         public ResqmlPoint3dSet LineSet {
             get {
                 return lineSetField;
@@ -866,6 +871,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
                 return ijkGridHdfGroupField;
@@ -1751,6 +1757,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("gridTopologyFlags")]
+        [EnergisticsDataTypeAttribute(DataType = "shortValues")]
         public ShortValueList GridTopologyFlags {
             get {
                 return gridTopologyFlagsField;
@@ -1785,6 +1792,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
                 return ijkGridHdfGroupField;
@@ -2655,6 +2663,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("hdfRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
                 return hdfRepresentationField;
@@ -2688,6 +2697,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("xmlRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlContinuousValues")]
         public ResqmlContinuousValues XmlRepresentation {
             get {
                 return xmlRepresentationField;
@@ -2739,6 +2749,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("byteValues")]
+        [EnergisticsDataTypeAttribute(DataType = "byteValues")]
         public ByteValueList ByteValues {
             get {
                 return byteValuesField;
@@ -2772,6 +2783,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("doubleValues")]
+        [EnergisticsDataTypeAttribute(DataType = "doubleValues")]
         public DoubleValueList DoubleValues {
             get {
                 return doubleValuesField;
@@ -2805,6 +2817,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("floatValues")]
+        [EnergisticsDataTypeAttribute(DataType = "floatValues")]
         public FloatValueList FloatValues {
             get {
                 return floatValuesField;
@@ -2838,6 +2851,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("intValues")]
+        [EnergisticsDataTypeAttribute(DataType = "intValues")]
         public IntValueList IntValues {
             get {
                 return intValuesField;
@@ -2871,6 +2885,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("longValues")]
+        [EnergisticsDataTypeAttribute(DataType = "longValues")]
         public LongValueList LongValues {
             get {
                 return longValuesField;
@@ -2904,6 +2919,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("shortValues")]
+        [EnergisticsDataTypeAttribute(DataType = "shortValues")]
         public ShortValueList ShortValues {
             get {
                 return shortValuesField;
@@ -3447,6 +3463,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("byteValues")]
+        [EnergisticsDataTypeAttribute(DataType = "byteValues")]
         public ByteValueList ByteValues {
             get {
                 return byteValuesField;
@@ -3480,6 +3497,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("intValues")]
+        [EnergisticsDataTypeAttribute(DataType = "intValues")]
         public IntValueList IntValues {
             get {
                 return intValuesField;
@@ -3513,6 +3531,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("longValues")]
+        [EnergisticsDataTypeAttribute(DataType = "longValues")]
         public LongValueList LongValues {
             get {
                 return longValuesField;
@@ -3546,6 +3565,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("shortValues")]
+        [EnergisticsDataTypeAttribute(DataType = "shortValues")]
         public ShortValueList ShortValues {
             get {
                 return shortValuesField;
@@ -3764,6 +3784,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The standard RESQML property which represents these values. For properties which have a unit of measure, this kind will directly or indirectly specify the single unit of measure which must be utilized for the property values.
         /// </summary>
         [XmlElement("resqmlKind")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
         public string ResqmlKind {
             get {
                 return resqmlKindField;
@@ -3798,6 +3819,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("localKind")]
+        [EnergisticsDataTypeAttribute(DataType = "refGlobalNameString")]
         public RefGlobalNameString LocalKind {
             get {
                 return localKindField;
@@ -3870,6 +3892,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The date and time related to the property.
         /// </summary>
         [XmlElement("timestamp")]
+        [EnergisticsDataTypeAttribute(DataType = "timestamp")]
         public DateTime? Timestamp {
             get {
                 return timestampField;
@@ -3904,6 +3927,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("timeStep")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlRefTimeStep")]
         public ResqmlRefTimeStep TimeStep {
             get {
                 return timeStepField;
@@ -4503,6 +4527,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("hdfRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
                 return hdfRepresentationField;
@@ -4536,6 +4561,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("xmlRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlDiscreteValues")]
         public ResqmlDiscreteValues XmlRepresentation {
             get {
                 return xmlRepresentationField;
@@ -4721,6 +4747,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("hdfRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
                 return hdfRepresentationField;
@@ -4754,6 +4781,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("xmlRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlDiscreteValues")]
         public ResqmlDiscreteValues XmlRepresentation {
             get {
                 return xmlRepresentationField;
@@ -5007,6 +5035,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("explicitCornerPointGrid")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlExplicitCornerPointGridRepresentation")]
         public ResqmlExplicitCornerPointGridRepresentation ExplicitCornerPointGrid {
             get {
                 return explicitCornerPointGridField;
@@ -5040,6 +5069,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("ijkGridRefinement")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlIJKGridRefinement")]
         public ResqmlIJKGridRefinement IjkGridRefinement {
             get {
                 return ijkGridRefinementField;
@@ -5503,6 +5533,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("gridIJKCellFacePair")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlGridIJKCellFacePair")]
         public ResqmlGridIJKCellFacePair[] GridIJKCellFacePair {
             get {
                 return gridIJKCellFacePairField;
@@ -5537,6 +5568,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("hdfRepresentation")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
                 return hdfRepresentationField;
@@ -7071,6 +7103,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("pillarSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlPoint3dSet")]
         public ResqmlPoint3dSet PillarSet {
             get {
                 return pillarSetField;
@@ -7105,6 +7138,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("pillarSetHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup PillarSetHdfGroup {
             get {
                 return pillarSetHdfGroupField;
@@ -7662,6 +7696,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("point3dSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlPoint3dSet")]
         public ResqmlPoint3dSet Point3dSet {
             get {
                 return point3dSetField;
@@ -7696,6 +7731,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("pointSetHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup PointSetHdfGroup {
             get {
                 return pointSetHdfGroupField;
@@ -8110,6 +8146,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("point3dSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlPoint3dSet")]
         public ResqmlPoint3dSet Point3dSet {
             get {
                 return point3dSetField;
@@ -8144,6 +8181,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("triangleNodeIndexSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlTriangleSet")]
         public ResqmlTriangleSet TriangleNodeIndexSet {
             get {
                 return triangleNodeIndexSetField;
@@ -8178,6 +8216,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("splitEdgeNodeIndexSet")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlSplitEdgeSet")]
         public ResqmlSplitEdgeSet SplitEdgeNodeIndexSet {
             get {
                 return splitEdgeNodeIndexSetField;
@@ -8212,6 +8251,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("triangulatedHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup TriangulatedHdfGroup {
             get {
                 return triangulatedHdfGroupField;
@@ -8459,6 +8499,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("zValueDataset")]
+        [EnergisticsDataTypeAttribute(DataType = "doubleValues")]
         public DoubleValueList ZValueDataset {
             get {
                 return zValueDatasetField;
@@ -8493,6 +8534,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("grid2dHdfGroup")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_resqmlHdfGroup")]
         public ResqmlHdfGroup Grid2dHdfGroup {
             get {
                 return grid2dHdfGroupField;
@@ -11297,6 +11339,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The name of the RESQML standard property that this represents. For properties which have a unit of measure, the standard kind will directly or indirectly specify the single unit of measure which must be utilized for the property values.
         /// </summary>
         [XmlElement("resqmlKind")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlPropertyKind")]
         public ResqmlPropertyKind ResqmlKind {
             get {
                 return resqmlKindField;
@@ -11331,6 +11374,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The parent RESQML standard property which this specializes. The semantics of this property is a specialization of the specified standard property. For properties which have a unit of measure, the parent kind will indirectly specify the single unit of measure which must be utilized for the property values.
         /// </summary>
         [XmlElement("parentResqmlKind")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlPropertyKind")]
         public ResqmlPropertyKind ParentResqmlKind {
             get {
                 return parentResqmlKindField;
@@ -11366,6 +11410,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [ComponentElement]
         [XmlElement("parentLocalKind")]
+        [EnergisticsDataTypeAttribute(DataType = "refGlobalNameString")]
         public RefGlobalNameString ParentLocalKind {
             get {
                 return parentLocalKindField;
@@ -11437,6 +11482,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The allowed unit of measure for the continuous property. For a locally defined property, this must match the unit of the parent kind (and of its parent kind, etc). If you set this property, you must also set DimensionalClass.
         /// </summary>
         [XmlElement("unitOfMeasure")]
+        [EnergisticsDataTypeAttribute(DataType = "ResqmlUnitOfMeasure")]
         public ResqmlUnitOfMeasure UnitOfMeasure {
             get {
                 return unitOfMeasureField;
@@ -11472,6 +11518,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The dimensional analysis of the unit of measure. For example, a meter (m) would be of class "L", which represents length. Note that angle is considered to be dimensionless ratio of length. Note that solid angle is considered to be dimensionless ratio of area. The following nomenclature is used: A = angle (SI unit = radian) B = luminous intensity (SI unit = candela) C = electrical current (SI unit = ampere) K = thermodynamic temperature (SI unit = kelvin) L = length (SI unit = metre) M = mass (SI unit = kilogram) N = amount of substance (SI unit = mole) S = solid angle (SI unit = steradian) T = time (SI unit = second) 1 = dimensionless 2 = squared (e.g., "M2") 3 = cubed 4 = 4th power 5 = 5th power 6 = 6th power 7 = 7th power 8 = 8th power / = division ratio(X) = A dimensionless ratio of another dimension. For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2". This is only used when the underlying dimension would otherwise be "1". The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. A slash must not terminate the string. For example, length per time would be indicated by "L/T" A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component. The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1"). For consistency, the items within a numerator or denominator are listed in alphabetical order (e.g., LM - not ML). If you set this property, you must also set UnitOfMeasure.
         /// </summary>
         [XmlElement("dimensionalClass")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
         public string DimensionalClass {
             get {
                 return dimensionalClassField;
@@ -11507,6 +11554,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The minimum value allowed for the discrete property. If you set this property, you must also set MaximumValue.
         /// </summary>
         [XmlElement("minimumValue")]
+        [EnergisticsDataTypeAttribute(DataType = "long")]
         public long? MinimumValue {
             get {
                 return minimumValueField;
@@ -11542,6 +11590,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The maximum value allowed for the discrete property. If you set this property, you must also set MinimumValue.
         /// </summary>
         [XmlElement("maximumValue")]
+        [EnergisticsDataTypeAttribute(DataType = "long")]
         public long? MaximumValue {
             get {
                 return maximumValueField;
@@ -11577,6 +11626,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A value allowed for the categorical property.
         /// </summary>
         [XmlElement("enumValue")]
+        [EnergisticsDataTypeAttribute(DataType = "string")]
         public string[] EnumValue {
             get {
                 return enumValueField;
@@ -12227,6 +12277,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A URN to a well-known Vertical CRS.
         /// </summary>
         [XmlElement("srsName", DataType="anyURI")]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
         public string SrsName {
             get {
                 return srsNameField;
@@ -20384,6 +20435,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A URN to a well-known Projected CRS.
         /// </summary>
         [XmlElement("srsName", DataType="anyURI")]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
         public string SrsName {
             get {
                 return srsNameField;
