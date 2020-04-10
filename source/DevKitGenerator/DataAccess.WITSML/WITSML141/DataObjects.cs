@@ -165,6 +165,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FormationMarkerList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReportList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReportList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateReferenceSystemList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConvCoreList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChangeLogList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobList))]
@@ -68173,6 +68174,7587 @@ namespace Energistics.DataAccess.WITSML141
         #endregion INotifyPropertyChanged Members
     } //here
 
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// The sender may choose to send a nameCRS, with a well known name structure, or the sequence of information that fully defines the CRS. It is recommended that, for the standard CRSs in the EPSG database, the nameCRS be sent.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_standardVerticalCRS", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("The sender may choose to send a nameCRS, with a well known name structure, or the sequence of information that fully defines the CRS. It is recommended that, for the standard CRSs in the EPSG database, the nameCRS be sent.")]
+    public partial class StandardVerticalCRS : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'RH70' with a code of '5718' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("nameCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "wellKnownNameStruct")]
+        public WellKnownNameStruct NameCRS {
+            get {
+                return nameCRSField;
+            } 
+            set {
+                if (value != null && VerticalCRSSpecified) throw new Exception("Cannot set property NameCRS when property VerticalCRS is already set");
+                nameCRSField = value;
+                NameCRSSpecified = (value!=null);
+                NotifyPropertyChanged("NameCRS");
+            }
+        }
+
+        private WellKnownNameStruct nameCRSField; 
+        private bool nameCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if NameCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool NameCRSSpecified
+        {
+            get {
+                return nameCRSSpecified;
+            }
+            set {
+                nameCRSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// VerticalCRS property
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("VerticalCRS", Namespace="http://www.opengis.net/gml/3.2")]
+        public VerticalCRSType VerticalCRS {
+            get {
+                return VerticalCRSField;
+            } 
+            set {
+                VerticalCRSField = value;
+                VerticalCRSSpecified = (value!=null);
+                NotifyPropertyChanged("VerticalCRS");
+            }
+        }
+
+        private VerticalCRSType VerticalCRSField; 
+        private bool verticalCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if VerticalCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool VerticalCRSSpecified
+        {
+            get {
+                return verticalCRSSpecified;
+            }
+            set {
+                verticalCRSSpecified= value;
+            }
+        }
+
+
+        /// <summary>
+        /// In the case that the vertical datum is the ellipsoid, and that the vertical coordinate values are heights above the ellipsoid, this element should be instantiated to indicate this. This element should point to the geodetic CRS that defines this ellipsoid system. The ellipsoidal height is only valid if the horizontal CRS using the same ellipsoid is defined.
+        /// </summary>
+		[Description("In the case that the vertical datum is the ellipsoid, and that the vertical coordinate values are heights above the ellipsoid, this element should be instantiated to indicate this. This element should point to the geodetic CRS that defines this ellipsoid system. The ellipsoidal height is only valid if the horizontal CRS using the same ellipsoid is defined.")]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "refNameString")]
+		[XmlElement("ellipsoidalDatum")]
+        public RefNameString EllipsoidalDatum {
+            get {
+                return ellipsoidalDatumField;
+            } 
+            set {
+                ellipsoidalDatumField = value;
+                NotifyPropertyChanged("EllipsoidalDatum");
+            }
+        }
+
+        private RefNameString ellipsoidalDatumField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the VerticalCRSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the VerticalCRSType xsd type.")]
+    public partial class VerticalCRSType : AbstractCRSType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// verticalCS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("verticalCS")]
+        public VerticalCSPropertyType VerticalCS {
+            get {
+                return verticalCSField;
+            } 
+            set {
+                verticalCSField = value;
+                NotifyPropertyChanged("VerticalCS");
+            }
+        }
+
+        private VerticalCSPropertyType verticalCSField; 
+
+        /// <summary>
+        /// verticalDatum property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("verticalDatum")]
+        public VerticalDatumPropertyType VerticalDatum {
+            get {
+                return verticalDatumField;
+            } 
+            set {
+                verticalDatumField = value;
+                NotifyPropertyChanged("VerticalDatum");
+            }
+        }
+
+        private VerticalDatumPropertyType verticalDatumField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the VerticalCSPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("verticalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the VerticalCSPropertyType xsd type.")]
+    public partial class VerticalCSPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// VerticalCS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("VerticalCS")]
+        public VerticalCSType VerticalCS {
+            get {
+                return VerticalCSField;
+            } 
+            set {
+                VerticalCSField = value;
+                NotifyPropertyChanged("VerticalCS");
+            }
+        }
+
+        private VerticalCSType VerticalCSField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the VerticalCSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the VerticalCSType xsd type.")]
+    public partial class VerticalCSType : AbstractCoordinateSystemType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the AbstractCoordinateSystemType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractCoordinateSystem", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractCoordinateSystemType xsd type.")]
+    public abstract partial class AbstractCoordinateSystemType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// axis property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("axis")]
+        public List<CoordinateSystemAxisPropertyType> Axis {
+            get {
+                return axisField;
+            } 
+            set {
+                axisField = value;
+                NotifyPropertyChanged("Axis");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Axis has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool AxisSpecified
+         {
+             get {
+             if(axisField!=null)
+                 return axisField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CoordinateSystemAxisPropertyType> axisField; 
+
+		/// <summary>
+        /// aggregationType property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "AggregationType")]
+        [XmlAttribute("aggregationType")]
+		
+        public AggregationType AggregationType {
+            get {
+                return aggregationTypeField;
+            } 
+            set {
+                aggregationTypeField = value;
+                 this.AggregationTypeSpecified = true;
+                NotifyPropertyChanged("AggregationType");
+            }
+        }
+
+        private AggregationType aggregationTypeField; 
+
+        /// <summary>
+        /// aggregationTypeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool AggregationTypeSpecified {
+            get {
+                return aggregationTypeSpecifiedField;
+            } 
+            set {
+                aggregationTypeSpecifiedField = value;
+                NotifyPropertyChanged("AggregationTypeSpecified");
+            }
+        }
+
+        private bool aggregationTypeSpecifiedField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CoordinateSystemAxisPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("axis", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CoordinateSystemAxisPropertyType xsd type.")]
+    public partial class CoordinateSystemAxisPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CoordinateSystemAxis property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CoordinateSystemAxis")]
+        public CoordinateSystemAxisType CoordinateSystemAxis {
+            get {
+                return CoordinateSystemAxisField;
+            } 
+            set {
+                CoordinateSystemAxisField = value;
+                NotifyPropertyChanged("CoordinateSystemAxis");
+            }
+        }
+
+        private CoordinateSystemAxisType CoordinateSystemAxisField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the CoordinateSystemAxisType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("CoordinateSystemAxis", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CoordinateSystemAxisType xsd type.")]
+    public partial class CoordinateSystemAxisType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// axisAbbrev property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("axisAbbrev")]
+        public CodeType AxisAbbrev {
+            get {
+                return axisAbbrevField;
+            } 
+            set {
+                axisAbbrevField = value;
+                NotifyPropertyChanged("AxisAbbrev");
+            }
+        }
+
+        private CodeType axisAbbrevField; 
+
+        /// <summary>
+        /// axisDirection property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("axisDirection")]
+        public CodeWithAuthorityType AxisDirection {
+            get {
+                return axisDirectionField;
+            } 
+            set {
+                axisDirectionField = value;
+                NotifyPropertyChanged("AxisDirection");
+            }
+        }
+
+        private CodeWithAuthorityType axisDirectionField; 
+
+        /// <summary>
+        /// minimumValue property
+        /// </summary>
+		
+		[XmlElement("minimumValue")]
+        public double? MinimumValue {
+            get {
+                return minimumValueField;
+            } 
+            set {
+                minimumValueField = value;
+                 this.MinimumValueSpecified = true;
+                NotifyPropertyChanged("MinimumValue");
+            }
+        }
+
+        private double? minimumValueField; 
+
+        /// <summary>
+        /// minimumValueSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MinimumValueSpecified {
+            get {
+                return minimumValueSpecifiedField;
+            } 
+            set {
+                minimumValueSpecifiedField = value;
+                NotifyPropertyChanged("MinimumValueSpecified");
+            }
+        }
+
+        private bool minimumValueSpecifiedField; 
+
+        /// <summary>
+        /// maximumValue property
+        /// </summary>
+		
+		[XmlElement("maximumValue")]
+        public double? MaximumValue {
+            get {
+                return maximumValueField;
+            } 
+            set {
+                maximumValueField = value;
+                 this.MaximumValueSpecified = true;
+                NotifyPropertyChanged("MaximumValue");
+            }
+        }
+
+        private double? maximumValueField; 
+
+        /// <summary>
+        /// maximumValueSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool MaximumValueSpecified {
+            get {
+                return maximumValueSpecifiedField;
+            } 
+            set {
+                maximumValueSpecifiedField = value;
+                NotifyPropertyChanged("MaximumValueSpecified");
+            }
+        }
+
+        private bool maximumValueSpecifiedField; 
+
+        /// <summary>
+        /// rangeMeaning property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("rangeMeaning")]
+        public CodeWithAuthorityType RangeMeaning {
+            get {
+                return rangeMeaningField;
+            } 
+            set {
+                rangeMeaningField = value;
+                NotifyPropertyChanged("RangeMeaning");
+            }
+        }
+
+        private CodeWithAuthorityType rangeMeaningField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CodeType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CodeWithAuthorityType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("name", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CodeType xsd type.")]
+    public partial class CodeType : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the CodeType class.
+        /// </summary>
+        public CodeType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the CodeType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public CodeType(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// codeSpace property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeSpace")]
+		
+        public string CodeSpace {
+            get {
+                return codeSpaceField;
+            } 
+            set {
+                codeSpaceField = value;
+                NotifyPropertyChanged("CodeSpace");
+            }
+        }
+
+        private string codeSpaceField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public string Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private string ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the CodeWithAuthorityType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("identifier", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CodeWithAuthorityType xsd type.")]
+    public partial class CodeWithAuthorityType : CodeType, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the CodeWithAuthorityType class.
+        /// </summary>
+        public CodeWithAuthorityType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the CodeWithAuthorityType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public CodeWithAuthorityType(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the IdentifiedObjectType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IdentifiedObjectType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the IdentifiedObjectType xsd type.")]
+    public abstract partial class IdentifiedObjectType : DefinitionType, INotifyPropertyChanged
+    {
+
+
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the DefinitionType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("Definition", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the DefinitionType xsd type.")]
+    public partial class DefinitionType : DefinitionBaseType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// remarks property
+        /// </summary>
+		
+		[XmlElement("remarks")]
+        public string Remarks {
+            get {
+                return remarksField;
+            } 
+            set {
+                remarksField = value;
+                NotifyPropertyChanged("Remarks");
+            }
+        }
+
+        private string remarksField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DefinitionBaseType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DefinitionBaseType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the DefinitionBaseType xsd type.")]
+    public partial class DefinitionBaseType : AbstractGMLType, INotifyPropertyChanged
+    {
+
+
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractGMLType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGML", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractGMLType xsd type.")]
+    public abstract partial class AbstractGMLType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("description")]
+        public StringOrRefType Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private StringOrRefType descriptionField; 
+
+        /// <summary>
+        /// descriptionReference property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("descriptionReference")]
+        public ReferenceType DescriptionReference {
+            get {
+                return descriptionReferenceField;
+            } 
+            set {
+                descriptionReferenceField = value;
+                NotifyPropertyChanged("DescriptionReference");
+            }
+        }
+
+        private ReferenceType descriptionReferenceField; 
+
+        /// <summary>
+        /// identifier property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("identifier")]
+        public CodeWithAuthorityType Identifier {
+            get {
+                return identifierField;
+            } 
+            set {
+                identifierField = value;
+                NotifyPropertyChanged("Identifier");
+            }
+        }
+
+        private CodeWithAuthorityType identifierField; 
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("name")]
+        public List<CodeType> Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Name has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool NameSpecified
+         {
+             get {
+             if(nameField!=null)
+                 return nameField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CodeType> nameField; 
+
+		/// <summary>
+        /// id property
+        /// </summary>
+		
+        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public string Id {
+            get {
+                return idField;
+            } 
+            set {
+                idField = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+
+        private string idField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the StringOrRefType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("description", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the StringOrRefType xsd type.")]
+    public partial class StringOrRefType : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the StringOrRefType class.
+        /// </summary>
+        public StringOrRefType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the StringOrRefType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public StringOrRefType(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public string Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private string ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the ReferenceType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("descriptionReference", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the ReferenceType xsd type.")]
+    public partial class ReferenceType : Object, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// owns property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "boolean")]
+        [XmlAttribute("owns")]
+		
+        public bool Owns {
+            get {
+                return ownsField;
+            } 
+            set {
+                ownsField = value;
+                NotifyPropertyChanged("Owns");
+            }
+        }
+
+        private bool ownsField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the AbstractTimeObjectType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractTimeObject", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractTimeObjectType xsd type.")]
+    public abstract partial class AbstractTimeObjectType : AbstractGMLType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the AbstractTimePrimitiveType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractTimePrimitive", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractTimePrimitiveType xsd type.")]
+    public abstract partial class AbstractTimePrimitiveType : AbstractTimeObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// relatedTime property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "RelatedTimeType")]
+		[XmlElement("relatedTime")]
+        public List<RelatedTimeType> RelatedTime {
+            get {
+                return relatedTimeField;
+            } 
+            set {
+                relatedTimeField = value;
+                NotifyPropertyChanged("RelatedTime");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if RelatedTime has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool RelatedTimeSpecified
+         {
+             get {
+             if(relatedTimeField!=null)
+                 return relatedTimeField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<RelatedTimeType> relatedTimeField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the RelatedTimeType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelatedTimeType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the RelatedTimeType xsd type.")]
+    public partial class RelatedTimeType : TimePrimitivePropertyType, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// relativePosition property
+        /// </summary>
+		
+        [XmlAttribute("relativePosition")]
+		
+        public RelatedTimeTypeRelativePosition RelativePosition {
+            get {
+                return relativePositionField;
+            } 
+            set {
+                relativePositionField = value;
+                 this.RelativePositionSpecified = true;
+                NotifyPropertyChanged("RelativePosition");
+            }
+        }
+
+        private RelatedTimeTypeRelativePosition relativePositionField; 
+
+        /// <summary>
+        /// relativePositionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool RelativePositionSpecified {
+            get {
+                return relativePositionSpecifiedField;
+            } 
+            set {
+                relativePositionSpecifiedField = value;
+                NotifyPropertyChanged("RelativePositionSpecified");
+            }
+        }
+
+        private bool relativePositionSpecifiedField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TimePrimitivePropertyType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelatedTimeType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimePrimitivePropertyType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the TimePrimitivePropertyType xsd type.")]
+    public partial class TimePrimitivePropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractTimePrimitive property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractTimePrimitive")]
+        public AbstractTimePrimitiveType AbstractTimePrimitive {
+            get {
+                return AbstractTimePrimitiveField;
+            } 
+            set {
+                AbstractTimePrimitiveField = value;
+                NotifyPropertyChanged("AbstractTimePrimitive");
+            }
+        }
+
+        private AbstractTimePrimitiveType AbstractTimePrimitiveField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+		/// <summary>
+        /// owns property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "boolean")]
+        [XmlAttribute("owns")]
+		
+        public bool Owns {
+            get {
+                return ownsField;
+            } 
+            set {
+                ownsField = value;
+                NotifyPropertyChanged("Owns");
+            }
+        }
+
+        private bool ownsField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractCoordinateOperationType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractOperation", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractCoordinateOperationType xsd type.")]
+    public abstract partial class AbstractCoordinateOperationType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// domainOfValidity property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("domainOfValidity")]
+        public DomainOfValidity DomainOfValidity {
+            get {
+                return domainOfValidityField;
+            } 
+            set {
+                domainOfValidityField = value;
+                NotifyPropertyChanged("DomainOfValidity");
+            }
+        }
+
+        private DomainOfValidity domainOfValidityField; 
+
+        /// <summary>
+        /// scope property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("scope")]
+        public List<string> Scope {
+            get {
+                return scopeField;
+            } 
+            set {
+                scopeField = value;
+                NotifyPropertyChanged("Scope");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Scope has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+             get {
+             if(scopeField!=null)
+                 return scopeField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<string> scopeField; 
+
+        /// <summary>
+        /// operationVersion property
+        /// </summary>
+		
+		[XmlElement("operationVersion")]
+        public string OperationVersion {
+            get {
+                return operationVersionField;
+            } 
+            set {
+                operationVersionField = value;
+                NotifyPropertyChanged("OperationVersion");
+            }
+        }
+
+        private string operationVersionField; 
+
+        /// <summary>
+        /// coordinateOperationAccuracy property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("coordinateOperationAccuracy")]
+        public List<CoordinateOperationAccuracy> CoordinateOperationAccuracy {
+            get {
+                return coordinateOperationAccuracyField;
+            } 
+            set {
+                coordinateOperationAccuracyField = value;
+                NotifyPropertyChanged("CoordinateOperationAccuracy");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if CoordinateOperationAccuracy has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool CoordinateOperationAccuracySpecified
+         {
+             get {
+             if(coordinateOperationAccuracyField!=null)
+                 return coordinateOperationAccuracyField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CoordinateOperationAccuracy> coordinateOperationAccuracyField; 
+
+        /// <summary>
+        /// sourceCRS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("sourceCRS")]
+        public CRSPropertyType SourceCRS {
+            get {
+                return sourceCRSField;
+            } 
+            set {
+                sourceCRSField = value;
+                NotifyPropertyChanged("SourceCRS");
+            }
+        }
+
+        private CRSPropertyType sourceCRSField; 
+
+        /// <summary>
+        /// targetCRS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("targetCRS")]
+        public CRSPropertyType TargetCRS {
+            get {
+                return targetCRSField;
+            } 
+            set {
+                targetCRSField = value;
+                NotifyPropertyChanged("TargetCRS");
+            }
+        }
+
+        private CRSPropertyType targetCRSField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the domainOfValidity xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the domainOfValidity xsd type.")]
+    public partial class DomainOfValidity : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// EX_Extent property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("EX_Extent", Namespace="http://www.isotc211.org/2005/gmd")]
+        public EX_Extent_Type EX_Extent {
+            get {
+                return EX_ExtentField;
+            } 
+            set {
+                EX_ExtentField = value;
+                NotifyPropertyChanged("EX_Extent");
+            }
+        }
+
+        private EX_Extent_Type EX_ExtentField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the EX_Extent_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("EX_Extent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the EX_Extent_Type xsd type.")]
+    public partial class EX_Extent_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("description")]
+        public CharacterString_PropertyType Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private CharacterString_PropertyType descriptionField; 
+
+        /// <summary>
+        /// geographicElement property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "EX_GeographicExtent_PropertyType")]
+		[XmlElement("geographicElement")]
+        public List<EX_GeographicExtent_PropertyType> GeographicElement {
+            get {
+                return geographicElementField;
+            } 
+            set {
+                geographicElementField = value;
+                NotifyPropertyChanged("GeographicElement");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if GeographicElement has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool GeographicElementSpecified
+         {
+             get {
+             if(geographicElementField!=null)
+                 return geographicElementField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<EX_GeographicExtent_PropertyType> geographicElementField; 
+
+        /// <summary>
+        /// temporalElement property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "EX_TemporalExtent_PropertyType")]
+		[XmlElement("temporalElement")]
+        public List<EX_TemporalExtent_PropertyType> TemporalElement {
+            get {
+                return temporalElementField;
+            } 
+            set {
+                temporalElementField = value;
+                NotifyPropertyChanged("TemporalElement");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if TemporalElement has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool TemporalElementSpecified
+         {
+             get {
+             if(temporalElementField!=null)
+                 return temporalElementField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<EX_TemporalExtent_PropertyType> temporalElementField; 
+
+        /// <summary>
+        /// verticalElement property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "EX_VerticalExtent_PropertyType")]
+		[XmlElement("verticalElement")]
+        public List<EX_VerticalExtent_PropertyType> VerticalElement {
+            get {
+                return verticalElementField;
+            } 
+            set {
+                verticalElementField = value;
+                NotifyPropertyChanged("VerticalElement");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if VerticalElement has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool VerticalElementSpecified
+         {
+             get {
+             if(verticalElementField!=null)
+                 return verticalElementField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<EX_VerticalExtent_PropertyType> verticalElementField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CharacterString_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CharacterString_PropertyType", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the CharacterString_PropertyType xsd type.")]
+    public partial class CharacterString_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CharacterString property
+        /// </summary>
+		
+		[XmlElement("CharacterString")]
+        public string CharacterString {
+            get {
+                return CharacterStringField;
+            } 
+            set {
+                CharacterStringField = value;
+                NotifyPropertyChanged("CharacterString");
+            }
+        }
+
+        private string CharacterStringField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the EX_GeographicExtent_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EX_GeographicExtent_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the EX_GeographicExtent_PropertyType xsd type.")]
+    public partial class EX_GeographicExtent_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractEX_GeographicExtent property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractEX_GeographicExtent")]
+        public AbstractEX_GeographicExtent_Type AbstractEX_GeographicExtent {
+            get {
+                return AbstractEX_GeographicExtentField;
+            } 
+            set {
+                AbstractEX_GeographicExtentField = value;
+                NotifyPropertyChanged("AbstractEX_GeographicExtent");
+            }
+        }
+
+        private AbstractEX_GeographicExtent_Type AbstractEX_GeographicExtentField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractEX_GeographicExtent_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractEX_GeographicExtent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the AbstractEX_GeographicExtent_Type xsd type.")]
+    public abstract partial class AbstractEX_GeographicExtent_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// extentTypeCode property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "Boolean_PropertyType")]
+		[XmlElement("extentTypeCode")]
+        public Boolean_PropertyType ExtentTypeCode {
+            get {
+                return extentTypeCodeField;
+            } 
+            set {
+                extentTypeCodeField = value;
+                NotifyPropertyChanged("ExtentTypeCode");
+            }
+        }
+
+        private Boolean_PropertyType extentTypeCodeField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the Boolean_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Boolean_PropertyType", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the Boolean_PropertyType xsd type.")]
+    public partial class Boolean_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Boolean property
+        /// </summary>
+		
+		[XmlElement("Boolean")]
+        public bool? Boolean {
+            get {
+                return BooleanField;
+            } 
+            set {
+                BooleanField = value;
+                NotifyPropertyChanged("Boolean");
+            }
+        }
+
+        private bool? BooleanField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AbstractObject_Type xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Date_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Citation_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractObject_Type", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the AbstractObject_Type xsd type.")]
+    public abstract partial class AbstractObject_Type : Object, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// id property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "ID")]
+        [XmlAttribute("id")]
+		
+        public string Id {
+            get {
+                return idField;
+            } 
+            set {
+                idField = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+
+        private string idField; 
+
+		/// <summary>
+        /// uuid property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuid")]
+		
+        public string Uuid {
+            get {
+                return uuidField;
+            } 
+            set {
+                uuidField = value;
+                NotifyPropertyChanged("Uuid");
+            }
+        }
+
+        private string uuidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractDQ_Result_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDQ_Result", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the AbstractDQ_Result_Type xsd type.")]
+    public abstract partial class AbstractDQ_Result_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CI_Series_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Series", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_Series_Type xsd type.")]
+    public partial class CI_Series_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("name")]
+        public CharacterString_PropertyType Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private CharacterString_PropertyType nameField; 
+
+        /// <summary>
+        /// issueIdentification property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("issueIdentification")]
+        public CharacterString_PropertyType IssueIdentification {
+            get {
+                return issueIdentificationField;
+            } 
+            set {
+                issueIdentificationField = value;
+                NotifyPropertyChanged("IssueIdentification");
+            }
+        }
+
+        private CharacterString_PropertyType issueIdentificationField; 
+
+        /// <summary>
+        /// page property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("page")]
+        public CharacterString_PropertyType Page {
+            get {
+                return pageField;
+            } 
+            set {
+                pageField = value;
+                NotifyPropertyChanged("Page");
+            }
+        }
+
+        private CharacterString_PropertyType pageField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CI_OnlineResource_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_OnlineResource", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_OnlineResource_Type xsd type.")]
+    public partial class CI_OnlineResource_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// linkage property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "URL_PropertyType")]
+		[XmlElement("linkage")]
+        public URL_PropertyType Linkage {
+            get {
+                return linkageField;
+            } 
+            set {
+                linkageField = value;
+                NotifyPropertyChanged("Linkage");
+            }
+        }
+
+        private URL_PropertyType linkageField; 
+
+        /// <summary>
+        /// protocol property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("protocol")]
+        public CharacterString_PropertyType Protocol {
+            get {
+                return protocolField;
+            } 
+            set {
+                protocolField = value;
+                NotifyPropertyChanged("Protocol");
+            }
+        }
+
+        private CharacterString_PropertyType protocolField; 
+
+        /// <summary>
+        /// applicationProfile property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("applicationProfile")]
+        public CharacterString_PropertyType ApplicationProfile {
+            get {
+                return applicationProfileField;
+            } 
+            set {
+                applicationProfileField = value;
+                NotifyPropertyChanged("ApplicationProfile");
+            }
+        }
+
+        private CharacterString_PropertyType applicationProfileField; 
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("name")]
+        public CharacterString_PropertyType Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private CharacterString_PropertyType nameField; 
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("description")]
+        public CharacterString_PropertyType Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private CharacterString_PropertyType descriptionField; 
+
+        /// <summary>
+        /// function property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_OnLineFunctionCode_PropertyType")]
+		[XmlElement("function")]
+        public CI_OnLineFunctionCode_PropertyType Function {
+            get {
+                return functionField;
+            } 
+            set {
+                functionField = value;
+                NotifyPropertyChanged("Function");
+            }
+        }
+
+        private CI_OnLineFunctionCode_PropertyType functionField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the URL_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="URL_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the URL_PropertyType xsd type.")]
+    public partial class URL_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// URL property
+        /// </summary>
+		
+		[XmlElement("URL", DataType="anyURI")]
+        public string URL {
+            get {
+                return URLField;
+            } 
+            set {
+                URLField = value;
+                NotifyPropertyChanged("URL");
+            }
+        }
+
+        private string URLField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_OnLineFunctionCode_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_OnLineFunctionCode_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_OnLineFunctionCode_PropertyType xsd type.")]
+    public partial class CI_OnLineFunctionCode_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_OnLineFunctionCode property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_OnLineFunctionCode")]
+        public CodeListValue_Type CI_OnLineFunctionCode {
+            get {
+                return CI_OnLineFunctionCodeField;
+            } 
+            set {
+                CI_OnLineFunctionCodeField = value;
+                NotifyPropertyChanged("CI_OnLineFunctionCode");
+            }
+        }
+
+        private CodeListValue_Type CI_OnLineFunctionCodeField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the CodeListValue_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_DateTypeCode", Namespace="http://www.isotc211.org/2005/gco", IsNullable=false)]
+	[Description("This class represents the CodeListValue_Type xsd type.")]
+    public partial class CodeListValue_Type : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the CodeListValue_Type class.
+        /// </summary>
+        public CodeListValue_Type() {}
+
+        /// <summary>
+        /// Initializes a new instance of the CodeListValue_Type class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public CodeListValue_Type(string value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// codeList property
+        /// </summary>
+		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeList")]
+		
+        public string CodeList {
+            get {
+                return codeListField;
+            } 
+            set {
+                codeListField = value;
+                NotifyPropertyChanged("CodeList");
+            }
+        }
+
+        private string codeListField; 
+
+		/// <summary>
+        /// codeListValue property
+        /// </summary>
+		[Required]
+        [EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeListValue")]
+		
+        public string CodeListValue {
+            get {
+                return codeListValueField;
+            } 
+            set {
+                codeListValueField = value;
+                NotifyPropertyChanged("CodeListValue");
+            }
+        }
+
+        private string codeListValueField; 
+
+		/// <summary>
+        /// codeSpace property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "anyURI")]
+        [XmlAttribute("codeSpace")]
+		
+        public string CodeSpace {
+            get {
+                return codeSpaceField;
+            } 
+            set {
+                codeSpaceField = value;
+                NotifyPropertyChanged("CodeSpace");
+            }
+        }
+
+        private string codeSpaceField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public string Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private string ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the CI_Address_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Address", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_Address_Type xsd type.")]
+    public partial class CI_Address_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// deliveryPoint property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("deliveryPoint")]
+        public List<CharacterString_PropertyType> DeliveryPoint {
+            get {
+                return deliveryPointField;
+            } 
+            set {
+                deliveryPointField = value;
+                NotifyPropertyChanged("DeliveryPoint");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DeliveryPoint has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DeliveryPointSpecified
+         {
+             get {
+             if(deliveryPointField!=null)
+                 return deliveryPointField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CharacterString_PropertyType> deliveryPointField; 
+
+        /// <summary>
+        /// city property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("city")]
+        public CharacterString_PropertyType City {
+            get {
+                return cityField;
+            } 
+            set {
+                cityField = value;
+                NotifyPropertyChanged("City");
+            }
+        }
+
+        private CharacterString_PropertyType cityField; 
+
+        /// <summary>
+        /// administrativeArea property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("administrativeArea")]
+        public CharacterString_PropertyType AdministrativeArea {
+            get {
+                return administrativeAreaField;
+            } 
+            set {
+                administrativeAreaField = value;
+                NotifyPropertyChanged("AdministrativeArea");
+            }
+        }
+
+        private CharacterString_PropertyType administrativeAreaField; 
+
+        /// <summary>
+        /// postalCode property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("postalCode")]
+        public CharacterString_PropertyType PostalCode {
+            get {
+                return postalCodeField;
+            } 
+            set {
+                postalCodeField = value;
+                NotifyPropertyChanged("PostalCode");
+            }
+        }
+
+        private CharacterString_PropertyType postalCodeField; 
+
+        /// <summary>
+        /// country property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("country")]
+        public CharacterString_PropertyType Country {
+            get {
+                return countryField;
+            } 
+            set {
+                countryField = value;
+                NotifyPropertyChanged("Country");
+            }
+        }
+
+        private CharacterString_PropertyType countryField; 
+
+        /// <summary>
+        /// electronicMailAddress property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("electronicMailAddress")]
+        public List<CharacterString_PropertyType> ElectronicMailAddress {
+            get {
+                return electronicMailAddressField;
+            } 
+            set {
+                electronicMailAddressField = value;
+                NotifyPropertyChanged("ElectronicMailAddress");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if ElectronicMailAddress has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ElectronicMailAddressSpecified
+         {
+             get {
+             if(electronicMailAddressField!=null)
+                 return electronicMailAddressField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CharacterString_PropertyType> electronicMailAddressField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CI_Telephone_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Telephone", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_Telephone_Type xsd type.")]
+    public partial class CI_Telephone_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// voice property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("voice")]
+        public List<CharacterString_PropertyType> Voice {
+            get {
+                return voiceField;
+            } 
+            set {
+                voiceField = value;
+                NotifyPropertyChanged("Voice");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Voice has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool VoiceSpecified
+         {
+             get {
+             if(voiceField!=null)
+                 return voiceField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CharacterString_PropertyType> voiceField; 
+
+        /// <summary>
+        /// facsimile property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("facsimile")]
+        public List<CharacterString_PropertyType> Facsimile {
+            get {
+                return facsimileField;
+            } 
+            set {
+                facsimileField = value;
+                NotifyPropertyChanged("Facsimile");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Facsimile has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool FacsimileSpecified
+         {
+             get {
+             if(facsimileField!=null)
+                 return facsimileField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CharacterString_PropertyType> facsimileField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CI_Contact_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Contact", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_Contact_Type xsd type.")]
+    public partial class CI_Contact_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// phone property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Telephone_PropertyType")]
+		[XmlElement("phone")]
+        public CI_Telephone_PropertyType Phone {
+            get {
+                return phoneField;
+            } 
+            set {
+                phoneField = value;
+                NotifyPropertyChanged("Phone");
+            }
+        }
+
+        private CI_Telephone_PropertyType phoneField; 
+
+        /// <summary>
+        /// address property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Address_PropertyType")]
+		[XmlElement("address")]
+        public CI_Address_PropertyType Address {
+            get {
+                return addressField;
+            } 
+            set {
+                addressField = value;
+                NotifyPropertyChanged("Address");
+            }
+        }
+
+        private CI_Address_PropertyType addressField; 
+
+        /// <summary>
+        /// onlineResource property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_OnlineResource_PropertyType")]
+		[XmlElement("onlineResource")]
+        public CI_OnlineResource_PropertyType OnlineResource {
+            get {
+                return onlineResourceField;
+            } 
+            set {
+                onlineResourceField = value;
+                NotifyPropertyChanged("OnlineResource");
+            }
+        }
+
+        private CI_OnlineResource_PropertyType onlineResourceField; 
+
+        /// <summary>
+        /// hoursOfService property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("hoursOfService")]
+        public CharacterString_PropertyType HoursOfService {
+            get {
+                return hoursOfServiceField;
+            } 
+            set {
+                hoursOfServiceField = value;
+                NotifyPropertyChanged("HoursOfService");
+            }
+        }
+
+        private CharacterString_PropertyType hoursOfServiceField; 
+
+        /// <summary>
+        /// contactInstructions property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("contactInstructions")]
+        public CharacterString_PropertyType ContactInstructions {
+            get {
+                return contactInstructionsField;
+            } 
+            set {
+                contactInstructionsField = value;
+                NotifyPropertyChanged("ContactInstructions");
+            }
+        }
+
+        private CharacterString_PropertyType contactInstructionsField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_Telephone_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_Telephone_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_Telephone_PropertyType xsd type.")]
+    public partial class CI_Telephone_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_Telephone property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_Telephone")]
+        public CI_Telephone_Type CI_Telephone {
+            get {
+                return CI_TelephoneField;
+            } 
+            set {
+                CI_TelephoneField = value;
+                NotifyPropertyChanged("CI_Telephone");
+            }
+        }
+
+        private CI_Telephone_Type CI_TelephoneField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_Address_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_Address_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_Address_PropertyType xsd type.")]
+    public partial class CI_Address_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_Address property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_Address")]
+        public CI_Address_Type CI_Address {
+            get {
+                return CI_AddressField;
+            } 
+            set {
+                CI_AddressField = value;
+                NotifyPropertyChanged("CI_Address");
+            }
+        }
+
+        private CI_Address_Type CI_AddressField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_OnlineResource_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_OnlineResource_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_OnlineResource_PropertyType xsd type.")]
+    public partial class CI_OnlineResource_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_OnlineResource property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_OnlineResource")]
+        public CI_OnlineResource_Type CI_OnlineResource {
+            get {
+                return CI_OnlineResourceField;
+            } 
+            set {
+                CI_OnlineResourceField = value;
+                NotifyPropertyChanged("CI_OnlineResource");
+            }
+        }
+
+        private CI_OnlineResource_Type CI_OnlineResourceField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the CI_ResponsibleParty_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_ResponsibleParty", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_ResponsibleParty_Type xsd type.")]
+    public partial class CI_ResponsibleParty_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// individualName property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("individualName")]
+        public CharacterString_PropertyType IndividualName {
+            get {
+                return individualNameField;
+            } 
+            set {
+                individualNameField = value;
+                NotifyPropertyChanged("IndividualName");
+            }
+        }
+
+        private CharacterString_PropertyType individualNameField; 
+
+        /// <summary>
+        /// organisationName property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("organisationName")]
+        public CharacterString_PropertyType OrganisationName {
+            get {
+                return organisationNameField;
+            } 
+            set {
+                organisationNameField = value;
+                NotifyPropertyChanged("OrganisationName");
+            }
+        }
+
+        private CharacterString_PropertyType organisationNameField; 
+
+        /// <summary>
+        /// positionName property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("positionName")]
+        public CharacterString_PropertyType PositionName {
+            get {
+                return positionNameField;
+            } 
+            set {
+                positionNameField = value;
+                NotifyPropertyChanged("PositionName");
+            }
+        }
+
+        private CharacterString_PropertyType positionNameField; 
+
+        /// <summary>
+        /// contactInfo property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Contact_PropertyType")]
+		[XmlElement("contactInfo")]
+        public CI_Contact_PropertyType ContactInfo {
+            get {
+                return contactInfoField;
+            } 
+            set {
+                contactInfoField = value;
+                NotifyPropertyChanged("ContactInfo");
+            }
+        }
+
+        private CI_Contact_PropertyType contactInfoField; 
+
+        /// <summary>
+        /// role property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_RoleCode_PropertyType")]
+		[XmlElement("role")]
+        public CI_RoleCode_PropertyType Role {
+            get {
+                return roleField;
+            } 
+            set {
+                roleField = value;
+                NotifyPropertyChanged("Role");
+            }
+        }
+
+        private CI_RoleCode_PropertyType roleField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_Contact_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_Contact_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_Contact_PropertyType xsd type.")]
+    public partial class CI_Contact_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_Contact property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_Contact")]
+        public CI_Contact_Type CI_Contact {
+            get {
+                return CI_ContactField;
+            } 
+            set {
+                CI_ContactField = value;
+                NotifyPropertyChanged("CI_Contact");
+            }
+        }
+
+        private CI_Contact_Type CI_ContactField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_RoleCode_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_RoleCode_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_RoleCode_PropertyType xsd type.")]
+    public partial class CI_RoleCode_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_RoleCode property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_RoleCode")]
+        public CodeListValue_Type CI_RoleCode {
+            get {
+                return CI_RoleCodeField;
+            } 
+            set {
+                CI_RoleCodeField = value;
+                NotifyPropertyChanged("CI_RoleCode");
+            }
+        }
+
+        private CodeListValue_Type CI_RoleCodeField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the CI_Date_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Date", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_Date_Type xsd type.")]
+    public partial class CI_Date_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// date property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "Date_PropertyType")]
+		[XmlElement("date")]
+        public Date_PropertyType Date {
+            get {
+                return dateField;
+            } 
+            set {
+                dateField = value;
+                NotifyPropertyChanged("Date");
+            }
+        }
+
+        private Date_PropertyType dateField; 
+
+        /// <summary>
+        /// dateType property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_DateTypeCode_PropertyType")]
+		[XmlElement("dateType")]
+        public CI_DateTypeCode_PropertyType DateType {
+            get {
+                return dateTypeField;
+            } 
+            set {
+                dateTypeField = value;
+                NotifyPropertyChanged("DateType");
+            }
+        }
+
+        private CI_DateTypeCode_PropertyType dateTypeField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the Date_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Date_PropertyType", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the Date_PropertyType xsd type.")]
+    public partial class Date_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Date property
+        /// </summary>
+        [XmlElement("Date")]
+        public string Date {
+            get {
+                return DateField;
+            } 
+            set {
+                DateField = value;
+                DateSpecified = (value!=null);
+                NotifyPropertyChanged("Date");
+            }
+        }
+
+        private string DateField; 
+        private bool dateSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if Date has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool DateSpecified
+        {
+            get {
+                return dateSpecified;
+            }
+            set {
+                dateSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// DateTime property
+        /// </summary>
+        [XmlElement("DateTime")]
+        public DateTime? DateTime {
+            get {
+                return DateTimeField;
+            } 
+            set {
+                DateTimeField = value;
+                DateTimeSpecified = (value!=null);
+                NotifyPropertyChanged("DateTime");
+            }
+        }
+
+        private DateTime? DateTimeField; 
+        private bool dateTimeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if DateTime has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool DateTimeSpecified
+        {
+            get {
+                return dateTimeSpecified;
+            }
+            set {
+                dateTimeSpecified= value;
+            }
+        }
+
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_DateTypeCode_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_DateTypeCode_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_DateTypeCode_PropertyType xsd type.")]
+    public partial class CI_DateTypeCode_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_DateTypeCode property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_DateTypeCode")]
+        public CodeListValue_Type CI_DateTypeCode {
+            get {
+                return CI_DateTypeCodeField;
+            } 
+            set {
+                CI_DateTypeCodeField = value;
+                NotifyPropertyChanged("CI_DateTypeCode");
+            }
+        }
+
+        private CodeListValue_Type CI_DateTypeCodeField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the CI_Citation_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Citation", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the CI_Citation_Type xsd type.")]
+    public partial class CI_Citation_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// title property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("title")]
+        public CharacterString_PropertyType Title {
+            get {
+                return titleField;
+            } 
+            set {
+                titleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private CharacterString_PropertyType titleField; 
+
+        /// <summary>
+        /// alternateTitle property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("alternateTitle")]
+        public List<CharacterString_PropertyType> AlternateTitle {
+            get {
+                return alternateTitleField;
+            } 
+            set {
+                alternateTitleField = value;
+                NotifyPropertyChanged("AlternateTitle");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if AlternateTitle has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool AlternateTitleSpecified
+         {
+             get {
+             if(alternateTitleField!=null)
+                 return alternateTitleField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CharacterString_PropertyType> alternateTitleField; 
+
+        /// <summary>
+        /// date property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Date_PropertyType")]
+		[XmlElement("date")]
+        public List<CI_Date_PropertyType> Date {
+            get {
+                return dateField;
+            } 
+            set {
+                dateField = value;
+                NotifyPropertyChanged("Date");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Date has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DateSpecified
+         {
+             get {
+             if(dateField!=null)
+                 return dateField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CI_Date_PropertyType> dateField; 
+
+        /// <summary>
+        /// edition property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("edition")]
+        public CharacterString_PropertyType Edition {
+            get {
+                return editionField;
+            } 
+            set {
+                editionField = value;
+                NotifyPropertyChanged("Edition");
+            }
+        }
+
+        private CharacterString_PropertyType editionField; 
+
+        /// <summary>
+        /// editionDate property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "Date_PropertyType")]
+		[XmlElement("editionDate")]
+        public Date_PropertyType EditionDate {
+            get {
+                return editionDateField;
+            } 
+            set {
+                editionDateField = value;
+                NotifyPropertyChanged("EditionDate");
+            }
+        }
+
+        private Date_PropertyType editionDateField; 
+
+        /// <summary>
+        /// identifier property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "MD_Identifier_PropertyType")]
+		[XmlElement("identifier")]
+        public List<MD_Identifier_PropertyType> Identifier {
+            get {
+                return identifierField;
+            } 
+            set {
+                identifierField = value;
+                NotifyPropertyChanged("Identifier");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Identifier has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool IdentifierSpecified
+         {
+             get {
+             if(identifierField!=null)
+                 return identifierField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<MD_Identifier_PropertyType> identifierField; 
+
+        /// <summary>
+        /// citedResponsibleParty property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_ResponsibleParty_PropertyType")]
+		[XmlElement("citedResponsibleParty")]
+        public List<CI_ResponsibleParty_PropertyType> CitedResponsibleParty {
+            get {
+                return citedResponsiblePartyField;
+            } 
+            set {
+                citedResponsiblePartyField = value;
+                NotifyPropertyChanged("CitedResponsibleParty");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if CitedResponsibleParty has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool CitedResponsiblePartySpecified
+         {
+             get {
+             if(citedResponsiblePartyField!=null)
+                 return citedResponsiblePartyField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CI_ResponsibleParty_PropertyType> citedResponsiblePartyField; 
+
+        /// <summary>
+        /// presentationForm property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_PresentationFormCode_PropertyType")]
+		[XmlElement("presentationForm")]
+        public List<CI_PresentationFormCode_PropertyType> PresentationForm {
+            get {
+                return presentationFormField;
+            } 
+            set {
+                presentationFormField = value;
+                NotifyPropertyChanged("PresentationForm");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if PresentationForm has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool PresentationFormSpecified
+         {
+             get {
+             if(presentationFormField!=null)
+                 return presentationFormField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CI_PresentationFormCode_PropertyType> presentationFormField; 
+
+        /// <summary>
+        /// series property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Series_PropertyType")]
+		[XmlElement("series")]
+        public CI_Series_PropertyType Series {
+            get {
+                return seriesField;
+            } 
+            set {
+                seriesField = value;
+                NotifyPropertyChanged("Series");
+            }
+        }
+
+        private CI_Series_PropertyType seriesField; 
+
+        /// <summary>
+        /// otherCitationDetails property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("otherCitationDetails")]
+        public CharacterString_PropertyType OtherCitationDetails {
+            get {
+                return otherCitationDetailsField;
+            } 
+            set {
+                otherCitationDetailsField = value;
+                NotifyPropertyChanged("OtherCitationDetails");
+            }
+        }
+
+        private CharacterString_PropertyType otherCitationDetailsField; 
+
+        /// <summary>
+        /// collectiveTitle property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("collectiveTitle")]
+        public CharacterString_PropertyType CollectiveTitle {
+            get {
+                return collectiveTitleField;
+            } 
+            set {
+                collectiveTitleField = value;
+                NotifyPropertyChanged("CollectiveTitle");
+            }
+        }
+
+        private CharacterString_PropertyType collectiveTitleField; 
+
+        /// <summary>
+        /// ISBN property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("ISBN")]
+        public CharacterString_PropertyType ISBN {
+            get {
+                return ISBNField;
+            } 
+            set {
+                ISBNField = value;
+                NotifyPropertyChanged("ISBN");
+            }
+        }
+
+        private CharacterString_PropertyType ISBNField; 
+
+        /// <summary>
+        /// ISSN property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("ISSN")]
+        public CharacterString_PropertyType ISSN {
+            get {
+                return ISSNField;
+            } 
+            set {
+                ISSNField = value;
+                NotifyPropertyChanged("ISSN");
+            }
+        }
+
+        private CharacterString_PropertyType ISSNField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_Date_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_Date_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_Date_PropertyType xsd type.")]
+    public partial class CI_Date_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_Date property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_Date")]
+        public CI_Date_Type CI_Date {
+            get {
+                return CI_DateField;
+            } 
+            set {
+                CI_DateField = value;
+                NotifyPropertyChanged("CI_Date");
+            }
+        }
+
+        private CI_Date_Type CI_DateField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MD_Identifier_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MD_Identifier_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the MD_Identifier_PropertyType xsd type.")]
+    public partial class MD_Identifier_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MD_Identifier property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("MD_Identifier")]
+        public MD_Identifier_Type MD_Identifier {
+            get {
+                return MD_IdentifierField;
+            } 
+            set {
+                MD_IdentifierField = value;
+                NotifyPropertyChanged("MD_Identifier");
+            }
+        }
+
+        private MD_Identifier_Type MD_IdentifierField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the MD_Identifier_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("MD_Identifier", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the MD_Identifier_Type xsd type.")]
+    public partial class MD_Identifier_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// authority property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Citation_PropertyType")]
+		[XmlElement("authority")]
+        public CI_Citation_PropertyType Authority {
+            get {
+                return authorityField;
+            } 
+            set {
+                authorityField = value;
+                NotifyPropertyChanged("Authority");
+            }
+        }
+
+        private CI_Citation_PropertyType authorityField; 
+
+        /// <summary>
+        /// code property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("code")]
+        public CharacterString_PropertyType Code {
+            get {
+                return codeField;
+            } 
+            set {
+                codeField = value;
+                NotifyPropertyChanged("Code");
+            }
+        }
+
+        private CharacterString_PropertyType codeField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_Citation_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_Citation_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_Citation_PropertyType xsd type.")]
+    public partial class CI_Citation_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_Citation property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_Citation")]
+        public CI_Citation_Type CI_Citation {
+            get {
+                return CI_CitationField;
+            } 
+            set {
+                CI_CitationField = value;
+                NotifyPropertyChanged("CI_Citation");
+            }
+        }
+
+        private CI_Citation_Type CI_CitationField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_ResponsibleParty_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_ResponsibleParty_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_ResponsibleParty_PropertyType xsd type.")]
+    public partial class CI_ResponsibleParty_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_ResponsibleParty property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_ResponsibleParty")]
+        public CI_ResponsibleParty_Type CI_ResponsibleParty {
+            get {
+                return CI_ResponsiblePartyField;
+            } 
+            set {
+                CI_ResponsiblePartyField = value;
+                NotifyPropertyChanged("CI_ResponsibleParty");
+            }
+        }
+
+        private CI_ResponsibleParty_Type CI_ResponsiblePartyField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_PresentationFormCode_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_PresentationFormCode_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_PresentationFormCode_PropertyType xsd type.")]
+    public partial class CI_PresentationFormCode_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_PresentationFormCode property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_PresentationFormCode")]
+        public CodeListValue_Type CI_PresentationFormCode {
+            get {
+                return CI_PresentationFormCodeField;
+            } 
+            set {
+                CI_PresentationFormCodeField = value;
+                NotifyPropertyChanged("CI_PresentationFormCode");
+            }
+        }
+
+        private CodeListValue_Type CI_PresentationFormCodeField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CI_Series_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CI_Series_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the CI_Series_PropertyType xsd type.")]
+    public partial class CI_Series_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CI_Series property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CI_Series")]
+        public CI_Series_Type CI_Series {
+            get {
+                return CI_SeriesField;
+            } 
+            set {
+                CI_SeriesField = value;
+                NotifyPropertyChanged("CI_Series");
+            }
+        }
+
+        private CI_Series_Type CI_SeriesField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractDQ_Element_Type xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDQ_Element", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the AbstractDQ_Element_Type xsd type.")]
+    public abstract partial class AbstractDQ_Element_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// nameOfMeasure property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("nameOfMeasure")]
+        public List<CharacterString_PropertyType> NameOfMeasure {
+            get {
+                return nameOfMeasureField;
+            } 
+            set {
+                nameOfMeasureField = value;
+                NotifyPropertyChanged("NameOfMeasure");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if NameOfMeasure has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool NameOfMeasureSpecified
+         {
+             get {
+             if(nameOfMeasureField!=null)
+                 return nameOfMeasureField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CharacterString_PropertyType> nameOfMeasureField; 
+
+        /// <summary>
+        /// measureIdentification property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "MD_Identifier_PropertyType")]
+		[XmlElement("measureIdentification")]
+        public MD_Identifier_PropertyType MeasureIdentification {
+            get {
+                return measureIdentificationField;
+            } 
+            set {
+                measureIdentificationField = value;
+                NotifyPropertyChanged("MeasureIdentification");
+            }
+        }
+
+        private MD_Identifier_PropertyType measureIdentificationField; 
+
+        /// <summary>
+        /// measureDescription property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("measureDescription")]
+        public CharacterString_PropertyType MeasureDescription {
+            get {
+                return measureDescriptionField;
+            } 
+            set {
+                measureDescriptionField = value;
+                NotifyPropertyChanged("MeasureDescription");
+            }
+        }
+
+        private CharacterString_PropertyType measureDescriptionField; 
+
+        /// <summary>
+        /// evaluationMethodType property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "DQ_EvaluationMethodTypeCode_PropertyType")]
+		[XmlElement("evaluationMethodType")]
+        public DQ_EvaluationMethodTypeCode_PropertyType EvaluationMethodType {
+            get {
+                return evaluationMethodTypeField;
+            } 
+            set {
+                evaluationMethodTypeField = value;
+                NotifyPropertyChanged("EvaluationMethodType");
+            }
+        }
+
+        private DQ_EvaluationMethodTypeCode_PropertyType evaluationMethodTypeField; 
+
+        /// <summary>
+        /// evaluationMethodDescription property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CharacterString_PropertyType")]
+		[XmlElement("evaluationMethodDescription")]
+        public CharacterString_PropertyType EvaluationMethodDescription {
+            get {
+                return evaluationMethodDescriptionField;
+            } 
+            set {
+                evaluationMethodDescriptionField = value;
+                NotifyPropertyChanged("EvaluationMethodDescription");
+            }
+        }
+
+        private CharacterString_PropertyType evaluationMethodDescriptionField; 
+
+        /// <summary>
+        /// evaluationProcedure property
+        /// </summary>
+		[ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "CI_Citation_PropertyType")]
+		[XmlElement("evaluationProcedure")]
+        public CI_Citation_PropertyType EvaluationProcedure {
+            get {
+                return evaluationProcedureField;
+            } 
+            set {
+                evaluationProcedureField = value;
+                NotifyPropertyChanged("EvaluationProcedure");
+            }
+        }
+
+        private CI_Citation_PropertyType evaluationProcedureField; 
+
+        /// <summary>
+        /// dateTime property
+        /// </summary>
+		[RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "DateTime_PropertyType")]
+		[XmlElement("dateTime")]
+        public List<DateTime_PropertyType> DateTime {
+            get {
+                return dateTimeField;
+            } 
+            set {
+                dateTimeField = value;
+                NotifyPropertyChanged("DateTime");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DateTime has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DateTimeSpecified
+         {
+             get {
+             if(dateTimeField!=null)
+                 return dateTimeField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DateTime_PropertyType> dateTimeField; 
+
+        /// <summary>
+        /// result property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "DQ_Result_PropertyType")]
+		[XmlElement("result")]
+        public List<DQ_Result_PropertyType> Result {
+            get {
+                return resultField;
+            } 
+            set {
+                resultField = value;
+                NotifyPropertyChanged("Result");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Result has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ResultSpecified
+         {
+             get {
+             if(resultField!=null)
+                 return resultField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DQ_Result_PropertyType> resultField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DQ_EvaluationMethodTypeCode_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DQ_EvaluationMethodTypeCode_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the DQ_EvaluationMethodTypeCode_PropertyType xsd type.")]
+    public partial class DQ_EvaluationMethodTypeCode_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// DQ_EvaluationMethodTypeCode property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("DQ_EvaluationMethodTypeCode")]
+        public CodeListValue_Type DQ_EvaluationMethodTypeCode {
+            get {
+                return DQ_EvaluationMethodTypeCodeField;
+            } 
+            set {
+                DQ_EvaluationMethodTypeCodeField = value;
+                NotifyPropertyChanged("DQ_EvaluationMethodTypeCode");
+            }
+        }
+
+        private CodeListValue_Type DQ_EvaluationMethodTypeCodeField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DateTime_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DateTime_PropertyType", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the DateTime_PropertyType xsd type.")]
+    public partial class DateTime_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// DateTime property
+        /// </summary>
+		
+		[XmlElement("DateTime")]
+        public DateTime? DateTime {
+            get {
+                return DateTimeField;
+            } 
+            set {
+                DateTimeField = value;
+                NotifyPropertyChanged("DateTime");
+            }
+        }
+
+        private DateTime? DateTimeField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DQ_Result_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DQ_Result_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the DQ_Result_PropertyType xsd type.")]
+    public partial class DQ_Result_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractDQ_Result property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractDQ_Result")]
+        public AbstractDQ_Result_Type AbstractDQ_Result {
+            get {
+                return AbstractDQ_ResultField;
+            } 
+            set {
+                AbstractDQ_ResultField = value;
+                NotifyPropertyChanged("AbstractDQ_Result");
+            }
+        }
+
+        private AbstractDQ_Result_Type AbstractDQ_ResultField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractDQ_PositionalAccuracy_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDQ_PositionalAccuracy", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the AbstractDQ_PositionalAccuracy_Type xsd type.")]
+    public abstract partial class AbstractDQ_PositionalAccuracy_Type : AbstractDQ_Element_Type, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the EX_VerticalExtent_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("EX_VerticalExtent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the EX_VerticalExtent_Type xsd type.")]
+    public partial class EX_VerticalExtent_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// minimumValue property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "Real_PropertyType")]
+		[XmlElement("minimumValue")]
+        public Real_PropertyType MinimumValue {
+            get {
+                return minimumValueField;
+            } 
+            set {
+                minimumValueField = value;
+                NotifyPropertyChanged("MinimumValue");
+            }
+        }
+
+        private Real_PropertyType minimumValueField; 
+
+        /// <summary>
+        /// maximumValue property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "Real_PropertyType")]
+		[XmlElement("maximumValue")]
+        public Real_PropertyType MaximumValue {
+            get {
+                return maximumValueField;
+            } 
+            set {
+                maximumValueField = value;
+                NotifyPropertyChanged("MaximumValue");
+            }
+        }
+
+        private Real_PropertyType maximumValueField; 
+
+        /// <summary>
+        /// verticalCRS property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "SC_CRS_PropertyType")]
+		[XmlElement("verticalCRS")]
+        public SC_CRS_PropertyType VerticalCRS {
+            get {
+                return verticalCRSField;
+            } 
+            set {
+                verticalCRSField = value;
+                NotifyPropertyChanged("VerticalCRS");
+            }
+        }
+
+        private SC_CRS_PropertyType verticalCRSField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the Real_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Real_PropertyType", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the Real_PropertyType xsd type.")]
+    public partial class Real_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Real property
+        /// </summary>
+		
+		[XmlElement("Real")]
+        public double? Real {
+            get {
+                return RealField;
+            } 
+            set {
+                RealField = value;
+                NotifyPropertyChanged("Real");
+            }
+        }
+
+        private double? RealField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the SC_CRS_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="SC_CRS_PropertyType", Namespace="http://www.isotc211.org/2005/gsr")]
+	[Description("This class represents the SC_CRS_PropertyType xsd type.")]
+    public partial class SC_CRS_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractCRS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractCRS", Namespace="http://www.opengis.net/gml/3.2")]
+        public AbstractCRSType AbstractCRS {
+            get {
+                return AbstractCRSField;
+            } 
+            set {
+                AbstractCRSField = value;
+                NotifyPropertyChanged("AbstractCRS");
+            }
+        }
+
+        private AbstractCRSType AbstractCRSField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractCRSType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractCRSType xsd type.")]
+    public abstract partial class AbstractCRSType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// domainOfValidity property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("domainOfValidity")]
+        public List<DomainOfValidity> DomainOfValidity {
+            get {
+                return domainOfValidityField;
+            } 
+            set {
+                domainOfValidityField = value;
+                NotifyPropertyChanged("DomainOfValidity");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DomainOfValidity has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DomainOfValiditySpecified
+         {
+             get {
+             if(domainOfValidityField!=null)
+                 return domainOfValidityField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DomainOfValidity> domainOfValidityField; 
+
+        /// <summary>
+        /// scope property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("scope")]
+        public List<string> Scope {
+            get {
+                return scopeField;
+            } 
+            set {
+                scopeField = value;
+                NotifyPropertyChanged("Scope");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Scope has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+             get {
+             if(scopeField!=null)
+                 return scopeField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<string> scopeField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the AbstractGeneralDerivedCRSType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGeneralDerivedCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractGeneralDerivedCRSType xsd type.")]
+    public abstract partial class AbstractGeneralDerivedCRSType : AbstractCRSType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// conversion property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("conversion")]
+        public GeneralConversionPropertyType Conversion {
+            get {
+                return conversionField;
+            } 
+            set {
+                conversionField = value;
+                NotifyPropertyChanged("Conversion");
+            }
+        }
+
+        private GeneralConversionPropertyType conversionField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the GeneralConversionPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("conversion", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the GeneralConversionPropertyType xsd type.")]
+    public partial class GeneralConversionPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractGeneralConversion property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractGeneralConversion")]
+        public AbstractGeneralConversionType AbstractGeneralConversion {
+            get {
+                return AbstractGeneralConversionField;
+            } 
+            set {
+                AbstractGeneralConversionField = value;
+                NotifyPropertyChanged("AbstractGeneralConversion");
+            }
+        }
+
+        private AbstractGeneralConversionType AbstractGeneralConversionField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the AbstractGeneralConversionType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGeneralConversion", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractGeneralConversionType xsd type.")]
+    public abstract partial class AbstractGeneralConversionType : AbstractCoordinateOperationType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the ProjectedCRSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("ProjectedCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the ProjectedCRSType xsd type.")]
+    public partial class ProjectedCRSType : AbstractGeneralDerivedCRSType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Item property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("baseGeodeticCRS")]
+        public GeodeticCRSPropertyType Item {
+            get {
+                return ItemField;
+            } 
+            set {
+                ItemField = value;
+                NotifyPropertyChanged("Item");
+            }
+        }
+
+        private GeodeticCRSPropertyType ItemField; 
+
+        /// <summary>
+        /// cartesianCS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("cartesianCS")]
+        public CartesianCSPropertyType CartesianCS {
+            get {
+                return cartesianCSField;
+            } 
+            set {
+                cartesianCSField = value;
+                NotifyPropertyChanged("CartesianCS");
+            }
+        }
+
+        private CartesianCSPropertyType cartesianCSField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the GeodeticCRSPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("baseGeodeticCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the GeodeticCRSPropertyType xsd type.")]
+    public partial class GeodeticCRSPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// GeodeticCRS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("GeodeticCRS")]
+        public GeodeticCRSType GeodeticCRS {
+            get {
+                return GeodeticCRSField;
+            } 
+            set {
+                GeodeticCRSField = value;
+                NotifyPropertyChanged("GeodeticCRS");
+            }
+        }
+
+        private GeodeticCRSType GeodeticCRSField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the GeodeticCRSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeodeticCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the GeodeticCRSType xsd type.")]
+    public partial class GeodeticCRSType : AbstractCRSType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// cartesianCS property
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("cartesianCS")]
+        public CartesianCSPropertyType CartesianCS {
+            get {
+                return cartesianCSField;
+            } 
+            set {
+                cartesianCSField = value;
+                CartesianCSSpecified = (value!=null);
+                NotifyPropertyChanged("CartesianCS");
+            }
+        }
+
+        private CartesianCSPropertyType cartesianCSField; 
+        private bool cartesianCSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if CartesianCS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool CartesianCSSpecified
+        {
+            get {
+                return cartesianCSSpecified;
+            }
+            set {
+                cartesianCSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// ellipsoidalCS property
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("ellipsoidalCS")]
+        public EllipsoidalCSPropertyType EllipsoidalCS {
+            get {
+                return ellipsoidalCSField;
+            } 
+            set {
+                ellipsoidalCSField = value;
+                EllipsoidalCSSpecified = (value!=null);
+                NotifyPropertyChanged("EllipsoidalCS");
+            }
+        }
+
+        private EllipsoidalCSPropertyType ellipsoidalCSField; 
+        private bool ellipsoidalCSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if EllipsoidalCS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool EllipsoidalCSSpecified
+        {
+            get {
+                return ellipsoidalCSSpecified;
+            }
+            set {
+                ellipsoidalCSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// sphericalCS property
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("sphericalCS")]
+        public SphericalCSPropertyType SphericalCS {
+            get {
+                return sphericalCSField;
+            } 
+            set {
+                sphericalCSField = value;
+                SphericalCSSpecified = (value!=null);
+                NotifyPropertyChanged("SphericalCS");
+            }
+        }
+
+        private SphericalCSPropertyType sphericalCSField; 
+        private bool sphericalCSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if SphericalCS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool SphericalCSSpecified
+        {
+            get {
+                return sphericalCSSpecified;
+            }
+            set {
+                sphericalCSSpecified= value;
+            }
+        }
+
+
+        /// <summary>
+        /// geodeticDatum property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("geodeticDatum")]
+        public GeodeticDatumPropertyType GeodeticDatum {
+            get {
+                return geodeticDatumField;
+            } 
+            set {
+                geodeticDatumField = value;
+                NotifyPropertyChanged("GeodeticDatum");
+            }
+        }
+
+        private GeodeticDatumPropertyType geodeticDatumField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CartesianCSPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("cartesianCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CartesianCSPropertyType xsd type.")]
+    public partial class CartesianCSPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// CartesianCS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CartesianCS")]
+        public CartesianCSType CartesianCS {
+            get {
+                return CartesianCSField;
+            } 
+            set {
+                CartesianCSField = value;
+                NotifyPropertyChanged("CartesianCS");
+            }
+        }
+
+        private CartesianCSType CartesianCSField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the CartesianCSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("CartesianCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CartesianCSType xsd type.")]
+    public partial class CartesianCSType : AbstractCoordinateSystemType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the EllipsoidalCSPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("ellipsoidalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the EllipsoidalCSPropertyType xsd type.")]
+    public partial class EllipsoidalCSPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// EllipsoidalCS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("EllipsoidalCS")]
+        public EllipsoidalCSType EllipsoidalCS {
+            get {
+                return EllipsoidalCSField;
+            } 
+            set {
+                EllipsoidalCSField = value;
+                NotifyPropertyChanged("EllipsoidalCS");
+            }
+        }
+
+        private EllipsoidalCSType EllipsoidalCSField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the EllipsoidalCSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("EllipsoidalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the EllipsoidalCSType xsd type.")]
+    public partial class EllipsoidalCSType : AbstractCoordinateSystemType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the SphericalCSPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("sphericalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the SphericalCSPropertyType xsd type.")]
+    public partial class SphericalCSPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// SphericalCS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("SphericalCS")]
+        public SphericalCSType SphericalCS {
+            get {
+                return SphericalCSField;
+            } 
+            set {
+                SphericalCSField = value;
+                NotifyPropertyChanged("SphericalCS");
+            }
+        }
+
+        private SphericalCSType SphericalCSField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the SphericalCSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("SphericalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the SphericalCSType xsd type.")]
+    public partial class SphericalCSType : AbstractCoordinateSystemType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the GeodeticDatumPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("geodeticDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the GeodeticDatumPropertyType xsd type.")]
+    public partial class GeodeticDatumPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// GeodeticDatum property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("GeodeticDatum")]
+        public GeodeticDatumType GeodeticDatum {
+            get {
+                return GeodeticDatumField;
+            } 
+            set {
+                GeodeticDatumField = value;
+                NotifyPropertyChanged("GeodeticDatum");
+            }
+        }
+
+        private GeodeticDatumType GeodeticDatumField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the GeodeticDatumType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeodeticDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the GeodeticDatumType xsd type.")]
+    public partial class GeodeticDatumType : AbstractDatumType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// primeMeridian property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("primeMeridian")]
+        public PrimeMeridianPropertyType PrimeMeridian {
+            get {
+                return primeMeridianField;
+            } 
+            set {
+                primeMeridianField = value;
+                NotifyPropertyChanged("PrimeMeridian");
+            }
+        }
+
+        private PrimeMeridianPropertyType primeMeridianField; 
+
+        /// <summary>
+        /// ellipsoid property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("ellipsoid")]
+        public EllipsoidPropertyType Ellipsoid {
+            get {
+                return ellipsoidField;
+            } 
+            set {
+                ellipsoidField = value;
+                NotifyPropertyChanged("Ellipsoid");
+            }
+        }
+
+        private EllipsoidPropertyType ellipsoidField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the PrimeMeridianPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("primeMeridian", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the PrimeMeridianPropertyType xsd type.")]
+    public partial class PrimeMeridianPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// PrimeMeridian property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("PrimeMeridian")]
+        public PrimeMeridianType PrimeMeridian {
+            get {
+                return PrimeMeridianField;
+            } 
+            set {
+                PrimeMeridianField = value;
+                NotifyPropertyChanged("PrimeMeridian");
+            }
+        }
+
+        private PrimeMeridianType PrimeMeridianField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the PrimeMeridianType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("PrimeMeridian", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the PrimeMeridianType xsd type.")]
+    public partial class PrimeMeridianType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// greenwichLongitude property
+        /// </summary>
+		
+		[XmlElement("greenwichLongitude")]
+        public AngleType GreenwichLongitude {
+            get {
+                return greenwichLongitudeField;
+            } 
+            set {
+                greenwichLongitudeField = value;
+                NotifyPropertyChanged("GreenwichLongitude");
+            }
+        }
+
+        private AngleType greenwichLongitudeField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the AngleType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("greenwichLongitude", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AngleType xsd type.")]
+    public partial class AngleType : MeasureType, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the AngleType class.
+        /// </summary>
+        public AngleType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AngleType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public AngleType(double value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the MeasureType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("semiMajorAxis", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the MeasureType xsd type.")]
+    public partial class MeasureType : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MeasureType class.
+        /// </summary>
+        public MeasureType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MeasureType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public MeasureType(double value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the LengthType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LengthType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the LengthType xsd type.")]
+    public partial class LengthType : MeasureType, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the LengthType class.
+        /// </summary>
+        public LengthType() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LengthType class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public LengthType(double value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the EllipsoidPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("ellipsoid", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the EllipsoidPropertyType xsd type.")]
+    public partial class EllipsoidPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Ellipsoid property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Ellipsoid")]
+        public EllipsoidType Ellipsoid {
+            get {
+                return EllipsoidField;
+            } 
+            set {
+                EllipsoidField = value;
+                NotifyPropertyChanged("Ellipsoid");
+            }
+        }
+
+        private EllipsoidType EllipsoidField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the EllipsoidType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("Ellipsoid", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the EllipsoidType xsd type.")]
+    public partial class EllipsoidType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// semiMajorAxis property
+        /// </summary>
+		
+		[XmlElement("semiMajorAxis")]
+        public MeasureType SemiMajorAxis {
+            get {
+                return semiMajorAxisField;
+            } 
+            set {
+                semiMajorAxisField = value;
+                NotifyPropertyChanged("SemiMajorAxis");
+            }
+        }
+
+        private MeasureType semiMajorAxisField; 
+
+        /// <summary>
+        /// secondDefiningParameter property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("secondDefiningParameter")]
+        public StandAloneSecondDefParameter SecondDefPara {
+            get {
+                return secondDefiningParameterField;
+            } 
+            set {
+                secondDefiningParameterField = value;
+                NotifyPropertyChanged("SecondDefPara");
+            }
+        }
+
+        private StandAloneSecondDefParameter secondDefiningParameterField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the secondDefiningParameter xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the secondDefiningParameter xsd type.")]
+    public partial class StandAloneSecondDefParameter : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// SecondDefiningParameter property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("SecondDefiningParameter")]
+        public SecondDefiningParameter SecondDefPara {
+            get {
+                return SecondDefiningParameterField;
+            } 
+            set {
+                SecondDefiningParameterField = value;
+                NotifyPropertyChanged("SecondDefPara");
+            }
+        }
+
+        private SecondDefiningParameter SecondDefiningParameterField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the SecondDefiningParameter xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the SecondDefiningParameter xsd type.")]
+    public partial class SecondDefiningParameter : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// inverseFlattening property
+        /// </summary>
+        [XmlElement("inverseFlattening")]
+        public MeasureType InverseFlattening {
+            get {
+                return inverseFlatteningField;
+            } 
+            set {
+                inverseFlatteningField = value;
+                InverseFlatteningSpecified = (value!=null);
+                NotifyPropertyChanged("InverseFlattening");
+            }
+        }
+
+        private MeasureType inverseFlatteningField; 
+        private bool inverseFlatteningSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if InverseFlattening has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool InverseFlatteningSpecified
+        {
+            get {
+                return inverseFlatteningSpecified;
+            }
+            set {
+                inverseFlatteningSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// isSphere property
+        /// </summary>
+        [XmlElement("isSphere")]
+        public bool? IsSphere {
+            get {
+                return isSphereField;
+            } 
+            set {
+                isSphereField = value;
+                IsSphereSpecified = (value!=null);
+                NotifyPropertyChanged("IsSphere");
+            }
+        }
+
+        private bool? isSphereField; 
+        private bool isSphereSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if IsSphere has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool IsSphereSpecified
+        {
+            get {
+                return isSphereSpecified;
+            }
+            set {
+                isSphereSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// semiMinorAxis property
+        /// </summary>
+        [XmlElement("semiMinorAxis")]
+        public LengthType SemiMinorAxis {
+            get {
+                return semiMinorAxisField;
+            } 
+            set {
+                semiMinorAxisField = value;
+                SemiMinorAxisSpecified = (value!=null);
+                NotifyPropertyChanged("SemiMinorAxis");
+            }
+        }
+
+        private LengthType semiMinorAxisField; 
+        private bool semiMinorAxisSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if SemiMinorAxis has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool SemiMinorAxisSpecified
+        {
+            get {
+                return semiMinorAxisSpecified;
+            }
+            set {
+                semiMinorAxisSpecified= value;
+            }
+        }
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the AbstractDatumType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractDatumType xsd type.")]
+    public abstract partial class AbstractDatumType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// domainOfValidity property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("domainOfValidity")]
+        public DomainOfValidity DomainOfValidity {
+            get {
+                return domainOfValidityField;
+            } 
+            set {
+                domainOfValidityField = value;
+                NotifyPropertyChanged("DomainOfValidity");
+            }
+        }
+
+        private DomainOfValidity domainOfValidityField; 
+
+        /// <summary>
+        /// scope property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("scope")]
+        public List<string> Scope {
+            get {
+                return scopeField;
+            } 
+            set {
+                scopeField = value;
+                NotifyPropertyChanged("Scope");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Scope has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+             get {
+             if(scopeField!=null)
+                 return scopeField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<string> scopeField; 
+
+        /// <summary>
+        /// anchorDefinition property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("anchorDefinition")]
+        public CodeType AnchorDefinition {
+            get {
+                return anchorDefinitionField;
+            } 
+            set {
+                anchorDefinitionField = value;
+                NotifyPropertyChanged("AnchorDefinition");
+            }
+        }
+
+        private CodeType anchorDefinitionField; 
+
+        /// <summary>
+        /// realizationEpoch property
+        /// </summary>
+		
+		[XmlElement("realizationEpoch", DataType="date")]
+        public DateTime? RealizationEpoch {
+            get {
+                return realizationEpochField;
+            } 
+            set {
+                realizationEpochField = value;
+                 this.RealizationEpochSpecified = true;
+                NotifyPropertyChanged("RealizationEpoch");
+            }
+        }
+
+        private DateTime? realizationEpochField; 
+
+        /// <summary>
+        /// realizationEpochSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public bool RealizationEpochSpecified {
+            get {
+                return realizationEpochSpecifiedField;
+            } 
+            set {
+                realizationEpochSpecifiedField = value;
+                NotifyPropertyChanged("RealizationEpochSpecified");
+            }
+        }
+
+        private bool realizationEpochSpecifiedField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the VerticalDatumType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the VerticalDatumType xsd type.")]
+    public partial class VerticalDatumType : AbstractDatumType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the EX_TemporalExtent_Type xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("EX_TemporalExtent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+	[Description("This class represents the EX_TemporalExtent_Type xsd type.")]
+    public partial class EX_TemporalExtent_Type : AbstractObject_Type, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// extent property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "TM_Primitive_PropertyType")]
+		[XmlElement("extent")]
+        public TM_Primitive_PropertyType Extent {
+            get {
+                return extentField;
+            } 
+            set {
+                extentField = value;
+                NotifyPropertyChanged("Extent");
+            }
+        }
+
+        private TM_Primitive_PropertyType extentField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TM_Primitive_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TM_Primitive_PropertyType", Namespace="http://www.isotc211.org/2005/gts")]
+	[Description("This class represents the TM_Primitive_PropertyType xsd type.")]
+    public partial class TM_Primitive_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractTimePrimitive property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractTimePrimitive", Namespace="http://www.opengis.net/gml/3.2")]
+        public AbstractTimePrimitiveType AbstractTimePrimitive {
+            get {
+                return AbstractTimePrimitiveField;
+            } 
+            set {
+                AbstractTimePrimitiveField = value;
+                NotifyPropertyChanged("AbstractTimePrimitive");
+            }
+        }
+
+        private AbstractTimePrimitiveType AbstractTimePrimitiveField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the EX_TemporalExtent_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EX_TemporalExtent_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the EX_TemporalExtent_PropertyType xsd type.")]
+    public partial class EX_TemporalExtent_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// EX_TemporalExtent property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("EX_TemporalExtent")]
+        public EX_TemporalExtent_Type EX_TemporalExtent {
+            get {
+                return EX_TemporalExtentField;
+            } 
+            set {
+                EX_TemporalExtentField = value;
+                NotifyPropertyChanged("EX_TemporalExtent");
+            }
+        }
+
+        private EX_TemporalExtent_Type EX_TemporalExtentField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the EX_VerticalExtent_PropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EX_VerticalExtent_PropertyType", Namespace="http://www.isotc211.org/2005/gmd")]
+	[Description("This class represents the EX_VerticalExtent_PropertyType xsd type.")]
+    public partial class EX_VerticalExtent_PropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// EX_VerticalExtent property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("EX_VerticalExtent")]
+        public EX_VerticalExtent_Type EX_VerticalExtent {
+            get {
+                return EX_VerticalExtentField;
+            } 
+            set {
+                EX_VerticalExtentField = value;
+                NotifyPropertyChanged("EX_VerticalExtent");
+            }
+        }
+
+        private EX_VerticalExtent_Type EX_VerticalExtentField; 
+
+		/// <summary>
+        /// uuidref property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "string")]
+        [XmlAttribute("uuidref")]
+		
+        public string Uuidref {
+            get {
+                return uuidrefField;
+            } 
+            set {
+                uuidrefField = value;
+                NotifyPropertyChanged("Uuidref");
+            }
+        }
+
+        private string uuidrefField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the coordinateOperationAccuracy xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the coordinateOperationAccuracy xsd type.")]
+    public partial class CoordinateOperationAccuracy : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractDQ_PositionalAccuracy property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractDQ_PositionalAccuracy", Namespace="http://www.isotc211.org/2005/gmd")]
+        public AbstractDQ_PositionalAccuracy_Type AbstractDQ_PositionalAccuracy {
+            get {
+                return AbstractDQ_PositionalAccuracyField;
+            } 
+            set {
+                AbstractDQ_PositionalAccuracyField = value;
+                NotifyPropertyChanged("AbstractDQ_PositionalAccuracy");
+            }
+        }
+
+        private AbstractDQ_PositionalAccuracy_Type AbstractDQ_PositionalAccuracyField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the CRSPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("sourceCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the CRSPropertyType xsd type.")]
+    public partial class CRSPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractCRS property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("AbstractCRS")]
+        public AbstractCRSType AbstractCRS {
+            get {
+                return AbstractCRSField;
+            } 
+            set {
+                AbstractCRSField = value;
+                NotifyPropertyChanged("AbstractCRS");
+            }
+        }
+
+        private AbstractCRSType AbstractCRSField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the VerticalDatumPropertyType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("verticalDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the VerticalDatumPropertyType xsd type.")]
+    public partial class VerticalDatumPropertyType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// VerticalDatum property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("VerticalDatum")]
+        public VerticalDatumType VerticalDatum {
+            get {
+                return VerticalDatumField;
+            } 
+            set {
+                VerticalDatumField = value;
+                NotifyPropertyChanged("VerticalDatum");
+            }
+        }
+
+        private VerticalDatumType VerticalDatumField; 
+
+		/// <summary>
+        /// nilReason property
+        /// </summary>
+		[EnergisticsDataTypeAttribute(DataType = "NilReasonType")]
+        [XmlAttribute("nilReason")]
+		
+        public string NilReason {
+            get {
+                return nilReasonField;
+            } 
+            set {
+                nilReasonField = value;
+                NotifyPropertyChanged("NilReason");
+            }
+        }
+
+        private string nilReasonField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// The sender may choose to send a nameCRS, with a well known name structure, or the sequence of information that fully defines the CRS. It is recommended that, for the standard CRSs in the EPSG database, the nameCRS be sent.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_standardProjectedCRS", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("The sender may choose to send a nameCRS, with a well known name structure, or the sequence of information that fully defines the CRS. It is recommended that, for the standard CRSs in the EPSG database, the nameCRS be sent.")]
+    public partial class StandardProjectedCRS : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'Accra / Ghana National Grid' with a code of '2136' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("nameCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "wellKnownNameStruct")]
+        public WellKnownNameStruct NameCRS {
+            get {
+                return nameCRSField;
+            } 
+            set {
+                if (value != null && ProjectedCRSSpecified) throw new Exception("Cannot set property NameCRS when property ProjectedCRS is already set");
+                nameCRSField = value;
+                NameCRSSpecified = (value!=null);
+                NotifyPropertyChanged("NameCRS");
+            }
+        }
+
+        private WellKnownNameStruct nameCRSField; 
+        private bool nameCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if NameCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool NameCRSSpecified
+        {
+            get {
+                return nameCRSSpecified;
+            }
+            set {
+                nameCRSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// ProjectedCRS property
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("ProjectedCRS", Namespace="http://www.opengis.net/gml/3.2")]
+        public ProjectedCRSType ProjectedCRS {
+            get {
+                return ProjectedCRSField;
+            } 
+            set {
+                ProjectedCRSField = value;
+                ProjectedCRSSpecified = (value!=null);
+                NotifyPropertyChanged("ProjectedCRS");
+            }
+        }
+
+        private ProjectedCRSType ProjectedCRSField; 
+        private bool projectedCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if ProjectedCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool ProjectedCRSSpecified
+        {
+            get {
+                return projectedCRSSpecified;
+            }
+            set {
+                projectedCRSSpecified= value;
+            }
+        }
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// The sender may choose to send a nameCRS, with a well known name structure, or the sequence of information that fully defines the CRS. It is recommended that, for the standard CRSs in the EPSG database, the nameCRS be sent.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_standardGeodeticCRS", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("The sender may choose to send a nameCRS, with a well known name structure, or the sequence of information that fully defines the CRS. It is recommended that, for the standard CRSs in the EPSG database, the nameCRS be sent.")]
+    public partial class StandardGeodeticCRS : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'ED50' with a code of '4230' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("nameCRS")]
+        [EnergisticsDataTypeAttribute(DataType = "wellKnownNameStruct")]
+        public WellKnownNameStruct NameCRS {
+            get {
+                return nameCRSField;
+            } 
+            set {
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property NameCRS when property GeodeticCRS is already set");
+                nameCRSField = value;
+                NameCRSSpecified = (value!=null);
+                NotifyPropertyChanged("NameCRS");
+            }
+        }
+
+        private WellKnownNameStruct nameCRSField; 
+        private bool nameCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if NameCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool NameCRSSpecified
+        {
+            get {
+                return nameCRSSpecified;
+            }
+            set {
+                nameCRSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// GeodeticCRS property
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("GeodeticCRS", Namespace="http://www.opengis.net/gml/3.2")]
+        public GeodeticCRSType GeodeticCRS {
+            get {
+                return GeodeticCRSField;
+            } 
+            set {
+                GeodeticCRSField = value;
+                GeodeticCRSSpecified = (value!=null);
+                NotifyPropertyChanged("GeodeticCRS");
+            }
+        }
+
+        private GeodeticCRSType GeodeticCRSField; 
+        private bool geodeticCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if GeodeticCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool GeodeticCRSSpecified
+        {
+            get {
+                return geodeticCRSSpecified;
+            }
+            set {
+                geodeticCRSSpecified= value;
+            }
+        }
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This is a type for storing standard CRSs. It will handle geodetic, projected, and vertical CRSs. These are standard, and are specialized for EPSG database, in that there is a direct reference method for referencing an EPSG CRS. Alternatively, a description of the CRS can be given. It is advised that EPSG CRSs be referenced, since full information is available from a library service. Non-EPSG CRSs can be fully described.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_coordinateReferenceSystem", Namespace="http://www.witsml.org/schemas/1series")]
+	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
+    [Description("This is a type for storing standard CRSs. It will handle geodetic, projected, and vertical CRSs. These are standard, and are specialized for EPSG database, in that there is a direct reference method for referencing an EPSG CRS. Alternatively, a description of the CRS can be given. It is advised that EPSG CRSs be referenced, since full information is available from a library service. Non-EPSG CRSs can be fully described.")]
+    public partial class CoordinateReferenceSystem : Object, IWitsmlDataObject, ICommonDataObject, IDataObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// A standard, human recognizable name by which this CRS is known.
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A standard, human recognizable name by which this CRS is known.")]
+        [EnergisticsDataTypeAttribute(DataType = "nameString")]
+		[XmlElement("name")]
+        public string Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private string nameField; 
+
+        /// <summary>
+        /// Use this for a geodetic CRS.
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("geodeticCRS")]
+        public StandardGeodeticCRS GeodeticCRS {
+            get {
+                return geodeticCRSField;
+            } 
+            set {
+                if (value != null && ProjectedCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property ProjectedCRS is already set");
+                if (value != null && VerticalCRSSpecified) throw new Exception("Cannot set property GeodeticCRS when property VerticalCRS is already set");
+                geodeticCRSField = value;
+                GeodeticCRSSpecified = (value!=null);
+                NotifyPropertyChanged("GeodeticCRS");
+            }
+        }
+
+        private StandardGeodeticCRS geodeticCRSField; 
+        private bool geodeticCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if GeodeticCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool GeodeticCRSSpecified
+        {
+            get {
+                return geodeticCRSSpecified;
+            }
+            set {
+                geodeticCRSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Use this for a projected CRS.
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("projectedCRS")]
+        public StandardProjectedCRS ProjectedCRS {
+            get {
+                return projectedCRSField;
+            } 
+            set {
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property ProjectedCRS when property GeodeticCRS is already set");
+                if (value != null && VerticalCRSSpecified) throw new Exception("Cannot set property ProjectedCRS when property VerticalCRS is already set");
+                projectedCRSField = value;
+                ProjectedCRSSpecified = (value!=null);
+                NotifyPropertyChanged("ProjectedCRS");
+            }
+        }
+
+        private StandardProjectedCRS projectedCRSField; 
+        private bool projectedCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if ProjectedCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool ProjectedCRSSpecified
+        {
+            get {
+                return projectedCRSSpecified;
+            }
+            set {
+                projectedCRSSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Use this for a vertical CRS.
+        /// </summary>
+        [ComponentElement]
+        [XmlElement("verticalCRS")]
+        public StandardVerticalCRS VerticalCRS {
+            get {
+                return verticalCRSField;
+            } 
+            set {
+                if (value != null && GeodeticCRSSpecified) throw new Exception("Cannot set property VerticalCRS when property GeodeticCRS is already set");
+                if (value != null && ProjectedCRSSpecified) throw new Exception("Cannot set property VerticalCRS when property ProjectedCRS is already set");
+                verticalCRSField = value;
+                VerticalCRSSpecified = (value!=null);
+                NotifyPropertyChanged("VerticalCRS");
+            }
+        }
+
+        private StandardVerticalCRS verticalCRSField; 
+        private bool verticalCRSSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if VerticalCRS has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool VerticalCRSSpecified
+        {
+            get {
+                return verticalCRSSpecified;
+            }
+            set {
+                verticalCRSSpecified= value;
+            }
+        }
+
+
+        /// <summary>
+        /// A container element that contains elements that are common to all data objects. 
+        /// </summary>
+		[Description("A container element that contains elements that are common to all data  objects.")]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "cs_commonData")]
+		[XmlElement("commonData")]
+        public CommonData CommonData {
+            get {
+                return commonDataField;
+            } 
+            set {
+                commonDataField = value;
+                NotifyPropertyChanged("CommonData");
+            }
+        }
+
+        private CommonData commonDataField; 
+
+        /// <summary>
+        /// A container element that can contain custom or user defined data elements.
+        /// </summary>
+		[Description("A container element that can contain custom or user defined  data elements.")]
+        [EnergisticsDataTypeAttribute(DataType = "cs_customData")]
+		[XmlElement("customData")]
+        public CustomData CustomData {
+            get {
+                return customDataField;
+            } 
+            set {
+                customDataField = value;
+                NotifyPropertyChanged("CustomData");
+            }
+        }
+
+        private CustomData customDataField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        [EnergisticsDataTypeAttribute(DataType = "uidString")]
+        [XmlAttribute("uid")]
+		
+        public string Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private string uidField; 
+
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+            set { CommonData = value as CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+            set { CustomData = value as CustomData; }
+        }
+
+        #endregion
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
     /// <summary>
     /// The non-contextual content of a WITSML Conventional Core.
     /// </summary>
@@ -94223,6 +101805,105 @@ namespace Energistics.DataAccess.WITSML141
     } //here
 
     /// <summary>
+    /// This class represents the obj_coordinateReferenceSystems xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("coordinateReferenceSystems", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+	[Description("This class represents the obj_coordinateReferenceSystems xsd type.")]
+    public partial class CoordinateReferenceSystemList : AbstractObject, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Information about the XML message instance. 
+        /// </summary>
+		[Description("Information about the XML message instance.")]
+        [ComponentElement]
+        [EnergisticsDataTypeAttribute(DataType = "cs_documentInfo")]
+		[XmlElement("documentInfo")]
+        public DocumentInfo DocumentInfo {
+            get {
+                return documentInfoField;
+            } 
+            set {
+                documentInfoField = value;
+                NotifyPropertyChanged("DocumentInfo");
+            }
+        }
+
+        private DocumentInfo documentInfoField; 
+
+        /// <summary>
+        /// A single CRS. 
+        /// </summary>
+		[Required]
+        [Description("A single  CRS.")]
+        [RecurringElement]
+        [EnergisticsDataTypeAttribute(DataType = "obj_coordinateReferenceSystem")]
+		[XmlElement("coordinateReferenceSystem")]
+        public List<CoordinateReferenceSystem> CoordinateReferenceSystem {
+            get {
+                return coordinateReferenceSystemField;
+            } 
+            set {
+                coordinateReferenceSystemField = value;
+                NotifyPropertyChanged("CoordinateReferenceSystem");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if CoordinateReferenceSystem has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool CoordinateReferenceSystemSpecified
+         {
+             get {
+             if(coordinateReferenceSystemField!=null)
+                 return coordinateReferenceSystemField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CoordinateReferenceSystem> coordinateReferenceSystemField; 
+
+        /// <summary>
+        /// A single CRS. 
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return CoordinateReferenceSystem;
+			}
+        }
+		/// <summary>
+        /// Data object schema version. The fourth level must match the version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.
+        /// </summary>
+		[Required]
+        [RegularExpression("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [StringLength(16)]
+        [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
+        [EnergisticsDataTypeAttribute(DataType = "schemaVersionString")]
+        [XmlAttribute("version")]
+		
+        public string Version {
+            get {
+                return versionField;
+            } 
+            set {
+                versionField = value;
+                NotifyPropertyChanged("Version");
+            }
+        }
+
+        private string versionField = "1.4.1.1"; 
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the obj_convCores xsd type.
     /// </summary>
     [System.SerializableAttribute()]
@@ -108170,6 +115851,100 @@ namespace Energistics.DataAccess.WITSML141
         /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
+        }
+        /// <summary>
+        /// This class represents the RelatedTimeTypeRelativePosition xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+        [Description("This class represents the RelatedTimeTypeRelativePosition xsd enumeration.")]
+        public enum RelatedTimeTypeRelativePosition 
+        {
+        /// <summary>
+        /// Before property
+        /// </summary>
+          Before,
+        /// <summary>
+        /// After property
+        /// </summary>
+          After,
+        /// <summary>
+        /// Begins property
+        /// </summary>
+          Begins,
+        /// <summary>
+        /// Ends property
+        /// </summary>
+          Ends,
+        /// <summary>
+        /// During property
+        /// </summary>
+          During,
+        /// <summary>
+        /// Equals property
+        /// </summary>
+          Equals,
+        /// <summary>
+        /// Contains property
+        /// </summary>
+          Contains,
+        /// <summary>
+        /// Overlaps property
+        /// </summary>
+          Overlaps,
+        /// <summary>
+        /// Meets property
+        /// </summary>
+          Meets,
+        /// <summary>
+        /// OverlappedBy property
+        /// </summary>
+          OverlappedBy,
+        /// <summary>
+        /// MetBy property
+        /// </summary>
+          MetBy,
+        /// <summary>
+        /// BegunBy property
+        /// </summary>
+          BegunBy,
+        /// <summary>
+        /// EndedBy property
+        /// </summary>
+          EndedBy
+        }
+        /// <summary>
+        /// This class represents the AggregationType xsd enumeration.
+        /// </summary>
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+        [Description("This class represents the AggregationType xsd enumeration.")]
+        public enum AggregationType 
+        {
+        /// <summary>
+        /// set property
+        /// </summary>
+          set,
+        /// <summary>
+        /// bag property
+        /// </summary>
+          bag,
+        /// <summary>
+        /// sequence property
+        /// </summary>
+          sequence,
+        /// <summary>
+        /// array property
+        /// </summary>
+          array,
+        /// <summary>
+        /// record property
+        /// </summary>
+          record,
+        /// <summary>
+        /// table property
+        /// </summary>
+          table
         }
         /// <summary>
         /// This class represents the ChangeInfoType xsd enumeration.

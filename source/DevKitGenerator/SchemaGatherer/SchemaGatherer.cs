@@ -378,7 +378,15 @@ namespace Energistics.SchemaGatherer
                 supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
                 supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
             }
-
+            if (setName.Equals("WITSML141"))
+            {
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
+            }
             if (setName.Contains("ML2"))
             {
                 // we also need to include all xsd file in common v2.
@@ -419,7 +427,7 @@ namespace Energistics.SchemaGatherer
 
             foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
             {
-                if (!f.Contains("obj_coordinateReferenceSystem.xsd") && !dataObjectSchemas.Contains(f))
+                if (!dataObjectSchemas.Contains(f))
                 {
                     dataObjectSchemas.Add(f);
                 }

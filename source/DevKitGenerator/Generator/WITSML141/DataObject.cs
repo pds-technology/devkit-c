@@ -36,6 +36,7 @@ namespace Energistics.Generator.WITSML141 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_formationMarkers))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_fluidsReports))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_drillReports))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_coordinateReferenceSystems))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_convCores))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_changeLogs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_cementJobs))]
@@ -59007,6 +59008,4024 @@ namespace Energistics.Generator.WITSML141 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_standardVerticalCRS {
+        
+        private object itemField;
+        
+        private refNameString ellipsoidalDatumField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("VerticalCRS", typeof(VerticalCRSType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("nameCRS", typeof(wellKnownNameStruct))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nameCRS", DataType="wellKnownNameStruct")]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>In the case that the vertical datum is the ellipsoid, and that the vertical coordinate values are heights above the ellipsoid, this element should be instantiated to indicate this. This element should point to the geodetic CRS that defines this ellipsoid system. The ellipsoidal height is only valid if the horizontal CRS using the same ellipsoid is defined.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"In the case that the vertical datum is the ellipsoid, and that the vertical coordinate values are heights above the ellipsoid, this element should be instantiated to indicate this. This element should point to the geodetic CRS that defines this ellipsoid system. The ellipsoidal height is only valid if the horizontal CRS using the same ellipsoid is defined.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ellipsoidalDatum", DataType="refNameString")]
+        public refNameString ellipsoidalDatum {
+            get {
+                return this.ellipsoidalDatumField;
+            }
+            set {
+                this.ellipsoidalDatumField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class VerticalCRSType : AbstractCRSType {
+        
+        private VerticalCSPropertyType verticalCSField;
+        
+        private VerticalDatumPropertyType verticalDatumField;
+        
+        /// <remarks/>
+        public VerticalCSPropertyType verticalCS {
+            get {
+                return this.verticalCSField;
+            }
+            set {
+                this.verticalCSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public VerticalDatumPropertyType verticalDatum {
+            get {
+                return this.verticalDatumField;
+            }
+            set {
+                this.verticalDatumField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("verticalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class VerticalCSPropertyType {
+        
+        private VerticalCSType verticalCSField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public VerticalCSType VerticalCS {
+            get {
+                return this.verticalCSField;
+            }
+            set {
+                this.verticalCSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class VerticalCSType : AbstractCoordinateSystemType {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractCoordinateSystem", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractCoordinateSystemType : IdentifiedObjectType {
+        
+        private CoordinateSystemAxisPropertyType[] axisField;
+        
+        private AggregationType aggregationTypeField;
+        
+        private bool aggregationTypeFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("axis")]
+        public CoordinateSystemAxisPropertyType[] axis {
+            get {
+                return this.axisField;
+            }
+            set {
+                this.axisField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("aggregationType", DataType="AggregationType")]
+        public AggregationType aggregationType {
+            get {
+                return this.aggregationTypeField;
+            }
+            set {
+                this.aggregationTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool aggregationTypeSpecified {
+            get {
+                return this.aggregationTypeFieldSpecified;
+            }
+            set {
+                this.aggregationTypeFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("axis", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CoordinateSystemAxisPropertyType {
+        
+        private CoordinateSystemAxisType coordinateSystemAxisField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CoordinateSystemAxisType CoordinateSystemAxis {
+            get {
+                return this.coordinateSystemAxisField;
+            }
+            set {
+                this.coordinateSystemAxisField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("CoordinateSystemAxis", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CoordinateSystemAxisType : IdentifiedObjectType {
+        
+        private CodeType axisAbbrevField;
+        
+        private CodeWithAuthorityType axisDirectionField;
+        
+        private double minimumValueField;
+        
+        private bool minimumValueFieldSpecified;
+        
+        private double maximumValueField;
+        
+        private bool maximumValueFieldSpecified;
+        
+        private CodeWithAuthorityType rangeMeaningField;
+        
+        /// <remarks/>
+        public CodeType axisAbbrev {
+            get {
+                return this.axisAbbrevField;
+            }
+            set {
+                this.axisAbbrevField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CodeWithAuthorityType axisDirection {
+            get {
+                return this.axisDirectionField;
+            }
+            set {
+                this.axisDirectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public double minimumValue {
+            get {
+                return this.minimumValueField;
+            }
+            set {
+                this.minimumValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool minimumValueSpecified {
+            get {
+                return this.minimumValueFieldSpecified;
+            }
+            set {
+                this.minimumValueFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public double maximumValue {
+            get {
+                return this.maximumValueField;
+            }
+            set {
+                this.maximumValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool maximumValueSpecified {
+            get {
+                return this.maximumValueFieldSpecified;
+            }
+            set {
+                this.maximumValueFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CodeWithAuthorityType rangeMeaning {
+            get {
+                return this.rangeMeaningField;
+            }
+            set {
+                this.rangeMeaningField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CodeWithAuthorityType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("name", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CodeType {
+        
+        private string codeSpaceField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("codeSpace", DataType="anyURI")]
+        public string codeSpace {
+            get {
+                return this.codeSpaceField;
+            }
+            set {
+                this.codeSpaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("identifier", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CodeWithAuthorityType : CodeType {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    public abstract partial class IdentifiedObjectType : DefinitionType {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("Definition", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class DefinitionType : DefinitionBaseType {
+        
+        private string remarksField;
+        
+        /// <remarks/>
+        public string remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                this.remarksField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    public partial class DefinitionBaseType : AbstractGMLType {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGML", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractGMLType {
+        
+        private StringOrRefType descriptionField;
+        
+        private ReferenceType descriptionReferenceField;
+        
+        private CodeWithAuthorityType identifierField;
+        
+        private CodeType[] nameField;
+        
+        private string idField;
+        
+        /// <remarks/>
+        public StringOrRefType description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ReferenceType descriptionReference {
+            get {
+                return this.descriptionReferenceField;
+            }
+            set {
+                this.descriptionReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CodeWithAuthorityType identifier {
+            get {
+                return this.identifierField;
+            }
+            set {
+                this.identifierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("name")]
+        public CodeType[] name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("description", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class StringOrRefType {
+        
+        private string nilReasonField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("descriptionReference", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class ReferenceType {
+        
+        private bool ownsField;
+        
+        private string nilReasonField;
+        
+        public ReferenceType() {
+            this.ownsField = false;
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("owns", DataType="boolean")]
+        public bool owns {
+            get {
+                return this.ownsField;
+            }
+            set {
+                this.ownsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractTimeObject", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractTimeObjectType : AbstractGMLType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractTimePrimitive", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractTimePrimitiveType : AbstractTimeObjectType {
+        
+        private RelatedTimeType[] relatedTimeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("relatedTime")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("relatedTime", DataType="RelatedTimeType")]
+        public RelatedTimeType[] relatedTime {
+            get {
+                return this.relatedTimeField;
+            }
+            set {
+                this.relatedTimeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    public partial class RelatedTimeType : TimePrimitivePropertyType {
+        
+        private RelatedTimeTypeRelativePosition relativePositionField;
+        
+        private bool relativePositionFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public RelatedTimeTypeRelativePosition relativePosition {
+            get {
+                return this.relativePositionField;
+            }
+            set {
+                this.relativePositionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool relativePositionSpecified {
+            get {
+                return this.relativePositionFieldSpecified;
+            }
+            set {
+                this.relativePositionFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/gml/3.2")]
+    public enum RelatedTimeTypeRelativePosition {
+        
+        /// <remarks/>
+        Before,
+        
+        /// <remarks/>
+        After,
+        
+        /// <remarks/>
+        Begins,
+        
+        /// <remarks/>
+        Ends,
+        
+        /// <remarks/>
+        During,
+        
+        /// <remarks/>
+        Equals,
+        
+        /// <remarks/>
+        Contains,
+        
+        /// <remarks/>
+        Overlaps,
+        
+        /// <remarks/>
+        Meets,
+        
+        /// <remarks/>
+        OverlappedBy,
+        
+        /// <remarks/>
+        MetBy,
+        
+        /// <remarks/>
+        BegunBy,
+        
+        /// <remarks/>
+        EndedBy,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelatedTimeType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    public partial class TimePrimitivePropertyType {
+        
+        private AbstractTimePrimitiveType abstractTimePrimitiveField;
+        
+        private string nilReasonField;
+        
+        private bool ownsField;
+        
+        public TimePrimitivePropertyType() {
+            this.ownsField = false;
+        }
+        
+        /// <remarks/>
+        public AbstractTimePrimitiveType AbstractTimePrimitive {
+            get {
+                return this.abstractTimePrimitiveField;
+            }
+            set {
+                this.abstractTimePrimitiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("owns", DataType="boolean")]
+        public bool owns {
+            get {
+                return this.ownsField;
+            }
+            set {
+                this.ownsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractOperation", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractCoordinateOperationType : IdentifiedObjectType {
+        
+        private domainOfValidity domainOfValidityField;
+        
+        private string[] scopeField;
+        
+        private string operationVersionField;
+        
+        private coordinateOperationAccuracy[] coordinateOperationAccuracyField;
+        
+        private CRSPropertyType sourceCRSField;
+        
+        private CRSPropertyType targetCRSField;
+        
+        /// <remarks/>
+        public domainOfValidity domainOfValidity {
+            get {
+                return this.domainOfValidityField;
+            }
+            set {
+                this.domainOfValidityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("scope")]
+        public string[] scope {
+            get {
+                return this.scopeField;
+            }
+            set {
+                this.scopeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string operationVersion {
+            get {
+                return this.operationVersionField;
+            }
+            set {
+                this.operationVersionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("coordinateOperationAccuracy")]
+        public coordinateOperationAccuracy[] coordinateOperationAccuracy {
+            get {
+                return this.coordinateOperationAccuracyField;
+            }
+            set {
+                this.coordinateOperationAccuracyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CRSPropertyType sourceCRS {
+            get {
+                return this.sourceCRSField;
+            }
+            set {
+                this.sourceCRSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CRSPropertyType targetCRS {
+            get {
+                return this.targetCRSField;
+            }
+            set {
+                this.targetCRSField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class domainOfValidity {
+        
+        private EX_Extent_Type eX_ExtentField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+        public EX_Extent_Type EX_Extent {
+            get {
+                return this.eX_ExtentField;
+            }
+            set {
+                this.eX_ExtentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("EX_Extent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class EX_Extent_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType descriptionField;
+        
+        private EX_GeographicExtent_PropertyType[] geographicElementField;
+        
+        private EX_TemporalExtent_PropertyType[] temporalElementField;
+        
+        private EX_VerticalExtent_PropertyType[] verticalElementField;
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("description", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("geographicElement")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("geographicElement", DataType="EX_GeographicExtent_PropertyType")]
+        public EX_GeographicExtent_PropertyType[] geographicElement {
+            get {
+                return this.geographicElementField;
+            }
+            set {
+                this.geographicElementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("temporalElement")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("temporalElement", DataType="EX_TemporalExtent_PropertyType")]
+        public EX_TemporalExtent_PropertyType[] temporalElement {
+            get {
+                return this.temporalElementField;
+            }
+            set {
+                this.temporalElementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("verticalElement")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("verticalElement", DataType="EX_VerticalExtent_PropertyType")]
+        public EX_VerticalExtent_PropertyType[] verticalElement {
+            get {
+                return this.verticalElementField;
+            }
+            set {
+                this.verticalElementField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    public partial class CharacterString_PropertyType {
+        
+        private string characterStringField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public string CharacterString {
+            get {
+                return this.characterStringField;
+            }
+            set {
+                this.characterStringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class EX_GeographicExtent_PropertyType {
+        
+        private AbstractEX_GeographicExtent_Type abstractEX_GeographicExtentField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public AbstractEX_GeographicExtent_Type AbstractEX_GeographicExtent {
+            get {
+                return this.abstractEX_GeographicExtentField;
+            }
+            set {
+                this.abstractEX_GeographicExtentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractEX_GeographicExtent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public abstract partial class AbstractEX_GeographicExtent_Type : AbstractObject_Type {
+        
+        private Boolean_PropertyType extentTypeCodeField;
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("extentTypeCode", DataType="Boolean_PropertyType")]
+        public Boolean_PropertyType extentTypeCode {
+            get {
+                return this.extentTypeCodeField;
+            }
+            set {
+                this.extentTypeCodeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    public partial class Boolean_PropertyType {
+        
+        private bool booleanField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public bool Boolean {
+            get {
+                return this.booleanField;
+            }
+            set {
+                this.booleanField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Date_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Citation_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    public abstract partial class AbstractObject_Type {
+        
+        private string idField;
+        
+        private string uuidField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("id", DataType="ID")]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuid", DataType="string")]
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDQ_Result", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public abstract partial class AbstractDQ_Result_Type : AbstractObject_Type {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Series", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_Series_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType nameField;
+        
+        private CharacterString_PropertyType issueIdentificationField;
+        
+        private CharacterString_PropertyType pageField;
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("name", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("issueIdentification", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType issueIdentification {
+            get {
+                return this.issueIdentificationField;
+            }
+            set {
+                this.issueIdentificationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("page", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType page {
+            get {
+                return this.pageField;
+            }
+            set {
+                this.pageField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_OnlineResource", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_OnlineResource_Type : AbstractObject_Type {
+        
+        private URL_PropertyType linkageField;
+        
+        private CharacterString_PropertyType protocolField;
+        
+        private CharacterString_PropertyType applicationProfileField;
+        
+        private CharacterString_PropertyType nameField;
+        
+        private CharacterString_PropertyType descriptionField;
+        
+        private CI_OnLineFunctionCode_PropertyType functionField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("linkage", DataType="URL_PropertyType")]
+        public URL_PropertyType linkage {
+            get {
+                return this.linkageField;
+            }
+            set {
+                this.linkageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("protocol", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType protocol {
+            get {
+                return this.protocolField;
+            }
+            set {
+                this.protocolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("applicationProfile", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType applicationProfile {
+            get {
+                return this.applicationProfileField;
+            }
+            set {
+                this.applicationProfileField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("name", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("description", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("function", DataType="CI_OnLineFunctionCode_PropertyType")]
+        public CI_OnLineFunctionCode_PropertyType function {
+            get {
+                return this.functionField;
+            }
+            set {
+                this.functionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class URL_PropertyType {
+        
+        private string uRLField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string URL {
+            get {
+                return this.uRLField;
+            }
+            set {
+                this.uRLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_OnLineFunctionCode_PropertyType {
+        
+        private CodeListValue_Type cI_OnLineFunctionCodeField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CodeListValue_Type CI_OnLineFunctionCode {
+            get {
+                return this.cI_OnLineFunctionCodeField;
+            }
+            set {
+                this.cI_OnLineFunctionCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_DateTypeCode", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CodeListValue_Type {
+        
+        private string codeListField;
+        
+        private string codeListValueField;
+        
+        private string codeSpaceField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("codeList", DataType="anyURI")]
+        public string codeList {
+            get {
+                return this.codeListField;
+            }
+            set {
+                this.codeListField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("codeListValue", DataType="anyURI")]
+        public string codeListValue {
+            get {
+                return this.codeListValueField;
+            }
+            set {
+                this.codeListValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("codeSpace", DataType="anyURI")]
+        public string codeSpace {
+            get {
+                return this.codeSpaceField;
+            }
+            set {
+                this.codeSpaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Address", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_Address_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType[] deliveryPointField;
+        
+        private CharacterString_PropertyType cityField;
+        
+        private CharacterString_PropertyType administrativeAreaField;
+        
+        private CharacterString_PropertyType postalCodeField;
+        
+        private CharacterString_PropertyType countryField;
+        
+        private CharacterString_PropertyType[] electronicMailAddressField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("deliveryPoint")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("deliveryPoint", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType[] deliveryPoint {
+            get {
+                return this.deliveryPointField;
+            }
+            set {
+                this.deliveryPointField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("city", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType city {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("administrativeArea", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType administrativeArea {
+            get {
+                return this.administrativeAreaField;
+            }
+            set {
+                this.administrativeAreaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("postalCode", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType postalCode {
+            get {
+                return this.postalCodeField;
+            }
+            set {
+                this.postalCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("country", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("electronicMailAddress")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("electronicMailAddress", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType[] electronicMailAddress {
+            get {
+                return this.electronicMailAddressField;
+            }
+            set {
+                this.electronicMailAddressField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Telephone", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_Telephone_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType[] voiceField;
+        
+        private CharacterString_PropertyType[] facsimileField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("voice")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("voice", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType[] voice {
+            get {
+                return this.voiceField;
+            }
+            set {
+                this.voiceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("facsimile")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("facsimile", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType[] facsimile {
+            get {
+                return this.facsimileField;
+            }
+            set {
+                this.facsimileField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Contact", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_Contact_Type : AbstractObject_Type {
+        
+        private CI_Telephone_PropertyType phoneField;
+        
+        private CI_Address_PropertyType addressField;
+        
+        private CI_OnlineResource_PropertyType onlineResourceField;
+        
+        private CharacterString_PropertyType hoursOfServiceField;
+        
+        private CharacterString_PropertyType contactInstructionsField;
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("phone", DataType="CI_Telephone_PropertyType")]
+        public CI_Telephone_PropertyType phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("address", DataType="CI_Address_PropertyType")]
+        public CI_Address_PropertyType address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("onlineResource", DataType="CI_OnlineResource_PropertyType")]
+        public CI_OnlineResource_PropertyType onlineResource {
+            get {
+                return this.onlineResourceField;
+            }
+            set {
+                this.onlineResourceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("hoursOfService", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType hoursOfService {
+            get {
+                return this.hoursOfServiceField;
+            }
+            set {
+                this.hoursOfServiceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("contactInstructions", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType contactInstructions {
+            get {
+                return this.contactInstructionsField;
+            }
+            set {
+                this.contactInstructionsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_Telephone_PropertyType {
+        
+        private CI_Telephone_Type cI_TelephoneField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_Telephone_Type CI_Telephone {
+            get {
+                return this.cI_TelephoneField;
+            }
+            set {
+                this.cI_TelephoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_Address_PropertyType {
+        
+        private CI_Address_Type cI_AddressField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_Address_Type CI_Address {
+            get {
+                return this.cI_AddressField;
+            }
+            set {
+                this.cI_AddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_OnlineResource_PropertyType {
+        
+        private CI_OnlineResource_Type cI_OnlineResourceField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_OnlineResource_Type CI_OnlineResource {
+            get {
+                return this.cI_OnlineResourceField;
+            }
+            set {
+                this.cI_OnlineResourceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_ResponsibleParty", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_ResponsibleParty_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType individualNameField;
+        
+        private CharacterString_PropertyType organisationNameField;
+        
+        private CharacterString_PropertyType positionNameField;
+        
+        private CI_Contact_PropertyType contactInfoField;
+        
+        private CI_RoleCode_PropertyType roleField;
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("individualName", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType individualName {
+            get {
+                return this.individualNameField;
+            }
+            set {
+                this.individualNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("organisationName", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType organisationName {
+            get {
+                return this.organisationNameField;
+            }
+            set {
+                this.organisationNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("positionName", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType positionName {
+            get {
+                return this.positionNameField;
+            }
+            set {
+                this.positionNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("contactInfo", DataType="CI_Contact_PropertyType")]
+        public CI_Contact_PropertyType contactInfo {
+            get {
+                return this.contactInfoField;
+            }
+            set {
+                this.contactInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("role", DataType="CI_RoleCode_PropertyType")]
+        public CI_RoleCode_PropertyType role {
+            get {
+                return this.roleField;
+            }
+            set {
+                this.roleField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_Contact_PropertyType {
+        
+        private CI_Contact_Type cI_ContactField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_Contact_Type CI_Contact {
+            get {
+                return this.cI_ContactField;
+            }
+            set {
+                this.cI_ContactField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_RoleCode_PropertyType {
+        
+        private CodeListValue_Type cI_RoleCodeField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CodeListValue_Type CI_RoleCode {
+            get {
+                return this.cI_RoleCodeField;
+            }
+            set {
+                this.cI_RoleCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Date", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_Date_Type : AbstractObject_Type {
+        
+        private Date_PropertyType dateField;
+        
+        private CI_DateTypeCode_PropertyType dateTypeField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("date", DataType="Date_PropertyType")]
+        public Date_PropertyType date {
+            get {
+                return this.dateField;
+            }
+            set {
+                this.dateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dateType", DataType="CI_DateTypeCode_PropertyType")]
+        public CI_DateTypeCode_PropertyType dateType {
+            get {
+                return this.dateTypeField;
+            }
+            set {
+                this.dateTypeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    public partial class Date_PropertyType {
+        
+        private object itemField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Date", typeof(string), IsNullable=true)]
+        [System.Xml.Serialization.XmlElementAttribute("DateTime", typeof(System.DateTime))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_DateTypeCode_PropertyType {
+        
+        private CodeListValue_Type cI_DateTypeCodeField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CodeListValue_Type CI_DateTypeCode {
+            get {
+                return this.cI_DateTypeCodeField;
+            }
+            set {
+                this.cI_DateTypeCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("CI_Citation", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class CI_Citation_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType titleField;
+        
+        private CharacterString_PropertyType[] alternateTitleField;
+        
+        private CI_Date_PropertyType[] dateField;
+        
+        private CharacterString_PropertyType editionField;
+        
+        private Date_PropertyType editionDateField;
+        
+        private MD_Identifier_PropertyType[] identifierField;
+        
+        private CI_ResponsibleParty_PropertyType[] citedResponsiblePartyField;
+        
+        private CI_PresentationFormCode_PropertyType[] presentationFormField;
+        
+        private CI_Series_PropertyType seriesField;
+        
+        private CharacterString_PropertyType otherCitationDetailsField;
+        
+        private CharacterString_PropertyType collectiveTitleField;
+        
+        private CharacterString_PropertyType iSBNField;
+        
+        private CharacterString_PropertyType iSSNField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("title", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("alternateTitle")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("alternateTitle", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType[] alternateTitle {
+            get {
+                return this.alternateTitleField;
+            }
+            set {
+                this.alternateTitleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("date")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("date", DataType="CI_Date_PropertyType")]
+        public CI_Date_PropertyType[] date {
+            get {
+                return this.dateField;
+            }
+            set {
+                this.dateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("edition", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType edition {
+            get {
+                return this.editionField;
+            }
+            set {
+                this.editionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("editionDate", DataType="Date_PropertyType")]
+        public Date_PropertyType editionDate {
+            get {
+                return this.editionDateField;
+            }
+            set {
+                this.editionDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("identifier")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("identifier", DataType="MD_Identifier_PropertyType")]
+        public MD_Identifier_PropertyType[] identifier {
+            get {
+                return this.identifierField;
+            }
+            set {
+                this.identifierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("citedResponsibleParty")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("citedResponsibleParty", DataType="CI_ResponsibleParty_PropertyType")]
+        public CI_ResponsibleParty_PropertyType[] citedResponsibleParty {
+            get {
+                return this.citedResponsiblePartyField;
+            }
+            set {
+                this.citedResponsiblePartyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("presentationForm")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("presentationForm", DataType="CI_PresentationFormCode_PropertyType")]
+        public CI_PresentationFormCode_PropertyType[] presentationForm {
+            get {
+                return this.presentationFormField;
+            }
+            set {
+                this.presentationFormField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("series", DataType="CI_Series_PropertyType")]
+        public CI_Series_PropertyType series {
+            get {
+                return this.seriesField;
+            }
+            set {
+                this.seriesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("otherCitationDetails", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType otherCitationDetails {
+            get {
+                return this.otherCitationDetailsField;
+            }
+            set {
+                this.otherCitationDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("collectiveTitle", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType collectiveTitle {
+            get {
+                return this.collectiveTitleField;
+            }
+            set {
+                this.collectiveTitleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ISBN", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType ISBN {
+            get {
+                return this.iSBNField;
+            }
+            set {
+                this.iSBNField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ISSN", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType ISSN {
+            get {
+                return this.iSSNField;
+            }
+            set {
+                this.iSSNField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_Date_PropertyType {
+        
+        private CI_Date_Type cI_DateField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_Date_Type CI_Date {
+            get {
+                return this.cI_DateField;
+            }
+            set {
+                this.cI_DateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class MD_Identifier_PropertyType {
+        
+        private MD_Identifier_Type mD_IdentifierField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public MD_Identifier_Type MD_Identifier {
+            get {
+                return this.mD_IdentifierField;
+            }
+            set {
+                this.mD_IdentifierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("MD_Identifier", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class MD_Identifier_Type : AbstractObject_Type {
+        
+        private CI_Citation_PropertyType authorityField;
+        
+        private CharacterString_PropertyType codeField;
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("authority", DataType="CI_Citation_PropertyType")]
+        public CI_Citation_PropertyType authority {
+            get {
+                return this.authorityField;
+            }
+            set {
+                this.authorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("code", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_Citation_PropertyType {
+        
+        private CI_Citation_Type cI_CitationField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_Citation_Type CI_Citation {
+            get {
+                return this.cI_CitationField;
+            }
+            set {
+                this.cI_CitationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_ResponsibleParty_PropertyType {
+        
+        private CI_ResponsibleParty_Type cI_ResponsiblePartyField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_ResponsibleParty_Type CI_ResponsibleParty {
+            get {
+                return this.cI_ResponsiblePartyField;
+            }
+            set {
+                this.cI_ResponsiblePartyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_PresentationFormCode_PropertyType {
+        
+        private CodeListValue_Type cI_PresentationFormCodeField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CodeListValue_Type CI_PresentationFormCode {
+            get {
+                return this.cI_PresentationFormCodeField;
+            }
+            set {
+                this.cI_PresentationFormCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class CI_Series_PropertyType {
+        
+        private CI_Series_Type cI_SeriesField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CI_Series_Type CI_Series {
+            get {
+                return this.cI_SeriesField;
+            }
+            set {
+                this.cI_SeriesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDQ_Element", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public abstract partial class AbstractDQ_Element_Type : AbstractObject_Type {
+        
+        private CharacterString_PropertyType[] nameOfMeasureField;
+        
+        private MD_Identifier_PropertyType measureIdentificationField;
+        
+        private CharacterString_PropertyType measureDescriptionField;
+        
+        private DQ_EvaluationMethodTypeCode_PropertyType evaluationMethodTypeField;
+        
+        private CharacterString_PropertyType evaluationMethodDescriptionField;
+        
+        private CI_Citation_PropertyType evaluationProcedureField;
+        
+        private DateTime_PropertyType[] dateTimeField;
+        
+        private DQ_Result_PropertyType[] resultField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("nameOfMeasure")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nameOfMeasure", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType[] nameOfMeasure {
+            get {
+                return this.nameOfMeasureField;
+            }
+            set {
+                this.nameOfMeasureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("measureIdentification", DataType="MD_Identifier_PropertyType")]
+        public MD_Identifier_PropertyType measureIdentification {
+            get {
+                return this.measureIdentificationField;
+            }
+            set {
+                this.measureIdentificationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("measureDescription", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType measureDescription {
+            get {
+                return this.measureDescriptionField;
+            }
+            set {
+                this.measureDescriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("evaluationMethodType", DataType="DQ_EvaluationMethodTypeCode_PropertyType")]
+        public DQ_EvaluationMethodTypeCode_PropertyType evaluationMethodType {
+            get {
+                return this.evaluationMethodTypeField;
+            }
+            set {
+                this.evaluationMethodTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("evaluationMethodDescription", DataType="CharacterString_PropertyType")]
+        public CharacterString_PropertyType evaluationMethodDescription {
+            get {
+                return this.evaluationMethodDescriptionField;
+            }
+            set {
+                this.evaluationMethodDescriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("evaluationProcedure", DataType="CI_Citation_PropertyType")]
+        public CI_Citation_PropertyType evaluationProcedure {
+            get {
+                return this.evaluationProcedureField;
+            }
+            set {
+                this.evaluationProcedureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("dateTime")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("dateTime", DataType="DateTime_PropertyType")]
+        public DateTime_PropertyType[] dateTime {
+            get {
+                return this.dateTimeField;
+            }
+            set {
+                this.dateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("result")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("result", DataType="DQ_Result_PropertyType")]
+        public DQ_Result_PropertyType[] result {
+            get {
+                return this.resultField;
+            }
+            set {
+                this.resultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class DQ_EvaluationMethodTypeCode_PropertyType {
+        
+        private CodeListValue_Type dQ_EvaluationMethodTypeCodeField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CodeListValue_Type DQ_EvaluationMethodTypeCode {
+            get {
+                return this.dQ_EvaluationMethodTypeCodeField;
+            }
+            set {
+                this.dQ_EvaluationMethodTypeCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    public partial class DateTime_PropertyType {
+        
+        private System.DateTime dateTimeField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public System.DateTime DateTime {
+            get {
+                return this.dateTimeField;
+            }
+            set {
+                this.dateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class DQ_Result_PropertyType {
+        
+        private AbstractDQ_Result_Type abstractDQ_ResultField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public AbstractDQ_Result_Type AbstractDQ_Result {
+            get {
+                return this.abstractDQ_ResultField;
+            }
+            set {
+                this.abstractDQ_ResultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDQ_PositionalAccuracy", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public abstract partial class AbstractDQ_PositionalAccuracy_Type : AbstractDQ_Element_Type {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("EX_VerticalExtent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class EX_VerticalExtent_Type : AbstractObject_Type {
+        
+        private Real_PropertyType minimumValueField;
+        
+        private Real_PropertyType maximumValueField;
+        
+        private SC_CRS_PropertyType verticalCRSField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("minimumValue", DataType="Real_PropertyType")]
+        public Real_PropertyType minimumValue {
+            get {
+                return this.minimumValueField;
+            }
+            set {
+                this.minimumValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("maximumValue", DataType="Real_PropertyType")]
+        public Real_PropertyType maximumValue {
+            get {
+                return this.maximumValueField;
+            }
+            set {
+                this.maximumValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("verticalCRS", DataType="SC_CRS_PropertyType")]
+        public SC_CRS_PropertyType verticalCRS {
+            get {
+                return this.verticalCRSField;
+            }
+            set {
+                this.verticalCRSField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gco")]
+    public partial class Real_PropertyType {
+        
+        private double realField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public double Real {
+            get {
+                return this.realField;
+            }
+            set {
+                this.realField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified)]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gsr")]
+    public partial class SC_CRS_PropertyType {
+        
+        private AbstractCRSType abstractCRSField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+        public AbstractCRSType AbstractCRS {
+            get {
+                return this.abstractCRSField;
+            }
+            set {
+                this.abstractCRSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractCRSType : IdentifiedObjectType {
+        
+        private domainOfValidity[] domainOfValidityField;
+        
+        private string[] scopeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("domainOfValidity")]
+        public domainOfValidity[] domainOfValidity {
+            get {
+                return this.domainOfValidityField;
+            }
+            set {
+                this.domainOfValidityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("scope")]
+        public string[] scope {
+            get {
+                return this.scopeField;
+            }
+            set {
+                this.scopeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGeneralDerivedCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractGeneralDerivedCRSType : AbstractCRSType {
+        
+        private GeneralConversionPropertyType conversionField;
+        
+        /// <remarks/>
+        public GeneralConversionPropertyType conversion {
+            get {
+                return this.conversionField;
+            }
+            set {
+                this.conversionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("conversion", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class GeneralConversionPropertyType {
+        
+        private AbstractGeneralConversionType abstractGeneralConversionField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public AbstractGeneralConversionType AbstractGeneralConversion {
+            get {
+                return this.abstractGeneralConversionField;
+            }
+            set {
+                this.abstractGeneralConversionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGeneralConversion", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractGeneralConversionType : AbstractCoordinateOperationType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("ProjectedCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class ProjectedCRSType : AbstractGeneralDerivedCRSType {
+        
+        private GeodeticCRSPropertyType itemField;
+        
+        private CartesianCSPropertyType cartesianCSField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("baseGeodeticCRS")]
+        public GeodeticCRSPropertyType Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CartesianCSPropertyType cartesianCS {
+            get {
+                return this.cartesianCSField;
+            }
+            set {
+                this.cartesianCSField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("baseGeodeticCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class GeodeticCRSPropertyType {
+        
+        private GeodeticCRSType geodeticCRSField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public GeodeticCRSType GeodeticCRS {
+            get {
+                return this.geodeticCRSField;
+            }
+            set {
+                this.geodeticCRSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeodeticCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class GeodeticCRSType : AbstractCRSType {
+        
+        private object itemField;
+        
+        private GeodeticDatumPropertyType geodeticDatumField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cartesianCS", typeof(CartesianCSPropertyType))]
+        [System.Xml.Serialization.XmlElementAttribute("ellipsoidalCS", typeof(EllipsoidalCSPropertyType))]
+        [System.Xml.Serialization.XmlElementAttribute("sphericalCS", typeof(SphericalCSPropertyType))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public GeodeticDatumPropertyType geodeticDatum {
+            get {
+                return this.geodeticDatumField;
+            }
+            set {
+                this.geodeticDatumField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("cartesianCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CartesianCSPropertyType {
+        
+        private CartesianCSType cartesianCSField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public CartesianCSType CartesianCS {
+            get {
+                return this.cartesianCSField;
+            }
+            set {
+                this.cartesianCSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("CartesianCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CartesianCSType : AbstractCoordinateSystemType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("ellipsoidalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class EllipsoidalCSPropertyType {
+        
+        private EllipsoidalCSType ellipsoidalCSField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public EllipsoidalCSType EllipsoidalCS {
+            get {
+                return this.ellipsoidalCSField;
+            }
+            set {
+                this.ellipsoidalCSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("EllipsoidalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class EllipsoidalCSType : AbstractCoordinateSystemType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("sphericalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class SphericalCSPropertyType {
+        
+        private SphericalCSType sphericalCSField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public SphericalCSType SphericalCS {
+            get {
+                return this.sphericalCSField;
+            }
+            set {
+                this.sphericalCSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("SphericalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class SphericalCSType : AbstractCoordinateSystemType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("geodeticDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class GeodeticDatumPropertyType {
+        
+        private GeodeticDatumType geodeticDatumField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public GeodeticDatumType GeodeticDatum {
+            get {
+                return this.geodeticDatumField;
+            }
+            set {
+                this.geodeticDatumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeodeticDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class GeodeticDatumType : AbstractDatumType {
+        
+        private PrimeMeridianPropertyType primeMeridianField;
+        
+        private EllipsoidPropertyType ellipsoidField;
+        
+        /// <remarks/>
+        public PrimeMeridianPropertyType primeMeridian {
+            get {
+                return this.primeMeridianField;
+            }
+            set {
+                this.primeMeridianField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public EllipsoidPropertyType ellipsoid {
+            get {
+                return this.ellipsoidField;
+            }
+            set {
+                this.ellipsoidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("primeMeridian", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class PrimeMeridianPropertyType {
+        
+        private PrimeMeridianType primeMeridianField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public PrimeMeridianType PrimeMeridian {
+            get {
+                return this.primeMeridianField;
+            }
+            set {
+                this.primeMeridianField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("PrimeMeridian", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class PrimeMeridianType : IdentifiedObjectType {
+        
+        private AngleType greenwichLongitudeField;
+        
+        /// <remarks/>
+        public AngleType greenwichLongitude {
+            get {
+                return this.greenwichLongitudeField;
+            }
+            set {
+                this.greenwichLongitudeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("greenwichLongitude", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class AngleType : MeasureType {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("semiMajorAxis", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class MeasureType {
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    public partial class LengthType : MeasureType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("ellipsoid", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class EllipsoidPropertyType {
+        
+        private EllipsoidType ellipsoidField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public EllipsoidType Ellipsoid {
+            get {
+                return this.ellipsoidField;
+            }
+            set {
+                this.ellipsoidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("Ellipsoid", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class EllipsoidType : IdentifiedObjectType {
+        
+        private MeasureType semiMajorAxisField;
+        
+        private secondDefiningParameter secondDefiningParameterField;
+        
+        /// <remarks/>
+        public MeasureType semiMajorAxis {
+            get {
+                return this.semiMajorAxisField;
+            }
+            set {
+                this.semiMajorAxisField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public secondDefiningParameter secondDefiningParameter {
+            get {
+                return this.secondDefiningParameterField;
+            }
+            set {
+                this.secondDefiningParameterField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class secondDefiningParameter {
+        
+        private SecondDefiningParameter secondDefiningParameterField;
+        
+        /// <remarks/>
+        public SecondDefiningParameter SecondDefiningParameter {
+            get {
+                return this.secondDefiningParameterField;
+            }
+            set {
+                this.secondDefiningParameterField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class SecondDefiningParameter {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("inverseFlattening", typeof(MeasureType))]
+        [System.Xml.Serialization.XmlElementAttribute("isSphere", typeof(bool))]
+        [System.Xml.Serialization.XmlElementAttribute("semiMinorAxis", typeof(LengthType))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public abstract partial class AbstractDatumType : IdentifiedObjectType {
+        
+        private domainOfValidity domainOfValidityField;
+        
+        private string[] scopeField;
+        
+        private CodeType anchorDefinitionField;
+        
+        private System.DateTime realizationEpochField;
+        
+        private bool realizationEpochFieldSpecified;
+        
+        /// <remarks/>
+        public domainOfValidity domainOfValidity {
+            get {
+                return this.domainOfValidityField;
+            }
+            set {
+                this.domainOfValidityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("scope")]
+        public string[] scope {
+            get {
+                return this.scopeField;
+            }
+            set {
+                this.scopeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CodeType anchorDefinition {
+            get {
+                return this.anchorDefinitionField;
+            }
+            set {
+                this.anchorDefinitionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        public System.DateTime realizationEpoch {
+            get {
+                return this.realizationEpochField;
+            }
+            set {
+                this.realizationEpochField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool realizationEpochSpecified {
+            get {
+                return this.realizationEpochFieldSpecified;
+            }
+            set {
+                this.realizationEpochFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class VerticalDatumType : AbstractDatumType {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    [System.Xml.Serialization.XmlRootAttribute("EX_TemporalExtent", Namespace="http://www.isotc211.org/2005/gmd", IsNullable=false)]
+    public partial class EX_TemporalExtent_Type : AbstractObject_Type {
+        
+        private TM_Primitive_PropertyType extentField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("extent", DataType="TM_Primitive_PropertyType")]
+        public TM_Primitive_PropertyType extent {
+            get {
+                return this.extentField;
+            }
+            set {
+                this.extentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gts")]
+    public partial class TM_Primitive_PropertyType {
+        
+        private AbstractTimePrimitiveType abstractTimePrimitiveField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+        public AbstractTimePrimitiveType AbstractTimePrimitive {
+            get {
+                return this.abstractTimePrimitiveField;
+            }
+            set {
+                this.abstractTimePrimitiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class EX_TemporalExtent_PropertyType {
+        
+        private EX_TemporalExtent_Type eX_TemporalExtentField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public EX_TemporalExtent_Type EX_TemporalExtent {
+            get {
+                return this.eX_TemporalExtentField;
+            }
+            set {
+                this.eX_TemporalExtentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+    public partial class EX_VerticalExtent_PropertyType {
+        
+        private EX_VerticalExtent_Type eX_VerticalExtentField;
+        
+        private string uuidrefField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public EX_VerticalExtent_Type EX_VerticalExtent {
+            get {
+                return this.eX_VerticalExtentField;
+            }
+            set {
+                this.eX_VerticalExtentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uuidref", DataType="string")]
+        public string uuidref {
+            get {
+                return this.uuidrefField;
+            }
+            set {
+                this.uuidrefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://www.isotc211.org/2005/gco")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class coordinateOperationAccuracy {
+        
+        private AbstractDQ_PositionalAccuracy_Type abstractDQ_PositionalAccuracyField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.isotc211.org/2005/gmd")]
+        public AbstractDQ_PositionalAccuracy_Type AbstractDQ_PositionalAccuracy {
+            get {
+                return this.abstractDQ_PositionalAccuracyField;
+            }
+            set {
+                this.abstractDQ_PositionalAccuracyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("sourceCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class CRSPropertyType {
+        
+        private AbstractCRSType abstractCRSField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public AbstractCRSType AbstractCRS {
+            get {
+                return this.abstractCRSField;
+            }
+            set {
+                this.abstractCRSField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    public enum AggregationType {
+        
+        /// <remarks/>
+        set,
+        
+        /// <remarks/>
+        bag,
+        
+        /// <remarks/>
+        sequence,
+        
+        /// <remarks/>
+        array,
+        
+        /// <remarks/>
+        record,
+        
+        /// <remarks/>
+        table,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("verticalDatum", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+    public partial class VerticalDatumPropertyType {
+        
+        private VerticalDatumType verticalDatumField;
+        
+        private string nilReasonField;
+        
+        /// <remarks/>
+        public VerticalDatumType VerticalDatum {
+            get {
+                return this.verticalDatumField;
+            }
+            set {
+                this.verticalDatumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nilReason", DataType="NilReasonType")]
+        public string nilReason {
+            get {
+                return this.nilReasonField;
+            }
+            set {
+                this.nilReasonField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_standardProjectedCRS {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ProjectedCRS", typeof(ProjectedCRSType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("nameCRS", typeof(wellKnownNameStruct))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nameCRS", DataType="wellKnownNameStruct")]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    public partial class cs_standardGeodeticCRS {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("GeodeticCRS", typeof(GeodeticCRSType), Namespace="http://www.opengis.net/gml/3.2")]
+        [System.Xml.Serialization.XmlElementAttribute("nameCRS", typeof(wellKnownNameStruct))]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("nameCRS", DataType="wellKnownNameStruct")]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
+    public partial class obj_coordinateReferenceSystem {
+        
+        private string nameField;
+        
+        private object itemField;
+        
+        private cs_commonData commonDataField;
+        
+        private cs_customData customDataField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>A standard, human recognizable name by which this CRS is known.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A standard, human recognizable name by which this CRS is known.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("name", DataType="nameString")]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("geodeticCRS", typeof(cs_standardGeodeticCRS))]
+        [System.Xml.Serialization.XmlElementAttribute("projectedCRS", typeof(cs_standardProjectedCRS))]
+        [System.Xml.Serialization.XmlElementAttribute("verticalCRS", typeof(cs_standardVerticalCRS))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data  objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data  objects.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("commonData", DataType="cs_commonData")]
+        public cs_commonData commonData {
+            get {
+                return this.commonDataField;
+            }
+            set {
+                this.commonDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("customData", DataType="cs_customData")]
+        public cs_customData customData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("uid", DataType="uidString")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "1.4.1.1")]
     public partial class obj_convCore {
         
@@ -78331,6 +82350,68 @@ namespace Energistics.Generator.WITSML141 {
             }
             set {
                 this.drillReportField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("1\\.[4-9]\\.[0-9]\\.([0-9]|([1-9][0-9]))")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
+        [System.ComponentModel.DescriptionAttribute("Data object schema version.  The fourth level must match the  version of the sche" +
+            "ma constraints (enumerations and XML loader files) that are assumed by the docum" +
+            "ent instance.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("version", DataType="schemaVersionString")]
+        public string version {
+            get {
+                return this.versionField;
+            }
+            set {
+                this.versionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("coordinateReferenceSystems", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+    public partial class obj_coordinateReferenceSystems : abstractObject {
+        
+        private cs_documentInfo documentInfoField;
+        
+        private obj_coordinateReferenceSystem[] coordinateReferenceSystemField;
+        
+        private string versionField;
+        
+        /// <remarks/>
+        /// <summary>Information about the XML message instance.</summary>
+        [System.ComponentModel.DescriptionAttribute("Information about the XML message instance.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("documentInfo", DataType="cs_documentInfo")]
+        public cs_documentInfo documentInfo {
+            get {
+                return this.documentInfoField;
+            }
+            set {
+                this.documentInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A single  CRS.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("coordinateReferenceSystem")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A single  CRS.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("coordinateReferenceSystem", DataType="obj_coordinateReferenceSystem")]
+        public obj_coordinateReferenceSystem[] coordinateReferenceSystem {
+            get {
+                return this.coordinateReferenceSystemField;
+            }
+            set {
+                this.coordinateReferenceSystemField = value;
             }
         }
         
