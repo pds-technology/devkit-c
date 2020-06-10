@@ -48,6 +48,7 @@
     <Compile Include="IWitsmlDataObject.cs" />
     <Compile Include="IWitsmlClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WITSML131\ActiveDataObjects.cs" />
     <Compile Include="WITSML131\CommonData.cs" />
     <Compile Include="WITSML131\DataObjects.cs" />
     <Compile Include="WITSML131\GeneratedEnumValues.cs" />
@@ -58,7 +59,9 @@
     <Compile Include="WITSML141\DataObjects.cs" />
     <Compile Include="WITSML141\GeneratedEnumValues.cs" />
     <Compile Include="WITSML141\WMLS.cs" />
+    <Compile Include="WITSML141\ActiveDataObjects.cs" />
     <Compile Include="WITSML141\WMLS.custom.cs" />
+    <Compile Include="WITSML200\ActiveDataObjects.cs" />
     <Compile Include="WITSML200\CustomData.cs" />
     <Compile Include="WITSML200\DataObjects.cs" />
     <Compile Include="WITSML200\Extensions.cs" />

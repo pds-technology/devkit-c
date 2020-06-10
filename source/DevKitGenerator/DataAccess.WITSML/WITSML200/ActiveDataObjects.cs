@@ -1,4 +1,4 @@
-// 
+﻿// 
 // License notice
 //  
 // Standards DevKit, version 2.0
@@ -73,71 +73,105 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
-namespace Energistics.DataAccess
+using System.Xml.Serialization;
+
+namespace Energistics.DataAccess.WITSML200
 {
     /// <summary>
-    /// Represents a Uid Object
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="Channel"/>.
     /// </summary>
-    public interface IUniqueId
+    public partial class Channel : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the unique object identifier.
-        /// </summary>
-        string Uid { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
     }
 
     /// <summary>
-    /// Represents a Energistics data object.
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="CuttingsGeology"/>.
     /// </summary>
-    public interface IDataObject : IUniqueId
+    public partial class CuttingsGeology : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the data object name.
-        /// </summary>
-        string Name { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
     }
 
     /// <summary>
-    /// Represents a Energistics data object.
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="InterpretedGeology"/>.
     /// </summary>
-    public interface IWellObject : IDataObject
+    public partial class InterpretedGeology : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the parent Well object identifier.
-        /// </summary>
-        string UidWell { get; set; }
-
-        /// <summary>
-        /// Gets or sets the parent Well object name.
-        /// </summary>
-        string NameWell { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
     }
 
     /// <summary>
-    /// Represents a Energistics data object.
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="MudLogReport"/>.
     /// </summary>
-    public interface IWellboreObject : IWellObject
+    public partial class MudLogReport : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the parent Wellbore object identifier.
-        /// </summary>
-        string UidWellbore { get; set; }
-
-        /// <summary>
-        /// Gets or sets the parent Wellbore object name.
-        /// </summary>
-        string NameWellbore { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
     }
 
+    /// <summary>
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="ShowEvaluation"/>.
+    /// </summary>
+    public partial class ShowEvaluation : IActiveDataObject
+    {
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
+    }
 
     /// <summary>
-    /// Represents an active and/or growing Energistics data object.
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="Trajectory"/>.
     /// </summary>
-    public interface IActiveDataObject
+    public partial class Trajectory : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets whether the data object is active or growing.
-        /// </summary>
-        bool? IsActive { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
+    }
+
+    /// <summary>
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="Wellbore"/>.
+    /// </summary>
+    public partial class Wellbore : IActiveDataObject
+    {
+    }
+
+    /// <summary>
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="WellboreGeometry"/>.
+    /// </summary>
+    public partial class WellboreGeometry : IActiveDataObject
+    {
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive
+        {
+            get { return GrowingStatus == null ? (bool?)null : GrowingStatus == ReferenceData.ChannelStatus.active; }
+            set { GrowingStatus = value == null ? (ReferenceData.ChannelStatus?)null : value.Value ? ReferenceData.ChannelStatus.active : ReferenceData.ChannelStatus.inactive; }
+        }
     }
 }

@@ -1,4 +1,4 @@
-// 
+﻿// 
 // License notice
 //  
 // Standards DevKit, version 2.0
@@ -73,71 +73,43 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
-namespace Energistics.DataAccess
+using System.Xml.Serialization;
+
+namespace Energistics.DataAccess.WITSML131
 {
     /// <summary>
-    /// Represents a Uid Object
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="Log"/>.
     /// </summary>
-    public interface IUniqueId
+    public partial class Log : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the unique object identifier.
-        /// </summary>
-        string Uid { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive { get { return ObjectGrowing; } set { ObjectGrowing = value; } }
     }
 
     /// <summary>
-    /// Represents a Energistics data object.
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="MudLog"/>.
     /// </summary>
-    public interface IDataObject : IUniqueId
+    public partial class MudLog : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the data object name.
-        /// </summary>
-        string Name { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive { get { return ObjectGrowing; } set { ObjectGrowing = value; } }
+    }
+    
+    /// <summary>
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="Trajectory"/>.
+    /// </summary>
+    public partial class Trajectory : IActiveDataObject
+    {
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive { get { return ObjectGrowing; } set { ObjectGrowing = value; } }
     }
 
     /// <summary>
-    /// Represents a Energistics data object.
+    /// Implements the <see cref="IActiveDataObject"/> interface for <see cref="Wellbore"/>.
     /// </summary>
-    public interface IWellObject : IDataObject
+    public partial class Wellbore : IActiveDataObject
     {
-        /// <summary>
-        /// Gets or sets the parent Well object identifier.
-        /// </summary>
-        string UidWell { get; set; }
-
-        /// <summary>
-        /// Gets or sets the parent Well object name.
-        /// </summary>
-        string NameWell { get; set; }
-    }
-
-    /// <summary>
-    /// Represents a Energistics data object.
-    /// </summary>
-    public interface IWellboreObject : IWellObject
-    {
-        /// <summary>
-        /// Gets or sets the parent Wellbore object identifier.
-        /// </summary>
-        string UidWellbore { get; set; }
-
-        /// <summary>
-        /// Gets or sets the parent Wellbore object name.
-        /// </summary>
-        string NameWellbore { get; set; }
-    }
-
-
-    /// <summary>
-    /// Represents an active and/or growing Energistics data object.
-    /// </summary>
-    public interface IActiveDataObject
-    {
-        /// <summary>
-        /// Gets or sets whether the data object is active or growing.
-        /// </summary>
-        bool? IsActive { get; set; }
+        [XmlIgnore]
+        bool? IActiveDataObject.IsActive { get { return false; } set { } }
     }
 }
