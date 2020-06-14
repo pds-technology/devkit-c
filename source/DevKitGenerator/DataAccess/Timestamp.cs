@@ -92,6 +92,13 @@ namespace Energistics.DataAccess
         private DateTimeOffset value;
 
         /// <summary>
+        /// <see cref="DateTimeStyles"/> to use when parsing timestamps.  In accordance with
+        /// ISO 8601, the default value is <see cref="DateTimeStyles.AssumeLocal"/>, which
+        /// means that timestamps with no time zone specified will be assumed to be in local time.
+        /// </summary>
+        public static DateTimeStyles ParsingStyle { get; set; } = DateTimeStyles.AssumeLocal;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Timestamp"/> struct.
         /// </summary>
         /// <param name="value">The value.</param>
@@ -369,7 +376,7 @@ namespace Energistics.DataAccess
         public void ReadXml(XmlReader reader)
         {
             var text = reader.ReadElementString();
-            value = DateTimeOffset.Parse(text, formatProvider: null, styles: DateTimeStyles.RoundtripKind);
+            value = DateTimeOffset.Parse(text, CultureInfo.InvariantCulture, ParsingStyle);
         }
 
         /// <summary>
@@ -388,7 +395,7 @@ namespace Energistics.DataAccess
         /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public string ToString(string format)
         {
-            return value.ToString(format);
+            return value.ToString(format, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
