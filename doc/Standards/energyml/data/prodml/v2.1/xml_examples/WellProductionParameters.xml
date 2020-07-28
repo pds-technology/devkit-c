@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WellProductionParameters objectVersion="2.0" schemaVersion="2.0" uuid="ddb9da9a-601a-11e5-9d70-feff819cdc9f" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Aliases authority="energistics">
+		<eml:Identifier>sample demo the choke change  on 2005-1-15</eml:Identifier>
+		<eml:Description>Energistics</eml:Description>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>NAPR SAMPLE DATA 2015</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2015-01-01T00:00:47Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:Editor>Mark Mao</eml:Editor>
+		<eml:LastUpdate>2015-06-23T00:00:00Z</eml:LastUpdate>
+		
+		<eml:Description>NAPR SAMPLE DATA</eml:Description>
+		<eml:DescriptiveKeywords>NAPR SAMPLE DATA</eml:DescriptiveKeywords>
+	</eml:Citation>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<ApprovalDate>2015-01-01</ApprovalDate>
+	<StartDate>2015-01-01</StartDate>
+	<EndDate>2015-01-31</EndDate>
+	<NominalPeriod>month</NominalPeriod>
+	<ProductionPeriod>
+	<!--Well 1,two periods in month, this is period 1-->		
+	<StartTime>2015-01-01T00:00:00Z</StartTime>
+		<Duration uom="d">15</Duration>
+		<WellStatus>active</WellStatus>
+		<ProductRate>
+			<ProductFluidKind>oil - gross</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="bbl/d">320</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+					<eml:ReferenceTempPres xsi:type="eml:ReferenceConditionExt">0 degC 1 atm</eml:ReferenceTempPres>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ProductRate>
+			<ProductFluidKind>gas - dry</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="1000 bbl/d">138</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+					<eml:ReferenceTempPres xsi:type="eml:ReferenceConditionExt">0 degC 1 atm</eml:ReferenceTempPres>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ProductRate>
+			<ProductFluidKind>water - processed</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="bbl/d">5</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+					<eml:ReferenceTempPres xsi:type="eml:ReferenceConditionExt">0 degC 1 atm</eml:ReferenceTempPres>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ReportingEntity>
+			<eml:ContentType/>
+			<eml:Title>well01</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D1</eml:Uuid>
+		</ReportingEntity>
+	</ProductionPeriod>
+	<ProductionPeriod>
+	<!--Well 1,two periods in month, this is period 2-->		
+		<StartTime>2015-01-16T00:00:00Z</StartTime>
+		<Duration uom="d">16</Duration>
+		<WellStatus>active</WellStatus>
+		<ProductRate>
+			<ProductFluidKind>oil - gross</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="bbl/d">450</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+					<eml:ReferenceTempPres xsi:type="eml:ReferenceConditionExt">0 degC 1 atm</eml:ReferenceTempPres>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ProductRate>
+			<ProductFluidKind>gas - dry</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="1000 bbl/d">195</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+					<eml:ReferenceTempPres xsi:type="eml:ReferenceConditionExt">0 degC 1 atm</eml:ReferenceTempPres>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ProductRate>
+			<ProductFluidKind>water - processed</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="bbl/d">7</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+					<eml:ReferenceTempPres xsi:type="eml:ReferenceConditionExt">0 degC 1 atm</eml:ReferenceTempPres>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ReportingEntity>
+			<eml:ContentType/>
+			<eml:Title>well01</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D1</eml:Uuid>
+		</ReportingEntity>
+	</ProductionPeriod>
+	<ProductionPeriod>
+	<!--Well 2, one period in month-->
+		<StartTime>2015-01-01T00:00:00Z</StartTime>
+		<Duration uom="d">30</Duration>
+		<WellStatus>active</WellStatus>
+		<WellFlowingCondition>
+			<ChokeOrificeSize uom="1/64 in">40</ChokeOrificeSize> 
+			<BottomHoleStabilizedTemperature uom="degF">210</BottomHoleStabilizedTemperature>
+			<TubingHeadStabilizedPressure xsi:type="eml:AbsolutePressure">
+				<eml:AbsolutePressure uom="psi">200</eml:AbsolutePressure>
+			</TubingHeadStabilizedPressure>
+		</WellFlowingCondition>
+		<prodml:ProductRate ProductFluidReference="00000000-0000-0000-0004-00000000091">
+			<ProductFluidKind>crude - stabilized</ProductFluidKind>
+			<prodml:VolumeFlowRate>
+				<eml:FlowRate uom="bbl/d">387</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+				</eml:MeasurementPressureTemperature>
+			</prodml:VolumeFlowRate>
+		</prodml:ProductRate>
+		<ProductRate ProductFluidReference="00000000-0000-0000-0004-00000000092">
+			<ProductFluidKind>gas - dry</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="1000 ft3/d">168</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:TemperaturePressure">
+					<eml:Temperature uom="degF">210</eml:Temperature>
+					<eml:Pressure uom="psi">200</eml:Pressure>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ProductRate ProductFluidReference="00000000-0000-0000-0003-00000000093">
+			<ProductFluidKind>water - processed</ProductFluidKind>
+			<VolumeFlowRate>
+				<eml:FlowRate uom="bbl/d">6</eml:FlowRate>
+				<eml:MeasurementPressureTemperature xsi:type="eml:TemperaturePressure">
+					<eml:Temperature uom="degF">210</eml:Temperature>
+					<eml:Pressure uom="psi">200</eml:Pressure>
+				</eml:MeasurementPressureTemperature>
+			</VolumeFlowRate>
+		</ProductRate>
+		<ReportingEntity>
+			<eml:ContentType/>
+			<eml:Title>well02</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000000D2</eml:Uuid>
+		</ReportingEntity>
+	</ProductionPeriod>
+</WellProductionParameters>
