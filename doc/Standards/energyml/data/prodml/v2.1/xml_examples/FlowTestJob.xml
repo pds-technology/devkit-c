@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:FlowTestJob schemaVersion="2.1" uuid="00000000-0000-0000-0000-000000000CC3" xmlns="http://www.energistics.org/energyml/data/prodmlv2"  xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FlowTestJob.xsd">
+<eml:Citation>
+		<eml:Title>production well test: flow test activity report for well02</eml:Title>
+		<eml:Originator>Energy Co</eml:Originator>
+		<eml:Creation>2015-01-04T09:30:47Z</eml:Creation>
+		<eml:Format>xmlspy/xml</eml:Format>
+		<eml:Editor>xmlspy</eml:Editor>
+		<eml:LastUpdate>2015-01-05T09:30:47Z</eml:LastUpdate>
+</eml:Citation>
+<ServiceCompany>
+	<Name>abc co</Name>
+</ServiceCompany>
+<StartTime>2019-12-20T00:30:00Z</StartTime>
+<EndTime>2019-12-20T12:30:00Z</EndTime>
+<FlowTestActivity>
+	<eml:ContentType>application/x-prodml+xml;version=2.1;type=FlowTestActivity</eml:ContentType>
+	<eml:Title>production well test: flow test activity report for well02</eml:Title>
+	<eml:Uuid>00000000-0000-0000-0000-000000000CC2</eml:Uuid>
+</FlowTestActivity>
+<!-- Other related xml data objects associated with this job can go here, eg Fluid Sample Acquisition Job, Pta DataP reProcess, Pta Deconvolution, Pressure Transient Analysis -->
+</prodml:FlowTestJob>

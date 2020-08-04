@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportingEntity   uuid="00000000-0000-0000-0000-000000000D10" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" schemaVersion="2.0"  xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Citation>
+		<eml:Title>Terminal Z</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2015-01-01T00:00:00Z</eml:Creation>
+		<eml:Format>Energistics:XMLSPY/.xml</eml:Format>
+		<eml:LastUpdate>2015-08-01T15:37:00Z</eml:LastUpdate>
+	</eml:Citation>
+	<Kind>terminal</Kind>
+</ReportingEntity>

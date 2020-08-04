@@ -1,0 +1,322 @@
+<html  xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Common</title>
+<style type="text/css">
+<!--
+ /* Style Definitions */
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{
+	margin-top:18.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial";
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-top:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+</head>
+
+<body>
+
+<h1 align="center" >Common Data Schema Overview</h1>
+
+<h1 align="center">Version 2.2</h1><p><p>
+
+An Energistics Data Object Schema is a complete, high-level schema from one of the EnergyML families.  In EnergyML, there is usually a single root element defined in each schema, though this is not a requirement of XML schemas.  A Data Object is a single instance document for one of these schemas. This specification is primarily concerned with standards and guidelines for naming, or identifying these data objects, references within a data object to another data object, and references between a data object and other systems or naming authorities.
+
+<h2><a name="_COMMON_Schemas,_XML"></a>Common Schemas:</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <h4><a name="_Abstract_schema">Abstract data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The Abstract package contains the base XSD types from which all EnergyML Data Objects are derived.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/Abstract.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Activities_schema">Activities data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains the schema of the Activity model.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/Activities.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_Basetypes_schema">Basetypes data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains the common re-usable structures and types commonly used by EnergyML Schemas</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/Basetypes.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CommonEnumerations_schema">CommonEnumerations data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains common re-usable enumerations used throughout different Energistics standards.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/CommonEnumerations.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CommonTypes_schema">CommonTypes data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains common re-usable complex types used throughout different Energistics standards.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/CommonTypes.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_CRS_schema">CRS data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains encapsulations of coordinate reference systems defined by GML, EPSG, well-known types as defined by ISO 19162, or other well-known text.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/CRS.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_DataAssurance_schema">DataAssurance data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>A metadata object that can be bound to any reference object and carry data assessment information.</h5></th>
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/DataAssurance.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+	  <BR>
+      <BR>
+
+ 	  <h4><a name="_EmlAllObjects_schema">EmlAllObjects data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package includes all individual Common data objects in 1 file, ideal for importing all of them using a common schema location.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/EmlAllObjects.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_GraphicalInformation_schema">GraphicalInformation data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains the base schema of the graphical information object.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/GraphicalInformation.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_LegacyUnitsOfMeasure_schema">LegacyUnitsOfMeasure data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This Package contains customary legacy units.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/LegacyUnitsOfMeasure.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_MeasureType_schema">MeasureType data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>These types represent numeric quantities with a unit of measure implemented as a uom attribute. The units are gathered into single quantity class which represents a group of units. The unit symbols appropriate for the class are captured as enumerated lists. The implementation of this is to develop a type for each uom class that is a union of a standard list, the unknown value, and the Other: extension. Additional files will contain these structures.
+</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/MeasureType.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ObjectReference_schema">ObjectReference data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This package contains the types and elements to allow an EnergyML Data Object to refer to another EnergyML Data Object (i.e. External References).</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/ObjectReference.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_QuantityClass_schema">QuantityClass data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>This file defines a set of standard POSC units of measure
+                                for various quantity classes. This units list captures information contained
+                                in the POSC units dictionary at http://www.posc.org/refs/poscUnits20.xml.
+                                The enumerated lists do not contain any deprecated units. </h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/QuantityClass.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+      <h4><a name="_ValueTypes_schema">ValueTypes data object</a></h4>
+
+      <table border="1" cellspacing="0" cellpadding="0">
+         <tr>
+            <th rowspan="2" width="420" align="left" valign="bottom">&nbsp;&nbsp;<h5>The collection of standard temperature and pressure values.</h5></th>
+
+         </tr>
+         <tr align="center" valign="bottom">
+            <th width="75">&nbsp;&nbsp;<a href="./schema/ValueTypes.html">XSD</a>
+            </th>
+         </tr>
+
+      </table>
+
+      <BR>
+      <BR>
+
+<p><small>Copyright(c) 2003-2019 Energistics. All rights reserved.</BR>
+
+</small></p>
+
+
+</div>
+
+</body>
+
+</html>

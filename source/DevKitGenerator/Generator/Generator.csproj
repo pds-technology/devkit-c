@@ -76,6 +76,7 @@
     <Compile Include="PRODML122\DataObject.cs" />
     <Compile Include="PRODML131\DataObject.cs" />
     <Compile Include="PRODML200\DataObject.cs" />
+    <Compile Include="PRODML210\DataObject.cs" />
     <Compile Include="RESQML110\DataObject.cs" />
     <Compile Include="RESQML200\DataObject.cs" />
     <Compile Include="RESQML201\DataObject.cs" />
