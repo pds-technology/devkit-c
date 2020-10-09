@@ -58,6 +58,7 @@
     <Compile Include="PRODML131\GeneratedProdmlEnumValues.cs" />
     <Compile Include="PRODML131\PROD_GenericDataAccess.cs" />
     <Compile Include="PRODML200\DataObjects.cs" />
+    <Compile Include="PRODML210\DataObjects.cs" />
     <Compile Include="PRODMLWebServiceConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,5 +68,6 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

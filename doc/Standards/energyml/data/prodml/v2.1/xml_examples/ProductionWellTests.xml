@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<prodml:ProductionWellTests objectVersion="2.0" schemaVersion="2.0" uuid="00000000-0000-0000-0000-000000000BB2" xmlns="http://www.energistics.org/energyml/data/prodmlv2"  xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Citation>
+		<eml:Title>production well test for well02</eml:Title>
+		<eml:Originator>Energy Co</eml:Originator>
+		<eml:Creation>2015-01-04T09:30:47Z</eml:Creation>
+		<eml:Format>xmlspy/xml</eml:Format>
+		<eml:Editor>xmlspy</eml:Editor>
+		<eml:LastUpdate>2015-01-05T09:30:47Z</eml:LastUpdate>
+	</eml:Citation>
+	<eml:CustomData/>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<prodml:ApprovalDate>2015-01-05</prodml:ApprovalDate>
+	<FluidComponentCatalog>
+			<StockTankOil uid="00000000-0000-0000-0003-00000000091">
+			<APIGravity uom="dAPI">30</APIGravity>
+			<MolecularWeight uom="g/mol">100</MolecularWeight>
+			<Remark/>
+		</StockTankOil>
+		<NaturalGas uid="00000000-0000-0000-0003-00000000092">
+			<GasGravity>0.75</GasGravity>
+			<MolecularWeight uom="g/mol">20</MolecularWeight> 
+		</NaturalGas>
+		<FormationWater uid="00000000-0000-0000-0003-00000000093">
+			<SpecificGravity>1.05</SpecificGravity>
+			<Salinity uom="ng/g">30000</Salinity>
+			<Remark/>
+		</FormationWater>
+	</FluidComponentCatalog>
+	<NominalPeriodKind>month</NominalPeriodKind>
+	<StartDate>2015-01-01T09:30:47Z</StartDate>
+	<EndDate>2015-01-31T09:30:47Z</EndDate>
+	<FlowTestActivity>
+			<eml:ContentType>application/x-prodml+xml;version=2.1;type=FlowTestActivity</eml:ContentType>
+			<eml:Title>production well test: flow test activity report</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-000000000CC2</eml:Uuid>
+	</FlowTestActivity>	
+</prodml:ProductionWellTests>
