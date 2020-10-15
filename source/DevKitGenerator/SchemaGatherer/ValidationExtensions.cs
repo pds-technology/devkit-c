@@ -587,8 +587,7 @@ namespace Energistics.SchemaGatherer
         private static void AddRequiredAttribute(CodeTypeMember memberProperty)
         {
             var requiredAttribute = new CodeAttributeDeclaration(typeof(RequiredAttribute).FullName);
-            if (!memberProperty.CustomAttributes.Contains(requiredAttribute))
-                memberProperty.CustomAttributes.Add(requiredAttribute);
+            memberProperty.CustomAttributes.Add(requiredAttribute);
         }
 
         private static void AddValidationAttributes(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, IList<XmlSchemaFacet> facets)

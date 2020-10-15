@@ -25,7 +25,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private bool isAbstractField;
         
-        private System.DateTime deprecationDateField;
+        private Energistics.DataAccess.Timestamp deprecationDateField;
         
         private bool deprecationDateFieldSpecified;
         
@@ -35,7 +35,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>This boolean indicates whether the PropertyKind should be used as a real property or not.  If the Is Abstract flag is set, then this entry should be used only as the parent of a real property. For example, the PropertyKind of "force per length" shouldn't be used directly, as it is really just a description of some units of measure. This entry should only be used as the parent of the real physical property "surface tension".</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"This boolean indicates whether the PropertyKind should be used as a real property or not.  If the Is Abstract flag is set, then this entry should be used only as the parent of a real property. For example, the PropertyKind of ""force per length"" shouldn't be used directly, as it is really just a description of some units of measure. This entry should only be used as the parent of the real physical property ""surface tension"".")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IsAbstract", DataType="boolean")]
@@ -50,12 +49,11 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Date at which this property dictionary entry must no longer be used. Files generated before this date would have used this entry so it is left here for reference.   A null value means the property kind is still valid.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("Date at which this property dictionary entry must no longer be used. Files genera" +
             "ted before this date would have used this entry so it is left here for reference" +
             ".   A null value means the property kind is still valid.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DeprecationDate", DataType="TimeStamp")]
-        public System.DateTime DeprecationDate {
+        public Energistics.DataAccess.Timestamp DeprecationDate {
             get {
                 return this.deprecationDateField;
             }
@@ -77,7 +75,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference to the name of a quantity class in the Energistics Unit of Measure Dictionary. If there is no match in the Energistics Unit of Measure Dictionary, then this attribute is purely for human information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A reference to the name of a quantity class in the Energistics Unit of Measure Di" +
             "ctionary. If there is no match in the Energistics Unit of Measure Dictionary, th" +
@@ -94,7 +91,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Indicates the parent of this property kind. BUSINESS RULE : Only the top root abstract property kind has not to define a parent property kind.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("Indicates the parent of this property kind. BUSINESS RULE : Only the top root abs" +
             "tract property kind has not to define a parent property kind.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Parent", DataType="DataObjectReference")]
@@ -4041,11 +4037,11 @@ namespace Energistics.Generator.PRODML210 {
         
         private TransferKind transferKindField;
         
-        private System.DateTime startTimeField;
+        private Energistics.DataAccess.Timestamp startTimeField;
         
         private bool startTimeFieldSpecified;
         
-        private System.DateTime endTimeField;
+        private Energistics.DataAccess.Timestamp endTimeField;
         
         private bool endTimeFieldSpecified;
         
@@ -4057,7 +4053,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Specifies the kind of transfer. See enum TransferKind.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Specifies the kind of transfer. See enum TransferKind.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TransferKind", DataType="TransferKind")]
@@ -4072,10 +4067,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time when the transfer began.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("The date and time when the transfer began.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartTime", DataType="TimeStamp")]
-        public System.DateTime StartTime {
+        public Energistics.DataAccess.Timestamp StartTime {
             get {
                 return this.startTimeField;
             }
@@ -4097,10 +4091,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Date and time when the transfer ended.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("Date and time when the transfer ended.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndTime", DataType="TimeStamp")]
-        public System.DateTime EndTime {
+        public Energistics.DataAccess.Timestamp EndTime {
             get {
                 return this.endTimeField;
             }
@@ -4122,7 +4115,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The amount of product transferred.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ProductTransferQuantity", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("ProductTransferQuantity")]
         [System.ComponentModel.DescriptionAttribute("The amount of product transferred.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ProductTransferQuantity", DataType="ProductFluid")]
         public ProductFluid[] ProductTransferQuantity {
@@ -4135,7 +4128,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DestinationFacility", DataType="DataObjectReference")]
         public DataObjectReference DestinationFacility {
@@ -4148,7 +4140,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SourceFacility", DataType="DataObjectReference")]
         public DataObjectReference SourceFacility {
@@ -4200,7 +4191,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The condition-dependant measurements (e.g.,  volumes) in this transfer are taken to be measured at standard conditions.  The element is mandatory in all the SPVR objects.  A choice is available – either to supply the temperature and pressure for all the volumes that follow, or to choose from a list of standards organizations’ reference conditions. Note that the enum list of standard conditions is extensible, allowing for local measurement condition standards to be used</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The condition-dependant measurements (e.g.,  volumes) in this transfer are taken to be measured at standard conditions.  The element is mandatory in all the SPVR objects.  A choice is available – either to supply the temperature and pressure for all the volumes that follow, or to choose from a list of standards organizations’ reference conditions. Note that the enum list of standard conditions is extensible, allowing for local measurement condition standards to be used")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StandardConditions", DataType="AbstractTemperaturePressure")]
@@ -4215,7 +4205,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date on which the report was approved.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date on which the report was approved.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ApprovalDate", DataType="date")]
         public System.DateTime ApprovalDate {
@@ -4240,7 +4230,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Geographic context for reporting entities.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("Geographic context for reporting entities.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GeographicContext", DataType="GeographicContext")]
         public GeographicContext GeographicContext {
@@ -4254,7 +4243,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Fluid component catalog.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("Fluid component catalog.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidComponentCatalog", DataType="FluidComponentCatalog")]
         public FluidComponentCatalog FluidComponentCatalog {
@@ -4267,7 +4255,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Operator", DataType="BusinessAssociate")]
         public BusinessAssociate Operator {
             get {
@@ -6548,7 +6535,7 @@ namespace Energistics.Generator.PRODML210 {
         private bool existenceKindFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Aliases", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Aliases")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Aliases", DataType="ObjectAlias")]
         public ObjectAlias[] Aliases {
             get {
@@ -6560,7 +6547,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Citation", DataType="Citation")]
         public Citation Citation {
@@ -6573,7 +6559,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("CustomData", DataType="CustomData")]
         public CustomData CustomData {
             get {
@@ -6585,7 +6570,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ExtensionNameValue", DataType="ExtensionNameValue")]
         public ExtensionNameValue[] ExtensionNameValue {
             get {
@@ -7846,7 +7831,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Key", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Key")]
         [System.ComponentModel.DescriptionAttribute(@"A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value will be defined within the specified keyword naming system. This is essentially a classification of the data in the specified system (keyword).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Key", DataType="KeywordValueStruct")]
         public KeywordValueStruct[] Key {
@@ -7860,7 +7845,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>If the time series is a measure then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified then the measure class must be specified.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("If the time series is a measure then this specifies the unit of measure. The unit" +
             " acronym must be chosen from the list that is valid for the measure class. If th" +
@@ -7877,7 +7861,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys but it is important for allowing an application to understand the nature of a measure value even if it does not understand all of the underlying nature.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MeasureClass", DataType="MeasureClass")]
         public MeasureClass MeasureClass {
@@ -7902,7 +7885,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A comment about the time series.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the time series.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Comment", DataType="String2000")]
@@ -7917,7 +7899,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The minimum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("The minimum value within the time range of dTimMin to dTimMax. Element \"unit\" def" +
             "ines the unit of measure of this value.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Minimum", DataType="DimensionlessMeasure")]
@@ -7932,7 +7913,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The maximum value within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The maximum value within the time range of dTimMin to dTimMax. Element \"unit\" def" +
             "ines the unit of measure of this value.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Maximum", DataType="DimensionlessMeasure")]
@@ -7947,7 +7927,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The sum of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("The sum of all values within the time range of dTimMin to dTimMax. Element \"unit\"" +
             " defines the unit of measure of this value.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Sum", DataType="DimensionlessMeasure")]
@@ -7962,7 +7941,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The arithmetic mean (sum divided by count) of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("The arithmetic mean (sum divided by count) of all values within the time range of" +
             " dTimMin to dTimMax. Element \"unit\" defines the unit of measure of this value.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Mean", DataType="DimensionlessMeasure")]
@@ -7977,7 +7955,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The median value of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("The median value of all values within the time range of dTimMin to dTimMax. Eleme" +
             "nt \"unit\" defines the unit of measure of this value.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Median", DataType="DimensionlessMeasure")]
@@ -7992,7 +7969,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The standard deviation of all values within the time range of dTimMin to dTimMax. Element "unit" defines the unit of measure of this value.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("The standard deviation of all values within the time range of dTimMin to dTimMax." +
             " Element \"unit\" defines the unit of measure of this value.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StandardDeviation", DataType="DimensionlessMeasure")]
@@ -8006,7 +7982,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimMin", DataType="EndpointDateTime")]
         public EndpointDateTime DTimMin {
@@ -8020,7 +7995,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Defines a value threshold window and the time duration where values  (within the time range of dTimMin to dTimMax) were within that window.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [System.ComponentModel.DescriptionAttribute("Defines a value threshold window and the time duration where values  (within the " +
             "time range of dTimMin to dTimMax) were within that window.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeAtThreshold", DataType="TimeSeriesThreshold")]
@@ -8034,7 +8008,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimMax", DataType="EndpointDateTime")]
         public EndpointDateTime DTimMax {
@@ -8161,7 +8134,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value is defined within the specified keyword-naming system. This is essentially a classification of the data in the specified system (keyword).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Key", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Key")]
         [System.ComponentModel.DescriptionAttribute(@"A keyword value pair which characterizes the underlying nature of this value. The key value may provide part of the unique identity of an instance of a concept or it may characterize the underlying concept. The key value is defined within the specified keyword-naming system. This is essentially a classification of the data in the specified system (keyword).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Key", DataType="KeywordValueStruct")]
         public KeywordValueStruct[] Key {
@@ -8175,7 +8148,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>If the time series is a measure, then this specifies the unit of measure. The unit acronym must be chosen from the list that is valid for the measure class. If this is specified,  then the measure class must be specified.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
         [System.ComponentModel.DescriptionAttribute("If the time series is a measure, then this specifies the unit of measure. The uni" +
             "t acronym must be chosen from the list that is valid for the measure class. If t" +
@@ -8192,7 +8164,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys, but it is important for allowing an application to understand the nature of a measure value, even if it does not understand all of the underlying nature.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the type of measure that the time series represents. If this is specified then unit must be specified. This may be redundant to some information in the keys, but it is important for allowing an application to understand the nature of a measure value, even if it does not understand all of the underlying nature.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MeasureClass", DataType="MeasureClass")]
         public MeasureClass MeasureClass {
@@ -8217,7 +8188,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A comment about the time series.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("A comment about the time series.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Comment", DataType="String2000")]
@@ -8231,7 +8201,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DataValue", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("DataValue")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DataValue", DataType="AbstractValue")]
         public AbstractValue[] DataValue {
             get {
@@ -8296,7 +8266,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The type of report. This should define and constrain the expected content of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The type of report. This should define and constrain the expected content of the " +
             "report.")]
@@ -8312,7 +8281,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report represents (i.e., not a year or month). Only one of date, month or year should be specified.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report represents (i.e., not a year or month). Only one of date" +
             ", month or year should be specified.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Date", DataType="date")]
@@ -8338,7 +8307,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The ending date that the report represents, if it represents an interval.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The ending date that the report represents, if it represents an interval.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DateEnd", DataType="date")]
         public System.DateTime DateEnd {
@@ -8363,7 +8332,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The month that the report represents (i.e., not a year, date or date range). Only one of date, month or year should be specified.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([1-9][0-9][0-9][0-9])-(([0][0-9])|([1][0-2]))")]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The month that the report represents (i.e., not a year, date or date range). Only" +
@@ -8380,7 +8348,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The year that the report represents (i.e., not a month, date or date range). Only one of date, month or year should be specified.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
         [System.ComponentModel.DataAnnotations.RangeAttribute(1000D, 9999D)]
         [System.ComponentModel.DescriptionAttribute("The year that the report represents (i.e., not a month, date or date range). Only" +
             " one of date, month or year should be specified.")]
@@ -8396,7 +8364,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A textual comment about the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("A textual comment about the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Comment", DataType="String2000")]
@@ -8411,7 +8378,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The current report version.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The current report version.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReportVersion", DataType="String64")]
@@ -8426,7 +8392,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The current document version status.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("The current document version status.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReportStatus", DataType="ReportVersionStatus")]
         public ReportVersionStatus ReportStatus {
@@ -8451,7 +8416,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this report. The name can be qua" +
             "lified by a naming system. This also defines the kind of facility.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Installation", DataType="FacilityIdentifierStruct")]
@@ -8466,7 +8430,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ContextFacility", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("ContextFacility")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ContextFacility", DataType="FacilityIdentifierStruct")]
@@ -8481,7 +8445,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report was issued.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report was issued.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IssueDate", DataType="date")]
         public System.DateTime IssueDate {
@@ -8506,7 +8470,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report was approved.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report was approved.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ApprovalDate", DataType="date")]
         public System.DateTime ApprovalDate {
@@ -8531,7 +8495,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A geographic context of a report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DescriptionAttribute("A geographic context of a report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GeographicContext", DataType="GeographicContext")]
         public GeographicContext GeographicContext {
@@ -8544,7 +8507,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Operator", DataType="BusinessAssociate")]
         public BusinessAssociate Operator {
             get {
@@ -8556,7 +8518,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Approver", DataType="BusinessAssociate")]
         public BusinessAssociate Approver {
             get {
@@ -8568,7 +8529,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IssuedBy", DataType="BusinessAssociate")]
         public BusinessAssociate IssuedBy {
             get {
@@ -8946,7 +8906,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this report. The name can be qua" +
             "lified by a naming system. This also defines the kind of facility.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Installation", DataType="FacilityIdentifierStruct")]
@@ -8961,7 +8920,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ContextFacility", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("ContextFacility")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ContextFacility", DataType="FacilityIdentifierStruct")]
@@ -8976,7 +8935,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The type of report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The type of report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Kind", DataType="String64")]
@@ -8991,7 +8949,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The type of period that is being reported. This value must be consistent with the reporting start and end values.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("The type of period that is being reported. This value must be consistent with the" +
             " reporting start and end values.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PeriodKind", DataType="ReportingDurationKind")]
@@ -9017,7 +8974,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report was issued.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report was issued.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IssueDate", DataType="date")]
         public System.DateTime IssueDate {
@@ -9042,7 +8999,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The title of the report, if different from the name of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The title of the report, if different from the name of the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Title", DataType="NameStruct")]
         public NameStruct Title {
@@ -9056,7 +9012,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report was approved.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report was approved.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ApprovalDate", DataType="date")]
         public System.DateTime ApprovalDate {
@@ -9080,7 +9036,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Approver", DataType="BusinessAssociate")]
         public BusinessAssociate Approver {
             get {
@@ -9092,7 +9047,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DateTime", DataType="AbstractDateTimeClass")]
         public AbstractDateTimeClass DateTime {
             get {
@@ -9105,7 +9059,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A report for each installation</summary>
-        [System.Xml.Serialization.XmlElementAttribute("InstallationReport", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("InstallationReport")]
         [System.ComponentModel.DescriptionAttribute("A report for each installation")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InstallationReport", DataType="ProductionOperationInstallationReport")]
         public ProductionOperationInstallationReport[] InstallationReport {
@@ -9118,7 +9072,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Operator", DataType="BusinessAssociate")]
         public BusinessAssociate Operator {
             get {
@@ -9131,7 +9084,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The geographic context of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [System.ComponentModel.DescriptionAttribute("The geographic context of the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GeographicContext", DataType="GeographicContext")]
         public GeographicContext GeographicContext {
@@ -9144,7 +9096,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IssuedBy", DataType="BusinessAssociate")]
         public BusinessAssociate IssuedBy {
             get {
@@ -12346,7 +12297,6 @@ namespace Energistics.Generator.PRODML210 {
         private FlowTestMeasurementSet intervalMeasurementSetField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet IntervalMeasurementSet {
@@ -13502,7 +13452,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>References a log containing a wireline formation test  tie-in (e.g. gamma ray curve) vs. depth data.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("References a log containing a wireline formation test  tie-in (e.g. gamma ray cur" +
             "ve) vs. depth data.")]
@@ -13517,7 +13466,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IntervalMeasurementSet", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("IntervalMeasurementSet")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet[] IntervalMeasurementSet {
@@ -13540,7 +13489,6 @@ namespace Energistics.Generator.PRODML210 {
         private FlowTestMeasurementSet intervalMeasurementSetField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet IntervalMeasurementSet {
@@ -13566,7 +13514,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private string wellTestMethodField;
         
-        private System.DateTime effectiveDateField;
+        private Energistics.DataAccess.Timestamp effectiveDateField;
         
         private bool effectiveDateFieldSpecified;
         
@@ -13574,7 +13522,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A flag which is to be set if this test is validated and therefore able to used in processes such as production allocation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("A flag which is to be set if this test is validated and therefore able to used in" +
             " processes such as production allocation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Validated", DataType="boolean")]
@@ -13600,7 +13547,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description or name of the method used to conduct the well test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Description or name of the method used to conduct the well test.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("WellTestMethod", DataType="String64")]
@@ -13615,11 +13561,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time from which this well test is used in production allocation processes as representative of the well’s performance</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("The date and time from which this well test is used in production allocation proc" +
             "esses as representative of the well’s performance")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EffectiveDate", DataType="TimeStamp")]
-        public System.DateTime EffectiveDate {
+        public Energistics.DataAccess.Timestamp EffectiveDate {
             get {
                 return this.effectiveDateField;
             }
@@ -13640,7 +13585,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet IntervalMeasurementSet {
@@ -13663,7 +13607,7 @@ namespace Energistics.Generator.PRODML210 {
         private FlowTestMeasurementSet[] intervalMeasurementSetField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IntervalMeasurementSet", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("IntervalMeasurementSet")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet[] IntervalMeasurementSet {
@@ -13689,7 +13633,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private string wellTestMethodField;
         
-        private System.DateTime effectiveDateField;
+        private Energistics.DataAccess.Timestamp effectiveDateField;
         
         private bool effectiveDateFieldSpecified;
         
@@ -13697,7 +13641,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A flag which is to be set if this test is validated and therefore able to used in processes such as production allocation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("A flag which is to be set if this test is validated and therefore able to used in" +
             " processes such as production allocation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Validated", DataType="boolean")]
@@ -13723,7 +13666,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description or name of the method used to conduct the well test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Description or name of the method used to conduct the well test.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("WellTestMethod", DataType="String64")]
@@ -13738,11 +13680,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time from which this well test is used in production allocation processes as representative of the well’s performance</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("The date and time from which this well test is used in production allocation proc" +
             "esses as representative of the well’s performance")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EffectiveDate", DataType="TimeStamp")]
-        public System.DateTime EffectiveDate {
+        public Energistics.DataAccess.Timestamp EffectiveDate {
             get {
                 return this.effectiveDateField;
             }
@@ -13763,7 +13704,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet IntervalMeasurementSet {
@@ -13789,7 +13729,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>References a log containing a wireline formation test  tie-in (e.g. gamma ray curve) vs. depth data.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("References a log containing a wireline formation test  tie-in (e.g. gamma ray cur" +
             "ve) vs. depth data.")]
@@ -13804,7 +13743,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet IntervalMeasurementSet {
@@ -13827,7 +13765,6 @@ namespace Energistics.Generator.PRODML210 {
         private FlowTestMeasurementSet intervalMeasurementSetField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntervalMeasurementSet", DataType="FlowTestMeasurementSet")]
         public FlowTestMeasurementSet IntervalMeasurementSet {
@@ -13855,7 +13792,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The data blob in JSON form. This attribute lets you embed the bulk data in a single file with the xml, to avoid the issues that arise when splitting data across multiple files. BUSINESS RULE: Either this element or the FileUri element must be present.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Data", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Data")]
         [System.ComponentModel.DescriptionAttribute("The data blob in JSON form. This attribute lets you embed the bulk data in a sing" +
             "le file with the xml, to avoid the issues that arise when splitting data across " +
             "multiple files. BUSINESS RULE: Either this element or the FileUri element must b" +
@@ -13871,7 +13808,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Channel", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("Channel")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Channel", DataType="Channel")]
         public Channel[] Channel {
             get {
@@ -13902,8 +13839,6 @@ namespace Energistics.Generator.PRODML210 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.1")]
     public partial class PtaDeconvolution : AbstractObject {
         
-        private DataObjectReference flowTestActivityField;
-        
         private string flowTestMeasurementSetRefField;
         
         private string[] flowTestPeriodRefField;
@@ -13922,30 +13857,12 @@ namespace Energistics.Generator.PRODML210 {
         
         private string remarkField;
         
-        private DataObjectReference flowTestActivity1Field;
+        private DataObjectReference flowTestActivityField;
         
         private AbstractDeconvolutionOutput[] deconvolutionOutputField;
         
         /// <remarks/>
-        /// <summary>A reference, using data object reference, to a FlowTestActivity data-object containing the measurement data which this Deconvolution applies to.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("A reference, using data object reference, to a FlowTestActivity data-object conta" +
-            "ining the measurement data which this Deconvolution applies to.")]
-        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference FlowTestActivity {
-            get {
-                return this.flowTestActivityField;
-            }
-            set {
-                this.flowTestActivityField = value;
-            }
-        }
-        
-        /// <remarks/>
         /// <summary>A reference, using uid, to the Flow Test Measurement Set within the Flow Test Activity data-object containing the measurement data which this Deconvolution applies to.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference, using uid, to the Flow Test Measurement Set within the Flow Test Act" +
             "ivity data-object containing the measurement data which this Deconvolution appli" +
@@ -13962,7 +13879,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to the test periods which are included in the input to the deconvolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FlowTestPeriodRef", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("FlowTestPeriodRef")]
         [System.ComponentModel.DescriptionAttribute("Reference to the test periods which are included in the input to the deconvolutio" +
             "n.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestPeriodRef", DataType="String64")]
@@ -13977,7 +13894,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the method for this deconvolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("The name of the method for this deconvolution.")]
@@ -13993,7 +13909,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The initial reservoir pressure. Note that this may be in input to, or output from, the deconvolution algorithm.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The initial reservoir pressure. Note that this may be in input to, or output from" +
             ", the deconvolution algorithm.")]
@@ -14009,7 +13924,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The pressure data (in a Channel) which is being deconvolved in this Deconvolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The pressure data (in a Channel) which is being deconvolved in this Deconvolution" +
             ".")]
@@ -14025,7 +13939,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The flow data (in a Channel) which is being deconvolved in this Deconvolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The flow data (in a Channel) which is being deconvolved in this Deconvolution.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InputFlowrate", DataType="AbstractPtaFlowData")]
@@ -14040,7 +13953,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The reconstructed pressure data (in a Channel) which is the output of this Deconvolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("The reconstructed pressure data (in a Channel) which is the output of this Deconv" +
             "olution.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReconstructedPressure", DataType="DeconvolvedPressureData")]
@@ -14055,7 +13967,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The reconstructed flow rate data (in a Channel) which is the output of this Deconvolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("The reconstructed flow rate data (in a Channel) which is the output of this Decon" +
             "volution.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReconstructedFlowrate", DataType="DeconvolvedFlowData")]
@@ -14070,7 +13981,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Textual description about the value of this field.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Textual description about the value of this field.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -14084,18 +13994,22 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity", Order=10)]
-        public DataObjectReference FlowTestActivity1 {
+        /// <summary>Superclass of possible flow test activities: drill stem, production transient, interwell, and others.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Superclass of possible flow test activities: drill stem, production transient, in" +
+            "terwell, and others.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
+        public DataObjectReference FlowTestActivity {
             get {
-                return this.flowTestActivity1Field;
+                return this.flowTestActivityField;
             }
             set {
-                this.flowTestActivity1Field = value;
+                this.flowTestActivityField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DeconvolutionOutput", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute("DeconvolutionOutput")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DeconvolutionOutput", DataType="AbstractDeconvolutionOutput")]
         public AbstractDeconvolutionOutput[] DeconvolutionOutput {
@@ -14229,8 +14143,6 @@ namespace Energistics.Generator.PRODML210 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.1")]
     public partial class PtaDataPreProcess : AbstractObject {
         
-        private DataObjectReference flowTestActivityField;
-        
         private string flowTestMeasurementSetRefField;
         
         private AbstractFlowTestData[] inputDataField;
@@ -14241,28 +14153,10 @@ namespace Energistics.Generator.PRODML210 {
         
         private string remarkField;
         
-        private DataObjectReference flowTestActivity1Field;
-        
-        /// <remarks/>
-        /// <summary>A reference, using data object reference, to a FlowTestActivity data-object containing the measurement data which this PreProcess applies to.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("A reference, using data object reference, to a FlowTestActivity data-object conta" +
-            "ining the measurement data which this PreProcess applies to.")]
-        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference FlowTestActivity {
-            get {
-                return this.flowTestActivityField;
-            }
-            set {
-                this.flowTestActivityField = value;
-            }
-        }
+        private DataObjectReference flowTestActivityField;
         
         /// <remarks/>
         /// <summary>A reference, using uid, to the Flow Test Measurement Set within the Flow Test Activity data-object containing the measurement data which this PreProcess applies to.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference, using uid, to the Flow Test Measurement Set within the Flow Test Act" +
             "ivity data-object containing the measurement data which this PreProcess applies " +
@@ -14279,7 +14173,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>One or more input channels being pre-processed in this PreProcess.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("InputData", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("InputData")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("One or more input channels being pre-processed in this PreProcess.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InputData", DataType="AbstractFlowTestData")]
@@ -14294,7 +14188,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The data (in a Channel) which is the output of this PreProcess.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The data (in a Channel) which is the output of this PreProcess.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PreProcessedData", DataType="AbstractFlowTestData")]
@@ -14309,7 +14202,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Type of data conditioning that may describe multiple preprocessing steps</summary>
-        [System.Xml.Serialization.XmlElementAttribute("DataConditioning", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("DataConditioning")]
         [System.ComponentModel.DescriptionAttribute("Type of data conditioning that may describe multiple preprocessing steps")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DataConditioning", DataType="DataConditioningExt")]
         public Energistics.DataAccess.ExtensibleEnum<DataConditioning> DataConditioning {
@@ -14323,7 +14216,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Textual description about the value of this field.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Textual description about the value of this field.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -14337,13 +14229,17 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity", Order=6)]
-        public DataObjectReference FlowTestActivity1 {
+        /// <summary>Superclass of possible flow test activities: drill stem, production transient, interwell, and others.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Superclass of possible flow test activities: drill stem, production transient, in" +
+            "terwell, and others.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
+        public DataObjectReference FlowTestActivity {
             get {
-                return this.flowTestActivity1Field;
+                return this.flowTestActivityField;
             }
             set {
-                this.flowTestActivity1Field = value;
+                this.flowTestActivityField = value;
             }
         }
     }
@@ -14359,13 +14255,13 @@ namespace Energistics.Generator.PRODML210 {
         
         private string modelNameField;
         
-        private System.DateTime timeAppliesFromField;
+        private Energistics.DataAccess.Timestamp timeAppliesFromField;
         
         private bool timeAppliesFromFieldSpecified;
         
         private string methodNameField;
         
-        private System.DateTime timeAppliesToField;
+        private Energistics.DataAccess.Timestamp timeAppliesToField;
         
         private bool timeAppliesToFieldSpecified;
         
@@ -14376,8 +14272,6 @@ namespace Energistics.Generator.PRODML210 {
         private DataObjectReference fluidCharacterizationField;
         
         private DataObjectReference numericalPtaModelField;
-        
-        private DataObjectReference flowTestActivityField;
         
         private string principalFlowTestMeasurementSetRefField;
         
@@ -14405,11 +14299,10 @@ namespace Energistics.Generator.PRODML210 {
         
         private CompressibilityParameters compressibilityParametersField;
         
-        private DataObjectReference flowTestActivity1Field;
+        private DataObjectReference flowTestActivityField;
         
         /// <remarks/>
         /// <summary>The name of the model used - textual description of the whole model. No semantic meaning. Example: "Dual porosity with 2 parallel faults".  The full details of the model are in the Wellbore Model and layerModel sections of the TestLocationAnalysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("The name of the model used - textual description of the whole model. No semantic " +
@@ -14428,11 +14321,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The time this Analysis was created (ie, the time of analysis, not the time of data acquisition).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("The time this Analysis was created (ie, the time of analysis, not the time of dat" +
             "a acquisition).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeAppliesFrom", DataType="TimeStamp")]
-        public System.DateTime TimeAppliesFrom {
+        public Energistics.DataAccess.Timestamp TimeAppliesFrom {
             get {
                 return this.timeAppliesFromField;
             }
@@ -14454,7 +14346,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the method used for analysis - textual description. No semantic meaning. Example: "non-linear regression".</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("The name of the method used for analysis - textual description. No semantic meani" +
             "ng. Example: \"non-linear regression\".")]
@@ -14470,11 +14361,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The time this Analysis was finished (ie, the time of analysis, not the time of data acquisition).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("The time this Analysis was finished (ie, the time of analysis, not the time of da" +
             "ta acquisition).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeAppliesTo", DataType="TimeStamp")]
-        public System.DateTime TimeAppliesTo {
+        public Energistics.DataAccess.Timestamp TimeAppliesTo {
             get {
                 return this.timeAppliesToField;
             }
@@ -14496,7 +14386,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Set to TRUE if the Analysis is done with numerical modeling.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("Set to TRUE if the Analysis is done with numerical modeling.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IsNumericalAnalysis", DataType="boolean")]
         public bool IsNumericalAnalysis {
@@ -14521,7 +14410,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference, using data object reference, to a FluidCharacterization data-object containing the fluid parameters for this PTA.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("A reference, using data object reference, to a FluidCharacterization data-object " +
             "containing the fluid parameters for this PTA.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidCharacterization", DataType="DataObjectReference")]
@@ -14536,7 +14424,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference, using data object reference, to a RESQML data-object containing the root level data for a numerical PTA model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("A reference, using data object reference, to a RESQML data-object containing the " +
             "root level data for a numerical PTA model.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("NumericalPtaModel", DataType="DataObjectReference")]
@@ -14550,25 +14437,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        /// <summary>Abstract wellbore response model from which the other wellbore response model types are derived.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Abstract wellbore response model from which the other wellbore response model typ" +
-            "es are derived.")]
-        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference FlowTestActivity {
-            get {
-                return this.flowTestActivityField;
-            }
-            set {
-                this.flowTestActivityField = value;
-            }
-        }
-        
-        /// <remarks/>
         /// <summary>A reference (using uid) to the flow test measurement set which contains the data concerning the principal test location, in the case of an interference test. For standard (non-interference) tests, this is not needed to be filled in, since there is only one flow test location and therefore only one  flow test measurement set.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute(@"A reference (using uid) to the flow test measurement set which contains the data concerning the principal test location, in the case of an interference test. For standard (non-interference) tests, this is not needed to be filled in, since there is only one flow test location and therefore only one  flow test measurement set.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PrincipalFlowTestMeasurementSetRef", DataType="String64")]
@@ -14583,7 +14452,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference (using uid) to the test period(s) whose effect the analysis is being performed on.  In the case of an interference test, this reference is to the test period(s) of the principal flow test location. The test periods of interfering flow test locations are included under the Interfering Flow Test Interval element(s).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PrincipalTestPeriodRef", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("PrincipalTestPeriodRef")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"A reference (using uid) to the test period(s) whose effect the analysis is being performed on.  In the case of an interference test, this reference is to the test period(s) of the principal flow test location. The test periods of interfering flow test locations are included under the Interfering Flow Test Interval element(s).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PrincipalTestPeriodRef", DataType="String64")]
@@ -14598,7 +14467,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Abstract wellbore response model from which the other wellbore response model types are derived.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DescriptionAttribute("Abstract wellbore response model from which the other wellbore response model typ" +
             "es are derived.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("WellboreModel", DataType="WellboreBaseModel")]
@@ -14613,7 +14481,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains the data about a layer model for PTA or Inflow analysis. This class contains common parameters and then model sections each report the parameter values for the pressure transient model used to describe the later. These are: near wellbore, reservoir, and boundary sections. Example: closed reservoir boundary section model will report 4 distances to boundaries.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("LayerModel", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute("LayerModel")]
         [System.ComponentModel.DescriptionAttribute(@"Contains the data about a layer model for PTA or Inflow analysis. This class contains common parameters and then model sections each report the parameter values for the pressure transient model used to describe the later. These are: near wellbore, reservoir, and boundary sections. Example: closed reservoir boundary section model will report 4 distances to boundaries.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("LayerModel", DataType="LayerModel")]
         public LayerModel[] LayerModel {
@@ -14627,7 +14495,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An enum of which phases are being analysed by this analysis (i.e., single phase or multi-phase analyses).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("An enum of which phases are being analysed by this analysis (i.e., single phase o" +
             "r multi-phase analyses).")]
@@ -14643,7 +14510,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Enum for gas or multiphase pseudo pressure analyses using pressure transforms. If pseudo pressure, then further details on the kind of pseudo pressure will be found in the Pseudo Pressure Effect Applied element.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum for gas or multiphase pseudo pressure analyses using pressure transforms. If" +
             " pseudo pressure, then further details on the kind of pseudo pressure will be fo" +
@@ -14660,7 +14526,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Recurring enum used to list all the transforms which have been included in the pseudo pressure transform. If "Other" is selected, a comment should be used to explain.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         [System.ComponentModel.DescriptionAttribute("Recurring enum used to list all the transforms which have been included in the ps" +
             "eudo pressure transform. If \"Other\" is selected, a comment should be used to exp" +
             "lain.")]
@@ -14687,7 +14552,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Enum for gas pseudo time analyses using time transforms.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum for gas pseudo time analyses using time transforms.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeNonLinearTransformKind", DataType="TimeNonLinearTransformKind")]
@@ -14702,7 +14566,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Textual description about the value of this field.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Textual description about the value of this field.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -14716,7 +14579,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Analysis", DataType="AbstractAnalysis")]
         public AbstractAnalysis Analysis {
             get {
@@ -14729,7 +14591,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Measurements pertaining to the interfering flow, in the case of an interference test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("InterferingFlowTestInterval", Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute("InterferingFlowTestInterval")]
         [System.ComponentModel.DescriptionAttribute("Measurements pertaining to the interfering flow, in the case of an interference t" +
             "est.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InterferingFlowTestInterval", DataType="InterferingFlowTestInterval")]
@@ -14743,7 +14605,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("CompressibilityParameters", DataType="CompressibilityParameters")]
         public CompressibilityParameters CompressibilityParameters {
             get {
@@ -14755,13 +14616,17 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity", Order=20)]
-        public DataObjectReference FlowTestActivity1 {
+        /// <summary>Superclass of possible flow test activities: drill stem, production transient, interwell, and others.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Superclass of possible flow test activities: drill stem, production transient, in" +
+            "terwell, and others.")]
+        [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
+        public DataObjectReference FlowTestActivity {
             get {
-                return this.flowTestActivity1Field;
+                return this.flowTestActivityField;
             }
             set {
-                this.flowTestActivity1Field = value;
+                this.flowTestActivityField = value;
             }
         }
     }
@@ -23631,7 +23496,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The software used to generate  the fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The software used to generate  the fluid characterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ApplicationSource", DataType="ApplicationInfo")]
         public ApplicationInfo ApplicationSource {
@@ -23645,7 +23509,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The software which is the consumer of the fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ApplicationTarget", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("ApplicationTarget")]
         [System.ComponentModel.DescriptionAttribute("The software which is the consumer of the fluid characterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ApplicationTarget", DataType="ApplicationInfo")]
         public ApplicationInfo[] ApplicationTarget {
@@ -23659,7 +23523,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The kind of fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The kind of fluid characterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidCharacterizationType", DataType="String64")]
@@ -23674,7 +23537,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The intended usage of the fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The intended usage of the fluid characterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IntendedUsage", DataType="String64")]
@@ -23689,7 +23551,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to a rock fluid unit feature (a RESQML feature).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("Reference to a rock fluid unit feature (a RESQML feature).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("RockFluidUnitFeature", DataType="DataObjectReference")]
         public DataObjectReference RockFluidUnitFeature {
@@ -23703,7 +23564,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The standard temperature and pressure used for the representation of this fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The standard temperature and pressure used for the representation of this fluid c" +
             "haracterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StandardConditions", DataType="AbstractTemperaturePressure")]
@@ -23718,7 +23578,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to the fluid analysis tests which were the source data for this fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FluidCharacterizationSource", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("FluidCharacterizationSource")]
         [System.ComponentModel.DescriptionAttribute("Reference to the fluid analysis tests which were the source data for this fluid c" +
             "haracterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidCharacterizationSource", DataType="FluidCharacterizationSource")]
@@ -23733,7 +23593,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The fluid component catalog for this fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("The fluid component catalog for this fluid characterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidComponentCatalog", DataType="FluidComponentCatalog")]
         public FluidComponentCatalog FluidComponentCatalog {
@@ -23747,7 +23606,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The model used to generate the fluid characterization.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FluidCharacterizationModel", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("FluidCharacterizationModel")]
         [System.ComponentModel.DescriptionAttribute("The model used to generate the fluid characterization.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidCharacterizationModel", DataType="FluidCharacterizationModel")]
         public FluidCharacterizationModel[] FluidCharacterizationModel {
@@ -23761,7 +23620,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The collection of fluid characterization table formats.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FluidCharacterizationTableFormat", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("FluidCharacterizationTableFormat")]
         [System.ComponentModel.DescriptionAttribute("The collection of fluid characterization table formats.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidCharacterizationTableFormat", DataType="FluidCharacterizationTableFormat")]
         public FluidCharacterizationTableFormat[] FluidCharacterizationTableFormat {
@@ -23775,7 +23634,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Remarks and comments about this data item.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Remarks and comments about this data item.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -23789,7 +23647,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSystem", DataType="DataObjectReference")]
         public DataObjectReference FluidSystem {
             get {
@@ -26975,7 +26832,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The standard temperature and pressure used for the representation of this fluid system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The standard temperature and pressure used for the representation of this fluid s" +
             "ystem.")]
@@ -26991,7 +26847,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The kind of reservoir fluid for this fluid system. Enum. See reservoir fluid kind.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The kind of reservoir fluid for this fluid system. Enum. See reservoir fluid kind" +
             ".")]
@@ -27007,7 +26862,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The phases present for this fluid system. Enum. See phase present.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("The phases present for this fluid system. Enum. See phase present.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PhasesPresent", DataType="PhasePresent")]
         public PhasePresent PhasesPresent {
@@ -27032,7 +26886,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The reservoir life cycle state for this fluid system. Enum. See reservoir life cycle state.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("The reservoir life cycle state for this fluid system. Enum. See reservoir life cy" +
             "cle state.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReservoirLifeCycleState", DataType="ReservoirLifeCycleState")]
@@ -27058,7 +26911,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to a RockFluidUnitFeature (a RESQML data object).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("RockFluidUnitFeature", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("RockFluidUnitFeature")]
         [System.ComponentModel.DescriptionAttribute("Reference to a RockFluidUnitFeature (a RESQML data object).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("RockFluidUnitFeature", DataType="DataObjectReference")]
         public DataObjectReference[] RockFluidUnitFeature {
@@ -27072,7 +26925,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The saturation (or bubble point) pressure for the fluid system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The saturation (or bubble point) pressure for the fluid system.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SaturationPressure", DataType="SaturationPressure")]
         public SaturationPressure SaturationPressure {
@@ -27086,7 +26938,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The solution gas-oil ratio for this fluid system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The solution gas-oil ratio for this fluid system.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SolutionGOR", DataType="VolumePerVolumeMeasure")]
@@ -27101,7 +26952,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Remarks and comments about this data item.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Remarks and comments about this data item.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -27116,7 +26966,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Stock tank oil (STO).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("Stock tank oil (STO).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StockTankOil", DataType="StockTankOil")]
         public StockTankOil StockTankOil {
@@ -27130,7 +26979,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Natural gas.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("Natural gas.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("NaturalGas", DataType="NaturalGas")]
         public NaturalGas NaturalGas {
@@ -27144,7 +26992,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The water in the formation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DescriptionAttribute("The water in the formation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FormationWater", DataType="FormationWater")]
         public FormationWater FormationWater {
@@ -27285,7 +27132,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date the analysis was requested.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date the analysis was requested.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("RequestDate", DataType="date")]
         public System.DateTime RequestDate {
@@ -27310,7 +27157,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The description about the analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("The description about the analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AnalysisDescription", DataType="String2000")]
@@ -27325,7 +27171,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The purpose of this analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("The purpose of this analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AnalysisPurpose", DataType="String2000")]
@@ -27340,7 +27185,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The location site of the analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("The location site of the analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AnalysisSite", DataType="String2000")]
@@ -27355,7 +27199,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the analyst or user who is responsible for the results.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of the analyst or user who is responsible for the results.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("LabContact", DataType="String64")]
@@ -27370,7 +27213,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The standard temperature and pressure used for the representation of this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The standard temperature and pressure used for the representation of this fluid a" +
             "nalysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StandardConditions", DataType="AbstractTemperaturePressure")]
@@ -27385,7 +27227,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Enum for the quality of this analysis.  See sample quality.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum for the quality of this analysis.  See sample quality.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AnalysisQuality", DataType="SampleQuality")]
@@ -27400,7 +27241,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Remarks and comments about this data item.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Remarks and comments about this data item.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -27415,7 +27255,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Sample contaminant information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("SampleContaminant", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("SampleContaminant")]
         [System.ComponentModel.DescriptionAttribute("Sample contaminant information.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SampleContaminant", DataType="SampleContaminant")]
         public SampleContaminant[] SampleContaminant {
@@ -27428,7 +27268,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSample", DataType="DataObjectReference")]
         public DataObjectReference FluidSample {
@@ -27442,7 +27281,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Fluid analysis report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FluidAnalysisReport", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute("FluidAnalysisReport")]
         [System.ComponentModel.DescriptionAttribute("Fluid analysis report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidAnalysisReport", DataType="FluidAnalysisReport")]
         public FluidAnalysisReport[] FluidAnalysisReport {
@@ -27999,7 +27838,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Water analysis test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("WaterAnalysisTest", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("WaterAnalysisTest")]
         [System.ComponentModel.DescriptionAttribute("Water analysis test.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("WaterAnalysisTest", DataType="WaterAnalysisTest")]
         public WaterAnalysisTest[] WaterAnalysisTest {
@@ -28013,7 +27852,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Sample integrity and preparation information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("Sample integrity and preparation information.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SampleIntegrityAndPreparation", DataType="SampleIntegrityAndPreparation")]
         public SampleIntegrityAndPreparation SampleIntegrityAndPreparation {
@@ -28027,7 +27865,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Water sample component.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("WaterSampleComponent", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("WaterSampleComponent")]
         [System.ComponentModel.DescriptionAttribute("Water sample component.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("WaterSampleComponent", DataType="WaterSampleComponent")]
         public WaterSampleComponent[] WaterSampleComponent {
@@ -29513,7 +29351,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The fluid component catalog for this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The fluid component catalog for this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidComponentCatalog", DataType="FluidComponentCatalog")]
         public FluidComponentCatalog FluidComponentCatalog {
@@ -29527,7 +29364,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The sample integrity and preparation procedure for this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("The sample integrity and preparation procedure for this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SampleIntegrityAndPreparation", DataType="SampleIntegrityAndPreparation")]
         public SampleIntegrityAndPreparation SampleIntegrityAndPreparation {
@@ -29541,7 +29377,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An atmospheric flash test and compositional analysis test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("AtmosphericFlashTestAndCompositionalAnalysis", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("AtmosphericFlashTestAndCompositionalAnalysis")]
         [System.ComponentModel.DescriptionAttribute("An atmospheric flash test and compositional analysis test within this fluid analy" +
             "sis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AtmosphericFlashTestAndCompositionalAnalysis", DataType="AtmosphericFlashTestAndCompositionalAnalysis")]
@@ -29556,7 +29392,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A constant composition expansion test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ConstantCompositionExpansionTest", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("ConstantCompositionExpansionTest")]
         [System.ComponentModel.DescriptionAttribute("A constant composition expansion test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ConstantCompositionExpansionTest", DataType="ConstantCompositionExpansionTest")]
         public ConstantCompositionExpansionTest[] ConstantCompositionExpansionTest {
@@ -29570,7 +29406,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A saturation test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("SaturationTest", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("SaturationTest")]
         [System.ComponentModel.DescriptionAttribute("A saturation test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SaturationTest", DataType="SaturationTest")]
         public SaturationTest[] SaturationTest {
@@ -29584,7 +29420,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A differential liberation test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("DifferentialLiberationTest", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("DifferentialLiberationTest")]
         [System.ComponentModel.DescriptionAttribute("A differential liberation test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DifferentialLiberationTest", DataType="DifferentialLiberationTest")]
         public DifferentialLiberationTest[] DifferentialLiberationTest {
@@ -29598,7 +29434,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A constant volume depletion test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ConstantVolumeDepletionTest", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("ConstantVolumeDepletionTest")]
         [System.ComponentModel.DescriptionAttribute("A constant volume depletion test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ConstantVolumeDepletionTest", DataType="ConstantVolumeDepletionTest")]
         public ConstantVolumeDepletionTest[] ConstantVolumeDepletionTest {
@@ -29612,7 +29448,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A separator test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("SeparatorTest", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("SeparatorTest")]
         [System.ComponentModel.DescriptionAttribute("A separator test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SeparatorTest", DataType="FluidSeparatorTest")]
         public FluidSeparatorTest[] SeparatorTest {
@@ -29626,7 +29462,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A transport test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("TransportTest", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("TransportTest")]
         [System.ComponentModel.DescriptionAttribute("A transport test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TransportTest", DataType="OtherMeasurementTest")]
         public OtherMeasurementTest[] TransportTest {
@@ -29640,7 +29476,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A vapor liquid equilibrium test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("VaporLiquidEquilibriumTest", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("VaporLiquidEquilibriumTest")]
         [System.ComponentModel.DescriptionAttribute("A vapor liquid equilibrium test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("VaporLiquidEquilibriumTest", DataType="VaporLiquidEquilibriumTest")]
         public VaporLiquidEquilibriumTest[] VaporLiquidEquilibriumTest {
@@ -29654,7 +29490,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A swelling test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("SwellingTest", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute("SwellingTest")]
         [System.ComponentModel.DescriptionAttribute("A swelling test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SwellingTest", DataType="SwellingTest")]
         public SwellingTest[] SwellingTest {
@@ -29668,7 +29504,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A slim tube test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("SlimTubeTest", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute("SlimTubeTest")]
         [System.ComponentModel.DescriptionAttribute("A slim tube test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SlimTubeTest", DataType="SlimTubeTest")]
         public SlimTubeTest[] SlimTubeTest {
@@ -29682,7 +29518,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A multiple contact miscibility test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("MultipleContactMiscibilityTest", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("MultipleContactMiscibilityTest")]
         [System.ComponentModel.DescriptionAttribute("A multiple contact miscibility test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MultipleContactMiscibilityTest", DataType="MultipleContactMiscibilityTest")]
         public MultipleContactMiscibilityTest[] MultipleContactMiscibilityTest {
@@ -29696,7 +29532,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An stock tank oil analysis within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("STOAnalysis", Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute("STOAnalysis")]
         [System.ComponentModel.DescriptionAttribute("An stock tank oil analysis within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("STOAnalysis", DataType="STOAnalysis")]
         public STOAnalysis[] STOAnalysis {
@@ -29710,7 +29546,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An interfacial tension test within this fluid analysis.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("InterfacialTensionTest", Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute("InterfacialTensionTest")]
         [System.ComponentModel.DescriptionAttribute("An interfacial tension test within this fluid analysis.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InterfacialTensionTest", DataType="InterfacialTensionTest")]
         public InterfacialTensionTest[] InterfacialTensionTest {
@@ -36322,7 +36158,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The kind of sample. Enum.  See fluid sample kind.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The kind of sample. Enum.  See fluid sample kind.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SampleKind", DataType="FluidSampleKind")]
         public FluidSampleKind SampleKind {
@@ -36347,7 +36182,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to a RockFluidUnitFeature (a RESQML feature).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("Reference to a RockFluidUnitFeature (a RESQML feature).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("RockFluidUnitFeature", DataType="DataObjectReference")]
         public DataObjectReference RockFluidUnitFeature {
@@ -36361,7 +36195,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Boolean to state whether the sample is representative or not.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("Boolean to state whether the sample is representative or not.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Representative", DataType="boolean")]
         public bool Representative {
@@ -36386,7 +36219,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The sample disposition, if any.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The sample disposition, if any.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SampleDisposition", DataType="String64")]
@@ -36401,7 +36233,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Remarks and comments about this data item.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Remarks and comments about this data item.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -36416,7 +36247,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to the fluid sample acquisition within a fluid sample acquisition job which acquired this fluid sample.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("Reference to the fluid sample acquisition within a fluid sample acquisition job w" +
             "hich acquired this fluid sample.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSampleAcquisitionJobSource", DataType="FluidSampleAcquisitionJobSource")]
@@ -36431,7 +36261,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Fluid sample custody history event.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FluidSampleChainOfCustodyEvent", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("FluidSampleChainOfCustodyEvent")]
         [System.ComponentModel.DescriptionAttribute("Fluid sample custody history event.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSampleChainOfCustodyEvent", DataType="FluidSampleChainOfCustodyEvent")]
         public FluidSampleChainOfCustodyEvent[] FluidSampleChainOfCustodyEvent {
@@ -36444,7 +36274,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSystem", DataType="DataObjectReference")]
         public DataObjectReference FluidSystem {
             get {
@@ -36456,7 +36285,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OriginalSampleContainer", DataType="DataObjectReference")]
         public DataObjectReference OriginalSampleContainer {
             get {
@@ -36469,7 +36297,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A sample recombination.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("A sample recombination.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SampleRecombinationSpecification", DataType="SampleRecombinationSpecification")]
         public SampleRecombinationSpecification SampleRecombinationSpecification {
@@ -37065,11 +36892,11 @@ namespace Energistics.Generator.PRODML210 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.1")]
     public partial class FluidSampleAcquisitionJob : AbstractObject {
         
-        private System.DateTime startTimeField;
+        private Energistics.DataAccess.Timestamp startTimeField;
         
         private bool startTimeFieldSpecified;
         
-        private System.DateTime endTimeField;
+        private Energistics.DataAccess.Timestamp endTimeField;
         
         private bool endTimeFieldSpecified;
         
@@ -37083,10 +36910,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date when fluid acquisition started.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The date when fluid acquisition started.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartTime", DataType="TimeStamp")]
-        public System.DateTime StartTime {
+        public Energistics.DataAccess.Timestamp StartTime {
             get {
                 return this.startTimeField;
             }
@@ -37107,9 +36933,8 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndTime", DataType="TimeStamp")]
-        public System.DateTime EndTime {
+        public Energistics.DataAccess.Timestamp EndTime {
             get {
                 return this.endTimeField;
             }
@@ -37130,7 +36955,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ServiceCompany", DataType="BusinessAssociate")]
         public BusinessAssociate ServiceCompany {
             get {
@@ -37142,7 +36966,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSystem", DataType="DataObjectReference")]
         public DataObjectReference FluidSystem {
@@ -37156,7 +36979,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Information common to any fluid sample taken. Additional details can be captured in related data object depending on the where the sample was taken, for example: downhole, separator, wellhead, of the formation using a wireline formation tester (WFT).   If the tool used to capture samples has multiple containers, each container has a separate instance of fluid sample acquisition.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FluidSampleAcquisition", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("FluidSampleAcquisition")]
         [System.ComponentModel.DescriptionAttribute(@"Information common to any fluid sample taken. Additional details can be captured in related data object depending on the where the sample was taken, for example: downhole, separator, wellhead, of the formation using a wireline formation tester (WFT).   If the tool used to capture samples has multiple containers, each container has a separate instance of fluid sample acquisition.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSampleAcquisition", DataType="FluidSampleAcquisition")]
         public FluidSampleAcquisition[] FluidSampleAcquisition {
@@ -37169,7 +36992,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestJob", DataType="DataObjectReference")]
         public DataObjectReference FlowTestJob {
             get {
@@ -37977,11 +37799,11 @@ namespace Energistics.Generator.PRODML210 {
         
         private BusinessAssociate serviceCompanyField;
         
-        private System.DateTime startTimeField;
+        private Energistics.DataAccess.Timestamp startTimeField;
         
         private bool startTimeFieldSpecified;
         
-        private System.DateTime endTimeField;
+        private Energistics.DataAccess.Timestamp endTimeField;
         
         private bool endTimeFieldSpecified;
         
@@ -37996,7 +37818,6 @@ namespace Energistics.Generator.PRODML210 {
         private DataObjectReference[] pressureTransientAnalysisField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ServiceCompany", DataType="BusinessAssociate")]
         public BusinessAssociate ServiceCompany {
             get {
@@ -38008,9 +37829,8 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartTime", DataType="TimeStamp")]
-        public System.DateTime StartTime {
+        public Energistics.DataAccess.Timestamp StartTime {
             get {
                 return this.startTimeField;
             }
@@ -38031,9 +37851,8 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndTime", DataType="TimeStamp")]
-        public System.DateTime EndTime {
+        public Energistics.DataAccess.Timestamp EndTime {
             get {
                 return this.endTimeField;
             }
@@ -38055,7 +37874,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Superclass of possible flow test activities: drill stem, production transient, interwell, and others.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity")]
         [System.ComponentModel.DescriptionAttribute("Superclass of possible flow test activities: drill stem, production transient, in" +
             "terwell, and others.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
@@ -38069,7 +37888,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FluidSampleAcquisitionJob", DataType="DataObjectReference")]
         public DataObjectReference FluidSampleAcquisitionJob {
             get {
@@ -38082,7 +37900,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Superclass of deconvolution pressure and flowrate measurements, test and method information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PtaDeconvolution", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("PtaDeconvolution")]
         [System.ComponentModel.DescriptionAttribute("Superclass of deconvolution pressure and flowrate measurements, test and method i" +
             "nformation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PtaDeconvolution", DataType="DataObjectReference")]
@@ -38097,7 +37915,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Superclass defining data acquisition for the flow test, input and pre-processing data</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PtaDataPreProcess", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("PtaDataPreProcess")]
         [System.ComponentModel.DescriptionAttribute("Superclass defining data acquisition for the flow test, input and pre-processing " +
             "data")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PtaDataPreProcess", DataType="DataObjectReference")]
@@ -38112,7 +37930,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains the data about the analysis and the model used, in a PTA Analysis.  An Analysis may be a pressure transient (PTA), rate transient (RTA) or Test Design, depending on which data is supplied. This object contains common parameters. The Analysis has one or more Test Location Analysis elements and each reports the model details for one Test Location.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PressureTransientAnalysis", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("PressureTransientAnalysis")]
         [System.ComponentModel.DescriptionAttribute(@"Contains the data about the analysis and the model used, in a PTA Analysis.  An Analysis may be a pressure transient (PTA), rate transient (RTA) or Test Design, depending on which data is supplied. This object contains common parameters. The Analysis has one or more Test Location Analysis elements and each reports the model details for one Test Location.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PressureTransientAnalysis", DataType="DataObjectReference")]
         public DataObjectReference[] PressureTransientAnalysis {
@@ -38164,7 +37982,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The make of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The make of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Make", DataType="String64")]
@@ -38179,7 +37996,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The model of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The model of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Model", DataType="String64")]
@@ -38194,7 +38010,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The serial number of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The serial number of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("SerialNumber", DataType="String64")]
@@ -38209,7 +38024,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The reference ID  of a bottle or a chamber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The reference ID  of a bottle or a chamber.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("BottleID", DataType="String64")]
@@ -38224,7 +38038,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The volume of a bottle or chamber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("The volume of a bottle or chamber.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Capacity", DataType="VolumeMeasure")]
         public VolumeMeasure Capacity {
@@ -38238,7 +38051,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The owner of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The owner of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Owner", DataType="String64")]
@@ -38253,7 +38065,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The kind of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The kind of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Kind", DataType="String64")]
@@ -38268,7 +38079,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The metallurgy of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The metallurgy of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Metallurgy", DataType="String64")]
@@ -38283,7 +38093,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The pressure rating of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("The pressure rating of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PressureRating", DataType="PressureMeasure")]
         public PressureMeasure PressureRating {
@@ -38297,7 +38106,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The temperature rating of this fluid sample container.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("The temperature rating of this fluid sample container.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TemperatureRating", DataType="ThermodynamicTemperatureMeasure")]
         public ThermodynamicTemperatureMeasure TemperatureRating {
@@ -38311,7 +38119,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date when this fluid sample container was last inspected.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date when this fluid sample container was last inspected.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("LastInspectionDate", DataType="date")]
         public System.DateTime LastInspectionDate {
@@ -38336,7 +38144,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The reference uid of an attached object which stores the transport certificate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [System.ComponentModel.DescriptionAttribute("The reference uid of an attached object which stores the transport certificate.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TransportCertificateReference", DataType="DataObjectReference")]
         public DataObjectReference TransportCertificateReference {
@@ -38350,7 +38157,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Remarks and comments about this data item.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Remarks and comments about this data item.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Remark", DataType="String2000")]
@@ -38376,7 +38182,7 @@ namespace Energistics.Generator.PRODML210 {
         private ReportingHierarchyNode[] reportingNodeField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReportingNode", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("ReportingNode")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReportingNode", DataType="ReportingHierarchyNode")]
         public ReportingHierarchyNode[] ReportingNode {
@@ -38479,7 +38285,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The type of reporting entity.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of reporting entity.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Kind", DataType="ReportingEntityKind")]
@@ -38494,7 +38299,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>If the Reporting Entity is a facility, then this element can be used to include that Facility object.  In later versions of PRODML, this may be extended to a full description.  Currently it is restricted to having a type.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("If the Reporting Entity is a facility, then this element can be used to include t" +
             "hat Facility object.  In later versions of PRODML, this may be extended to a ful" +
             "l description.  Currently it is restricted to having a type.")]
@@ -38510,7 +38314,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>If the Reporting Entity is a subsurface entity such as well, wellbore, well completion, wellbore completion, contact interval or rock-fluid unit feature which can be described with a specific Energistics object, then this element can be used to reference that object.  This uses a Data Object reference.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute(@"If the Reporting Entity is a subsurface entity such as well, wellbore, well completion, wellbore completion, contact interval or rock-fluid unit feature which can be described with a specific Energistics object, then this element can be used to reference that object.  This uses a Data Object reference.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AssociatedObject", DataType="DataObjectReference")]
         public DataObjectReference AssociatedObject {
@@ -38523,7 +38326,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Alias", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("Alias")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Alias", DataType="ObjectAlias")]
         public ObjectAlias[] Alias {
             get {
@@ -38657,7 +38460,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Enum for the kind of facility represented by this Facility.  Extensible for additional kinds.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum for the kind of facility represented by this Facility.  Extensible for addit" +
             "ional kinds.")]
@@ -38685,9 +38487,9 @@ namespace Energistics.Generator.PRODML210 {
         
         private bool emptySetFlagField;
         
-        private System.DateTime timeStartField;
+        private Energistics.DataAccess.Timestamp timeStartField;
         
-        private System.DateTime timeEndField;
+        private Energistics.DataAccess.Timestamp timeEndField;
         
         private bool timeEndFieldSpecified;
         
@@ -38709,7 +38511,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Set to 'true' when a measurement is included but is known to be bad (i.e., all the values are null). Use this flag in situations when you want to keep track of the fact that a measurement was generated/received, however the measurement was bad.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Set to \'true\' when a measurement is included but is known to be bad (i.e., all th" +
             "e values are null). Use this flag in situations when you want to keep track of t" +
@@ -38727,7 +38528,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Set to 'true' when the measurement set is empty (only the header is provided). Use this flag for situations when the instrument box attempts to get a reading, but nothing is generated (fiber is disconnected, for example).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Set to \'true\' when the measurement set is empty (only the header is provided). Us" +
             "e this flag for situations when the instrument box attempts to get a reading, bu" +
@@ -38744,11 +38544,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Time when the installed system began taking the measurement.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Time when the installed system began taking the measurement.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeStart", DataType="TimeStamp")]
-        public System.DateTime TimeStart {
+        public Energistics.DataAccess.Timestamp TimeStart {
             get {
                 return this.timeStartField;
             }
@@ -38759,10 +38558,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Time when the installed system finished taking the measurement.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("Time when the installed system finished taking the measurement.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeEnd", DataType="TimeStamp")]
-        public System.DateTime TimeEnd {
+        public Energistics.DataAccess.Timestamp TimeEnd {
             get {
                 return this.timeEndField;
             }
@@ -38784,7 +38582,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Length of time that the instrument box has been up and running since its last power up.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("Length of time that the instrument box has been up and running since its last pow" +
             "er up.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeSinceInstrumentStartup", DataType="TimeMeasure")]
@@ -38799,7 +38596,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>This supports user-defined "tags" (in the form of text strings) to be attached to the measurement. Example: to indicate other operations under way at the time (e.g., start of injection).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("MeasurementTags", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("MeasurementTags")]
         [System.ComponentModel.DescriptionAttribute("This supports user-defined \"tags\" (in the form of text strings) to be attached to" +
             " the measurement. Example: to indicate other operations under way at the time (e" +
             ".g., start of injection).")]
@@ -38815,7 +38612,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Reference to the installed system used to take the measurement (combination of instrument box and optical path).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Reference to the installed system used to take the measurement (combination of in" +
             "strument box and optical path).")]
@@ -38831,7 +38627,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Enum. The configuration of the optical path. This may be varied from measurement to measurement, independent of the fiber path network.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum. The configuration of the optical path. This may be varied from measurement " +
             "to measurement, independent of the fiber path network.")]
@@ -38847,7 +38642,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains details about the facility being surveyed, such as name, geographical data, etc.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Contains details about the facility being surveyed, such as name, geographical da" +
             "ta, etc.")]
@@ -38863,7 +38657,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Diagnostic information generated by the instrument box at the time the measurement was taken.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("DiagnosticParameters", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("DiagnosticParameters")]
         [System.ComponentModel.DescriptionAttribute("Diagnostic information generated by the instrument box at the time the measuremen" +
             "t was taken.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DiagnosticParameters", DataType="ExtensionNameValue")]
@@ -38878,7 +38672,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Header data for raw (measured) traces collections</summary>
-        [System.Xml.Serialization.XmlElementAttribute("MeasurementTrace", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute("MeasurementTrace")]
         [System.ComponentModel.DescriptionAttribute("Header data for raw (measured) traces collections")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MeasurementTrace", DataType="DtsMeasurementTrace")]
         public DtsMeasurementTrace[] MeasurementTrace {
@@ -38891,7 +38685,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InterpretationLog", DataType="DtsInterpretationLogSet")]
         public DtsInterpretationLogSet InterpretationLog {
             get {
@@ -39855,7 +39648,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identification tag for the instrument box. A serial number is a type of identi" +
             "fication tag however some tags contain many pieces of information. This structur" +
@@ -39872,7 +39664,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or use of the box in the wellbore, or other system. This element should be used only if an appropriate parameter is not available as an element, or in the calibration operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Parameter", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
         [System.ComponentModel.DescriptionAttribute(@"Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or use of the box in the wellbore, or other system. This element should be used only if an appropriate parameter is not available as an element, or in the calibration operation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Parameter", DataType="ExtensionNameValue")]
         public ExtensionNameValue[] Parameter {
@@ -39886,7 +39678,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Identifies the facility to which an instrument is attached.  Type is the PRODML Common Facility Identifier.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("Identifies the facility to which an instrument is attached.  Type is the PRODML C" +
             "ommon Facility Identifier.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FacilityIdentifier", DataType="FacilityIdentifier")]
@@ -39901,7 +39692,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The general data of an instrument, including vendor information, in the installed system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The general data of an instrument, including vendor information, in the installed" +
             " system.")]
@@ -39917,7 +39707,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Firmware version of the DAS Instrument box. If not known, set to “UNKNOWN”.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Firmware version of the DAS Instrument box. If not known, set to “UNKNOWN”.")]
@@ -39933,7 +39722,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description of the patch cord connecting the fiber optic path to the DAS instrument box connector.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("Description of the patch cord connecting the fiber optic path to the DAS instrume" +
             "nt box connector.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PatchCord", DataType="DtsPatchCord")]
@@ -39948,7 +39736,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An identification tag for the instrument box. A serial number is a type of identification tag however some tags contain many pieces of information. This structure just identifies the tag and does not describe the contents.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("An identification tag for the instrument box. A serial number is a type of identi" +
             "fication tag however some tags contain many pieces of information. This structur" +
@@ -41771,7 +41558,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private long startLocusIndexField;
         
-        private System.DateTime measurementStartTimeField;
+        private Energistics.DataAccess.Timestamp measurementStartTimeField;
         
         private bool triggeredMeasurementField;
         
@@ -41787,7 +41574,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A UUID that identifies the DAS acquisition job, which IS NOT the same as the UUID that identifies an instance of a DasAcquisition data object. For example, an acquisition job initially has a raw data set. When you transfer that data, the DAS acquisition data object (consisting of the raw data) has a UUID to identify it, and it has the acquisition job number (AcquistionId, which is also a UUID).  Later, an FBE data set is derived from the raw data; the DAS acquisition data object for the FBE data will have a different UUID than the DAS acquisition data object raw data set, but it will have the SAME AcquistionId, because the FBE data is derived from the raw data of the same acquisition job.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [System.ComponentModel.DescriptionAttribute(@"A UUID that identifies the DAS acquisition job, which IS NOT the same as the UUID that identifies an instance of a DasAcquisition data object. For example, an acquisition job initially has a raw data set. When you transfer that data, the DAS acquisition data object (consisting of the raw data) has a UUID to identify it, and it has the acquisition job number (AcquistionId, which is also a UUID).  Later, an FBE data set is derived from the raw data; the DAS acquisition data object for the FBE data will have a different UUID than the DAS acquisition data object raw data set, but it will have the SAME AcquistionId, because the FBE data is derived from the raw data of the same acquisition job.")]
@@ -41803,7 +41589,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Free format description of the acquired DAS data.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Free format description of the acquired DAS data.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AcquisitionDescription", DataType="String2000")]
@@ -41818,7 +41603,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description of the fiber optical path. A fiber optical path consists of a series of fibers, connectors, etc. together forming the path for the light pulse emitted from the measurement instrument. If no optical path description is available, then the service provider should supply an optical path with a single segment of sufficient length to fit the optical data acquired. The length of the segment should be able to fit all the acquired loci.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"Description of the fiber optical path. A fiber optical path consists of a series of fibers, connectors, etc. together forming the path for the light pulse emitted from the measurement instrument. If no optical path description is available, then the service provider should supply an optical path with a single segment of sufficient length to fit the optical data acquired. The length of the segment should be able to fit all the acquired loci.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OpticalPath", DataType="DataObjectReference")]
@@ -41833,7 +41617,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description of the measurement instrument. Often referred to as interrogator unit or IU. If the instrument box is not known, the name and title of the box may be set to “UNKNOWN”.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Description of the measurement instrument. Often referred to as interrogator unit" +
             " or IU. If the instrument box is not known, the name and title of the box may be" +
@@ -41850,7 +41633,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>This is a human-readable name for the facility or facilities that this acquisition is measuring. If the facility name is not available, set one facility with the name “UNKNOWN”.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FacilityId", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("FacilityId")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("This is a human-readable name for the facility or facilities that this acquisitio" +
             "n is measuring. If the facility name is not available, set one facility with the" +
@@ -41867,7 +41650,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description of the vendor providing the DAS data acquisition service.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("Description of the vendor providing the DAS data acquisition service.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ServiceCompanyDetails", DataType="BusinessAssociate")]
         public BusinessAssociate ServiceCompanyDetails {
@@ -41881,7 +41663,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The rate at which the interrogator unit interrogates the fiber sensor. For most interrogators, this element is informally known as the ‘pulse rate’.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("The rate at which the interrogator unit interrogates the fiber sensor. For most i" +
             "nterrogators, this element is informally known as the ‘pulse rate’.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PulseRate", DataType="FrequencyMeasure")]
@@ -41896,7 +41677,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The width of the ‘pulse’ sent down the fiber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("The width of the ‘pulse’ sent down the fiber.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PulseWidth", DataType="TimeMeasure")]
         public TimeMeasure PulseWidth {
@@ -41910,7 +41690,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The distance (length along the fiber) between pair of pulses used in a dual-pulse or multi-pulse system. This is a distance that the DAS interrogator unit manufacturer designs and implements by hardware or software to affect the interrogator unit spatial resolution.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute(@"The distance (length along the fiber) between pair of pulses used in a dual-pulse or multi-pulse system. This is a distance that the DAS interrogator unit manufacturer designs and implements by hardware or software to affect the interrogator unit spatial resolution.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GaugeLength", DataType="LengthMeasure")]
         public LengthMeasure GaugeLength {
@@ -41924,7 +41703,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The separation between two consecutive ‘spatial sample’ points on the fiber at which the signal is measured. Not to be confused with ‘spatial resolution’.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The separation between two consecutive ‘spatial sample’ points on the fiber at wh" +
             "ich the signal is measured. Not to be confused with ‘spatial resolution’.")]
@@ -41940,7 +41718,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The minimum signal frequency a measurement instrument can provide as specified by the vendor. If the minimum frequency of the instrument is not known, the value should match the minimum frequency in the related raw, FBE, and/or spectrum data arrays.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The minimum signal frequency a measurement instrument can provide as specified by" +
             " the vendor. If the minimum frequency of the instrument is not known, the value " +
@@ -41958,7 +41735,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The maximum signal frequency a measurement instrument can provide as specified by the vendor. This is the Nyquist frequency (or some fraction thereof) of PulseRate. If the maximum frequency of the instrument is not known, the value should match the maximum frequency in the related raw, FBE and/or spectrum data arrays.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The maximum signal frequency a measurement instrument can provide as specified by the vendor. This is the Nyquist frequency (or some fraction thereof) of PulseRate. If the maximum frequency of the instrument is not known, the value should match the maximum frequency in the related raw, FBE and/or spectrum data arrays.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MaximumFrequency", DataType="FrequencyMeasure")]
@@ -41973,7 +41749,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The total number of ‘loci’ (acoustic sample points) acquired by the measurement instrument in a single ‘scan’ of the fiber. If the total number of loci of the instrument is not known, it should be set to a value such that all related raw, FBE, and spectra data can be accommodated.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The total number of ‘loci’ (acoustic sample points) acquired by the measurement instrument in a single ‘scan’ of the fiber. If the total number of loci of the instrument is not known, it should be set to a value such that all related raw, FBE, and spectra data can be accommodated.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("NumberOfLoci", DataType="NonNegativeLong")]
@@ -41988,7 +41763,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The first ‘locus’ acquired by the interrogator unit, where ‘Locus Index 0’ is the acoustic sample point at the connector of the measurement instrument. Set this value to accommodate all related raw, FBE, and spectrum data arrays. If an offset is applied such that the first acoustic sample point is not located at the connector of the measurement instrument, then set this to the locus corresponding to the offset.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The first ‘locus’ acquired by the interrogator unit, where ‘Locus Index 0’ is the acoustic sample point at the connector of the measurement instrument. Set this value to accommodate all related raw, FBE, and spectrum data arrays. If an offset is applied such that the first acoustic sample point is not located at the connector of the measurement instrument, then set this to the locus corresponding to the offset.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartLocusIndex", DataType="long")]
@@ -42003,11 +41777,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The time-date specification of the beginning of a data ‘sample’ in a ‘time series’ in ISO 8601 compatible format. Time zone should be included. Sub-second precision should be included where applicable but not zero-padded. ­This is typically a GPS-locked time measurement. If this is not known, use the earliest timestamp in the related raw, FBE and/or spectrum data arrays. In very rare situations where there is no data array, use 1970-01-01T00;00;00.000000+00:00.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The time-date specification of the beginning of a data ‘sample’ in a ‘time series’ in ISO 8601 compatible format. Time zone should be included. Sub-second precision should be included where applicable but not zero-padded. ­This is typically a GPS-locked time measurement. If this is not known, use the earliest timestamp in the related raw, FBE and/or spectrum data arrays. In very rare situations where there is no data array, use 1970-01-01T00;00;00.000000+00:00.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MeasurementStartTime", DataType="TimeStamp")]
-        public System.DateTime MeasurementStartTime {
+        public Energistics.DataAccess.Timestamp MeasurementStartTime {
             get {
                 return this.measurementStartTimeField;
             }
@@ -42018,7 +41791,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Measurement for an acquisition that requires synchronization between a transmitting source (Tx) and a recording (Rx) measurement system. It must be recorded for every measurement regardless of what application it will serve. If set to true, then the DasRaw group should contain 1 or more RawDataTriggerTime. If set to false, then no such RawDataTriggerTime is expected.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"Measurement for an acquisition that requires synchronization between a transmitting source (Tx) and a recording (Rx) measurement system. It must be recorded for every measurement regardless of what application it will serve. If set to true, then the DasRaw group should contain 1 or more RawDataTriggerTime. If set to false, then no such RawDataTriggerTime is expected.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TriggeredMeasurement", DataType="boolean")]
@@ -42032,7 +41804,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Raw", Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute("Raw")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Raw", DataType="DasRaw")]
         public DasRaw[] Raw {
             get {
@@ -42044,7 +41816,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Custom", DataType="DasCustom")]
         public DasCustom Custom {
             get {
@@ -42056,7 +41827,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FacilityCalibration", Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute("FacilityCalibration")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FacilityCalibration", DataType="FacilityCalibration")]
         public FacilityCalibration[] FacilityCalibration {
             get {
@@ -42068,7 +41839,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Processed", DataType="DasProcessed")]
         public DasProcessed Processed {
             get {
@@ -42080,7 +41850,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ServiceCompanyName", DataType="String64")]
@@ -44678,7 +44447,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>An identification tag for the instrument box. A serial number is a type of identification tag; however, some tags contain many pieces of information. This structure only identifies the tag and does not describe the contents.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("An identification tag for the instrument box. A serial number is a type of identi" +
             "fication tag; however, some tags contain many pieces of information. This struct" +
@@ -44695,7 +44463,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Near distance of the oven from the beginning of the fiber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("Near distance of the oven from the beginning of the fiber.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InternalOvenLocationNear", DataType="LengthMeasure")]
         public LengthMeasure InternalOvenLocationNear {
@@ -44709,7 +44476,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Far distance of the oven from the beginning of the fiber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("Far distance of the oven from the beginning of the fiber.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InternalOvenLocationFar", DataType="LengthMeasure")]
         public LengthMeasure InternalOvenLocationFar {
@@ -44723,7 +44489,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The temperature of the oven.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("The temperature of the oven.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReferenceCoilTemperature", DataType="ThermodynamicTemperatureMeasure")]
         public ThermodynamicTemperatureMeasure ReferenceCoilTemperature {
@@ -44737,7 +44502,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or use of the box in the wellbore or other system. Only use this element if an appropriate parameter is not available as an element or in the calibration operation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Parameter", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
         [System.ComponentModel.DescriptionAttribute(@"Additional parameters to define the instrument box as a piece of equipment. These should not be parameters to define the installation or use of the box in the wellbore or other system. Only use this element if an appropriate parameter is not available as an element or in the calibration operation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Parameter", DataType="ExtensionNameValue")]
         public ExtensionNameValue[] Parameter {
@@ -44751,7 +44516,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The duration of time starting from the initiation of the first temperature measurement until the unit complies with the stated values of the main measurement specifications.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The duration of time starting from the initiation of the first temperature measur" +
             "ement until the unit complies with the stated values of the main measurement spe" +
             "cifications.")]
@@ -44767,7 +44531,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The duration of time from the initial powering on of the instrument until the first temperature measurement is permitted.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("The duration of time from the initial powering on of the instrument until the fir" +
             "st temperature measurement is permitted.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartupTime", DataType="TimeMeasure")]
@@ -44782,7 +44545,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains details about the facility being surveyed, such as name, geographical data, etc.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("Contains details about the facility being surveyed, such as name, geographical da" +
             "ta, etc.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FacilityIdentifier", DataType="FacilityIdentifier")]
@@ -44797,7 +44559,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Calibration parameters vary from vendor to vendor, depending  on the calibration method being used. This is a general type that allows a calibration  date, business associate, and many  name/value pairs.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("InstrumentCalibration", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("InstrumentCalibration")]
         [System.ComponentModel.DescriptionAttribute("Calibration parameters vary from vendor to vendor, depending  on the calibration " +
             "method being used. This is a general type that allows a calibration  date, busin" +
             "ess associate, and many  name/value pairs.")]
@@ -44812,7 +44574,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Instrument", DataType="Instrument")]
         public Instrument Instrument {
@@ -44826,7 +44587,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Information regarding the patch cord used to connect the instrument box to the start of the optical fiber path.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DescriptionAttribute("Information regarding the patch cord used to connect the instrument box to the st" +
             "art of the optical fiber path.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DtsPatchCord", DataType="DtsPatchCord")]
@@ -45029,9 +44789,9 @@ namespace Energistics.Generator.PRODML210 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("PRODML", "2.1")]
     public partial class DtsInstalledSystem : AbstractObject {
         
-        private System.DateTime dateMinField;
+        private Energistics.DataAccess.Timestamp dateMinField;
         
-        private System.DateTime dateMaxField;
+        private Energistics.DataAccess.Timestamp dateMaxField;
         
         private bool dateMaxFieldSpecified;
         
@@ -45053,11 +44813,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and are populated with valid values in a "get" result. That is, all measurements for a well in the specified period defined by the min/max.  For a description of the behavior related to this parameter in WITSML v1.4.1, see the WITSML API Specification appendix on "Special Handling" of growing objects.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The minimum date index contained within the object. The minimum and maximum indexes are server query parameters and are populated with valid values in a ""get"" result. That is, all measurements for a well in the specified period defined by the min/max.  For a description of the behavior related to this parameter in WITSML v1.4.1, see the WITSML API Specification appendix on ""Special Handling"" of growing objects.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DateMin", DataType="TimeStamp")]
-        public System.DateTime DateMin {
+        public Energistics.DataAccess.Timestamp DateMin {
             get {
                 return this.dateMinField;
             }
@@ -45068,10 +44827,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and are populated with valid values in a "get" result.  For a description of the behavior related to this parameter in WITSML v1.4.1, see the WITSML API Specification appendix on "Special Handling" of growing objects.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute(@"The maximum date index contained within the object. The minimum and maximum indexes are server query parameters and are populated with valid values in a ""get"" result.  For a description of the behavior related to this parameter in WITSML v1.4.1, see the WITSML API Specification appendix on ""Special Handling"" of growing objects.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DateMax", DataType="TimeStamp")]
-        public System.DateTime DateMax {
+        public Energistics.DataAccess.Timestamp DateMax {
             get {
                 return this.dateMaxField;
             }
@@ -45093,7 +44851,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The length of the fiber installed in the wellbore.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("The length of the fiber installed in the wellbore.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OpticalPathLength", DataType="LengthMeasure")]
         public LengthMeasure OpticalPathLength {
@@ -45107,7 +44864,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Total light budget available for the installation. This is generally measured in decibels, and indicates the total power loss for two-way travel of the light in the installed fiber.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("Total light budget available for the installation. This is generally measured in " +
             "decibels, and indicates the total power loss for two-way travel of the light in " +
             "the installed fiber.")]
@@ -45134,7 +44890,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference to the optical path data object that is used in this installed system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A reference to the optical path data object that is used in this installed system" +
             ".")]
@@ -45150,7 +44905,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference to the instrument box data object used in this installed system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A reference to the instrument box data object used in this installed system.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InstrumentBox", DataType="DataObjectReference")]
@@ -45165,7 +44919,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Comment about this installed system.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Comment about this installed system.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Comment", DataType="String2000")]
@@ -45180,7 +44933,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains details about the facility being surveyed, such as name, geographical data, etc.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute("Contains details about the facility being surveyed, such as name, geographical da" +
             "ta, etc.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FacilityIdentifier", DataType="FacilityIdentifier")]
@@ -45195,7 +44947,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Calibration parameters vary from vendor to vendor, depending  on the calibration method being used. This is a general type that allows a calibration  date, business associate, and many  name/value pairs.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("DtsCalibration", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("DtsCalibration")]
         [System.ComponentModel.DescriptionAttribute("Calibration parameters vary from vendor to vendor, depending  on the calibration " +
             "method being used. This is a general type that allows a calibration  date, busin" +
             "ess associate, and many  name/value pairs.")]
@@ -45225,7 +44977,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private bool reasonForRunFieldSpecified;
         
-        private System.DateTime dTimRunField;
+        private Energistics.DataAccess.Timestamp dTimRunField;
         
         private string dataInOTDRFileField;
         
@@ -45247,7 +44999,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of this object.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The name of this object.")]
@@ -45263,7 +45014,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The reason the OTDR test was run. Reasons include: - pre-installation, which is before the installation of the fiber  - post-installation, which is used to validate a successful fiber installation  - DTS run, a quality check of the fiber before a DTS run - Other</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute(@"The reason the OTDR test was run. Reasons include: - pre-installation, which is before the installation of the fiber  - post-installation, which is used to validate a successful fiber installation  - DTS run, a quality check of the fiber before a DTS run - Other")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReasonForRun", DataType="OTDRReason")]
         public OTDRReason ReasonForRun {
@@ -45288,11 +45038,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The dateTime of the run.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The dateTime of the run.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimRun", DataType="TimeStamp")]
-        public System.DateTime DTimRun {
+        public Energistics.DataAccess.Timestamp DTimRun {
             get {
                 return this.dTimRunField;
             }
@@ -45303,7 +45052,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference to the external file used to record the OTDR data. Note this file will not be in an Energistics format but likely in a special OTDR format.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the external file used to record the OTDR data. Note this file wil" +
             "l not be in an Energistics format but likely in a special OTDR format.")]
@@ -45319,7 +45067,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A reference to the well log used to record the table of data.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("A reference to the well log used to record the table of data.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OTDRImageFile", DataType="String64")]
@@ -45334,7 +45081,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The point measured along the optical path at which this OTDR survey starts.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The point measured along the optical path at which this OTDR survey starts.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OpticalPathDistanceStart", DataType="LengthMeasure")]
@@ -45349,7 +45095,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The point measured along the optical path at which this OTDR survey ends.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The point measured along the optical path at which this OTDR survey ends.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OpticalPathDistanceEnd", DataType="LengthMeasure")]
@@ -45364,7 +45109,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Enum. The direction of the OTDR survey. "Forward" means "in the same direction as the positive direction along the optical path".</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum. The direction of the OTDR survey. \"Forward\" means \"in the same direction as" +
             " the positive direction along the optical path\".")]
@@ -45380,7 +45124,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The wavelength at which this OTDR survey was carried out.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The wavelength at which this OTDR survey was carried out.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Wavelength", DataType="LengthMeasure")]
@@ -45395,7 +45138,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Information about an OTDR instrument box taht is used to perform OTDR surveys on the optical path.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("Information about an OTDR instrument box taht is used to perform OTDR surveys on " +
             "the optical path.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FiberOTDRInstrumentBox", DataType="FiberOTDRInstrumentBox")]
@@ -45409,7 +45151,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
         public ExtensionNameValue[] ExtensionNameValue1 {
             get {
                 return this.extensionNameValue1Field;
@@ -45421,7 +45163,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contact for the person who performed the OTDR reading</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         [System.ComponentModel.DescriptionAttribute("Contact for the person who performed the OTDR reading")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("MeasurementContact", DataType="BusinessAssociate")]
         public BusinessAssociate MeasurementContact {
@@ -45494,7 +45235,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The list of equipment used in the optical path.  Equipment may be used in the optical path for different periods of time, so this inventory contains all items of equipment which are used at some period of time.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The list of equipment used in the optical path.  Equipment may be used in the opt" +
             "ical path for different periods of time, so this inventory contains all items of" +
@@ -45510,7 +45250,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("OpticalPathNetwork", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("OpticalPathNetwork")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OpticalPathNetwork", DataType="FiberOpticalPathNetwork")]
         public FiberOpticalPathNetwork[] OpticalPathNetwork {
             get {
@@ -45523,7 +45263,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Relates distances measured along the optical path to specific lengths along facilities (wellbores or pipelines).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FacilityMapping", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("FacilityMapping")]
         [System.ComponentModel.DescriptionAttribute("Relates distances measured along the optical path to specific lengths along facil" +
             "ities (wellbores or pipelines).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FacilityMapping", DataType="FiberFacilityMapping")]
@@ -45538,7 +45278,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A zone of the fibre which has defective optical properties (e.g., darkening).</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Defect", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("Defect")]
         [System.ComponentModel.DescriptionAttribute("A zone of the fibre which has defective optical properties (e.g., darkening).")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Defect", DataType="FiberPathDefect")]
         public FiberPathDefect[] Defect {
@@ -45552,7 +45292,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>This records the result arrays along with context information for an Optical Time Domain Reflectometry (OTDR) survey.  The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber.  The actual data values are recorded in a OTDR file and/or image file, which are referenced in subelements.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Otdr", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("Otdr")]
         [System.ComponentModel.DescriptionAttribute(@"This records the result arrays along with context information for an Optical Time Domain Reflectometry (OTDR) survey.  The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber.  The actual data values are recorded in a OTDR file and/or image file, which are referenced in subelements.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Otdr", DataType="DataObjectReference")]
         public DataObjectReference[] Otdr {
@@ -45566,7 +45306,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The vendor who performed the physical deployment</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The vendor who performed the physical deployment")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("InstallingVendor", DataType="BusinessAssociate")]
         public BusinessAssociate InstallingVendor {
@@ -45580,7 +45319,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains details about the facility being surveyed, such as name, geographical data, etc.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("Contains details about the facility being surveyed, such as name, geographical da" +
             "ta, etc.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FacilityIdentifier", DataType="FacilityIdentifier")]
@@ -49583,7 +49321,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private EndpointQualifiedDateTime dTimMaxField;
         
-        private System.DateTime dTimCurrentField;
+        private Energistics.DataAccess.Timestamp dTimCurrentField;
         
         private bool dTimCurrentFieldSpecified;
         
@@ -49623,7 +49361,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the facility which is represented by this report. The name can be qualified by a naming system. This also defines the kind of facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this report. The name can be qua" +
             "lified by a naming system. This also defines the kind of facility.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Installation", DataType="FacilityIdentifierStruct")]
@@ -49638,7 +49375,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ContextFacility", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("ContextFacility")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ContextFacility", DataType="FacilityIdentifierStruct")]
@@ -49653,7 +49390,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The type of report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The type of report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Kind", DataType="String64")]
@@ -49668,7 +49404,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The type of period that is being reported. This value must be consistent with the reporting start and end values.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("The type of period that is being reported. This value must be consistent with the" +
             " reporting start and end values.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PeriodKind", DataType="ReportingDurationKind")]
@@ -49694,7 +49429,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The minimum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute(@"The minimum time index contained within the report. For the purposes of this parameter, a ""period"" or ""facility parameter"" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a ""get"" result.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimMin", DataType="EndpointQualifiedDateTime")]
         public EndpointQualifiedDateTime DTimMin {
@@ -49708,7 +49442,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The maximum time index contained within the report. For the purposes of this parameter, a "period" or "facility parameter" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute(@"The maximum time index contained within the report. For the purposes of this parameter, a ""period"" or ""facility parameter"" without any time data should be assumed to have the time associated with the overall report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a ""get"" result.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimMax", DataType="EndpointQualifiedDateTime")]
         public EndpointQualifiedDateTime DTimMax {
@@ -49722,10 +49455,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this report. The current time index is a server query parameter which requests the selection of a single node from a recurring "period" set (e.g., the data related to one point in a time series). For the purposes of this parameter, a "period" without any time data should be assumed to have the time associated with the overall report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this report. The current time index is a server query parameter which requests the selection of a single node from a recurring ""period"" set (e.g., the data related to one point in a time series). For the purposes of this parameter, a ""period"" without any time data should be assumed to have the time associated with the overall report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimCurrent", DataType="TimeStamp")]
-        public System.DateTime DTimCurrent {
+        public Energistics.DataAccess.Timestamp DTimCurrent {
             get {
                 return this.dTimCurrentField;
             }
@@ -49747,7 +49479,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The calculation method for  "filling in" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set. This is not to be construed as to prevent concepts such as simulation and forecasting from being applied in order to create a new set. This is a server query parameter.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DescriptionAttribute(@"The calculation method for  ""filling in"" values in an indexed set. If not given, the default is that no calculations are performed to create data where none exists within an existing set. This is not to be construed as to prevent concepts such as simulation and forecasting from being applied in order to create a new set. This is a server query parameter.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("CalculationMethod", DataType="CalculationMethod")]
         public CalculationMethod CalculationMethod {
@@ -49772,7 +49503,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The operator of the facilities in the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [System.ComponentModel.DescriptionAttribute("The operator of the facilities in the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Operator", DataType="BusinessAssociate")]
         public BusinessAssociate Operator {
@@ -49786,7 +49516,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The tile of the report if different from the name of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DescriptionAttribute("The tile of the report if different from the name of the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Title", DataType="NameStruct")]
         public NameStruct Title {
@@ -49800,7 +49529,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The geographic context of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DescriptionAttribute("The geographic context of the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GeographicContext", DataType="GeographicContext")]
         public GeographicContext GeographicContext {
@@ -49814,7 +49542,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report was issued.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report was issued.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IssueDate", DataType="date")]
         public System.DateTime IssueDate {
@@ -49839,7 +49567,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The person or company that issued the report. This may contain the role of the person or company within the context of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         [System.ComponentModel.DescriptionAttribute("The person or company that issued the report. This may contain the role of the pe" +
             "rson or company within the context of the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IssuedBy", DataType="BusinessAssociate")]
@@ -49854,7 +49581,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date that the report was approved.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date that the report was approved.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ApprovalDate", DataType="date")]
         public System.DateTime ApprovalDate {
@@ -49879,7 +49606,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The person or company that approved the report. This may contain the role of the person or company within the context of the report.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         [System.ComponentModel.DescriptionAttribute("The person or company that approved the report. This may contain the role of the " +
             "person or company within the context of the report.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Approver", DataType="BusinessAssociate")]
@@ -49894,7 +49620,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions (i.e., uncorrected) unless otherwise specified at a local level.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         [System.ComponentModel.DescriptionAttribute(@"Defines the default standard temperature and pressure to which all volumes, densities and flow rates in this report have been corrected. The default may be locally overridden for an individual value. If not specified, then the conditions must be presumed to be ambient conditions (i.e., uncorrected) unless otherwise specified at a local level.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StandardTempPres", DataType="ReferenceCondition")]
         public ReferenceCondition StandardTempPres {
@@ -49919,7 +49644,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A facility for which product information is being reported.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Facility", Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute("Facility")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A facility for which product information is being reported.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Facility", DataType="ProductVolumeFacility")]
@@ -49934,7 +49659,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A business unit and related account or ownership share information.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("BusinessUnit", Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute("BusinessUnit")]
         [System.ComponentModel.DescriptionAttribute("A business unit and related account or ownership share information.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("BusinessUnit", DataType="ProductVolumeBusinessUnit")]
         public ProductVolumeBusinessUnit[] BusinessUnit {
@@ -49947,7 +49672,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ProductFlowModel", DataType="DataObjectReference")]
         public DataObjectReference ProductFlowModel {
             get {
@@ -49959,7 +49683,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DateTime", DataType="AbstractDateTimeClass")]
         public AbstractDateTimeClass DateTime {
             get {
@@ -53737,11 +53460,11 @@ namespace Energistics.Generator.PRODML210 {
         
         private FacilityIdentifierStruct[] contextFacilityField;
         
-        private System.DateTime dTimStartField;
+        private Energistics.DataAccess.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimEndField;
+        private Energistics.DataAccess.Timestamp dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -53759,7 +53482,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name of the facility that is represented by this model. The name can be qualified by a naming system. This also defines the kind of facility.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DescriptionAttribute("The name of the facility that is represented by this model. The name can be quali" +
             "fied by a naming system. This also defines the kind of facility.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Installation", DataType="FacilityIdentifierStruct")]
@@ -53774,7 +53496,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ContextFacility", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("ContextFacility")]
         [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
             "allation.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ContextFacility", DataType="FacilityIdentifierStruct")]
@@ -53789,10 +53511,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time of the start of validity for this model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("The date and time of the start of validity for this model.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimStart", DataType="TimeStamp")]
-        public System.DateTime DTimStart {
+        public Energistics.DataAccess.Timestamp DTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -53814,10 +53535,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time of the termination of validity for this model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DescriptionAttribute("The date and time of the termination of validity for this model.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DTimEnd", DataType="TimeStamp")]
-        public System.DateTime DTimEnd {
+        public Energistics.DataAccess.Timestamp DTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -53839,7 +53559,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e., start and end bracket this value) will  be returned if requested. The existence time is a server query parameter.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DescriptionAttribute("The time for which \"currently existing\" data is desired from the network. All con" +
             "nections (and related data) existing at this time (i.e., start and end bracket t" +
             "his value) will  be returned if requested. The existence time is a server query " +
@@ -53856,7 +53575,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DescriptionAttribute("The minimum time index contained within the report. The minimum and maximum index" +
             "es are server query parameters and will be populated with valid values in a \"get" +
             "\" result.")]
@@ -53872,7 +53590,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be populated with valid values in a "get" result.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DescriptionAttribute("The maximum time index contained within the report. The minimum and maximum index" +
             "es are server query parameters and will be populated with valid values in a \"get" +
             "\" result.")]
@@ -53888,7 +53605,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>A descriptive remark about the model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("A descriptive remark about the model.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Comment", DataType="String2000")]
@@ -53903,7 +53619,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail. One of the networks must represent this model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Network", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("Network")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The description of one named network within this model. Each model is self contai" +
             "ned but may reference other newtorks for defining internal detail. One of the ne" +
@@ -53920,7 +53636,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExternalConnect", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("ExternalConnect")]
         [System.ComponentModel.DescriptionAttribute(@"Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ExternalConnect", DataType="ProductFlowExternalReference")]
         public ProductFlowExternalReference[] ExternalConnect {
@@ -53945,7 +53661,7 @@ namespace Energistics.Generator.PRODML210 {
         private AbstractGraphicalInformation[] graphicalInformationField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GraphicalInformation", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("GraphicalInformation")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GraphicalInformation", DataType="AbstractGraphicalInformation")]
         public AbstractGraphicalInformation[] GraphicalInformation {
             get {
@@ -54000,7 +53716,7 @@ namespace Energistics.Generator.PRODML210 {
         
         private bool conformanceField;
         
-        private System.DateTime dateField;
+        private Energistics.DataAccess.Timestamp dateField;
         
         private string commentField;
         
@@ -54012,7 +53728,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Identifier of the policy whose conformance is being described.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("Identifier of the policy whose conformance is being described.")]
@@ -54028,7 +53743,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Human-readable name of the policy</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Human-readable name of the policy")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PolicyName", DataType="String2000")]
@@ -54043,7 +53757,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>If the Policy applies to a single element within the referenced data object this attribute holds its element name.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If the Policy applies to a single element within the referenced data object this " +
             "attribute holds its element name.")]
@@ -54059,7 +53772,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>If the Policy applies to a single occurrence of a recurring element within the referenced data object this attribute holds its uid.  The name of the recurring element would be in the ReferencedElementName.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("If the Policy applies to a single occurrence of a recurring element within the re" +
             "ferenced data object this attribute holds its uid.  The name of the recurring el" +
@@ -54076,7 +53788,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Agent which checked the data for conformance with the policy. This could be a person or an automated computer process or any number of other things.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("Agent which checked the data for conformance with the policy. This could be a per" +
@@ -54093,7 +53804,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Yes/no flag indicating whether this particular data ???? conforms with the policy or not.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Yes/no flag indicating whether this particular data ???? conforms with the policy" +
             " or not.")]
@@ -54109,12 +53819,11 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Date the policy was last checked. This is the date for which the Conformance value is valid.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date the policy was last checked. This is the date for which the Conformance valu" +
             "e is valid.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Date", DataType="TimeStamp")]
-        public System.DateTime Date {
+        public Energistics.DataAccess.Timestamp Date {
             get {
                 return this.dateField;
             }
@@ -54124,7 +53833,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Comment", DataType="String2000")]
         public string Comment {
@@ -54137,7 +53845,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("IndexRange", DataType="IndexRange")]
         public IndexRange IndexRange {
             get {
@@ -54149,7 +53856,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FailingRules", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("FailingRules")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FailingRules", DataType="FailingRule")]
         public FailingRule[] FailingRules {
             get {
@@ -54161,7 +53868,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReferencedData", DataType="DataObjectReference")]
         public DataObjectReference ReferencedData {
@@ -54308,7 +54014,6 @@ namespace Energistics.Generator.PRODML210 {
         private string uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AxisOrder", DataType="AxisOrder2d")]
         public AxisOrder2d AxisOrder {
@@ -54321,7 +54026,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AbstractProjectedCrs", DataType="AbstractProjectedCrs")]
         public AbstractProjectedCrs AbstractProjectedCrs {
@@ -58362,7 +58066,6 @@ namespace Energistics.Generator.PRODML210 {
         private string uomField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Direction", DataType="VerticalDirection")]
         public VerticalDirection Direction {
@@ -58375,7 +58078,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AbstractVerticalCrs", DataType="AbstractVerticalCrs")]
         public AbstractVerticalCrs AbstractVerticalCrs {
@@ -58569,7 +58271,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Azimuth of the first axis of this Crs regarding the north kind provided in this same class.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Azimuth of the first axis of this Crs regarding the north kind provided in this s" +
             "ame class.")]
@@ -58584,7 +58285,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AzimuthReference", DataType="NorthReferenceKind")]
         public NorthReferenceKind AzimuthReference {
@@ -58598,7 +58298,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>First coordinate of the origin of the local engineering CRS in the base projected CRS (consequently in the uom of the base projected CRS)</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("First coordinate of the origin of the local engineering CRS in the base projected" +
             " CRS (consequently in the uom of the base projected CRS)")]
@@ -58614,7 +58313,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Second coordinate of the origin of the local engineering CRS in the base projected CRS (consequently in the uom of the base projected CRS).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Second coordinate of the origin of the local engineering CRS in the base projecte" +
             "d CRS (consequently in the uom of the base projected CRS).")]
@@ -58630,7 +58328,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Vertical coordinate of the origin of the local engineering CRS in the base vertical CRS (consequently in the uom of the base vertical CRS)</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Vertical coordinate of the origin of the local engineering CRS in the base vertic" +
             "al CRS (consequently in the uom of the base vertical CRS)")]
@@ -58645,7 +58342,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("VerticalAxis", DataType="VerticalAxis")]
         public VerticalAxis VerticalAxis {
@@ -58658,7 +58354,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("HorizontalAxes", DataType="HorizontalAxes")]
         public HorizontalAxes HorizontalAxes {
@@ -58671,7 +58366,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("VerticalCrs", DataType="VerticalCrs")]
         public VerticalCrs VerticalCrs {
@@ -58684,7 +58378,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("OriginUncertaintyVectorAtSigmaX", DataType="Vector")]
         public Vector OriginUncertaintyVectorAtSigmaX {
             get {
@@ -58696,7 +58389,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ProjectedCrs", DataType="ProjectedCrs")]
         public ProjectedCrs ProjectedCrs {
@@ -59109,7 +58801,6 @@ namespace Energistics.Generator.PRODML210 {
         private AbstractGeodeticCrs abstractGeodeticCrsField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("AbstractGeodeticCrs", DataType="AbstractGeodeticCrs")]
         public AbstractGeodeticCrs AbstractGeodeticCrs {
@@ -59260,7 +58951,7 @@ namespace Energistics.Generator.PRODML210 {
         private ParameterTemplate[] parameterField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Parameter", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Parameter", DataType="ParameterTemplate")]
         public ParameterTemplate[] Parameter {
@@ -59812,7 +59503,6 @@ namespace Energistics.Generator.PRODML210 {
         private AbstractActivityParameter[] parameterField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Parent", DataType="DataObjectReference")]
         public DataObjectReference Parent {
             get {
@@ -59824,7 +59514,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ActivityDescriptor", DataType="DataObjectReference")]
         public DataObjectReference ActivityDescriptor {
@@ -59837,7 +59526,7 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Parameter", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Parameter", DataType="AbstractActivityParameter")]
         public AbstractActivityParameter[] Parameter {
@@ -59864,7 +59553,6 @@ namespace Energistics.Generator.PRODML210 {
         private string mimeTypeField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Filename", DataType="String2000")]
         public string Filename {
@@ -59878,7 +59566,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>IAMF registered, if one exists, or a free text field. Needs documentation on seismic especially.  MIME type for HDF proxy is : application/x-hdf5 (by convention).</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.ComponentModel.DescriptionAttribute("IAMF registered, if one exists, or a free text field. Needs documentation on seis" +
             "mic especially.  MIME type for HDF proxy is : application/x-hdf5 (by convention)" +
@@ -59906,7 +59593,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Describes the growing status of the object, whether active, inactive or closed</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Describes the growing status of the object, whether active, inactive or closed")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("GrowingStatus", DataType="GrowingStatusKind")]
@@ -59947,7 +59633,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Individual times composing the series. The list ordering is used by the time index.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Time", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Time")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Individual times composing the series. The list ordering is used by the time inde" +
             "x.")]
@@ -59962,7 +59648,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("TimeSeriesParentage", DataType="TimeSeriesParentage")]
         public TimeSeriesParentage TimeSeriesParentage {
             get {
@@ -60081,7 +59766,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Defines which property kind are contained into a property kind dictionary.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PropertyKind", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("PropertyKind")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines which property kind are contained into a property kind dictionary.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("PropertyKind", DataType="PropertyKind")]
@@ -60117,7 +59802,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The starting date of the reporting period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The starting date of the reporting period.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartDate", DataType="date")]
         public System.DateTime StartDate {
@@ -60142,7 +59827,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The ending date of the reporting period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The ending date of the reporting period.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndDate", DataType="date")]
         public System.DateTime EndDate {
@@ -60167,7 +59852,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Name or identifier for the reporting period to which the well production parameters apply.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("Name or identifier for the reporting period to which the well production paramete" +
             "rs apply.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("NominalPeriod", DataType="ReportingDurationKindExt")]
@@ -60182,7 +59866,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Details of production at a specific choke setting.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ProductionPeriod", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("ProductionPeriod")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Details of production at a specific choke setting.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ProductionPeriod", DataType="ProductionWellPeriod")]
@@ -60206,15 +59890,14 @@ namespace Energistics.Generator.PRODML210 {
         
         private Energistics.DataAccess.ExtensibleEnum<ReportingDurationKind> nominalPeriodKindField;
         
-        private System.DateTime startDateField;
+        private Energistics.DataAccess.Timestamp startDateField;
         
-        private System.DateTime endDateField;
+        private Energistics.DataAccess.Timestamp endDateField;
         
         private DataObjectReference[] flowTestActivityField;
         
         /// <remarks/>
         /// <summary>Validate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Validate.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("NominalPeriodKind", DataType="ReportingDurationKindExt")]
@@ -60229,11 +59912,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Description or name of the method used to conduct the well test.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Description or name of the method used to conduct the well test.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartDate", DataType="TimeStamp")]
-        public System.DateTime StartDate {
+        public Energistics.DataAccess.Timestamp StartDate {
             get {
                 return this.startDateField;
             }
@@ -60244,11 +59926,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Validate.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Validate.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndDate", DataType="TimeStamp")]
-        public System.DateTime EndDate {
+        public Energistics.DataAccess.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -60259,7 +59940,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>BUSINESS RULE: In this usage, this link is expected to be a  type of  Production Flow Test or Injection Flow Test. The Production Flow Test has  validation and effective date for allocation purposes. Flow Test Location is expected to be a Reporting Entity (same as a volume, etc) in standard SPVR usage</summary>
-        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("FlowTestActivity")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"BUSINESS RULE: In this usage, this link is expected to be a  type of  Production Flow Test or Injection Flow Test. The Production Flow Test has  validation and effective date for allocation purposes. Flow Test Location is expected to be a Reporting Entity (same as a volume, etc) in standard SPVR usage")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("FlowTestActivity", DataType="DataObjectReference")]
@@ -60283,11 +59964,11 @@ namespace Energistics.Generator.PRODML210 {
         
         private string certificateNumberField;
         
-        private System.DateTime startTimeField;
+        private Energistics.DataAccess.Timestamp startTimeField;
         
         private bool startTimeFieldSpecified;
         
-        private System.DateTime endTimeField;
+        private Energistics.DataAccess.Timestamp endTimeField;
         
         private bool endTimeFieldSpecified;
         
@@ -60301,7 +59982,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The certificate number for the document that defines the lifting onto the tanker.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
         [System.ComponentModel.DescriptionAttribute("The certificate number for the document that defines the lifting onto the tanker." +
@@ -60318,10 +59998,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time when the lifting began.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DescriptionAttribute("The date and time when the lifting began.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartTime", DataType="TimeStamp")]
-        public System.DateTime StartTime {
+        public Energistics.DataAccess.Timestamp StartTime {
             get {
                 return this.startTimeField;
             }
@@ -60343,10 +60022,9 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The date and time when the lifting ended.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DescriptionAttribute("The date and time when the lifting ended.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndTime", DataType="TimeStamp")]
-        public System.DateTime EndTime {
+        public Energistics.DataAccess.Timestamp EndTime {
             get {
                 return this.endTimeField;
             }
@@ -60367,7 +60045,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("LoadingTerminal", DataType="DataObjectReference")]
         public DataObjectReference LoadingTerminal {
@@ -60380,7 +60057,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("Tanker", DataType="DataObjectReference")]
         public DataObjectReference Tanker {
@@ -60394,7 +60070,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The amount of product lifted.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ProductQuantity", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("ProductQuantity")]
         [System.ComponentModel.DescriptionAttribute("The amount of product lifted.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ProductQuantity", DataType="ProductFluid")]
         public ProductFluid[] ProductQuantity {
@@ -60407,7 +60083,6 @@ namespace Energistics.Generator.PRODML210 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("DestinationTerminal", DataType="DataObjectReference")]
         public DataObjectReference DestinationTerminal {
             get {
@@ -60427,9 +60102,9 @@ namespace Energistics.Generator.PRODML210 {
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2", IsNullable=false)]
     public partial class AssetProductionVolumes : AbstractSimpleProductVolume {
         
-        private System.DateTime startDateField;
+        private Energistics.DataAccess.Timestamp startDateField;
         
-        private System.DateTime endDateField;
+        private Energistics.DataAccess.Timestamp endDateField;
         
         private Energistics.DataAccess.ExtensibleEnum<ReportingDurationKind> nominalPeriodField;
         
@@ -60437,11 +60112,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The start date of the reporting period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The start date of the reporting period.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("StartDate", DataType="TimeStamp")]
-        public System.DateTime StartDate {
+        public Energistics.DataAccess.Timestamp StartDate {
             get {
                 return this.startDateField;
             }
@@ -60452,11 +60126,10 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>The end date of report period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The end date of report period.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("EndDate", DataType="TimeStamp")]
-        public System.DateTime EndDate {
+        public Energistics.DataAccess.Timestamp EndDate {
             get {
                 return this.endDateField;
             }
@@ -60467,7 +60140,6 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Nominal period.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Nominal period.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("NominalPeriod", DataType="ReportingDurationKindExt")]
@@ -60482,7 +60154,7 @@ namespace Energistics.Generator.PRODML210 {
         
         /// <remarks/>
         /// <summary>Contains all the volumes for a single reporting entity. It contains a reference back to the reporting entity using its UUID for reference.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ReportingEntityVolumes", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("ReportingEntityVolumes")]
         [System.ComponentModel.DescriptionAttribute("Contains all the volumes for a single reporting entity. It contains a reference b" +
             "ack to the reporting entity using its UUID for reference.")]
         [Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute("ReportingEntityVolumes", DataType="ReportingEntityVolumes")]

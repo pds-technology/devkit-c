@@ -685,11 +685,6 @@
 							<xs:documentation>A reference, using data object reference, to a RESQML data-object containing the root level data for a numerical PTA model.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="FlowTestActivity" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Abstract wellbore response model from which the other wellbore response model types are derived.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="PrincipalFlowTestMeasurementSetRef" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>A reference (using uid) to the flow test measurement set which contains the data concerning the principal test location, in the case of an interference test. For standard (non-interference) tests, this is not needed to be filled in, since there is only one flow test location and therefore only one  flow test measurement set.</xs:documentation>
@@ -808,11 +803,6 @@
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="FlowTestActivity" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>A reference, using data object reference, to a FlowTestActivity data-object containing the measurement data which this PreProcess applies to.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="FlowTestMeasurementSetRef" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>A reference, using uid, to the Flow Test Measurement Set within the Flow Test Activity data-object containing the measurement data which this PreProcess applies to.</xs:documentation>
@@ -855,11 +845,6 @@
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="FlowTestActivity" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>A reference, using data object reference, to a FlowTestActivity data-object containing the measurement data which this Deconvolution applies to.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="FlowTestMeasurementSetRef" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>A reference, using uid, to the Flow Test Measurement Set within the Flow Test Activity data-object containing the measurement data which this Deconvolution applies to.</xs:documentation>
