@@ -83,6 +83,7 @@ using System.Xml.Serialization;
 using System.Text;
 using System.IO;
 using System.IO.Compression;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Energistics.DataAccess
 {
@@ -138,6 +139,12 @@ namespace Energistics.DataAccess
         /// </summary>
         /// <value>The collection of name/value pairs.</value>
         public IDictionary<string, string> Headers { get; set; }
+
+        /// <summary>
+        /// Gets or sets the client certificate to use.
+        /// </summary>
+        /// <value>The client certificate to use.</value>
+        public X509Certificate2 ClientCertificate { get; set; }
 
         /// <summary>
         /// Reads an object of type T from the WITSML web service
@@ -349,6 +356,8 @@ namespace Energistics.DataAccess
             service.Proxy = Proxy;
             service.Credentials = GetNetworkCredential();
             service.PreAuthenticate = IsPreAuthenticationEnabled;
+            if (ClientCertificate != null)
+                service.ClientCertificates.Add(ClientCertificate);
 
             var client = service as IWitsmlClient;
             if (client != null)
