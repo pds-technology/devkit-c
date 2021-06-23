@@ -385,7 +385,9 @@ namespace Energistics.DataAccess
         /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
         {
-            return ToString(format: "o");
+            return value.Offset != TimeSpan.Zero
+                ? ToString(format: "o")
+                : ToString(format: "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffff'Z'");
         }
 
         /// <summary>
